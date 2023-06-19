@@ -1,28 +1,26 @@
 import { Text, Box, Card, CardBody, CardFooter, Menu, Image } from 'grommet';
-import { Device, User, Configure } from 'grommet-icons';
+import { Webcam, Radial, Configure } from 'grommet-icons';
 import { useRouter } from 'next/navigation';
 
-export function AppFooter() {
+export function IconLInk({icon, label, url}) {
   const router = useRouter();
+  return (
+    <Card pad='small' gap='small' onClick={() => router.push(url)}>
+      <CardBody align='center'>
+        {icon}
+      </CardBody>
+      <CardFooter align='center'>
+        <Text size='xsmall'>{label}</Text>
+      </CardFooter>
+    </Card>
+  );
+}
 
+export function AppFooter() {
   return (
     <Box direction='row' background='active' justify='evenly'>
-      <Card pad='small' gap='small' onClick={() => router.push('/')}>
-        <CardBody align='center'>
-          <Device />
-        </CardBody>
-        <CardFooter align='center'>
-          <Text size='xsmall'>设备</Text>
-        </CardFooter>
-      </Card>
-      <Card pad='small' gap='small' onClick={() => router.push('/my')}>
-        <CardBody align='center'>
-          <User />
-        </CardBody>
-        <CardFooter align='center'>
-          <Text size='xsmall'>我的</Text>
-        </CardFooter>
-      </Card>
+      <IconLInk icon={<Webcam />} label='设备' url='/' />
+      <IconLInk icon={<Radial />} label='我的' url='/my' />
     </Box>
   );
 }

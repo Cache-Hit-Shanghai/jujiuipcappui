@@ -1,7 +1,7 @@
 'use client';
 
 import { Grommet, Text, Box, Nav, List, Button, Accordion, AccordionPanel, Card, CardHeader, CardBody, CardFooter, Image, Footer, Main, Avatar } from 'grommet';
-import { AddCircle, FormNext, Edit, ShareRounded, User, SettingsOption, Group, HostMaintenance } from 'grommet-icons';
+import { VirtualStorage, FormNext, Edit, ShareRounded, User, SettingsOption, Group, HostMaintenance } from 'grommet-icons';
 import { AppFooter, IconLInk } from '../../components/Components';
 
 export default function Page() {
@@ -22,6 +22,14 @@ export default function Page() {
         </Box>
       </Nav>
       <Main flex={{ grow: 1, shrink: 1 }} overflow='auto' gap='small'>
+        <Card pad='small' background='active' margin={{ horizontal: 'small' }}>
+          <CardBody>
+            <Box direction='row' justify='evenly'>
+              <IconLInk icon={<Group />} label='相册' url='/album' />
+              <IconLInk icon={<VirtualStorage />} label='云盘' url='/cloudstorage' />
+            </Box>
+          </CardBody>
+        </Card>
         <Card pad='small' gap='small' background='active' margin={{ horizontal: 'small' }}>
           <CardHeader>
             <Text>常用工具</Text>
@@ -46,7 +54,6 @@ export default function Page() {
                 </Box>)
               }
             </List>
-            
           </CardBody>
         </Card>
       </Main>

@@ -1,11 +1,46 @@
-import { Text, Box, Card, CardBody, CardFooter, Menu, Image } from 'grommet';
-import { Webcam, Radial, Configure } from 'grommet-icons';
+import { Text, Box, Card, CardBody, CardFooter, Menu, Image, Button, List } from 'grommet';
+import { Webcam, Radial, Configure, FormPrevious, FormNext } from 'grommet-icons';
 import { useRouter } from 'next/navigation';
+
+export function InfoGroup({ data }) {
+  return (
+    <Card background='active' margin={{ horizontal: 'small' }} flex={false}>
+      <CardBody>
+        <List data={data} border={false} primaryKey='key' secondaryKey='value' />
+      </CardBody>
+    </Card>
+  );
+}
+
+export function LinkGroup({ data }) {
+  const router = useRouter();
+  return (
+    <Card background='active' margin={{ horizontal: 'small' }} flex={false}>
+      <CardBody>
+        <List data={data} border={false}>
+          {
+            ((datum) => (
+              <Button icon={<FormNext />} label={datum.label} reverse plain justify='between'
+              onClick={() => router.push(datum.url)} />
+            )) as any
+          }
+        </List>
+      </CardBody>
+    </Card>
+  );
+}
+
+export function IconBack() {
+  const router = useRouter();
+  return (
+    <Button icon={<FormPrevious />} onClick={() => router.back()} />
+  );
+}
 
 export function IconLInk({icon, label, url}) {
   const router = useRouter();
   return (
-    <Card pad='small' gap='small' onClick={() => router.push(url)}>
+    <Card pad='small' onClick={() => router.push(url)}>
       <CardBody align='center'>
         {icon}
       </CardBody>
@@ -18,7 +53,7 @@ export function IconLInk({icon, label, url}) {
 
 export function AppFooter() {
   return (
-    <Box direction='row' background='active' justify='evenly'>
+    <Box direction='row' background='active' justify='evenly' flex={false}>
       <IconLInk icon={<Webcam />} label='设备' url='/' />
       <IconLInk icon={<Radial />} label='我的' url='/my' />
     </Box>

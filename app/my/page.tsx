@@ -1,10 +1,20 @@
 'use client';
 
-import { Grommet, Text, Box, Nav, List, Button, Accordion, AccordionPanel, Card, CardHeader, CardBody, CardFooter, Image, Footer, Main, Avatar } from 'grommet';
-import { Gallery, VirtualStorage, FormNext, Edit, ShareRounded, User, SettingsOption, Group, HostMaintenance } from 'grommet-icons';
-import { AppFooter, IconLInk } from '../../components/Components';
+import { Grommet, Text, Box, Nav, Button, Card, CardHeader, CardBody, Main, Avatar } from 'grommet';
+import { Gallery, VirtualStorage, Edit, ShareRounded, User, SettingsOption, Group, HostMaintenance } from 'grommet-icons';
+import { useRouter } from 'next/navigation';
+import { AppFooter, IconLInk, LinkGroup } from '../../components/Components';
+
+const links = [
+  { label: '语言', url: '#' },
+  { label: '系统信息', url: '/my/sysinfo' },
+  { label: '客服', url: '#' },
+  { label: '关于', url: '/my/about' },
+];
 
 export default function Page() {
+  const router = useRouter();
+
   return (<Grommet full>
     <Box fill>
       <Nav direction='row' margin='small' justify='between'>
@@ -22,7 +32,7 @@ export default function Page() {
         </Box>
       </Nav>
       <Main flex={{ grow: 1, shrink: 1 }} overflow='auto' gap='small'>
-        <Card pad='small' background='active' margin={{ horizontal: 'small' }}>
+        <Card pad='small' background='active' margin={{ horizontal: 'small' }} flex={false}>
           <CardBody>
             <Box direction='row' justify='evenly'>
               <IconLInk icon={<Gallery />} label='相册' url='/album' />
@@ -30,7 +40,7 @@ export default function Page() {
             </Box>
           </CardBody>
         </Card>
-        <Card pad='small' gap='small' background='active' margin={{ horizontal: 'small' }}>
+        <Card pad='small' gap='small' background='active' margin={{ horizontal: 'small' }} flex={false}>
           <CardHeader>
             <Text>常用工具</Text>
           </CardHeader>
@@ -43,19 +53,7 @@ export default function Page() {
             </Box>
           </CardBody>
         </Card>
-        <Card pad='small' background='active' margin={{ horizontal: 'small' }}>
-          <CardBody>
-            <List data={[ '系统信息', '客服', '关于' ]} border={false}>
-              {
-                ((datum) => (
-                <Box direction='row' justify='between'>
-                  <Text>{datum}</Text>
-                  <FormNext />
-                </Box>)) as any
-              }
-            </List>
-          </CardBody>
-        </Card>
+        <LinkGroup data={links} />
       </Main>
       <AppFooter />
     </Box>

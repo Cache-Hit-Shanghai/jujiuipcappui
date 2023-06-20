@@ -47,11 +47,11 @@ export default function Page() {
           <CardBody>
             <List data={[ '客服', '关于' ]} border={false}>
               {
-                (datum) => (
+                ((datum) => (
                 <Box direction='row' justify='between'>
                   <Text>{datum}</Text>
                   <FormNext />
-                </Box>)
+                </Box>)) as any
               }
             </List>
           </CardBody>

@@ -9,7 +9,7 @@ export default function Page() {
     <Box fill>
       <Nav direction='row' justify='between' align='center'>
         <Box margin='small'>
-          <Text>云探智能视觉系统</Text>
+          <Text size='large'>云探智能视觉系统</Text>
         </Box>
         <Box direction='row' gap='medium' align='center'>
           <Button icon={<Chat />} href='#' />

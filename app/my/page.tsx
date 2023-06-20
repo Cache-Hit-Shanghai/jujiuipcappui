@@ -45,7 +45,7 @@ export default function Page() {
         </Card>
         <Card pad='small' background='active' margin={{ horizontal: 'small' }}>
           <CardBody>
-            <List data={[ '客服', '关于' ]} border={false}>
+            <List data={[ '系统信息', '客服', '关于' ]} border={false}>
               {
                 ((datum) => (
                 <Box direction='row' justify='between'>

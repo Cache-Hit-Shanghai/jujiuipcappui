@@ -6,7 +6,8 @@ import { useRouter } from 'next/navigation';
 import { AppFooter, IconLInk, LinkGroup } from '../../components/Components';
 
 const links = [
-  { label: '语言', url: '#' },
+  { label: '账号设置', url: '/my/account' },
+  { label: '界面设置', url: '/my/uisettings' },
   { label: '系统信息', url: '/my/sysinfo' },
   { label: '客服', url: '#' },
   { label: '关于', url: '/my/about' },
@@ -16,7 +17,7 @@ export default function Page() {
   const router = useRouter();
 
   return (<Grommet full>
-    <Box fill>
+    <Box fill gap='medium'>
       <Nav direction='row' margin='small' justify='between'>
         <Box direction='row' gap='small' align='center'>
           <Avatar background='active'>
@@ -27,16 +28,13 @@ export default function Page() {
             <Text size='xsmall'>黄金会员</Text>
           </Box>
         </Box>
-        <Box>
-          <Button icon={<SettingsOption />} />
-        </Box>
       </Nav>
       <Main flex={{ grow: 1, shrink: 1 }} overflow='auto' gap='small'>
         <Card pad='small' background='active' margin={{ horizontal: 'small' }} flex={false}>
           <CardBody>
             <Box direction='row' justify='evenly'>
-              <IconLInk icon={<Gallery />} label='相册' url='/album' />
-              <IconLInk icon={<VirtualStorage />} label='云盘' url='/cloudstorage' />
+              <IconLInk icon={<Gallery />} label='相册' url='#' />
+              <IconLInk icon={<VirtualStorage />} label='云盘' url='#' />
             </Box>
           </CardBody>
         </Card>
@@ -46,10 +44,10 @@ export default function Page() {
           </CardHeader>
           <CardBody>
             <Box direction='row' justify='evenly'>
-              <IconLInk icon={<Group />} label='我的好友' url='/friends' />
-              <IconLInk icon={<HostMaintenance />} label='设备管理' url='/devicemanagement' />
-              <IconLInk icon={<ShareRounded />} label='我的分享' url='/share' />
-              <IconLInk icon={<Edit />} label='帮助与反馈' url='/help' />
+              <IconLInk icon={<Group />} label='我的好友' url='#' />
+              <IconLInk icon={<HostMaintenance />} label='设备管理' url='#' />
+              <IconLInk icon={<ShareRounded />} label='我的分享' url='#' />
+              <IconLInk icon={<Edit />} label='帮助与反馈' url='#' />
             </Box>
           </CardBody>
         </Card>

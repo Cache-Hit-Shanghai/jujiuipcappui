@@ -15,9 +15,10 @@ const links = [
 export default function Page() {
   return (
     <Grommet full>
-      <Box fill>
-        <Nav>
+      <Box fill gap='medium'>
+        <Nav direction='row' align='center'>
           <IconBack />
+          <Text>关于</Text>
         </Nav>
         <Main flex={{ grow: 1, shrink: 1 }} overflow='auto' gap='small'>
           <Card pad='medium' margin={{ horizontal: 'small' }} flex={false}>

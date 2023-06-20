@@ -1,6 +1,6 @@
 'use client';
 
-import { Grommet, Text, Box, Footer, Nav, Card, CardBody, CardFooter, Main } from 'grommet';
+import { Grommet, Text, Box, Nav, Main } from 'grommet';
 import { IconBack, InfoGroup } from '../../../components/Components';
 
 const infos = [
@@ -12,9 +12,10 @@ const infos = [
 export default function Page() {
   return (
     <Grommet full>
-      <Box fill>
-        <Nav>
+      <Box fill gap='medium'>
+        <Nav direction='row' align='center'>
           <IconBack />
+          <Text>系统信息</Text>
         </Nav>
         <Main flex={{ grow: 1, shrink: 1 }} overflow='auto' gap='small'>
           <InfoGroup data={infos} />

@@ -1,10 +1,12 @@
 import { Text, Box, Card, CardBody, CardFooter, Menu, Image, Button, List, Drop } from 'grommet';
 import { Webcam, Radial, Configure, FormPrevious, FormNext, CaretUpFill, CaretDownFill, CaretLeftFill, CaretRightFill } from 'grommet-icons';
 import { useRouter } from 'next/navigation';
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 
 export function PanControl() {
   const targetRef = useRef();
+  const [, setShowDrop] = useState(false);
+  useEffect(() => setShowDrop(true) , []);
   return (
     <Box flex={{ grow: 1, shrink: 1 }} align='center' justify='center'>
       <Box background='active' round='full' width='small' height='small' ref={targetRef}></Box>

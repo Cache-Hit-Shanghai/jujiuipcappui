@@ -64,7 +64,7 @@ export function IpcCard({ label, imgurl }) {
   const router = useRouter();
   return (
     <Card>
-      <CardBody>
+      <CardBody onClick={() => router.push('/device/streaming')}>
         <Image src={imgurl} />
       </CardBody>
       <CardFooter margin='small' align='center' justify='between'>

@@ -24,7 +24,9 @@ export default function Page() {
           <Tabs flex>
             <Tab title='实时视频'>
               <Box fill>
-                <PanControl />
+                <Box flex={{ grow: 1, shrink: 1 }} justify='center'>
+                  <PanControl />
+                </Box>
                 <Box direction='row' justify='evenly' background='active' flex={false} pad={{ vertical: 'small'}}>
                   <IconButton icon={<Camera />} label='截图' onClick={() => {}} />
                   <IconButton icon={<Video />} label='录制' onClick={() => {}} />

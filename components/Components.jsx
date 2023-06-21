@@ -8,7 +8,7 @@ export function PanControl() {
   const [, setShowDrop] = useState(false);
   useEffect(() => setShowDrop(true) , []);
   return (
-    <Box flex={{ grow: 1, shrink: 1 }} align='center' justify='center'>
+    <Box align='center'>
       <Stack anchor='center'>
         <Box background='placeholder' round='full' width='small' height='small' ref={targetRef} />
         <Box background='active' round='full' width='xxsmall' height='xxsmall' />

@@ -27,7 +27,7 @@ export default function Page() {
                 <Box flex={{ grow: 1, shrink: 1 }} justify='center'>
                   <PanControl />
                 </Box>
-                <Box direction='row' justify='evenly' background='active' flex={false} pad={{ vertical: 'small'}}>
+                <Box direction='row' justify='evenly' background='active' flex={false}>
                   <IconButton icon={<Camera />} label='截图' onClick={() => {}} />
                   <IconButton icon={<Video />} label='录制' onClick={() => {}} />
                   <IconButton icon={<Microphone />} label='对讲' onClick={() => {}} />

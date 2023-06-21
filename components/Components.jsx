@@ -72,28 +72,24 @@ export function IconBack() {
 
 export function IconButton({ icon, label, onClick }) {
   return (
-    <Card pad='small' onClick={onClick}>
-      <CardBody align='center'>
+    <Button onClick={onClick}>
+      <Box pad='small' align='center'>
         {icon}
-      </CardBody>
-      <CardFooter align='center'>
-        <Text size='xsmall'>{label}</Text>
-      </CardFooter>
-    </Card>
+        <Text size='small'>{label}</Text>
+      </Box>
+    </Button>
   );
 }
 
 export function IconLInk({ icon, label, url }) {
   const router = useRouter();
   return (
-    <Card pad='small' onClick={() => router.push(url)}>
-      <CardBody align='center'>
+    <Button onClick={() => router.push(url)}>
+      <Box pad='small' align='center'>
         {icon}
-      </CardBody>
-      <CardFooter align='center'>
-        <Text size='xsmall'>{label}</Text>
-      </CardFooter>
-    </Card>
+        <Text size='small'>{label}</Text>
+      </Box>
+    </Button>
   );
 }
 

@@ -2,7 +2,7 @@
 
 import { Grommet, Text, Box, Video as VideoCanvas, Nav, Tabs, Tab, CardBody, CheckBox, Main } from 'grommet';
 import { Camera, Video, Microphone, ClosedCaption } from 'grommet-icons';
-import { IconBack } from '../../../components/Components';
+import { IconBack, PanControl } from '../../../components/Components';
 
 export default function Page() {
   return (
@@ -24,9 +24,7 @@ export default function Page() {
           <Tabs flex>
             <Tab title='实时视频'>
               <Box fill>
-                <Box flex={{ grow: 1, shrink: 1 }} align='center' justify='center'>
-                  <Box background='active' round='full' width='small' height='small'></Box>
-                </Box>
+                <PanControl />
                 <Box direction='row' justify='evenly' background='active' flex={false} pad={{ vertical: 'small'}}>
                   <Box align='center'>
                     <Camera />

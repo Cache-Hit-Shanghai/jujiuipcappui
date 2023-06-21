@@ -28,7 +28,6 @@
     ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx",
-    "app/device/settings"
   ],
   "exclude": [
     "node_modules"

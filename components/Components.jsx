@@ -1,6 +1,34 @@
-import { Text, Box, Card, CardBody, CardFooter, Menu, Image, Button, List } from 'grommet';
-import { Webcam, Radial, Configure, FormPrevious, FormNext } from 'grommet-icons';
+import { Text, Box, Card, CardBody, CardFooter, Menu, Image, Button, List, Drop } from 'grommet';
+import { Webcam, Radial, Configure, FormPrevious, FormNext, CaretUpFill, CaretDownFill, CaretLeftFill, CaretRightFill } from 'grommet-icons';
 import { useRouter } from 'next/navigation';
+import { useState, useRef } from 'react';
+
+export function PanControl() {
+  const targetRef = useRef();
+  return (
+    <Box flex={{ grow: 1, shrink: 1 }} align='center' justify='center'>
+      <Box background='active' round='full' width='small' height='small' ref={targetRef}></Box>
+      {
+        targetRef.current && (
+          <>
+            <Drop align={{ top: 'top' }} target={targetRef.current} stretch={false} plain>
+              <CaretUpFill />
+            </Drop>
+            <Drop align={{ bottom: 'bottom' }} target={targetRef.current} stretch={false} plain>
+              <CaretDownFill />
+            </Drop>
+            <Drop align={{ left: 'left' }} target={targetRef.current} stretch={false} plain>
+              <CaretLeftFill />
+            </Drop>
+            <Drop align={{ right: 'right' }} target={targetRef.current} stretch={false} plain>
+              <CaretRightFill />
+            </Drop>
+          </>
+        )
+      }
+    </Box>
+  );
+}
 
 export function InfoGroup({ data }) {
   return (
@@ -19,10 +47,10 @@ export function LinkGroup({ data }) {
       <CardBody>
         <List data={data} border={false}>
           {
-            ((datum) => (
+            (datum) => (
               <Button icon={<FormNext />} label={datum.label} reverse plain justify='between'
               onClick={() => router.push(datum.url)} />
-            )) as any
+            )
           }
         </List>
       </CardBody>

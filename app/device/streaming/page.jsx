@@ -2,7 +2,7 @@
 
 import { Grommet, Text, Box, Video as VideoCanvas, Nav, Tabs, Tab, CardBody, CheckBox, Main } from 'grommet';
 import { Camera, Video, Microphone, ClosedCaption } from 'grommet-icons';
-import { IconBack, PanControl } from '../../../components/Components';
+import { IconBack, IconButton, PanControl } from '../../../components/Components';
 
 export default function Page() {
   return (
@@ -26,22 +26,10 @@ export default function Page() {
               <Box fill>
                 <PanControl />
                 <Box direction='row' justify='evenly' background='active' flex={false} pad={{ vertical: 'small'}}>
-                  <Box align='center'>
-                    <Camera />
-                    <Text size='small'>截图</Text>
-                  </Box>
-                  <Box align='center'>
-                    <Video />
-                    <Text size='small'>录制</Text>
-                  </Box>
-                  <Box align='center'>
-                    <Microphone />
-                    <Text size='small'>对讲</Text>
-                  </Box>
-                  <Box align='center'>
-                    <ClosedCaption />
-                    <Text size='small'>清晰度</Text>
-                  </Box>
+                  <IconButton icon={<Camera />} label='截图' onClick={() => {}} />
+                  <IconButton icon={<Video />} label='录制' onClick={() => {}} />
+                  <IconButton icon={<Microphone />} label='对讲' onClick={() => {}} />
+                  <IconButton icon={<ClosedCaption />} label='清晰度' onClick={() => {}} />
                 </Box>
               </Box>
             </Tab>

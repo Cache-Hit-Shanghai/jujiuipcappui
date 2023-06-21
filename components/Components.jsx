@@ -1,4 +1,4 @@
-import { Text, Box, Card, CardBody, CardFooter, Menu, Image, Button, List, Drop } from 'grommet';
+import { Text, Box, Card, CardBody, CardFooter, Menu, Image, Button, List, Drop, Stack } from 'grommet';
 import { Webcam, Radial, Configure, FormPrevious, FormNext, CaretUpFill, CaretDownFill, CaretLeftFill, CaretRightFill } from 'grommet-icons';
 import { useRouter } from 'next/navigation';
 import { useState, useRef, useEffect } from 'react';
@@ -9,21 +9,24 @@ export function PanControl() {
   useEffect(() => setShowDrop(true) , []);
   return (
     <Box flex={{ grow: 1, shrink: 1 }} align='center' justify='center'>
-      <Box background='active' round='full' width='small' height='small' ref={targetRef}></Box>
+      <Stack anchor='center'>
+        <Box background='active' round='full' width='small' height='small' ref={targetRef} />
+        <Box background='placeholder' round='full' width='xxsmall' height='xxsmall' />
+      </Stack>
       {
         targetRef.current && (
           <>
             <Drop align={{ top: 'top' }} target={targetRef.current} stretch={false} plain>
-              <CaretUpFill />
+              <Button icon={<CaretUpFill />} />
             </Drop>
             <Drop align={{ bottom: 'bottom' }} target={targetRef.current} stretch={false} plain>
-              <CaretDownFill />
+              <Button icon={<CaretDownFill />} />
             </Drop>
             <Drop align={{ left: 'left' }} target={targetRef.current} stretch={false} plain>
-              <CaretLeftFill />
+              <Button icon={<CaretLeftFill />} />
             </Drop>
             <Drop align={{ right: 'right' }} target={targetRef.current} stretch={false} plain>
-              <CaretRightFill />
+              <Button icon={<CaretRightFill />} />
             </Drop>
           </>
         )
@@ -67,7 +70,20 @@ export function IconBack() {
   );
 }
 
-export function IconLInk({icon, label, url}) {
+export function IconButton({ icon, label, onClick }) {
+  return (
+    <Card pad='small' onClick={onClick}>
+      <CardBody align='center'>
+        {icon}
+      </CardBody>
+      <CardFooter align='center'>
+        <Text size='xsmall'>{label}</Text>
+      </CardFooter>
+    </Card>
+  );
+}
+
+export function IconLInk({ icon, label, url }) {
   const router = useRouter();
   return (
     <Card pad='small' onClick={() => router.push(url)}>

@@ -10,8 +10,8 @@ export function PanControl() {
   return (
     <Box flex={{ grow: 1, shrink: 1 }} align='center' justify='center'>
       <Stack anchor='center'>
-        <Box background='active' round='full' width='small' height='small' ref={targetRef} />
-        <Box background='placeholder' round='full' width='xxsmall' height='xxsmall' />
+        <Box background='placeholder' round='full' width='small' height='small' ref={targetRef} />
+        <Box background='active' round='full' width='xxsmall' height='xxsmall' />
       </Stack>
       {
         targetRef.current && (

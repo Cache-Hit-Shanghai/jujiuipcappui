@@ -61,6 +61,7 @@ export function AppFooter() {
 }
 
 export function IpcCard({ label, imgurl }) {
+  const router = useRouter();
   return (
     <Card>
       <CardBody>
@@ -69,8 +70,8 @@ export function IpcCard({ label, imgurl }) {
       <CardFooter margin='small' align='center' justify='between'>
         <Text>{label}</Text>
         <Menu dropProps={{ align: { top: 'bottom', right: 'right' } }} icon={<Configure />} items={[
-          { label: '设备分享'},
-          { label: '设置'},
+          { label: '设备分享' },
+          { label: '设置', onClick: () => router.push('/device/settings') },
         ]} />
       </CardFooter>
     </Card>

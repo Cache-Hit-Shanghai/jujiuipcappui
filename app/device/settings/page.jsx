@@ -10,7 +10,7 @@ export default function Page() {
   const [ openName, setOpenName ] = useState(false);
   return (
     <Grommet full>
-      <Box fill gap='medium'>
+      <Box fill>
         <Nav direction='row' align='center'>
           <IconBack />
           <Text>设备设置</Text>

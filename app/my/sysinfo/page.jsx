@@ -12,7 +12,7 @@ const infos = [
 export default function Page() {
   return (
     <Grommet full>
-      <Box fill gap='medium'>
+      <Box fill>
         <Nav direction='row' align='center'>
           <IconBack />
           <Text>系统信息</Text>

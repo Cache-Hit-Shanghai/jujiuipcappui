@@ -15,7 +15,7 @@ const links = [
 export default function Page() {
   return (
     <Grommet full>
-      <Box fill gap='medium'>
+      <Box fill>
         <Nav direction='row' align='center'>
           <IconBack />
           <Text>关于</Text>

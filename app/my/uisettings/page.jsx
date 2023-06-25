@@ -6,7 +6,7 @@ import { IconBack } from '../../../components/Components';
 export default function Page() {
   return (
     <Grommet full>
-      <Box fill gap='medium'>
+      <Box fill>
         <Nav direction='row' align='center'>
           <IconBack />
           <Text>界面设置</Text>

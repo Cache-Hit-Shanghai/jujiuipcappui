@@ -9,7 +9,7 @@ export default function Page() {
   const [value, setValue] = useState(Date.now());
   return (
     <Grommet full>
-      <Box fill gap='medium'>
+      <Box fill>
         <Nav direction='row' align='center'>
           <IconBack />
           <Text>实时视频</Text>

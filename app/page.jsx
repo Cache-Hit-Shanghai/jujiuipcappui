@@ -6,7 +6,7 @@ import { AppFooter, IpcCard } from '../components/Components';
 
 export default function Page() {
   return (<Grommet full>
-    <Box fill gap='medium'>
+    <Box fill>
       <Nav direction='row' justify='between' align='center'>
         <Box margin='small'>
           <Text size='large'>云探智能视觉系统</Text>

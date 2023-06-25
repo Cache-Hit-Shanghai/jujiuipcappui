@@ -17,7 +17,7 @@ export default function Page() {
   const router = useRouter();
 
   return (<Grommet full>
-    <Box fill gap='medium'>
+    <Box fill>
       <Nav direction='row' margin='small' justify='between'>
         <Box direction='row' gap='small' align='center'>
           <Avatar background='active'>

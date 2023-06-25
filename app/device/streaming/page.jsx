@@ -14,7 +14,7 @@ export default function Page() {
         </Nav>
         <Main flex={{ grow: 1, shrink: 1 }} overflow='auto' gap='small'>
           <Box flex={false}>
-            <VideoCanvas>
+            <VideoCanvas controls={false}>
               <source
                 src='http://techslides.com/demos/sample-videos/small.webm'
                 type='video/webm'

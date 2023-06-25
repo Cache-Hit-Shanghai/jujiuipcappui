@@ -16,14 +16,14 @@
     "grommet": "^2.32.2",
     "grommet-controls": "^3.0.2",
     "grommet-icons": "^4.11.0",
-    "next": "^13.4.6",
+    "next": "^13.4.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "styled-components": "^5.3.11"
   },
   "devDependencies": {
     "@types/node": "20.3.1",
-    "@types/react": "18.2.13",
+    "@types/react": "18.2.14",
     "typescript": "5.1.3"
   }
 }

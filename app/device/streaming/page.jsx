@@ -13,8 +13,8 @@ export default function Page() {
           <Text>实时视频</Text>
         </Nav>
         <Main flex={{ grow: 1, shrink: 1 }} overflow='auto' gap='small'>
-          <Box flex={false}>
-            <VideoCanvas controls={false}>
+          <Box flex={false} background='black'>
+            <VideoCanvas controls={false} background='black'>
               <source
                 src='http://techslides.com/demos/sample-videos/small.webm'
                 type='video/webm'

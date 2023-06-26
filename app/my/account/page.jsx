@@ -38,30 +38,26 @@ export default function Page() {
           <Button label='注销账号' color='status-critical' />
           {openAvata && (
             <Layer position='bottom' full='horizontal' onClickOutside={() => setOpenAvata(false)} responsive={false}>
-              <Box fill pad='medium'>
-                <Heading level={3} alignSelf='center'>更换头像</Heading>
-                <Box gap='small'>
-                  <Button label='拍照' />
-                  <Button label='本地相册' />
-                  <Button label='取消' onClick={() => setOpenAvata(false)} />
-                </Box>
+              <Box fill pad='medium' gap='medium'>
+                <Heading level={3} alignSelf='center' margin='none'>更换头像</Heading>
+                <Button label='拍照' />
+                <Button label='本地相册' />
+                <Button label='取消' onClick={() => setOpenAvata(false)} />
               </Box>
             </Layer>
           )}
           {openName && (
             <Layer position='bottom' full='horizontal' onClickOutside={() => setOpenName(false)} responsive={false}>
-              <Box fill pad='medium'>
-                <Heading level={3} alignSelf='center'>修改昵称</Heading>
-                <Box gap='small'>
-                  <TextArea />
-                  <Box direction='row' gap='small' align='center'>
-                    <Alert size='small' />
-                    <Text size='small'>请设置2-20个字符，不能使用@《等字符。</Text>
-                  </Box>
-                  <Box direction='row' justify='evenly'>
-                    <Button label='取消' onClick={() => setOpenName(false)} />
-                    <Button label='保存' primary />
-                  </Box>
+              <Box fill pad='medium' gap='medium'>
+                <Heading level={3} alignSelf='center' margin='none'>修改昵称</Heading>
+                <TextArea />
+                <Box direction='row' gap='small' align='center'>
+                  <Alert size='small' />
+                  <Text size='small'>请设置2-20个字符，不能使用@《等字符。</Text>
+                </Box>
+                <Box direction='row' justify='evenly'>
+                  <Button label='取消' onClick={() => setOpenName(false)} />
+                  <Button label='保存' primary />
                 </Box>
               </Box>
             </Layer>

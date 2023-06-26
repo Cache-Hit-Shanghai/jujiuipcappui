@@ -20,7 +20,7 @@ export default function Page() {
             dropProps={{ align: { top: 'bottom', right: 'right' } }}
             icon={<AddCircle />} items={[
               { label: '绑定设备', onClick: () => router.push('/device/binding') },
-              { label: '设备分组' },
+              { label: '设备分组', onClick: () => router.push('/device/group') },
             ]}
           />
         </Box>

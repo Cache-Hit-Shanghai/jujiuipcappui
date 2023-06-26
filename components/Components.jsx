@@ -45,6 +45,23 @@ export function InfoGroup({ data }) {
   );
 }
 
+export function ButtonGroup({ data }) {
+  return (
+    <Card background='active' margin={{ horizontal: 'small' }} flex={false}>
+      <CardBody>
+        <List data={data} border={false}>
+          {
+            (datum) => (
+              <Button icon={<FormNext />} label={datum.label} reverse plain justify='between'
+              onClick={datum.onClick} />
+            )
+          }
+        </List>
+      </CardBody>
+    </Card>
+  );
+}
+
 export function LinkGroup({ data }) {
   const router = useRouter();
   return (

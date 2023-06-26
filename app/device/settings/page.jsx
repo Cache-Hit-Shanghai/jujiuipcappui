@@ -157,35 +157,28 @@ export default function Page() {
           <Button color='status-critical' label='删除设备' />
           {openAvata && (
             <Layer position='bottom' full='horizontal' onClickOutside={() => setOpenAvata(false)} responsive={false}>
-              <Box fill pad='medium'>
-                <Heading level={3} alignSelf='center'>修改设备名称</Heading>
-                <Box gap='small'>
-                  <TextArea value='客3' />
-                  <Box direction='row' justify='evenly'>
-                    <Button label='取消' onClick={() => setOpenAvata(false)} />
-                    <Button label='保存' primary onClick={() => setOpenAvata(false)} />
-                  </Box>
+              <Box fill pad='medium' gap='medium'>
+                <Heading level={3} alignSelf='center' margin='none'>修改设备名称</Heading>
+                <TextArea value='客3' />
+                <Box direction='row' justify='evenly'>
+                  <Button label='取消' onClick={() => setOpenAvata(false)} />
+                  <Button label='保存' primary onClick={() => setOpenAvata(false)} />
                 </Box>
               </Box>
             </Layer>
           )}
           {openName && (
             <Layer position='bottom' full='horizontal' onClickOutside={() => setOpenName(false)} responsive={false}>
-              <Box fill pad='medium'>
-                <Heading level={3} alignSelf='center'>设备分组</Heading>
-                <Box gap='small'>
-                  <RadioButtonGroup
-                    name='deficegroup'
-                    options={['办公室', '默认分组']}
-                    value='办公室'
-                  />
-                  <Box direction='row'>
-                    <Button plain label='添加分组' icon={<Add />} />
-                  </Box>
-                  <Box direction='row' justify='evenly'>
-                    <Button label='取消' onClick={() => setOpenName(false)} />
-                    <Button label='保存' primary />
-                  </Box>
+              <Box fill pad='medium' gap='medium'>
+                <Heading level={3} alignSelf='center' margin='none'>更改设备分组</Heading>
+                <RadioButtonGroup
+                  name='deficegroup'
+                  options={['办公室', '默认分组']}
+                  value='办公室'
+                />
+                <Box direction='row' justify='evenly'>
+                  <Button label='取消' onClick={() => setOpenName(false)} />
+                  <Button label='保存' primary />
                 </Box>
               </Box>
             </Layer>

@@ -2,9 +2,12 @@
 
 import { Grommet, Text, Box, Nav, Menu, Button, Accordion, AccordionPanel, Card, Main } from 'grommet';
 import { AddCircle, Chat } from 'grommet-icons';
+import { useRouter } from 'next/navigation';
 import { AppFooter, IpcCard } from '../components/Components';
 
 export default function Page() {
+  const router = useRouter();
+
   return (<Grommet full>
     <Box fill>
       <Nav direction='row' justify='between' align='center'>
@@ -16,7 +19,7 @@ export default function Page() {
           <Menu
             dropProps={{ align: { top: 'bottom', right: 'right' } }}
             icon={<AddCircle />} items={[
-              { label: '添加设备' },
+              { label: '绑定设备', onClick: () => router.push('/device/binding') },
               { label: '设备分组' },
             ]}
           />

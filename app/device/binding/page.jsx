@@ -1,7 +1,7 @@
 'use client';
 
 import { Grommet, Text, Box, Heading, Nav, Form, FormField, TextInput } from 'grommet';
-import { CircleInformation } from 'grommet-icons';
+import { CircleInformation, Wifi } from 'grommet-icons';
 import { IconBack } from '../../../components/Components';
 
 export default function Page() {
@@ -17,7 +17,10 @@ export default function Page() {
             <Text>二维码</Text>
           </Box>
           <Box width='medium'>
-            <Heading level={3}>WiFi设置</Heading>
+            <Box direction='row' align='center' gap='small'>
+              <Wifi color='plain' size='large' />
+              <Heading level={2}>WiFi设置</Heading>
+            </Box>
             <Form>
               <FormField label='WiFi名称' />
               <FormField label='WiFi密码' name='password' htmlFor='password'>

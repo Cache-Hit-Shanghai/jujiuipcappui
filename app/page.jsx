@@ -15,7 +15,7 @@ export default function Page() {
           <Text size='large'>云探智能视觉系统</Text>
         </Box>
         <Box direction='row' gap='medium' align='center'>
-          <Button icon={<Chat />} href='#' />
+          <Button icon={<Chat />} onClick={() => router.push('/message')} />
           <Menu
             dropProps={{ align: { top: 'bottom', right: 'right' } }}
             icon={<AddCircle />} items={[

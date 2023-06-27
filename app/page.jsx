@@ -1,6 +1,6 @@
 'use client';
 
-import { Grommet, Text, Box, Nav, Menu, Button, Accordion, AccordionPanel, Card, Main } from 'grommet';
+import { Grommet, Text, Box, Nav, Menu, Button, Accordion, AccordionPanel, Main } from 'grommet';
 import { AddCircle, Chat } from 'grommet-icons';
 import { useRouter } from 'next/navigation';
 import { AppFooter, IpcCard } from '../components/Components';
@@ -34,7 +34,6 @@ export default function Page() {
             </Box>
           </AccordionPanel>
           <AccordionPanel label={<Text margin='small'>默认分组</Text>}>
-            <Card></Card>
           </AccordionPanel>
         </Accordion>
       </Main>

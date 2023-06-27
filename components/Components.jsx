@@ -129,7 +129,7 @@ export function IpcCard({ label, imgurl }) {
       <CardFooter margin='small' align='center' justify='between'>
         <Text>{label}</Text>
         <Menu dropProps={{ align: { top: 'bottom', right: 'right' } }} icon={<Configure />} items={[
-          { label: '设备分享' },
+          { label: '设备分享', onClick: () => router.push('/device/sharing') },
           { label: '设置', onClick: () => router.push('/device/settings') },
         ]} />
       </CardFooter>

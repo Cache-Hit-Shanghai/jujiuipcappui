@@ -56,7 +56,7 @@ export default function Page() {
                     </Box>
                   </Box>
                 </Box>
-                <Button label='删除分组' />
+                <Button color='status-critical' label='删除分组' />
               </Box>
             </Layer>
           )}

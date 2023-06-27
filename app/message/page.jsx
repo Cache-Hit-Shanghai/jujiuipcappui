@@ -2,22 +2,10 @@
 
 import { Grommet, Text, Box, Nav, Tabs, Tab } from 'grommet';
 import { Inbox, Notification } from 'grommet-icons';
-import { useState } from 'react';
 import { IconBack } from '../../components/Components';
 
 
 export default function Page() {
-  const [ openGroupAdd, setOpenGroupAdd ] = useState(false);
-  const [ openGroupEdit, setOpenGroupEdit ] = useState(false);
-
-  const editgoups = [
-    { label: '办公室', onClick: () => setOpenGroupEdit(true) },
-    { label: '默认分组', onClick: () => setOpenGroupEdit(true) },
-  ];
-  const addgroups = [
-    { label: '添加分组', onClick: () => setOpenGroupAdd(true) },
-  ];
-
   return (
     <Grommet full>
       <Box fill>

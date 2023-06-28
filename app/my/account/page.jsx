@@ -1,7 +1,7 @@
 'use client';
 
 import { Grommet, Text, Box, Avatar, Nav, Card, Button, CardBody, Main, Layer, Heading, TextArea } from 'grommet';
-import { User, Alert } from 'grommet-icons';
+import { User, CircleAlert } from 'grommet-icons';
 import { useState } from 'react';
 import { IconBack } from '../../../components/Components';
 
@@ -52,8 +52,8 @@ export default function Page() {
                 <Heading level={3} alignSelf='center' margin='none'>修改昵称</Heading>
                 <TextArea />
                 <Box direction='row' gap='small' align='center'>
-                  <Alert size='small' />
-                  <Text size='small'>请设置2-20个字符，不能使用@《等字符。</Text>
+                  <CircleAlert color='status-warning' />
+                  <Text size='small' color='status-warning'>请设置2-20个字符，不能使用@《等字符。</Text>
                 </Box>
                 <Box direction='row' justify='evenly'>
                   <Button label='取消' onClick={() => setOpenName(false)} />

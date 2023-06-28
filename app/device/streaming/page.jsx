@@ -26,7 +26,7 @@ export default function Page() {
           <Tabs flex>
             <Tab title='实时视频'>
               <Box fill>
-                <Box flex={{ grow: 1, shrink: 1 }} justify='center'>
+                <Box flex={{ grow: 1 }} justify='center'>
                   <PanControl />
                 </Box>
                 <Box direction='row' justify='evenly' background='active' flex={false}>

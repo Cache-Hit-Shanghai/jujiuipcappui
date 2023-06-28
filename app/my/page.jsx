@@ -44,7 +44,6 @@ export default function Page() {
           </CardHeader>
           <CardBody>
             <Box direction='row' justify='evenly'>
-              <IconLInk icon={<Group />} label='我的好友' url='#' />
               <IconLInk icon={<HostMaintenance />} label='设备管理' url='#' />
               <IconLInk icon={<ShareRounded />} label='我的分享' url='#' />
               <IconLInk icon={<Edit />} label='帮助与反馈' url='#' />

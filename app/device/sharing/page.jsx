@@ -1,15 +1,16 @@
 'use client';
 
-import { Grommet, Text, Box, Nav, Layer, Heading, Button } from 'grommet';
-import { Inbox, Notification } from 'grommet-icons';
+import { Grommet, Text, Box, Nav, Layer, Button } from 'grommet';
 import { useState } from 'react';
+import { useRouter } from 'next/navigation';
 import { IconBack, ButtonGroup } from '../../../components/Components';
 
 
 export default function Page() {
+  const router = useRouter();
   const [ openWechatSharing, setOpenWechatSharing ] = useState(false);
   const buttons = [
-    { label: '好友分享', onClick: () => {} },
+    { label: '二维码分享', onClick: () => router.push('/device/sharing/qrcode') },
     { label: '微信分享', onClick: () => setOpenWechatSharing(true) },
   ];
 

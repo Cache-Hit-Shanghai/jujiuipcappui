@@ -1,7 +1,7 @@
 'use client';
 
 import { Grommet, Text, Box, Nav, Menu, Button, Accordion, AccordionPanel, Main } from 'grommet';
-import { AddCircle, Chat } from 'grommet-icons';
+import { AddCircle, Chat, Scan } from 'grommet-icons';
 import { useRouter } from 'next/navigation';
 import { AppFooter, IpcCard } from '../components/Components';
 
@@ -14,7 +14,8 @@ export default function Page() {
         <Box margin='small'>
           <Text size='large'>云探智能视觉系统</Text>
         </Box>
-        <Box direction='row' gap='medium' align='center'>
+        <Box direction='row' gap='small' align='center'>
+          <Button icon={<Scan />} />
           <Button icon={<Chat />} onClick={() => router.push('/message')} />
           <Menu
             dropProps={{ align: { top: 'bottom', right: 'right' } }}

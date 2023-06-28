@@ -1,7 +1,7 @@
 'use client';
 
-import { Grommet, Text, Box, Nav, Button, Card, CardHeader, CardBody, Main, Avatar } from 'grommet';
-import { Gallery, VirtualStorage, Edit, ShareRounded, User, SettingsOption, Group, HostMaintenance } from 'grommet-icons';
+import { Grommet, Text, Box, Nav, Card, CardHeader, CardBody, Main, Avatar } from 'grommet';
+import { Gallery, VirtualStorage, Edit, ShareRounded, User, HostMaintenance } from 'grommet-icons';
 import { useRouter } from 'next/navigation';
 import { AppFooter, IconLInk, LinkGroup } from '../../components/Components';
 

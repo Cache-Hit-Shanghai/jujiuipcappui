@@ -30,7 +30,7 @@ export default function Page() {
         </Box>
         {openGroupAdd && (
           <Layer position='bottom' full='horizontal' onClickOutside={() => setOpenGroupAdd(false)} responsive={false}>
-            <Box fill pad='medium' gap='medium'>
+            <Box fill border pad='medium' gap='medium'>
               <Heading level={3} alignSelf='center' margin='none'>添加分组</Heading>
               <TextInput />
               <Box direction='row' justify='evenly'>
@@ -42,7 +42,7 @@ export default function Page() {
         )}
         {openGroupEdit && (
           <Layer position='bottom' full='horizontal' onClickOutside={() => setOpenGroupEdit(false)} responsive={false}>
-            <Box fill pad='medium' gap='medium'>
+            <Box fill border pad='medium' gap='medium'>
               <Heading level={3} alignSelf='center' margin='none'>分组设置</Heading>
               <Box gap='small'>
                 <Text>分组名：</Text>

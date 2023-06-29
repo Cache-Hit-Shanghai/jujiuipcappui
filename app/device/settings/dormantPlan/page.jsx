@@ -1,4 +1,4 @@
-"use client";
+'use client';
 import {
 	Box,
 	Nav,
@@ -9,35 +9,35 @@ import {
 	Button,
 	Layer,
 	MaskedInput,
-} from "grommet";
-import { Add } from "grommet-icons";
-import { IconBack } from "@/components/Components";
-import { useState } from "react";
+} from 'grommet';
+import { Add } from 'grommet-icons';
+import { IconBack } from '@/components/Components';
+import { useState } from 'react';
 
 const timeMask = [
 	{
 		length: 2,
 		options: Array.from({ length: 24 }, (v, k) => (k >= 10 ? k : `0${k}`)),
-		regexpStr: "^2[0-3]$|^[0-1]?[0-9]$|^0$",
-		placeholder: "hh",
+		regexpStr: '^2[0-3]$|^[0-1]?[0-9]$|^0$',
+		placeholder: 'hh',
 	},
-	{ fixed: ":" },
+	{ fixed: ':' },
 	{
 		length: 2,
 		options: Array.from({ length: 60 }, (v, k) => (k >= 10 ? k : `0${k}`)),
-		regexpStr: "^[0-5][0-9]$|^[0-9]$",
-		placeholder: "mm",
+		regexpStr: '^[0-5][0-9]$|^[0-9]$',
+		placeholder: 'mm',
 	},
 ];
 
 const dayDataList = [
-	{ day: 1, text: "一" },
-	{ day: 2, text: "二" },
-	{ day: 3, text: "三" },
-	{ day: 4, text: "四" },
-	{ day: 5, text: "五" },
-	{ day: 6, text: "六" },
-	{ day: 0, text: "日" },
+	{ day: 1, text: '一' },
+	{ day: 2, text: '二' },
+	{ day: 3, text: '三' },
+	{ day: 4, text: '四' },
+	{ day: 5, text: '五' },
+	{ day: 6, text: '六' },
+	{ day: 0, text: '日' },
 ];
 
 const DormantPlan = () => {
@@ -45,34 +45,35 @@ const DormantPlan = () => {
 	const [list, setList] = useState([]);
 	const [dayList, setDayList] = useState([]);
 	const [request, setRequest] = useState({
-		start: "",
-		end: "",
+		start: '',
+		end: '',
 	});
 
 	return (
 		<Box fill>
 			{add && (
 				<Layer
-					position="bottom"
-					full="horizontal"
+					position='bottom'
+					full='horizontal'
 					onClickOutside={() => {
 						setAdd(false);
 					}}
 					responsive={false}
 				>
 					<Box
-						gap="20px"
-						pad={{ vertical: "20px", horizontal: "10px" }}
+					 	border
+						gap='small'
+						pad={{ vertical: '20px', horizontal: '10px' }}
 					>
-						<Box gap="20px">
+						<Box gap='small'>
 							<Text>时间</Text>
-							{[{ name: "start" }, { name: "end" }].map(
+							{[{ name: 'start' }, { name: 'end' }].map(
 								({ name }) => (
 									<CardBody key={name}>
 										<Box
-											direction="row"
-											align="center"
-											justify="between"
+											direction='row'
+											align='center'
+											justify='between'
 										>
 											<Text>开始时间</Text>
 											<Box>
@@ -94,20 +95,20 @@ const DormantPlan = () => {
 								)
 							)}
 						</Box>
-						<Box gap="20px">
+						<Box gap='small'>
 							<Text>每周重复</Text>
-							<Box direction="row" justify="around">
+							<Box direction='row' justify='around'>
 								{dayDataList.map(({ day, text } = {}, i) => (
 									<Box key={text}>
 										<Button
 											label={text}
 											primary={dayList[day]?.select}
 											style={{
-												padding: "0",
-												width: "40px",
-												height: "40px",
-												borderRadius: "50%",
-												textAlign: "center",
+												padding: '0',
+												width: '40px',
+												height: '40px',
+												borderRadius: '50%',
+												textAlign: 'center',
 											}}
 											onClick={() => {
 												setDayList((list) => {
@@ -127,7 +128,7 @@ const DormantPlan = () => {
 						</Box>
 						<Box>
 							<Button
-								label="保存"
+								label='保存'
 								onClick={() => {
 									const el = {};
 									request.start.length === 5 &&
@@ -150,14 +151,14 @@ const DormantPlan = () => {
 					</Box>
 				</Layer>
 			)}
-			<Box fill gap="20px">
-				<Nav direction="row" align="center">
-					<IconBack />
-					<Text>休眠计划设置</Text>
-				</Nav>
-				<Card pad="small" gap="small" background="background-contrast" flex={false}>
+			<Nav direction='row' align='center'>
+				<IconBack />
+				<Text>休眠计划设置</Text>
+			</Nav>
+			<Box fill gap='small' pad={{ horizontal: 'small' }}>
+				<Card pad='small' gap='small' background='background-contrast' flex={false}>
 					<CardBody>
-						<Box direction="row" align="center" justify="between">
+						<Box direction='row' align='center' justify='between'>
 							<Text>休眠计划</Text>
 							<CheckBox toggle />
 						</Box>
@@ -165,16 +166,16 @@ const DormantPlan = () => {
 				</Card>
 				{list.map(({ start, end, dayList = [] }, i) => (
 					<Card
-						pad="small"
-						gap="small"
-						background="background-contrast"
+						pad='small'
+						gap='small'
+						background='background-contrast'
 						flex={false}
 					>
 						<CardBody>
 							<Box
-								direction="row"
-								align="center"
-								justify="between"
+								direction='row'
+								align='center'
+								justify='between'
 							>
 								<Box>
 									<Text>
@@ -189,7 +190,7 @@ const DormantPlan = () => {
 													].text
 												}`;
 											})
-											.join(",")}
+											.join(',')}
 									</Text>
 								</Box>
 							</Box>
@@ -198,12 +199,10 @@ const DormantPlan = () => {
 				))}
 				<Box>
 					<Button
-						label="添加时间段"
-						icon={<Add></Add>}
-						onClick={() => {
-							setAdd(true);
-						}}
-					></Button>
+						label='添加时间段'
+						icon={<Add />}
+						onClick={() => setAdd(true)}
+					/>
 				</Box>
 			</Box>
 		</Box>

@@ -37,7 +37,7 @@ export default function Page() {
         <Button label='注销账号' color='status-critical' />
         {openAvata && (
           <Layer position='bottom' full='horizontal' onClickOutside={() => setOpenAvata(false)} responsive={false}>
-            <Box fill pad='medium' gap='medium'>
+            <Box border fill pad='medium' gap='medium'>
               <Heading level={3} alignSelf='center' margin='none'>更换头像</Heading>
               <Button label='拍照' />
               <Button label='本地相册' />
@@ -47,7 +47,7 @@ export default function Page() {
         )}
         {openName && (
           <Layer position='bottom' full='horizontal' onClickOutside={() => setOpenName(false)} responsive={false}>
-            <Box fill pad='medium' gap='medium'>
+            <Box fill border pad='medium' gap='medium'>
               <Heading level={3} alignSelf='center' margin='none'>修改昵称</Heading>
               <TextArea />
               <Box direction='row' gap='small' align='center'>

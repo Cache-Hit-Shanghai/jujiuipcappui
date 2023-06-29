@@ -351,7 +351,7 @@ export default function Page() {
 						onClickOutside={() => setOpenAvata(false)}
 						responsive={false}
 					>
-						<Box fill pad="medium" gap="medium">
+						<Box fill border pad="medium" gap="medium">
 							<Heading
 								level={3}
 								alignSelf="center"
@@ -381,7 +381,7 @@ export default function Page() {
 						onClickOutside={() => setOpenName(false)}
 						responsive={false}
 					>
-						<Box fill pad="medium" gap="medium">
+						<Box fill border pad="medium" gap="medium">
 							<Heading
 								level={3}
 								alignSelf="center"

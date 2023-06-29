@@ -1,7 +1,7 @@
 'use client';
 
-import { Grommet, Text, Box, Heading, Menu, Button, Accordion, AccordionPanel, Main } from 'grommet';
-import { Webcam, Chat } from 'grommet-icons';
+import { Grommet, Text, Box, Heading } from 'grommet';
+import { Webcam } from 'grommet-icons';
 import { useRouter } from 'next/navigation';
 
 export default function Page() {
@@ -10,8 +10,10 @@ export default function Page() {
   return (
     <Grommet full>
       <Box fill>
-        <Box flex={{ grow: 1, shrink: 1 }} align='center' justify='center' gap='medium' background={{
-            image: 'url(https://jujiu-prod.oss-cn-shanghai.aliyuncs.com/yuntan.svg)',
+        <Box flex={{ grow: 1, shrink: 1 }} align='center' justify='center' gap='medium' style={{
+          'background-image': 'radial-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1))'
+        }} background={{
+            image: 'url(https://jujiu-prod.oss-cn-shanghai.aliyuncs.com/11242797_49169.svg)',
             opacity: 'weak',
           }}>
           <Box direction='row' align='center' gap='medium'>

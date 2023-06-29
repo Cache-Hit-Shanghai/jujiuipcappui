@@ -23,7 +23,7 @@ export default function Page() {
         <Main flex={{ grow: 1, shrink: 1 }} overflow='auto' gap='small'>
           <Card pad='medium' margin={{ horizontal: 'small' }} flex={false}>
             <CardBody margin='medium' justify='center' align='center'>
-              <Webcam size='xlarge' />
+              <Webcam size='xlarge' color='brand' />
             </CardBody>
             <CardFooter justify='center' align='center' direction='column' gap='none'>
               <Text>V1.0.0.0</Text>

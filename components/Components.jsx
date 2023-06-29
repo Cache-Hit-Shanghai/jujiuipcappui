@@ -8,11 +8,9 @@ import {
 	Image,
 	Button,
 	List,
-	Drop,
-	Stack,
-	Grid,
 } from "grommet";
 import {
+	Home,
 	Webcam,
 	Radial,
 	Configure,
@@ -24,7 +22,6 @@ import {
 	CaretRightFill,
 } from "grommet-icons";
 import { useRouter } from "next/navigation";
-import { useState, useRef, useEffect } from "react";
 
 import styles from "./components.module.css";
 
@@ -172,6 +169,7 @@ export function AppFooter() {
 		<Box direction="row" background="active" justify="evenly" flex={false}>
 			<IconLInk icon={<Webcam />} label="设备" url="/" />
 			<IconLInk icon={<Radial />} label="我的" url="/my" />
+			<IconLInk icon={<Home />} label="主页" url="/splash" />
 		</Box>
 	);
 }

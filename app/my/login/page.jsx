@@ -1,8 +1,8 @@
 'use client';
 
-import { Grommet, Text, Box, Avatar, Nav, Main } from 'grommet';
-import { LogInCircle } from '@styled-icons/boxicons-regular/LogInCircle';
-import { LogoWechat } from '@styled-icons/ionicons-solid/LogoWechat';
+import { Grommet, Text, Box, Avatar, Nav, Main, Button } from 'grommet';
+import { LoginCircle } from '@styled-icons/remix-fill/LoginCircle';
+import { Wechat } from '@styled-icons/remix-fill/Wechat';
 import { Alipay } from '@styled-icons/remix-fill/Alipay';
 import { IconBack } from '../../../components/Components';
 
@@ -23,16 +23,22 @@ export default function Page() {
           <Text>用户登录</Text>
         </Nav>
         <Main flex={{ grow: 1, shrink: 1 }} overflow='auto'>
-          <Box fill align='center' justify='center' gap='medium'>
-            <Avatar background='active' size='large' pad='small'>
-              <LogInCircle />
-            </Avatar>
-            <Avatar background='active' size='large' pad='small'>
-              <LogoWechat />
-            </Avatar>
-            <Avatar background='active' size='large' pad='small'>
-              <Alipay />
-            </Avatar>
+          <Box fill align='center' justify='center' gap='large'>
+            <Button>
+              <Avatar background='active' size='large' pad='small'>
+                <LoginCircle />
+              </Avatar>
+            </Button>
+            <Button>
+              <Avatar background='active' size='large' pad='small'>
+                <Wechat />
+              </Avatar>
+            </Button>
+            <Button>
+              <Avatar background='active' size='large' pad='small'>
+                <Alipay />
+              </Avatar>
+            </Button>
           </Box>
         </Main>
       </Box>

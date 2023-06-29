@@ -18,10 +18,14 @@ import {
 import { Add, FormNext, Wifi, ChatOption, Run, Pan } from "grommet-icons";
 import { useState } from "react";
 import { IconBack } from "../../../components/Components";
+import { useRouter } from "next/navigation";
 
 export default function Page() {
 	const [openAvata, setOpenAvata] = useState(false);
 	const [openName, setOpenName] = useState(false);
+
+	const router = useRouter();
+
 	return (
 		<Grommet full>
 			<Box fill>
@@ -278,6 +282,11 @@ export default function Page() {
 								direction="row"
 								align="center"
 								justify="between"
+								onClick={() => {
+									router.push(
+										"/device/settings/dormantPlan/"
+									);
+								}}
 							>
 								<Text>休眠计划</Text>
 								<FormNext />

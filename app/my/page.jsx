@@ -1,6 +1,6 @@
 'use client';
 
-import { Grommet, Text, Box, Nav, Card, CardHeader, CardBody, Main, Avatar } from 'grommet';
+import { Grommet, Text, Box, Nav, Card, CardHeader, CardBody, Main, Avatar, Button } from 'grommet';
 import { Gallery, VirtualStorage, Edit, ShareRounded, User, HostMaintenance } from 'grommet-icons';
 import { useRouter } from 'next/navigation';
 import { AppFooter, IconLInk, LinkGroup } from '../../components/Components';
@@ -19,15 +19,17 @@ export default function Page() {
   return (<Grommet full>
     <Box fill>
       <Nav direction='row' margin='small' justify='between'>
-        <Box direction='row' gap='small' align='center'>
-          <Avatar background='active'>
-            <User />
-          </Avatar>
-          <Box>
-            <Text>用户34881</Text>
-            <Text size='xsmall'>黄金会员</Text>
+        <Button onClick={() => router.push('/my/login')}>
+          <Box direction='row' gap='small' align='center'>
+            <Avatar background='active'>
+              <User />
+            </Avatar>
+            <Box>
+              <Text>用户34881</Text>
+              <Text size='xsmall'>黄金会员</Text>
+            </Box>
           </Box>
-        </Box>
+        </Button>
       </Nav>
       <Main flex={{ grow: 1, shrink: 1 }} overflow='auto' gap='small'>
         <Card pad='small' background='active' margin={{ horizontal: 'small' }} flex={false}>

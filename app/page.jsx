@@ -1,6 +1,6 @@
 'use client';
 
-import { Grommet, Text, Box, Nav, Menu, Button, Accordion, AccordionPanel, Main } from 'grommet';
+import { Text, Box, Nav, Menu, Button, Accordion, AccordionPanel, Main } from 'grommet';
 import { AddCircle, Chat } from 'grommet-icons';
 import { useRouter } from 'next/navigation';
 import { AppFooter, IpcCard } from '../components/Components';
@@ -8,7 +8,7 @@ import { AppFooter, IpcCard } from '../components/Components';
 export default function Page() {
   const router = useRouter();
 
-  return (<Grommet full>
+  return (
     <Box fill>
       <Nav direction='row' justify='between' align='center'>
         <Box margin='small'>
@@ -45,5 +45,5 @@ export default function Page() {
       </Main>
       <AppFooter />
     </Box>
-  </Grommet>);
+  );
 }

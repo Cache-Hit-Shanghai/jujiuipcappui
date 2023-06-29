@@ -80,7 +80,7 @@ export function PanControl({ onPanClick = () => {} }) {
 
 export function InfoGroup({ data }) {
 	return (
-		<Card background="active" margin={{ horizontal: "small" }} flex={false}>
+		<Card background="background-contrast" margin={{ horizontal: "small" }} flex={false}>
 			<CardBody>
 				<List
 					data={data}
@@ -95,7 +95,7 @@ export function InfoGroup({ data }) {
 
 export function ButtonGroup({ data }) {
 	return (
-		<Card background="active" margin={{ horizontal: "small" }} flex={false}>
+		<Card background="background-contrast" margin={{ horizontal: "small" }} flex={false}>
 			<CardBody>
 				<List data={data} border={false}>
 					{(datum) => (
@@ -117,7 +117,7 @@ export function ButtonGroup({ data }) {
 export function LinkGroup({ data }) {
 	const router = useRouter();
 	return (
-		<Card background="active" margin={{ horizontal: "small" }} flex={false}>
+		<Card background="background-contrast" margin={{ horizontal: "small" }} flex={false}>
 			<CardBody>
 				<List data={data} border={false}>
 					{(datum) => (
@@ -166,7 +166,7 @@ export function IconLInk({ icon, label, url }) {
 
 export function AppFooter() {
 	return (
-		<Box direction="row" background="active" justify="evenly" flex={false}>
+		<Box direction="row" background="background-contrast" justify="evenly" flex={false}>
 			<IconLInk icon={<Webcam />} label="设备" url="/" />
 			<IconLInk icon={<Radial />} label="我的" url="/my" />
 			<IconLInk icon={<Home />} label="主页" url="/splash" />

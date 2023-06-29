@@ -1,6 +1,6 @@
 'use client';
 
-import { Grommet, Text, Box, Nav, Layer, Button } from 'grommet';
+import { Text, Box, Nav, Layer, Button } from 'grommet';
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { IconBack, ButtonGroup } from '../../../components/Components';
@@ -15,25 +15,23 @@ export default function Page() {
   ];
 
   return (
-    <Grommet full>
-      <Box fill>
-        <Nav direction='row' align='center'>
-          <IconBack />
-          <Text>设备分享</Text>
-        </Nav>
-        <Box gap='medium' flex={{ grow: 1, shrink: 1 }} margin='small' overflow='auto'>
-          <ButtonGroup data={buttons} />
-          {openWechatSharing && (
-            <Layer position='bottom' full='horizontal' onClickOutside={() => setOpenWechatSharing(false)} responsive={false}>
-              <Box fill pad='medium' gap='medium'>
-                <Button label='微信好友' />
-                <Button label='朋友圈' />
-                <Button label='取消' onClick={() => setOpenWechatSharing(false)} />
-              </Box>
-            </Layer>
-          )}
-        </Box>
+    <Box fill>
+      <Nav direction='row' align='center'>
+        <IconBack />
+        <Text>设备分享</Text>
+      </Nav>
+      <Box gap='medium' flex={{ grow: 1, shrink: 1 }} margin='small' overflow='auto'>
+        <ButtonGroup data={buttons} />
+        {openWechatSharing && (
+          <Layer position='bottom' full='horizontal' onClickOutside={() => setOpenWechatSharing(false)} responsive={false}>
+            <Box fill pad='medium' gap='medium'>
+              <Button label='微信好友' />
+              <Button label='朋友圈' />
+              <Button label='取消' onClick={() => setOpenWechatSharing(false)} />
+            </Box>
+          </Layer>
+        )}
       </Box>
-    </Grommet>
+    </Box>
   );
 }

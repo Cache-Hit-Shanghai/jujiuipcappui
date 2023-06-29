@@ -1,6 +1,6 @@
 'use client';
 
-import { Grommet, Text, Box, Nav, Card, CardHeader, CardBody, Main, Avatar, Button } from 'grommet';
+import { Text, Box, Nav, Card, CardHeader, CardBody, Main, Avatar, Button } from 'grommet';
 import { Gallery, VirtualStorage, Edit, ShareRounded, User, HostMaintenance } from 'grommet-icons';
 import { useRouter } from 'next/navigation';
 import { AppFooter, IconLInk, LinkGroup } from '../../components/Components';
@@ -16,12 +16,12 @@ const links = [
 export default function Page() {
   const router = useRouter();
 
-  return (<Grommet full>
+  return (
     <Box fill>
       <Nav direction='row' margin='small' justify='between'>
         <Button onClick={() => router.push('/my/login')}>
           <Box direction='row' gap='small' align='center'>
-            <Avatar background='active'>
+            <Avatar background='background-contrast'>
               <User />
             </Avatar>
             <Box>
@@ -32,7 +32,7 @@ export default function Page() {
         </Button>
       </Nav>
       <Main flex={{ grow: 1, shrink: 1 }} overflow='auto' gap='small'>
-        <Card pad='small' background='active' margin={{ horizontal: 'small' }} flex={false}>
+        <Card pad='small' background='background-contrast' margin={{ horizontal: 'small' }} flex={false}>
           <CardBody>
             <Box direction='row' justify='evenly'>
               <IconLInk icon={<Gallery />} label='相册' url='#' />
@@ -40,7 +40,7 @@ export default function Page() {
             </Box>
           </CardBody>
         </Card>
-        <Card pad='small' gap='small' background='active' margin={{ horizontal: 'small' }} flex={false}>
+        <Card pad='small' gap='small' background='background-contrast' margin={{ horizontal: 'small' }} flex={false}>
           <CardHeader>
             <Text>常用工具</Text>
           </CardHeader>
@@ -56,5 +56,5 @@ export default function Page() {
       </Main>
       <AppFooter />
     </Box>
-  </Grommet>);
+  );
 }

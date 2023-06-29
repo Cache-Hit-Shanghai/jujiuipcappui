@@ -1,6 +1,5 @@
 "use client";
 import {
-	Grommet,
 	Box,
 	Nav,
 	Text,
@@ -51,7 +50,7 @@ const DormantPlan = () => {
 	});
 
 	return (
-		<Grommet full>
+		<Box fill>
 			{add && (
 				<Layer
 					position="bottom"
@@ -156,7 +155,7 @@ const DormantPlan = () => {
 					<IconBack />
 					<Text>休眠计划设置</Text>
 				</Nav>
-				<Card pad="small" gap="small" background="active" flex={false}>
+				<Card pad="small" gap="small" background="background-contrast" flex={false}>
 					<CardBody>
 						<Box direction="row" align="center" justify="between">
 							<Text>休眠计划</Text>
@@ -168,7 +167,7 @@ const DormantPlan = () => {
 					<Card
 						pad="small"
 						gap="small"
-						background="active"
+						background="background-contrast"
 						flex={false}
 					>
 						<CardBody>
@@ -207,7 +206,7 @@ const DormantPlan = () => {
 					></Button>
 				</Box>
 			</Box>
-		</Grommet>
+		</Box>
 	);
 };
 

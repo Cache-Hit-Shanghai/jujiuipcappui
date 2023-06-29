@@ -1,3 +1,4 @@
+import { Grommet, grommet } from 'grommet';
 import StyledComponentsRegistry from '../components/registry';
 import './global.css'
 
@@ -5,7 +6,11 @@ export default function RootLayout({ children }) {
   return (
     <html>
       <body>
-        <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+        <StyledComponentsRegistry>
+          <Grommet full theme={grommet} themeMode='dark'>
+            {children}
+          </Grommet>
+        </StyledComponentsRegistry>
       </body>
     </html>
   )

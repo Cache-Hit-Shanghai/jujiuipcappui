@@ -1,12 +1,13 @@
 'use client';
 
 import { Grommet, Text, Box, Video as VideoCanvas, Nav, Tabs, Tab, DateInput, RadioButtonGroup, Main, Grid } from 'grommet';
-import { Camera, Video, Microphone, ClosedCaption, Cloud, Sd } from 'grommet-icons';
+import { Camera, Video, Microphone, ClosedCaption, Cloud, Sd, VolumeMute } from 'grommet-icons';
 import { useState } from 'react';
 import { IconBack, IconButton, PanControl } from '../../../components/Components';
 
 export default function Page() {
   const [value, setValue] = useState(Date.now());
+
   return (
     <Grommet full>
       <Box fill>
@@ -33,6 +34,7 @@ export default function Page() {
                   <IconButton icon={<Camera />} label='截图' onClick={() => {}} />
                   <IconButton icon={<Video />} label='录制' onClick={() => {}} />
                   <IconButton icon={<Microphone />} label='对讲' onClick={() => {}} />
+                  <IconButton icon={<VolumeMute />} label='静音' onClick={() => {}} />
                   <IconButton icon={<ClosedCaption />} label='清晰度' onClick={() => {}} />
                 </Box>
               </Box>

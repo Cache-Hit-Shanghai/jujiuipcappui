@@ -15,7 +15,7 @@ export default function Page() {
         <Text>实时视频</Text>
       </Nav>
       <Main flex={{ grow: 1, shrink: 1 }} overflow='auto' gap='small'>
-        <Box flex={false} background='black'>
+        <Box flex={false} background='background-contrast'>
           <VideoCanvas controls={false} background='black'>
             <source
               src='http://techslides.com/demos/sample-videos/small.webm'

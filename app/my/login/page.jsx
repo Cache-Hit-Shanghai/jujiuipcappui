@@ -24,19 +24,28 @@ export default function Page() {
       <Main flex={{ grow: 1, shrink: 1 }} overflow='auto'>
         <Box fill align='center' justify='center' gap='large'>
           <Button>
-            <Avatar background='background-contrast' size='large' pad='small'>
-              <LoginCircle />
-            </Avatar>
+            <Box align='center' gap='small'>
+              <Avatar background='background-contrast' size='large' pad='small'>
+                <LoginCircle />
+              </Avatar>
+              <Text>密码登录</Text>
+            </Box>
           </Button>
           <Button>
-            <Avatar background='background-contrast' size='large' pad='small'>
-              <Wechat />
-            </Avatar>
+            <Box align='center' gap='small'>
+              <Avatar background='background-contrast' size='large' pad='small'>
+                <Wechat />
+              </Avatar>
+              <Text>微信登录</Text>
+            </Box>
           </Button>
           <Button>
-            <Avatar background='background-contrast' size='large' pad='small'>
-              <Alipay />
-            </Avatar>
+            <Box align='center' gap='small'>
+              <Avatar background='background-contrast' size='large' pad='small'>
+                <Alipay />
+              </Avatar>
+              <Text>支付宝登录</Text>
+            </Box>
           </Button>
         </Box>
       </Main>

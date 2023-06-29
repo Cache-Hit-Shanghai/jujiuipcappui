@@ -11,8 +11,8 @@ export default function Page() {
     <Grommet full>
       <Box fill>
         <Box flex={{ grow: 1, shrink: 1 }} align='center' justify='center' gap='medium' background={{
-            image: 'url(https://jujiu-prod.oss-cn-shanghai.aliyuncs.com/yuntan.svg)',
-            opacity: 'weak',
+            image: 'url(https://jujiu-prod.oss-cn-shanghai.aliyuncs.com/11242797_49169.svg)',
+            opacity: 'medium',
           }}>
           <Box direction='row' align='center' gap='medium'>
             <Webcam color='brand' size='xlarge' />

@@ -10,7 +10,9 @@ export default function Page() {
   return (
     <Grommet full>
       <Box fill>
-        <Box flex={{ grow: 1, shrink: 1 }} align='center' justify='center' gap='medium' background={{
+        <Box flex={{ grow: 1, shrink: 1 }} align='center' justify='center' gap='medium' style={{
+          'background-image': 'radial-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1))'
+        }} background={{
             image: 'url(https://jujiu-prod.oss-cn-shanghai.aliyuncs.com/11242797_49169.svg)',
             opacity: 'weak',
           }}>

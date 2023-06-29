@@ -57,7 +57,7 @@ export default function Page() {
       </Box>
       <Box flex={false} align='center' margin='large'>
         <Text size='large'>云探智能视觉系统<sup>&reg;</sup></Text>
-        <Text size='small'>&copy;2021-2023 上海光方迅视科技有线公司 版权所有</Text>
+        <Text size='xsmall'>&copy;2021-2023 上海光方迅视科技有线公司 版权所有</Text>
       </Box>
     </Box>
   );

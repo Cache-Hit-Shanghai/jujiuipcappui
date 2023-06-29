@@ -29,7 +29,9 @@ export default function Page() {
       <Main flex={{ grow: 1, shrink: 1 }} overflow='auto'>
         <Accordion>
           <AccordionPanel label={<Text margin='small'>默认分组</Text>}>
-            <IpcCard key={0} label='客厅' imgurl='https://v2.grommet.io/assets/IMG_4245.jpg' />
+            <Box gap='small' margin='small'>
+              <IpcCard key={0} label='客厅' imgurl='https://v2.grommet.io/assets/IMG_4245.jpg' />
+            </Box>
           </AccordionPanel>
           <AccordionPanel label={<Text margin='small'>办公室</Text>}>
             <Box gap='small' margin='small'>

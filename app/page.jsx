@@ -1,7 +1,7 @@
 'use client';
 
 import { Grommet, Text, Box, Nav, Menu, Button, Accordion, AccordionPanel, Main } from 'grommet';
-import { AddCircle, Chat, Scan } from 'grommet-icons';
+import { AddCircle, Chat } from 'grommet-icons';
 import { useRouter } from 'next/navigation';
 import { AppFooter, IpcCard } from '../components/Components';
 
@@ -15,13 +15,13 @@ export default function Page() {
           <Text size='large'>云探智能视觉系统</Text>
         </Box>
         <Box direction='row' gap='small' align='center'>
-          <Button icon={<Scan />} />
           <Button icon={<Chat />} onClick={() => router.push('/message')} />
           <Menu
             dropProps={{ align: { top: 'bottom', right: 'right' } }}
             icon={<AddCircle />} items={[
               { label: '绑定设备', onClick: () => router.push('/device/binding') },
               { label: '设备分组', onClick: () => router.push('/device/group') },
+              { label: '扫一扫', onClick: () => router.push('#') },
             ]}
           />
         </Box>

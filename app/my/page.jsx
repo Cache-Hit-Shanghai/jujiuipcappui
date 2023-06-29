@@ -36,7 +36,7 @@ export default function Page() {
           <CardBody>
             <Box direction='row' justify='evenly'>
               <IconLInk icon={<Gallery />} label='相册' url='#' />
-              <IconLInk icon={<VirtualStorage />} label='云盘' url='#' />
+              <IconLInk icon={<VirtualStorage />} label='云存储' url='#' />
             </Box>
           </CardBody>
         </Card>

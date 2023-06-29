@@ -1,7 +1,7 @@
 'use client';
 
-import { Grommet, Text, Box, Heading, Menu, Button, Accordion, AccordionPanel, Main } from 'grommet';
-import { Webcam, Chat } from 'grommet-icons';
+import { Grommet, Text, Box, Heading } from 'grommet';
+import { Webcam } from 'grommet-icons';
 import { useRouter } from 'next/navigation';
 
 export default function Page() {

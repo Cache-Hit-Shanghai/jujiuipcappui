@@ -28,13 +28,16 @@ export default function Page() {
       </Nav>
       <Main flex={{ grow: 1, shrink: 1 }} overflow='auto'>
         <Accordion>
+          <AccordionPanel label={<Text margin='small'>默认分组</Text>}>
+            <IpcCard key={0} label='客厅' imgurl='https://v2.grommet.io/assets/IMG_4245.jpg' />
+          </AccordionPanel>
           <AccordionPanel label={<Text margin='small'>办公室</Text>}>
             <Box gap='small' margin='small'>
-              <IpcCard label='办3' imgurl='https://v2.grommet.io/assets/IMG_4245.jpg' />
-              <IpcCard label='办5' imgurl='https://i.insider.com/5c796ca426289858f7205ede?width=1136&format=jpeg' />
+              <IpcCard key={1} label='办3' imgurl='https://v2.grommet.io/assets/IMG_4245.jpg' />
+              <IpcCard key={2} label='办5' imgurl='https://i.insider.com/5c796ca426289858f7205ede?width=1136&format=jpeg' />
+              <IpcCard key={3} label='办7' imgurl='https://v2.grommet.io/assets/IMG_4245.jpg' />
+              <IpcCard key={4} label='办9' imgurl='https://i.insider.com/5c796ca426289858f7205ede?width=1136&format=jpeg' />
             </Box>
-          </AccordionPanel>
-          <AccordionPanel label={<Text margin='small'>默认分组</Text>}>
           </AccordionPanel>
         </Accordion>
       </Main>

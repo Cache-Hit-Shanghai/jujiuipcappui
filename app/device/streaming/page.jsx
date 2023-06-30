@@ -2,11 +2,13 @@
 
 import { Text, Box, Video as VideoCanvas, Nav, Tabs, Tab, DateInput, RadioButtonGroup, Grid, Stack, Button } from 'grommet';
 import { Camera, Video, Microphone, ClosedCaption, Cloud, Sd, VolumeMute, Expand } from 'grommet-icons';
+import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 import { IconBack, IconButton, PanControl, JuJiuMain } from '../../../components/Components';
 
 export default function Page() {
   const [value, setValue] = useState(Date.now());
+  const router = useRouter();
 
   return (
     <Box fill>
@@ -25,7 +27,7 @@ export default function Page() {
             </VideoCanvas>
           </Box>
           <Box>
-            <Button style={{ 'z-index': '10' }} plain margin='small' icon={<Expand />} />
+            <Button style={{ 'z-index': '10' }} plain margin='small' icon={<Expand />} onClick={() => router.push('/device/streaming/fullscreen')} />
           </Box>
         </Stack>
         <Tabs flex>

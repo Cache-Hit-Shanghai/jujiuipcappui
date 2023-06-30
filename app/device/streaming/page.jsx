@@ -53,7 +53,7 @@ export default function Page() {
                   <DateInput value={value} onChange={(e) => setValue(e.value)} />
                 </Box>
                 <Box round='xlarge' background='background-contrast'>
-                  <RadioButtonGroup name='storagetype' direction='row' options={['Cloud', 'SDCard']}>
+                  <RadioButtonGroup name='storagetype' direction='row' options={['Cloud', 'SDCard']} value='Cloud'>
                     {(option, { checked, focus, hover }) => {
                       const Icon = option === 'Cloud' ? Cloud : Sd;
                       let background;

@@ -1,7 +1,7 @@
 'use client';
 
-import { Text, Box, Video as VideoCanvas, Nav, Tabs, Tab, DateInput, RadioButtonGroup, Grid } from 'grommet';
-import { Camera, Video, Microphone, ClosedCaption, Cloud, Sd, VolumeMute } from 'grommet-icons';
+import { Text, Box, Video as VideoCanvas, Nav, Tabs, Tab, DateInput, RadioButtonGroup, Grid, Stack, Button } from 'grommet';
+import { Camera, Video, Microphone, ClosedCaption, Cloud, Sd, VolumeMute, Expand } from 'grommet-icons';
 import { useState } from 'react';
 import { IconBack, IconButton, PanControl, JuJiuMain } from '../../../components/Components';
 
@@ -15,14 +15,19 @@ export default function Page() {
         <Text>实时视频</Text>
       </Nav>
       <JuJiuMain margin='none'>
-        <Box flex={false} background='background-contrast'>
-          <VideoCanvas controls={false} background='black'>
-            <source
-              src='http://techslides.com/demos/sample-videos/small.webm'
-              type='video/webm'
-            />
-          </VideoCanvas>
-        </Box>
+        <Stack anchor='bottom-right' interactiveChild='last'>
+          <Box flex={false} background='background-contrast'>
+            <VideoCanvas controls={false}>
+              <source
+                src='http://techslides.com/demos/sample-videos/small.webm'
+                type='video/webm'
+              />
+            </VideoCanvas>
+          </Box>
+          <Box>
+            <Button style={{ 'z-index': '10' }} plain margin='small' icon={<Expand />} />
+          </Box>
+        </Stack>
         <Tabs flex>
           <Tab title='实时视频'>
             <Box fill>

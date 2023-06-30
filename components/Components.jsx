@@ -8,7 +8,8 @@ import {
 	Image,
 	Button,
 	List,
-} from "grommet";
+	Main,
+} from 'grommet';
 import {
 	Home,
 	Webcam,
@@ -20,45 +21,45 @@ import {
 	CaretDownFill,
 	CaretLeftFill,
 	CaretRightFill,
-} from "grommet-icons";
-import { useRouter } from "next/navigation";
+} from 'grommet-icons';
+import { useRouter } from 'next/navigation';
 
-import styles from "./components.module.css";
+import styles from './components.module.css';
 
-// console.log("styles", styles);
+// console.log('styles', styles);
 
 export function PanControl({ onPanClick = () => {} }) {
 	return (
 		<Box responsive={false} className={styles.sector}>
 			{[
 				{
-					direction: "top",
+					direction: 'top',
 					Icon: CaretUpFill,
 				},
 				{
-					direction: "right",
+					direction: 'right',
 					Icon: CaretRightFill,
 				},
 				{
-					direction: "bottom",
+					direction: 'bottom',
 					Icon: CaretDownFill,
 				},
 				{
-					direction: "left",
+					direction: 'left',
 					Icon: CaretLeftFill,
 				},
 				{
-					direction: "center",
+					direction: 'center',
 					isCenter: true,
 				},
 			].map(({ className, direction, isCenter = false, Icon }) => (
 				<Box
-					className={`${isCenter ? "" : styles.box} ${
+					className={`${isCenter ? '' : styles.box} ${
 						styles[direction]
 					}`}
 					key={className}
-					justify="center"
-					align="center"
+					justify='center'
+					align='center'
 					onClick={() => {
 						onPanClick({
 							direction,
@@ -68,7 +69,7 @@ export function PanControl({ onPanClick = () => {} }) {
 					{Icon && (
 						<Icon
 							className={`${styles.icon} ${
-								styles[direction + "Icon"]
+								styles[direction + 'Icon']
 							}`}
 						></Icon>
 					)}
@@ -78,24 +79,40 @@ export function PanControl({ onPanClick = () => {} }) {
 	);
 }
 
+export function JuJiuMain({ children, ...props }) {
+	return (
+		<Main flex={{ grow: 1, shrink: 1 }} overflow='auto' gap='small' margin={{ horizontal: 'small' }} {...props}>
+			{children}
+		</Main>
+	);
+}
+
+export function JuJiuCard({ children, ...props }) {
+	return (
+		<Card pad='small' gap='small' background='background-contrast' flex={false} {...props}>
+			{children}
+		</Card>
+	);
+}
+
 export function InfoGroup({ data }) {
 	return (
-		<Card background="background-contrast" margin={{ horizontal: "small" }} flex={false}>
+		<JuJiuCard>
 			<CardBody>
 				<List
 					data={data}
 					border={false}
-					primaryKey="key"
-					secondaryKey="value"
+					primaryKey='key'
+					secondaryKey='value'
 				/>
 			</CardBody>
-		</Card>
+		</JuJiuCard>
 	);
 }
 
 export function ButtonGroup({ data }) {
 	return (
-		<Card background="background-contrast" margin={{ horizontal: "small" }} flex={false}>
+		<JuJiuCard>
 			<CardBody>
 				<List data={data} border={false}>
 					{(datum) => (
@@ -104,20 +121,20 @@ export function ButtonGroup({ data }) {
 							label={datum.label}
 							reverse
 							plain
-							justify="between"
+							justify='between'
 							onClick={datum.onClick}
 						/>
 					)}
 				</List>
 			</CardBody>
-		</Card>
+		</JuJiuCard>
 	);
 }
 
 export function LinkGroup({ data }) {
 	const router = useRouter();
 	return (
-		<Card background="background-contrast" margin={{ horizontal: "small" }} flex={false}>
+		<JuJiuCard>
 			<CardBody>
 				<List data={data} border={false}>
 					{(datum) => (
@@ -126,13 +143,13 @@ export function LinkGroup({ data }) {
 							label={datum.label}
 							reverse
 							plain
-							justify="between"
+							justify='between'
 							onClick={() => router.push(datum.url)}
 						/>
 					)}
 				</List>
 			</CardBody>
-		</Card>
+		</JuJiuCard>
 	);
 }
 
@@ -144,9 +161,9 @@ export function IconBack() {
 export function IconButton({ icon, label, onClick }) {
 	return (
 		<Button onClick={onClick}>
-			<Box pad="small" align="center">
+			<Box pad='small' align='center'>
 				{icon}
-				<Text size="small">{label}</Text>
+				<Text size='small'>{label}</Text>
 			</Box>
 		</Button>
 	);
@@ -156,9 +173,9 @@ export function IconLInk({ icon, label, url }) {
 	const router = useRouter();
 	return (
 		<Button onClick={() => router.push(url)}>
-			<Box pad="small" align="center">
+			<Box pad='small' align='center'>
 				{icon}
-				<Text size="small">{label}</Text>
+				<Text size='small'>{label}</Text>
 			</Box>
 		</Button>
 	);
@@ -166,10 +183,10 @@ export function IconLInk({ icon, label, url }) {
 
 export function AppFooter() {
 	return (
-		<Box direction="row" background="background-contrast" justify="evenly" flex={false}>
-			<IconLInk icon={<Webcam />} label="设备" url="/" />
-			<IconLInk icon={<Radial />} label="我的" url="/my" />
-			<IconLInk icon={<Home />} label="主页" url="/splash" />
+		<Box direction='row' background='background-contrast' justify='evenly' flex={false}>
+			<IconLInk icon={<Webcam />} label='设备' url='/' />
+			<IconLInk icon={<Radial />} label='我的' url='/my' />
+			<IconLInk icon={<Home />} label='主页' url='/splash' />
 		</Box>
 	);
 }
@@ -178,22 +195,22 @@ export function IpcCard({ label, imgurl }) {
 	const router = useRouter();
 	return (
 		<Card>
-			<CardBody onClick={() => router.push("/device/streaming")}>
+			<CardBody onClick={() => router.push('/device/streaming')}>
 				<Image src={imgurl} />
 			</CardBody>
-			<CardFooter margin="small" align="center" justify="between">
+			<CardFooter margin='small' align='center' justify='between'>
 				<Text>{label}</Text>
 				<Menu
-					dropProps={{ align: { top: "bottom", right: "right" } }}
+					dropProps={{ align: { top: 'bottom', right: 'right' } }}
 					icon={<Configure />}
 					items={[
 						{
-							label: "设备分享",
-							onClick: () => router.push("/device/sharing"),
+							label: '设备分享',
+							onClick: () => router.push('/device/sharing'),
 						},
 						{
-							label: "设置",
-							onClick: () => router.push("/device/settings"),
+							label: '设置',
+							onClick: () => router.push('/device/settings'),
 						},
 					]}
 				/>

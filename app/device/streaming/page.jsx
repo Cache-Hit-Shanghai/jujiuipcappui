@@ -1,9 +1,9 @@
 'use client';
 
-import { Text, Box, Video as VideoCanvas, Nav, Tabs, Tab, DateInput, RadioButtonGroup, Main, Grid } from 'grommet';
+import { Text, Box, Video as VideoCanvas, Nav, Tabs, Tab, DateInput, RadioButtonGroup, Grid } from 'grommet';
 import { Camera, Video, Microphone, ClosedCaption, Cloud, Sd, VolumeMute } from 'grommet-icons';
 import { useState } from 'react';
-import { IconBack, IconButton, PanControl } from '../../../components/Components';
+import { IconBack, IconButton, PanControl, JuJiuMain } from '../../../components/Components';
 
 export default function Page() {
   const [value, setValue] = useState(Date.now());
@@ -14,7 +14,7 @@ export default function Page() {
         <IconBack />
         <Text>实时视频</Text>
       </Nav>
-      <Main flex={{ grow: 1, shrink: 1 }} overflow='auto' gap='small'>
+      <JuJiuMain margin='none'>
         <Box flex={false} background='background-contrast'>
           <VideoCanvas controls={false} background='black'>
             <source
@@ -70,7 +70,7 @@ export default function Page() {
             </Box>
           </Tab>
         </Tabs>
-      </Main>
+      </JuJiuMain>
     </Box>
   );
 }

@@ -2,7 +2,7 @@
 
 import { Text, Box, Heading, Nav, Form, FormField, TextInput } from 'grommet';
 import { CircleInformation, Wifi, Qr } from 'grommet-icons';
-import { IconBack } from '../../../components/Components';
+import { IconBack, JuJiuMain } from '../../../components/Components';
 
 export default function Page() {
   return (
@@ -11,7 +11,7 @@ export default function Page() {
         <IconBack />
         <Text>绑定设备</Text>
       </Nav>
-      <Box align='center' gap='medium' flex={{ grow: 1, shrink: 1 }} margin='small' overflow='auto'>
+      <JuJiuMain align='center'>
         <Box width='medium' height='medium' background='background-contrast' align='center' justify='center' flex={false}>
           <Qr color='plain' size='xlarge' />
         </Box>
@@ -31,7 +31,7 @@ export default function Page() {
           <CircleInformation size='large' color='brand' />
           <Text size='small'>请输入需要网络摄像机设备连接的WiFi名称和密码，并且在听到网络摄像机“绑定设备”的提示音后，将二维码放置在摄像机镜头前约5厘米左右，等待“绑定成功”的提示音。</Text>
         </Box>
-      </Box>
+      </JuJiuMain>
     </Box>
   );
 }

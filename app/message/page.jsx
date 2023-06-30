@@ -2,7 +2,7 @@
 
 import { Text, Box, Nav, Tabs, Tab } from 'grommet';
 import { Inbox, Notification } from 'grommet-icons';
-import { IconBack } from '../../components/Components';
+import { IconBack, JuJiuMain } from '../../components/Components';
 
 
 export default function Page() {
@@ -12,7 +12,7 @@ export default function Page() {
         <IconBack />
         <Text>消息通知</Text>
       </Nav>
-      <Box gap='medium' flex={{ grow: 1, shrink: 1 }} margin='small' overflow='auto'>
+      <JuJiuMain>
         <Tabs flex>
           <Tab title='消息'>
             <Box fill align='center' justify='center' gap='small'>
@@ -27,7 +27,7 @@ export default function Page() {
             </Box>
           </Tab>
         </Tabs>
-      </Box>
+      </JuJiuMain>
     </Box>
   );
 }

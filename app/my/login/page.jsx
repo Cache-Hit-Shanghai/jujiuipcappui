@@ -1,10 +1,10 @@
 'use client';
 
-import { Text, Box, Avatar, Nav, Main, Button } from 'grommet';
+import { Text, Box, Avatar, Nav, Button } from 'grommet';
 import { LoginCircle } from '@styled-icons/remix-fill/LoginCircle';
 import { Wechat } from '@styled-icons/remix-fill/Wechat';
 import { Alipay } from '@styled-icons/remix-fill/Alipay';
-import { IconBack } from '../../../components/Components';
+import { IconBack, JuJiuMain } from '../../../components/Components';
 
 const links = [
   { label: '检查更新', url: '#'},
@@ -21,7 +21,7 @@ export default function Page() {
         <IconBack />
         <Text>用户登录</Text>
       </Nav>
-      <Main flex={{ grow: 1, shrink: 1 }} overflow='auto'>
+      <JuJiuMain>
         <Box fill align='center' justify='center' gap='large'>
           <Button>
             <Box align='center' gap='small'>
@@ -48,7 +48,7 @@ export default function Page() {
             </Box>
           </Button>
         </Box>
-      </Main>
+      </JuJiuMain>
     </Box>
   );
 }

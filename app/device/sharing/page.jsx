@@ -3,7 +3,7 @@
 import { Text, Box, Nav, Layer, Button } from 'grommet';
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { IconBack, ButtonGroup } from '../../../components/Components';
+import { IconBack, ButtonGroup, JuJiuMain } from '../../../components/Components';
 
 
 export default function Page() {
@@ -20,7 +20,7 @@ export default function Page() {
         <IconBack />
         <Text>设备分享</Text>
       </Nav>
-      <Box gap='medium' flex={{ grow: 1, shrink: 1 }} margin='small' overflow='auto'>
+      <JuJiuMain>
         <ButtonGroup data={buttons} />
         {openWechatSharing && (
           <Layer position='bottom' full='horizontal' onClickOutside={() => setOpenWechatSharing(false)} responsive={false}>
@@ -31,7 +31,7 @@ export default function Page() {
             </Box>
           </Layer>
         )}
-      </Box>
+      </JuJiuMain>
     </Box>
   );
 }

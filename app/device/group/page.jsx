@@ -2,7 +2,7 @@
 
 import { Text, Box, Button, Nav, Layer, Heading, TextInput } from 'grommet';
 import { useState } from 'react';
-import { IconBack, ButtonGroup } from '../../../components/Components';
+import { IconBack, ButtonGroup, JuJiuMain } from '../../../components/Components';
 
 
 export default function Page() {
@@ -23,7 +23,7 @@ export default function Page() {
         <IconBack />
         <Text>设备分组</Text>
       </Nav>
-      <Box gap='medium' flex={{ grow: 1, shrink: 1 }} margin='small' overflow='auto'>
+      <JuJiuMain>
         <Box flex={false} gap='small'>
           <ButtonGroup data={editgoups} />
           <ButtonGroup data={addgroups} />
@@ -59,7 +59,7 @@ export default function Page() {
             </Box>
           </Layer>
         )}
-      </Box>
+      </JuJiuMain>
     </Box>
   );
 }

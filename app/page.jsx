@@ -1,9 +1,9 @@
 'use client';
 
-import { Text, Box, Nav, Menu, Button, Accordion, AccordionPanel, Main } from 'grommet';
+import { Text, Box, Nav, Menu, Button, Accordion, AccordionPanel } from 'grommet';
 import { AddCircle, Mail } from 'grommet-icons';
 import { useRouter } from 'next/navigation';
-import { AppFooter, IpcCard } from '../components/Components';
+import { AppFooter, IpcCard, JuJiuMain } from '../components/Components';
 
 export default function Page() {
   const router = useRouter();
@@ -26,7 +26,7 @@ export default function Page() {
           />
         </Box>
       </Nav>
-      <Main flex={{ grow: 1, shrink: 1 }} overflow='auto'>
+      <JuJiuMain>
         <Accordion>
           <AccordionPanel label={<Text margin='small'>默认分组</Text>}>
             <Box gap='small' margin='small'>
@@ -42,7 +42,7 @@ export default function Page() {
             </Box>
           </AccordionPanel>
         </Accordion>
-      </Main>
+      </JuJiuMain>
       <AppFooter />
     </Box>
   );

@@ -3,7 +3,6 @@ import {
 	Box,
 	Nav,
 	Text,
-	Card,
 	CardBody,
 	CheckBox,
 	Button,
@@ -13,6 +12,7 @@ import {
 import { Add } from 'grommet-icons';
 import { IconBack } from '@/components/Components';
 import { useState } from 'react';
+import { JuJiuCard, JuJiuMain } from '../../../../components/Components';
 
 const timeMask = [
 	{
@@ -155,22 +155,17 @@ const DormantPlan = () => {
 				<IconBack />
 				<Text>休眠计划设置</Text>
 			</Nav>
-			<Box fill gap='small' pad={{ horizontal: 'small' }}>
-				<Card pad='small' gap='small' background='background-contrast' flex={false}>
+			<JuJiuMain>
+				<JuJiuCard>
 					<CardBody>
 						<Box direction='row' align='center' justify='between'>
 							<Text>休眠计划</Text>
 							<CheckBox toggle />
 						</Box>
 					</CardBody>
-				</Card>
+				</JuJiuCard>
 				{list.map(({ start, end, dayList = [] }, i) => (
-					<Card
-						pad='small'
-						gap='small'
-						background='background-contrast'
-						flex={false}
-					>
+					<JuJiuCard>
 						<CardBody>
 							<Box
 								direction='row'
@@ -195,7 +190,7 @@ const DormantPlan = () => {
 								</Box>
 							</Box>
 						</CardBody>
-					</Card>
+					</JuJiuCard>
 				))}
 				<Box>
 					<Button
@@ -204,7 +199,7 @@ const DormantPlan = () => {
 						onClick={() => setAdd(true)}
 					/>
 				</Box>
-			</Box>
+			</JuJiuMain>
 		</Box>
 	);
 };

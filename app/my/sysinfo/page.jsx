@@ -1,7 +1,7 @@
 'use client';
 
-import { Text, Box, Nav, Main } from 'grommet';
-import { IconBack, InfoGroup } from '../../../components/Components';
+import { Text, Box, Nav } from 'grommet';
+import { IconBack, InfoGroup, JuJiuMain } from '../../../components/Components';
 
 const infos = [
   { key: '应用版本', value: '1.0.0.0'},
@@ -16,9 +16,9 @@ export default function Page() {
         <IconBack />
         <Text>系统信息</Text>
       </Nav>
-      <Main flex={{ grow: 1, shrink: 1 }} overflow='auto' gap='small'>
+      <JuJiuMain>
         <InfoGroup data={infos} />
-      </Main>
+      </JuJiuMain>
     </Box>
   );
 }

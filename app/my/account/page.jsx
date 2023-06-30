@@ -1,9 +1,9 @@
 'use client';
 
-import { Text, Box, Avatar, Nav, Card, Button, CardBody, Main, Layer, Heading, TextArea } from 'grommet';
+import { Text, Box, Avatar, Nav, Button, CardBody, Layer, Heading, TextArea } from 'grommet';
 import { User, CircleAlert } from 'grommet-icons';
 import { useState } from 'react';
-import { IconBack } from '../../../components/Components';
+import { IconBack, JuJiuMain, JuJiuCard } from '../../../components/Components';
 
 export default function Page() {
   const [ openAvata, setOpenAvata ] = useState(false);
@@ -14,8 +14,8 @@ export default function Page() {
         <IconBack />
         <Text>账号设置</Text>
       </Nav>
-      <Main flex={{ grow: 1, shrink: 1 }} overflow='auto' gap='small' margin={{ horizontal: 'small' }}>
-        <Card pad='small' gap='small' background='background-contrast' flex={false} onClick={() => setOpenAvata(!openAvata)}>
+      <JuJiuMain>
+        <JuJiuCard onClick={() => setOpenAvata(!openAvata)}>
           <CardBody>
             <Box direction='row' align='center' justify='between'>
               <Text>头像</Text>
@@ -24,15 +24,15 @@ export default function Page() {
               </Avatar>
             </Box>
           </CardBody>
-        </Card>
-        <Card pad='small' gap='small' background='background-contrast' flex={false} onClick={() => setOpenName(!openName)}>
+        </JuJiuCard>
+        <JuJiuCard onClick={() => setOpenName(!openName)}>
           <CardBody>
             <Box direction='row' align='center' justify='between'>
               <Text>昵称</Text>
               <Text>用户12345</Text>
             </Box>
           </CardBody>
-        </Card>
+        </JuJiuCard>
         <Button label='退出登录' color='status-warning' />
         <Button label='注销账号' color='status-critical' />
         {openAvata && (
@@ -61,7 +61,7 @@ export default function Page() {
             </Box>
           </Layer>
         )}
-      </Main>
+      </JuJiuMain>
     </Box>
   );
 }

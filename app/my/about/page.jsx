@@ -1,8 +1,8 @@
 'use client';
 
-import { Text, Box, Footer, Nav, Card, CardBody, CardFooter, Main } from 'grommet';
+import { Text, Box, Footer, Nav, CardBody, CardFooter } from 'grommet';
 import { Webcam } from 'grommet-icons';
-import { IconBack, LinkGroup } from '../../../components/Components';
+import { IconBack, LinkGroup, JuJiuMain, JuJiuCard } from '../../../components/Components';
 
 const links = [
   { label: '检查更新', url: '#'},
@@ -19,8 +19,8 @@ export default function Page() {
         <IconBack />
         <Text>关于</Text>
       </Nav>
-      <Main flex={{ grow: 1, shrink: 1 }} overflow='auto' gap='small'>
-        <Card pad='medium' margin={{ horizontal: 'small' }} flex={false}>
+      <JuJiuMain>
+        <JuJiuCard>
           <CardBody margin='medium' justify='center' align='center'>
             <Webcam size='xlarge' color='brand' />
           </CardBody>
@@ -29,9 +29,9 @@ export default function Page() {
             <Text size='large'>云探智能视觉系统</Text>
             <Text>Powered by 雎鸠云</Text>
           </CardFooter>
-        </Card>
+        </JuJiuCard>
         <LinkGroup data={links} />
-      </Main>
+      </JuJiuMain>
       <Footer margin='small' justify='center'>
         <Text size='small'>&copy;2021-2023 上海光方迅视科技有线公司 版权所有</Text>
       </Footer>

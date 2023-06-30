@@ -1,23 +1,21 @@
-"use client";
+'use client';
 
 import {
 	Text,
 	Box,
 	RadioButtonGroup,
 	Nav,
-	Card,
 	Button,
 	CardBody,
-	Main,
 	Layer,
 	Heading,
 	TextArea,
 	CheckBox,
-} from "grommet";
-import { Add, FormNext, Wifi, ChatOption, Run, Pan } from "grommet-icons";
-import { useState } from "react";
-import { IconBack } from "../../../components/Components";
-import { useRouter } from "next/navigation";
+} from 'grommet';
+import { FormNext, Wifi, ChatOption, Run, Pan } from 'grommet-icons';
+import { useState } from 'react';
+import { IconBack, JuJiuMain, JuJiuCard } from '../../../components/Components';
+import { useRouter } from 'next/navigation';
 
 export default function Page() {
 	const [openAvata, setOpenAvata] = useState(false);
@@ -27,262 +25,190 @@ export default function Page() {
 
 	return (
 		<Box fill>
-			<Nav direction="row" align="center">
+			<Nav direction='row' align='center'>
 				<IconBack />
 				<Text>设备设置</Text>
 			</Nav>
-			<Main
-				flex={{ grow: 1, shrink: 1 }}
-				overflow="auto"
-				gap="small"
-				margin={{ horizontal: "small" }}
-			>
-				<Card
-					pad="small"
-					gap="small"
-					background="background-contrast"
-					flex={false}
-					onClick={() => setOpenAvata(!openAvata)}
-				>
+			<JuJiuMain>
+				<JuJiuCard onClick={() => setOpenAvata(!openAvata)}>
 					<CardBody>
 						<Box
-							direction="row"
-							align="center"
-							justify="between"
+							direction='row'
+							align='center'
+							justify='between'
 						>
 							<Text>设备名称</Text>
-							<Box direction="row" align="center">
-								<Text size="small">办3</Text>
+							<Box direction='row' align='center'>
+								<Text size='small'>办3</Text>
 								<FormNext />
 							</Box>
 						</Box>
 					</CardBody>
-				</Card>
-				<Card
-					pad="small"
-					gap="small"
-					background="background-contrast"
-					flex={false}
-					onClick={() => setOpenName(!openName)}
-				>
+				</JuJiuCard>
+				<JuJiuCard onClick={() => setOpenName(!openName)}>
 					<CardBody>
 						<Box
-							direction="row"
-							align="center"
-							justify="between"
+							direction='row'
+							align='center'
+							justify='between'
 						>
 							<Text>分组</Text>
-							<Box direction="row" align="center">
-								<Text size="small">办公室</Text>
+							<Box direction='row' align='center'>
+								<Text size='small'>办公室</Text>
 								<FormNext />
 							</Box>
 						</Box>
 					</CardBody>
-				</Card>
-				<Card
-					pad="small"
-					gap="small"
-					background="background-contrast"
-					flex={false}
-				>
+				</JuJiuCard>
+				<JuJiuCard>
 					<CardBody>
 						<Box
-							direction="row"
-							align="center"
-							justify="between"
+							direction='row'
+							align='center'
+							justify='between'
 						>
 							<Text>型号</Text>
-							<Text size="small">云探1</Text>
+							<Text size='small'>云探1</Text>
 						</Box>
 					</CardBody>
-				</Card>
-				<Card
-					pad="small"
-					gap="small"
-					background="background-contrast"
-					flex={false}
-				>
+				</JuJiuCard>
+				<JuJiuCard>
 					<CardBody>
 						<Box
-							direction="row"
-							align="center"
-							justify="between"
+							direction='row'
+							align='center'
+							justify='between'
 						>
 							<Text>序列号</Text>
-							<Text size="small">GF12345678</Text>
+							<Text size='small'>GF12345678</Text>
 						</Box>
 					</CardBody>
-				</Card>
-				<Card
-					pad="small"
-					gap="small"
-					background="background-contrast"
-					flex={false}
-				>
+				</JuJiuCard>
+				<JuJiuCard>
 					<CardBody>
 						<Box
-							direction="row"
-							align="center"
-							justify="between"
+							direction='row'
+							align='center'
+							justify='between'
 						>
 							<Text>设备特性</Text>
-							<Box direction="row" gap="small" align="center">
-								<Box align="center">
+							<Box direction='row' gap='small' align='center'>
+								<Box align='center'>
 									<Wifi />
-									<Text size="small">WiFi</Text>
+									<Text size='small'>WiFi</Text>
 								</Box>
-								<Box align="center">
+								<Box align='center'>
 									<ChatOption />
-									<Text size="small">双向语音</Text>
+									<Text size='small'>双向语音</Text>
 								</Box>
-								<Box align="center">
+								<Box align='center'>
 									<Run />
-									<Text size="small">移动侦测</Text>
+									<Text size='small'>移动侦测</Text>
 								</Box>
-								<Box align="center">
+								<Box align='center'>
 									<Pan />
-									<Text size="small">云台</Text>
+									<Text size='small'>云台</Text>
 								</Box>
 							</Box>
 						</Box>
 					</CardBody>
-				</Card>
-				<Card
-					pad="small"
-					gap="small"
-					background="background-contrast"
-					flex={false}
-				>
+				</JuJiuCard>
+				<JuJiuCard>
 					<CardBody>
 						<Box
-							direction="row"
-							align="center"
-							justify="between"
+							direction='row'
+							align='center'
+							justify='between'
 						>
 							<Text>设备版本</Text>
-							<Text size="small">V1.0.3</Text>
+							<Text size='small'>V1.0.3</Text>
 						</Box>
 					</CardBody>
-				</Card>
-				<Card
-					pad="small"
-					gap="small"
-					background="background-contrast"
-					flex={false}
-				>
+				</JuJiuCard>
+				<JuJiuCard>
 					<CardBody>
 						<Box
-							direction="row"
-							align="center"
-							justify="between"
+							direction='row'
+							align='center'
+							justify='between'
 						>
 							<Text>设备当前WiFi</Text>
-							<Box direction="row" align="center" gap="small">
+							<Box direction='row' align='center' gap='small'>
 								<Wifi />
-								<Text size="small">DX-OFFICE</Text>
+								<Text size='small'>DX-OFFICE</Text>
 							</Box>
 						</Box>
 					</CardBody>
-				</Card>
-				<Card
-					pad="small"
-					gap="small"
-					background="background-contrast"
-					flex={false}
-				>
+				</JuJiuCard>
+				<JuJiuCard>
 					<CardBody>
 						<Box
-							direction="row"
-							align="center"
-							justify="between"
+							direction='row'
+							align='center'
+							justify='between'
 						>
 							<Text>用户指南</Text>
 							<FormNext />
 						</Box>
 					</CardBody>
-				</Card>
-				<Card
-					pad="small"
-					gap="small"
-					background="background-contrast"
-					flex={false}
-				>
+				</JuJiuCard>
+				<JuJiuCard>
 					<CardBody>
 						<Box
-							direction="row"
-							align="center"
-							justify="between"
+							direction='row'
+							align='center'
+							justify='between'
 						>
 							<Text>视频水印(OSD)</Text>
 							<CheckBox toggle />
 						</Box>
 					</CardBody>
-				</Card>
-				<Card
-					pad="small"
-					gap="small"
-					background="background-contrast"
-					flex={false}
-				>
+				</JuJiuCard>
+				<JuJiuCard>
 					<CardBody>
 						<Box
-							direction="row"
-							align="center"
-							justify="between"
+							direction='row'
+							align='center'
+							justify='between'
 						>
 							<Text>设备语音提示</Text>
 							<CheckBox toggle />
 						</Box>
 					</CardBody>
-				</Card>
-				<Card
-					pad="small"
-					gap="small"
-					background="background-contrast"
-					flex={false}
-				>
+				</JuJiuCard>
+				<JuJiuCard>
 					<CardBody>
 						<Box
-							direction="row"
-							align="center"
-							justify="between"
+							direction='row'
+							align='center'
+							justify='between'
 						>
 							<Text>设备状态灯</Text>
 							<CheckBox toggle />
 						</Box>
 					</CardBody>
-				</Card>
-				<Card
-					pad="small"
-					gap="small"
-					background="background-contrast"
-					flex={false}
-				>
+				</JuJiuCard>
+				<JuJiuCard>
 					<CardBody>
 						<Box
-							direction="row"
-							align="center"
-							justify="between"
+							direction='row'
+							align='center'
+							justify='between'
 						>
 							<Text>休眠</Text>
 							<CheckBox toggle />
 						</Box>
 					</CardBody>
-				</Card>
-				<Card
-					pad="small"
-					gap="small"
-					background="background-contrast"
-					flex={false}
-				>
+				</JuJiuCard>
+				<JuJiuCard>
 					<CardBody>
 						<Box
-							direction="row"
-							align="center"
-							justify="between"
+							direction='row'
+							align='center'
+							justify='between'
 							onClick={() => {
 								router.push(
-									"/device/settings/dormantPlan/"
+									'/device/settings/dormantPlan/'
 								);
 							}}
 						>
@@ -290,83 +216,67 @@ export default function Page() {
 							<FormNext />
 						</Box>
 					</CardBody>
-				</Card>
-
-				<Card
-					pad="small"
-					gap="small"
-					background="background-contrast"
-					flex={false}
-				>
+				</JuJiuCard>
+				<JuJiuCard>
 					<CardBody>
 						<Box
-							direction="row"
-							align="center"
-							justify="between"
+							direction='row'
+							align='center'
+							justify='between'
 						>
 							<Text>画面翻转</Text>
 							<FormNext />
 						</Box>
 					</CardBody>
-				</Card>
-				<Card
-					pad="small"
-					gap="small"
-					background="background-contrast"
-					flex={false}
-				>
+				</JuJiuCard>
+				<JuJiuCard>
 					<CardBody>
 						<Box
-							direction="row"
-							align="center"
-							justify="between"
+							direction='row'
+							align='center'
+							justify='between'
 						>
 							<Text>云台位置校准</Text>
 							<FormNext />
 						</Box>
 					</CardBody>
-				</Card>
-				<Card
-					pad="small"
-					gap="small"
-					background="background-contrast"
-					flex={false}
-				>
+				</JuJiuCard>
+				<JuJiuCard>
 					<CardBody>
 						<Box
-							direction="row"
-							align="center"
-							justify="between"
+							direction='row'
+							align='center'
+							justify='between'
 						>
 							<Text>重启设备</Text>
 							<FormNext />
 						</Box>
 					</CardBody>
-				</Card>
-				<Button color="status-critical" label="删除设备" />
+				</JuJiuCard>
+				<Button color='status-critical' label='删除设备' />
 				{openAvata && (
 					<Layer
-						position="bottom"
-						full="horizontal"
+						position='bottom'
+						full='horizontal'
 						onClickOutside={() => setOpenAvata(false)}
 						responsive={false}
 					>
-						<Box fill border pad="medium" gap="medium">
+						<Box fill border pad='medium' gap='medium'>
 							<Heading
 								level={3}
-								alignSelf="center"
-								margin="none"
+								alignSelf='center'
+								margin='none'
 							>
 								修改设备名称
 							</Heading>
-							<TextArea value="客3" />
-							<Box direction="row" justify="evenly">
+							<TextArea value='客3' />
+							<Box direction='row' justify='evenly'>
 								<Button
-									label="取消"
+									label='取消'
 									onClick={() => setOpenAvata(false)}
 								/>
 								<Button
-									label="保存"
+									label='保存'
 									primary
 									onClick={() => setOpenAvata(false)}
 								/>
@@ -376,35 +286,35 @@ export default function Page() {
 				)}
 				{openName && (
 					<Layer
-						position="bottom"
-						full="horizontal"
+						position='bottom'
+						full='horizontal'
 						onClickOutside={() => setOpenName(false)}
 						responsive={false}
 					>
-						<Box fill border pad="medium" gap="medium">
+						<Box fill border pad='medium' gap='medium'>
 							<Heading
 								level={3}
-								alignSelf="center"
-								margin="none"
+								alignSelf='center'
+								margin='none'
 							>
 								更改设备分组
 							</Heading>
 							<RadioButtonGroup
-								name="deficegroup"
-								options={["办公室", "默认分组"]}
-								value="办公室"
+								name='deficegroup'
+								options={['办公室', '默认分组']}
+								value='办公室'
 							/>
-							<Box direction="row" justify="evenly">
+							<Box direction='row' justify='evenly'>
 								<Button
-									label="取消"
+									label='取消'
 									onClick={() => setOpenName(false)}
 								/>
-								<Button label="保存" primary />
+								<Button label='保存' primary />
 							</Box>
 						</Box>
 					</Layer>
 				)}
-			</Main>
+			</JuJiuMain>
 		</Box>
 	);
 }

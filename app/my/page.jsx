@@ -1,9 +1,9 @@
 'use client';
 
-import { Text, Box, Nav, Card, CardHeader, CardBody, Main, Avatar, Button } from 'grommet';
+import { Text, Box, Nav, CardHeader, CardBody, Avatar, Button } from 'grommet';
 import { Gallery, VirtualStorage, Edit, ShareRounded, User, HostMaintenance } from 'grommet-icons';
 import { useRouter } from 'next/navigation';
-import { AppFooter, IconLInk, LinkGroup } from '../../components/Components';
+import { AppFooter, IconLInk, LinkGroup, JuJiuMain, JuJiuCard } from '../../components/Components';
 
 const links = [
   { label: '账号设置', url: '/my/account' },
@@ -31,16 +31,16 @@ export default function Page() {
           </Box>
         </Button>
       </Nav>
-      <Main flex={{ grow: 1, shrink: 1 }} overflow='auto' gap='small'>
-        <Card pad='small' background='background-contrast' margin={{ horizontal: 'small' }} flex={false}>
+      <JuJiuMain>
+        <JuJiuCard>
           <CardBody>
             <Box direction='row' justify='evenly'>
               <IconLInk icon={<Gallery />} label='相册' url='#' />
               <IconLInk icon={<VirtualStorage />} label='云存储' url='#' />
             </Box>
           </CardBody>
-        </Card>
-        <Card pad='small' gap='small' background='background-contrast' margin={{ horizontal: 'small' }} flex={false}>
+        </JuJiuCard>
+        <JuJiuCard>
           <CardHeader>
             <Text>常用工具</Text>
           </CardHeader>
@@ -51,9 +51,9 @@ export default function Page() {
               <IconLInk icon={<Edit />} label='帮助与反馈' url='#' />
             </Box>
           </CardBody>
-        </Card>
+        </JuJiuCard>
         <LinkGroup data={links} />
-      </Main>
+      </JuJiuMain>
       <AppFooter />
     </Box>
   );

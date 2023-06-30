@@ -1,7 +1,7 @@
 'use client';
 
-import { Text, Box, Video as VideoCanvas, Nav, Tabs, Tab, DateInput, RadioButtonGroup, Grid, Stack, Button } from 'grommet';
-import { Camera, Video, Microphone, ClosedCaption, Cloud, Sd, VolumeMute, Expand } from 'grommet-icons';
+import { Text, Box, Video as VideoCanvas, Nav, Tabs, Tab, DateInput, RadioButtonGroup, Grid, Stack, Button, Menu } from 'grommet';
+import { Camera, Video, Microphone, ClosedCaption, Cloud, Sd, VolumeMute, Expand, Checkmark } from 'grommet-icons';
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 import { IconBack, IconButton, PanControl, JuJiuMain } from '../../../components/Components';
@@ -41,7 +41,20 @@ export default function Page() {
                 <IconButton icon={<Video />} label='录制' onClick={() => {}} />
                 <IconButton icon={<Microphone />} label='对讲' onClick={() => {}} />
                 <IconButton icon={<VolumeMute />} label='静音' onClick={() => {}} />
-                <IconButton icon={<ClosedCaption />} label='清晰度' onClick={() => {}} />
+                <Menu
+                  plain
+                  dropAlign={{ top: 'bottom' }}
+                  items={[
+                    { label: '极清', onClick: () => {}, justify: 'end' },
+                    { label: '超清', onClick: () => {}, icon: <Box><Checkmark /></Box>, justify: 'end' },
+                    { label: '标清', onClick: () => {}, justify: 'end' },
+                  ]}
+                >
+                  <Box pad='small' align='center'>
+                    <ClosedCaption />
+                    <Text size='small'>清晰度</Text>
+                  </Box>
+                </Menu>
               </Box>
             </Box>
           </Tab>

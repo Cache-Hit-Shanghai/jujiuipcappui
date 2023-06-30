@@ -33,8 +33,7 @@ export default function Page() {
           </CardHeader>
           <CardBody>
             <Box direction='row' justify='between'>
-              <Text>深色模式</Text>
-              <CheckBox toggle />
+              <RadioButtonGroup name='language' options={['浅色模式', '深色模式', '跟随系统']} value='深色模式' />
             </Box>
           </CardBody>
         </Card>

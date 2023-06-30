@@ -19,7 +19,7 @@ export default function Page() {
       <JuJiuMain margin='none'>
         <Stack anchor='bottom-right' interactiveChild='last'>
           <Box flex={false} background='background-contrast'>
-            <VideoCanvas controls={false}>
+            <VideoCanvas controls={false} style={{ 'z-index': '0' }}>
               <source
                 src='http://techslides.com/demos/sample-videos/small.webm'
                 type='video/webm'
@@ -27,7 +27,7 @@ export default function Page() {
             </VideoCanvas>
           </Box>
           <Box>
-            <Button style={{ 'z-index': '10' }} plain margin='small' icon={<Expand />} onClick={() => router.push('/device/streaming/fullscreen')} />
+            <Button plain margin='small' icon={<Expand />} onClick={() => router.push('/device/streaming/fullscreen')} />
           </Box>
         </Stack>
         <Tabs flex>

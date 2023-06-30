@@ -8,7 +8,7 @@ export default function Page() {
     <Box fill>
       <Stack fill>
         <Box fill background='background-contrast'>
-          <Video controls={false} fit='contain'>
+          <Video controls={false} fit='contain' style={{ 'z-index': '0' }}>
             <source
               src='http://techslides.com/demos/sample-videos/small.webm'
               type='video/webm'

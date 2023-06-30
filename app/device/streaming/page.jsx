@@ -46,7 +46,7 @@ export default function Page() {
                   dropAlign={{ top: 'bottom' }}
                   items={[
                     { label: '极清', onClick: () => {}, justify: 'end' },
-                    { label: '超清', onClick: () => {}, icon: <Box><Checkmark /></Box>, justify: 'end' },
+                    { label: '超清', onClick: () => {}, icon: <Checkmark />, justify: 'end' },
                     { label: '标清', onClick: () => {}, justify: 'end' },
                   ]}
                 >

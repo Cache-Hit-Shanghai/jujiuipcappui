@@ -23,7 +23,7 @@ export default function Page() {
           { (datum) => (
             <Box direction='row' gap='small' align='center' justify='between'>
               <Box direction='row' gap='small' align='center'>
-                <Webcam size='large' color='control' />
+                <Webcam size='large' />
                 <Box>
                   <Text>{datum.device}</Text>
                   <Text size='small'>{datum.from} ~ {datum.to}</Text>

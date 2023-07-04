@@ -117,7 +117,7 @@ export function ButtonGroup({ data }) {
 				<List data={data} border={false}>
 					{(datum) => (
 						<Button
-							icon={<FormNext />}
+							icon={<FormNext color='control' />}
 							label={datum.label}
 							reverse
 							plain
@@ -139,7 +139,7 @@ export function LinkGroup({ data }) {
 				<List data={data} border={false}>
 					{(datum) => (
 						<Button
-							icon={<FormNext />}
+							icon={<FormNext color='control' />}
 							label={datum.label}
 							reverse
 							plain
@@ -155,7 +155,7 @@ export function LinkGroup({ data }) {
 
 export function IconBack() {
 	const router = useRouter();
-	return <Button icon={<FormPrevious />} onClick={() => router.back()} />;
+	return <Button icon={<FormPrevious color='control' />} onClick={() => router.back()} />;
 }
 
 export function IconButton({ icon, label, onClick }) {

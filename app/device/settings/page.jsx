@@ -40,7 +40,7 @@ export default function Page() {
 							<Text>设备名称</Text>
 							<Box direction='row' align='center'>
 								<Text size='small'>办3</Text>
-								<FormNext />
+								<FormNext color='control' />
 							</Box>
 						</Box>
 					</CardBody>
@@ -55,7 +55,7 @@ export default function Page() {
 							<Text>分组</Text>
 							<Box direction='row' align='center'>
 								<Text size='small'>办公室</Text>
-								<FormNext />
+								<FormNext color='control' />
 							</Box>
 						</Box>
 					</CardBody>
@@ -148,7 +148,7 @@ export default function Page() {
 							justify='between'
 						>
 							<Text>用户指南</Text>
-							<FormNext />
+							<FormNext color='control' />
 						</Box>
 					</CardBody>
 				</JuJiuCard>
@@ -225,7 +225,7 @@ export default function Page() {
 							}}
 						>
 							<Text>休眠计划</Text>
-							<FormNext />
+							<FormNext color='control' />
 						</Box>
 					</CardBody>
 				</JuJiuCard>
@@ -237,7 +237,7 @@ export default function Page() {
 							justify='between'
 						>
 							<Text>画面翻转</Text>
-							<FormNext />
+							<FormNext color='control' />
 						</Box>
 					</CardBody>
 				</JuJiuCard>
@@ -249,7 +249,7 @@ export default function Page() {
 							justify='between'
 						>
 							<Text>云台位置校准</Text>
-							<FormNext />
+							<FormNext color='control' />
 						</Box>
 					</CardBody>
 				</JuJiuCard>
@@ -261,7 +261,7 @@ export default function Page() {
 							justify='between'
 						>
 							<Text>重启设备</Text>
-							<FormNext />
+							<FormNext color='control' />
 						</Box>
 					</CardBody>
 				</JuJiuCard>

@@ -1,6 +1,6 @@
 'use client';
 
-import { Text, Box, Nav, Menu, Button, Accordion, AccordionPanel } from 'grommet';
+import { Text, Box, Nav, Menu, Button, Accordion, AccordionPanel, Tag } from 'grommet';
 import { AddCircle, Mail } from 'grommet-icons';
 import { useRouter } from 'next/navigation';
 import { AppFooter, IpcCard, JuJiuMain } from '../components/Components';
@@ -30,7 +30,7 @@ export default function Page() {
         <Accordion>
           <AccordionPanel label={<Text margin='small'>默认分组</Text>}>
             <Box gap='small' margin='small'>
-              <IpcCard key={0} label='客厅' imgurl='https://v2.grommet.io/assets/IMG_4245.jpg' />
+              <IpcCard key={0} label={<Box direction='row' align='center' gap='large'><Text>客厅</Text><Tag value='来自分享' size='xsmall' background='control' /></Box>} imgurl='https://v2.grommet.io/assets/IMG_4245.jpg' />
             </Box>
           </AccordionPanel>
           <AccordionPanel label={<Text margin='small'>办公室</Text>}>

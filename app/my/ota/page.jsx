@@ -2,7 +2,7 @@
 
 import { Text, Box, Nav, List, Button } from 'grommet';
 import { Webcam } from 'grommet-icons';
-import { IconBack, JuJiuMain } from '../../components/Components';
+import { IconBack, JuJiuMain } from '../../../components/Components';
 
 
 const data = [

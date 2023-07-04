@@ -35,7 +35,7 @@ export default function Page() {
         <JuJiuCard>
           <CardBody>
             <Box direction='row' justify='evenly'>
-              <IconLInk icon={<Gallery />} label='相册' url='#' />
+              <IconLInk icon={<Gallery />} label='相册' url='/my/gallery' />
               <IconLInk icon={<VirtualStorage />} label='云存储' url='#' />
             </Box>
           </CardBody>
@@ -46,7 +46,7 @@ export default function Page() {
           </CardHeader>
           <CardBody>
             <Box direction='row' justify='evenly'>
-              <IconLInk icon={<Upgrade />} label='固件升级' url='/ota' />
+              <IconLInk icon={<Upgrade />} label='固件升级' url='/my/ota' />
               <IconLInk icon={<ShareRounded />} label='我的分享' url='/my/sharing' />
               <IconLInk icon={<Edit />} label='帮助与反馈' url='#' />
             </Box>

@@ -1,7 +1,7 @@
 'use client';
 
 import { Text, Box, Video as VideoCanvas, Nav, Tabs, Tab, DateInput, RadioButtonGroup, Grid, Stack, Button, Menu } from 'grommet';
-import { Camera, Video, Microphone, ClosedCaption, Cloud, Sd, VolumeMute, Expand, Checkmark } from 'grommet-icons';
+import { Camera, Video, Microphone, ClosedCaption, Cloud, Sd, VolumeMute, Expand, Checkmark, Download } from 'grommet-icons';
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 import { IconBack, IconButton, PanControl, JuJiuMain } from '../../../components/Components';
@@ -86,6 +86,10 @@ export default function Page() {
                 <Grid fill columns='xsmall' gap='small' align='center' justify='center' style={{ gridAutoFlow: 'row dense', gridAutoRows: '70px' }}>
                   {Array.from({ length: 37 }, (_, index) => index).map(item => <Box key={item} fill background='background-contrast' round='xsmall' />)}
                 </Grid>
+              </Box>
+              <Box direction='row' justify='evenly' background='background-contrast' flex={false}>
+                <IconButton icon={<Camera />} label='截图' onClick={() => {}} />
+                <IconButton icon={<Download />} label='下载' onClick={() => {}} />
               </Box>
             </Box>
           </Tab>

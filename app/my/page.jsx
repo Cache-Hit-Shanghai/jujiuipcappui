@@ -1,7 +1,7 @@
 'use client';
 
 import { Text, Box, Nav, CardHeader, CardBody, Avatar, Button } from 'grommet';
-import { Gallery, VirtualStorage, Edit, ShareRounded, User, HostMaintenance } from 'grommet-icons';
+import { Gallery, VirtualStorage, Edit, ShareRounded, User, Upgrade } from 'grommet-icons';
 import { useRouter } from 'next/navigation';
 import { AppFooter, IconLInk, LinkGroup, JuJiuMain, JuJiuCard } from '../../components/Components';
 
@@ -46,7 +46,7 @@ export default function Page() {
           </CardHeader>
           <CardBody>
             <Box direction='row' justify='evenly'>
-              <IconLInk icon={<HostMaintenance />} label='设备管理' url='#' />
+              <IconLInk icon={<Upgrade />} label='固件升级' url='/ota' />
               <IconLInk icon={<ShareRounded />} label='我的分享' url='#' />
               <IconLInk icon={<Edit />} label='帮助与反馈' url='#' />
             </Box>

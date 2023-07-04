@@ -159,6 +159,18 @@ export default function Page() {
 							align='center'
 							justify='between'
 						>
+							<Text>固件自动升级</Text>
+							<CheckBox toggle />
+						</Box>
+					</CardBody>
+				</JuJiuCard>
+				<JuJiuCard>
+					<CardBody>
+						<Box
+							direction='row'
+							align='center'
+							justify='between'
+						>
 							<Text>视频水印(OSD)</Text>
 							<CheckBox toggle />
 						</Box>

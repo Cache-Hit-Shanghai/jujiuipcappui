@@ -17,8 +17,8 @@ export default function Page() {
         </Box>
         <Box width='medium' flex={false}>
           <Box direction='row' align='center' gap='small'>
-            <Wifi color='plain' size='large' />
-            <Heading level={2}>WiFi设置</Heading>
+            <Wifi size='large' />
+            <Heading level={2} margin='none'>WiFi设置</Heading>
           </Box>
           <Form>
             <FormField label='WiFi名称' />

@@ -21,11 +21,11 @@ export default function Page() {
       </Nav>
       <JuJiuMain>
         <JuJiuCard>
-          <CardBody margin='medium' justify='center' align='center'>
+          <CardBody margin='small' justify='center' align='center'>
             <Webcam size='xlarge' color='brand' />
           </CardBody>
           <CardFooter justify='center' align='center' direction='column' gap='none'>
-            <Text>V1.0.0.0</Text>
+            <Text size='small' color='placeholder'>V1.0.0.0</Text>
             <Text size='large'>云探智能视觉系统</Text>
             <Text>Powered by 雎鸠云<sup>&reg;</sup></Text>
           </CardFooter>

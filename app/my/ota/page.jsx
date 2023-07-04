@@ -6,9 +6,9 @@ import { IconBack, JuJiuMain } from '../../../components/Components';
 
 
 const data = [
-  { device: '客厅', from: '1.0.0', to: '1.1.0' },
-  { device: '办3', from: '0.1.0', to: '1.1.0' },
-  { device: '办5', from: '1.0.0', to: '2.1.0' },
+  { device: '客厅', size: '150MB', from: '1.0.0', to: '1.1.0' },
+  { device: '办3', size: '100MB', from: '0.1.0', to: '1.1.0' },
+  { device: '办5', size: '50MB', from: '1.0.0', to: '2.1.0' },
 ];
 
 export default function Page() {
@@ -26,7 +26,8 @@ export default function Page() {
                 <Webcam size='large' />
                 <Box>
                   <Text>{datum.device}</Text>
-                  <Text size='small'>{datum.from} ~ {datum.to}</Text>
+                  <Text size='small' color='placeholder'>{datum.size}</Text>
+                  <Text size='small' color='placeholder'>{datum.from} ~ {datum.to}</Text>
                 </Box>
               </Box>
               <Box>

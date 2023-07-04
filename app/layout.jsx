@@ -7,7 +7,7 @@ export default function RootLayout({ children }) {
     <html>
       <body>
         <StyledComponentsRegistry>
-          <Grommet full theme={grommet} themeMode='dark'>
+          <Grommet full theme={grommet} themeMode='auto'>
             {children}
           </Grommet>
         </StyledComponentsRegistry>

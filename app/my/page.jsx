@@ -47,7 +47,7 @@ export default function Page() {
           <CardBody>
             <Box direction='row' justify='evenly'>
               <IconLInk icon={<Upgrade />} label='固件升级' url='/ota' />
-              <IconLInk icon={<ShareRounded />} label='我的分享' url='#' />
+              <IconLInk icon={<ShareRounded />} label='我的分享' url='/my/sharing' />
               <IconLInk icon={<Edit />} label='帮助与反馈' url='#' />
             </Box>
           </CardBody>

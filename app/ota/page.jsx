@@ -1,7 +1,7 @@
 'use client';
 
 import { Text, Box, Nav, List, Button } from 'grommet';
-import { Webcam, Notification } from 'grommet-icons';
+import { Webcam } from 'grommet-icons';
 import { IconBack, JuJiuMain } from '../../components/Components';
 
 

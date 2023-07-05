@@ -19,7 +19,7 @@ export default function Page() {
         </Box>
         <Box>
           <Link href='/' passHref legacyBehavior>
-            <Button as='a' label='回到主页' />
+            <Button primary as='a' label='回到主页' />
           </Link>
         </Box>
       </Box>

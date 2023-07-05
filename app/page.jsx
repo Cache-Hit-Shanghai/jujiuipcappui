@@ -3,6 +3,7 @@
 import { Text, Box, Nav, Menu, Button, Accordion, AccordionPanel, Tag } from 'grommet';
 import { AddCircle, Mail } from 'grommet-icons';
 import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 import { AppFooter, IpcCard, JuJiuMain } from '../components/Components';
 
 export default function Page() {
@@ -15,7 +16,9 @@ export default function Page() {
           <Text size='large'>云探智能视觉系统</Text>
         </Box>
         <Box direction='row' gap='small' align='center'>
-          <Button icon={<Mail />} onClick={() => router.push('/message')} />
+          <Link href='/message' passHref legacyBehavior>
+            <Button icon={<Mail />} as='a' />
+          </Link>
           <Menu
             dropProps={{ align: { top: 'bottom', right: 'right' } }}
             icon={<AddCircle />} items={[

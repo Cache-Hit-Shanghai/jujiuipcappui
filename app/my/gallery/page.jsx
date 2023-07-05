@@ -15,7 +15,7 @@ export default function Page() {
         <Text>相册（剩余容量100GB）</Text>
       </Nav>
       <JuJiuMain>
-        <Box flex={false} gap='small'>
+        <Box flex={false} gap='large'>
           <Card>
             <CardHeader>
               <Text>2023/7/4</Text>

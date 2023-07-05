@@ -33,7 +33,7 @@ export default function Page() {
         <LinkGroup data={links} />
       </JuJiuMain>
       <Footer margin='small' justify='center'>
-        <Text size='small'>&copy;2021-2023 上海光方迅视科技有线公司 版权所有</Text>
+        <Text size='small'>&copy;2021-2023 上海光方迅视科技有限公司 版权所有</Text>
       </Footer>
     </Box>
   );

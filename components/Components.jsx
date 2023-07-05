@@ -24,6 +24,7 @@ import {
 	StatusCritical,
 } from 'grommet-icons';
 import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 
 import styles from './components.module.css';
 
@@ -173,12 +174,14 @@ export function IconButton({ icon, label, onClick }) {
 export function IconLInk({ icon, label, url }) {
 	const router = useRouter();
 	return (
-		<Button onClick={() => router.push(url)}>
-			<Box pad='small' align='center'>
-				{icon}
-				<Text size='small'>{label}</Text>
-			</Box>
-		</Button>
+		<Link href={url} passHref legacyBehavior>
+			<Button as='a'>
+				<Box pad='small' align='center'>
+					{icon}
+					<Text size='small'>{label}</Text>
+				</Box>
+			</Button>
+		</Link>
 	);
 }
 

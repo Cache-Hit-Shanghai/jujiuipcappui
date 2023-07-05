@@ -21,6 +21,7 @@ import {
 	CaretDownFill,
 	CaretLeftFill,
 	CaretRightFill,
+	StatusCritical,
 } from 'grommet-icons';
 import { useRouter } from 'next/navigation';
 
@@ -187,6 +188,7 @@ export function AppFooter() {
 			<IconLInk icon={<Webcam />} label='设备' url='/' />
 			<IconLInk icon={<Radial />} label='我的' url='/my' />
 			<IconLInk icon={<Home />} label='主页' url='/splash' />
+			<IconLInk icon={<StatusCritical />} label='错误页' url='/errorpage' />
 		</Box>
 	);
 }

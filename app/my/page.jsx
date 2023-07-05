@@ -1,7 +1,7 @@
 'use client';
 
 import { Text, Box, Nav, CardHeader, CardBody, Avatar, Button } from 'grommet';
-import { Gallery, VirtualStorage, Edit, ShareRounded, User, Upgrade } from 'grommet-icons';
+import { Gallery, CloudUpload, Edit, ShareRounded, User, Upgrade } from 'grommet-icons';
 import { useRouter } from 'next/navigation';
 import { AppFooter, IconLInk, LinkGroup, JuJiuMain, JuJiuCard } from '../../components/Components';
 
@@ -36,7 +36,7 @@ export default function Page() {
           <CardBody>
             <Box direction='row' justify='evenly'>
               <IconLInk icon={<Gallery />} label='相册' url='/my/gallery' />
-              <IconLInk icon={<VirtualStorage />} label='云存储' url='#' />
+              <IconLInk icon={<CloudUpload />} label='云存储' url='/my/cloudstorage' />
             </Box>
           </CardBody>
         </JuJiuCard>

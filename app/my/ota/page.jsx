@@ -26,8 +26,8 @@ export default function Page() {
                 <Webcam size='large' />
                 <Box>
                   <Text>{datum.device}</Text>
-                  <Text size='small' color='placeholder'>{datum.size}</Text>
-                  <Text size='small' color='placeholder'>{datum.from} ~ {datum.to}</Text>
+                  <Text size='small' color='text-weak'>{datum.size}</Text>
+                  <Text size='small' color='text-weak'>{datum.from} ~ {datum.to}</Text>
                 </Box>
               </Box>
               <Box>

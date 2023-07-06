@@ -15,7 +15,7 @@ export default function Page() {
         </Box>
         <Box align='center'>
           <Text size='large'>404 - 页面不存在</Text>
-          <Text size='small' color='placeholder'>您访问的页面有可能被移到了其它位置，页面名称发生了改变，或者暂时不可访问。</Text>
+          <Text size='small' color='text-weak'>您访问的页面有可能被移到了其它位置，页面名称发生了改变，或者暂时不可访问。</Text>
         </Box>
         <Box>
           <Link href='/' passHref legacyBehavior>

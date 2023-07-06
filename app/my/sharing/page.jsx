@@ -33,7 +33,7 @@ export default function Page() {
                   <Webcam size='large' />
                   <Box>
                     <Text>{datum.device}</Text>
-                    <Text size='small' color='placeholder'>分享給{datum.to}</Text>
+                    <Text size='small' color='text-weak'>分享給{datum.to}</Text>
                   </Box>
                 </Box>
                 <Box>
@@ -50,7 +50,7 @@ export default function Page() {
                   <Webcam size='large' />
                   <Box>
                     <Text>{datum.device}</Text>
-                    <Text size='small' color='placeholder'>來自{datum.from}</Text>
+                    <Text size='small' color='text-weak'>來自{datum.from}</Text>
                   </Box>
                 </Box>
                 <Box>

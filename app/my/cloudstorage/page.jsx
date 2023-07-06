@@ -15,7 +15,7 @@ export default function Page() {
       <JuJiuMain gap='medium'>
         <Box>
           <Heading level={2} margin='none'>云存储</Heading>
-          <Text size='small' color='placeholder'>不会丢失的录像文件存储。</Text>
+          <Text size='small' color='text-weak'>不会丢失的录像文件存储。</Text>
         </Box>
         <Card pad='medium' gap='medium' background='background-contrast' flex={false}>
           <CardHeader>
@@ -39,7 +39,7 @@ export default function Page() {
                 </Box>
                 <Box align='end'>
                   <Text color='graph-3'>正常使用中</Text>
-                  <Text size='small' color='placeholder'>将于2023.8.24日到期</Text>
+                  <Text size='small' color='text-weak'>将于2023.8.24日到期</Text>
                 </Box>
               </Box>
             </Box>

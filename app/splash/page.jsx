@@ -8,7 +8,7 @@ import { useRouter } from 'next/navigation';
 // return (
 //   <Grommet full>
 //     <Box fill>
-//       <Box  flex={{ grow: 1, shrink: 1 }}>
+//       <Box flex={{ grow: 1, shrink: 1 }}>
 //         <Stack fill>
 //           <Box fill background='url(https://jujiu-prod.oss-cn-shanghai.aliyuncs.com/11242797_49169.svg)'
 //             style={{
@@ -40,13 +40,11 @@ export default function Page() {
 
   return (
     <Box fill>
-      <Box flex={{ grow: 1, shrink: 1 }} align='center' justify='center' gap='medium' style={{
-        'background-image': 'radial-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1))'
-      }} background={{
-          image: 'url(https://jujiu-prod.oss-accelerate.aliyuncs.com/11242797_49169.svg)',
-          opacity: 'weak',
-        }}>
-        <Box direction='row' align='center' gap='medium'>
+      <Box flex={{ grow: 1, shrink: 1 }} align='center' justify='center' gap='medium' background={{
+        image: 'radial-gradient(rgba(255, 255, 255, 0.6), rgba(0, 0, 0, 1)), url(https://jujiu-prod.oss-accelerate.aliyuncs.com/11242797_49169.svg)',
+        size: 'cover'
+      }}>
+        <Box direction='row' align='center' gap='small'>
           <Webcam color='brand' size='xlarge' />
           <Heading level={1} size='medium'>云探</Heading>
         </Box>

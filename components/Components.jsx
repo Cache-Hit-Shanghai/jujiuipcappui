@@ -198,14 +198,15 @@ export function LinkGroup({ data }) {
 			<CardBody>
 				<List data={data} border={false}>
 					{(datum) => (
-						<Button
-							icon={<FormNext color='control' />}
-							label={datum.label}
-							reverse
-							plain
-							justify='between'
-							onClick={() => router.push(datum.url)}
-						/>
+						<Link href={datum.url} passHref legacyBehavior>
+							<Button
+								icon={<FormNext color='control' />}
+								label={datum.label}
+								reverse
+								plain
+								justify='between'
+							/>
+						</Link>
 					)}
 				</List>
 			</CardBody>

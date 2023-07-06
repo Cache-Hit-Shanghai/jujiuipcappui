@@ -41,7 +41,8 @@ export default function Page() {
   return (
     <Box fill>
       <Box flex={{ grow: 1, shrink: 1 }} align='center' justify='center' gap='medium' background={{
-        image: 'radial-gradient(rgba(255, 255, 255, 0.6), rgba(0, 0, 0, 1)), url(https://jujiu-prod.oss-accelerate.aliyuncs.com/11242797_49169.svg)',
+        image: 'radial-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 1)), url(https://jujiu-prod.oss-accelerate.aliyuncs.com/11242797_49169.svg)',
+        opacity: 'medium',
         size: 'cover'
       }}>
         <Box direction='row' align='center' gap='small'>

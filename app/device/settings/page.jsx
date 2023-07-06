@@ -217,6 +217,7 @@ export default function Page() {
 					<CardBody>
 						<Link href='/device/settings/dormantPlan/' passHref legacyBehavior>
 							<Box
+								as='a'
 								direction='row'
 								align='center'
 								justify='between'

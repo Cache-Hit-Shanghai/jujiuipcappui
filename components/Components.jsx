@@ -199,6 +199,7 @@ export function LinkGroup({ data }) {
 					{(datum) => (
 						<Link href={datum.url} passHref legacyBehavior>
 							<Button
+								as='a'
 								icon={<FormNext color='control' />}
 								label={datum.label}
 								reverse

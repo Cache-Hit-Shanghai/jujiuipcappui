@@ -22,7 +22,7 @@ export default function Page() {
             <Text size='large' weight='bold'>安全、可靠的云存储</Text>
           </CardHeader>
           <CardBody>
-            <Paragraph>云存储可以将您的重要数据保存在云端。它可以避免数据的丢失、泄露以及人为破坏。您可以在世界上任何一个角落访问云存储上的文件。它具有金融级安全，能尽可能的保护您的隐私。即使设备被破坏而导致无法使用，已保存在云存储中的文件仍然安然无恙。</Paragraph>
+            <Paragraph fill>云存储可以将您的重要数据保存在云端。它可以避免数据的丢失、泄露以及人为破坏。您可以在世界上任何一个角落访问云存储上的文件。它具有金融级安全，能尽可能的保护您的隐私。即使设备被破坏而导致无法使用，已保存在云存储中的文件仍然安然无恙。</Paragraph>
           </CardBody>
         </Card>
         <Card pad='medium' gap='medium' background='background-contrast' flex={false}>

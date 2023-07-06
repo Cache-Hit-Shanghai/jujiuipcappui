@@ -216,15 +216,16 @@ export default function Page() {
 				<JuJiuCard>
 					<CardBody>
 						<Link href='/device/settings/dormantPlan/' passHref legacyBehavior>
-							<Box
-								as='a'
-								direction='row'
-								align='center'
-								justify='between'
-							>
-								<Text>休眠计划</Text>
-								<FormNext color='control' />
-							</Box>
+							<Button as='a'>
+								<Box
+									direction='row'
+									align='center'
+									justify='between'
+								>
+									<Text>休眠计划</Text>
+									<FormNext color='control' />
+								</Box>
+							</Button>
 						</Link>
 					</CardBody>
 				</JuJiuCard>

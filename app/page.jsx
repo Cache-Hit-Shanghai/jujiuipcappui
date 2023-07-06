@@ -1,6 +1,6 @@
 'use client';
 
-import { Text, Box, Nav, Menu, Button, Accordion, AccordionPanel, Tag } from 'grommet';
+import { Text, Box, Nav, Menu, Button, Accordion, AccordionPanel, Tag, Heading } from 'grommet';
 import { AddCircle, Mail } from 'grommet-icons';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
@@ -11,9 +11,9 @@ export default function Page() {
 
   return (
     <Box fill>
-      <Nav direction='row' justify='between' align='center'>
+      <Nav direction='row' justify='between' align='center' background='background-contrast'>
         <Box margin='small'>
-          <Text size='large'>云探智能视觉系统</Text>
+          <Heading level={2} margin='none'>云探智能视觉系统</Heading>
         </Box>
         <Box direction='row' gap='small' align='center'>
           <Link href='/message' passHref legacyBehavior>
@@ -29,14 +29,14 @@ export default function Page() {
           />
         </Box>
       </Nav>
-      <JuJiuMain>
+      <JuJiuMain margin='none'>
         <Accordion>
-          <AccordionPanel label={<Text margin='small'>默认分组</Text>}>
+          <AccordionPanel label={<Text size='large' margin='small'>默认分组</Text>}>
             <Box gap='small' margin='small'>
               <IpcCard key={0} label={<Box direction='row' align='center' gap='large'><Text>客厅</Text><Tag value='来自分享' size='xsmall' background='control' /></Box>} imgurl='https://v2.grommet.io/assets/IMG_4245.jpg' />
             </Box>
           </AccordionPanel>
-          <AccordionPanel label={<Text margin='small'>办公室</Text>}>
+          <AccordionPanel label={<Text size='large' margin='small'>办公室</Text>}>
             <Box gap='small' margin='small'>
               <IpcCard key={1} label='办3' imgurl='https://v2.grommet.io/assets/IMG_4245.jpg' />
               <IpcCard key={2} label='办5' imgurl='https://i.insider.com/5c796ca426289858f7205ede?width=1136&format=jpeg' />

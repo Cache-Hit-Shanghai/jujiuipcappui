@@ -23,6 +23,7 @@ import {
 	CaretRightFill,
 	StatusCritical,
 } from 'grommet-icons';
+import { Settings3 } from '@styled-icons/remix-fill/Settings3';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 
@@ -207,7 +208,7 @@ export function IpcCard({ label, imgurl }) {
 				<Text>{label}</Text>
 				<Menu
 					dropProps={{ align: { top: 'bottom', right: 'right' } }}
-					icon={<Configure />}
+					icon={<Settings3 size='24' />}
 					items={[
 						{
 							label: '设备分享',

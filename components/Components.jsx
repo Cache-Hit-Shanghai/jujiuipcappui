@@ -192,7 +192,6 @@ export function ButtonGroup({ data }) {
 }
 
 export function LinkGroup({ data }) {
-	const router = useRouter();
 	return (
 		<JuJiuCard>
 			<CardBody>

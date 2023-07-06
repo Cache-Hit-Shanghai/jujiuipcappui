@@ -16,6 +16,7 @@ import { FormNext, Wifi, ChatOption, Run, Pan } from 'grommet-icons';
 import { useState } from 'react';
 import { IconBack, JuJiuMain, JuJiuCard } from '../../../components/Components';
 import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 
 export default function Page() {
 	const [openAvata, setOpenAvata] = useState(false);
@@ -214,19 +215,16 @@ export default function Page() {
 				</JuJiuCard>
 				<JuJiuCard>
 					<CardBody>
-						<Box
-							direction='row'
-							align='center'
-							justify='between'
-							onClick={() => {
-								router.push(
-									'/device/settings/dormantPlan/'
-								);
-							}}
-						>
-							<Text>休眠计划</Text>
-							<FormNext color='control' />
-						</Box>
+						<Link href='/device/settings/dormantPlan/' passHref legacyBehavior>
+							<Box
+								direction='row'
+								align='center'
+								justify='between'
+							>
+								<Text>休眠计划</Text>
+								<FormNext color='control' />
+							</Box>
+						</Link>
 					</CardBody>
 				</JuJiuCard>
 				<JuJiuCard>

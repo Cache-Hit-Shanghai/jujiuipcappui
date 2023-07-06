@@ -43,7 +43,7 @@ export function PanLayer() {
 	const [show, setShow] = useState(false);
 	return (
 		<>
-			<Button plain icon={<Pan />} onClick={() => setShow(!show)} />
+			<Button plain focusIndicator={false} icon={<Pan />} onClick={() => setShow(!show)} />
 			{show && <Layer plain position='right' responsive={false} margin='small' onClickOutside={() => setShow(false)}><PanControl /></Layer>}
 		</>
 	);
@@ -149,7 +149,7 @@ export function JuJiuMain({ children, ...props }) {
 
 export function JuJiuCard({ children, ...props }) {
 	return (
-		<Card pad='small' gap='small' background='background-contrast' flex={false} {...props}>
+		<Card pad='small' gap='small' background='background-contrast' focusIndicator={false} flex={false} {...props}>
 			{children}
 		</Card>
 	);

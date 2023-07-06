@@ -15,14 +15,11 @@ import {
 import { FormNext, Wifi, ChatOption, Run, Pan } from 'grommet-icons';
 import { useState } from 'react';
 import { IconBack, JuJiuMain, JuJiuCard } from '../../../components/Components';
-import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 
 export default function Page() {
 	const [openAvata, setOpenAvata] = useState(false);
 	const [openName, setOpenName] = useState(false);
-
-	const router = useRouter();
 
 	return (
 		<Box fill>

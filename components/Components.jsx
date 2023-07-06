@@ -230,7 +230,6 @@ export function IconButton({ icon, label, onClick }) {
 }
 
 export function IconLInk({ icon, label, url }) {
-	const router = useRouter();
 	return (
 		<Link href={url} passHref legacyBehavior>
 			<Button as='a'>

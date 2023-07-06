@@ -2,7 +2,6 @@
 
 import { Text, Box, Heading } from 'grommet';
 import { Webcam } from 'grommet-icons';
-import { useRouter } from 'next/navigation';
 
 // 中心渐变效果，留着以后用。
 // return (
@@ -36,8 +35,6 @@ import { useRouter } from 'next/navigation';
 // );
 
 export default function Page() {
-  const router = useRouter();
-
   return (
     <Box fill>
       <Box flex={{ grow: 1, shrink: 1 }} align='center' justify='center' gap='medium' background={{

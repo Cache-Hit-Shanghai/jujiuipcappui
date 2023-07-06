@@ -2,7 +2,7 @@
 
 import { Text, Box, Nav, CardHeader, CardBody, Avatar, Button } from 'grommet';
 import { Gallery, CloudUpload, Edit, ShareRounded, User, Upgrade } from 'grommet-icons';
-import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 import { AppFooter, IconLInk, LinkGroup, JuJiuMain, JuJiuCard } from '../../components/Components';
 
 const links = [
@@ -14,22 +14,22 @@ const links = [
 ];
 
 export default function Page() {
-  const router = useRouter();
-
   return (
     <Box fill>
       <Nav direction='row' margin='small' justify='between'>
-        <Button onClick={() => router.push('/my/login')}>
-          <Box direction='row' gap='small' align='center'>
-            <Avatar background='background-contrast'>
-              <User />
-            </Avatar>
-            <Box>
-              <Text>用户34881</Text>
-              <Text size='xsmall' color='text-weak'>黄金会员</Text>
+        <Link href='/my/login' passHref legacyBehavior>
+          <Button as='a'>
+            <Box direction='row' gap='small' align='center'>
+              <Avatar background='background-contrast'>
+                <User />
+              </Avatar>
+              <Box>
+                <Text>用户34881</Text>
+                <Text size='xsmall' color='text-weak'>黄金会员</Text>
+              </Box>
             </Box>
-          </Box>
-        </Button>
+          </Button>
+        </Link>
       </Nav>
       <JuJiuMain>
         <JuJiuCard>

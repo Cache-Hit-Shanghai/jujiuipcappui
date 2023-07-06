@@ -20,8 +20,10 @@ import {
 	Video,
 	FormNext,
 	Volume,
+  Checkmark,
 	VolumeMute,
 	FormPrevious,
+  ClosedCaption,
 	CaretUpFill,
 	CaretDownFill,
 	CaretLeftFill,
@@ -39,12 +41,31 @@ import styles from './components.module.css';
 
 // console.log('styles', styles);
 
+export function ResolutionControl({ showTitle = true }) {
+  return (
+    <Menu
+      plain
+      dropAlign={{ top: 'bottom' }}
+      items={[
+        { label: '极清', onClick: () => {}, justify: 'end' },
+        { label: '超清', onClick: () => {}, icon: <Checkmark />, justify: 'end' },
+        { label: '标清', onClick: () => {}, justify: 'end' },
+      ]}
+    >
+      <Box pad='small' align='center'>
+        <ClosedCaption />
+        { showTitle && <Text size='small'>清晰度</Text> }
+      </Box>
+    </Menu>
+  );
+}
+
 export function PanLayer() {
 	const [show, setShow] = useState(false);
 	return (
 		<>
 			<Button plain focusIndicator={false} icon={<Pan />} onClick={() => setShow(!show)} />
-			{show && <Layer plain position='right' responsive={false} margin='small' onClickOutside={() => setShow(false)}><PanControl /></Layer>}
+			{ show && <Layer plain position='right' responsive={false} margin='small' onClickOutside={() => setShow(false)}><PanControl /></Layer> }
 		</>
 	);
 }

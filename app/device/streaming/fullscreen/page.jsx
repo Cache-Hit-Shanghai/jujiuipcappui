@@ -1,8 +1,8 @@
 'use client';
 
-import { Video as VideoCanvas, Box, Stack, Button, Menu } from 'grommet';
-import { Camera, ClosedCaption, Checkmark } from 'grommet-icons';
-import { IconBack, ChatControl, MuteControl, RecordControl, PanLayer } from '../../../../components/Components';
+import { Video as VideoCanvas, Box, Stack, Button } from 'grommet';
+import { Camera } from 'grommet-icons';
+import { IconBack, ChatControl, MuteControl, RecordControl, PanLayer, ResolutionControl } from '../../../../components/Components';
 
 export default function Page() {
   return (
@@ -24,19 +24,7 @@ export default function Page() {
             <ChatControl showTitle={false} />
             <MuteControl showTitle={false} />
             <PanLayer />
-            <Menu
-              plain
-              dropAlign={{ top: 'bottom' }}
-              items={[
-                { label: '极清', onClick: () => {}, justify: 'end' },
-                { label: '超清', onClick: () => {}, icon: <Checkmark />, justify: 'end' },
-                { label: '标清', onClick: () => {}, justify: 'end' },
-              ]}
-            >
-              <Box pad='small' align='center'>
-                <ClosedCaption />
-              </Box>
-            </Menu>
+            <ResolutionControl showTitle={false} />
           </Box>
         </Box>
       </Stack>

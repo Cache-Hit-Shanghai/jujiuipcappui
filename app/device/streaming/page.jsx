@@ -1,10 +1,10 @@
 'use client';
 
-import { Text, Box, Video as VideoCanvas, Nav, Tabs, Tab, DateInput, RadioButtonGroup, Grid, Stack, Button, Menu } from 'grommet';
-import { Camera, ClosedCaption, Cloud, Sd, Expand, Checkmark, Download } from 'grommet-icons';
+import { Text, Box, Video as VideoCanvas, Nav, Tabs, Tab, DateInput, RadioButtonGroup, Grid, Stack, Button } from 'grommet';
+import { Camera, Cloud, Sd, Expand, Download } from 'grommet-icons';
 import Link from 'next/link';
 import { useState } from 'react';
-import { IconBack, IconButton, PanControl, JuJiuMain, ChatControl, MuteControl, RecordControl } from '../../../components/Components';
+import { IconBack, IconButton, PanControl, JuJiuMain, ChatControl, MuteControl, RecordControl, ResolutionControl } from '../../../components/Components';
 
 export default function Page() {
   const [value, setValue] = useState(Date.now());
@@ -42,20 +42,7 @@ export default function Page() {
                 <RecordControl />
                 <ChatControl />
                 <MuteControl />
-                <Menu
-                  plain
-                  dropAlign={{ top: 'bottom' }}
-                  items={[
-                    { label: '极清', onClick: () => {}, justify: 'end' },
-                    { label: '超清', onClick: () => {}, icon: <Checkmark />, justify: 'end' },
-                    { label: '标清', onClick: () => {}, justify: 'end' },
-                  ]}
-                >
-                  <Box pad='small' align='center'>
-                    <ClosedCaption />
-                    <Text size='small'>清晰度</Text>
-                  </Box>
-                </Menu>
+                <ResolutionControl />
               </Box>
             </Box>
           </Tab>

@@ -14,9 +14,10 @@ import {
 	Home,
 	Webcam,
 	Radial,
-	Configure,
-	FormPrevious,
 	FormNext,
+	Volume,
+	VolumeMute,
+	FormPrevious,
 	CaretUpFill,
 	CaretDownFill,
 	CaretLeftFill,
@@ -24,12 +25,41 @@ import {
 	StatusCritical,
 } from 'grommet-icons';
 import { Settings3 } from '@styled-icons/remix-fill/Settings3';
+import { Mic } from '@styled-icons/remix-fill/Mic';
+import { MicOff } from '@styled-icons/remix-fill/MicOff';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
+import { useState } from 'react';
 
 import styles from './components.module.css';
 
 // console.log('styles', styles);
+
+export function MuteControl({ showTitle = true }) {
+	const [mute, setMute] = useState(false);
+
+	return (
+		<Button onClick={() => setMute(!mute)}>
+			<Box pad='small' align='center'>
+				{mute ? <Volume /> : <VolumeMute />}
+				{showTitle && <Text size='small'>{mute ? '恢复' : '静音'}</Text>}
+			</Box>
+		</Button>
+	);
+}
+
+export function ChatControl({ showTitle = true }) {
+	const [speaking, setSpeaking] = useState(false);
+
+	return (
+		<Button onClick={() => setSpeaking(!speaking)}>
+			<Box pad='small' align='center'>
+				{speaking ? <MicOff size='24' /> : <Mic size='24' />}
+				{showTitle && <Text size='small'>{speaking ? '挂断' : '对讲'}</Text>}
+			</Box>
+		</Button>
+	);
+}
 
 export function PanControl({ onPanClick = () => {} }) {
 	return (

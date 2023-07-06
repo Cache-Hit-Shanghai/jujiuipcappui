@@ -1,8 +1,8 @@
 'use client';
 
 import { Video as VideoCanvas, Box, Stack, Button, Menu } from 'grommet';
-import { Camera, Video, Microphone, ClosedCaption, VolumeMute, Checkmark, Pan } from 'grommet-icons';
-import { IconBack } from '../../../../components/Components';
+import { Camera, Video, ClosedCaption, VolumeMute, Checkmark, Pan } from 'grommet-icons';
+import { IconBack, ChatControl, MuteControl } from '../../../../components/Components';
 
 export default function Page() {
   return (
@@ -21,8 +21,8 @@ export default function Page() {
           <Box direction='row' margin={{ vertical: 'large', horizontal: 'xlarge' }} gap='xlarge'>
             <Button plain icon={<Camera />} />
             <Button plain icon={<Video />} />
-            <Button plain icon={<Microphone />} />
-            <Button plain icon={<VolumeMute />} />
+            <ChatControl showTitle={false} />
+            <MuteControl showTitle={false} />
             <Button plain icon={<Pan />} />
             <Menu
               plain

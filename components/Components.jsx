@@ -9,11 +9,15 @@ import {
 	Button,
 	List,
 	Main,
+	Layer,
 } from 'grommet';
 import {
+	Pan,
 	Home,
-	Webcam,
+	Stop,
 	Radial,
+	Webcam,
+	Video,
 	FormNext,
 	Volume,
 	VolumeMute,
@@ -34,6 +38,29 @@ import { useState } from 'react';
 import styles from './components.module.css';
 
 // console.log('styles', styles);
+
+export function PanLayer() {
+	const [show, setShow] = useState(false);
+	return (
+		<>
+			<Button plain icon={<Pan />} onClick={() => setShow(!show)} />
+			{show && <Layer plain position='right' responsive={false} margin='small' onClickOutside={() => setShow(false)}><PanControl /></Layer>}
+		</>
+	);
+}
+
+export function RecordControl({ showTitle = true }) {
+	const [recording, setRecording] = useState(false);
+
+	return (
+		<Button onClick={() => setRecording(!recording)}>
+			<Box pad='small' align='center'>
+				{recording ? <Stop /> : <Video />}
+				{showTitle && <Text size='small'>{recording ? '停止' : '录像'}</Text>}
+			</Box>
+		</Button>
+	);
+}
 
 export function MuteControl({ showTitle = true }) {
 	const [mute, setMute] = useState(false);

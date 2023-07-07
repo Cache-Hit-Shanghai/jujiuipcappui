@@ -15,7 +15,7 @@
   "dependencies": {
     "grommet": "^2.32.2",
     "grommet-icons": "^4.11.0",
-    "next": "^13.4.8",
+    "next": "^13.4.9",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "styled-icons": "^10.47.0"

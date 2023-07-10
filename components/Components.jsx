@@ -1,4 +1,5 @@
 import {
+	Avatar,
 	Text,
 	Box,
 	Card,
@@ -24,15 +25,14 @@ import {
 	VolumeMute,
 	FormPrevious,
 	ClosedCaption,
-	CaretUpFill,
-	CaretDownFill,
 	CaretLeftFill,
-	CaretRightFill,
 	StatusCritical,
 } from "grommet-icons";
 import { Settings3 } from "@styled-icons/remix-fill/Settings3";
 import { Mic } from "@styled-icons/remix-fill/Mic";
 import { MicOff } from "@styled-icons/remix-fill/MicOff";
+import { FlashlightOn } from '@styled-icons/material-rounded/FlashlightOn';
+import { FlashlightOff } from '@styled-icons/material-rounded/FlashlightOff';
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { useState } from "react";
@@ -40,6 +40,17 @@ import { useState } from "react";
 import styles from "./components.module.css";
 
 // console.log('styles', styles);
+
+export function FlashLight() {
+	const [on, setOn] = useState(false);
+	return (
+		<Button onClick={() => setOn(!on)}>
+			<Avatar border>
+				{on ? <FlashlightOff size='24' /> : <FlashlightOn size='24' />}
+			</Avatar>
+		</Button>
+	);
+}
 
 export function ResolutionControl({ showTitle = true }) {
 	return (

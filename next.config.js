@@ -28,7 +28,7 @@ const nextConfig = {
     unoptimized: true,
   },
 
-  trailingSlash: true,
+  // trailingSlash: true,
 };
 
 module.exports = nextConfig;

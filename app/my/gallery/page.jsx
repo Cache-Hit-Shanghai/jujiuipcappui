@@ -1,15 +1,27 @@
 'use client';
 
-import { Text, Box, Nav, Grid, Card, CardHeader, CardBody } from 'grommet';
+import { Text, Box, Nav, Grid, Card, CardHeader, CardBody, Stack } from 'grommet';
+import { CirclePlay } from 'grommet-icons';
 import Link from 'next/link';
 import { IconBack, JuJiuMain } from '../../../components/Components';
 
 
-function LinkBox({ key }) {
+function LinkBoxImage() {
   return (
     <Link href='/my/gallery/detail' passHref legacyBehavior>
-      <Box key={key} as='a' fill background='url(https://v2.grommet.io/assets/IMG_4245.jpg)' round='xsmall' />
+      <Box as='a' fill background='url(https://v2.grommet.io/assets/IMG_4245.jpg)' round='xsmall' />
     </Link>
+  );
+}
+
+function LinkBoxVideo() {
+  return (
+    <Stack fill anchor='center' interactiveChild='first'>
+      <Link href='/my/gallery/detail?type=video' passHref legacyBehavior>
+        <Box as='a' fill background='url(https://v2.grommet.io/assets/IMG_4245.jpg)' round='xsmall' />
+      </Link>
+      <Box><CirclePlay /></Box>
+    </Stack>
   );
 }
 
@@ -28,7 +40,7 @@ export default function Page() {
             </CardHeader>
             <CardBody pad='small'>
               <Grid fill columns='xsmall' gap='small' align='center' justify='center' style={{ gridAutoFlow: 'row dense', gridAutoRows: '70px' }}>
-                {Array.from({ length: 1 }, (_, index) => index).map(item => <LinkBox key={item} />)}
+                {Array.from({ length: 1 }, (_, index) => index).map(item => <LinkBoxVideo key={item} />)}
               </Grid>
             </CardBody>
           </Card>
@@ -38,7 +50,7 @@ export default function Page() {
             </CardHeader>
             <CardBody pad='small'>
               <Grid fill columns='xsmall' gap='small' align='center' justify='center' style={{ gridAutoFlow: 'row dense', gridAutoRows: '70px' }}>
-                {Array.from({ length: 8 }, (_, index) => index).map(item => <LinkBox key={item} />)}
+                {Array.from({ length: 8 }, (_, index) => index).map(item => <LinkBoxImage key={item} />)}
               </Grid>
             </CardBody>
           </Card>
@@ -48,7 +60,7 @@ export default function Page() {
             </CardHeader>
             <CardBody pad='small'>
               <Grid fill columns='xsmall' gap='small' align='center' justify='center' style={{ gridAutoFlow: 'row dense', gridAutoRows: '70px' }}>
-                {Array.from({ length: 4 }, (_, index) => index).map(item => <LinkBox key={item} />)}
+                {Array.from({ length: 4 }, (_, index) => index).map(item => <LinkBoxImage key={item} />)}
               </Grid>
             </CardBody>
           </Card>

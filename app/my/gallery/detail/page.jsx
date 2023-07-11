@@ -1,19 +1,26 @@
 'use client';
 
-import { Box, Nav } from 'grommet';
-import { Trash, ShareRounded, Download } from 'grommet-icons';
+import { Box, Nav, Stack } from 'grommet';
+import { Trash, ShareRounded, Download, CirclePlay } from 'grommet-icons';
+import { useSearchParams } from 'next/navigation';
 import { IconBack, JuJiuMain, IconButton } from '../../../../components/Components';
 
 
 export default function Page() {
+  const searchParams = useSearchParams();
+  const type = searchParams?.get('type');
+
   return (
     <Box fill>
       <Nav direction='row' align='center'>
         <IconBack />
       </Nav>
-      <JuJiuMain>
+      <JuJiuMain margin='none'>
         <Box flex={{ grow: 1, shrink: 1 }} overflow='auto'>
-          <Box fill background={{ image: 'url(https://v2.grommet.io/assets/IMG_4245.jpg)', size: 'contain' }} />
+          <Stack fill anchor='center'>
+            <Box fill background={{ image: 'url(https://v2.grommet.io/assets/IMG_4245.jpg)', size: 'contain' }} />
+            {type === 'video' && <Box><CirclePlay size='large' /></Box>}
+          </Stack>
         </Box>
         <Box direction='row' justify='evenly' background='background-contrast' flex={false}>
           <IconButton icon={<Download />} label='下载' onClick={() => {}} />

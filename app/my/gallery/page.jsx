@@ -1,7 +1,7 @@
 'use client';
 
 import { Text, Box, Nav, Grid, Card, CardHeader, CardBody } from 'grommet';
-import Link from "next/link";
+import Link from 'next/link';
 import { IconBack, JuJiuMain } from '../../../components/Components';
 
 

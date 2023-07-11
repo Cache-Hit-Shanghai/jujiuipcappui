@@ -29,8 +29,8 @@ import {
 	StatusCritical,
 } from "grommet-icons";
 import { Settings3 } from "@styled-icons/remix-fill/Settings3";
-import { Mic } from "@styled-icons/remix-fill/Mic";
-import { MicOff } from "@styled-icons/remix-fill/MicOff";
+import { Call } from "@styled-icons/fluentui-system-regular/Call";
+import { CallDismiss } from "@styled-icons/fluentui-system-regular/CallDismiss";
 import { FlashlightOn } from '@styled-icons/material-rounded/FlashlightOn';
 import { FlashlightOff } from '@styled-icons/material-rounded/FlashlightOff';
 import { useRouter } from "next/navigation";
@@ -137,7 +137,7 @@ export function ChatControl({ showTitle = true }) {
 	return (
 		<Button onClick={() => setSpeaking(!speaking)}>
 			<Box pad="small" align="center">
-				{speaking ? <MicOff size="24" /> : <Mic size="24" />}
+				{speaking ? <CallDismiss size="24" /> : <Call size="24" />}
 				{showTitle && (
 					<Text size="small">{speaking ? "挂断" : "对讲"}</Text>
 				)}

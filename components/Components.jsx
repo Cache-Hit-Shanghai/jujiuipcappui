@@ -15,10 +15,8 @@ import {
 import {
 	Pan,
 	Home,
-	Stop,
 	Radial,
 	Webcam,
-	Video,
 	FormNext,
 	Volume,
 	Checkmark,
@@ -31,6 +29,8 @@ import {
 import { Settings3 } from "@styled-icons/remix-fill/Settings3";
 import { Call } from "@styled-icons/fluentui-system-regular/Call";
 import { CallDismiss } from "@styled-icons/fluentui-system-regular/CallDismiss";
+import { Record } from '@styled-icons/fluentui-system-regular/Record';
+import { RecordStop } from '@styled-icons/fluentui-system-regular/RecordStop';
 import { FlashlightOn } from '@styled-icons/material-rounded/FlashlightOn';
 import { FlashlightOff } from '@styled-icons/material-rounded/FlashlightOff';
 import { useRouter } from "next/navigation";
@@ -107,7 +107,7 @@ export function RecordControl({ showTitle = true }) {
 	return (
 		<Button onClick={() => setRecording(!recording)}>
 			<Box pad="small" align="center">
-				{recording ? <Stop /> : <Video />}
+				{recording ? <RecordStop /> : <Record />}
 				{showTitle && (
 					<Text size="small">{recording ? "停止" : "录像"}</Text>
 				)}

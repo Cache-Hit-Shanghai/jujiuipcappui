@@ -1,13 +1,19 @@
 'use client';
 
 import { Text, Box, Nav, Grid, Card, CardHeader, CardBody } from 'grommet';
-import { useRouter } from 'next/navigation';
+import Link from "next/link";
 import { IconBack, JuJiuMain } from '../../../components/Components';
 
 
-export default function Page() {
-  const router = useRouter();
+function LinkBox({ key }) {
+  return (
+    <Link href='/my/gallery/detail' passHref legacyBehavior>
+      <Box key={key} as='a' fill background='url(https://v2.grommet.io/assets/IMG_4245.jpg)' round='xsmall' />
+    </Link>
+  );
+}
 
+export default function Page() {
   return (
     <Box fill>
       <Nav direction='row' align='center'>
@@ -22,8 +28,7 @@ export default function Page() {
             </CardHeader>
             <CardBody pad='small'>
               <Grid fill columns='xsmall' gap='small' align='center' justify='center' style={{ gridAutoFlow: 'row dense', gridAutoRows: '70px' }}>
-                {Array.from({ length: 1 }, (_, index) => index).map(
-                  item => <Box key={item} fill background='url(https://v2.grommet.io/assets/IMG_4245.jpg)' round='xsmall' onClick={() => router.push('/my/gallery/detail')} />)}
+                {Array.from({ length: 1 }, (_, index) => index).map(item => <LinkBox key={item} />)}
               </Grid>
             </CardBody>
           </Card>
@@ -33,8 +38,7 @@ export default function Page() {
             </CardHeader>
             <CardBody pad='small'>
               <Grid fill columns='xsmall' gap='small' align='center' justify='center' style={{ gridAutoFlow: 'row dense', gridAutoRows: '70px' }}>
-                {Array.from({ length: 8 }, (_, index) => index).map(
-                  item => <Box key={item} fill background='url(https://v2.grommet.io/assets/IMG_4245.jpg)' round='xsmall' onClick={() => router.push('/my/gallery/detail')} />)}
+                {Array.from({ length: 8 }, (_, index) => index).map(item => <LinkBox key={item} />)}
               </Grid>
             </CardBody>
           </Card>
@@ -44,8 +48,7 @@ export default function Page() {
             </CardHeader>
             <CardBody pad='small'>
               <Grid fill columns='xsmall' gap='small' align='center' justify='center' style={{ gridAutoFlow: 'row dense', gridAutoRows: '70px' }}>
-                {Array.from({ length: 4 }, (_, index) => index).map(
-                  item => <Box key={item} fill background='url(https://v2.grommet.io/assets/IMG_4245.jpg)' round='xsmall' onClick={() => router.push('/my/gallery/detail')} />)}
+                {Array.from({ length: 4 }, (_, index) => index).map(item => <LinkBox key={item} />)}
               </Grid>
             </CardBody>
           </Card>

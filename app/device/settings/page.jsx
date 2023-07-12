@@ -11,6 +11,7 @@ import {
 	Heading,
 	TextArea,
 	CheckBox,
+	RangeInput,
 } from 'grommet';
 import { FormNext, Wifi, ChatOption, Run, Pan } from 'grommet-icons';
 import { useState } from 'react';
@@ -181,6 +182,30 @@ export default function Page() {
 							align='center'
 							justify='between'
 						>
+							<Text>镜头畸变修正</Text>
+							<CheckBox toggle />
+						</Box>
+					</CardBody>
+				</JuJiuCard>
+				<JuJiuCard>
+					<CardBody>
+						<Box
+							direction='row'
+							align='center'
+							justify='between'
+						>
+							<Text>视频宽动态(WDR)</Text>
+							<CheckBox toggle />
+						</Box>
+					</CardBody>
+				</JuJiuCard>
+				<JuJiuCard>
+					<CardBody>
+						<Box
+							direction='row'
+							align='center'
+							justify='between'
+						>
 							<Text>设备语音提示</Text>
 							<CheckBox toggle />
 						</Box>
@@ -195,6 +220,18 @@ export default function Page() {
 						>
 							<Text>设备状态灯</Text>
 							<CheckBox toggle />
+						</Box>
+					</CardBody>
+				</JuJiuCard>
+				<JuJiuCard>
+					<CardBody>
+						<Box
+							direction='row'
+							align='center'
+							justify='between'
+						>
+							<Text>设备音量</Text>
+							<Box><RangeInput /></Box>
 						</Box>
 					</CardBody>
 				</JuJiuCard>

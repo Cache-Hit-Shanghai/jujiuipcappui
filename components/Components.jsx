@@ -147,6 +147,21 @@ export function RecordControl({ showTitle = true }) {
 	);
 }
 
+export function MuteControl({ showTitle = true }) {
+	const [mute, setMute] = useState(false);
+
+	return (
+		<Button onClick={() => setMute(!mute)}>
+			<Box pad='small' align='center'>
+				{mute ? <Volume /> : <VolumeMute />}
+				{showTitle && (
+					<Text size='small'>{mute ? '恢复' : '静音'}</Text>
+				)}
+			</Box>
+		</Button>
+	);
+}
+
 export function ChatControl({ showTitle = true }) {
 	const [speaking, setSpeaking] = useState(false);
 

@@ -37,7 +37,7 @@ export default function Page() {
               <Box flex={{ grow: 1 }} justify='center'>
                 <PanControl />
               </Box>
-              <Box direction='row' justify='center' background='background-contrast' flex={false}>
+              <Box direction='row' justify='evenly' background='background-contrast' flex={false}>
                 <IconButton icon={<Camera />} label='截图' onClick={() => {}} />
                 <RecordControl />
                 <ChatControl />

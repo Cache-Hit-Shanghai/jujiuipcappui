@@ -18,7 +18,7 @@ export default function Page() {
       <JuJiuMain margin='none'>
         <Box flex={{ grow: 1, shrink: 1 }} overflow='auto'>
           <Stack fill anchor='center'>
-            <Box fill background={{ image: 'url(https://v2.grommet.io/assets/IMG_4245.jpg)', size: 'contain' }} />
+            <Box fill background={{ image: 'url(https://tse2-mm.cn.bing.net/th/id/OIP-C.ke-oC-HNGvr6A7xWstYjsgHaFS?pid=ImgDet&rs=1)', size: 'contain' }} />
             {type === 'video' && <Box><CirclePlay size='large' /></Box>}
           </Stack>
         </Box>

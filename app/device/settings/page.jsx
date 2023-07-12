@@ -119,7 +119,7 @@ export default function Page() {
 							align='center'
 							justify='between'
 						>
-							<Text>设备版本</Text>
+							<Text>设备固件版本</Text>
 							<Text size='small'>V1.0.3</Text>
 						</Box>
 					</CardBody>

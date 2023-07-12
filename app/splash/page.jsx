@@ -1,7 +1,8 @@
 'use client';
 
-import { Text, Box, Heading } from 'grommet';
+import { Text, Box, Heading, Tag, Button } from 'grommet';
 import { Webcam } from 'grommet-icons';
+import Link from 'next/link';
 
 // 中心渐变效果，留着以后用。
 // return (
@@ -37,6 +38,17 @@ import { Webcam } from 'grommet-icons';
 export default function Page() {
   return (
     <Box fill>
+      <Box margin='large' direction='row' justify='end'>
+        <Link
+          href='/'
+          passHref
+          legacyBehavior
+        >
+          <Button as='a'>
+            <Tag background='background-front' size='small' value='关闭' />
+          </Button>
+        </Link>
+      </Box>
       <Box flex={{ grow: 1, shrink: 1 }} align='center' justify='center' gap='medium' background={{
         image: 'radial-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 1)), url(https://jujiu-prod.oss-accelerate.aliyuncs.com/11242797_49169.svg)',
         opacity: 'medium',

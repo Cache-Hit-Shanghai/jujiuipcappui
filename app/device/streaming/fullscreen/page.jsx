@@ -1,7 +1,7 @@
-"use client";
+'use client';
 
-import { Video as VideoCanvas, Box, Stack, Button } from "grommet";
-import { Camera } from "grommet-icons";
+import { Video as VideoCanvas, Box, Stack, Button } from 'grommet';
+import { Camera } from 'grommet-icons';
 import {
 	IconBack,
 	ChatControl,
@@ -9,30 +9,30 @@ import {
 	RecordControl,
 	PanLayer,
 	ResolutionControl,
-} from "../../../../components/Components";
+} from '../../../../components/Components';
 
 export default function Page() {
 	return (
 		<Box fill>
 			<Stack fill>
-				<Box fill background="background-contrast">
+				<Box fill background='background-contrast'>
 					<VideoCanvas
 						controls={false}
-						fit="contain"
-						style={{ zIndex: "0" }}
+						fit='contain'
+						style={{ zIndex: '0' }}
 					>
 						<source
-							src="http://techslides.com/demos/sample-videos/small.webm"
-							type="video/webm"
+							src='http://techslides.com/demos/sample-videos/small.webm'
+							type='video/webm'
 						/>
 					</VideoCanvas>
 				</Box>
-				<Box fill justify="between">
+				<Box fill justify='between'>
 					<IconBack />
 					<Box
-						direction="row"
-						margin={{ vertical: "large", horizontal: "xlarge" }}
-						gap="xlarge"
+						direction='row'
+						margin={{ vertical: 'large', horizontal: 'xlarge' }}
+						gap='xlarge'
 					>
 						<Button plain icon={<Camera />} />
 						<RecordControl showTitle={false} />

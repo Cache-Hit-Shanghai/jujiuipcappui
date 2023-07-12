@@ -13,6 +13,8 @@ import {
 	Main,
 	Layer,
 	Stack,
+	DropButton,
+	RangeInput,
 } from 'grommet';
 import {
 	Pan,
@@ -21,8 +23,9 @@ import {
 	Webcam,
 	FormNext,
 	Volume,
-	Checkmark,
+	VolumeLow,
 	VolumeMute,
+	Checkmark,
 	FormPrevious,
 	ClosedCaption,
 	CaretLeftFill,
@@ -54,9 +57,29 @@ export function FlashLight() {
 	);
 }
 
-export function VolumeControl() {
+export function VolumeControl({ showTitle = true }) {
+	const [volume, setVolume] = useState(10);
+
+	function selectIcon(volume) {
+		if (volume === 0) return <VolumeMute />;
+		else if (volume < 20) return <VolumeLow />;
+		else return <Volume />;
+	}
+
 	return (
-		<Box></Box>
+		<DropButton
+			dropContent={
+				<Box pad='small'>
+					<RangeInput min={0} max={100} value={volume} onChange={e => setVolume(parseInt(e.target.value))} />
+				</Box>
+			}
+			dropProps={{ align: { bottom: 'top' } }}
+		>
+			<Box align='center'>
+				{selectIcon(volume)}
+				{showTitle && <Text size='small'>音量</Text>}
+			</Box>
+		</DropButton>
 	);
 }
 
@@ -118,21 +141,6 @@ export function RecordControl({ showTitle = true }) {
 				{recording ? <RecordStop size='24' /> : <Record size='24' />}
 				{showTitle && (
 					<Text size='small'>{recording ? '停止' : '录像'}</Text>
-				)}
-			</Box>
-		</Button>
-	);
-}
-
-export function MuteControl({ showTitle = true }) {
-	const [mute, setMute] = useState(false);
-
-	return (
-		<Button onClick={() => setMute(!mute)}>
-			<Box pad='small' align='center'>
-				{mute ? <Volume /> : <VolumeMute />}
-				{showTitle && (
-					<Text size='small'>{mute ? '恢复' : '静音'}</Text>
 				)}
 			</Box>
 		</Button>

@@ -2,7 +2,7 @@
 
 import { Video as VideoCanvas, Box, Stack, Button } from 'grommet';
 import { Camera } from 'grommet-icons';
-import { IconBack, ChatControl, MuteControl, RecordControl, PanLayer, ResolutionControl } from '../../../../components/Components';
+import { IconBack, ChatControl, VolumeControl, RecordControl, PanLayer, ResolutionControl } from '../../../../components/Components';
 
 export default function Page() {
   return (
@@ -22,7 +22,7 @@ export default function Page() {
             <Button plain icon={<Camera />} />
             <RecordControl showTitle={false} />
             <ChatControl showTitle={false} />
-            <MuteControl showTitle={false} />
+            <VolumeControl showTitle={false} />
             <PanLayer />
             <ResolutionControl showTitle={false} />
           </Box>

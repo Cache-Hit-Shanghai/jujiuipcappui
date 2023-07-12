@@ -4,7 +4,7 @@ import { Text, Box, Video as VideoCanvas, Nav, Tabs, Tab, DateInput, RadioButton
 import { Camera, Cloud, Sd, Expand, Download } from 'grommet-icons';
 import Link from 'next/link';
 import { useState } from 'react';
-import { IconBack, IconButton, PanControl, JuJiuMain, ChatControl, MuteControl, RecordControl, ResolutionControl } from '../../../components/Components';
+import { IconBack, IconButton, PanControl, JuJiuMain, ChatControl, VolumeControl, RecordControl, ResolutionControl } from '../../../components/Components';
 
 export default function Page() {
   const [value, setValue] = useState(Date.now());
@@ -41,7 +41,7 @@ export default function Page() {
                 <IconButton icon={<Camera />} label='截图' onClick={() => {}} />
                 <RecordControl />
                 <ChatControl />
-                <MuteControl />
+                <VolumeControl />
                 <ResolutionControl />
               </Box>
             </Box>
@@ -51,7 +51,7 @@ export default function Page() {
               <Box direction='row' align='center' justify='between' flex={false}>
                 <Box direction='row' align='center' background='background-contrast' round='xsmall'>
                   <Text margin={{ left: 'small' }} weight='bold'>{value && new Date(value).toLocaleDateString()}</Text>
-                  <DateInput value={value} onChange={(e) => setValue(e.value)} />
+                  <DateInput value={value && new Date(value).toLocaleDateString()} onChange={(e) => setValue(e.value)} />
                 </Box>
                 <Box round='xlarge' background='background-contrast'>
                   <RadioButtonGroup name='storagetype' direction='row' options={['Cloud', 'SDCard']} value='Cloud'>

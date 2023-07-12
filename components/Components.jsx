@@ -54,6 +54,12 @@ export function FlashLight() {
 	);
 }
 
+export function VolumeControl() {
+	return (
+		<Box></Box>
+	);
+}
+
 export function ResolutionControl({ showTitle = true }) {
 	return (
 		<Menu

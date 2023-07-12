@@ -9,7 +9,7 @@ import { IconBack, JuJiuMain } from '../../../components/Components';
 function LinkBoxImage() {
   return (
     <Link href='/my/gallery/detail' passHref legacyBehavior>
-      <Box as='a' fill background='url(https://v2.grommet.io/assets/IMG_4245.jpg)' round='xsmall' />
+      <Box as='a' fill background='url(https://tse2-mm.cn.bing.net/th/id/OIP-C.ke-oC-HNGvr6A7xWstYjsgHaFS?pid=ImgDet&rs=1)' round='xsmall' />
     </Link>
   );
 }
@@ -18,7 +18,7 @@ function LinkBoxVideo() {
   return (
     <Stack fill anchor='center' interactiveChild='first'>
       <Link href='/my/gallery/detail?type=video' passHref legacyBehavior>
-        <Box as='a' fill background='url(https://v2.grommet.io/assets/IMG_4245.jpg)' round='xsmall' />
+        <Box as='a' fill background='url(https://tse1-mm.cn.bing.net/th/id/OIP-C.gKVRei8owN-eGgw20kPjwwHaE7?pid=ImgDet&rs=1)' round='xsmall' />
       </Link>
       <Box><CirclePlay /></Box>
     </Stack>

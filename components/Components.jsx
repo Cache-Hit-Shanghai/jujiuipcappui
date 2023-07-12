@@ -236,6 +236,7 @@ export function ChatControl({ showTitle = true }) {
 function SectorBox({ angle, onClick, index }) {
 	return (
 		<Box
+			className={styles.SectorContent}
 			width="50%"
 			height="50%"
 			onClick={onClick}
@@ -270,11 +271,11 @@ function SectorBox({ angle, onClick, index }) {
 function Circle() {
 	return (
 		<Box
-			background="dark-3"
 			round="full"
 			width="calc(40% - 3px)"
 			height="calc(40% - 3px)"
 			margin="auto"
+			background={"dark-2"}
 			style={{
 				position: "absolute",
 				left: 0,
@@ -303,7 +304,6 @@ export function PanControl({
 			}}
 			className={styles.PanControl}
 			alignSelf="center"
-			background="dark-4"
 			{...props}
 		>
 			{[

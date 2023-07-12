@@ -109,7 +109,7 @@ export function RecordControl({ showTitle = true }) {
 	return (
 		<Button onClick={() => setRecording(!recording)}>
 			<Box pad='small' align='center'>
-				{recording ? <RecordStop /> : <Record />}
+				{recording ? <RecordStop size='24' /> : <Record size='24' />}
 				{showTitle && (
 					<Text size='small'>{recording ? '停止' : '录像'}</Text>
 				)}

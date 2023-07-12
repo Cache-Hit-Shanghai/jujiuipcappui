@@ -37,7 +37,7 @@ export default function Page() {
               <Box flex={{ grow: 1 }} justify='center'>
                 <PanControl />
               </Box>
-              <Box direction='row' justify='evenly' background='background-contrast' flex={false}>
+              <Box direction='row' justify='center' background='background-contrast' flex={false}>
                 <IconButton icon={<Camera />} label='截图' onClick={() => {}} />
                 <RecordControl />
                 <ChatControl />
@@ -47,7 +47,7 @@ export default function Page() {
             </Box>
           </Tab>
           <Tab title='录像'>
-            <Box fill pad='small' gap='small'>
+            <Box fill gap='small'>
               <Box direction='row' align='center' justify='between' flex={false}>
                 <Box direction='row' align='center' background='background-contrast' round='xsmall'>
                   <Text margin={{ left: 'small' }} weight='bold'>{value && new Date(value).toLocaleDateString()}</Text>

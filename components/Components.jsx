@@ -275,7 +275,7 @@ function Circle() {
 			width="calc(40% - 3px)"
 			height="calc(40% - 3px)"
 			margin="auto"
-			background={"dark-2"}
+			background={"dark-3"}
 			style={{
 				position: "absolute",
 				left: 0,

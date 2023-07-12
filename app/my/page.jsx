@@ -9,7 +9,6 @@ const links = [
   { label: '账号设置', url: '/my/account' },
   { label: '界面设置', url: '/my/uisettings' },
   { label: '系统信息', url: '/my/sysinfo' },
-  { label: '客服', url: '#' },
   { label: '关于', url: '/my/about' },
 ];
 

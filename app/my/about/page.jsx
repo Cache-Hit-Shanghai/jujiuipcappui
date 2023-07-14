@@ -25,7 +25,6 @@ export default function Page() {
             <Webcam size='xlarge' color='brand' />
           </CardBody>
           <CardFooter justify='center' align='center' direction='column' gap='none'>
-            <Text size='small' color='text-weak'>V1.0.0.0</Text>
             <Text size='large'>云探智能视觉系统</Text>
             <Text>Powered by 雎鸠云<sup>&reg;</sup></Text>
           </CardFooter>

@@ -34,31 +34,31 @@ export default function Page() {
       </Nav>
       <JuJiuMain>
         <Box flex={false} gap='large'>
-          <Card background='background-contrast' pad='small'>
-            <CardHeader>
+          <Card>
+            <CardHeader background='background-front' pad='small'>
               <Text>2023/7/4</Text>
             </CardHeader>
-            <CardBody pad='small'>
+            <CardBody background='background-contrast' pad='small'>
               <Grid fill columns='xsmall' gap='small' align='center' justify='center' style={{ gridAutoFlow: 'row dense', gridAutoRows: '70px' }}>
                 {Array.from({ length: 1 }, (_, index) => index).map(item => <LinkBoxVideo key={item} />)}
               </Grid>
             </CardBody>
           </Card>
-          <Card background='background-contrast' pad='small'>
-            <CardHeader>
+          <Card>
+            <CardHeader background='background-front' pad='small'>
               <Text>2023/7/3</Text>
             </CardHeader>
-            <CardBody pad='small'>
+            <CardBody background='background-contrast' pad='small'>
               <Grid fill columns='xsmall' gap='small' align='center' justify='center' style={{ gridAutoFlow: 'row dense', gridAutoRows: '70px' }}>
                 {Array.from({ length: 8 }, (_, index) => index).map(item => <LinkBoxImage key={item} />)}
               </Grid>
             </CardBody>
           </Card>
-          <Card background='background-contrast' pad='small'>
-            <CardHeader>
+          <Card>
+            <CardHeader background='background-front' pad='small'>
               <Text>2023/7/1</Text>
             </CardHeader>
-            <CardBody pad='small'>
+            <CardBody background='background-contrast' pad='small'>
               <Grid fill columns='xsmall' gap='small' align='center' justify='center' style={{ gridAutoFlow: 'row dense', gridAutoRows: '70px' }}>
                 {Array.from({ length: 4 }, (_, index) => index).map(item => <LinkBoxImage key={item} />)}
               </Grid>

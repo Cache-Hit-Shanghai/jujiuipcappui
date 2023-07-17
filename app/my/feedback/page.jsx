@@ -31,6 +31,7 @@ export default function Page() {
               <Box direction='row' gap='small'>
                 <Article size='24' />
                 <Box>
+                  <Text truncate>{datum.title}</Text>
                   <Box direction='row' gap='small'>
                     <Tag background='graph-4' size='xsmall' value='bug' />
                     <Tag background='graph-3' size='xsmall' value='建议' />
@@ -38,7 +39,6 @@ export default function Page() {
                     <Tag background='graph-1' size='xsmall' value='文档' />
                     <Tag background='graph-0' size='xsmall' value='帮助' />
                   </Box>
-                  <Text truncate>{datum.title}</Text>
                   <Text size='small' color='active'>由{datum.createdBy}于{datum.date}创建</Text>
                 </Box>
               </Box>

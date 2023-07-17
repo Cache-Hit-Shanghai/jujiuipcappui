@@ -34,7 +34,7 @@ export default function Page() {
       </Nav>
       <JuJiuMain>
         <Box flex={false} gap='large'>
-          <Card>
+          <Card background='background-contrast' pad='small'>
             <CardHeader>
               <Text>2023/7/4</Text>
             </CardHeader>
@@ -44,7 +44,7 @@ export default function Page() {
               </Grid>
             </CardBody>
           </Card>
-          <Card>
+          <Card background='background-contrast' pad='small'>
             <CardHeader>
               <Text>2023/7/3</Text>
             </CardHeader>
@@ -54,7 +54,7 @@ export default function Page() {
               </Grid>
             </CardBody>
           </Card>
-          <Card>
+          <Card background='background-contrast' pad='small'>
             <CardHeader>
               <Text>2023/7/1</Text>
             </CardHeader>

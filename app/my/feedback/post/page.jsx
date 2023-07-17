@@ -20,29 +20,29 @@ export default function Page() {
         <IconBack />
         <Text>帮助与反馈</Text>
       </Nav>
-      <JuJiuMain>
-        <Box direction='row' align='center'>
-          <Heading level={2}>如何使用“设备转移”？</Heading>
-          <Box><Button label='编辑' /></Box>
+      <JuJiuMain gap='medium'>
+        <Box direction='row' align='center' gap='small'>
+          <Heading margin='none' level={2}>一个非常非常长的标题一个非常非常长的标题一个非常非常长的标题</Heading>
+          <Box flex={false}><Button label='编辑' /></Box>
         </Box>
         <Card>
-          <CardHeader pad='small' background='background-contrast'>
-            <Text size='small' color='active'>由Jim于2023/07/08创建</Text>
+          <CardHeader pad='small' background='background-front'>
+            <Text size='small' color='text-weak'>由Jim于2023/07/08创建</Text>
           </CardHeader>
-          <CardBody pad='small'>
+          <CardBody pad='small' background='background-contrast'>
             <Markdown>如何使用“设备转移”功能？</Markdown>
           </CardBody>
         </Card>
         <Card>
-          <CardHeader pad='small' background='background-contrast'>
-            <Text size='small' color='active'>由Admin于2023/07/09创建</Text>
+          <CardHeader pad='small' background='background-front'>
+            <Text size='small' color='text-weak'>由Admin于2023/07/09创建</Text>
           </CardHeader>
-          <CardBody pad='small'>
+          <CardBody pad='small' background='background-contrast'>
             <Markdown>{content}</Markdown>
           </CardBody>
         </Card>
         <Card>
-          <CardBody>
+          <CardBody background='background-contrast'>
             <Box pad='small'><TextArea /></Box>
             <Box direction='row' justify='end' pad='small'>
               <Button primary label='发布' />

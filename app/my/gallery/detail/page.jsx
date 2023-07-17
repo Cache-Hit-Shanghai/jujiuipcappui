@@ -24,7 +24,7 @@ export default function Page() {
         </Box>
         <Box direction='row' align='center' gap='small' margin='medium' alignSelf='center'>
           <CircleInformation color='brand' />
-          <Text size='small' color='active'>长按后选择“下载”可以下载图片或者视频。</Text>
+          <Text size='small' color='text-weak'>长按后选择“下载”可以下载图片或者视频。</Text>
         </Box>
         <Box direction='row' justify='evenly' background='background-contrast' flex={false}>
           <IconButton icon={<ShareRounded />} label='分享' onClick={() => {}} />

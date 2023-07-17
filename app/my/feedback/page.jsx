@@ -1,6 +1,6 @@
 'use client';
 
-import { Text, Box, TextInput , Nav, Button, List, Tag, Anchor } from 'grommet';
+import { Text, Box, TextInput , Nav, Button, List, Tag, Pagination } from 'grommet';
 import { Search } from 'grommet-icons';
 import { Article } from '@styled-icons/remix-fill/Article';
 import Link from "next/link";
@@ -30,10 +30,10 @@ export default function Page() {
           <List data={data}>
             {(datum) => (
               <Box direction='row' gap='small'>
-                <Article size='24' />
+                <Box flex={false}><Article size='24' /></Box>
                 <Box gap='small'>
                   <Link href='/my/feedback/post' passHref legacyBehavior>
-                    <Anchor label={<Text truncate>{datum.title}</Text>} />
+                    <Text truncate color='control'>{datum.title}</Text>
                   </Link>
                   <Box direction='row' gap='small'>
                     <Tag background='graph-4' size='xsmall' value='bug' />
@@ -42,13 +42,16 @@ export default function Page() {
                     <Tag background='graph-1' size='xsmall' value='文档' />
                     <Tag background='graph-0' size='xsmall' value='帮助' />
                   </Box>
-                  <Text size='small' color='active'>由{datum.createdBy}于{datum.date}创建</Text>
+                  <Text size='small' color='text-weak'>由{datum.createdBy}于{datum.date}创建</Text>
                 </Box>
               </Box>
             )}
           </List>
         </Box>
       </JuJiuMain>
+      <Box align='center' pad='small'>
+        <Pagination numberItems={237} />
+      </Box>
     </Box>
   );
 }

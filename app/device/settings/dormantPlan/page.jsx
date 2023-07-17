@@ -153,7 +153,7 @@ const DormantPlan = () => {
 			)}
 			<Nav direction='row' align='center'>
 				<IconBack />
-				<Text>休眠计划设置</Text>
+				<Text>休眠计划设置 - 办3</Text>
 			</Nav>
 			<JuJiuMain>
 				<JuJiuCard>

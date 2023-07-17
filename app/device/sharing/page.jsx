@@ -18,7 +18,7 @@ export default function Page() {
     <Box fill>
       <Nav direction='row' align='center'>
         <IconBack />
-        <Text>设备分享</Text>
+        <Text>设备分享 - 办3</Text>
       </Nav>
       <JuJiuMain>
         <ButtonGroup data={buttons} />

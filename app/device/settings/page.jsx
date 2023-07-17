@@ -26,7 +26,7 @@ export default function Page() {
 		<Box fill>
 			<Nav direction='row' align='center'>
 				<IconBack />
-				<Text>设备设置</Text>
+				<Text>设备设置 - 办3</Text>
 			</Nav>
 			<JuJiuMain>
 				<JuJiuCard onClick={() => setOpenAvata(!openAvata)}>

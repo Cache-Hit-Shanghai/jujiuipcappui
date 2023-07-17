@@ -519,6 +519,10 @@ export function IpcCard({ label, imgurl }) {
 							label: "设置",
 							onClick: () => router.push("/device/settings"),
 						},
+						{
+							label: "高级",
+							onClick: () => router.push("/device/advanced"),
+						},
 					]}
 				/>
 			</CardFooter>

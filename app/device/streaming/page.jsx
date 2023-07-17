@@ -34,7 +34,7 @@ export default function Page() {
 		<Box fill>
 			<Nav direction='row' align='center'>
 				<IconBack />
-				<Text>实时视频</Text>
+				<Text>实时视频 - 办3</Text>
 			</Nav>
 			<JuJiuMain margin='none'>
 				<Stack anchor='bottom-right' interactiveChild='last'>

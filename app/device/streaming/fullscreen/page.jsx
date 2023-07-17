@@ -1,6 +1,6 @@
 'use client';
 
-import { Video as VideoCanvas, Box, Stack, Button } from 'grommet';
+import { Video as VideoCanvas, Box, Stack, Button, Nav, Text } from 'grommet';
 import { Camera } from 'grommet-icons';
 import {
 	IconBack,
@@ -28,7 +28,10 @@ export default function Page() {
 					</VideoCanvas>
 				</Box>
 				<Box fill justify='between'>
-					<IconBack />
+					<Nav direction='row' align='center'>
+						<IconBack />
+						<Text>办3</Text>
+					</Nav>
 					<Box
 						direction='row'
 						margin={{ vertical: 'large', horizontal: 'xlarge' }}

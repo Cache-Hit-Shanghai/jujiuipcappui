@@ -25,7 +25,7 @@ export default function Page() {
               <Text>年套餐</Text>
               <Box align='end'>
                 <Text>￥69</Text>
-                <Text size='small' color='text-weak'><strike>￥139</strike></Text>
+                <Text size='small' color='text-xweak'><strike>￥139</strike></Text>
               </Box>
             </CardBody>
           </Card>
@@ -40,7 +40,7 @@ export default function Page() {
             <Text>半年套餐</Text>
             <Box align='end'>
               <Text>￥39</Text>
-              <Text size='small' color='text-weak'><strike>￥78</strike></Text>
+              <Text size='small' color='text-xweak'><strike>￥78</strike></Text>
             </Box>
           </CardBody>
         </Card>
@@ -54,7 +54,7 @@ export default function Page() {
               <Text>年套餐</Text>
               <Box align='end'>
                 <Text>￥149</Text>
-                <Text size='small' color='text-weak'><strike>￥300</strike></Text>
+                <Text size='small' color='text-xweak'><strike>￥300</strike></Text>
               </Box>
             </CardBody>
           </Card>
@@ -69,7 +69,7 @@ export default function Page() {
             <Text>半年套餐</Text>
             <Box align='end'>
               <Text>￥80</Text>
-              <Text size='small' color='text-weak'><strike>￥160</strike></Text>
+              <Text size='small' color='text-xweak'><strike>￥160</strike></Text>
             </Box>
           </CardBody>
         </Card>

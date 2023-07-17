@@ -1,9 +1,7 @@
 'use client';
 
 import { Text, Box, Card , Nav, CardHeader, CardBody, Markdown, Heading, Button, TextArea } from 'grommet';
-import { Search } from 'grommet-icons';
-import { Article } from '@styled-icons/remix-fill/Article';
-import { IconBack, LinkGroup, JuJiuMain, JuJiuCard } from '../../../../components/Components';
+import { IconBack, JuJiuMain } from '../../../../components/Components';
 
 const content=`
 ## 主要步骤如下
@@ -27,7 +25,7 @@ export default function Page() {
         </Box>
         <Card>
           <CardHeader pad='small' background='background-front'>
-            <Text size='small' color='text-weak'>由Jim于2023/07/08创建</Text>
+            <Text size='small' color='text-xweak'>由Jim于2023/07/08创建</Text>
           </CardHeader>
           <CardBody pad='small' background='background-contrast'>
             <Markdown>如何使用“设备转移”功能？</Markdown>
@@ -35,7 +33,7 @@ export default function Page() {
         </Card>
         <Card>
           <CardHeader pad='small' background='background-front'>
-            <Text size='small' color='text-weak'>由Admin于2023/07/09创建</Text>
+            <Text size='small' color='text-xweak'>由Admin于2023/07/09创建</Text>
           </CardHeader>
           <CardBody pad='small' background='background-contrast'>
             <Markdown>{content}</Markdown>

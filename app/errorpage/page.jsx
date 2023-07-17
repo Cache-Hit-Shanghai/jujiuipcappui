@@ -18,7 +18,7 @@ export default function Page() {
               </Box>
               <Box align='center'>
                 <Text size='large'>404 - 页面不存在</Text>
-                <Text size='small' color='text-weak'>您访问的页面有可能被移到了其它位置，页面名称发生了改变，或者暂时不可访问。</Text>
+                <Text size='small' color='text-xweak'>您访问的页面有可能被移到了其它位置，页面名称发生了改变，或者暂时不可访问。</Text>
               </Box>
               <Box>
                 <Link href='/' passHref legacyBehavior>
@@ -41,7 +41,7 @@ export default function Page() {
               </Box>
               <Box align='center'>
                 <Text size='large'>500 - 服务器错误</Text>
-                <Text size='small' color='text-weak'>您访问的服务器目前出了一点问题，请联系客服或者稍候再试。</Text>
+                <Text size='small' color='text-xweak'>您访问的服务器目前出了一点问题，请联系客服或者稍候再试。</Text>
               </Box>
               <Box>
                 <Link href='/' passHref legacyBehavior>

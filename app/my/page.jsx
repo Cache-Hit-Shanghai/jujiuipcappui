@@ -25,7 +25,7 @@ export default function Page() {
               </Avatar>
               <Box>
                 <Text>用户34881</Text>
-                <Text size='xsmall' color='text-weak'>黄金会员</Text>
+                <Text size='xsmall' color='text-xweak'>黄金会员</Text>
               </Box>
             </Box>
           </Button>

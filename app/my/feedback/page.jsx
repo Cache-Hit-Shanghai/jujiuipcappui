@@ -1,9 +1,10 @@
 'use client';
 
-import { Text, Box, TextInput , Nav, Button, List, Tag } from 'grommet';
+import { Text, Box, TextInput , Nav, Button, List, Tag, Anchor } from 'grommet';
 import { Search } from 'grommet-icons';
 import { Article } from '@styled-icons/remix-fill/Article';
-import { IconBack, LinkGroup, JuJiuMain, JuJiuCard } from '../../../components/Components';
+import Link from "next/link";
+import { IconBack, JuJiuMain } from '../../../components/Components';
 
 const data = [
   { title: '如何使用“设备转移”？', createdBy: 'Jim', date: '2023/7/1' },
@@ -30,8 +31,10 @@ export default function Page() {
             {(datum) => (
               <Box direction='row' gap='small'>
                 <Article size='24' />
-                <Box>
-                  <Text truncate>{datum.title}</Text>
+                <Box gap='small'>
+                  <Link href='/my/feedback/post' passHref legacyBehavior>
+                    <Anchor label={<Text truncate>{datum.title}</Text>} />
+                  </Link>
                   <Box direction='row' gap='small'>
                     <Tag background='graph-4' size='xsmall' value='bug' />
                     <Tag background='graph-3' size='xsmall' value='建议' />

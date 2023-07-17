@@ -42,7 +42,7 @@ export default function Page() {
                     <Tag background='graph-1' size='xsmall' value='文档' />
                     <Tag background='graph-0' size='xsmall' value='帮助' />
                   </Box>
-                  <Text size='small' color='text-weak'>由{datum.createdBy}于{datum.date}创建</Text>
+                  <Text size='small' color='text-xweak'>由{datum.createdBy}于{datum.date}创建</Text>
                 </Box>
               </Box>
             )}

@@ -10,7 +10,7 @@ const data = [
   { title: '云端费用如何计算？', createdBy: 'Jim', date: '2023/7/1' },
   { title: '摄像机硬件如何保养？', createdBy: 'Tony', date: '2023/7/1' },
   { title: '是否可以把摄像机共享给家人？', createdBy: 'Jack', date: '2023/7/1' },
-  { title: '使用帮助', createdBy: 'Lisa', date: '2023/7/1' },
+  { title: '一个非常非常长的标题一个非常非常长的标题一个非常非常长的标题', createdBy: 'Lisa', date: '2023/7/1' },
 ];
 
 export default function Page() {
@@ -32,13 +32,13 @@ export default function Page() {
                 <Article size='24' />
                 <Box>
                   <Box direction='row' gap='small'>
-                    <Text>{datum.title}</Text>
                     <Tag background='graph-4' size='xsmall' value='bug' />
                     <Tag background='graph-3' size='xsmall' value='建议' />
                     <Tag background='graph-2' size='xsmall' value='功能' />
                     <Tag background='graph-1' size='xsmall' value='文档' />
                     <Tag background='graph-0' size='xsmall' value='帮助' />
                   </Box>
+                  <Text truncate>{datum.title}</Text>
                   <Text size='small' color='active'>由{datum.createdBy}于{datum.date}创建</Text>
                 </Box>
               </Box>

@@ -49,7 +49,7 @@ import styles from "./components.module.css";
 export function FlashLight() {
 	const [on, setOn] = useState(false);
 	return (
-		<Button onClick={() => setOn(!on)}>
+		<Button primary onClick={() => setOn(!on)}>
 			<Avatar border>
 				{on ? <FlashlightOff size="24" /> : <FlashlightOn size="24" />}
 			</Avatar>

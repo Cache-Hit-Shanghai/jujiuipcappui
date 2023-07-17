@@ -61,7 +61,7 @@ export default function Page() {
         </Box>
         <Box direction='row' justify='evenly' margin={{ vertical: 'large' }}>
           <FlashLight />
-          <Button>
+          <Button primary>
             <Avatar border>
               <PhotoAlbum size='24' />
             </Avatar>

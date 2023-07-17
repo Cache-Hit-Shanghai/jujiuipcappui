@@ -487,7 +487,7 @@ export function IpcCard({ label, imgurl }) {
 	const router = useRouter();
 	return (
 		<Card>
-			<CardBody onClick={() => router.push('/device/streaming')}>
+			<CardBody onClick={() => router.push('/device/streaming')} background='background-front'>
 				<Stack fill='horizontal' height='small'>
 					<Image fill src={imgurl} />
 					<Box direction='row' margin='medium' gap='small'>
@@ -505,7 +505,7 @@ export function IpcCard({ label, imgurl }) {
 					</Box>
 				</Stack>
 			</CardBody>
-			<CardFooter margin='small' align='center' justify='between'>
+			<CardFooter pad='small' align='center' justify='between' background='background-contrast'>
 				<Text>{label}</Text>
 				<Menu
 					dropProps={{ align: { top: 'bottom', right: 'right' } }}

@@ -26,7 +26,7 @@ export default function Page() {
           <Box><Button label='编辑' /></Box>
         </Box>
         <Card>
-          <CardHeader pad='small'>
+          <CardHeader pad='small' background='background-contrast'>
             <Text size='small' color='active'>由Jim于2023/07/08创建</Text>
           </CardHeader>
           <CardBody pad='small'>
@@ -34,8 +34,8 @@ export default function Page() {
           </CardBody>
         </Card>
         <Card>
-          <CardHeader pad='small'>
-            <Text size='small' color='active'>由Jim于2023/07/09创建</Text>
+          <CardHeader pad='small' background='background-contrast'>
+            <Text size='small' color='active'>由Admin于2023/07/09创建</Text>
           </CardHeader>
           <CardBody pad='small'>
             <Markdown>{content}</Markdown>

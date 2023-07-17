@@ -19,7 +19,7 @@ export default function Page() {
         <IconBack />
         <Text>关于</Text>
       </Nav>
-      <JuJiuMain>
+      <JuJiuMain gap='medium'>
         <JuJiuCard>
           <CardBody margin='small' justify='center' align='center'>
             <Webcam size='xlarge' color='brand' />

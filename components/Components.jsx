@@ -15,7 +15,7 @@ import {
 	Stack,
 	DropButton,
 	RangeInput,
-} from "grommet";
+} from 'grommet';
 import {
 	Pan,
 	Home,
@@ -30,19 +30,19 @@ import {
 	ClosedCaption,
 	CaretLeftFill,
 	StatusCritical,
-} from "grommet-icons";
-import { Settings3 } from "@styled-icons/remix-fill/Settings3";
-import { Call } from "@styled-icons/fluentui-system-regular/Call";
-import { CallDismiss } from "@styled-icons/fluentui-system-regular/CallDismiss";
-import { Record } from "@styled-icons/fluentui-system-regular/Record";
-import { RecordStop } from "@styled-icons/fluentui-system-regular/RecordStop";
-import { FlashlightOn } from "@styled-icons/material-rounded/FlashlightOn";
-import { FlashlightOff } from "@styled-icons/material-rounded/FlashlightOff";
-import { useRouter } from "next/navigation";
-import Link from "next/link";
-import { useState } from "react";
+} from 'grommet-icons';
+import { Settings3 } from '@styled-icons/remix-fill/Settings3';
+import { Call } from '@styled-icons/fluentui-system-regular/Call';
+import { CallDismiss } from '@styled-icons/fluentui-system-regular/CallDismiss';
+import { Record } from '@styled-icons/fluentui-system-regular/Record';
+import { RecordStop } from '@styled-icons/fluentui-system-regular/RecordStop';
+import { FlashlightOn } from '@styled-icons/material-rounded/FlashlightOn';
+import { FlashlightOff } from '@styled-icons/material-rounded/FlashlightOff';
+import { useRouter } from 'next/navigation';
+import Link from 'next/link';
+import { useState } from 'react';
 
-import styles from "./components.module.css";
+import styles from './components.module.css';
 
 // console.log('styles', styles);
 
@@ -51,7 +51,7 @@ export function FlashLight() {
 	return (
 		<Button primary onClick={() => setOn(!on)}>
 			<Avatar border>
-				{on ? <FlashlightOff size="24" /> : <FlashlightOn size="24" />}
+				{on ? <FlashlightOff size='24' /> : <FlashlightOn size='24' />}
 			</Avatar>
 		</Button>
 	);
@@ -69,7 +69,7 @@ export function VolumeControl({ showTitle = true }) {
 	return (
 		<DropButton
 			dropContent={
-				<Box pad="small">
+				<Box pad='small'>
 					<RangeInput
 						min={0}
 						max={100}
@@ -78,11 +78,11 @@ export function VolumeControl({ showTitle = true }) {
 					/>
 				</Box>
 			}
-			dropProps={{ align: { bottom: "top" } }}
+			dropProps={{ align: { bottom: 'top' } }}
 		>
-			<Box align="center">
+			<Box align='center'>
 				{selectIcon(volume)}
-				{showTitle && <Text size="small">音量</Text>}
+				{showTitle && <Text size='small'>音量</Text>}
 			</Box>
 		</DropButton>
 	);
@@ -92,21 +92,21 @@ export function ResolutionControl({ showTitle = true }) {
 	return (
 		<Menu
 			plain
-			dropAlign={{ top: "bottom" }}
+			dropAlign={{ top: 'bottom' }}
 			items={[
-				{ label: "极清", onClick: () => {}, justify: "end" },
+				{ label: '极清', onClick: () => {}, justify: 'end' },
 				{
-					label: "超清",
+					label: '超清',
 					onClick: () => {},
 					icon: <Checkmark />,
-					justify: "end",
+					justify: 'end',
 				},
-				{ label: "标清", onClick: () => {}, justify: "end" },
+				{ label: '标清', onClick: () => {}, justify: 'end' },
 			]}
 		>
-			<Box pad="small" align="center">
+			<Box pad='small' align='center'>
 				<ClosedCaption />
-				{showTitle && <Text size="small">清晰度</Text>}
+				{showTitle && <Text size='small'>清晰度</Text>}
 			</Box>
 		</Menu>
 	);
@@ -125,9 +125,9 @@ export function PanLayer() {
 			{show && (
 				<Layer
 					plain
-					position="right"
+					position='right'
 					responsive={false}
-					margin="small"
+					margin='small'
 					onClickOutside={() => setShow(false)}
 				>
 					<PanControl />
@@ -142,10 +142,10 @@ export function RecordControl({ showTitle = true }) {
 
 	return (
 		<Button onClick={() => setRecording(!recording)}>
-			<Box pad="small" align="center">
-				{recording ? <RecordStop size="24" /> : <Record size="24" />}
+			<Box pad='small' align='center'>
+				{recording ? <RecordStop size='24' /> : <Record size='24' />}
 				{showTitle && (
-					<Text size="small">{recording ? "停止" : "录像"}</Text>
+					<Text size='small'>{recording ? '停止' : '录像'}</Text>
 				)}
 			</Box>
 		</Button>
@@ -157,10 +157,10 @@ export function MuteControl({ showTitle = true }) {
 
 	return (
 		<Button onClick={() => setMute(!mute)}>
-			<Box pad="small" align="center">
+			<Box pad='small' align='center'>
 				{mute ? <Volume /> : <VolumeMute />}
 				{showTitle && (
-					<Text size="small">{mute ? "恢复" : "静音"}</Text>
+					<Text size='small'>{mute ? '恢复' : '静音'}</Text>
 				)}
 			</Box>
 		</Button>
@@ -172,10 +172,10 @@ export function ChatControl({ showTitle = true }) {
 
 	return (
 		<Button onClick={() => setSpeaking(!speaking)}>
-			<Box pad="small" align="center">
-				{speaking ? <CallDismiss size="24" /> : <Call size="24" />}
+			<Box pad='small' align='center'>
+				{speaking ? <CallDismiss size='24' /> : <Call size='24' />}
 				{showTitle && (
-					<Text size="small">{speaking ? "挂断" : "对讲"}</Text>
+					<Text size='small'>{speaking ? '挂断' : '对讲'}</Text>
 				)}
 			</Box>
 		</Button>
@@ -237,32 +237,32 @@ function SectorBox({ angle, onClick, index }) {
 	return (
 		<Box
 			className={styles.SectorContent}
-			width="50%"
-			height="50%"
+			width='50%'
+			height='50%'
 			onClick={onClick}
 			focusIndicator={false}
 			flex={false}
 			style={{
-				position: "absolute",
+				position: 'absolute',
 				transform: `rotate(${angle}deg)`,
-				transformOrigin: "100% 100%",
+				transformOrigin: '100% 100%',
 			}}
 		>
 			<Box
 				className={styles.SectorBox}
-				width="calc(100% - 1px)"
-				height="calc(100% - 1px)"
-				align="center"
-				justify="center"
-				background="dark-3"
-				round={{ size: "full", corner: "top-left" }}
+				width='calc(100% - 1px)'
+				height='calc(100% - 1px)'
+				align='center'
+				justify='center'
+				background='dark-3'
+				round={{ size: 'full', corner: 'top-left' }}
 				style={{
 					WebkitMaskImage:
-						"radial-gradient(circle farthest-side at bottom right, transparent 40%, #000 40%)",
-					mask: "radial-gradient(circle farthest-side at bottom right, transparent 40%, #000 40%)",
+						'radial-gradient(circle farthest-side at bottom right, transparent 40%, #000 40%)',
+					mask: 'radial-gradient(circle farthest-side at bottom right, transparent 40%, #000 40%)',
 				}}
 			>
-				<CaretLeftFill style={{ transform: "rotate(45deg)" }} />
+				<CaretLeftFill style={{ transform: 'rotate(45deg)' }} />
 			</Box>
 		</Box>
 	);
@@ -271,13 +271,13 @@ function SectorBox({ angle, onClick, index }) {
 function Circle() {
 	return (
 		<Box
-			round="full"
-			width="calc(40% - 3px)"
-			height="calc(40% - 3px)"
-			margin="auto"
-			background={"dark-3"}
+			round='full'
+			width='calc(40% - 3px)'
+			height='calc(40% - 3px)'
+			margin='auto'
+			background={'dark-3'}
 			style={{
-				position: "absolute",
+				position: 'absolute',
 				left: 0,
 				right: 0,
 				top: 0,
@@ -288,7 +288,7 @@ function Circle() {
 }
 
 export function PanControl({
-	size = "small",
+	size = 'small',
 	onPanClick = () => {},
 	...props
 }) {
@@ -298,29 +298,29 @@ export function PanControl({
 			width={size}
 			height={size}
 			style={{
-				position: "relative",
-				borderRadius: "50% 50%",
-				overflow: "hidden",
+				position: 'relative',
+				borderRadius: '50% 50%',
+				overflow: 'hidden',
 			}}
 			className={styles.PanControl}
-			alignSelf="center"
+			alignSelf='center'
 			{...props}
 		>
 			{[
 				{
-					direction: "top",
+					direction: 'top',
 					angle: 45,
 				},
 				{
-					direction: "right",
+					direction: 'right',
 					angle: 135,
 				},
 				{
-					direction: "bottom",
+					direction: 'bottom',
 					angle: 225,
 				},
 				{
-					direction: "left",
+					direction: 'left',
 					angle: 315,
 				},
 			].map(({ direction, angle }) => (
@@ -345,9 +345,9 @@ export function JuJiuMain({ children, ...props }) {
 	return (
 		<Main
 			flex={{ grow: 1, shrink: 1 }}
-			overflow="auto"
-			gap="small"
-			margin={{ horizontal: "small" }}
+			overflow='auto'
+			gap='medium'
+			margin={{ horizontal: 'small' }}
 			{...props}
 		>
 			{children}
@@ -358,9 +358,9 @@ export function JuJiuMain({ children, ...props }) {
 export function JuJiuCard({ children, ...props }) {
 	return (
 		<Card
-			pad="small"
-			gap="small"
-			background="background-contrast"
+			pad='small'
+			gap='small'
+			background='background-contrast'
 			focusIndicator={false}
 			flex={false}
 			{...props}
@@ -377,8 +377,8 @@ export function InfoGroup({ data }) {
 				<List
 					data={data}
 					border={false}
-					primaryKey="key"
-					secondaryKey="value"
+					primaryKey='key'
+					secondaryKey='value'
 				/>
 			</CardBody>
 		</JuJiuCard>
@@ -392,11 +392,11 @@ export function ButtonGroup({ data }) {
 				<List data={data} border={false}>
 					{(datum) => (
 						<Button
-							icon={<FormNext color="control" />}
+							icon={<FormNext color='control' />}
 							label={datum.label}
 							reverse
 							plain
-							justify="between"
+							justify='between'
 							onClick={datum.onClick}
 						/>
 					)}
@@ -414,12 +414,12 @@ export function LinkGroup({ data }) {
 					{(datum) => (
 						<Link href={datum.url} passHref legacyBehavior>
 							<Button
-								as="a"
-								icon={<FormNext color="control" />}
+								as='a'
+								icon={<FormNext color='control' />}
 								label={datum.label}
 								reverse
 								plain
-								justify="between"
+								justify='between'
 							/>
 						</Link>
 					)}
@@ -433,7 +433,7 @@ export function IconBack() {
 	const router = useRouter();
 	return (
 		<Button
-			icon={<FormPrevious color="control" />}
+			icon={<FormPrevious color='control' />}
 			onClick={() => router.back()}
 		/>
 	);
@@ -442,9 +442,9 @@ export function IconBack() {
 export function IconButton({ icon, label, onClick }) {
 	return (
 		<Button onClick={onClick}>
-			<Box pad="small" align="center">
+			<Box pad='small' align='center'>
 				{icon}
-				<Text size="small">{label}</Text>
+				<Text size='small'>{label}</Text>
 			</Box>
 		</Button>
 	);
@@ -453,10 +453,10 @@ export function IconButton({ icon, label, onClick }) {
 export function IconLInk({ icon, label, url }) {
 	return (
 		<Link href={url} passHref legacyBehavior>
-			<Button as="a">
-				<Box pad="small" align="center">
+			<Button as='a'>
+				<Box pad='small' align='center'>
 					{icon}
-					<Text size="small">{label}</Text>
+					<Text size='small'>{label}</Text>
 				</Box>
 			</Button>
 		</Link>
@@ -466,18 +466,18 @@ export function IconLInk({ icon, label, url }) {
 export function AppFooter() {
 	return (
 		<Box
-			direction="row"
-			background="background-contrast"
-			justify="evenly"
+			direction='row'
+			background='background-contrast'
+			justify='evenly'
 			flex={false}
 		>
-			<IconLInk icon={<Webcam />} label="设备" url="/" />
-			<IconLInk icon={<Radial />} label="我的" url="/my" />
-			<IconLInk icon={<Home />} label="主页" url="/splash" />
+			<IconLInk icon={<Webcam />} label='设备' url='/' />
+			<IconLInk icon={<Radial />} label='我的' url='/my' />
+			<IconLInk icon={<Home />} label='主页' url='/splash' />
 			<IconLInk
 				icon={<StatusCritical />}
-				label="错误页"
-				url="/errorpage"
+				label='错误页'
+				url='/errorpage'
 			/>
 		</Box>
 	);
@@ -487,41 +487,41 @@ export function IpcCard({ label, imgurl }) {
 	const router = useRouter();
 	return (
 		<Card>
-			<CardBody onClick={() => router.push("/device/streaming")}>
-				<Stack fill="horizontal" height="small">
+			<CardBody onClick={() => router.push('/device/streaming')}>
+				<Stack fill='horizontal' height='small'>
 					<Image fill src={imgurl} />
-					<Box direction="row" margin="medium" gap="small">
+					<Box direction='row' margin='medium' gap='small'>
 						<Tag
-							background="neutral-1"
-							size="xsmall"
-							value="工作中"
+							background='neutral-1'
+							size='xsmall'
+							value='工作中'
 						/>
-						<Tag background="active" size="xsmall" value="离线" />
+						<Tag background='active' size='xsmall' value='离线' />
 						<Tag
-							background="status-error"
-							size="xsmall"
-							value="7天云存储过期"
+							background='status-error'
+							size='xsmall'
+							value='7天云存储过期'
 						/>
 					</Box>
 				</Stack>
 			</CardBody>
-			<CardFooter margin="small" align="center" justify="between">
+			<CardFooter margin='small' align='center' justify='between'>
 				<Text>{label}</Text>
 				<Menu
-					dropProps={{ align: { top: "bottom", right: "right" } }}
-					icon={<Settings3 size="24" />}
+					dropProps={{ align: { top: 'bottom', right: 'right' } }}
+					icon={<Settings3 size='24' />}
 					items={[
 						{
-							label: "设备分享",
-							onClick: () => router.push("/device/sharing"),
+							label: '设备分享',
+							onClick: () => router.push('/device/sharing'),
 						},
 						{
-							label: "设置",
-							onClick: () => router.push("/device/settings"),
+							label: '设置',
+							onClick: () => router.push('/device/settings'),
 						},
 						{
-							label: "高级",
-							onClick: () => router.push("/device/advanced"),
+							label: '高级',
+							onClick: () => router.push('/device/advanced'),
 						},
 					]}
 				/>

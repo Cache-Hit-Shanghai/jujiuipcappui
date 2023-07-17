@@ -1,7 +1,8 @@
 'use client';
 
 import { Text, Box, Nav, CardHeader, CardBody, Avatar, Button } from 'grommet';
-import { Gallery, CloudUpload, Edit, ShareRounded, User, Upgrade } from 'grommet-icons';
+import { Gallery, CloudUpload, ShareRounded, User, Upgrade } from 'grommet-icons';
+import { PersonFeedback } from '@styled-icons/fluentui-system-regular/PersonFeedback';
 import Link from 'next/link';
 import { AppFooter, IconLInk, LinkGroup, JuJiuMain, JuJiuCard } from '../../components/Components';
 
@@ -47,7 +48,7 @@ export default function Page() {
             <Box direction='row' justify='evenly'>
               <IconLInk icon={<Upgrade />} label='固件升级' url='/my/ota' />
               <IconLInk icon={<ShareRounded />} label='我的分享' url='/my/sharing' />
-              <IconLInk icon={<Edit />} label='帮助与反馈' url='#' />
+              <IconLInk icon={<PersonFeedback size='24' />} label='帮助与反馈' url='/my/feedback' />
             </Box>
           </CardBody>
         </JuJiuCard>

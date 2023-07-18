@@ -9,7 +9,7 @@ export default function Page() {
     <Box fill>
       <Nav direction='row' align='center'>
         <IconBack />
-        <Text>绑定设备</Text>
+        <Text>添加设备</Text>
       </Nav>
       <JuJiuMain align='center'>
         <Box fill='horizontal' height='medium' background='light-6' align='center' justify='center' flex={false}>

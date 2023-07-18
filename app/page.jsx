@@ -22,7 +22,7 @@ export default function Page() {
           <Menu
             dropProps={{ align: { top: 'bottom', right: 'right' } }}
             icon={<AddCircle />} items={[
-              { label: '绑定设备', onClick: () => router.push('/device/binding') },
+              { label: '添加设备', onClick: () => router.push('/device/binding') },
               { label: '设备分组', onClick: () => router.push('/device/group') },
               { label: '扫一扫', onClick: () => router.push('/device/scan') },
             ]}

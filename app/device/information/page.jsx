@@ -1,7 +1,7 @@
 'use client';
 
-import { Text, Box, Layer, Nav, CardBody, Heading } from 'grommet';
-import { FormNext, Wifi, ChatOption, Run, Pan } from 'grommet-icons';
+import { Text, Box, Layer, Nav, CardBody, Heading, Button } from 'grommet';
+import { FormNext, Wifi, ChatOption, Run, Pan, Copy } from 'grommet-icons';
 import { useState } from 'react';
 import { IconBack, JuJiuMain, JuJiuCard } from '../../../components/Components';
 
@@ -156,7 +156,10 @@ export default function Page() {
       {openUsn && (
         <Layer position='bottom' full='horizontal' onClickOutside={() => setOpenUsn(false)} responsive={false}>
           <Box fill border pad='medium' gap='medium'>
-            <Heading alignSelf='center' margin='none' level={3}>设备统一SN</Heading>
+            <Box direction='row' justify='between'>
+							<Heading alignSelf='center' margin='none' level={2}>设备统一SN</Heading>
+							<Button icon={<Copy />} />
+						</Box>
             <Box border pad='small'>
               <Text wordBreak='break-all'>jujiucloud.f7934b38-82ac-4059-9382-c70b38b15cdd.1689058115620.EKQF230ZsIk-fwmFkWyQ0</Text>
             </Box>

@@ -161,7 +161,7 @@ export default function Page() {
 							<Button icon={<Copy />} />
 						</Box>
             <Box border pad='small'>
-              <Text wordBreak='break-all'>jujiucloud.f7934b38-82ac-4059-9382-c70b38b15cdd.1689058115620.EKQF230ZsIk-fwmFkWyQ0</Text>
+              <Text wordBreak='break-all' textAlign='justify'>jujiucloud.f7934b38-82ac-4059-9382-c70b38b15cdd.1689058115620.EKQF230ZsIk-fwmFkWyQ0</Text>
             </Box>
           </Box>
         </Layer>

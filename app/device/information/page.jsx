@@ -1,21 +1,100 @@
 'use client';
 
-import { Text, Box, Layer, Nav, CardBody, Heading, TextInput } from 'grommet';
-import { FormNext, Wifi, Qr } from 'grommet-icons';
+import { Text, Box, Layer, Nav, CardBody, Heading } from 'grommet';
+import { FormNext, Wifi, ChatOption, Run, Pan } from 'grommet-icons';
 import { useState } from 'react';
 import { IconBack, JuJiuMain, JuJiuCard } from '../../../components/Components';
 
 export default function Page() {
   const [openUsn, setOpenUsn] = useState(false);
-  const [openIp, setOpenIp] = useState(false);
 
   return (
     <Box fill>
       <Nav direction='row' align='center'>
         <IconBack />
-        <Text>高级 - 办3</Text>
+        <Text>设备信息 - 办3</Text>
       </Nav>
       <JuJiuMain>
+			<JuJiuCard>
+					<CardBody>
+						<Box
+							direction='row'
+							align='center'
+							justify='between'
+						>
+							<Text>设备型号</Text>
+							<Text size='small'>云探1</Text>
+						</Box>
+					</CardBody>
+				</JuJiuCard>
+				<JuJiuCard>
+					<CardBody>
+						<Box
+							direction='row'
+							align='center'
+							justify='between'
+						>
+							<Text>序列号</Text>
+							<Text size='small'>GF12345678</Text>
+						</Box>
+					</CardBody>
+				</JuJiuCard>
+				<JuJiuCard>
+					<CardBody>
+						<Box
+							direction='row'
+							align='center'
+							justify='between'
+						>
+							<Text>设备特性</Text>
+							<Box direction='row' gap='small' align='center'>
+								<Box align='center'>
+									<Wifi />
+									<Text size='small'>WiFi</Text>
+								</Box>
+								<Box align='center'>
+									<ChatOption />
+									<Text size='small'>双向语音</Text>
+								</Box>
+								<Box align='center'>
+									<Run />
+									<Text size='small'>移动侦测</Text>
+								</Box>
+								<Box align='center'>
+									<Pan />
+									<Text size='small'>云台</Text>
+								</Box>
+							</Box>
+						</Box>
+					</CardBody>
+				</JuJiuCard>
+				<JuJiuCard>
+					<CardBody>
+						<Box
+							direction='row'
+							align='center'
+							justify='between'
+						>
+							<Text>设备固件版本</Text>
+							<Text size='small'>V1.0.3</Text>
+						</Box>
+					</CardBody>
+				</JuJiuCard>
+				<JuJiuCard>
+					<CardBody>
+						<Box
+							direction='row'
+							align='center'
+							justify='between'
+						>
+							<Text>设备当前WiFi</Text>
+							<Box direction='row' align='center' gap='small'>
+								<Wifi />
+								<Text size='small'>DX-OFFICE</Text>
+							</Box>
+						</Box>
+					</CardBody>
+				</JuJiuCard>
         <JuJiuCard onClick={() => setOpenUsn(!openUsn)}>
 					<CardBody>
 						<Box

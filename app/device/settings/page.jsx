@@ -13,7 +13,7 @@ import {
 	CheckBox,
 	RangeInput,
 } from 'grommet';
-import { FormNext, Wifi, ChatOption, Run, Pan } from 'grommet-icons';
+import { FormNext } from 'grommet-icons';
 import { useState } from 'react';
 import { IconBack, JuJiuMain, JuJiuCard } from '../../../components/Components';
 import Link from 'next/link';
@@ -55,86 +55,6 @@ export default function Page() {
 							<Box direction='row' align='center'>
 								<Text size='small'>办公室</Text>
 								<FormNext color='control' />
-							</Box>
-						</Box>
-					</CardBody>
-				</JuJiuCard>
-				<JuJiuCard>
-					<CardBody>
-						<Box
-							direction='row'
-							align='center'
-							justify='between'
-						>
-							<Text>型号</Text>
-							<Text size='small'>云探1</Text>
-						</Box>
-					</CardBody>
-				</JuJiuCard>
-				<JuJiuCard>
-					<CardBody>
-						<Box
-							direction='row'
-							align='center'
-							justify='between'
-						>
-							<Text>序列号</Text>
-							<Text size='small'>GF12345678</Text>
-						</Box>
-					</CardBody>
-				</JuJiuCard>
-				<JuJiuCard>
-					<CardBody>
-						<Box
-							direction='row'
-							align='center'
-							justify='between'
-						>
-							<Text>设备特性</Text>
-							<Box direction='row' gap='small' align='center'>
-								<Box align='center'>
-									<Wifi />
-									<Text size='small'>WiFi</Text>
-								</Box>
-								<Box align='center'>
-									<ChatOption />
-									<Text size='small'>双向语音</Text>
-								</Box>
-								<Box align='center'>
-									<Run />
-									<Text size='small'>移动侦测</Text>
-								</Box>
-								<Box align='center'>
-									<Pan />
-									<Text size='small'>云台</Text>
-								</Box>
-							</Box>
-						</Box>
-					</CardBody>
-				</JuJiuCard>
-				<JuJiuCard>
-					<CardBody>
-						<Box
-							direction='row'
-							align='center'
-							justify='between'
-						>
-							<Text>设备固件版本</Text>
-							<Text size='small'>V1.0.3</Text>
-						</Box>
-					</CardBody>
-				</JuJiuCard>
-				<JuJiuCard>
-					<CardBody>
-						<Box
-							direction='row'
-							align='center'
-							justify='between'
-						>
-							<Text>设备当前WiFi</Text>
-							<Box direction='row' align='center' gap='small'>
-								<Wifi />
-								<Text size='small'>DX-OFFICE</Text>
 							</Box>
 						</Box>
 					</CardBody>

@@ -516,12 +516,12 @@ export function IpcCard({ label, imgurl }) {
 							onClick: () => router.push('/device/sharing'),
 						},
 						{
-							label: '设置',
+							label: '设备设置',
 							onClick: () => router.push('/device/settings'),
 						},
 						{
-							label: '高级',
-							onClick: () => router.push('/device/advanced'),
+							label: '设备信息',
+							onClick: () => router.push('/device/information'),
 						},
 					]}
 				/>

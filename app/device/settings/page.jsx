@@ -283,7 +283,7 @@ export default function Page() {
 							justify='between'
 						>
 							<Text>云台位置校准</Text>
-							<FormNext color='control' />
+							<Button primary size='small' label='校准' />
 						</Box>
 					</CardBody>
 				</JuJiuCard>
@@ -295,7 +295,7 @@ export default function Page() {
 							justify='between'
 						>
 							<Text>重启设备</Text>
-							<FormNext color='control' />
+							<Button primary size='small' label='重启' />
 						</Box>
 					</CardBody>
 				</JuJiuCard>

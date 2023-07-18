@@ -230,6 +230,18 @@ export default function Page() {
 							align='center'
 							justify='between'
 						>
+							<Text>画面翻转</Text>
+							<CheckBox toggle />
+						</Box>
+					</CardBody>
+				</JuJiuCard>
+				<JuJiuCard>
+					<CardBody>
+						<Box
+							direction='row'
+							align='center'
+							justify='between'
+						>
 							<Text>设备音量</Text>
 							<Box><RangeInput /></Box>
 						</Box>
@@ -261,18 +273,6 @@ export default function Page() {
 								</Box>
 							</Button>
 						</Link>
-					</CardBody>
-				</JuJiuCard>
-				<JuJiuCard>
-					<CardBody>
-						<Box
-							direction='row'
-							align='center'
-							justify='between'
-						>
-							<Text>画面翻转</Text>
-							<CheckBox toggle />
-						</Box>
 					</CardBody>
 				</JuJiuCard>
 				<JuJiuCard>

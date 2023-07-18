@@ -219,6 +219,22 @@ export default function Page() {
 						</Box>
 					</CardBody>
 				</JuJiuCard>
+				<JuJiuCard>
+					<CardBody>
+						<Link href='/device/settings/transfer' passHref legacyBehavior>
+							<Button as='a'>
+								<Box
+									direction='row'
+									align='center'
+									justify='between'
+								>
+									<Text>设备转移</Text>
+									<FormNext color='control' />
+								</Box>
+							</Button>
+						</Link>
+					</CardBody>
+				</JuJiuCard>
 				<Button color='status-critical' label='删除设备' />
 				{openAvata && (
 					<Layer

@@ -271,7 +271,7 @@ export default function Page() {
 							justify='between'
 						>
 							<Text>画面翻转</Text>
-							<FormNext color='control' />
+							<CheckBox toggle />
 						</Box>
 					</CardBody>
 				</JuJiuCard>

@@ -387,7 +387,7 @@ export function InfoGroup({ data }) {
 
 export function ButtonGroup({ data }) {
 	return (
-		<JuJiuCard>
+		<JuJiuCard pad='none'>
 			<CardBody>
 				<List data={data} border={false}>
 					{(datum) => (

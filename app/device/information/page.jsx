@@ -39,6 +39,20 @@ export default function Page() {
 						</Box>
 					</CardBody>
 				</JuJiuCard>
+				<JuJiuCard onClick={() => setOpenUsn(!openUsn)}>
+					<CardBody>
+						<Box
+							direction='row'
+							align='center'
+							justify='between'
+						>
+							<Text>设备统一SN</Text>
+							<Box direction='row' align='center'>
+								<FormNext color='control' />
+							</Box>
+						</Box>
+					</CardBody>
+				</JuJiuCard>
 				<JuJiuCard>
 					<CardBody>
 						<Box
@@ -91,20 +105,6 @@ export default function Page() {
 							<Box direction='row' align='center' gap='small'>
 								<Wifi />
 								<Text size='small'>DX-OFFICE</Text>
-							</Box>
-						</Box>
-					</CardBody>
-				</JuJiuCard>
-        <JuJiuCard onClick={() => setOpenUsn(!openUsn)}>
-					<CardBody>
-						<Box
-							direction='row'
-							align='center'
-							justify='between'
-						>
-							<Text>设备统一SN</Text>
-							<Box direction='row' align='center'>
-								<FormNext color='control' />
 							</Box>
 						</Box>
 					</CardBody>

@@ -53,7 +53,7 @@ export default function Page() {
 							passHref
 							legacyBehavior
 						>
-							<Button margin='small' icon={<Expand />} />
+							<Button as='a' margin='small' icon={<Expand />} />
 						</Link>
 					</Box>
 				</Stack>

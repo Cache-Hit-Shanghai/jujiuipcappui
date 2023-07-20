@@ -1,8 +1,8 @@
 'use client';
 
-import { Text, Box, Heading, Button, Tabs, Tab } from 'grommet';
+import { Text, Box, Heading, Tabs, Tab } from 'grommet';
 import { Alert } from 'grommet-icons';
-import Link from 'next/link';
+import { ButtonBackToMain } from '../../components/Components';
 
 
 export default function Page() {
@@ -21,9 +21,7 @@ export default function Page() {
                 <Text size='small' color='text-xweak'>您访问的页面有可能被移到了其它位置，页面名称发生了改变，或者暂时不可访问。</Text>
               </Box>
               <Box>
-                <Link href='/' passHref legacyBehavior>
-                  <Button primary as='a' label='回到主页' />
-                </Link>
+                <ButtonBackToMain />
               </Box>
             </Box>
             <Box flex={false} align='center' margin='large'>
@@ -44,9 +42,7 @@ export default function Page() {
                 <Text size='small' color='text-xweak'>您访问的服务器目前出了一点问题，请联系客服或者稍候再试。</Text>
               </Box>
               <Box>
-                <Link href='/' passHref legacyBehavior>
-                  <Button primary as='a' label='回到主页' />
-                </Link>
+                <ButtonBackToMain />
               </Box>
             </Box>
             <Box flex={false} align='center' margin='large'>

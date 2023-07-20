@@ -47,6 +47,14 @@ import styles from './components.module.css';
 
 // console.log('styles', styles);
 
+export function ButtonBackToMain() {
+	return (
+		<Link href='/' passHref legacyBehavior>
+			<Button as='a' primary label='回到主页' />
+		</Link>
+	);
+}
+
 export function ZoomControl({ showTitle = true }) {
 	return (
 		<Menu

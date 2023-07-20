@@ -29,7 +29,7 @@ export default function Page() {
           <Text size='small' textAlign='justify'>请输入需要网络摄像机连接的WiFi名称和密码，随后点击“下一步”。</Text>
         </Box>
       </JuJiuMain>
-      <Box direction='row' margin='small' justify='end'>
+      <Box direction='row' margin='small' justify='end' flex={false}>
         <ButtonLink href='/device/binding/next' label='下一步' />
       </Box>
     </Box>

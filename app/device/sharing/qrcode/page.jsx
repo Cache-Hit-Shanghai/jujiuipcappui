@@ -16,7 +16,7 @@ export default function Page() {
         <Box width='medium' height='medium' background='light-6' align='center' justify='center'>
           <Qr color='plain' size='xlarge' />
         </Box>
-        <Box direction='row' gap='small'>
+        <Box direction='row' gap='small' align='center'>
           <CircleInformation color='brand' />
           <Text size='small'>扫一扫上面的二维码图案，接受分享的设备。</Text>
         </Box>

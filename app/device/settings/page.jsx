@@ -181,8 +181,14 @@ export default function Page() {
 				<JuJiuCard>
 					<CardBody>
 						<ButtonLink href='/device/settings/dormantPlan/'>
-							<Text>休眠计划</Text>
-							<FormNext color='control' />
+              <Box
+                  direction='row'
+                  align='center'
+                  justify='between'
+                >
+                <Text>休眠计划</Text>
+                <FormNext color='control' />
+              </Box>
 						</ButtonLink>
 					</CardBody>
 				</JuJiuCard>
@@ -213,8 +219,14 @@ export default function Page() {
 				<JuJiuCard>
 					<CardBody>
 						<ButtonLink href='/device/settings/transfer'>
-							<Text>设备转移</Text>
-							<FormNext color='control' />
+              <Box
+                direction='row'
+                align='center'
+                justify='between'
+              >
+                <Text>设备转移</Text>
+                <FormNext color='control' />
+              </Box>
 						</ButtonLink>
 					</CardBody>
 				</JuJiuCard>

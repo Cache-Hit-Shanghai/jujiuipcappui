@@ -23,15 +23,15 @@ export default function Page() {
               <TextInput name='password' id='password' type='password' />
             </FormField>
           </Form>
-          <Box direction='row' justify='end'>
-            <ButtonLink href='/device/binding/next' label='下一步' />
-          </Box>
         </Box>
         <Box direction='row' gap='small' align='center' flex={false} margin={{ horizontal: 'small' }}>
           <CircleInformation size='large' color='brand' />
           <Text size='small' textAlign='justify'>请输入需要网络摄像机连接的WiFi名称和密码，随后点击“下一步”。</Text>
         </Box>
       </JuJiuMain>
+      <Box direction='row' margin='small' justify='end'>
+        <ButtonLink href='/device/binding/next' label='下一步' />
+      </Box>
     </Box>
   );
 }

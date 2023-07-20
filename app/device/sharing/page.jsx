@@ -1,10 +1,10 @@
 'use client';
 
-import { Text, Box, Nav, Layer, Button, CardBody } from 'grommet';
-import { FormNext } from 'grommet-icons';
+import { Text, Box, Nav, Layer, Button, CardBody, Avatar } from 'grommet';
+import { User, FormNext, Subtract } from 'grommet-icons';
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { IconBack, ButtonGroup, JuJiuMain, JuJiuCard } from '../../../components/Components';
+import { IconBack, ButtonGroup, JuJiuMain, JuJiuCard, ButtonLink } from '../../../components/Components';
 
 
 export default function Page() {
@@ -23,8 +23,23 @@ export default function Page() {
       </Nav>
       <JuJiuMain>
         <JuJiuCard>
-          <CardBody>
+          <CardBody gap='small'>
             <Text>分享好友(0)</Text>
+            <Box direction='row' gap='small'>
+              <Box align='center'>
+                <Avatar round='small' background='black'>
+                  <User />
+                </Avatar>
+                <Text size='small' truncate>administrator</Text>
+              </Box>
+              <ButtonLink href='/device/sharing/unshare'>
+                <Box>
+                  <Avatar round='small' border>
+                    <Subtract />
+                  </Avatar>
+                </Box>
+              </ButtonLink>
+            </Box>
           </CardBody>
         </JuJiuCard>
         <JuJiuCard>

@@ -25,6 +25,7 @@ import {
 	MuteControl,
 	RecordControl,
 	ResolutionControl,
+	ZoomControl,
 } from '../../../components/Components';
 
 export default function Page() {
@@ -77,6 +78,7 @@ export default function Page() {
 								<ChatControl />
 								<MuteControl />
 								<ResolutionControl />
+								<ZoomControl />
 							</Box>
 						</Box>
 					</Tab>

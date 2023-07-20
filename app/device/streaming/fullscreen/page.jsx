@@ -9,6 +9,7 @@ import {
 	RecordControl,
 	PanLayer,
 	ResolutionControl,
+	ZoomControl,
 } from '../../../../components/Components';
 
 export default function Page() {
@@ -43,6 +44,7 @@ export default function Page() {
 						<MuteControl showTitle={false} />
 						<PanLayer />
 						<ResolutionControl showTitle={false} />
+						<ZoomControl showTitle={false} />
 					</Box>
 				</Box>
 			</Stack>

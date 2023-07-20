@@ -21,6 +21,7 @@ import {
 	Home,
 	Radial,
 	Webcam,
+	ZoomIn,
 	FormNext,
 	Volume,
 	VolumeLow,
@@ -45,6 +46,31 @@ import { useState } from 'react';
 import styles from './components.module.css';
 
 // console.log('styles', styles);
+
+export function ZoomControl({ showTitle = true }) {
+	return (
+		<Menu
+			plain
+			dropAlign={{ top: 'bottom' }}
+			items={[
+				{ label: '4X', onClick: () => {}, justify: 'end' },
+				{ label: '3X', onClick: () => {}, justify: 'end' },
+				{
+					label: '2X',
+					onClick: () => {},
+					icon: <Checkmark />,
+					justify: 'end',
+				},
+				{ label: '1X', onClick: () => {}, justify: 'end' },
+			]}
+		>
+			<Box pad='small' align='center'>
+				<ZoomIn />
+				{showTitle && <Text size='small'>变焦</Text>}
+			</Box>
+		</Menu>
+	);
+}
 
 export function FlashLight() {
 	const [on, setOn] = useState(false);

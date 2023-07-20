@@ -45,7 +45,7 @@ export default function Page() {
           legacyBehavior
         >
           <Button as='a'>
-            <Tag background='background-front' size='small' value='关闭' />
+            <Tag border={false} background='background-front' size='small' value='关闭' />
           </Button>
         </Link>
       </Box>

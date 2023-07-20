@@ -1,8 +1,7 @@
 'use client';
 
-import { Text, Box, Heading, Tag, Button } from 'grommet';
+import { Text, Box, Heading, Tag } from 'grommet';
 import { Webcam } from 'grommet-icons';
-import Link from 'next/link';
 import { ButtonLink } from '../../components/Components';
 
 // 中心渐变效果，留着以后用。

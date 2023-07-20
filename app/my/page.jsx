@@ -1,10 +1,9 @@
 'use client';
 
-import { Text, Box, Nav, CardHeader, CardBody, Avatar, Button } from 'grommet';
+import { Text, Box, Nav, CardHeader, CardBody, Avatar } from 'grommet';
 import { Gallery, CloudUpload, ShareRounded, User, Upgrade } from 'grommet-icons';
 import { PersonFeedback } from '@styled-icons/fluentui-system-regular/PersonFeedback';
-import Link from 'next/link';
-import { AppFooter, IconLInk, LinkGroup, JuJiuMain, JuJiuCard } from '../../components/Components';
+import { AppFooter, IconLInk, LinkGroup, JuJiuMain, JuJiuCard, ButtonLink } from '../../components/Components';
 
 const links = [
   { label: '账号设置', url: '/my/account' },
@@ -17,19 +16,17 @@ export default function Page() {
   return (
     <Box fill>
       <Nav direction='row' margin='small' justify='between'>
-        <Link href='/my/login' passHref legacyBehavior>
-          <Button as='a'>
-            <Box direction='row' gap='small' align='center'>
-              <Avatar background='background-contrast'>
-                <User />
-              </Avatar>
-              <Box>
-                <Text>用户34881</Text>
-                <Text size='xsmall' color='text-xweak'>黄金会员</Text>
-              </Box>
+        <ButtonLink href='/my/login'>
+          <Box direction='row' gap='small' align='center'>
+            <Avatar background='background-contrast'>
+              <User />
+            </Avatar>
+            <Box>
+              <Text>用户34881</Text>
+              <Text size='xsmall' color='text-xweak'>黄金会员</Text>
             </Box>
-          </Button>
-        </Link>
+          </Box>
+        </ButtonLink>
       </Nav>
       <JuJiuMain>
         <JuJiuCard>

@@ -11,12 +11,11 @@ import {
 	RadioButtonGroup,
 	Grid,
 	Stack,
-	Button,
 } from 'grommet';
 import { Camera, Cloud, Sd, Expand, Download } from 'grommet-icons';
-import Link from 'next/link';
 import { useState } from 'react';
 import {
+	ButtonLink,
 	IconBack,
 	IconButton,
 	PanControl,
@@ -48,13 +47,7 @@ export default function Page() {
 						</VideoCanvas>
 					</Box>
 					<Box>
-						<Link
-							href='/device/streaming/fullscreen'
-							passHref
-							legacyBehavior
-						>
-							<Button as='a' margin='small' icon={<Expand />} />
-						</Link>
+						<ButtonLink href='/device/streaming/fullscreen' icon={<Expand />} />
 					</Box>
 				</Stack>
 				<Tabs flex>

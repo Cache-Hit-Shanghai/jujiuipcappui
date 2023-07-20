@@ -4,7 +4,7 @@ import { Text, Box, TextInput , Nav, Button, List, Tag, Pagination } from 'gromm
 import { Search, Add } from 'grommet-icons';
 import { Article } from '@styled-icons/remix-fill/Article';
 import Link from "next/link";
-import { IconBack, JuJiuMain } from '../../../components/Components';
+import { IconBack, JuJiuMain, ButtonLink } from '../../../components/Components';
 
 const data = [
   { title: '如何使用“设备转移”？', createdBy: 'Jim', date: '2023/7/1' },
@@ -27,9 +27,7 @@ export default function Page() {
           <IconBack />
           <Text>帮助与反馈</Text>
         </Box>
-        <Link href='/my/feedback/new' passHref legacyBehavior>
-          <Button as='a' margin='small' size='small' label='新建问题' icon={<Add />} />
-        </Link>
+        <ButtonLink href='/my/feedback/new' size='small' margin='small' label='新建问题' icon={<Add />} />
       </Nav>
       <Box border flex={false} direction='row' align='center' margin={{ horizontal: 'small' }}>
         <TextInput plain icon={<Search />} placeholder='搜索摄像机……' />

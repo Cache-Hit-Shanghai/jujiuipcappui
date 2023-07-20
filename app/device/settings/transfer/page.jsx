@@ -1,8 +1,7 @@
 'use client';
 
-import { Text, Box, Nav, Markdown, Button } from 'grommet';
-import Link from 'next/link';
-import { IconBack, JuJiuMain } from '../../../../components/Components';
+import { Text, Box, Nav, Markdown } from 'grommet';
+import { IconBack, JuJiuMain, ButtonLink } from '../../../../components/Components';
 
 const content = `
 # 转移设备说明
@@ -28,10 +27,8 @@ export default function Page() {
       <JuJiuMain>
         <Markdown>{content}</Markdown>
       </JuJiuMain>
-      <Box margin='small'>
-        <Link href='/device/settings/transfer/next' passHref legacyBehavior>
-          <Button style={{ textAlign: 'center' }} label='下一步' />
-        </Link>
+      <Box direction='row' margin='small' justify='end'>
+        <ButtonLink href='/device/settings/transfer/next' label='下一步' />
       </Box>
     </Box>
   );

@@ -15,8 +15,7 @@ import {
 } from 'grommet';
 import { FormNext } from 'grommet-icons';
 import { useState } from 'react';
-import { IconBack, JuJiuMain, JuJiuCard } from '../../../components/Components';
-import Link from 'next/link';
+import { IconBack, JuJiuMain, JuJiuCard, ButtonLink } from '../../../components/Components';
 
 export default function Page() {
 	const [openAvata, setOpenAvata] = useState(false);
@@ -181,18 +180,10 @@ export default function Page() {
 				</JuJiuCard>
 				<JuJiuCard>
 					<CardBody>
-						<Link href='/device/settings/dormantPlan/' passHref legacyBehavior>
-							<Button as='a'>
-								<Box
-									direction='row'
-									align='center'
-									justify='between'
-								>
-									<Text>休眠计划</Text>
-									<FormNext color='control' />
-								</Box>
-							</Button>
-						</Link>
+						<ButtonLink href='/device/settings/dormantPlan/'>
+							<Text>休眠计划</Text>
+							<FormNext color='control' />
+						</ButtonLink>
 					</CardBody>
 				</JuJiuCard>
 				<JuJiuCard>
@@ -221,18 +212,10 @@ export default function Page() {
 				</JuJiuCard>
 				<JuJiuCard>
 					<CardBody>
-						<Link href='/device/settings/transfer' passHref legacyBehavior>
-							<Button as='a'>
-								<Box
-									direction='row'
-									align='center'
-									justify='between'
-								>
-									<Text>设备转移</Text>
-									<FormNext color='control' />
-								</Box>
-							</Button>
-						</Link>
+						<ButtonLink href='/device/settings/transfer'>
+							<Text>设备转移</Text>
+							<FormNext color='control' />
+						</ButtonLink>
 					</CardBody>
 				</JuJiuCard>
 				<Button color='status-critical' label='删除设备' />

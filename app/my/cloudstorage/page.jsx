@@ -1,9 +1,8 @@
 'use client';
 
-import { Text, Box, Heading, Nav, Card, CardHeader, CardBody, CardFooter, Button, Avatar, Tag } from 'grommet';
+import { Text, Box, Heading, Nav, Card, CardHeader, CardBody, CardFooter, Avatar, Tag } from 'grommet';
 import { Webcam } from 'grommet-icons';
-import Link from 'next/link';
-import { IconBack, JuJiuMain } from '../../../components/Components';
+import { IconBack, JuJiuMain, ButtonLink } from '../../../components/Components';
 
 
 export default function Page() {
@@ -45,9 +44,7 @@ export default function Page() {
             </Box>
           </CardBody>
           <CardFooter justify='center'>
-            <Link href='/my/cloudstorage/pay' passHref legacyBehavior>
-              <Button primary as='a' label='续订' />
-            </Link>
+            <ButtonLink primary href='/my/cloudstorage/pay' label='续订' />
           </CardFooter>
         </Card>
       </JuJiuMain>

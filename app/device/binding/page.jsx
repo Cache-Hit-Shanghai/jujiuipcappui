@@ -1,9 +1,8 @@
 'use client';
 
-import { Text, Box, Heading, Nav, Form, FormField, TextInput, Button } from 'grommet';
+import { Text, Box, Heading, Nav, Form, FormField, TextInput } from 'grommet';
 import { CircleInformation, Wifi } from 'grommet-icons';
-import Link from 'next/link';
-import { IconBack, JuJiuMain } from '../../../components/Components';
+import { IconBack, JuJiuMain, ButtonLink } from '../../../components/Components';
 
 export default function Page() {
   return (
@@ -25,9 +24,7 @@ export default function Page() {
             </FormField>
           </Form>
           <Box direction='row' justify='end'>
-            <Link href='/device/binding/next' passHref legacyBehavior>
-              <Button as='a' label='下一步' />
-            </Link>
+            <ButtonLink href='/device/binding/next' label='下一步' />
           </Box>
         </Box>
         <Box direction='row' gap='small' align='center' flex={false} margin={{ horizontal: 'small' }}>

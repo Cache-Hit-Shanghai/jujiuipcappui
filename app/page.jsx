@@ -1,10 +1,9 @@
 'use client';
 
-import { Text, Box, Nav, Menu, Button, Accordion, AccordionPanel, Tag, Heading } from 'grommet';
+import { Text, Box, Nav, Menu, Accordion, AccordionPanel, Tag, Heading } from 'grommet';
 import { AddCircle, Mail } from 'grommet-icons';
 import { useRouter } from 'next/navigation';
-import Link from 'next/link';
-import { AppFooter, IpcCard, JuJiuMain } from '../components/Components';
+import { AppFooter, IpcCard, JuJiuMain, ButtonLink } from '../components/Components';
 
 export default function Page() {
   const router = useRouter();
@@ -16,9 +15,7 @@ export default function Page() {
           <Heading level={2} margin='none'>云探智能视觉系统</Heading>
         </Box>
         <Box direction='row' gap='small' align='center'>
-          <Link href='/message' passHref legacyBehavior>
-            <Button icon={<Mail />} as='a' />
-          </Link>
+          <ButtonLink href='/message' icon={<Mail />} />
           <Menu
             dropProps={{ align: { top: 'bottom', right: 'right' } }}
             icon={<AddCircle />} items={[

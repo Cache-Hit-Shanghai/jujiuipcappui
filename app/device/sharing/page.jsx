@@ -63,7 +63,6 @@ export default function Page() {
             <Box fill border pad='medium' gap='medium'>
               <Button label='微信好友' />
               <Button label='朋友圈' />
-              <Button label='取消' onClick={() => setOpenWechatSharing(false)} />
             </Box>
           </Layer>
         )}

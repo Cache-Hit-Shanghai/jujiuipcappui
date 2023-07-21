@@ -9,7 +9,7 @@ export default function Page() {
     <Box fill>
       <Nav direction='row' align='center'>
         <IconBack />
-        <Text>设备转让 - 办3</Text>
+        <Text>设备转移 - 办3</Text>
       </Nav>
       <JuJiuMain>
         <Box fill='horizontal' height='medium' background='light-6' align='center' justify='center' flex={false}>

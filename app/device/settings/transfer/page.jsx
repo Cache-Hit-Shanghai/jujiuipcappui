@@ -22,7 +22,7 @@ export default function Page() {
     <Box fill>
       <Nav direction='row' align='center'>
         <IconBack />
-        <Text>设备转让 - 办3</Text>
+        <Text>设备转移 - 办3</Text>
       </Nav>
       <JuJiuMain>
         <Markdown>{content}</Markdown>

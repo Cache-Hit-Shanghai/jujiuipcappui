@@ -24,7 +24,7 @@ export default function Page() {
       <JuJiuMain>
         <JuJiuCard>
           <CardBody gap='small'>
-            <Text>分享好友(0)</Text>
+            <Text>分享好友(1)</Text>
             <Box direction='row' gap='small'>
               <Box align='center'>
                 <Avatar round='small' background='black'>

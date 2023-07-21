@@ -7,12 +7,13 @@ import {
 	Nav,
 	Tabs,
 	Tab,
+	Tag,
 	DateInput,
 	RadioButtonGroup,
 	Grid,
 	Stack,
 } from 'grommet';
-import { Camera, Cloud, Sd, Expand, Download } from 'grommet-icons';
+import { Camera, Cloud, Sd, Expand, Download, RadialSelected } from 'grommet-icons';
 import { useState } from 'react';
 import {
 	ButtonLink,
@@ -37,7 +38,7 @@ export default function Page() {
 				<Text>实时视频 - 办3</Text>
 			</Nav>
 			<JuJiuMain margin='none'>
-				<Stack anchor='bottom-right' interactiveChild='last'>
+				<Stack interactiveChild='last'>
 					<Box flex={false} background='background-contrast'>
 						<VideoCanvas controls={false} style={{ zIndex: '0' }}>
 							<source
@@ -46,8 +47,20 @@ export default function Page() {
 							/>
 						</VideoCanvas>
 					</Box>
-					<Box>
-						<ButtonLink href='/device/streaming/fullscreen' icon={<Expand />} />
+					<Box fill justify='between'>
+						<Box direction='row' justify='center'>
+							<Tag margin='small' pad='xsmall' size='xsmall' border={false} background='status-critical'
+								value={
+									<Box direction='row' gap='small' align='center'>
+										<RadialSelected size='small' />
+										<Text size='xsmall'>0:41</Text>
+									</Box>
+								}
+							/>
+						</Box>
+						<Box align='end'>
+							<ButtonLink href='/device/streaming/fullscreen' icon={<Expand />} />
+						</Box>
 					</Box>
 				</Stack>
 				<Tabs flex>

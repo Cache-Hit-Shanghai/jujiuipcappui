@@ -1,7 +1,7 @@
 'use client';
 
-import { Video as VideoCanvas, Box, Stack, Button, Nav, Text } from 'grommet';
-import { Camera } from 'grommet-icons';
+import { Video as VideoCanvas, Box, Stack, Button, Nav, Text, Tag } from 'grommet';
+import { Camera, RadialSelected } from 'grommet-icons';
 import {
 	IconBack,
 	ChatControl,
@@ -29,10 +29,22 @@ export default function Page() {
 					</VideoCanvas>
 				</Box>
 				<Box fill justify='between'>
-					<Nav direction='row' align='center'>
-						<IconBack />
-						<Text>办3</Text>
-					</Nav>
+					<Box>
+						<Nav direction='row' align='center'>
+							<IconBack />
+							<Text>办3</Text>
+						</Nav>
+						<Box direction='row' justify='center'>
+							<Tag margin='small' pad='xsmall' size='xsmall' border={false} background='status-critical'
+								value={
+									<Box direction='row' gap='small' align='center'>
+										<RadialSelected size='small' />
+										<Text size='xsmall'>0:41</Text>
+									</Box>
+								}
+							/>
+						</Box>
+					</Box>
 					<Box
 						direction='row'
 						justify='evenly'

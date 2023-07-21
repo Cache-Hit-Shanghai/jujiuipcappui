@@ -28,23 +28,21 @@ export default function Page() {
 						/>
 					</VideoCanvas>
 				</Box>
+				<Box direction='row' justify='center'>
+					<Tag margin='small' pad='xsmall' size='xsmall' border={false} background='status-critical'
+						value={
+							<Box direction='row' gap='small' align='center'>
+								<RadialSelected size='small' />
+								<Text size='xsmall'>0:41</Text>
+							</Box>
+						}
+					/>
+				</Box>
 				<Box fill justify='between'>
-					<Box>
-						<Nav direction='row' align='center'>
-							<IconBack />
-							<Text>办3</Text>
-						</Nav>
-						<Box direction='row' justify='center'>
-							<Tag margin='small' pad='xsmall' size='xsmall' border={false} background='status-critical'
-								value={
-									<Box direction='row' gap='small' align='center'>
-										<RadialSelected size='small' />
-										<Text size='xsmall'>0:41</Text>
-									</Box>
-								}
-							/>
-						</Box>
-					</Box>
+					<Nav direction='row' align='center'>
+						<IconBack />
+						<Text>办3</Text>
+					</Nav>
 					<Box
 						direction='row'
 						justify='evenly'

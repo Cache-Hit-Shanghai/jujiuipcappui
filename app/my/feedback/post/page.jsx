@@ -1,6 +1,6 @@
 'use client';
 
-import { Text, Box, Card , Nav, CardHeader, CardBody, Markdown, Heading, Button, TextArea } from 'grommet';
+import { Text, Box, Card , Nav, CardHeader, CardBody, Markdown, Heading, Button, TextArea, Tag } from 'grommet';
 import { IconBack, JuJiuMain } from '../../../../components/Components';
 
 const content=`
@@ -19,9 +19,16 @@ export default function Page() {
         <Text>帮助与反馈</Text>
       </Nav>
       <JuJiuMain gap='medium'>
-        <Box direction='row' align='center' gap='small'>
+        <Box direction='row' gap='small'>
           <Heading margin='none' level={2}>一个非常非常长的标题一个非常非常长的标题一个非常非常长的标题</Heading>
           <Box flex={false}><Button label='编辑' /></Box>
+        </Box>
+        <Box direction='row' gap='small'>
+          <Tag border={false} background='graph-4' size='xsmall' value='bug' />
+          <Tag border={false} background='graph-3' size='xsmall' value='建议' />
+          <Tag border={false} background='graph-2' size='xsmall' value='功能' />
+          <Tag border={false} background='graph-1' size='xsmall' value='文档' />
+          <Tag border={false} background='graph-0' size='xsmall' value='帮助' />
         </Box>
         <Card>
           <CardHeader pad='small' background='background-front'>

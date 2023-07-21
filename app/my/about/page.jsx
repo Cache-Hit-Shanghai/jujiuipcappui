@@ -26,7 +26,7 @@ export default function Page() {
           </CardBody>
           <CardFooter justify='center' align='center' direction='column' gap='none'>
             <Text size='large'>云探智能视觉系统</Text>
-            <Text>Powered by 雎鸠云<sup>&reg;</sup></Text>
+            <Text size='small'>Powered by 雎鸠云<sup>&reg;</sup></Text>
           </CardFooter>
         </JuJiuCard>
         <LinkGroup data={links} />

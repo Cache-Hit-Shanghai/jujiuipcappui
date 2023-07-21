@@ -30,7 +30,7 @@ export default function Page() {
         <ButtonLink href='/my/feedback/new' size='small' margin='small' label='新建问题' icon={<Add />} />
       </Nav>
       <Box border flex={false} direction='row' align='center' margin={{ horizontal: 'small' }}>
-        <TextInput plain icon={<Search />} placeholder='搜索摄像机……' />
+        <TextInput plain icon={<Search />} placeholder='搜索问题……' />
         <Box flex={false} margin='small'><Button primary size='small' label='搜索' /></Box>
       </Box>
       <JuJiuMain>

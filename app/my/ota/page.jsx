@@ -31,7 +31,7 @@ export default function Page() {
                 </Box>
               </Box>
               <Box>
-                <Button primary label='现在升级' />
+                <Button primary size='small' label='现在升级' />
               </Box>
             </Box>
           ) }

@@ -35,8 +35,8 @@ export default function Page() {
 					</Nav>
 					<Box
 						direction='row'
-						margin={{ vertical: 'large', horizontal: 'xlarge' }}
-						gap='xlarge'
+						justify='evenly'
+						margin={{ vertical: 'medium' }}
 					>
 						<Button plain icon={<Camera />} />
 						<RecordControl showTitle={false} />

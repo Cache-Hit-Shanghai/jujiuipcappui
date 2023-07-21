@@ -38,7 +38,7 @@ import { ButtonLink } from '../../components/Components';
 export default function Page() {
   return (
     <Box fill>
-      <Box margin='large' direction='row' justify='end'>
+      <Box margin='large' direction='row' justify='end' flex={false}>
         <ButtonLink href='/'>
           <Tag border={false} background='background-front' size='small' value='关闭' />
         </ButtonLink>
@@ -50,7 +50,7 @@ export default function Page() {
       }}>
         <Box direction='row' align='center' gap='small'>
           <Webcam color='brand' size='xlarge' />
-          <Heading level={1} size='medium'>云探</Heading>
+          <Heading level={1} size='large'>云探</Heading>
         </Box>
         <Box align='center'>
           <Text size='large'>全球领先的Web视觉系统</Text>
@@ -58,7 +58,10 @@ export default function Page() {
         </Box>
       </Box>
       <Box flex={false} align='center' margin='large'>
-        <Text size='large'>云探智能视觉系统<sup>&reg;</sup></Text>
+        <Box direction='row' gap='small' align='center'>
+          <Text size='large'>云探智能视觉系统<sup>&reg;</sup></Text>
+          <Tag value='IPv6' size='xsmall' background='accent-4' />
+        </Box>
         <Text size='xsmall'>&copy;2021-2023 上海光方迅视科技有限公司 版权所有</Text>
       </Box>
     </Box>

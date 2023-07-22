@@ -1,7 +1,6 @@
 import {
 	Avatar,
 	Text,
-	Tag,
 	Box,
 	Card,
 	CardBody,
@@ -43,6 +42,12 @@ import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { useState } from 'react';
 
+import {
+  JuJiuTagCloudStorageExpired,
+  JuJiuTagCloudStorageExpiring,
+  JuJiuTagDeviceOnline,
+  JuJiuTagDeviceOffline,
+} from './JuJiuTags';
 import styles from './components.module.css';
 
 // console.log('styles', styles);
@@ -532,17 +537,22 @@ export function IpcCard({ label, imgurl }) {
 				<Stack fill='horizontal' height='small'>
 					<Image fill src={imgurl} />
 					<Box direction='row' margin='medium' gap='small'>
-						<Tag
-							background='neutral-1'
-							size='xsmall'
-							value='工作中'
-						/>
-						<Tag background='active' size='xsmall' value='离线' />
-						<Tag
-							background='status-error'
-							size='xsmall'
-							value='7天云存储过期'
-						/>
+						<Box gap='small'>
+              <Box direction='row'>
+                <JuJiuTagDeviceOnline />
+              </Box>
+              <Box direction='row'>
+                <JuJiuTagDeviceOffline />
+              </Box>
+            </Box>
+						<Box gap='small'>
+              <Box direction='row'>
+                <JuJiuTagCloudStorageExpiring />
+              </Box>
+              <Box direction='row'>
+                <JuJiuTagCloudStorageExpired />
+              </Box>
+            </Box>
 					</Box>
 				</Stack>
 			</CardBody>

@@ -41,7 +41,7 @@ export function JuJiuTagCloudStorageExpiring() {
 export function JuJiuTagDeviceOnline() {
   return (
     <JuJiuTag
-      background='dark-6'
+      background='light-6'
       icon={<StatusGoodSmall color='graph-1' size='small' />}
       label='工作中'
     />
@@ -51,7 +51,7 @@ export function JuJiuTagDeviceOnline() {
 export function JuJiuTagDeviceOffline() {
   return (
     <JuJiuTag
-      background='dark-6'
+      background='light-6'
       icon={<StatusGoodSmall size='small' />}
       label='离线'
     />

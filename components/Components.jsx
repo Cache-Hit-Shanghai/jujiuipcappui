@@ -424,10 +424,11 @@ export function InfoGroup({ data }) {
 		<JuJiuCard>
 			<CardBody>
 				<List
+					pad={{ vertical: 'small' }}
 					data={data}
 					border={false}
 					primaryKey='key'
-					secondaryKey='value'
+					secondaryKey={item => <Text size='small' color='text-xweak'>{item.value}</Text>}
 				/>
 			</CardBody>
 		</JuJiuCard>
@@ -438,7 +439,7 @@ export function ButtonGroup({ data }) {
 	return (
 		<JuJiuCard pad='none'>
 			<CardBody>
-				<List data={data} border={false}>
+				<List pad={{ vertical: 'small' }} data={data} border={false}>
 					{(datum) => (
 						<Button
 							icon={<FormNext color='control' />}
@@ -459,7 +460,7 @@ export function LinkGroup({ data }) {
 	return (
 		<JuJiuCard>
 			<CardBody>
-				<List data={data} border={false}>
+				<List pad={{ vertical: 'small' }} data={data} border={false}>
 					{(datum) => (
 						<Link href={datum.url} passHref legacyBehavior>
 							<Button

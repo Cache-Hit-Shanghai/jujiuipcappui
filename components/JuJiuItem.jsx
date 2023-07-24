@@ -57,6 +57,14 @@ export function JuJiuItemButton({ label, value, onClick }) {
   );
 }
 
+export function JuJiuItemRawButton({ label, onClick, children }) {
+  return (
+    <JuJiuItem label={label} onClick={onClick}>
+      <Button plain reverse pad='none' label={children} icon={<FormNext color='control' />} />
+    </JuJiuItem>
+  );
+}
+
 export function JuJiuItemLink({ label, href }) {
   return (
     <JuJiuRawItem label={label}>

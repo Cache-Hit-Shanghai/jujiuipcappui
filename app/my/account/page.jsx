@@ -18,7 +18,7 @@ export default function Page() {
       <JuJiuMain>
         <JuJiuItemRawButton label='头像' onClick={() => setOpenAvata(!openAvata)}>
           <Avatar background='background'>
-            <User />
+            <User color='text-xweak' />
           </Avatar>
         </JuJiuItemRawButton>
 				<JuJiuItemButton label='昵称' value='用户12345' onClick={() => setOpenName(!openName)} />

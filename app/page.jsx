@@ -1,7 +1,8 @@
 'use client';
 
 import { Text, Box, Nav, Menu, Accordion, AccordionPanel, Heading } from 'grommet';
-import { AddCircle, Mail } from 'grommet-icons';
+import { AddCircle, Mail, Add, Scan } from 'grommet-icons';
+import { Group } from '@styled-icons/fluentui-system-regular/Group';
 import { useRouter } from 'next/navigation';
 import { AppFooter, IpcCard, JuJiuMain, ButtonLink } from '../components/Components';
 import { JuJiuTagFromShared, JuJiuTagSharing } from '../components/JuJiuTags';
@@ -20,9 +21,9 @@ export default function Page() {
           <Menu
             dropProps={{ align: { top: 'bottom', right: 'right' } }}
             icon={<AddCircle />} items={[
-              { label: '添加设备', onClick: () => router.push('/device/binding') },
-              { label: '设备分组', onClick: () => router.push('/device/group') },
-              { label: '扫一扫', onClick: () => router.push('/device/scan') },
+              { label: '添加设备', icon: (<Add />), onClick: () => router.push('/device/binding') },
+              { label: '设备分组', icon: (<Group size='24' />), onClick: () => router.push('/device/group') },
+              { label: '扫一扫', icon: (<Scan />), onClick: () => router.push('/device/scan') },
             ]}
           />
         </Box>

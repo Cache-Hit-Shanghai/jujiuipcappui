@@ -21,11 +21,13 @@ import {
 	Radial,
 	Webcam,
 	ZoomIn,
+	Info,
 	FormNext,
 	Volume,
 	VolumeLow,
 	VolumeMute,
 	Checkmark,
+	ShareRounded,
 	FormPrevious,
 	ClosedCaption,
 	CaretLeftFill,
@@ -38,6 +40,7 @@ import { Record } from '@styled-icons/fluentui-system-regular/Record';
 import { RecordStop } from '@styled-icons/fluentui-system-regular/RecordStop';
 import { FlashlightOn } from '@styled-icons/material-rounded/FlashlightOn';
 import { FlashlightOff } from '@styled-icons/material-rounded/FlashlightOff';
+import { SettingsOutline } from '@styled-icons/evaicons-outline/SettingsOutline';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { useState } from 'react';
@@ -564,14 +567,17 @@ export function IpcCard({ label, imgurl }) {
 					items={[
 						{
 							label: '设备分享',
+							icon: (<ShareRounded />),
 							onClick: () => router.push('/device/sharing'),
 						},
 						{
 							label: '设备设置',
+							icon: (<SettingsOutline size='24' />),
 							onClick: () => router.push('/device/settings'),
 						},
 						{
 							label: '设备信息',
+							icon: (<Info />),
 							onClick: () => router.push('/device/information'),
 						},
 					]}

@@ -6,17 +6,15 @@ import {
 	RadioButtonGroup,
 	Nav,
 	Button,
-	CardBody,
 	Layer,
 	Heading,
 	TextArea,
 	CheckBox,
 	RangeInput,
 } from 'grommet';
-import { FormNext } from 'grommet-icons';
 import { useState } from 'react';
-import { IconBack, JuJiuMain, JuJiuCard, ButtonLink } from '../../../components/Components';
-import { JuJiuItemText } from '../../../components/JuJiuItem';
+import { IconBack, JuJiuMain } from '../../../components/Components';
+import { JuJiuItem, JuJiuItemButton, JuJiuItemLink } from '../../../components/JuJiuItem';
 
 export default function Page() {
 	const [openAvata, setOpenAvata] = useState(false);
@@ -29,196 +27,43 @@ export default function Page() {
 				<Text>设备设置 - 办3</Text>
 			</Nav>
 			<JuJiuMain>
-				<JuJiuCard onClick={() => setOpenAvata(!openAvata)}>
-					<CardBody>
-						<Box
-							direction='row'
-							align='center'
-							justify='between'
-						>
-							<Text>设备名称</Text>
-							<Box direction='row' align='center'>
-								<Text size='small'>办3</Text>
-								<FormNext color='control' />
-							</Box>
-						</Box>
-					</CardBody>
-				</JuJiuCard>
-				<JuJiuCard onClick={() => setOpenName(!openName)}>
-					<CardBody>
-						<Box
-							direction='row'
-							align='center'
-							justify='between'
-						>
-							<Text>分组</Text>
-							<Box direction='row' align='center'>
-								<Text size='small'>办公室</Text>
-								<FormNext color='control' />
-							</Box>
-						</Box>
-					</CardBody>
-				</JuJiuCard>
-				<JuJiuCard>
-					<CardBody>
-						<Box
-							direction='row'
-							align='center'
-							justify='between'
-						>
-							<Text>固件自动升级</Text>
-							<CheckBox toggle />
-						</Box>
-					</CardBody>
-				</JuJiuCard>
-				<JuJiuCard>
-					<CardBody>
-						<Box
-							direction='row'
-							align='center'
-							justify='between'
-						>
-							<Text>视频水印(OSD)</Text>
-							<CheckBox toggle />
-						</Box>
-					</CardBody>
-				</JuJiuCard>
-				<JuJiuCard>
-					<CardBody>
-						<Box
-							direction='row'
-							align='center'
-							justify='between'
-						>
-							<Text>镜头畸变修正</Text>
-							<CheckBox toggle />
-						</Box>
-					</CardBody>
-				</JuJiuCard>
-				<JuJiuCard>
-					<CardBody>
-						<Box
-							direction='row'
-							align='center'
-							justify='between'
-						>
-							<Text>视频宽动态(WDR)</Text>
-							<CheckBox toggle />
-						</Box>
-					</CardBody>
-				</JuJiuCard>
-				<JuJiuCard>
-					<CardBody>
-						<Box
-							direction='row'
-							align='center'
-							justify='between'
-						>
-							<Text>设备语音提示</Text>
-							<CheckBox toggle />
-						</Box>
-					</CardBody>
-				</JuJiuCard>
-				<JuJiuCard>
-					<CardBody>
-						<Box
-							direction='row'
-							align='center'
-							justify='between'
-						>
-							<Text>设备状态灯</Text>
-							<CheckBox toggle />
-						</Box>
-					</CardBody>
-				</JuJiuCard>
-				<JuJiuCard>
-					<CardBody>
-						<Box
-							direction='row'
-							align='center'
-							justify='between'
-						>
-							<Text>画面翻转</Text>
-							<CheckBox toggle />
-						</Box>
-					</CardBody>
-				</JuJiuCard>
-				<JuJiuCard>
-					<CardBody>
-						<Box
-							direction='row'
-							align='center'
-							justify='between'
-						>
-							<Text>设备音量</Text>
-							<Box><RangeInput /></Box>
-						</Box>
-					</CardBody>
-				</JuJiuCard>
-				<JuJiuCard>
-					<CardBody>
-						<Box
-							direction='row'
-							align='center'
-							justify='between'
-						>
-							<Text>休眠</Text>
-							<CheckBox toggle />
-						</Box>
-					</CardBody>
-				</JuJiuCard>
-				<JuJiuCard>
-					<CardBody>
-						<ButtonLink href='/device/settings/dormantPlan/'>
-              <Box
-                  direction='row'
-                  align='center'
-                  justify='between'
-                >
-                <Text>休眠计划</Text>
-                <FormNext color='control' />
-              </Box>
-						</ButtonLink>
-					</CardBody>
-				</JuJiuCard>
-				<JuJiuCard>
-					<CardBody>
-						<Box
-							direction='row'
-							align='center'
-							justify='between'
-						>
-							<Text>云台位置校准</Text>
-							<Button primary size='small' label='校准' />
-						</Box>
-					</CardBody>
-				</JuJiuCard>
-				<JuJiuCard>
-					<CardBody>
-						<Box
-							direction='row'
-							align='center'
-							justify='between'
-						>
-							<Text>重启设备</Text>
-							<Button primary size='small' label='重启' />
-						</Box>
-					</CardBody>
-				</JuJiuCard>
-				<JuJiuCard>
-					<CardBody>
-						<ButtonLink href='/device/settings/transfer'>
-              <Box
-                direction='row'
-                align='center'
-                justify='between'
-              >
-                <Text>设备转移</Text>
-                <FormNext color='control' />
-              </Box>
-						</ButtonLink>
-					</CardBody>
-				</JuJiuCard>
+				<JuJiuItemButton label='设备名称' value='办3' onClick={() => setOpenAvata(!openAvata)} />
+				<JuJiuItemButton label='分组' value='办公室' onClick={() => setOpenName(!openName)} />
+				<JuJiuItem label='固件自动升级'>
+					<CheckBox toggle />
+				</JuJiuItem>
+				<JuJiuItem label='视频水印(OSD)'>
+					<CheckBox toggle />
+				</JuJiuItem>
+				<JuJiuItem label='镜头畸变修正'>
+					<CheckBox toggle />
+				</JuJiuItem>
+				<JuJiuItem label='视频宽动态(WDR)'>
+					<CheckBox toggle />
+				</JuJiuItem>
+				<JuJiuItem label='设备语音提示'>
+					<CheckBox toggle />
+				</JuJiuItem>
+				<JuJiuItem label='设备状态灯'>
+					<CheckBox toggle />
+				</JuJiuItem>
+				<JuJiuItem label='画面翻转'>
+					<CheckBox toggle />
+				</JuJiuItem>
+				<JuJiuItem label='设备音量'>
+					<Box><RangeInput /></Box>
+				</JuJiuItem>
+				<JuJiuItem label='休眠'>
+					<CheckBox toggle />
+				</JuJiuItem>
+				<JuJiuItemLink label='休眠计划' href='/device/settings/dormantPlan' />
+				<JuJiuItem label='云台位置校准'>
+					<Button primary size='small' label='校准' />
+				</JuJiuItem>
+				<JuJiuItem label='重启设备'>
+					<Button primary size='small' label='重启' />
+				</JuJiuItem>
+				<JuJiuItemLink label='设备转移' href='/device/settings/transfer' />
 				<Button color='status-critical' label='删除设备' />
 				{openAvata && (
 					<Layer

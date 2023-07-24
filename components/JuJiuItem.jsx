@@ -1,29 +1,37 @@
-import { Box, Text, CardBody } from 'grommet';
+import { Box, Text, CardBody, Button } from 'grommet';
 import { FormNext } from 'grommet-icons';
-import { JuJiuCard } from './Components';
+import { JuJiuCard, ButtonLink } from './Components';
 
 
-export function JuJiuItem({ label, onClick, children }) {
+function JuJiuRawItem({ onClick, children }) {
   return (
     <JuJiuCard>
       <CardBody onClick={onClick} focusIndicator={false}>
-        <Box
-          direction='row'
-          align='center'
-          justify='between'
-        >
-          <Text>{label}</Text>
-          {children}
-        </Box>
+        {children}
       </CardBody>
     </JuJiuCard>
+  );
+}
+
+export function JuJiuItem({ label, onClick, children }) {
+  return (
+    <JuJiuRawItem onClick={onClick}>
+      <Box
+        direction='row'
+        align='center'
+        justify='between'
+      >
+        <Text>{label}</Text>
+        {children}
+      </Box>
+    </JuJiuRawItem>
   );
 }
 
 export function JuJiuItemText({ label, value, icon }) {
   return (
     <JuJiuItem label={label}>
-      <Box direction='row'>
+      <Box direction='row' align='center'>
         {icon}
         <Text size='small' color='text-xweak'>{value}</Text>
       </Box>
@@ -41,10 +49,27 @@ export function JuJiuItemTextArray({ label, value }) {
   );
 }
 
-export function JuJiuItemButton({ label, onClick }) {
+export function JuJiuItemButton({ label, value, onClick }) {
   return (
     <JuJiuItem label={label} onClick={onClick}>
-      <FormNext color='control' />
+      <Button plain reverse pad='none' label={value} icon={<FormNext color='control' />} />
     </JuJiuItem>
+  );
+}
+
+export function JuJiuItemLink({ label, href }) {
+  return (
+    <JuJiuRawItem label={label}>
+      <ButtonLink href={href}>
+        <Box
+          direction='row'
+          align='center'
+          justify='between'
+        >
+          <Text>{label}</Text>
+          <FormNext color='control' />
+        </Box>
+      </ButtonLink>
+    </JuJiuRawItem>
   );
 }

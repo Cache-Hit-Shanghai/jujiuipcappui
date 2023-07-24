@@ -1,4 +1,4 @@
-import { Button, Box, Text, CardBody } from 'grommet';
+import { Box, Text, CardBody } from 'grommet';
 import { FormNext } from 'grommet-icons';
 import { JuJiuCard } from './Components';
 

@@ -439,7 +439,7 @@ export function ButtonGroup({ data }) {
 	return (
 		<JuJiuCard pad='none'>
 			<CardBody>
-				<List pad={{ vertical: 'small' }} data={data} border={false}>
+				<List pad='small' data={data} border={false}>
 					{(datum) => (
 						<Button
 							icon={<FormNext color='control' />}

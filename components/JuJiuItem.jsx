@@ -1,13 +1,12 @@
 import { Button, Box, Text, CardBody } from 'grommet';
-import { FormNext, StatusGoodSmall, ShareRounded } from 'grommet-icons';
-import { Share } from '@styled-icons/boxicons-regular/Share';
+import { FormNext } from 'grommet-icons';
 import { JuJiuCard } from './Components';
 
 
-function JuJiuItem({ label, children }) {
+export function JuJiuItem({ label, onClick, children }) {
   return (
     <JuJiuCard>
-      <CardBody>
+      <CardBody onClick={onClick} focusIndicator={false}>
         <Box
           direction='row'
           align='center'
@@ -44,18 +43,8 @@ export function JuJiuItemTextArray({ label, value }) {
 
 export function JuJiuItemButton({ label, onClick }) {
   return (
-    <JuJiuItem label={label}>
-      <Button pad='none' onClick={onClick} icon={<FormNext color='control' />} />
-    </JuJiuItem>
-  );
-}
-
-export function JuJiuItemBox({ label, value }) {
-  return (
-    <JuJiuItem label={label}>
-      <Box direction='row'>
-        { value }
-      </Box>
+    <JuJiuItem label={label} onClick={onClick}>
+      <FormNext color='control' />
     </JuJiuItem>
   );
 }

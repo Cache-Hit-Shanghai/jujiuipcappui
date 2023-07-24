@@ -4,7 +4,7 @@ import { Text, Box, Layer, Nav, Heading, Button } from 'grommet';
 import { Wifi, ChatOption, Run, Pan, Copy } from 'grommet-icons';
 import { useState } from 'react';
 import { IconBack, JuJiuMain } from '../../../components/Components';
-import { JuJiuItemText, JuJiuItemTextArray, JuJiuItemButton, JuJiuItemBox } from '../../../components/JuJiuItem';
+import { JuJiuItemText, JuJiuItemTextArray, JuJiuItemButton, JuJiuItem } from '../../../components/JuJiuItem';
 
 export default function Page() {
   const [openUsn, setOpenUsn] = useState(false);
@@ -19,28 +19,26 @@ export default function Page() {
 				<JuJiuItemText label='设备型号' value='云探1' />
 				<JuJiuItemText label='序列号' value='GF12345678' />
 				<JuJiuItemButton label='设备统一SN' onClick={() => setOpenUsn(!openUsn)} />
-				<JuJiuItemBox label='设备特性'
-					value={
-						<Box direction='row' gap='small' align='center'>
-							<Box align='center'>
-								<Wifi color='text-xweak' />
-								<Text color='text-xweak' size='small'>WiFi</Text>
-							</Box>
-							<Box align='center'>
-								<ChatOption color='text-xweak' />
-								<Text color='text-xweak' size='small'>双向语音</Text>
-							</Box>
-							<Box align='center'>
-								<Run color='text-xweak' />
-								<Text color='text-xweak' size='small'>移动侦测</Text>
-							</Box>
-							<Box align='center'>
-								<Pan color='text-xweak' />
-								<Text color='text-xweak' size='small'>云台</Text>
-							</Box>
+				<JuJiuItem label='设备特性'>
+					<Box direction='row' gap='small' align='center'>
+						<Box align='center'>
+							<Wifi color='text-xweak' />
+							<Text color='text-xweak' size='small'>WiFi</Text>
 						</Box>
-					}
-				/>
+						<Box align='center'>
+							<ChatOption color='text-xweak' />
+							<Text color='text-xweak' size='small'>双向语音</Text>
+						</Box>
+						<Box align='center'>
+							<Run color='text-xweak' />
+							<Text color='text-xweak' size='small'>移动侦测</Text>
+						</Box>
+						<Box align='center'>
+							<Pan color='text-xweak' />
+							<Text color='text-xweak' size='small'>云台</Text>
+						</Box>
+					</Box>
+				</JuJiuItem>
 				<JuJiuItemText label='设备固件版本' value='V1.0.3' />
 				<JuJiuItemText label='设备当前WiFi' value='DX-OFFICE' icon={<Wifi color='text-xweak' />} />
 				<JuJiuItemTextArray label='IP地址' value={['192.168.100.127', 'fe80::64a6:2309:8880:7903']} />

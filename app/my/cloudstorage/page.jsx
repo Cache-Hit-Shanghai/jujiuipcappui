@@ -37,7 +37,7 @@ export default function Page() {
                   <Tag size='small' background='graph-4' value='24小时录像' />
                 </Box>
                 <Box align='end'>
-                  <Text color='graph-3'>正常使用中</Text>
+                  <Text color='status-ok'>正常使用中</Text>
                   <Text size='small' color='text-xweak'>将于2023.8.24日到期</Text>
                 </Box>
               </Box>

@@ -1,9 +1,10 @@
 'use client';
 
-import { Text, Box, Nav, Menu, Accordion, AccordionPanel, Tag, Heading } from 'grommet';
+import { Text, Box, Nav, Menu, Accordion, AccordionPanel, Heading } from 'grommet';
 import { AddCircle, Mail } from 'grommet-icons';
 import { useRouter } from 'next/navigation';
 import { AppFooter, IpcCard, JuJiuMain, ButtonLink } from '../components/Components';
+import { JuJiuTagFromShared, JuJiuTagSharing } from '../components/JuJiuTags';
 
 export default function Page() {
   const router = useRouter();
@@ -30,7 +31,7 @@ export default function Page() {
         <Accordion>
           <AccordionPanel label={<Text margin='small'>默认分组</Text>}>
             <Box gap='medium' margin='small'>
-              <IpcCard key={0} label={<Box direction='row' align='center' gap='large'><Text>客厅</Text><Tag value='来自分享' size='xsmall' background='control' /></Box>} imgurl='https://ts1.cn.mm.bing.net/th/id/R-C.f54c83f04442cec528a250d251251ce6?rik=JE7BoZk5xK4iEg&riu=http%3a%2f%2fpic4.bbzhi.com%2ffengjingbizhi%2fgaoqingxifengjingzhuomianbizhixiazai%2fgaoqingxifengjingzhuomianbizhixiazai_366146_18.jpg&ehk=YvUnl11nBp%2fGJssQUbYqkXLo7fchkD%2fEQ8BGpW2Urjs%3d&risl=&pid=ImgRaw&r=0' />
+              <IpcCard key={0} label={<Box direction='row' align='center' gap='large'><Text>客厅</Text><JuJiuTagFromShared /><JuJiuTagSharing /></Box>} imgurl='https://ts1.cn.mm.bing.net/th/id/R-C.f54c83f04442cec528a250d251251ce6?rik=JE7BoZk5xK4iEg&riu=http%3a%2f%2fpic4.bbzhi.com%2ffengjingbizhi%2fgaoqingxifengjingzhuomianbizhixiazai%2fgaoqingxifengjingzhuomianbizhixiazai_366146_18.jpg&ehk=YvUnl11nBp%2fGJssQUbYqkXLo7fchkD%2fEQ8BGpW2Urjs%3d&risl=&pid=ImgRaw&r=0' />
             </Box>
           </AccordionPanel>
           <AccordionPanel label={<Text margin='small'>办公室</Text>}>

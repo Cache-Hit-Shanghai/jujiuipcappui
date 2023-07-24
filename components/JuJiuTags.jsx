@@ -1,5 +1,7 @@
 import { Tag, Box, Text } from 'grommet';
-import { CloudUpload, StatusGoodSmall } from 'grommet-icons';
+import { CloudUpload, StatusGoodSmall, ShareRounded } from 'grommet-icons';
+import { Share } from '@styled-icons/boxicons-regular/Share';
+
 
 export function JuJiuTag({ icon, label, background }) {
   return (
@@ -14,6 +16,26 @@ export function JuJiuTag({ icon, label, background }) {
           <Text size='xsmall'>{label}</Text>
         </Box>
       }
+    />
+  );
+}
+
+export function JuJiuTagSharing() {
+  return (
+    <JuJiuTag
+      background='graph-0'
+      icon={<ShareRounded size='small' />}
+      label='分享中'
+    />
+  );
+}
+
+export function JuJiuTagFromShared() {
+  return (
+    <JuJiuTag
+      background='graph-3'
+      icon={<Share size='12' />}
+      label='来自分享'
     />
   );
 }

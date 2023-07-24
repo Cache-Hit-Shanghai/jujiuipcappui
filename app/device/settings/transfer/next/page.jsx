@@ -1,8 +1,8 @@
 'use client';
 
-import { Text, Box, Nav, Markdown, Button, TextInput } from 'grommet';
+import { Text, Box, Nav } from 'grommet';
 import { Qr, CircleInformation } from 'grommet-icons';
-import { IconBack, JuJiuMain } from '../../../../../components/Components';
+import { IconBack, JuJiuMain, ButtonBackToMain } from '../../../../../components/Components';
 
 export default function Page() {
   return (
@@ -18,6 +18,9 @@ export default function Page() {
         <Box direction='row' align='center' gap='small' justify='center'>
           <CircleInformation color='brand' />
           <Text size='small' color='text-xweak'>扫一扫上面的二维码图案，接受转移的设备。</Text>
+        </Box>
+        <Box direction='row' justify='center'>
+          <ButtonBackToMain />
         </Box>
       </JuJiuMain>
     </Box>

@@ -16,6 +16,7 @@ import {
 import { FormNext } from 'grommet-icons';
 import { useState } from 'react';
 import { IconBack, JuJiuMain, JuJiuCard, ButtonLink } from '../../../components/Components';
+import { JuJiuItemText } from '../../../components/JuJiuItem';
 
 export default function Page() {
 	const [openAvata, setOpenAvata] = useState(false);
@@ -55,18 +56,6 @@ export default function Page() {
 								<Text size='small'>办公室</Text>
 								<FormNext color='control' />
 							</Box>
-						</Box>
-					</CardBody>
-				</JuJiuCard>
-				<JuJiuCard>
-					<CardBody>
-						<Box
-							direction='row'
-							align='center'
-							justify='between'
-						>
-							<Text>用户指南</Text>
-							<FormNext color='control' />
 						</Box>
 					</CardBody>
 				</JuJiuCard>

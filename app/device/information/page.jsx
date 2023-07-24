@@ -1,9 +1,10 @@
 'use client';
 
-import { Text, Box, Layer, Nav, CardBody, Heading, Button } from 'grommet';
-import { FormNext, Wifi, ChatOption, Run, Pan, Copy } from 'grommet-icons';
+import { Text, Box, Layer, Nav, Heading, Button } from 'grommet';
+import { Wifi, ChatOption, Run, Pan, Copy } from 'grommet-icons';
 import { useState } from 'react';
-import { IconBack, JuJiuMain, JuJiuCard } from '../../../components/Components';
+import { IconBack, JuJiuMain } from '../../../components/Components';
+import { JuJiuItemText, JuJiuItemTextArray, JuJiuItemButton, JuJiuItemBox } from '../../../components/JuJiuItem';
 
 export default function Page() {
   const [openUsn, setOpenUsn] = useState(false);
@@ -15,143 +16,36 @@ export default function Page() {
         <Text>设备信息 - 办3</Text>
       </Nav>
       <JuJiuMain>
-			<JuJiuCard>
-					<CardBody>
-						<Box
-							direction='row'
-							align='center'
-							justify='between'
-						>
-							<Text>设备型号</Text>
-							<Text size='small'>云探1</Text>
-						</Box>
-					</CardBody>
-				</JuJiuCard>
-				<JuJiuCard>
-					<CardBody>
-						<Box
-							direction='row'
-							align='center'
-							justify='between'
-						>
-							<Text>序列号</Text>
-							<Text size='small'>GF12345678</Text>
-						</Box>
-					</CardBody>
-				</JuJiuCard>
-				<JuJiuCard onClick={() => setOpenUsn(!openUsn)}>
-					<CardBody>
-						<Box
-							direction='row'
-							align='center'
-							justify='between'
-						>
-							<Text>设备统一SN</Text>
-							<Box direction='row' align='center'>
-								<FormNext color='control' />
+				<JuJiuItemText label='设备型号' value='云探1' />
+				<JuJiuItemText label='序列号' value='GF12345678' />
+				<JuJiuItemButton label='设备统一SN' onClick={() => setOpenUsn(!openUsn)} />
+				<JuJiuItemBox label='设备特性'
+					value={
+						<Box direction='row' gap='small' align='center'>
+							<Box align='center'>
+								<Wifi color='text-xweak' />
+								<Text color='text-xweak' size='small'>WiFi</Text>
+							</Box>
+							<Box align='center'>
+								<ChatOption color='text-xweak' />
+								<Text color='text-xweak' size='small'>双向语音</Text>
+							</Box>
+							<Box align='center'>
+								<Run color='text-xweak' />
+								<Text color='text-xweak' size='small'>移动侦测</Text>
+							</Box>
+							<Box align='center'>
+								<Pan color='text-xweak' />
+								<Text color='text-xweak' size='small'>云台</Text>
 							</Box>
 						</Box>
-					</CardBody>
-				</JuJiuCard>
-				<JuJiuCard>
-					<CardBody>
-						<Box
-							direction='row'
-							align='center'
-							justify='between'
-						>
-							<Text>设备特性</Text>
-							<Box direction='row' gap='small' align='center'>
-								<Box align='center'>
-									<Wifi />
-									<Text size='small'>WiFi</Text>
-								</Box>
-								<Box align='center'>
-									<ChatOption />
-									<Text size='small'>双向语音</Text>
-								</Box>
-								<Box align='center'>
-									<Run />
-									<Text size='small'>移动侦测</Text>
-								</Box>
-								<Box align='center'>
-									<Pan />
-									<Text size='small'>云台</Text>
-								</Box>
-							</Box>
-						</Box>
-					</CardBody>
-				</JuJiuCard>
-				<JuJiuCard>
-					<CardBody>
-						<Box
-							direction='row'
-							align='center'
-							justify='between'
-						>
-							<Text>设备固件版本</Text>
-							<Text size='small'>V1.0.3</Text>
-						</Box>
-					</CardBody>
-				</JuJiuCard>
-				<JuJiuCard>
-					<CardBody>
-						<Box
-							direction='row'
-							align='center'
-							justify='between'
-						>
-							<Text>设备当前WiFi</Text>
-							<Box direction='row' align='center' gap='small'>
-								<Wifi />
-								<Text size='small'>DX-OFFICE</Text>
-							</Box>
-						</Box>
-					</CardBody>
-				</JuJiuCard>
-        <JuJiuCard>
-					<CardBody>
-						<Box
-							direction='row'
-							align='center'
-							justify='between'
-						>
-							<Text>IP地址</Text>
-							<Box align='end'>
-								<Text size='small'>192.168.100.127</Text>
-								<Text size='small'>fe80::64a6:2309:8880:7903</Text>
-							</Box>
-						</Box>
-					</CardBody>
-				</JuJiuCard>
-        <JuJiuCard>
-					<CardBody>
-						<Box
-							direction='row'
-							align='center'
-							justify='between'
-						>
-							<Text>MAC地址</Text>
-							<Box align='end'>
-								<Text size='small'>6c:f1:7e:9f:83:a2</Text>
-							</Box>
-						</Box>
-					</CardBody>
-				</JuJiuCard>
-        <JuJiuCard>
-					<CardBody>
-						<Box
-							direction='row'
-							align='center'
-							justify='between'
-						>
-							<Text>已开机</Text>
-							<Box align='end'>
-								<Text size='small'>158:12:05</Text>
-							</Box>
-						</Box>
-					</CardBody>
-				</JuJiuCard>
+					}
+				/>
+				<JuJiuItemText label='设备固件版本' value='V1.0.3' />
+				<JuJiuItemText label='设备当前WiFi' value='DX-OFFICE' icon={<Wifi color='text-xweak' />} />
+				<JuJiuItemTextArray label='IP地址' value={['192.168.100.127', 'fe80::64a6:2309:8880:7903']} />
+				<JuJiuItemText label='MAC地址' value='6c:f1:7e:9f:83:a2' />
+				<JuJiuItemText label='已开机' value='158:12:05' />
       </JuJiuMain>
       {openUsn && (
         <Layer position='bottom' full='horizontal' onClickOutside={() => setOpenUsn(false)} responsive={false}>

@@ -3,7 +3,7 @@ import { CloudUpload, StatusGoodSmall, ShareRounded } from 'grommet-icons';
 import { Share } from '@styled-icons/boxicons-regular/Share';
 
 
-export function JuJiuTag({ icon, label, background }) {
+function JuJiuTag({ icon, label, background }) {
   return (
     <Tag
       border={false}

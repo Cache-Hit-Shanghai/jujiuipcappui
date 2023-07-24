@@ -52,7 +52,7 @@ export function JuJiuItemTextArray({ label, value }) {
 export function JuJiuItemButton({ label, value, onClick }) {
   return (
     <JuJiuItem label={label} onClick={onClick}>
-      <Button plain reverse pad='none' label={value} icon={<FormNext color='control' />} />
+      <Button plain reverse pad='none' label={<Text size='small' color='text-xweak'>{value}</Text>} icon={<FormNext color='control' />} />
     </JuJiuItem>
   );
 }

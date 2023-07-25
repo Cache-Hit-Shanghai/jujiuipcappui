@@ -1,8 +1,7 @@
 'use client';
 
-import { Text, Box, Heading, Tag } from 'grommet';
-import { Webcam } from 'grommet-icons';
-import { ButtonLink, AppMark } from '../../components/Components';
+import { Box, Tag } from 'grommet';
+import { ButtonLink, AppMark, AppLogo } from '../../components/Components';
 
 // 中心渐变效果，留着以后用。
 // return (
@@ -43,24 +42,12 @@ export default function Page() {
           <Tag border={false} background='background-front' size='small' value='关闭' />
         </ButtonLink>
       </Box>
-      <Box flex={{ grow: 1, shrink: 1 }} align='center' justify='center' gap='medium' background={{
+      <Box flex={{ grow: 1, shrink: 1 }} align='center' justify='center' background={{
         image: 'radial-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 1)), url(https://jujiu-prod.oss-accelerate.aliyuncs.com/11242797_49169.svg)',
         opacity: 'medium',
         size: 'cover'
       }}>
-        <Box direction='row' align='center' gap='small'>
-          <Webcam color='brand' size='xlarge' />
-          <Box align='center' gap='medium'>
-            <Heading margin='none' level={1} size='large'>云探</Heading>
-            <Box direction='row'>
-              <Tag value='IPv6' size='xsmall' background='accent-4' />
-            </Box>
-          </Box>
-        </Box>
-        <Box align='center'>
-          <Text size='large'>全球领先的Web视觉系统</Text>
-          <Text size='small'>Powered by 雎鸠云<sup>&reg;</sup></Text>
-        </Box>
+        <AppLogo />
       </Box>
       <AppMark />
     </Box>

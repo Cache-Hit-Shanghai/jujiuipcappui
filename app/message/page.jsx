@@ -2,14 +2,14 @@
 
 import { Text, Box, Nav, Tabs, Tab, List, Card, CardHeader, CardBody } from 'grommet';
 import { Inbox, Notification } from 'grommet-icons';
-import { IconBack, JuJiuMain } from '../../components/Components';
+import { IconBack, JuJiuMain, ButtonLink } from '../../components/Components';
 
 
 const notifications = [
-  { title: '服务过期提醒', date: '2023/7/24', time: '10:24', content: '办3（GF12345678）的云存储服务已过期。录像已无法访问。' },
-  { title: '服务即将到期', date: '2023/7/23', time: '04:24', content: '办3（GF12345678）的云存储服务将于1天后到期。到期后已保存的录像将无法访问。请及时续费。' },
-  { title: '服务即将到期', date: '2023/7/22', time: '21:24', content: '办3（GF12345678）的云存储服务将于7天后到期。到期后已保存的录像将无法访问。请及时续费。' },
-  { title: '设备异常提醒', date: '2023/7/21', time: '00:24', content: '办3（GF12345678）已离线。' },
+  { title: '服务过期提醒', date: '2023/7/24', time: '10:24', content: '办3（GF12345678）的云存储服务已过期。录像已无法访问。', href: '/my/cloudstorage' },
+  { title: '服务即将到期', date: '2023/7/23', time: '04:24', content: '办3（GF12345678）的云存储服务将于1天后到期。到期后已保存的录像将无法访问。请及时续费。', href: '/my/cloudstorage' },
+  { title: '服务即将到期', date: '2023/7/22', time: '21:24', content: '办3（GF12345678）的云存储服务将于7天后到期。到期后已保存的录像将无法访问。请及时续费。', href: '/my/cloudstorage' },
+  { title: '设备异常提醒', date: '2023/7/21', time: '00:24', content: '办3（GF12345678）已离线。', href: '#' },
 ];
 
 export default function Page() {
@@ -36,7 +36,9 @@ export default function Page() {
                     <Text size='small' color='text-xweak'>{datum.time}</Text>
                   </CardHeader>
                   <CardBody pad='small' background='background-contrast'>
-                    <Text>{datum.content}</Text>
+                    <ButtonLink href={datum.href}>
+                      <Text>{datum.content}</Text>
+                    </ButtonLink>
                   </CardBody>
                 </Card>
               )}

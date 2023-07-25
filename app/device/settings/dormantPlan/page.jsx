@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import {
 	Box,
 	Nav,
@@ -7,37 +7,37 @@ import {
 	CheckBox,
 	Button,
 	MaskedInput,
-} from 'grommet';
-import { Add } from 'grommet-icons';
-import { IconBack } from '@/components/Components';
-import { useState } from 'react';
-import { JuJiuCard, JuJiuMain } from '../../../../components/Components';
-import { JuJiuLayer } from '../../../../components/JuJiuLayer';
+} from "grommet";
+import { Add } from "grommet-icons";
+import { IconBack } from "@/components/Components";
+import { useState } from "react";
+import { JuJiuCard, JuJiuMain } from "../../../../components/Components";
+import { JuJiuLayer } from "../../../../components/JuJiuLayer";
 
 const timeMask = [
 	{
 		length: 2,
 		options: Array.from({ length: 24 }, (v, k) => (k >= 10 ? k : `0${k}`)),
-		regexpStr: '^2[0-3]$|^[0-1]?[0-9]$|^0$',
-		placeholder: 'hh',
+		regexpStr: "^2[0-3]$|^[0-1]?[0-9]$|^0$",
+		placeholder: "hh",
 	},
-	{ fixed: ':' },
+	{ fixed: ":" },
 	{
 		length: 2,
 		options: Array.from({ length: 60 }, (v, k) => (k >= 10 ? k : `0${k}`)),
-		regexpStr: '^[0-5][0-9]$|^[0-9]$',
-		placeholder: 'mm',
+		regexpStr: "^[0-5][0-9]$|^[0-9]$",
+		placeholder: "mm",
 	},
 ];
 
 const dayDataList = [
-	{ day: 1, text: '一' },
-	{ day: 2, text: '二' },
-	{ day: 3, text: '三' },
-	{ day: 4, text: '四' },
-	{ day: 5, text: '五' },
-	{ day: 6, text: '六' },
-	{ day: 0, text: '日' },
+	{ day: 1, text: "一" },
+	{ day: 2, text: "二" },
+	{ day: 3, text: "三" },
+	{ day: 4, text: "四" },
+	{ day: 5, text: "五" },
+	{ day: 6, text: "六" },
+	{ day: 0, text: "日" },
 ];
 
 const DormantPlan = () => {
@@ -45,65 +45,68 @@ const DormantPlan = () => {
 	const [list, setList] = useState([]);
 	const [dayList, setDayList] = useState([]);
 	const [request, setRequest] = useState({
-		start: '',
-		end: '',
+		start: "",
+		end: "",
 	});
 
 	return (
 		<Box fill>
 			{add && (
 				<JuJiuLayer
-					position='bottom'
-					full='horizontal'
+					position="bottom"
+					full="horizontal"
 					onClickOutside={() => {
 						setAdd(false);
 					}}
 					responsive={false}
 				>
-					<Box gap='medium'>
+					<Box gap="medium">
 						<Text>时间：</Text>
-						{[{ name: 'start' }, { name: 'end' }].map(
-							({ name }) => (
-								<CardBody key={name}>
-									<Box
-										direction='row'
-										align='center'
-										justify='between'
-									>
-										<Text>开始时间</Text>
-										<Box>
-											<MaskedInput
-												mask={timeMask}
-												value={request[name]}
-												onChange={({
-													target: { value },
-												}) => {
-													setRequest((r) => {
-														r[name] = value;
-														return { ...r };
-													});
-												}}
-											></MaskedInput>
-										</Box>
+						{[
+							{ name: "start", label: "开始" },
+							{ name: "end", label: "结束" },
+						].map(({ name, label }) => (
+							<CardBody key={name}>
+								<Box
+									direction="row"
+									align="center"
+									justify="between"
+								>
+									<Text style={{ minWidth: "100px" }}>
+										{label}时间
+									</Text>
+									<Box>
+										<MaskedInput
+											mask={timeMask}
+											value={request[name]}
+											onChange={({
+												target: { value },
+											}) => {
+												setRequest((r) => {
+													r[name] = value;
+													return { ...r };
+												});
+											}}
+										></MaskedInput>
 									</Box>
-								</CardBody>
-							)
-						)}
+								</Box>
+							</CardBody>
+						))}
 					</Box>
-					<Box gap='medium'>
+					<Box gap="medium">
 						<Text>每周重复：</Text>
-						<Box direction='row' justify='around'>
+						<Box direction="row" justify="around">
 							{dayDataList.map(({ day, text } = {}, i) => (
 								<Box key={text}>
 									<Button
 										label={text}
 										primary={dayList[day]?.select}
 										style={{
-											padding: '0',
-											width: '40px',
-											height: '40px',
-											borderRadius: '50%',
-											textAlign: 'center',
+											padding: "0",
+											width: "40px",
+											height: "40px",
+											borderRadius: "50%",
+											textAlign: "center",
 										}}
 										onClick={() => {
 											setDayList((list) => {
@@ -123,7 +126,7 @@ const DormantPlan = () => {
 					</Box>
 					<Box>
 						<Button
-							label='保存'
+							label="保存"
 							onClick={() => {
 								const el = {};
 								request.start.length === 5 &&
@@ -145,14 +148,14 @@ const DormantPlan = () => {
 					</Box>
 				</JuJiuLayer>
 			)}
-			<Nav direction='row' align='center'>
+			<Nav direction="row" align="center">
 				<IconBack />
 				<Text>休眠计划设置 - 办3</Text>
 			</Nav>
 			<JuJiuMain>
 				<JuJiuCard>
 					<CardBody>
-						<Box direction='row' align='center' justify='between'>
+						<Box direction="row" align="center" justify="between">
 							<Text>休眠计划</Text>
 							<CheckBox toggle />
 						</Box>
@@ -162,9 +165,9 @@ const DormantPlan = () => {
 					<JuJiuCard>
 						<CardBody>
 							<Box
-								direction='row'
-								align='center'
-								justify='between'
+								direction="row"
+								align="center"
+								justify="between"
 							>
 								<Box>
 									<Text>
@@ -179,7 +182,7 @@ const DormantPlan = () => {
 													].text
 												}`;
 											})
-											.join(',')}
+											.join(",")}
 									</Text>
 								</Box>
 							</Box>
@@ -188,7 +191,7 @@ const DormantPlan = () => {
 				))}
 				<Box>
 					<Button
-						label='添加时间段'
+						label="添加时间段"
 						icon={<Add />}
 						onClick={() => setAdd(true)}
 					/>

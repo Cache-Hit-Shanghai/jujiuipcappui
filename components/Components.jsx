@@ -570,29 +570,31 @@ export function AppFooter() {
 export function IpcCard({ label, imgurl }) {
 	return (
 		<Card>
-			<CardBody onClick={() => router.push('/device/streaming')} background='background-front'>
-				<Stack fill='horizontal' height='small'>
-					<Image fill src={imgurl} />
-					<Box direction='row' margin='medium' gap='small'>
-						<Box gap='small'>
-              <Box direction='row'>
-                <JuJiuTagDeviceOnline />
+      <Link href='/device/streaming' passHref legacyBehavior>
+        <CardBody as='a' background='background-front'>
+          <Stack fill='horizontal' height='small'>
+            <Image fill src={imgurl} />
+            <Box direction='row' margin='medium' gap='small'>
+              <Box gap='small'>
+                <Box direction='row'>
+                  <JuJiuTagDeviceOnline />
+                </Box>
+                <Box direction='row'>
+                  <JuJiuTagDeviceOffline />
+                </Box>
               </Box>
-              <Box direction='row'>
-                <JuJiuTagDeviceOffline />
+              <Box gap='small'>
+                <Box direction='row'>
+                  <JuJiuTagCloudStorageExpiring />
+                </Box>
+                <Box direction='row'>
+                  <JuJiuTagCloudStorageExpired />
+                </Box>
               </Box>
             </Box>
-						<Box gap='small'>
-              <Box direction='row'>
-                <JuJiuTagCloudStorageExpiring />
-              </Box>
-              <Box direction='row'>
-                <JuJiuTagCloudStorageExpired />
-              </Box>
-            </Box>
-					</Box>
-				</Stack>
-			</CardBody>
+          </Stack>
+        </CardBody>
+      </Link>
 			<CardFooter pad='small' align='center' justify='between' background='background-contrast'>
 				<Text>{label}</Text>
 				<Menu

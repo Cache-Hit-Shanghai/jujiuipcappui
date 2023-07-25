@@ -16,7 +16,7 @@ export default function Page() {
         <Box fill='horizontal' height='medium' background='light-6' align='center' justify='center' flex={false}>
           <Qr color='plain' size='xlarge' />
         </Box>
-        <JuJiuInformation label='扫一扫上面的二维码图案，接受转移的设备。' />
+        <JuJiuInformation label='使用云探App扫一扫上面的二维码图案，接受转移的设备。' />
         <ButtonBackToMain />
       </JuJiuMain>
     </Box>

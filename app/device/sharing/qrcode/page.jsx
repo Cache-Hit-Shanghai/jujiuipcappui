@@ -17,7 +17,7 @@ export default function Page() {
         <Box width='medium' height='medium' background='light-6' align='center' justify='center'>
           <Qr color='plain' size='xlarge' />
         </Box>
-        <JuJiuInformation label='扫一扫上面的二维码图案，接受分享的设备。' />
+        <JuJiuInformation label='使用云探App扫一扫上面的二维码图案，接受分享的设备。' />
         <ButtonBackToMain />
       </JuJiuMain>
     </Box>

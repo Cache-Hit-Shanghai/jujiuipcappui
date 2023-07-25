@@ -15,7 +15,7 @@ export default function Page() {
         <Box flex={false} fill='horizontal'>
           <Box direction='row' align='center' gap='small' justify='center'>
             <Wifi size='large' />
-            <Heading level={2} margin='none'>WiFi设置</Heading>
+            <Heading level={2}>WiFi设置</Heading>
           </Box>
           <Form>
             <FormField label='WiFi名称(SSID)' />
@@ -25,8 +25,8 @@ export default function Page() {
           </Form>
         </Box>
         <Box direction='row' gap='small' align='center' flex={false} margin={{ horizontal: 'small' }}>
-          <CircleInformation size='large' color='brand' />
-          <Text size='small' textAlign='justify'>请输入需要网络摄像机连接的WiFi名称和密码，随后点击“下一步”。</Text>
+          <CircleInformation size='large' color='accent-4' />
+          <Text size='small' color='accent-4' textAlign='justify'>请输入需要网络摄像机连接的WiFi名称和密码，随后点击“下一步”。</Text>
         </Box>
       </JuJiuMain>
       <Box direction='row' margin='small' justify='end' flex={false}>

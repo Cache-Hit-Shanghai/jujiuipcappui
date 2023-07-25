@@ -32,7 +32,7 @@ export default function Page() {
           <Layer position='bottom' full='horizontal' onClickOutside={() => setOpenGroupAdd(false)} responsive={false}>
             <Box fill border pad='medium' gap='medium'>
               <Heading level={3} alignSelf='center' margin='none'>添加分组</Heading>
-              <TextInput />
+              <TextInput placeholder='请输入分组名……' />
               <Button label='保存' primary onClick={() => setOpenGroupAdd(false)} />
             </Box>
           </Layer>
@@ -45,7 +45,7 @@ export default function Page() {
                 <Text>分组名：</Text>
                 <Box direction='row' gap='small' align='center'>
                   <Box flex={{ grow: 1, shrink: 1 }}>
-                    <TextInput />
+                    <TextInput value='办公室' />
                   </Box>
                   <Box flex={false}>
                     <Button label='重命名' />

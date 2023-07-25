@@ -28,7 +28,7 @@ export default function Page() {
           <CardBody>
             <Box direction='row' justify='between' align='center'>
               <Box align='center' gap='small'>
-                <Avatar background='graph-2'><Webcam /></Avatar>
+                <Avatar background='background-front'><Webcam /></Avatar>
                 <Text>办3</Text>
               </Box>
               <Box gap='medium'>

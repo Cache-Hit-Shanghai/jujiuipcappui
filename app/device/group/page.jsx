@@ -1,6 +1,6 @@
 'use client';
 
-import { Text, Box, Button, Nav, Layer, Heading, TextInput } from 'grommet';
+import { Text, Box, Button, Nav, Heading, TextInput } from 'grommet';
 import { useState } from 'react';
 import { IconBack, ButtonGroup, JuJiuMain } from '../../../components/Components';
 import { JuJiuLayer } from '../../../components/JuJiuLayer';

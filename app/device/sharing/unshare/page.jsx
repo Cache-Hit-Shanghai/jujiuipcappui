@@ -15,7 +15,7 @@ export default function Page() {
       <JuJiuMain>
         <CheckBox label={<Box direction='row' gap='small'><User /><Text>administrator</Text></Box>} />
       </JuJiuMain>
-      <Box margin='small'>
+      <Box margin='small' flex={false}>
         <Button label='完成' />
       </Box>
     </Box>

@@ -1,8 +1,9 @@
 'use client';
 
 import { Text, Box, Nav } from 'grommet';
-import { Qr, CircleInformation } from 'grommet-icons';
-import { IconBack, JuJiuMain } from '../../../../components/Components';
+import { Qr } from 'grommet-icons';
+import { IconBack, JuJiuMain, ButtonBackToMain } from '../../../../components/Components';
+import { JuJiuInformation } from '../../../../components/JuJiuInformation';
 
 
 export default function Page() {
@@ -16,10 +17,8 @@ export default function Page() {
         <Box width='medium' height='medium' background='light-6' align='center' justify='center'>
           <Qr color='plain' size='xlarge' />
         </Box>
-        <Box direction='row' gap='small' align='center'>
-          <CircleInformation color='brand' />
-          <Text size='small'>扫一扫上面的二维码图案，接受分享的设备。</Text>
-        </Box>
+        <JuJiuInformation label='扫一扫上面的二维码图案，接受分享的设备。' />
+        <ButtonBackToMain />
       </JuJiuMain>
     </Box>
   );

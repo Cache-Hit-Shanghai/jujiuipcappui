@@ -6,13 +6,13 @@ import {
 	CardBody,
 	CheckBox,
 	Button,
-	Layer,
 	MaskedInput,
 } from 'grommet';
 import { Add } from 'grommet-icons';
 import { IconBack } from '@/components/Components';
 import { useState } from 'react';
 import { JuJiuCard, JuJiuMain } from '../../../../components/Components';
+import { JuJiuLayer } from '../../../../components/JuJiuLayer';
 
 const timeMask = [
 	{
@@ -52,7 +52,7 @@ const DormantPlan = () => {
 	return (
 		<Box fill>
 			{add && (
-				<Layer
+				<JuJiuLayer
 					position='bottom'
 					full='horizontal'
 					onClickOutside={() => {
@@ -60,96 +60,90 @@ const DormantPlan = () => {
 					}}
 					responsive={false}
 				>
-					<Box
-					 	border
-						gap='small'
-						pad={{ vertical: '20px', horizontal: '10px' }}
-					>
-						<Box gap='small'>
-							<Text>时间</Text>
-							{[{ name: 'start' }, { name: 'end' }].map(
-								({ name }) => (
-									<CardBody key={name}>
-										<Box
-											direction='row'
-											align='center'
-											justify='between'
-										>
-											<Text>开始时间</Text>
-											<Box>
-												<MaskedInput
-													mask={timeMask}
-													value={request[name]}
-													onChange={({
-														target: { value },
-													}) => {
-														setRequest((r) => {
-															r[name] = value;
-															return { ...r };
-														});
-													}}
-												></MaskedInput>
-											</Box>
+					<Box gap='medium'>
+						<Text>时间：</Text>
+						{[{ name: 'start' }, { name: 'end' }].map(
+							({ name }) => (
+								<CardBody key={name}>
+									<Box
+										direction='row'
+										align='center'
+										justify='between'
+									>
+										<Text>开始时间</Text>
+										<Box>
+											<MaskedInput
+												mask={timeMask}
+												value={request[name]}
+												onChange={({
+													target: { value },
+												}) => {
+													setRequest((r) => {
+														r[name] = value;
+														return { ...r };
+													});
+												}}
+											></MaskedInput>
 										</Box>
-									</CardBody>
-								)
-							)}
-						</Box>
-						<Box gap='small'>
-							<Text>每周重复</Text>
-							<Box direction='row' justify='around'>
-								{dayDataList.map(({ day, text } = {}, i) => (
-									<Box key={text}>
-										<Button
-											label={text}
-											primary={dayList[day]?.select}
-											style={{
-												padding: '0',
-												width: '40px',
-												height: '40px',
-												borderRadius: '50%',
-												textAlign: 'center',
-											}}
-											onClick={() => {
-												setDayList((list) => {
-													list[day] = list[day] || {
-														select: false,
-														day,
-													};
-													list[day].select =
-														!list[day].select;
-													return Array.from(list);
-												});
-											}}
-										></Button>
 									</Box>
-								))}
-							</Box>
-						</Box>
-						<Box>
-							<Button
-								label='保存'
-								onClick={() => {
-									const el = {};
-									request.start.length === 5 &&
-										request.end.length === 5 &&
-										Object.assign(el, request);
-
-									el.dayList = dayList
-										.filter((el = {}) => el.select)
-										.map(({ day }) => day);
-									// console.log(el);
-									el.start &&
-										setList((list) => {
-											list.push(el);
-											return [...list];
-										});
-									setAdd(false);
-								}}
-							></Button>
+								</CardBody>
+							)
+						)}
+					</Box>
+					<Box gap='medium'>
+						<Text>每周重复：</Text>
+						<Box direction='row' justify='around'>
+							{dayDataList.map(({ day, text } = {}, i) => (
+								<Box key={text}>
+									<Button
+										label={text}
+										primary={dayList[day]?.select}
+										style={{
+											padding: '0',
+											width: '40px',
+											height: '40px',
+											borderRadius: '50%',
+											textAlign: 'center',
+										}}
+										onClick={() => {
+											setDayList((list) => {
+												list[day] = list[day] || {
+													select: false,
+													day,
+												};
+												list[day].select =
+													!list[day].select;
+												return Array.from(list);
+											});
+										}}
+									></Button>
+								</Box>
+							))}
 						</Box>
 					</Box>
-				</Layer>
+					<Box>
+						<Button
+							label='保存'
+							onClick={() => {
+								const el = {};
+								request.start.length === 5 &&
+									request.end.length === 5 &&
+									Object.assign(el, request);
+
+								el.dayList = dayList
+									.filter((el = {}) => el.select)
+									.map(({ day }) => day);
+								// console.log(el);
+								el.start &&
+									setList((list) => {
+										list.push(el);
+										return [...list];
+									});
+								setAdd(false);
+							}}
+						></Button>
+					</Box>
+				</JuJiuLayer>
 			)}
 			<Nav direction='row' align='center'>
 				<IconBack />

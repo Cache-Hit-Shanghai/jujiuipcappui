@@ -24,7 +24,7 @@ export default function Page() {
         <Text>设备分组</Text>
       </Nav>
       <JuJiuMain>
-        <Box flex={false} gap='small'>
+        <Box flex={false} gap='medium'>
           <ButtonGroup data={editgoups} />
           <ButtonGroup data={addgroups} />
         </Box>
@@ -34,7 +34,6 @@ export default function Page() {
               <Heading level={3} alignSelf='center' margin='none'>添加分组</Heading>
               <TextInput />
               <Button label='保存' primary onClick={() => setOpenGroupAdd(false)} />
-              
             </Box>
           </Layer>
         )}
@@ -42,7 +41,7 @@ export default function Page() {
           <Layer position='bottom' full='horizontal' onClickOutside={() => setOpenGroupEdit(false)} responsive={false}>
             <Box fill border pad='medium' gap='medium'>
               <Heading level={3} alignSelf='center' margin='none'>分组设置</Heading>
-              <Box gap='small'>
+              <Box gap='medium'>
                 <Text>分组名：</Text>
                 <Box direction='row' gap='small' align='center'>
                   <Box flex={{ grow: 1, shrink: 1 }}>

@@ -3,6 +3,7 @@
 import { Text, Box, Button, Nav, Layer, Heading, TextInput } from 'grommet';
 import { useState } from 'react';
 import { IconBack, ButtonGroup, JuJiuMain } from '../../../components/Components';
+import { JuJiuLayer } from '../../../components/JuJiuLayer';
 
 
 export default function Page() {
@@ -29,32 +30,28 @@ export default function Page() {
           <ButtonGroup data={addgroups} />
         </Box>
         {openGroupAdd && (
-          <Layer position='bottom' full='horizontal' onClickOutside={() => setOpenGroupAdd(false)} responsive={false}>
-            <Box fill border pad='medium' gap='medium'>
-              <Heading level={3} alignSelf='center' margin='none'>添加分组</Heading>
-              <TextInput placeholder='请输入分组名……' />
-              <Button label='保存' primary onClick={() => setOpenGroupAdd(false)} />
-            </Box>
-          </Layer>
+          <JuJiuLayer onClickOutside={() => setOpenGroupAdd(false)}>
+            <Heading level={3} alignSelf='center' margin='none'>添加分组</Heading>
+            <TextInput placeholder='请输入分组名……' />
+            <Button label='保存' primary onClick={() => setOpenGroupAdd(false)} />
+          </JuJiuLayer>
         )}
         {openGroupEdit && (
-          <Layer position='bottom' full='horizontal' onClickOutside={() => setOpenGroupEdit(false)} responsive={false}>
-            <Box fill border pad='medium' gap='medium'>
-              <Heading level={3} alignSelf='center' margin='none'>分组设置</Heading>
-              <Box gap='medium'>
-                <Text>分组名：</Text>
-                <Box direction='row' gap='small' align='center'>
-                  <Box flex={{ grow: 1, shrink: 1 }}>
-                    <TextInput value='办公室' />
-                  </Box>
-                  <Box flex={false}>
-                    <Button label='重命名' />
-                  </Box>
+          <JuJiuLayer onClickOutside={() => setOpenGroupEdit(false)}>
+            <Heading level={3} alignSelf='center' margin='none'>分组设置</Heading>
+            <Box gap='medium'>
+              <Text>分组名：</Text>
+              <Box direction='row' gap='small' align='center'>
+                <Box flex={{ grow: 1, shrink: 1 }}>
+                  <TextInput value='办公室' />
+                </Box>
+                <Box flex={false}>
+                  <Button label='重命名' />
                 </Box>
               </Box>
-              <Button color='status-critical' label='删除分组' />
             </Box>
-          </Layer>
+            <Button color='status-critical' label='删除分组' />
+          </JuJiuLayer>
         )}
       </JuJiuMain>
     </Box>

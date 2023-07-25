@@ -1,8 +1,9 @@
 'use client';
 
 import { Text, Box, Heading, Nav, Form, FormField, TextInput } from 'grommet';
-import { CircleInformation, Wifi } from 'grommet-icons';
+import { Wifi } from 'grommet-icons';
 import { IconBack, JuJiuMain, ButtonLink } from '../../../components/Components';
+import { JuJiuInformation } from '../../../components/JuJiuInformation';
 
 export default function Page() {
   return (
@@ -24,10 +25,7 @@ export default function Page() {
             </FormField>
           </Form>
         </Box>
-        <Box direction='row' gap='small' align='center' flex={false} margin={{ horizontal: 'small' }}>
-          <CircleInformation size='large' color='accent-4' />
-          <Text size='small' color='accent-4' textAlign='justify'>请输入需要网络摄像机连接的WiFi名称和密码，随后点击“下一步”。</Text>
-        </Box>
+        <JuJiuInformation size='large' label='请输入需要网络摄像机连接的WiFi名称和密码，随后点击“下一步”。' />
       </JuJiuMain>
       <Box direction='row' margin='small' justify='end' flex={false}>
         <ButtonLink href='/device/binding/next' label='下一步' />

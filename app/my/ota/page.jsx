@@ -1,8 +1,8 @@
 'use client';
 
-import { Text, Box, Nav, List, Button } from 'grommet';
+import { Text, Box, Nav, List } from 'grommet';
 import { Webcam } from 'grommet-icons';
-import { IconBack, JuJiuMain } from '../../../components/Components';
+import { IconBack, JuJiuMain, ButtonLink } from '../../../components/Components';
 
 
 const data = [
@@ -31,7 +31,7 @@ export default function Page() {
                 </Box>
               </Box>
               <Box>
-                <Button primary size='small' label='现在升级' />
+                <ButtonLink href='/my/ota/update' primary size='small' label='现在升级' />
               </Box>
             </Box>
           ) }

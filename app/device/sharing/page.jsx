@@ -1,10 +1,11 @@
 'use client';
 
-import { Text, Box, Nav, Layer, Button, CardBody, Avatar } from 'grommet';
+import { Text, Box, Nav, Button, CardBody, Avatar } from 'grommet';
 import { User, FormNext, Subtract } from 'grommet-icons';
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { IconBack, ButtonGroup, JuJiuMain, JuJiuCard, ButtonLink } from '../../../components/Components';
+import { JuJiuLayer } from '../../../components/JuJiuLayer';
 
 
 export default function Page() {
@@ -59,12 +60,10 @@ export default function Page() {
         <ButtonGroup data={buttons} />
         <Button label='取消所有分享' />
         {openWechatSharing && (
-          <Layer position='bottom' full='horizontal' onClickOutside={() => setOpenWechatSharing(false)} responsive={false}>
-            <Box fill border pad='medium' gap='medium'>
-              <Button label='微信好友' />
-              <Button label='朋友圈' />
-            </Box>
-          </Layer>
+          <JuJiuLayer onClickOutside={() => setOpenWechatSharing(false)}>
+            <Button label='微信好友' />
+            <Button label='朋友圈' />
+          </JuJiuLayer>
         )}
       </JuJiuMain>
     </Box>

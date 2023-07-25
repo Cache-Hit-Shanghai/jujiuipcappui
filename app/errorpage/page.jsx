@@ -2,7 +2,7 @@
 
 import { Text, Box, Heading, Tabs, Tab } from 'grommet';
 import { Alert } from 'grommet-icons';
-import { ButtonBackToMain } from '../../components/Components';
+import { ButtonBackToMain, AppMark } from '../../components/Components';
 
 
 export default function Page() {
@@ -24,10 +24,7 @@ export default function Page() {
                 <ButtonBackToMain />
               </Box>
             </Box>
-            <Box flex={false} align='center' margin='large'>
-              <Text size='large'>云探智能视觉系统<sup>&reg;</sup></Text>
-              <Text size='xsmall'>&copy;2021-2023 上海光方迅视科技有限公司 版权所有</Text>
-            </Box>
+            <AppMark />
           </Box>
         </Tab>
         <Tab title='5xx'>
@@ -45,10 +42,7 @@ export default function Page() {
                 <ButtonBackToMain />
               </Box>
             </Box>
-            <Box flex={false} align='center' margin='large'>
-              <Text size='large'>云探智能视觉系统<sup>&reg;</sup></Text>
-              <Text size='xsmall'>&copy;2021-2023 上海光方迅视科技有限公司 版权所有</Text>
-            </Box>
+            <AppMark />
           </Box>
         </Tab>
       </Tabs>

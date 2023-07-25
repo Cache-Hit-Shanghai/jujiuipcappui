@@ -1,8 +1,9 @@
 'use client';
 
 import { Text, Box, Nav } from 'grommet';
-import { Qr, CircleInformation } from 'grommet-icons';
+import { Qr } from 'grommet-icons';
 import { IconBack, JuJiuMain, ButtonBackToMain } from '../../../../../components/Components';
+import { JuJiuInformation } from '../../../../../components/JuJiuInformation';
 
 export default function Page() {
   return (
@@ -11,17 +12,12 @@ export default function Page() {
         <IconBack />
         <Text>设备转移 - 办3</Text>
       </Nav>
-      <JuJiuMain>
+      <JuJiuMain align='center'>
         <Box fill='horizontal' height='medium' background='light-6' align='center' justify='center' flex={false}>
           <Qr color='plain' size='xlarge' />
         </Box>
-        <Box direction='row' align='center' gap='small' justify='center'>
-          <CircleInformation color='brand' />
-          <Text size='small' color='text-xweak'>扫一扫上面的二维码图案，接受转移的设备。</Text>
-        </Box>
-        <Box direction='row' justify='center'>
-          <ButtonBackToMain />
-        </Box>
+        <JuJiuInformation label='扫一扫上面的二维码图案，接受转移的设备。' />
+        <ButtonBackToMain />
       </JuJiuMain>
     </Box>
   );

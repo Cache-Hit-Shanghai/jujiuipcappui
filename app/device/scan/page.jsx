@@ -2,12 +2,9 @@
 
 import { Text, Box, Nav, Avatar, Button } from 'grommet';
 import { PhotoAlbum } from '@styled-icons/material-rounded/PhotoAlbum';
-import { useRouter } from 'next/navigation';
 import { IconBack, JuJiuMain, FlashLight } from '../../../components/Components';
 
 export default function Page() {
-  const router = useRouter();
-
   return (
     <Box fill>
       <Nav direction='row' align='center'>

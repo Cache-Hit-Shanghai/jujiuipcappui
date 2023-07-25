@@ -1,6 +1,7 @@
 import {
 	Avatar,
 	Text,
+	Tag,
 	Box,
 	Card,
 	CardBody,
@@ -12,6 +13,7 @@ import {
 	Main,
 	Layer,
 	Stack,
+	Heading,
 	DropButton,
 	RangeInput,
 } from 'grommet';
@@ -54,6 +56,37 @@ import {
 import styles from './components.module.css';
 
 // console.log('styles', styles);
+
+export function AppLogo() {
+	return (
+		<Box gap='large'>
+			<Box direction='row' align='center' justify='center' gap='small'>
+				<Webcam color='brand' size='xlarge' />
+				<Box align='center' gap='medium'>
+					<Heading margin='none' level={1} size='large'>云探</Heading>
+					<Box direction='row'>
+						<Tag value='IPv6' size='xsmall' background='accent-4' />
+					</Box>
+				</Box>
+			</Box>
+			<Box align='center'>
+				<Text size='large'>全球领先的Web视觉系统</Text>
+				<Text size='small'>Powered by 雎鸠云<sup>&reg;</sup></Text>
+			</Box>
+		</Box>
+	);
+}
+
+export function AppMark() {
+	return (
+		<Box flex={false} align='center' margin='large'>
+			<Box direction='row' gap='small' align='center'>
+				<Text size='large'>云探智能视觉系统<sup>&reg;</sup></Text>
+			</Box>
+			<Text size='xsmall'>&copy;2021-2023 上海光方迅视科技有限公司 版权所有</Text>
+		</Box>
+	);
+}
 
 export function ButtonLink({ href, children, ...props }) {
 	return (
@@ -444,6 +477,7 @@ export function ButtonGroup({ data }) {
 						<Button
 							icon={<FormNext color='control' />}
 							label={datum.label}
+							disabled={!!datum.disabled}
 							reverse
 							plain
 							justify='between'

@@ -1,9 +1,10 @@
 'use client';
 
-import { Box, Nav, Stack, Text } from 'grommet';
-import { Trash, ShareRounded, CircleInformation, CirclePlay } from 'grommet-icons';
+import { Box, Nav, Stack } from 'grommet';
+import { Trash, ShareRounded, CirclePlay } from 'grommet-icons';
 import { useSearchParams } from 'next/navigation';
 import { IconBack, JuJiuMain, IconButton } from '../../../../components/Components';
+import { JuJiuInformation } from '../../../../components/JuJiuInformation';
 
 
 export default function Page() {
@@ -22,10 +23,7 @@ export default function Page() {
             {type === 'video' && <Box><CirclePlay size='large' /></Box>}
           </Stack>
         </Box>
-        <Box direction='row' align='center' gap='small' margin='medium' alignSelf='center'>
-          <CircleInformation color='brand' />
-          <Text size='small' color='text-xweak'>长按后选择“下载”可以下载图片或者视频。</Text>
-        </Box>
+        <JuJiuInformation alignSelf='center' label='长按后选择“下载”可以下载图片或者视频。' />
         <Box direction='row' justify='evenly' background='background-contrast' flex={false}>
           <IconButton icon={<ShareRounded />} label='分享' onClick={() => {}} />
           <IconButton icon={<Trash />} label='删除' onClick={() => {}} />

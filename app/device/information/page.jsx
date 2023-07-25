@@ -1,10 +1,11 @@
 'use client';
 
-import { Text, Box, Layer, Nav, Heading, Button } from 'grommet';
+import { Text, Box, Nav, Heading, Button } from 'grommet';
 import { Wifi, ChatOption, Run, Pan, Copy } from 'grommet-icons';
 import { useState } from 'react';
 import { IconBack, JuJiuMain } from '../../../components/Components';
 import { JuJiuItemText, JuJiuItemTextArray, JuJiuItemButton, JuJiuItem } from '../../../components/JuJiuItem';
+import { JuJiuLayer } from '../../../components/JuJiuLayer';
 
 export default function Page() {
   const [openUsn, setOpenUsn] = useState(false);
@@ -46,17 +47,13 @@ export default function Page() {
 				<JuJiuItemText label='已开机' value='158:12:05' />
       </JuJiuMain>
       {openUsn && (
-        <Layer position='bottom' full='horizontal' onClickOutside={() => setOpenUsn(false)} responsive={false}>
-          <Box fill border pad='medium' gap='medium'>
-            <Box direction='row' justify='between'>
-							<Heading alignSelf='center' margin='none' level={2}>设备统一SN</Heading>
-							<Button icon={<Copy />} />
-						</Box>
-            <Box border pad='small'>
-              <Text size='small' wordBreak='break-all' textAlign='justify' color='text-xweak'>jujiucloud.f7934b38-82ac-4059-9382-c70b38b15cdd.1689058115620.EKQF230ZsIk-fwmFkWyQ0</Text>
-            </Box>
-          </Box>
-        </Layer>
+        <JuJiuLayer onClickOutside={() => setOpenUsn(false)}>
+					<Heading  level={3} alignSelf='center' margin='none'>设备统一SN</Heading>
+					<Box border pad='small' gap='small' direction='row'>
+						<Text size='small' wordBreak='break-all' textAlign='justify' color='text-xweak'>jujiucloud.f7934b38-82ac-4059-9382-c70b38b15cdd.1689058115620.EKQF230ZsIk-fwmFkWyQ0</Text>
+						<Button pad='none' icon={<Copy />} />
+					</Box>
+        </JuJiuLayer>
       )}
     </Box>
   );

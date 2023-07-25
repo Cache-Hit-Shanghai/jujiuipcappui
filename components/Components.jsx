@@ -455,6 +455,7 @@ export function ButtonGroup({ data }) {
 						<Button
 							icon={<FormNext color='control' />}
 							label={datum.label}
+							disabled={!!datum.disabled}
 							reverse
 							plain
 							justify='between'

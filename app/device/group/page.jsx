@@ -10,8 +10,8 @@ export default function Page() {
   const [ openGroupEdit, setOpenGroupEdit ] = useState(false);
 
   const editgoups = [
+    { label: '默认分组', disabled: true, onClick: () => setOpenGroupEdit(true) },
     { label: '办公室', onClick: () => setOpenGroupEdit(true) },
-    { label: '默认分组', onClick: () => setOpenGroupEdit(true) },
   ];
   const addgroups = [
     { label: '添加分组', onClick: () => setOpenGroupAdd(true) },
@@ -33,10 +33,8 @@ export default function Page() {
             <Box fill border pad='medium' gap='medium'>
               <Heading level={3} alignSelf='center' margin='none'>添加分组</Heading>
               <TextInput />
-              <Box direction='row' justify='evenly'>
-                <Button label='取消' onClick={() => setOpenGroupAdd(false)} />
-                <Button label='保存' primary onClick={() => setOpenGroupAdd(false)} />
-              </Box>
+              <Button label='保存' primary onClick={() => setOpenGroupAdd(false)} />
+              
             </Box>
           </Layer>
         )}

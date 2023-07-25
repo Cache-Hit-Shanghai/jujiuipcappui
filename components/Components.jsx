@@ -568,7 +568,6 @@ export function AppFooter() {
 }
 
 export function IpcCard({ label, imgurl }) {
-	const router = useRouter();
 	return (
 		<Card>
 			<CardBody onClick={() => router.push('/device/streaming')} background='background-front'>
@@ -601,19 +600,16 @@ export function IpcCard({ label, imgurl }) {
 					icon={<Settings3 size='24' />}
 					items={[
 						{
-							label: '设备分享',
+							label: <Link href='/device/sharing' passHref legacyBehavior><Text>设备分享</Text></Link>,
 							icon: (<ShareRounded />),
-							onClick: () => router.push('/device/sharing'),
 						},
 						{
-							label: '设备设置',
+							label: <Link href='/device/settings' passHref legacyBehavior><Text>设备设置</Text></Link>,
 							icon: (<SettingsOutline size='24' />),
-							onClick: () => router.push('/device/settings'),
 						},
 						{
-							label: '设备信息',
+							label: <Link href='/device/information' passHref legacyBehavior><Text>设备信息</Text></Link>,
 							icon: (<Info />),
-							onClick: () => router.push('/device/information'),
 						},
 					]}
 				/>

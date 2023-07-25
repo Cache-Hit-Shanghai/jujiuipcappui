@@ -3,13 +3,11 @@
 import { Text, Box, Nav, Menu, Accordion, AccordionPanel, Heading } from 'grommet';
 import { AddCircle, Mail, Add, Scan } from 'grommet-icons';
 import { Group } from '@styled-icons/fluentui-system-regular/Group';
-import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 import { AppFooter, IpcCard, JuJiuMain, ButtonLink } from '../components/Components';
 import { JuJiuTagFromShared, JuJiuTagSharing } from '../components/JuJiuTags';
 
 export default function Page() {
-  const router = useRouter();
-
   return (
     <Box fill>
       <Nav direction='row' justify='between' align='center' background='background-contrast'>
@@ -21,9 +19,9 @@ export default function Page() {
           <Menu
             dropProps={{ align: { top: 'bottom', right: 'right' } }}
             icon={<AddCircle />} items={[
-              { label: '添加设备', icon: (<Add />), onClick: () => router.push('/device/binding') },
-              { label: '设备分组', icon: (<Group size='24' />), onClick: () => router.push('/device/group') },
-              { label: '扫一扫', icon: (<Scan />), onClick: () => router.push('/device/scan') },
+              { label: <Link href='/device/binding' passHref legacyBehavior><Text>添加设备</Text></Link>, icon: (<Add />) },
+              { label: <Link href='/device/group' passHref legacyBehavior><Text>设备分组</Text></Link>, icon: (<Group size='24' />) },
+              { label: <Link href='/device/scan' passHref legacyBehavior><Text>扫一扫</Text></Link>, icon: (<Scan />) },
             ]}
           />
         </Box>

@@ -55,6 +55,17 @@ import styles from './components.module.css';
 
 // console.log('styles', styles);
 
+export function AppMark() {
+	return (
+		<Box flex={false} align='center' margin='large'>
+			<Box direction='row' gap='small' align='center'>
+				<Text size='large'>云探智能视觉系统<sup>&reg;</sup></Text>
+			</Box>
+			<Text size='xsmall'>&copy;2021-2023 上海光方迅视科技有限公司 版权所有</Text>
+		</Box>
+	);
+}
+
 export function ButtonLink({ href, children, ...props }) {
 	return (
 		<Link href={href} passHref legacyBehavior>

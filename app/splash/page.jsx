@@ -2,7 +2,7 @@
 
 import { Text, Box, Heading, Tag } from 'grommet';
 import { Webcam } from 'grommet-icons';
-import { ButtonLink } from '../../components/Components';
+import { ButtonLink, AppMark } from '../../components/Components';
 
 // 中心渐变效果，留着以后用。
 // return (
@@ -50,20 +50,19 @@ export default function Page() {
       }}>
         <Box direction='row' align='center' gap='small'>
           <Webcam color='brand' size='xlarge' />
-          <Heading level={1} size='large'>云探</Heading>
+          <Box align='center' gap='medium'>
+            <Heading margin='none' level={1} size='large'>云探</Heading>
+            <Box direction='row'>
+              <Tag value='IPv6' size='xsmall' background='accent-4' />
+            </Box>
+          </Box>
         </Box>
         <Box align='center'>
           <Text size='large'>全球领先的Web视觉系统</Text>
           <Text size='small'>Powered by 雎鸠云<sup>&reg;</sup></Text>
         </Box>
       </Box>
-      <Box flex={false} align='center' margin='large'>
-        <Box direction='row' gap='small' align='center'>
-          <Text size='large'>云探智能视觉系统<sup>&reg;</sup></Text>
-          <Tag value='IPv6' size='xsmall' background='accent-4' />
-        </Box>
-        <Text size='xsmall'>&copy;2021-2023 上海光方迅视科技有限公司 版权所有</Text>
-      </Box>
+      <AppMark />
     </Box>
   );
 }

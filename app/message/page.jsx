@@ -1,6 +1,6 @@
 'use client';
 
-import { Text, Box, Nav, Tabs, Tab, List, Card, CardHeader, CardBody } from 'grommet';
+import { Text, Box, Nav, Tabs, Tab, List, Card, CardHeader, CardBody, Button } from 'grommet';
 import { Inbox, Notification } from 'grommet-icons';
 import { IconBack, JuJiuMain, ButtonLink } from '../../components/Components';
 
@@ -21,13 +21,13 @@ export default function Page() {
       </Nav>
       <JuJiuMain>
         <Tabs flex>
-          <Tab title='消息'>
+          <Tab title={<Box pad={{ top: 'medium' }}><Button plain label='消息' icon={<Inbox />} badge={0} /></Box>}>
             <Box fill align='center' justify='center' gap='small'>
               <Inbox size='large' />
               <Text>还没有消息哦</Text>
             </Box>
           </Tab>
-          <Tab title='通知'>
+          <Tab pad='medium' title={<Box pad={{ top: 'medium' }}><Button plain label='通知' icon={<Notification />} badge={4} /></Box>}>
             <List data={notifications} pad={{ vertical: 'small' }} border={false} gap='medium'>
               {(datum) => (
                 <Card>

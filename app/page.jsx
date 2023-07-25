@@ -17,7 +17,7 @@ export default function Page() {
           <Heading level={2} margin='none'>云探智能视觉系统</Heading>
         </Box>
         <Box direction='row' gap='small' align='center'>
-          <ButtonLink href='/message' icon={<Mail />} />
+          <ButtonLink href='/message' icon={<Mail />} badge={4} />
           <Menu
             dropProps={{ align: { top: 'bottom', right: 'right' } }}
             icon={<AddCircle />} items={[

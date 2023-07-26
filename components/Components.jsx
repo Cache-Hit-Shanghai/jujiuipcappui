@@ -24,6 +24,7 @@ import {
 	Webcam,
 	ZoomIn,
 	Info,
+	Cycle,
 	FormNext,
 	Volume,
 	VolumeLow,
@@ -558,11 +559,8 @@ export function AppFooter() {
 			<IconLInk icon={<Webcam />} label='设备' url='/' />
 			<IconLInk icon={<Radial />} label='我的' url='/my' />
 			<IconLInk icon={<Home />} label='主页' url='/splash' />
-			<IconLInk
-				icon={<StatusCritical />}
-				label='错误页'
-				url='/errorpage'
-			/>
+			<IconLInk icon={<StatusCritical />} label='错误页' url='/errorpage' />
+			<IconLInk icon={<Cycle />} label='繁忙页' url='/busy' />
 		</Box>
 	);
 }

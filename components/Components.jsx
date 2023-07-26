@@ -603,15 +603,15 @@ export function IpcCard({ label, imgurl }) {
 					items={[
 						{
 							label: <Link href='/device/sharing' passHref legacyBehavior><Text>设备分享</Text></Link>,
-							icon: (<ShareRounded />),
+							icon: <Box margin={{ right: 'small' }}><ShareRounded /></Box>,
 						},
 						{
 							label: <Link href='/device/settings' passHref legacyBehavior><Text>设备设置</Text></Link>,
-							icon: (<SettingsOutline size='24' />),
+							icon: <Box margin={{ right: 'small' }}><SettingsOutline size='24' /></Box>,
 						},
 						{
 							label: <Link href='/device/information' passHref legacyBehavior><Text>设备信息</Text></Link>,
-							icon: (<Info />),
+							icon: <Box margin={{ right: 'small' }}><Info /></Box>,
 						},
 					]}
 				/>

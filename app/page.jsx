@@ -19,9 +19,9 @@ export default function Page() {
           <Menu
             dropProps={{ align: { top: 'bottom', right: 'right' } }}
             icon={<AddCircle />} items={[
-              { label: <Link href='/device/binding' passHref legacyBehavior><Text>添加设备</Text></Link>, icon: (<Add />) },
-              { label: <Link href='/device/group' passHref legacyBehavior><Text>设备分组</Text></Link>, icon: (<Group size='24' />) },
-              { label: <Link href='/device/scan' passHref legacyBehavior><Text>扫一扫</Text></Link>, icon: (<Scan />) },
+              { label: <Link href='/device/binding' passHref legacyBehavior><Text>添加设备</Text></Link>, icon: <Box margin={{ right: 'small' }}><Add /></Box> },
+              { label: <Link href='/device/group' passHref legacyBehavior><Text>设备分组</Text></Link>, icon: <Box margin={{ right: 'small' }}><Group size='24' /></Box> },
+              { label: <Link href='/device/scan' passHref legacyBehavior><Text>扫一扫</Text></Link>, icon: <Box margin={{ right: 'small' }}><Scan /></Box> },
             ]}
           />
         </Box>

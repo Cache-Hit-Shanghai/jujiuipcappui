@@ -1,10 +1,10 @@
 'use client';
 
-import { Text, Box, TextInput , Nav, Button, List, Tag, Pagination } from 'grommet';
-import { Search, Add } from 'grommet-icons';
+import { Text, Box, TextInput , Nav, Button, List, Tag, Pagination, Menu } from 'grommet';
+import { Search, Add, MoreVertical, Chat } from 'grommet-icons';
 import { Article } from '@styled-icons/remix-fill/Article';
 import Link from "next/link";
-import { IconBack, JuJiuMain, ButtonLink } from '../../../components/Components';
+import { IconBack, JuJiuMain } from '../../../components/Components';
 
 const data = [
   { title: '如何使用“设备转移”？', createdBy: 'Jim', date: '2023/7/1' },
@@ -27,7 +27,16 @@ export default function Page() {
           <IconBack />
           <Text>帮助与反馈</Text>
         </Box>
-        <ButtonLink href='/my/feedback/new' size='small' margin='small' label='新建问题' icon={<Add />} />
+        <Menu
+          icon={<MoreVertical />}
+          dropAlign={{ top: 'bottom', right: 'right' }}
+          items={[
+            { label: <Link href='/my/feedback/new' passHref legacyBehavior><Text>新建问题</Text></Link>, icon: <Box margin={{ right: 'small' }}><Add /></Box> },
+            { label: <Link href='#' passHref legacyBehavior><Text>我的问题</Text></Link>, icon: <Box margin={{ right: 'small' }}><Article size='24' /></Box> },
+            { label: <Link href='#' passHref legacyBehavior><Text>我的回复</Text></Link>, icon: <Box margin={{ right: 'small' }}><Chat /></Box> },
+          ]}
+        />
+        {/* <ButtonLink href='/my/feedback/new' size='small' margin='small' label='新建问题' icon={<Add />} /> */}
       </Nav>
       <Box border flex={false} direction='row' align='center' margin={{ horizontal: 'small' }}>
         <TextInput plain icon={<Search />} placeholder='搜索问题……' />

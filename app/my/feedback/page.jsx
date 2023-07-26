@@ -36,7 +36,6 @@ export default function Page() {
             { label: <Link href='#' passHref legacyBehavior><Text>我的回复</Text></Link>, icon: <Box margin={{ right: 'small' }}><Chat /></Box> },
           ]}
         />
-        {/* <ButtonLink href='/my/feedback/new' size='small' margin='small' label='新建问题' icon={<Add />} /> */}
       </Nav>
       <Box border flex={false} direction='row' align='center' margin={{ horizontal: 'small' }}>
         <TextInput plain icon={<Search />} placeholder='搜索问题……' />

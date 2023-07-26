@@ -1,6 +1,7 @@
 import { Tag, Box, Text } from 'grommet';
 import { CloudUpload, StatusGoodSmall, ShareRounded } from 'grommet-icons';
 import { Share } from '@styled-icons/boxicons-regular/Share';
+import Link from 'next/link';
 
 
 function JuJiuTag({ icon, label, background }) {
@@ -17,6 +18,17 @@ function JuJiuTag({ icon, label, background }) {
         </Box>
       }
     />
+  );
+}
+
+function JuJiuLinkTag({ href, icon, label, background }) {
+  return (
+    <Link href={href} passHref legacyBehavior>
+      <Box as='a'>
+        <JuJiuTag icon={icon} label={label} background={background} />
+      </Box>
+    </Link>
+
   );
 }
 
@@ -42,17 +54,19 @@ export function JuJiuTagFromShared() {
 
 export function JuJiuTagCloudStorageExpired() {
   return (
-    <JuJiuTag
+    <JuJiuLinkTag
+      href='/my/cloudstorage'
       background='status-error'
       icon={<CloudUpload size='small' />}
-      label='云存储过期'
+      label='云存储已过期'
     />
   );
 }
 
 export function JuJiuTagCloudStorageExpiring() {
   return (
-    <JuJiuTag
+    <JuJiuLinkTag
+      href='/my/cloudstorage'
       background='status-warning'
       icon={<CloudUpload size='small' />}
       label='云存储即将过期'
@@ -65,7 +79,7 @@ export function JuJiuTagDeviceOnline() {
     <JuJiuTag
       background='light-6'
       icon={<StatusGoodSmall color='graph-1' size='small' />}
-      label='工作中'
+      label='在线'
     />
   );
 }

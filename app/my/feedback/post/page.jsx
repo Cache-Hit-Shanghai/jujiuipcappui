@@ -26,7 +26,7 @@ export default function Page() {
           <Box flex={false}><Button label='编辑' /></Box>
         </Box>
         <Box direction='row' justify='between'>
-          <Box direction='row' gap='small'>
+          <Box direction='row' gap='small' align='center'>
             <Tag border={false} background='graph-4' size='xsmall' value='bug' />
             <Tag border={false} background='graph-3' size='xsmall' value='建议' />
             <Tag border={false} background='graph-2' size='xsmall' value='功能' />

@@ -15,6 +15,7 @@ import {
 } from 'grommet';
 import { Camera, Cloud, Sd, Expand, Download, RadialSelected, ShareRounded } from 'grommet-icons';
 import { Settings3 } from '@styled-icons/remix-fill/Settings3';
+import { PhoneLandscape } from '@styled-icons/bootstrap/PhoneLandscape';
 import { useState } from 'react';
 import {
 	ButtonLink,
@@ -66,7 +67,7 @@ export default function Page() {
 							</Box>
 						</Stack>
 						<Box align='end'>
-							<ButtonLink href='/device/streaming/fullscreen' icon={<Expand />} />
+							<ButtonLink href='/device/streaming/fullscreen' icon={<PhoneLandscape size='24' />} />
 						</Box>
 					</Box>
 				</Stack>

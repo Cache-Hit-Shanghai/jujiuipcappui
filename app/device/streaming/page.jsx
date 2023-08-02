@@ -13,7 +13,8 @@ import {
 	Grid,
 	Stack,
 } from 'grommet';
-import { Camera, Cloud, Sd, Expand, Download, RadialSelected } from 'grommet-icons';
+import { Camera, Cloud, Sd, Expand, Download, RadialSelected, ShareRounded } from 'grommet-icons';
+import { Settings3 } from '@styled-icons/remix-fill/Settings3';
 import { useState } from 'react';
 import {
 	ButtonLink,
@@ -48,16 +49,22 @@ export default function Page() {
 						</VideoCanvas>
 					</Box>
 					<Box fill justify='between'>
-						<Box direction='row' justify='center'>
-							<Tag margin='small' pad='xsmall' size='xsmall' border={false} background='status-critical'
-								value={
-									<Box direction='row' gap='small' align='center'>
-										<RadialSelected size='small' />
-										<Text size='xsmall'>0:41</Text>
-									</Box>
-								}
-							/>
-						</Box>
+						<Stack>
+							<Box direction='row' justify='center'>
+								<Tag margin='small' pad='xsmall' size='xsmall' border={false} background='status-critical'
+									value={
+										<Box direction='row' gap='small' align='center'>
+											<RadialSelected size='small' />
+											<Text size='xsmall'>0:41</Text>
+										</Box>
+									}
+								/>
+							</Box>
+							<Box direction='row' justify='end'>
+								<ButtonLink href='/device/sharing' icon={<ShareRounded />} />
+								<ButtonLink href='/device/settings' icon={<Settings3 size='24' />} />
+							</Box>
+						</Stack>
 						<Box align='end'>
 							<ButtonLink href='/device/streaming/fullscreen' icon={<Expand />} />
 						</Box>

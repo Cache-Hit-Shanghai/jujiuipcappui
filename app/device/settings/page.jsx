@@ -50,6 +50,9 @@ export default function Page() {
 				<JuJiuItem label='画面翻转'>
 					<CheckBox toggle />
 				</JuJiuItem>
+				<JuJiuItem label='人形追踪'>
+					<CheckBox toggle />
+				</JuJiuItem>
 				<JuJiuItem label='设备音量'>
 					<Box><RangeInput /></Box>
 				</JuJiuItem>

@@ -1,3 +1,5 @@
+'use client';
+
 import { Grommet, grommet } from 'grommet';
 import StyledComponentsRegistry from '../components/registry';
 

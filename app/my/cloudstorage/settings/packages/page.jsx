@@ -1,11 +1,7 @@
 'use client';
 
-import { Text, Box, Nav, List, Card, CardHeader, CardBody, CheckBox, Button, Stack, Tag } from 'grommet';
-import { Alipay } from '@styled-icons/remix-fill/Alipay';
-import { WechatPay } from '@styled-icons/remix-line/WechatPay';
-import Link from 'next/link';
+import { Text, Box, Nav, List, Tag } from 'grommet';
 import { IconBack, JuJiuMain } from '../../../../../components/Components';
-import { JuJiuItem, JuJiuItemButton, JuJiuItemLink } from '../../..//../../components/JuJiuItem';
 
 
 const packages = [

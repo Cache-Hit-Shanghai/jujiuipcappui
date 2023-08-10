@@ -27,7 +27,7 @@ export default function Page() {
             <Box direction='row' gap='small' align='center' justify='between'>
               <Box direction='row' align='center' gap='small'>
                 <Text>{datum.title}</Text>
-                {datum.current && <Tag size='small' background='status-ok' border={false} value='当前套餐' />}
+                {datum.current && <Tag size='xsmall' background='status-ok' border={false} value='当前套餐' />}
               </Box>
               <Box>
                 <Text size='small' color='text-xweak'>{datum.start}</Text>

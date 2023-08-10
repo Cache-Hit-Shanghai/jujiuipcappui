@@ -2,16 +2,14 @@
 
 import { Text, Box, Heading, Nav, Card, CardHeader, CardBody, CardFooter, Avatar, Tag } from 'grommet';
 import { Webcam } from 'grommet-icons';
-import { Settings3 } from '@styled-icons/remix-fill/Settings3';
 import { IconBack, JuJiuMain, ButtonLink } from '../../../components/Components';
 
 
 export default function Page() {
   return (
     <Box fill>
-      <Nav direction='row' align='center' justify='between'>
+      <Nav direction='row' align='center'>
         <IconBack />
-        <ButtonLink href='/my/cloudstorage/settings' icon={<Settings3 size='24' />} />
       </Nav>
       <JuJiuMain gap='medium'>
         <Box>
@@ -46,6 +44,7 @@ export default function Page() {
             </Box>
           </CardBody>
           <CardFooter justify='center'>
+            <ButtonLink primary href='/my/cloudstorage/settings' label='设置' />
             <ButtonLink primary href='/my/cloudstorage/pay' label='续订' />
           </CardFooter>
         </Card>

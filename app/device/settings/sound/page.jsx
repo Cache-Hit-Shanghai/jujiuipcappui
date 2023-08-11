@@ -31,9 +31,9 @@ export default function Page() {
 							alignSelf='center'
 							margin='none'
 						>
-							设备音量
+							{`设备音量(${volumn})`}
 						</Heading>
-						<Box>
+						<Box pad='large'>
               <RangeInput value={volumn} onChange={e => setVolumn(e.target.value)} />
             </Box>
 					</JuJiuLayer>

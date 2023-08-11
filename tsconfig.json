@@ -28,7 +28,7 @@
     ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx",
-    "app/device/settings/dormantPlan/page.jsx"
+    "app/device/settings/privacy/dormantPlan/page.jsx"
   ],
   "exclude": ["node_modules", ".github", ".next"]
 }

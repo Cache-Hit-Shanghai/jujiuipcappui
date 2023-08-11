@@ -8,12 +8,10 @@ import {
 	Button,
 	Heading,
 	TextArea,
-	CheckBox,
-	RangeInput,
 } from 'grommet';
 import { useState } from 'react';
 import { IconBack, JuJiuMain } from '../../../components/Components';
-import { JuJiuItem, JuJiuItemButton, JuJiuItemLink } from '../../../components/JuJiuItem';
+import { JuJiuItemButton, JuJiuItemLink } from '../../../components/JuJiuItem';
 import { JuJiuLayer } from '../../../components/JuJiuLayer';
 
 export default function Page() {
@@ -27,46 +25,23 @@ export default function Page() {
 				<Text>设备设置 - 办3</Text>
 			</Nav>
 			<JuJiuMain>
+				<Heading level={2} margin='none'>功能设置</Heading>
+				<JuJiuItemLink label='智能检测' href='/device/settings/ai' />
+				<JuJiuItemLink label='消息通知' href='/device/settings/notification' />
+				<JuJiuItemLink label='声音设置' href='/device/settings/sound' />
+				<JuJiuItemLink label='画面设置' href='/device/settings/video' />
+				<JuJiuItemLink label='灯光设置' href='/device/settings/light' />
+				<JuJiuItemLink label='云台设置' href='/device/settings/platform' />
+				<JuJiuItemLink label='录像设置' href='/device/settings/record' />
+				<hr width='100%' />
+				<Heading level={2} margin='none'>通用设置</Heading>
 				<JuJiuItemButton label='设备名称' value='办3' onClick={() => setOpenAvata(!openAvata)} />
 				<JuJiuItemButton label='分组' value='办公室' onClick={() => setOpenName(!openName)} />
-				<JuJiuItem label='固件自动升级'>
-					<CheckBox toggle />
-				</JuJiuItem>
-				<JuJiuItem label='视频水印(OSD)'>
-					<CheckBox toggle />
-				</JuJiuItem>
-				<JuJiuItem label='镜头畸变修正'>
-					<CheckBox toggle />
-				</JuJiuItem>
-				<JuJiuItem label='视频宽动态(WDR)'>
-					<CheckBox toggle />
-				</JuJiuItem>
-				<JuJiuItem label='设备语音提示'>
-					<CheckBox toggle />
-				</JuJiuItem>
-				<JuJiuItem label='设备状态灯'>
-					<CheckBox toggle />
-				</JuJiuItem>
-				<JuJiuItem label='画面翻转'>
-					<CheckBox toggle />
-				</JuJiuItem>
-				<JuJiuItem label='人形追踪'>
-					<CheckBox toggle />
-				</JuJiuItem>
-				<JuJiuItem label='设备音量'>
-					<Box><RangeInput /></Box>
-				</JuJiuItem>
-				<JuJiuItem label='休眠'>
-					<CheckBox toggle />
-				</JuJiuItem>
-				<JuJiuItemLink label='休眠计划' href='/device/settings/dormantPlan' />
-				<JuJiuItem label='云台位置校准'>
-					<Button primary size='small' label='校准' />
-				</JuJiuItem>
-				<JuJiuItem label='重启设备'>
-					<Button primary size='small' label='重启' />
-				</JuJiuItem>
+				<JuJiuItemLink label='隐私设置' href='/device/settings/privacy' />
+				<JuJiuItemLink label='固件升级' href='/device/settings/ota' />
+				<JuJiuItemLink label='设备分享' href='/device/settings/sharing' />
 				<JuJiuItemLink label='设备转移' href='/device/settings/transfer' />
+				<Button color='status-warning' label='重启设备' />
 				<Button color='status-critical' label='删除设备' />
 				{openAvata && (
 					<JuJiuLayer

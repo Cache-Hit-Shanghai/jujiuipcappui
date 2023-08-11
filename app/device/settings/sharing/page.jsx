@@ -4,15 +4,15 @@ import { Text, Box, Nav, Button, CardBody, Avatar } from 'grommet';
 import { User, FormNext, Subtract } from 'grommet-icons';
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { IconBack, ButtonGroup, JuJiuMain, JuJiuCard, ButtonLink } from '../../../components/Components';
-import { JuJiuLayer } from '../../../components/JuJiuLayer';
+import { IconBack, ButtonGroup, JuJiuMain, JuJiuCard, ButtonLink } from '../../../../components/Components';
+import { JuJiuLayer } from '../../../../components/JuJiuLayer';
 
 
 export default function Page() {
   const router = useRouter();
   const [ openWechatSharing, setOpenWechatSharing ] = useState(false);
   const buttons = [
-    { label: '二维码分享', onClick: () => router.push('/device/sharing/qrcode') },
+    { label: '二维码分享', onClick: () => router.push('/device/settings/sharing/qrcode') },
     { label: '微信分享', onClick: () => setOpenWechatSharing(true) },
   ];
 
@@ -33,7 +33,7 @@ export default function Page() {
                 </Avatar>
                 <Text size='small' truncate>administrator</Text>
               </Box>
-              <ButtonLink href='/device/sharing/unshare'>
+              <ButtonLink href='/device/settings/sharing/unshare'>
                 <Box>
                   <Avatar round='small' border>
                     <Subtract />

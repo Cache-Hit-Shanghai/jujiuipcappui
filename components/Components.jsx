@@ -600,10 +600,6 @@ export function IpcCard({ label, imgurl }) {
 					icon={<Settings3 size='24' />}
 					items={[
 						{
-							label: <Link href='/device/sharing' passHref legacyBehavior><Text>设备分享</Text></Link>,
-							icon: <Box margin={{ right: 'small' }}><ShareRounded /></Box>,
-						},
-						{
 							label: <Link href='/device/settings' passHref legacyBehavior><Text>设备设置</Text></Link>,
 							icon: <Box margin={{ right: 'small' }}><SettingsOutline size='24' /></Box>,
 						},

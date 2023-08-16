@@ -12,8 +12,9 @@ import {
 	RadioButtonGroup,
 	Grid,
 	Stack,
+	Spinner,
 } from 'grommet';
-import { Camera, Cloud, Sd, Expand, Download, RadialSelected, ShareRounded } from 'grommet-icons';
+import { Camera, Cloud, Sd, Download, RadialSelected, ShareRounded, StatusCritical } from 'grommet-icons';
 import { Settings3 } from '@styled-icons/remix-fill/Settings3';
 import { PhoneLandscape } from '@styled-icons/bootstrap/PhoneLandscape';
 import { useState } from 'react';
@@ -66,6 +67,11 @@ export default function Page() {
 								<ButtonLink href='/device/settings' icon={<Settings3 size='24' />} />
 							</Box>
 						</Stack>
+						<Box align='center'>
+							<Spinner size='large' />
+							<StatusCritical size='large' />
+							<Text>无法加载视频流。</Text>
+						</Box>
 						<Box align='end'>
 							<ButtonLink href='/device/streaming/fullscreen' icon={<PhoneLandscape size='24' />} />
 						</Box>

@@ -63,7 +63,7 @@ export default function Page() {
 							alignSelf='center'
 							margin='none'
 						>
-							更改备注名称
+							编辑
 						</Heading>
 						<Box direction='row' justify='center'>
               <Box round='full' background='background-contrast' align='center'>
@@ -72,6 +72,7 @@ export default function Page() {
             </Box>
             <TextInput value='小光' />
 						<Button label='保存' primary />
+						<Button label='删除人脸' color='status-critical'  />
 					</JuJiuLayer>
 				)}
         {openAdd && (

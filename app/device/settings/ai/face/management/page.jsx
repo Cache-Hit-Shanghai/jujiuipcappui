@@ -3,8 +3,8 @@
 import { Text, Box, Nav, Button, Grid, Heading, TextInput } from 'grommet';
 import { User, UserAdd } from 'grommet-icons';
 import { useState } from 'react';
-import { IconBack, JuJiuMain, ButtonLink } from '../../../../../../components/Components';
-import { JuJiuLayer } from '../../../../../../components/JuJiuLayer';
+import { IconBack, JuJiuMain, ButtonLink } from '@/components/Components';
+import { JuJiuLayer } from '@/components/JuJiuLayer';
 
 
 export default function Page() {

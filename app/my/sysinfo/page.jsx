@@ -1,7 +1,7 @@
 'use client';
 
 import { Text, Box, Nav } from 'grommet';
-import { IconBack, InfoGroup, JuJiuMain } from '../../../components/Components';
+import { IconBack, InfoGroup, JuJiuMain } from '@/components/Components';
 
 const infos = [
   { key: '应用版本', value: '2023/7/16'},

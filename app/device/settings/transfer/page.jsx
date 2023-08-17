@@ -1,7 +1,7 @@
 'use client';
 
 import { Text, Box, Nav, Markdown } from 'grommet';
-import { IconBack, JuJiuMain, ButtonLink } from '../../../../components/Components';
+import { IconBack, JuJiuMain, ButtonLink } from '@/components/Components';
 
 const content = `
 # 转移设备说明

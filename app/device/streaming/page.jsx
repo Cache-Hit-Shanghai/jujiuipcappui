@@ -30,7 +30,7 @@ import {
 	RecordControl,
 	ResolutionControl,
 	ZoomControl,
-} from '../../../components/Components';
+} from '@/components/Components';
 
 export default function Page() {
 	const [value, setValue] = useState(Date.now());

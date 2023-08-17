@@ -11,7 +11,7 @@ import {
 	PanLayer,
 	ResolutionControl,
 	ZoomControl,
-} from '../../../../components/Components';
+} from '@/components/Components';
 
 export default function Page() {
 	return (

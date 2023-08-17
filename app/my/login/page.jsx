@@ -4,7 +4,7 @@ import { Text, Box, Avatar, Nav, Button } from 'grommet';
 import { LoginCircle } from '@styled-icons/remix-fill/LoginCircle';
 import { Wechat } from '@styled-icons/remix-fill/Wechat';
 import { Alipay } from '@styled-icons/remix-fill/Alipay';
-import { IconBack, JuJiuMain } from '../../../components/Components';
+import { IconBack, JuJiuMain } from '@/components/Components';
 
 const links = [
   { label: '检查更新', url: '#'},

@@ -1,7 +1,7 @@
 'use client';
 
 import { Text, Box, RadioButtonGroup, Nav, Card, CardHeader, CardBody } from 'grommet';
-import { IconBack, JuJiuMain, JuJiuCard } from '../../../components/Components';
+import { IconBack, JuJiuMain } from '@/components/Components';
 
 export default function Page() {
   return (

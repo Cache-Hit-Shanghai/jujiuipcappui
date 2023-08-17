@@ -2,9 +2,9 @@
 
 import { Text, Box, Nav, CheckBox, RangeInput, Heading } from 'grommet';
 import { useState } from 'react';
-import { IconBack, JuJiuMain } from '../../../../components/Components';
-import { JuJiuItem, JuJiuItemButton } from '../../../../components/JuJiuItem';
-import { JuJiuLayer } from '../../../../components/JuJiuLayer';
+import { IconBack, JuJiuMain } from '@/components/Components';
+import { JuJiuItem, JuJiuItemButton } from '@/components/JuJiuItem';
+import { JuJiuLayer } from '@/components/JuJiuLayer';
 
 
 export default function Page() {

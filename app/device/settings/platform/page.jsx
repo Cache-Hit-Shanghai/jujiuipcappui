@@ -1,8 +1,8 @@
 'use client';
 
 import { Text, Box, Nav, Button } from 'grommet';
-import { IconBack, JuJiuMain } from '../../../../components/Components';
-import { JuJiuItem } from '../../../../components/JuJiuItem';
+import { IconBack, JuJiuMain } from '@/components/Components';
+import { JuJiuItem } from '@/components/JuJiuItem';
 
 
 export default function Page() {

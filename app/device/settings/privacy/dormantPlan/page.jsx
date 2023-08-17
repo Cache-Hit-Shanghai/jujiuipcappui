@@ -11,8 +11,8 @@ import {
 import { Add } from "grommet-icons";
 import { IconBack } from "@/components/Components";
 import { useState } from "react";
-import { JuJiuCard, JuJiuMain } from "../../../../../components/Components";
-import { JuJiuLayer } from "../../../../../components/JuJiuLayer";
+import { JuJiuCard, JuJiuMain } from "@/components/Components";
+import { JuJiuLayer } from "@/components/JuJiuLayer";
 
 const timeMask = [
 	{

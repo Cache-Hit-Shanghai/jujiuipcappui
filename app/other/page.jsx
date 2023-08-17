@@ -41,7 +41,7 @@ export default function Page() {
       )}
       {notification && (
         <Layer
-          position='bottom'
+          position='center'
           margin={{ vertical: 'medium' }}
           responsive={false}
           plain
@@ -53,7 +53,7 @@ export default function Page() {
             justify='between'
             round='medium'
             pad={{ vertical: 'xsmall', horizontal: 'small' }}
-            background='status-ok'
+            background={{ color: 'status-ok', opacity: 'strong' }}
           >
             <Box align='center' direction='row' gap='xsmall'>
               <StatusGood />
@@ -67,7 +67,7 @@ export default function Page() {
       )}
       {fail && (
         <Layer
-          position='bottom'
+          position='center'
           margin={{ vertical: 'medium' }}
           responsive={false}
           plain
@@ -79,7 +79,7 @@ export default function Page() {
             justify='between'
             round='medium'
             pad={{ vertical: 'xsmall', horizontal: 'small' }}
-            background='status-error'
+            background={{ color: 'status-error', opacity: 'strong' }}
           >
             <Box align='center' direction='row' gap='xsmall'>
               <Alert />

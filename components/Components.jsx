@@ -222,7 +222,7 @@ export function PanLayer() {
 
 export function ScreenCopyControl({ showTitle = true }) {
 	return (
-		<Button onClick={() => setRecording(!recording)}>
+		<Button>
 			<Box pad='small' align='center'>
 				{<Camera />}
 				{showTitle && (

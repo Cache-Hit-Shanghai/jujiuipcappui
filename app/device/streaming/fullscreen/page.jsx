@@ -4,6 +4,7 @@ import { Video as VideoCanvas, Box, Stack, Button, Nav, Text, Tag } from 'gromme
 import { Camera, RadialSelected } from 'grommet-icons';
 import {
 	IconBack,
+	ScreenCopyControl,
 	ChatControl,
 	MuteControl,
 	RecordControl,
@@ -48,7 +49,7 @@ export default function Page() {
 						justify='evenly'
 						margin={{ vertical: 'medium' }}
 					>
-						<Button plain icon={<Camera />} />
+						<ScreenCopyControl showTitle={false} />
 						<RecordControl showTitle={false} />
 						<ChatControl showTitle={false} />
 						<MuteControl showTitle={false} />

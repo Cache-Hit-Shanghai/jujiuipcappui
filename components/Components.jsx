@@ -30,7 +30,7 @@ import {
 	VolumeLow,
 	VolumeMute,
 	Checkmark,
-	ShareRounded,
+	Camera,
 	FormPrevious,
 	ClosedCaption,
 	CaretLeftFill,
@@ -217,6 +217,19 @@ export function PanLayer() {
 				</Layer>
 			)}
 		</>
+	);
+}
+
+export function ScreenCopyControl({ showTitle = true }) {
+	return (
+		<Button onClick={() => setRecording(!recording)}>
+			<Box pad='small' align='center'>
+				{<Camera />}
+				{showTitle && (
+					<Text size='small'>截图</Text>
+				)}
+			</Box>
+		</Button>
 	);
 }
 

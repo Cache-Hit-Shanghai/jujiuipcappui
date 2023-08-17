@@ -24,6 +24,7 @@ import {
 	IconButton,
 	PanControl,
 	JuJiuMain,
+	ScreenCopyControl,
 	ChatControl,
 	MuteControl,
 	RecordControl,
@@ -89,11 +90,7 @@ export default function Page() {
 								background='background-contrast'
 								flex={false}
 							>
-								<IconButton
-									icon={<Camera />}
-									label='截图'
-									onClick={() => {}}
-								/>
+								<ScreenCopyControl />
 								<RecordControl />
 								<ChatControl />
 								<MuteControl />

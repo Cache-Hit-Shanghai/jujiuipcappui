@@ -560,7 +560,7 @@ export function AppFooter() {
 			<IconLInk icon={<Radial />} label='我的' url='/my' />
 			<IconLInk icon={<Home />} label='主页' url='/splash' />
 			<IconLInk icon={<StatusCritical />} label='错误页' url='/errorpage' />
-			<IconLInk icon={<Cycle />} label='繁忙页' url='/busy' />
+			<IconLInk icon={<Cycle />} label='其它页' url='/other' />
 		</Box>
 	);
 }

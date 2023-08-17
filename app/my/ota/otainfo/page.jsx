@@ -1,9 +1,8 @@
 'use client';
 
-import { Text, Box, Nav, Button, Heading, Avatar } from 'grommet';
-import { Webcam, Update } from 'grommet-icons';
+import { Text, Box, Nav, Heading } from 'grommet';
+import { Update } from 'grommet-icons';
 import { IconBack, JuJiuMain, ButtonLink } from '../../../../components/Components';
-import { JuJiuInformation } from '../../../../components/JuJiuInformation';
 
 
 export default function Page() {

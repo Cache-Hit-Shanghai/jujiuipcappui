@@ -31,7 +31,7 @@ export default function Page() {
                 </Box>
               </Box>
               <Box>
-                <ButtonLink href='/my/ota/updating' primary size='small' label='现在升级' />
+                <ButtonLink href='/my/ota/otainfo' primary size='small' label='现在升级' />
               </Box>
             </Box>
           ) }

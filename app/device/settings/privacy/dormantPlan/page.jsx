@@ -9,10 +9,10 @@ import {
 	MaskedInput,
 } from "grommet";
 import { Add } from "grommet-icons";
-import { IconBack } from "@/components/Components";
+import { IconBack } from "@/jujiuuicomponents/Components";
 import { useState } from "react";
-import { JuJiuCard, JuJiuMain } from "@/components/Components";
-import { JuJiuLayer } from "@/components/JuJiuLayer";
+import { JuJiuCard, JuJiuMain } from "@/jujiuuicomponents/Components";
+import { JuJiuLayer } from "@/jujiuuicomponents/JuJiuLayer";
 
 const timeMask = [
 	{

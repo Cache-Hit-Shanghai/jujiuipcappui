@@ -2,7 +2,7 @@
 
 import { Text, Box, Nav, List, Card, CardHeader, CardBody, CardFooter } from 'grommet';
 import { Inbox, Notification } from 'grommet-icons';
-import { IconBack, JuJiuMain, ButtonLink } from '@/components/Components';
+import { IconBack, JuJiuMain, ButtonLink } from '@/jujiuuicomponents/Components';
 
 
 const messages = [

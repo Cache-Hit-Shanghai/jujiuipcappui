@@ -11,7 +11,7 @@ import {
 	PanLayer,
 	ResolutionControl,
 	ZoomControl,
-} from '@/components/Components';
+} from '@/jujiuuicomponents/Components';
 
 export default function Page() {
 	return (

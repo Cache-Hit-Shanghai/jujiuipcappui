@@ -2,8 +2,8 @@
 
 import { Text, Box, Heading, Nav, Form, FormField, TextInput } from 'grommet';
 import { Wifi } from 'grommet-icons';
-import { IconBack, JuJiuMain, ButtonLink } from '@/components/Components';
-import { JuJiuInformation } from '@/components/JuJiuInformation';
+import { IconBack, JuJiuMain, ButtonLink } from '@/jujiuuicomponents/Components';
+import { JuJiuInformation } from '@/jujiuuicomponents/JuJiuInformation';
 
 export default function Page() {
   return (

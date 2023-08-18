@@ -2,7 +2,7 @@
 
 import { Text, Box, Nav, Avatar, Button } from 'grommet';
 import { PhotoAlbum } from '@styled-icons/material-rounded/PhotoAlbum';
-import { IconBack, JuJiuMain, FlashLight } from '@/components/Components';
+import { IconBack, JuJiuMain, FlashLight } from '@/jujiuuicomponents/Components';
 
 export default function Page() {
   return (

@@ -1,7 +1,7 @@
 'use client';
 
 import { Box, Tag } from 'grommet';
-import { ButtonLink, AppMark, AppLogo } from '@/components/Components';
+import { ButtonLink, AppMark, AppLogo } from '@/jujiuuicomponents/Components';
 
 // 中心渐变效果，留着以后用。
 // return (

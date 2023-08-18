@@ -3,7 +3,7 @@
 import { Text, Box, Nav, Grid, Card, CardHeader, CardBody, Stack } from 'grommet';
 import { CirclePlay } from 'grommet-icons';
 import Link from 'next/link';
-import { IconBack, JuJiuMain } from '@/components/Components';
+import { IconBack, JuJiuMain } from '@/jujiuuicomponents/Components';
 
 
 function LinkBoxImage() {

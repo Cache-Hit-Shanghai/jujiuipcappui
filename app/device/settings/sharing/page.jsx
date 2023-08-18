@@ -4,8 +4,8 @@ import { Text, Box, Nav, Button, CardBody, Avatar } from 'grommet';
 import { User, FormNext, Subtract } from 'grommet-icons';
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { IconBack, ButtonGroup, JuJiuMain, JuJiuCard, ButtonLink } from '@/components/Components';
-import { JuJiuLayer } from '@/components/JuJiuLayer';
+import { IconBack, ButtonGroup, JuJiuMain, JuJiuCard, ButtonLink } from '@/jujiuuicomponents/Components';
+import { JuJiuLayer } from '@/jujiuuicomponents/JuJiuLayer';
 
 
 export default function Page() {

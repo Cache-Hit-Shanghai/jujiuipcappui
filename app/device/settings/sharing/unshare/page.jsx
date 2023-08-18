@@ -2,7 +2,7 @@
 
 import { Text, Box, Nav, Button, CheckBox } from 'grommet';
 import { User } from 'grommet-icons';
-import { IconBack, JuJiuMain } from '@/components/Components';
+import { IconBack, JuJiuMain } from '@/jujiuuicomponents/Components';
 
 
 export default function Page() {

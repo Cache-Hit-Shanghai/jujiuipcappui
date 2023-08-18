@@ -4,7 +4,7 @@ import { Text, Box, TextInput , Nav, Button, List, Tag, Pagination, Menu } from 
 import { Search, Add, MoreVertical, Chat } from 'grommet-icons';
 import { Article } from '@styled-icons/remix-fill/Article';
 import Link from "next/link";
-import { IconBack, JuJiuMain } from '@/components/Components';
+import { IconBack, JuJiuMain } from '@/jujiuuicomponents/Components';
 
 const data = [
   { title: '如何使用“设备转移”？', createdBy: 'Jim', date: '2023/7/1' },

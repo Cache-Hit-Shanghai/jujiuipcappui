@@ -1,8 +1,8 @@
 'use client';
 
 import { Text, Box, Nav, CheckBox, List, Tag } from 'grommet';
-import { IconBack, JuJiuMain, JuJiuCard } from '@/components/Components';
-import { JuJiuItem } from '@/components/JuJiuItem';
+import { IconBack, JuJiuMain, JuJiuCard } from '@/jujiuuicomponents/Components';
+import { JuJiuItem } from '@/jujiuuicomponents/JuJiuItem';
 
 
 const packages = [

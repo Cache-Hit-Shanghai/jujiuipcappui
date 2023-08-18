@@ -3,7 +3,7 @@
 import { Box, Button, Layer, Spinner, Text } from 'grommet';
 import { StatusGood, Alert, FormClose } from 'grommet-icons';
 import { useState } from 'react';
-import { ButtonBackToMain } from '@/components/Components';
+import { ButtonBackToMain } from '@/jujiuuicomponents/Components';
 
 
 export default function Page() {

@@ -3,7 +3,7 @@
 import { Text, Box, Card , Nav, CardHeader, CardBody, Markdown, Heading, Button, TextArea, Tag, Menu } from 'grommet';
 import { Checkmark } from 'grommet-icons';
 import { Settings3 } from '@styled-icons/remix-fill/Settings3';
-import { IconBack, JuJiuMain } from '@/components/Components';
+import { IconBack, JuJiuMain } from '@/jujiuuicomponents/Components';
 
 const content=`
 ## 主要步骤如下

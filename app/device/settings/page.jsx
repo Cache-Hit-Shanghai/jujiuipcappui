@@ -10,9 +10,9 @@ import {
 	TextArea,
 } from 'grommet';
 import { useState } from 'react';
-import { IconBack, JuJiuMain } from '@/components/Components';
-import { JuJiuItemButton, JuJiuItemLink } from '@/components/JuJiuItem';
-import { JuJiuLayer } from '@/components/JuJiuLayer';
+import { IconBack, JuJiuMain } from '@/jujiuuicomponents/Components';
+import { JuJiuItemButton, JuJiuItemLink } from '@/jujiuuicomponents/JuJiuItem';
+import { JuJiuLayer } from '@/jujiuuicomponents/JuJiuLayer';
 
 export default function Page() {
 	const [openAvata, setOpenAvata] = useState(false);

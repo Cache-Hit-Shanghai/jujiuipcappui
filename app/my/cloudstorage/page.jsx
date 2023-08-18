@@ -2,7 +2,7 @@
 
 import { Text, Box, Heading, Nav, Card, CardHeader, CardBody, CardFooter, Avatar, Tag } from 'grommet';
 import { Webcam } from 'grommet-icons';
-import { IconBack, JuJiuMain, ButtonLink } from '@/components/Components';
+import { IconBack, JuJiuMain, ButtonLink } from '@/jujiuuicomponents/Components';
 
 
 export default function Page() {

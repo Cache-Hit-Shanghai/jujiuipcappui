@@ -14,7 +14,7 @@ export default function Page() {
       </Nav>
       <JuJiuMain>
         <JuJiuItemLink label='人脸识别' href='/device/settings/ai/face' />
-				<JuJiuItemLink label='人形检测' href='/device/settings/ai/body' />
+				<JuJiuItemLink label='人形追踪' href='/device/settings/ai/body' />
 				{/* <JuJiuItemLink label='区域看护' href='/device/settings/ai/zone' />
 				<JuJiuItemLink label='时光相册' href='/device/settings/ai/time' /> */}
       </JuJiuMain>

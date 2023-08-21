@@ -10,10 +10,10 @@ export default function Page() {
     <Box fill>
       <Nav direction='row' align='center'>
         <IconBack />
-        <Text>人形检测 - 办3</Text>
+        <Text>人形追踪 - 办3</Text>
       </Nav>
       <JuJiuMain>
-        <JuJiuItem label='启用人形检测'>
+        <JuJiuItem label='启用人形追踪'>
 					<CheckBox toggle />
 				</JuJiuItem>
       </JuJiuMain>

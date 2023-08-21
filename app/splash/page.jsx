@@ -39,7 +39,7 @@ export default function Page() {
     <Box fill>
       <Box margin='large' direction='row' justify='end' flex={false}>
         <ButtonLink href='/'>
-          <Tag border={false} background='background-front' size='small' value='关闭' />
+          <Tag border={false} background='background-contrast' size='small' value='关闭' />
         </ButtonLink>
       </Box>
       <Box flex={{ grow: 1, shrink: 1 }} align='center' justify='center' background={{

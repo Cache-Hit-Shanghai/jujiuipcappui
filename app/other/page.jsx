@@ -31,8 +31,8 @@ export default function Page() {
           background='transparent'          
           position='center'
           responsive={false}
-          onEsc={() => setNotification(false)}
-          onClickOutside={() => setNotification(false)}
+          onEsc={() => setBusy(false)}
+          onClickOutside={() => setBusy(false)}
         >
           <Box pad='large' round='medium' background='active'>
             <Spinner size='large' />

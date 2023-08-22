@@ -5,7 +5,7 @@ import { User, FormNext, Subtract } from 'grommet-icons';
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { IconBack, ButtonGroup, JuJiuMain, JuJiuCard, ButtonLink } from '@/jujiuuicomponents/Components';
-import { JuJiuLayer } from '@/jujiuuicomponents/JuJiuLayer';
+import { JuJiuLayer } from '@/jujiuuicomponents/new/core_ui';
 
 
 export default function Page() {

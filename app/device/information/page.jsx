@@ -4,8 +4,8 @@ import { Text, Box, Nav, Heading, Button } from 'grommet';
 import { Wifi, ChatOption, Run, Pan, Copy } from 'grommet-icons';
 import { useState } from 'react';
 import { IconBack, JuJiuMain } from '@/jujiuuicomponents/Components';
-import { JuJiuItemText, JuJiuItemTextArray, JuJiuItemButton, JuJiuItem } from '@/jujiuuicomponents/JuJiuItem';
-import { JuJiuLayer } from '@/jujiuuicomponents/JuJiuLayer';
+import { JuJiuItemText, JuJiuItemTextArray, JuJiuItemButton, JuJiuItem } from '@/jujiuuicomponents/new/core_item';
+import { JuJiuLayer } from '@/jujiuuicomponents/new/core_ui';
 
 export default function Page() {
   const [openUsn, setOpenUsn] = useState(false);

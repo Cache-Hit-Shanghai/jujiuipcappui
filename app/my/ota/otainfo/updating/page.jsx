@@ -3,7 +3,7 @@
 import { Text, Box, Nav, Meter, Heading, Avatar } from 'grommet';
 import { Webcam } from 'grommet-icons';
 import { IconBack, JuJiuMain, ButtonBackToMain } from '@/jujiuuicomponents/Components';
-import { JuJiuInformation } from '@/jujiuuicomponents/JuJiuInformation';
+import { JuJiuInformation } from '@/jujiuuicomponents/new/core_ui';
 
 
 export default function Page() {

@@ -2,7 +2,7 @@
 
 import { Text, Box, Nav, CheckBox, List, Tag } from 'grommet';
 import { IconBack, JuJiuMain, JuJiuCard } from '@/jujiuuicomponents/Components';
-import { JuJiuItem } from '@/jujiuuicomponents/JuJiuItem';
+import { JuJiuItem } from '@/jujiuuicomponents/new/core_item';
 
 
 const packages = [

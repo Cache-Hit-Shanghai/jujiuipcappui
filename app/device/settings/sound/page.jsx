@@ -3,8 +3,8 @@
 import { Text, Box, Nav, CheckBox, RangeInput, Heading } from 'grommet';
 import { useState } from 'react';
 import { IconBack, JuJiuMain } from '@/jujiuuicomponents/Components';
-import { JuJiuItem, JuJiuItemButton } from '@/jujiuuicomponents/JuJiuItem';
-import { JuJiuLayer } from '@/jujiuuicomponents/JuJiuLayer';
+import { JuJiuItem, JuJiuItemButton } from '@/jujiuuicomponents/new/core_item';
+import { JuJiuLayer } from '@/jujiuuicomponents/new/core_ui';
 
 
 export default function Page() {

@@ -3,7 +3,7 @@
 import { Text, Box, Heading, Nav, Form, FormField, TextInput } from 'grommet';
 import { Wifi } from 'grommet-icons';
 import { IconBack, JuJiuMain, ButtonLink } from '@/jujiuuicomponents/Components';
-import { JuJiuInformation } from '@/jujiuuicomponents/JuJiuInformation';
+import { JuJiuInformation } from '@/jujiuuicomponents/new/core_ui';
 
 export default function Page() {
   return (

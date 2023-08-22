@@ -4,7 +4,7 @@ import { Text, Box, Nav, Button, Grid, Heading, TextInput } from 'grommet';
 import { User, UserAdd } from 'grommet-icons';
 import { useState } from 'react';
 import { IconBack, JuJiuMain, ButtonLink } from '@/jujiuuicomponents/Components';
-import { JuJiuLayer } from '@/jujiuuicomponents/JuJiuLayer';
+import { JuJiuLayer } from '@/jujiuuicomponents/new/core_ui';
 
 
 export default function Page() {

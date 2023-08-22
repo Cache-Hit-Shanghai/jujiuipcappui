@@ -21,8 +21,9 @@ import {
 	RecordControl,
 	ResolutionControl,
 	ZoomControl,
+	PanControl,
 } from '@/jujiuuicomponents/Components';
-import { ButtonLink, IconBack, PanControl, JuJiuMain, } from '@/jujiuuicomponents/new/core_ui';
+import { ButtonLink, IconBack, JuJiuMain, } from '@/jujiuuicomponents/new/core_ui';
 
 export function StreamPlayer() {
 	return (

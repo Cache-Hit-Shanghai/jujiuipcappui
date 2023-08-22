@@ -1,9 +1,8 @@
 'use client';
 
-import { Video as VideoCanvas, Box, Stack, Button, Nav, Text, Tag } from 'grommet';
-import { Camera, RadialSelected } from 'grommet-icons';
+import { Video as VideoCanvas, Box, Stack, Nav, Text, Tag } from 'grommet';
+import { RadialSelected } from 'grommet-icons';
 import {
-	IconBack,
 	ScreenCopyControl,
 	ChatControl,
 	MuteControl,
@@ -12,6 +11,7 @@ import {
 	ResolutionControl,
 	ZoomControl,
 } from '@/jujiuuicomponents/Components';
+import { IconBack } from '@/jujiuuicomponents/new/core_ui';
 
 export default function Page() {
 	return (

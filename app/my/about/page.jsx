@@ -1,7 +1,8 @@
 'use client';
 
 import { Text, Box, Nav } from 'grommet';
-import { IconBack, LinkGroup, JuJiuMain, JuJiuCard, AppMark, AppLogo } from '@/jujiuuicomponents/Components';
+import { AppMark, AppLogo } from '@/jujiuuicomponents/Components';
+import { IconBack, LinkGroup, JuJiuMain, JuJiuCard } from '@/jujiuuicomponents/new/core_ui';
 
 const links = [
   { label: '检查更新', url: '#'},

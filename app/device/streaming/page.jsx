@@ -15,10 +15,6 @@ import { PhoneLandscape } from '@styled-icons/bootstrap/PhoneLandscape';
 import { VideoRecording } from '@styled-icons/fluentui-system-filled/VideoRecording';
 import { useState } from 'react';
 import {
-	ButtonLink,
-	IconBack,
-	PanControl,
-	JuJiuMain,
 	ScreenCopyControl,
 	ChatControl,
 	MuteControl,
@@ -26,6 +22,7 @@ import {
 	ResolutionControl,
 	ZoomControl,
 } from '@/jujiuuicomponents/Components';
+import { ButtonLink, IconBack, PanControl, JuJiuMain, } from '@/jujiuuicomponents/new/core_ui';
 
 export function StreamPlayer() {
 	return (

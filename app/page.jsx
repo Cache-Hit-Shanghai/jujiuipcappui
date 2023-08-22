@@ -4,7 +4,8 @@ import { Text, Box, Nav, Menu, Accordion, AccordionPanel, Heading } from 'gromme
 import { AddCircle, Mail, Add, Scan } from 'grommet-icons';
 import { Group } from '@styled-icons/fluentui-system-regular/Group';
 import Link from 'next/link';
-import { AppFooter, IpcCard, JuJiuMain, ButtonLink } from '@/jujiuuicomponents/Components';
+import { AppFooter, IpcCard } from '@/jujiuuicomponents/Components';
+import { ButtonLink, JuJiuMain } from '@/jujiuuicomponents/new/core_ui';
 import { JuJiuTagFromShared, JuJiuTagSharing } from '@/jujiuuicomponents/JuJiuTags';
 
 export default function Page() {

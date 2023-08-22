@@ -1,7 +1,7 @@
 'use client';
 
 import { Text, Box, Nav, CheckBox, List, Tag } from 'grommet';
-import { IconBack, JuJiuMain, JuJiuCard } from '@/jujiuuicomponents/Components';
+import { IconBack, JuJiuMain, JuJiuCard } from '@/jujiuuicomponents/new/core_ui';
 import { JuJiuItem } from '@/jujiuuicomponents/new/core_item';
 
 

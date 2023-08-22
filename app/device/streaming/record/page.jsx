@@ -17,11 +17,11 @@ import { Settings3 } from '@styled-icons/remix-fill/Settings3';
 import { PhoneLandscape } from '@styled-icons/bootstrap/PhoneLandscape';
 import { useState } from 'react';
 import {
-	ButtonLink,
 	IconBack,
 	IconButton,
 	JuJiuMain,
-} from '@/jujiuuicomponents/Components';
+  ButtonLink,
+} from '@/jujiuuicomponents/new/core_ui';
 
 export function StreamPlayer() {
 	return (

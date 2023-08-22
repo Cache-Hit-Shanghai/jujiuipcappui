@@ -3,10 +3,8 @@
 import { Text, Box, Avatar, Nav, Button, Heading, TextInput } from 'grommet';
 import { User } from 'grommet-icons';
 import { useState } from 'react';
-import { IconBack, JuJiuMain } from '@/jujiuuicomponents/Components';
 import { JuJiuItemRawButton, JuJiuItemButton } from '@/jujiuuicomponents/new/core_item';
-import { JuJiuLayer } from '@/jujiuuicomponents/new/core_ui';
-import { JuJiuInformation } from '@/jujiuuicomponents/new/core_ui';
+import { JuJiuLayer, IconBack, JuJiuMain, JuJiuInformation } from '@/jujiuuicomponents/new/core_ui';
 
 export default function Page() {
   const [ openAvata, setOpenAvata ] = useState(false);

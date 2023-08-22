@@ -1,7 +1,7 @@
 'use client';
 
 import { Text, Box, Nav, Markdown } from 'grommet';
-import { IconBack, JuJiuMain } from '@/jujiuuicomponents/Components';
+import { IconBack, JuJiuMain } from '@/jujiuuicomponents/new/core_ui';
 import { ButtonLink } from '@/jujiuuicomponents/new/core_ui';
 
 const content = `

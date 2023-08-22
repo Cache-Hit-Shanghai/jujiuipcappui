@@ -4,7 +4,7 @@ import { Text, Box, Nav, CardHeader, CardBody, Avatar } from 'grommet';
 import { Gallery, CloudUpload, ShareRounded, User, Upgrade } from 'grommet-icons';
 import { PersonFeedback } from '@styled-icons/fluentui-system-regular/PersonFeedback';
 import { AppFooter } from '@/jujiuuicomponents/Components';
-import { ButtonLink, IconLInk, LinkGroup, JuJiuMain, JuJiuCard } from '@/jujiuuicomponents/new/core_ui';
+import { ButtonLink, IconLink, LinkGroup, JuJiuMain, JuJiuCard } from '@/jujiuuicomponents/new/core_ui';
 
 const links = [
   { label: '账号设置', url: '/my/account' },
@@ -33,8 +33,8 @@ export default function Page() {
         <JuJiuCard>
           <CardBody>
             <Box direction='row' justify='evenly'>
-              <IconLInk icon={<Gallery />} label='相册' url='/my/gallery' />
-              <IconLInk icon={<CloudUpload />} label='云存储' url='/my/cloudstorage' />
+              <IconLink icon={<Gallery />} label='相册' url='/my/gallery' />
+              <IconLink icon={<CloudUpload />} label='云存储' url='/my/cloudstorage' />
             </Box>
           </CardBody>
         </JuJiuCard>
@@ -44,9 +44,9 @@ export default function Page() {
           </CardHeader>
           <CardBody>
             <Box direction='row' justify='evenly'>
-              <IconLInk icon={<Upgrade />} label='固件升级' url='/my/ota' />
-              <IconLInk icon={<ShareRounded />} label='我的分享' url='/my/sharing' />
-              <IconLInk icon={<PersonFeedback size='24' />} label='帮助与反馈' url='/my/feedback' />
+              <IconLink icon={<Upgrade />} label='固件升级' url='/my/ota' />
+              <IconLink icon={<ShareRounded />} label='我的分享' url='/my/sharing' />
+              <IconLink icon={<PersonFeedback size='24' />} label='帮助与反馈' url='/my/feedback' />
             </Box>
           </CardBody>
         </JuJiuCard>

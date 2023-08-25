@@ -3,7 +3,7 @@
 import { Text, Box, Nav, Menu, Accordion, AccordionPanel, Heading } from 'grommet';
 import { AddCircle, Mail, Add, Scan } from 'grommet-icons';
 import { Group } from '@styled-icons/fluentui-system-regular/Group';
-import Link from 'next-intl/link';
+import Link from '@/state/translate';
 import { AppFooter, IpcCard } from '@/jujiuuicomponents/Components';
 import { ButtonLink, JuJiuMain } from '@/jujiuuicomponents/new/core_ui';
 import { JuJiuTagFromShared, JuJiuTagSharing } from '@/jujiuuicomponents/JuJiuTags';

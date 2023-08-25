@@ -1,18 +1,3 @@
-'use client';
-
-import { Grommet, grommet } from 'grommet';
-import StyledComponentsRegistry from '@/jujiuuicomponents/registry';
-
 export default function RootLayout({ children }) {
-  return (
-    <html>
-      <body>
-        <StyledComponentsRegistry>
-          <Grommet full theme={grommet} themeMode='light'>
-            {children}
-          </Grommet>
-        </StyledComponentsRegistry>
-      </body>
-    </html>
-  )
+  return children;
 }

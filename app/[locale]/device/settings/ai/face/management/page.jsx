@@ -85,7 +85,7 @@ export default function Page() {
 						>
 							选择录入方式
 						</Heading>
-            <ButtonLink style={{ textAlign: 'center' }} label='拍照录入人脸' href='/device/settings/ai/face/management/takephoto' />
+            <ButtonLink label='拍照录入人脸' href='/device/settings/ai/face/management/takephoto' />
 						<Button label='从手机相册选择人脸照片' />
 					</JuJiuLayer>
 				)}

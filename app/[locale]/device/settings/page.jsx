@@ -30,6 +30,7 @@ export default function Page() {
 				<JuJiuItemLink label='画面设置' href='/device/settings/video' />
 				<JuJiuItemLink label='灯光设置' href='/device/settings/light' />
 				<JuJiuItemLink label='云台设置' href='/device/settings/platform' />
+				<JuJiuItemLink label='日程提醒' href='/device/settings/calendar' />
 				{/* <JuJiuItemLink label='录像设置' href='/device/settings/record' /> */}
 				<Heading level={2} margin='none'>通用设置</Heading>
 				<JuJiuItemButton label='设备名称' value='办3' onClick={() => setOpenAvata(!openAvata)} />

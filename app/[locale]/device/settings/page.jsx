@@ -26,7 +26,6 @@ export default function Page() {
 			<JuJiuMain>
 				<Heading level={2} margin='none'>功能设置</Heading>
 				<JuJiuItemLink label='智能检测' href='/device/settings/ai' />
-				<JuJiuItemLink label='消息通知' href='/device/settings/notification' />
 				<JuJiuItemLink label='声音设置' href='/device/settings/sound' />
 				<JuJiuItemLink label='画面设置' href='/device/settings/video' />
 				<JuJiuItemLink label='灯光设置' href='/device/settings/light' />

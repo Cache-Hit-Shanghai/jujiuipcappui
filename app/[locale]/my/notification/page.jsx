@@ -19,7 +19,7 @@ export default function Page() {
         <JuJiuItem label='报警消息通知'>
 					<CheckBox toggle />
 				</JuJiuItem>
-				<JuJiuItemLink label='报警事件类型' href='/device/settings/notification/type' />
+				<JuJiuItemLink label='报警事件类型' href='/my/notification/type' />
       </JuJiuMain>
     </Box>
   );

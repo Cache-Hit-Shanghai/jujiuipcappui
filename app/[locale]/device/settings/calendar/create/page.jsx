@@ -1,6 +1,6 @@
 'use client';
 
-import { Text, Box, Nav, Heading, Button, TextInput, Tabs, Tab } from 'grommet';
+import { Text, Box, Nav, Heading, Button, TextInput, Tabs, Tab, DateInput } from 'grommet';
 import { IconBack, JuJiuMain, JuJiuLayer, TimeInput } from '@/jujiuuicomponents/new/core_ui';
 import { JuJiuItemButton } from '@/jujiuuicomponents/new/core_item';
 import { useState } from 'react';
@@ -63,7 +63,7 @@ export default function Page() {
               <Tab title='不重复'>
                 <Box gap='small'>
                   <Box>
-                    <input type='date' />
+                    <input type='date' value={(new Date()).toISOString().split('T')[0]} />
                   </Box>
                   <Button primary label='确定' onClick={() => setOpenRepeat(false)} />
                 </Box>

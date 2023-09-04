@@ -1,7 +1,7 @@
 'use client';
 
-import { Text, Box, Nav, Heading, Button } from 'grommet';
-import { IconBack, JuJiuMain, JuJiuLayer } from '@/jujiuuicomponents/new/core_ui';
+import { Text, Box, Nav, Heading, Button, TextInput } from 'grommet';
+import { IconBack, JuJiuMain, JuJiuLayer, TimeInput } from '@/jujiuuicomponents/new/core_ui';
 import { JuJiuItemButton } from '@/jujiuuicomponents/new/core_item';
 import { useState } from 'react';
 
@@ -17,8 +17,9 @@ function CalendarTitle({ time, title, repeat }) {
 
 export default function Page() {
   const [time, setTime] = useState();
-  const [repeat, setRepeat] = useState();
-  const [label, setLabel] = useState();
+  const [openTime, setOpenTime] = useState();
+  const [openRepeat, setOpenRepeat] = useState();
+  const [openLabel, setOpenLabel] = useState();
 
   return (
     <Box fill>
@@ -27,22 +28,57 @@ export default function Page() {
         <Text>添加日程 - 办3</Text>
       </Nav>
       <JuJiuMain>
-        <JuJiuItemButton label='提醒时间' onClick={() => setTime(true)} />
-        <JuJiuItemButton label='重复执行' onClick={() => setRepeat(true)} />
-        <JuJiuItemButton label='标签' onClick={() => setLabel(true)} />
+        <JuJiuItemButton label='提醒时间' value='07:30' onClick={() => setOpenTime(true)} />
+        <JuJiuItemButton label='重复执行' onClick={() => setOpenRepeat(true)} />
+        <JuJiuItemButton label='标签' value='起床' onClick={() => setOpenLabel(true)} />
       </JuJiuMain>
-      {time && (
+      {openTime && (
 					<JuJiuLayer
-						onClickOutside={() => setOpenName(false)}
+						onClickOutside={() => setOpenTime(false)}
+            position='center'
 					>
 						<Heading
 							level={3}
 							alignSelf='center'
 							margin='none'
 						>
-							选择时间
+							提醒时间设置
 						</Heading>
-						<Button primary label='确定' />
+            <TimeInput value={time} onChange={timeValue => {console.log(timeValue); setTime(timeValue)}} />
+						<Button primary label='确定' onClick={() => setOpenTime(false)} />
+					</JuJiuLayer>
+				)}
+        {openRepeat && (
+					<JuJiuLayer
+						onClickOutside={() => setOpenRepeat(false)}
+					>
+						<Heading
+							level={3}
+							alignSelf='center'
+							margin='none'
+						>
+							重复执行设置
+						</Heading>
+            
+						<Button primary label='确定' onClick={() => setOpenRepeat(false)} />
+					</JuJiuLayer>
+				)}
+        {openLabel && (
+					<JuJiuLayer
+						onClickOutside={() => setOpenLabel(false)}
+					>
+						<Heading
+							level={3}
+							alignSelf='center'
+							margin='none'
+						>
+							标签设置
+						</Heading>
+            <Box gap='small'>
+              <Text>事件：</Text>
+              <TextInput placeholder='自定义事件' />
+            </Box>
+						<Button primary label='确定' onClick={() => setOpenLabel(false)} />
 					</JuJiuLayer>
 				)}
     </Box>

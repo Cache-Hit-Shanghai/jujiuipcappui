@@ -1,6 +1,6 @@
 'use client';
 
-import { Text, Box, Nav, Heading, Button, TextInput, Tabs, Tab, DateInput } from 'grommet';
+import { Text, Box, Nav, Heading, Button, TextInput, Tabs, Tab, List, CheckBox } from 'grommet';
 import { IconBack, JuJiuMain, JuJiuLayer, TimeInput } from '@/jujiuuicomponents/new/core_ui';
 import { JuJiuItemButton } from '@/jujiuuicomponents/new/core_item';
 import { useState } from 'react';
@@ -14,6 +14,8 @@ function CalendarTitle({ time, title, repeat }) {
     </Box>
   );
 }
+
+const days = ['周日', '周一', '周二', '周三', '周四', '周五', '周六', ];
 
 export default function Page() {
   const [time, setTime] = useState();
@@ -29,8 +31,9 @@ export default function Page() {
       </Nav>
       <JuJiuMain>
         <JuJiuItemButton label='提醒时间' value='07:30' onClick={() => setOpenTime(true)} />
-        <JuJiuItemButton label='重复执行' onClick={() => setOpenRepeat(true)} />
+        <JuJiuItemButton label='重复执行' value='2023-09-01 不重复' onClick={() => setOpenRepeat(true)} />
         <JuJiuItemButton label='标签' value='起床' onClick={() => setOpenLabel(true)} />
+        <Button primary label='添加日程' />
       </JuJiuMain>
       {openTime && (
 					<JuJiuLayer
@@ -61,15 +64,25 @@ export default function Page() {
 						</Heading>
             <Tabs>
               <Tab title='不重复'>
-                <Box gap='small'>
-                  <Box>
+                <Box>
+                  <Box pad={{ vertical: 'medium' }}>
                     <input type='date' value={(new Date()).toISOString().split('T')[0]} />
                   </Box>
                   <Button primary label='确定' onClick={() => setOpenRepeat(false)} />
                 </Box>
               </Tab>
               <Tab title='重复'>
-    						<Box gap='small'>
+    						<Box>
+                  <Box pad={{ vertical: 'medium' }}>
+                    <List data={days}>
+                      {(datum) => (
+                        <Box direction='row' align='center' justify='between'>
+                          <Text>{datum}</Text>
+                          <CheckBox />
+                        </Box>
+                      )}
+                    </List>
+                  </Box>
                   <Button primary label='确定' onClick={() => setOpenRepeat(false)} />
                 </Box>
               </Tab>

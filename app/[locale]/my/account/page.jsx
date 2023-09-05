@@ -3,7 +3,7 @@
 import { Text, Box, Avatar, Nav, Button, Heading, TextInput } from 'grommet';
 import { User } from 'grommet-icons';
 import { useState } from 'react';
-import { JuJiuItemRawButton, JuJiuItemButton } from '@/jujiuuicomponents/new/core_item';
+import { JuJiuItemRawButton, JuJiuItemButton, JuJiuItemLink } from '@/jujiuuicomponents/new/core_item';
 import { JuJiuLayer, IconBack, JuJiuMain, JuJiuInformation } from '@/jujiuuicomponents/new/core_ui';
 
 export default function Page() {
@@ -22,6 +22,7 @@ export default function Page() {
           </Avatar>
         </JuJiuItemRawButton>
 				<JuJiuItemButton label='昵称' value='用户12345' onClick={() => setOpenName(!openName)} />
+        <JuJiuItemLink label='修改密码' href='/my/account/changePassword' />
         <Button label='退出登录' color='status-warning' />
         <Button label='注销账号' color='status-critical' />
         {openAvata && (

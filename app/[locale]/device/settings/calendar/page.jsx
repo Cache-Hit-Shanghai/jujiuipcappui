@@ -3,21 +3,21 @@
 import { Text, Box, Nav, CheckBox } from 'grommet';
 import { IconBack, JuJiuMain, ButtonLink } from '@/jujiuuicomponents/new/core_ui';
 import { JuJiuItem } from '@/jujiuuicomponents/new/core_item';
-import { useRouter } from '@/state/translate';
+import Link from '@/state/translate';
 
 
 function CalendarTitle({ time, title, repeat }) {
   return (
-    <Box>
-      <Text>{time} {title}</Text>
-      <Text size='xsmall' color='xweak'>{repeat.join(' ')}</Text>
-    </Box>
+    <Link href='/device/settings/calendar/edit' passHref legacyBehavior>
+      <Box>
+        <Text>{time} {title}</Text>
+        <Text size='xsmall' color='xweak'>{repeat.join(' ')}</Text>
+      </Box>
+    </Link>
   );
 }
 
 export default function Page() {
-  const router = useRouter();
-
   return (
     <Box fill>
       <Nav direction='row' align='center'>
@@ -27,14 +27,13 @@ export default function Page() {
       <JuJiuMain>
         <JuJiuItem
           label={<CalendarTitle time='20:45' title='闹钟' repeat={['周一', '周二', '周四', '周六', ]} />}
-          onClick={() => router.push('/device/settings/calendar/edit')}
         >
 					<CheckBox toggle />
 				</JuJiuItem>
         <JuJiuItem label={<CalendarTitle time='21:45' title='吃药' repeat={['每天', ]} />}>
 					<CheckBox toggle />
 				</JuJiuItem>
-        <JuJiuItem label={<CalendarTitle time='20:45' title='闹钟' repeat={['2023-08-29', ]} />}>
+        <JuJiuItem label={<CalendarTitle time='20:45' title='闹钟' repeat={['2023-08-29', '不重复']} />}>
 					<CheckBox toggle />
 				</JuJiuItem>
       </JuJiuMain>

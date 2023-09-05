@@ -3,4 +3,4 @@
 import { makePage } from '../createOrEdit';
 
 
-export default makePage('添加日程');
+export default makePage('编辑日程');

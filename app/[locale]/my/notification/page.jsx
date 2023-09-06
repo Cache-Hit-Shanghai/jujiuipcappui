@@ -13,13 +13,25 @@ export default function Page() {
         <Text>消息通知设置 - 办3</Text>
       </Nav>
       <JuJiuMain>
-        <JuJiuItem label='设备离线通知'>
+        <JuJiuItem label='设备访问'>
 					<CheckBox toggle />
 				</JuJiuItem>
-        <JuJiuItem label='报警消息通知'>
+        <JuJiuItem label='设备状态'>
 					<CheckBox toggle />
 				</JuJiuItem>
-				<JuJiuItemLink label='报警事件类型' href='/my/notification/type' />
+        <JuJiuItem label='设备异常'>
+					<CheckBox toggle />
+				</JuJiuItem>
+        <JuJiuItem label='设备分享'>
+					<CheckBox toggle />
+				</JuJiuItem>
+        <JuJiuItem label='服务提醒'>
+					<CheckBox toggle />
+				</JuJiuItem>
+        <JuJiuItem label='公告'>
+					<CheckBox toggle />
+				</JuJiuItem>
+				<JuJiuItemLink label='AI报警事件类型' href='/my/notification/type' />
       </JuJiuMain>
     </Box>
   );

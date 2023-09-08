@@ -2,7 +2,7 @@
 
 import { Text, Box, Nav, List, Card, CardHeader, CardBody, CardFooter } from 'grommet';
 import { Inbox, Notification } from 'grommet-icons';
-import { ButtonLink, IconBack, JuJiuMain } from '@/jujiuuicomponents/new/core_ui';
+import { IconBack, JuJiuMain } from '@/jujiuuicomponents/new/core_ui';
 
 
 const messages = [
@@ -30,10 +30,8 @@ export default function Page() {
                 <Text>{datum.title}</Text>
                 {datum.icon}
               </CardHeader>
-              <CardBody pad='small'>
-                <ButtonLink href={datum.href}>
-                  <Text size='small'>{datum.content}</Text>
-                </ButtonLink>
+              <CardBody pad='small' align='start'>
+                <Text size='small'>{datum.content}</Text>
               </CardBody>
               <CardFooter pad='small' background='background-contrast'>
                 <Text>{datum.date}</Text>

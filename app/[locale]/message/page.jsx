@@ -9,8 +9,8 @@ const messages = [
   { icon: <Notification />, title: '服务过期提醒', date: '2023/7/24', time: '10:24', content: '办3（GF12345678）的云存储服务已过期。录像已无法访问。', href: '/my/cloudstorage' },
   { icon: <Notification />, title: '服务即将到期提醒', date: '2023/7/23', time: '04:24', content: '办3（GF12345678）的云存储服务将于1天后到期。到期后已保存的录像将无法访问。请及时续费。', href: '/my/cloudstorage' },
   { icon: <Notification />, title: '服务即将到期提醒', date: '2023/7/22', time: '21:24', content: '办3（GF12345678）的云存储服务将于7天后到期。到期后已保存的录像将无法访问。请及时续费。', href: '/my/cloudstorage' },
-  { icon: <Inbox />, title: '设备访问提醒', date: '2023/7/24', time: '10:24', content: '用户“AB1234”正在查看办3（GF12345678）的视频流。', href: '#' },
-  { icon: <Inbox />, title: '设备异常提醒', date: '2023/7/23', time: '04:24', content: '办3（GF12345678）绑定用户失败。', href: '#' },
+  { icon: <Notification />, title: '设备访问提醒', date: '2023/7/24', time: '10:24', content: '用户“AB1234”正在查看办3（GF12345678）的视频流。', href: '#' },
+  { icon: <Notification />, title: '设备异常提醒', date: '2023/7/23', time: '04:24', content: '办3（GF12345678）绑定用户失败。', href: '#' },
   { icon: <Notification />, title: '设备状态提醒', date: '2023/7/22', time: '21:24', content: '办3（GF12345678）已上线', href: '#' },
   { icon: <Notification />, title: '设备状态提醒', date: '2023/7/21', time: '00:24', content: '办3（GF12345678）已离线。', href: '#' },
 ];

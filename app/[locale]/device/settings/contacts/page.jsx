@@ -1,9 +1,9 @@
 'use client';
 
 import { Text, Box, Nav, Grid } from 'grommet';
-import { IconBack, JuJiuMain } from '@/jujiuuicomponents/new/core_ui';
 import { User, UserAdd } from 'grommet-icons';
-import { ButtonLink } from '@/jujiuuicomponents/new/core_ui';
+import { IconBack, JuJiuMain, ButtonLink } from '@/jujiuuicomponents/new/core_ui';
+import { JuJiuTagAccountNotBinding } from '@/jujiuuicomponents/JuJiuTags';
 
 
 export default function Page() {
@@ -58,7 +58,7 @@ export default function Page() {
           <Box direction='row' justify='center'>
             <Box align='center'>
               <Box round='full' background='background-contrast' align='center'>
-                <ButtonLink icon={<User size='large' />} href='/device/settings/contacts/edit' />
+                <ButtonLink icon={<User size='large' />} href='/device/settings/contacts/edit?noAccount=true' badge={<JuJiuTagAccountNotBinding />} />
               </Box>
               <Text>弟弟</Text>
             </Box>
@@ -66,7 +66,7 @@ export default function Page() {
           <Box direction='row' justify='center'>
             <Box align='center'>
               <Box round='full' background='background-contrast' align='center'>
-                <ButtonLink icon={<User size='large' />} href='/device/settings/contacts/edit' />
+                <ButtonLink icon={<User size='large' />} href='/device/settings/contacts/edit?noAccount=true' badge={<JuJiuTagAccountNotBinding />} />
               </Box>
               <Text>妹妹</Text>
             </Box>

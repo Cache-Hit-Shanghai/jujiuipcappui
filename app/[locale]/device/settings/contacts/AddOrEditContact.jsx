@@ -1,15 +1,19 @@
 'use client';
 
 import { Text, Box, Select, DateInput, Button, Heading, TextInput } from 'grommet';
-import { User, UserAdd } from 'grommet-icons';
+import { User, UserAdd, Qr } from 'grommet-icons';
+import { useSearchParams } from 'next/navigation';
 import { useState } from 'react';
-import { JuJiuLayer, ButtonLink } from '@/jujiuuicomponents/new/core_ui';
+import { JuJiuLayer, ButtonLink, JuJiuInformation } from '@/jujiuuicomponents/new/core_ui';
 import { JuJiuItem, JuJiuItemButton } from '@/jujiuuicomponents/new/core_item';
 
 
 export function AddOrEditContact({ isAdd }) {
   const [openAddFace, setOpenAddFace] = useState(false);
 	const [openAddContact, setOpenAddContact] = useState(false);
+	const [openAddAccount, setOpenAddAccound] = useState(false);
+  const searchParams = useSearchParams();
+  const noAccount = searchParams.get('noAccount');
 
   return (
     <>
@@ -44,6 +48,31 @@ export function AddOrEditContact({ isAdd }) {
           />
         </Box>
       </JuJiuItem>
+      {(isAdd || noAccount) && (
+        <>
+          <JuJiuItemButton
+            label='绑定账号'
+            onClick={() => setOpenAddAccound(true)}
+          />
+          {openAddAccount && (
+            <JuJiuLayer
+              onClickOutside={() => setOpenAddAccound(false)}
+            >
+              <Heading
+                level={3}
+                alignSelf='center'
+                margin='none'
+              >
+                绑定账号
+              </Heading>
+              <Box fill='horizontal' height='medium' background='light-6' align='center' justify='center' flex={false}>
+                <Qr color='plain' size='xlarge' />
+              </Box>
+              <JuJiuInformation label='使用云探App扫一扫上面的二维码图案，绑定账号。' />
+            </JuJiuLayer>
+          )}
+        </>
+      )}
       {openAddContact && (
         <JuJiuLayer
           onClickOutside={() => setOpenAddContact(false)}

@@ -11,7 +11,7 @@ function CalendarTitle({ time, title, repeat }) {
     <Link href='/device/settings/calendar/edit' passHref legacyBehavior>
       <Box>
         <Text>{time} {title}</Text>
-        <Text size='xsmall' color='xweak'>{repeat.join(' ')}</Text>
+        <Text size='xsmall' color='text-xweak'>{repeat.join(' ')}</Text>
       </Box>
     </Link>
   );

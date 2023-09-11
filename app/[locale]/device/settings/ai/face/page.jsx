@@ -16,7 +16,7 @@ export default function Page() {
         <JuJiuItem label='启用人脸识别'>
 					<CheckBox toggle />
 				</JuJiuItem>
-        <JuJiuItemLink label='人脸管理' href='/device/settings/ai/face/management' />
+        {/* <JuJiuItemLink label='人脸管理' href='/device/settings/ai/face/management' /> */}
         <Heading level={2}>功能介绍</Heading>
         <Text color='text-xweak'>用于家庭中人脸识别，通过与录入的人员面部信息比对，智能识别出画面中人物的身份。如果不在使用此功能，可以再设置中关闭，如果想删除信息，可在人脸管理中对以存储的信息进行管理。</Text>
         <Heading level={2}>使用建议</Heading>

@@ -1,6 +1,6 @@
 'use client';
 
-import { Text, Box, Nav, Button, Grid, Heading, TextInput } from 'grommet';
+import { Text, Box, Nav, Heading } from 'grommet';
 import { IconBack, JuJiuMain } from '@/jujiuuicomponents/new/core_ui';
 
 

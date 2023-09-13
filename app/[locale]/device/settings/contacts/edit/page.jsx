@@ -15,8 +15,9 @@ export default function Page() {
       <JuJiuMain>
         <AddOrEditContact />
       </JuJiuMain>
-      <Box pad='medium'>
+      <Box pad='medium' gap='medium' flex={false}>
         <Button primary label='保存' />
+        <Button color='status-critical' label='删除家人' />
       </Box>
     </Box>
   );

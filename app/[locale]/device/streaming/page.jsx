@@ -4,6 +4,8 @@ import {
 	Text,
 	Box,
 	Video as VideoCanvas,
+	Tabs,
+	Tab,
 	Nav,
 	Tag,
 	Stack,
@@ -28,8 +30,8 @@ import {
 import { ButtonLink, IconBack, JuJiuMain, JuJiuLayer } from '@/jujiuuicomponents/new/core_ui';
 import Link from '@/state/translate';
 
-export function StreamPlayer() {
-	const [openHelp, setOpenHelp] = useState(true);
+export function StreamPlayerError() {
+	const [openHelp, setOpenHelp] = useState(false);
 
 	return (
 		<Stack interactiveChild='last'>
@@ -60,7 +62,6 @@ export function StreamPlayer() {
 					</Box>
 				</Stack>
 				<Box align='center'>
-					<Spinner size='large' />
 					<StatusCritical size='large' />
 					<Text>无法加载视频流。</Text>
 					<Text>设备已离线，离线时间：2023年9月14日 14:52:30。</Text>
@@ -91,6 +92,46 @@ export function StreamPlayer() {
 	);
 }
 
+export function StreamPlayer() {
+	return (
+		<Stack interactiveChild='last'>
+			<Box flex={false} background='background-contrast'>
+				<VideoCanvas controls={false} style={{ zIndex: '0' }}>
+					<source
+						src='http://techslides.com/demos/sample-videos/small.webm'
+						type='video/webm'
+					/>
+				</VideoCanvas>
+			</Box>
+			<Box fill justify='between'>
+				<Stack>
+					<Box direction='row' justify='center'>
+						<Tag margin='small' pad='xsmall' size='xsmall' border={false} background='status-critical'
+							value={
+								<Box direction='row' gap='small' align='center'>
+									<RadialSelected size='small' />
+									<Text size='xsmall'>0:41</Text>
+								</Box>
+							}
+						/>
+					</Box>
+					<Box direction='row' justify='end'>
+						<ButtonLink href='/device/streaming/record' icon={<VideoRecording size='24' />} />
+						<ButtonLink href='/device/settings/sharing' icon={<ShareRounded />} />
+						<ButtonLink href='/device/settings' icon={<Settings3 size='24' />} />
+					</Box>
+				</Stack>
+				<Box align='center'>
+					<Spinner size='large' />
+				</Box>
+				<Box align='end'>
+					<ButtonLink href='/device/streaming/fullscreen' icon={<PhoneLandscape size='24' />} />
+				</Box>
+			</Box>
+		</Stack>
+	);
+}
+
 export default function Page() {
 	const [value, setValue] = useState(Date.now());
 
@@ -102,7 +143,14 @@ export default function Page() {
 			</Nav>
 			<JuJiuMain margin='none'>
 				<Box fill>
-					<StreamPlayer />
+					<Tabs>
+						<Tab title='拉流成功'>
+							<StreamPlayer />
+						</Tab>
+						<Tab title='拉流失败'>
+							<StreamPlayerError />
+						</Tab>
+					</Tabs>
 					<Box flex={{ grow: 1 }} justify='center'>
 						<PanControl />
 					</Box>

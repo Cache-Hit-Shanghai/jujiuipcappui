@@ -35,7 +35,6 @@ export function AddOrEditContact({ isAdd }) {
           />
         </Box>
       </JuJiuItem>
-      <JuJiuItemLink label='自定义关系' href='/device/settings/contacts/relationship' />
       <JuJiuItem label='出生日期'>
         <Box width='small'>
           <DateInput

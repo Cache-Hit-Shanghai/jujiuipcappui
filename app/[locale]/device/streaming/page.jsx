@@ -61,11 +61,11 @@ export function StreamPlayerError() {
 						<ButtonLink href='/device/settings' icon={<Settings3 size='24' />} />
 					</Box>
 				</Stack>
-				<Box align='center'>
+				<Box align='center' gap='small'>
 					<StatusCritical size='large' />
 					<Text>无法加载视频流。</Text>
 					<Text>设备已离线，离线时间：2023年9月14日 14:52:30。</Text>
-					<Button primary label='查看帮助' onClick={() => setOpenHelp(true)} />
+					<Button primary label='查看帮助' size='small' onClick={() => setOpenHelp(true)} />
 					{openHelp && (
 						<JuJiuLayer
 							onClickOutside={() => setOpenHelp(false)}

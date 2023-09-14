@@ -48,7 +48,7 @@ export function AddOrEditContact({ isAdd }) {
           />
         </Box>
       </JuJiuItem>
-      {(isAdd || noAccount) && (
+      {noAccount && (
         <>
           <JuJiuItemButton
             label='绑定账号'

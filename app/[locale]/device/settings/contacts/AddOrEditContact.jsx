@@ -5,7 +5,7 @@ import { User, UserAdd, Qr } from 'grommet-icons';
 import { useSearchParams } from 'next/navigation';
 import { useState } from 'react';
 import { JuJiuLayer, ButtonLink, JuJiuInformation } from '@/jujiuuicomponents/new/core_ui';
-import { JuJiuItem, JuJiuItemButton } from '@/jujiuuicomponents/new/core_item';
+import { JuJiuItem, JuJiuItemButton, JuJiuItemLink } from '@/jujiuuicomponents/new/core_item';
 
 
 export function AddOrEditContact({ isAdd }) {
@@ -30,15 +30,12 @@ export function AddOrEditContact({ isAdd }) {
       </Box>
       <JuJiuItem label='关系'>
         <Box width='small'>
-          <Select
-            options={['爸爸', '妈妈', '爷爷', '奶奶', '外公', '外婆', '哥哥', '姐姐', '弟弟', '妹妹', ]}
+          <TextInput
+            suggestions={['爸爸', '妈妈', '爷爷', '奶奶', '外公', '外婆', '哥哥', '姐姐', '弟弟', '妹妹', ]}
           />
         </Box>
       </JuJiuItem>
-      <JuJiuItemButton
-        label='自定义关系'
-        onClick={() => setOpenAddContact(true)}
-      />
+      <JuJiuItemLink label='自定义关系' href='/device/settings/contacts/relationship' />
       <JuJiuItem label='出生日期'>
         <Box width='small'>
           <DateInput

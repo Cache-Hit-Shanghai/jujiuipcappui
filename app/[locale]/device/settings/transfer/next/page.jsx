@@ -8,8 +8,7 @@ import { IconBack, JuJiuMain, JuJiuInformation } from '@/jujiuuicomponents/new/c
 export default function Page() {
   return (
     <Box fill>
-      <Nav direction='row' align='center'>
-        <IconBack />
+      <Nav direction='row' align='center' pad='medium'>
         <Text>设备转移 - 办3</Text>
       </Nav>
       <JuJiuMain align='center'>

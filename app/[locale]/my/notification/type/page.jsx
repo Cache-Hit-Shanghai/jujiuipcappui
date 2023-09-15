@@ -1,8 +1,8 @@
 'use client';
 
-import { Text, Box, Nav, CheckBox } from 'grommet';
+import { Text, Box, Nav } from 'grommet';
 import { IconBack, JuJiuMain } from '@/jujiuuicomponents/core/core_ui';
-import { JuJiuItem } from '@/jujiuuicomponents/core/core_item';
+import { ChangeAIAlarm } from '@/jujiuuicomponents/application/settings/notification';
 
 
 export default function Page() {
@@ -13,15 +13,7 @@ export default function Page() {
         <Text>报警事件类型设置 - 办3</Text>
       </Nav>
       <JuJiuMain>
-        <JuJiuItem label='画面有人移动'>
-					<CheckBox toggle />
-				</JuJiuItem>
-        <JuJiuItem label='画面人脸识别结果'>
-					<CheckBox toggle />
-				</JuJiuItem>
-        <JuJiuItem label='看护区域有人移动'>
-					<CheckBox toggle />
-				</JuJiuItem>
+        <ChangeAIAlarm />
       </JuJiuMain>
     </Box>
   );

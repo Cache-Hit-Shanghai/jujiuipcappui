@@ -1,8 +1,9 @@
 'use client';
 
-import { Text, Box, Nav, CheckBox } from 'grommet';
+import { Text, Box, Nav } from 'grommet';
 import { IconBack, JuJiuMain } from '@/jujiuuicomponents/core/core_ui';
-import { JuJiuItem, JuJiuItemLink } from '@/jujiuuicomponents/core/core_item';
+import { JuJiuItemLink } from '@/jujiuuicomponents/core/core_item';
+import { ChangeNotification } from '@/jujiuuicomponents/application/settings/notification';
 
 
 export default function Page() {
@@ -13,24 +14,7 @@ export default function Page() {
         <Text>消息通知设置 - 办3</Text>
       </Nav>
       <JuJiuMain>
-        <JuJiuItem label='设备访问'>
-					<CheckBox toggle />
-				</JuJiuItem>
-        <JuJiuItem label='设备状态'>
-					<CheckBox toggle />
-				</JuJiuItem>
-        <JuJiuItem label='设备异常'>
-					<CheckBox toggle />
-				</JuJiuItem>
-        <JuJiuItem label='设备分享'>
-					<CheckBox toggle />
-				</JuJiuItem>
-        <JuJiuItem label='服务提醒'>
-					<CheckBox toggle />
-				</JuJiuItem>
-        <JuJiuItem label='公告'>
-					<CheckBox toggle />
-				</JuJiuItem>
+        <ChangeNotification />
 				<JuJiuItemLink label='AI报警事件类型' href='/my/notification/type' />
       </JuJiuMain>
     </Box>

@@ -4,8 +4,8 @@ import { Text, Box, Select, DateInput, Button, Heading, TextInput } from 'gromme
 import { User, UserAdd, Qr } from 'grommet-icons';
 import { useSearchParams } from 'next/navigation';
 import { useState } from 'react';
-import { JuJiuLayer, ButtonLink, JuJiuInformation } from '@/jujiuuicomponents/new/core_ui';
-import { JuJiuItem, JuJiuItemButton, JuJiuItemLink } from '@/jujiuuicomponents/new/core_item';
+import { JuJiuLayer, ButtonLink, JuJiuInformation } from '@/jujiuuicomponents/core/core_ui';
+import { JuJiuItem, JuJiuItemButton, JuJiuItemLink } from '@/jujiuuicomponents/core/core_item';
 
 
 export function AddOrEditContact({ isAdd }) {

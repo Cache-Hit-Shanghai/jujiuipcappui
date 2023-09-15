@@ -4,7 +4,7 @@ import { Text, Box, Nav, Anchor, Card, CardHeader, CardBody, CheckBox, Button, S
 import { Alipay } from '@styled-icons/remix-fill/Alipay';
 import { WechatPay } from '@styled-icons/remix-line/WechatPay';
 import Link from '@/state/translate';
-import { IconBack, JuJiuMain } from '@/jujiuuicomponents/new/core_ui';
+import { IconBack, JuJiuMain } from '@/jujiuuicomponents/core/core_ui';
 
 
 export default function Page() {

@@ -2,7 +2,7 @@
 
 import { Text, Box, Nav, Tabs, Tab, List } from 'grommet';
 import { Webcam } from 'grommet-icons';
-import { IconBack, JuJiuMain } from '@/jujiuuicomponents/new/core_ui';
+import { IconBack, JuJiuMain } from '@/jujiuuicomponents/core/core_ui';
 
 const data0 = [
   { device: '客厅', to: '137319346' },

@@ -11,7 +11,7 @@ import {
 	ResolutionControl,
 	ZoomControl,
 } from '@/jujiuuicomponents/Components';
-import { IconBack } from '@/jujiuuicomponents/new/core_ui';
+import { IconBack } from '@/jujiuuicomponents/core/core_ui';
 
 export default function Page() {
 	return (

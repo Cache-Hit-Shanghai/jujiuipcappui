@@ -2,7 +2,7 @@
 
 import { Text, Box, Nav, Heading } from 'grommet';
 import { Update } from 'grommet-icons';
-import { ButtonLink, IconBack, JuJiuMain } from '@/jujiuuicomponents/new/core_ui';
+import { ButtonLink, IconBack, JuJiuMain } from '@/jujiuuicomponents/core/core_ui';
 
 
 export default function Page() {

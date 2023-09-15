@@ -10,7 +10,7 @@ import {
 } from "grommet";
 import { Add } from "grommet-icons";
 import { useState } from "react";
-import { JuJiuLayer, IconBack, JuJiuCard, JuJiuMain } from "@/jujiuuicomponents/new/core_ui";
+import { JuJiuLayer, IconBack, JuJiuCard, JuJiuMain } from "@/jujiuuicomponents/core/core_ui";
 
 const timeMask = [
 	{

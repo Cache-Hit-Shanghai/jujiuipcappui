@@ -2,7 +2,7 @@
 
 import { Box, Tag } from 'grommet';
 import { AppMark, AppLogo } from '@/jujiuuicomponents/Components';
-import { ButtonLink } from '@/jujiuuicomponents/new/core_ui';
+import { ButtonLink } from '@/jujiuuicomponents/core/core_ui';
 
 // 中心渐变效果，留着以后用。
 // return (

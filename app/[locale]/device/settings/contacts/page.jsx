@@ -2,7 +2,7 @@
 
 import { Text, Box, Nav, Grid } from 'grommet';
 import { User, UserAdd } from 'grommet-icons';
-import { IconBack, JuJiuMain, ButtonLink } from '@/jujiuuicomponents/new/core_ui';
+import { IconBack, JuJiuMain, ButtonLink } from '@/jujiuuicomponents/core/core_ui';
 import { JuJiuTagAccountNotBinding } from '@/jujiuuicomponents/JuJiuTags';
 
 

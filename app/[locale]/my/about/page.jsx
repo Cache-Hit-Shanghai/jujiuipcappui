@@ -2,7 +2,7 @@
 
 import { Text, Box, Nav } from 'grommet';
 import { AppMark, AppLogo } from '@/jujiuuicomponents/Components';
-import { IconBack, LinkGroup, JuJiuMain, JuJiuCard } from '@/jujiuuicomponents/new/core_ui';
+import { IconBack, LinkGroup, JuJiuMain, JuJiuCard } from '@/jujiuuicomponents/core/core_ui';
 
 const links = [
   { label: '检查更新', url: '#'},

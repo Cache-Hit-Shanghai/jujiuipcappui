@@ -1,7 +1,7 @@
 'use client';
 
 import { Text, Box, TextInput , Nav, TextArea, Button } from 'grommet';
-import { IconBack, JuJiuMain } from '@/jujiuuicomponents/new/core_ui';
+import { IconBack, JuJiuMain } from '@/jujiuuicomponents/core/core_ui';
 
 const content=`
 ## 主要步骤如下

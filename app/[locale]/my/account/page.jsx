@@ -3,8 +3,10 @@
 import { Text, Box, Avatar, Nav, Button, Heading, TextInput } from 'grommet';
 import { User } from 'grommet-icons';
 import { useState } from 'react';
-import { JuJiuItemRawButton, JuJiuItemButton, JuJiuItemLink } from '@/jujiuuicomponents/new/core_item';
-import { JuJiuLayer, IconBack, JuJiuMain, JuJiuInformation } from '@/jujiuuicomponents/new/core_ui';
+import { JuJiuItemRawButton, JuJiuItemButton, JuJiuItemLink } from '@/jujiuuicomponents/core/core_item';
+import { JuJiuLayer, IconBack, JuJiuMain, JuJiuInformation } from '@/jujiuuicomponents/core/core_ui';
+import { ChangeAvatar, ChangeNickname } from '@/jujiuuicomponents/application/settings/account';
+
 
 export default function Page() {
   const [ openAvata, setOpenAvata ] = useState(false);
@@ -27,17 +29,12 @@ export default function Page() {
         <Button label='注销账号' color='status-critical' />
         {openAvata && (
           <JuJiuLayer onClickOutside={() => setOpenAvata(false)}>
-            <Heading level={3} alignSelf='center' margin='none'>更换头像</Heading>
-            <Button label='拍照' />
-            <Button label='本地相册' />
+            <ChangeAvatar />
           </JuJiuLayer>
         )}
         {openName && (
           <JuJiuLayer onClickOutside={() => setOpenName(false)}>
-            <Heading level={3} alignSelf='center' margin='none'>修改昵称</Heading>
-            <TextInput placeholder='请填写昵称……' />
-            <JuJiuInformation label='请设置2-20个字符，不能使用@《等字符。' />
-            <Button label='保存' primary />
+            <ChangeNickname />
           </JuJiuLayer>
         )}
       </JuJiuMain>

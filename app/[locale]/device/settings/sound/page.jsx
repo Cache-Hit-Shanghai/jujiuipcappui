@@ -2,9 +2,9 @@
 
 import { Text, Box, Nav, CheckBox, RangeInput, Heading } from 'grommet';
 import { useState } from 'react';
-import { IconBack, JuJiuMain } from '@/jujiuuicomponents/new/core_ui';
-import { JuJiuItem, JuJiuItemButton } from '@/jujiuuicomponents/new/core_item';
-import { JuJiuLayer } from '@/jujiuuicomponents/new/core_ui';
+import { IconBack, JuJiuMain } from '@/jujiuuicomponents/core/core_ui';
+import { JuJiuItem, JuJiuItemButton } from '@/jujiuuicomponents/core/core_item';
+import { JuJiuLayer } from '@/jujiuuicomponents/core/core_ui';
 
 
 export default function Page() {

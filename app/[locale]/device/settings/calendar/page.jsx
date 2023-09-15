@@ -1,8 +1,8 @@
 'use client';
 
 import { Text, Box, Nav, CheckBox } from 'grommet';
-import { IconBack, JuJiuMain, ButtonLink } from '@/jujiuuicomponents/new/core_ui';
-import { JuJiuItem } from '@/jujiuuicomponents/new/core_item';
+import { IconBack, JuJiuMain, ButtonLink } from '@/jujiuuicomponents/core/core_ui';
+import { JuJiuItem } from '@/jujiuuicomponents/core/core_item';
 import Link from '@/state/translate';
 
 

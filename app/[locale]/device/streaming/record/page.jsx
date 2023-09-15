@@ -21,7 +21,7 @@ import {
 	IconButton,
 	JuJiuMain,
   ButtonLink,
-} from '@/jujiuuicomponents/new/core_ui';
+} from '@/jujiuuicomponents/core/core_ui';
 
 export function StreamPlayer() {
 	return (

@@ -3,7 +3,7 @@
 import { Box, Nav, Stack } from 'grommet';
 import { Trash, ShareRounded, CirclePlay } from 'grommet-icons';
 import { useSearchParams } from 'next/navigation';
-import { JuJiuInformation, IconBack, JuJiuMain, IconButton } from '@/jujiuuicomponents/new/core_ui';
+import { JuJiuInformation, IconBack, JuJiuMain, IconButton } from '@/jujiuuicomponents/core/core_ui';
 
 
 export default function Page() {

@@ -5,7 +5,7 @@ import { AddCircle, Mail, Add, Scan } from 'grommet-icons';
 import { Group } from '@styled-icons/fluentui-system-regular/Group';
 import Link from '@/state/translate';
 import { AppFooter, IpcCard } from '@/jujiuuicomponents/Components';
-import { ButtonLink, JuJiuMain } from '@/jujiuuicomponents/new/core_ui';
+import { ButtonLink, JuJiuMain } from '@/jujiuuicomponents/core/core_ui';
 import { JuJiuTagFromShared, JuJiuTagSharing } from '@/jujiuuicomponents/JuJiuTags';
 
 export default function Page() {

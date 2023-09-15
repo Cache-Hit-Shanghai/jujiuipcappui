@@ -27,7 +27,7 @@ import {
 	ZoomControl,
 	PanControl,
 } from '@/jujiuuicomponents/Components';
-import { ButtonLink, IconBack, JuJiuMain, JuJiuLayer } from '@/jujiuuicomponents/new/core_ui';
+import { ButtonLink, IconBack, JuJiuMain, JuJiuLayer } from '@/jujiuuicomponents/core/core_ui';
 import Link from '@/state/translate';
 
 export function StreamPlayerError() {

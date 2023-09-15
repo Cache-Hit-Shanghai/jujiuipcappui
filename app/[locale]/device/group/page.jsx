@@ -2,7 +2,7 @@
 
 import { Text, Box, Button, Nav, Heading, TextInput } from 'grommet';
 import { useState } from 'react';
-import { JuJiuLayer, IconBack, ButtonGroup, JuJiuMain } from '@/jujiuuicomponents/new/core_ui';
+import { JuJiuLayer, IconBack, ButtonGroup, JuJiuMain } from '@/jujiuuicomponents/core/core_ui';
 
 
 export default function Page() {

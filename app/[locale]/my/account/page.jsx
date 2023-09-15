@@ -1,10 +1,10 @@
 'use client';
 
-import { Text, Box, Avatar, Nav, Button, Heading, TextInput } from 'grommet';
+import { Text, Box, Avatar, Nav, Button } from 'grommet';
 import { User } from 'grommet-icons';
 import { useState } from 'react';
 import { JuJiuItemRawButton, JuJiuItemButton, JuJiuItemLink } from '@/jujiuuicomponents/core/core_item';
-import { JuJiuLayer, IconBack, JuJiuMain, JuJiuInformation } from '@/jujiuuicomponents/core/core_ui';
+import { JuJiuLayer, IconBack, JuJiuMain } from '@/jujiuuicomponents/core/core_ui';
 import { ChangeAvatar, ChangeNickname } from '@/jujiuuicomponents/application/settings/account';
 
 

@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import { Text, Box, Nav, Markdown } from 'grommet';
-import { IconBack, JuJiuMain } from '@/jujiuuicomponents/core/core_ui';
-import { ButtonLink } from '@/jujiuuicomponents/core/core_ui';
+import { Text, Box, Nav, Markdown } from "grommet";
+import { IconBack, JuJiuMain } from "@/jujiu-ui-components/core/core-ui";
+import { ButtonLink } from "@/jujiu-ui-components/core/core-ui";
 
 const content = `
 # 转移设备说明
@@ -21,15 +21,15 @@ const content = `
 export default function Page() {
   return (
     <Box fill>
-      <Nav direction='row' align='center'>
+      <Nav direction="row" align="center">
         <IconBack />
         <Text>设备转移 - 办3</Text>
       </Nav>
       <JuJiuMain>
         <Markdown>{content}</Markdown>
       </JuJiuMain>
-      <Box direction='row' margin='small' justify='end' flex={false}>
-        <ButtonLink href='/device/settings/transfer/next' label='下一步' />
+      <Box direction="row" margin="small" justify="end" flex={false}>
+        <ButtonLink href="/device/settings/transfer/next" label="下一步" />
       </Box>
     </Box>
   );

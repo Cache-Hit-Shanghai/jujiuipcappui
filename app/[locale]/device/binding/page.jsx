@@ -1,9 +1,7 @@
 'use client';
 
-import { Text, Box, Heading, Nav, Form, FormField, TextInput } from 'grommet';
-import { Wifi } from 'grommet-icons';
+import { Text, Box, Nav } from 'grommet';
 import { ButtonLink, IconBack, JuJiuMain } from '@/jujiuuicomponents/core/core_ui';
-import { JuJiuInformation } from '@/jujiuuicomponents/core/core_ui';
 import { WiFiBinding } from '@/jujiuuicomponents/application/device/binding';
 
 

@@ -1,6 +1,6 @@
 import { NextIntlClientProvider } from "next-intl";
 import { notFound } from "next/navigation";
-import GrommetRoot from "@/jujiuuicomponents/layout/grommet";
+import GrommetRoot from "@/jujiu-ui-components/layout/grommet";
 import { CustomLocalizationProvider } from "../../components/localization-provider";
 import { MuiThemeProvider } from "../../components/mui-theme-provider";
 

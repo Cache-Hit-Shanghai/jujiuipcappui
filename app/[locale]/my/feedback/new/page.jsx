@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
-import { Text, Box, TextInput , Nav, TextArea, Button } from 'grommet';
-import { IconBack, JuJiuMain } from '@/jujiuuicomponents/core/core_ui';
+import { Text, Box, TextInput, Nav, TextArea, Button } from "grommet";
+import { IconBack, JuJiuMain } from "@/jujiu-ui-components/core/core-ui";
 
-const content=`
+const content = `
 ## 主要步骤如下
 1. 单击“云探”app。
 1. 单击摄像机设置小图标。
@@ -14,18 +14,18 @@ const content=`
 export default function Page() {
   return (
     <Box fill>
-      <Nav direction='row' align='center'>
+      <Nav direction="row" align="center">
         <IconBack />
         <Text>新建问题</Text>
       </Nav>
-      <Box margin='small' flex={false}>
-        <TextInput placeholder='标题' />
+      <Box margin="small" flex={false}>
+        <TextInput placeholder="标题" />
       </Box>
-      <JuJiuMain gap='medium'>
-        <TextArea fill placeholder='问题描述' />
+      <JuJiuMain gap="medium">
+        <TextArea fill placeholder="问题描述" />
       </JuJiuMain>
-      <Box pad='small' direction='row' flex={false} justify='end'>
-        <Button label='提交' />
+      <Box pad="small" direction="row" flex={false} justify="end">
+        <Button label="提交" />
       </Box>
     </Box>
   );

@@ -11,8 +11,8 @@ import {
   List,
   CheckBox,
 } from "grommet";
-import { JuJiuLayer } from "@/jujiuuicomponents/core/core_ui";
-import { JuJiuItemButton } from "@/jujiuuicomponents/core/core_item";
+import { JuJiuLayer } from "@/jujiu-ui-components/core/core-ui";
+import { JuJiuItemButton } from "@/jujiu-ui-components/core/core-item";
 import { useState } from "react";
 import { StaticTimePicker } from "@mui/x-date-pickers";
 

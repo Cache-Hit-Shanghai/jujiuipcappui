@@ -1,7 +1,7 @@
 "use client";
 
 import { Text, Box, Nav, Button } from "grommet";
-import { IconBack, JuJiuMain } from "@/jujiuuicomponents/core/core_ui";
+import { IconBack, JuJiuMain } from "@/jujiu-ui-components/core/core-ui";
 import { CalendarEditor } from "../createOrEdit";
 
 export default function Page() {

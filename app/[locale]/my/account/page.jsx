@@ -5,7 +5,7 @@ import { User } from 'grommet-icons';
 import { useState } from 'react';
 import { JuJiuItemRawButton, JuJiuItemButton, JuJiuItemLink } from '@/jujiu-ui-components/core/core-item';
 import { JuJiuLayer, IconBack, JuJiuMain } from '@/jujiu-ui-components/core/core-ui';
-import { ChangeAvatar, ChangeNickname } from '@/jujiu-ui-components/application/settings/account';
+import { ChangeAvatar, ChangeNickname } from '@/jujiu-ui-components/ipc/settings/account';
 
 export default function Page() {
 	const [openAvata, setOpenAvata] = useState(false);

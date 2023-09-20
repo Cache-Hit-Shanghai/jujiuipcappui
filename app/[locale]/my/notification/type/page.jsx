@@ -2,7 +2,7 @@
 
 import { Text, Box, Nav } from 'grommet';
 import { IconBack, JuJiuMain } from '@/jujiu-ui-components/core/core-ui';
-import { ChangeAIAlarm } from '@/jujiu-ui-components/application/settings/notification';
+import { ChangeAIAlarm } from '@/jujiu-ui-components/ipc/settings/notification';
 
 export default function Page() {
 	return (

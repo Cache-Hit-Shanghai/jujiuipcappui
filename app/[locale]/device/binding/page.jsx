@@ -2,7 +2,7 @@
 
 import { Text, Box, Nav } from 'grommet';
 import { ButtonLink, IconBack, JuJiuMain } from '@/jujiu-ui-components/core/core-ui';
-import { WiFiBinding } from '@/jujiu-ui-components/application/device/binding';
+import { WiFiBinding } from '@/jujiu-ui-components/ipc/device/binding';
 
 export default function Page() {
 	return (

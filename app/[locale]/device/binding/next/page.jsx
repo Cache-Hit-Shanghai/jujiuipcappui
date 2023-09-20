@@ -3,7 +3,7 @@
 import { Text, Box, Nav } from 'grommet';
 import { ButtonBackToMain } from '@/jujiu-ui-components/components';
 import { IconBack, JuJiuMain } from '@/jujiu-ui-components/core/core-ui';
-import { DeviceBinding } from '@/jujiu-ui-components/application/device/binding';
+import { DeviceBinding } from '@/jujiu-ui-components/ipc/device/binding';
 
 export default function Page() {
 	return (

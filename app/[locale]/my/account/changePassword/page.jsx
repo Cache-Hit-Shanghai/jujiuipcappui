@@ -2,7 +2,7 @@
 
 import { Text, Box, Nav } from 'grommet';
 import { IconBack, JuJiuMain } from '@/jujiu-ui-components/core/core-ui';
-import { ChangePassword } from '@/jujiu-ui-components/application/settings/account';
+import { ChangePassword } from '@/jujiu-ui-components/ipc/settings/account';
 
 export default function Page() {
 	return (

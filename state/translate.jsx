@@ -6,5 +6,5 @@ export default Link;
 export { useRouter };
 
 export function useJuJiuT() {
-  return useTranslations('Index');
+	return useTranslations('Index');
 }

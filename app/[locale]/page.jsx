@@ -63,7 +63,7 @@ export default function Page() {
 					/>
 				</Box>
 			</Nav>
-			<JuJiuMain margin='none'>
+			<JuJiuMain pad='none'>
 				<Accordion>
 					<AccordionPanel label={<Text margin='small'>默认分组</Text>}>
 						<Box gap='medium' margin='small'>

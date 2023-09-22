@@ -10,7 +10,7 @@ import {
 	PanLayer,
 	ResolutionControl,
 	ZoomControl,
-} from '@/jujiu-ui-components/components';
+} from '@/jujiu-ui-components/ipc/video/control';
 import { IconBack } from '@/jujiu-ui-components/core/core-ui';
 
 export default function Page() {

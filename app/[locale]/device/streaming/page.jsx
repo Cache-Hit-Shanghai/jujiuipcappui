@@ -26,7 +26,7 @@ import {
 	ResolutionControl,
 	ZoomControl,
 	PanControl,
-} from '@/jujiu-ui-components/components';
+} from '@/jujiu-ui-components/ipc/video/control';
 import { ButtonLink, IconBack, JuJiuMain, JuJiuLayer } from '@/jujiu-ui-components/core/core-ui';
 import Link from '@/state/translate';
 
@@ -155,7 +155,7 @@ export default function Page() {
 							<StreamPlayerError />
 						</Tab>
 					</Tabs>
-					<Box flex={{ grow: 1 }} justify='center'>
+					<Box flex={{ grow: 1 }} justify='center' align='center'>
 						<PanControl />
 					</Box>
 					<Box direction='row' justify='evenly' background='background-contrast' flex={false}>

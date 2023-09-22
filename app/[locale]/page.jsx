@@ -107,7 +107,7 @@ export default function Page() {
 					</AccordionPanel>
 				</Accordion>
 			</JuJiuMain>
-			<AppFooter />
+			<AppFooter uiDesign />
 		</Box>
 	);
 }

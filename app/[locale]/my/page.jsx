@@ -55,7 +55,7 @@ export default function Page() {
 				</JuJiuCard>
 				<LinkGroup data={links} />
 			</JuJiuMain>
-			<AppFooter />
+			<AppFooter uiDesign />
 		</Box>
 	);
 }

@@ -6,7 +6,7 @@ import { Group } from '@styled-icons/fluentui-system-regular/Group';
 import Link from '@/state/translate';
 import { AppFooter, IpcCard } from '@/jujiu-ui-components/components';
 import { ButtonLink, JuJiuMain } from '@/jujiu-ui-components/core/core-ui';
-import { JuJiuTagFromShared, JuJiuTagSharing } from '@/jujiu-ui-components/jujiu-tags';
+import { JuJiuTagFromShared, JuJiuTagSharing } from '@/jujiu-ui-components/core/core-tag';
 
 export default function Page() {
 	return (

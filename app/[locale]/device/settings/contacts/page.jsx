@@ -3,7 +3,7 @@
 import { Text, Box, Nav, Grid } from 'grommet';
 import { User, UserAdd } from 'grommet-icons';
 import { IconBack, JuJiuMain, ButtonLink } from '@/jujiu-ui-components/core/core-ui';
-import { JuJiuTagAccountNotBinding } from '@/jujiu-ui-components/jujiu-tags';
+import { JuJiuTagAccountNotBinding } from '@/jujiu-ui-components/core/core-tag';
 
 export default function Page() {
 	return (

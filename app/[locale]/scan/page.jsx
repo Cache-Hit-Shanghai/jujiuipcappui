@@ -1,12 +1,7 @@
 'use client';
 
-import { Text, Box, Nav, Menu, Accordion, AccordionPanel, Heading } from 'grommet';
-import { AddCircle, Mail, Add, Scan } from 'grommet-icons';
-import { Group } from '@styled-icons/fluentui-system-regular/Group';
-import Link from '@/state/translate';
-import { AppFooter, IpcCard } from '@/jujiu-ui-components/components';
+import { Text, Box, Nav } from 'grommet';
 import { ButtonLink, JuJiuMain } from '@/jujiu-ui-components/core/core-ui';
-import { JuJiuTagFromShared, JuJiuTagSharing } from '@/jujiu-ui-components/core/core-tag';
 
 export default function Page() {
 	return (

@@ -55,7 +55,7 @@ export function AppFooter({ uiDesign }) {
 	return (
 		<Box direction='row' background='background-contrast' justify='evenly' flex={false}>
 			{FooterData.map((datum) => (
-				<Box background={pathname === datum.href ? 'brand' : 'transparent'}>
+				<Box background={pathname === datum.href ? 'control' : 'transparent'}>
 					<IconLink icon={datum.icon} label={datum.label} href={datum.href} />
 				</Box>
 			))}

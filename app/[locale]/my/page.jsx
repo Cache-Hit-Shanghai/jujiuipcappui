@@ -23,7 +23,7 @@ export default function Page() {
 						<Avatar background='background-contrast'>
 							<User />
 						</Avatar>
-						<Box>
+						<Box align='start'>
 							<Text>用户34881</Text>
 							<Text size='xsmall' color='text-xweak'>
 								黄金会员

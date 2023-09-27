@@ -1,22 +1,22 @@
 'use client';
 
 import { Text, Box, Nav, Menu, Accordion, AccordionPanel, Heading } from 'grommet';
-import { AddCircle, Mail, Add, Scan } from 'grommet-icons';
+import { AddCircle, Mail, Add, Scan, CreativeCommons } from 'grommet-icons';
 import { Group } from '@styled-icons/fluentui-system-regular/Group';
-import Link from '@/state/translate';
+import Link, { useJuJiuT } from '@/state/translate';
 import { AppFooter } from './components';
 import { IpcCard } from '@/jujiu-ui-components/ipc/video/control';
 import { ButtonLink, JuJiuMain } from '@/jujiu-ui-components/core/core-ui';
 import { JuJiuTagFromShared, JuJiuTagSharing } from '@/jujiu-ui-components/core/core-tag';
 
 export default function Page() {
+	const t = useJuJiuT();
 	return (
 		<Box fill>
 			<Nav direction='row' justify='between' align='center' background='background-contrast'>
-				<Box margin='small'>
-					<Heading level={2} margin='none'>
-						云探智能视觉系统
-					</Heading>
+				<Box direction='row' align='center' pad='small' gap='small'>
+					<CreativeCommons />
+					<Text size='xlarge'>{t('雎鸠云视觉')}</Text>
 				</Box>
 				<Box direction='row' gap='small' align='center'>
 					<ButtonLink href='/message' icon={<Mail />} badge={7} />

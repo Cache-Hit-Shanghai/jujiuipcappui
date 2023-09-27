@@ -1,6 +1,6 @@
 'use client';
 
-import { Text, Box, Nav, Menu, Accordion, AccordionPanel, Heading } from 'grommet';
+import { Text, Box, Nav, Menu, Accordion, AccordionPanel } from 'grommet';
 import { AddCircle, Mail, Add, Scan, CreativeCommons } from 'grommet-icons';
 import { Group } from '@styled-icons/fluentui-system-regular/Group';
 import Link, { useJuJiuT } from '@/state/translate';

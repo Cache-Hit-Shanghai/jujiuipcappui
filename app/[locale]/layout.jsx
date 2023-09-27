@@ -22,7 +22,7 @@ export default async function RootLayout({ children, params: { locale } }) {
 				<NextIntlClientProvider locale={locale} messages={messages}>
 					<CustomLocalizationProvider>
 						<MuiThemeProvider>
-							<GrommetRoot>{children}</GrommetRoot>
+							<GrommetRoot themeMode='dark'>{children}</GrommetRoot>
 						</MuiThemeProvider>
 					</CustomLocalizationProvider>
 				</NextIntlClientProvider>

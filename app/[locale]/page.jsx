@@ -4,7 +4,7 @@ import { Text, Box, Nav, Menu, Accordion, AccordionPanel } from 'grommet';
 import { AddCircle, Mail, Add, Scan, CreativeCommons } from 'grommet-icons';
 import { Group } from '@styled-icons/fluentui-system-regular/Group';
 import Link, { useJuJiuT } from '@/state/translate';
-import { AppFooter } from './components';
+import { AppFooter } from '@/app/components';
 import { IpcCard } from '@/jujiu-ui-components/ipc/video/control';
 import { ButtonLink, JuJiuMain } from '@/jujiu-ui-components/core/core-ui';
 import { JuJiuTagFromShared, JuJiuTagSharing } from '@/jujiu-ui-components/core/core-tag';

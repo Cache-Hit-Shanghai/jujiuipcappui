@@ -2,8 +2,13 @@
 
 import { Box } from 'grommet';
 import { Home, Radial, Webcam, Scan, Cycle, StatusCritical } from 'grommet-icons';
-import { IconLink } from '@/jujiu-ui-components/core/core-ui';
+import { IconLink, ButtonLink } from '@/jujiu-ui-components/core/core-ui';
 import { usePathname, useJuJiuT } from '@/state/translate';
+
+export function ButtonBackToMain() {
+	const t = useJuJiuT();
+	return <ButtonLink primary href='/' label={t('回到主页')} />;
+}
 
 export function AppFooter({ uiDesign }) {
 	const t = useJuJiuT();

@@ -3,7 +3,7 @@
 import { Text, Box, Nav, CardHeader, CardBody, Avatar } from 'grommet';
 import { Gallery, CloudUpload, ShareRounded, User, Upgrade } from 'grommet-icons';
 import { PersonFeedback } from '@styled-icons/fluentui-system-regular/PersonFeedback';
-import { AppFooter } from '../components';
+import { AppFooter } from '@/app/components';
 import { ButtonLink, IconLink, LinkGroup, JuJiuMain, JuJiuCard } from '@/jujiu-ui-components/core/core-ui';
 
 const links = [

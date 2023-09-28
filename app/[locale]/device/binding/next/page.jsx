@@ -1,7 +1,8 @@
 'use client';
 
 import { Text, Box, Nav } from 'grommet';
-import { IconBack, JuJiuMain, ButtonBackToMain } from '@/jujiu-ui-components/core/core-ui';
+import { ButtonBackToMain } from '@/app/components';
+import { IconBack, JuJiuMain } from '@/jujiu-ui-components/core/core-ui';
 import { DeviceBinding } from '@/jujiu-ui-components/ipc/device/binding';
 
 export default function Page() {

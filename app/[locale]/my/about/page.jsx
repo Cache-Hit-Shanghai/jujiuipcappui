@@ -1,7 +1,7 @@
 'use client';
 
 import { Text, Box, Nav } from 'grommet';
-import { AppMark, AppLogo } from '@/jujiu-ui-components/components';
+import { AppMark, AppLogo } from '@/jujiu-ui-components/ipc/about/brand';
 import { IconBack, LinkGroup, JuJiuMain, JuJiuCard } from '@/jujiu-ui-components/core/core-ui';
 
 const links = [

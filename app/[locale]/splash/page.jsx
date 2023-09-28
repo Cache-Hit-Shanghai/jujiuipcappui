@@ -1,7 +1,7 @@
 'use client';
 
 import { Box, Tag } from 'grommet';
-import { AppMark, AppLogo } from '@/jujiu-ui-components/components';
+import { AppMark, AppLogo } from '@/jujiu-ui-components/ipc/about/brand';
 import { ButtonLink } from '@/jujiu-ui-components/core/core-ui';
 
 // 中心渐变效果，留着以后用。

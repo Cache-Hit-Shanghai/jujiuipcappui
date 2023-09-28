@@ -2,8 +2,7 @@
 
 import { Text, Box, Nav } from 'grommet';
 import { Qr } from 'grommet-icons';
-import { ButtonBackToMain } from '@/jujiu-ui-components/components';
-import { JuJiuMain, JuJiuInformation } from '@/jujiu-ui-components/core/core-ui';
+import { JuJiuMain, JuJiuInformation, ButtonBackToMain } from '@/jujiu-ui-components/core/core-ui';
 
 export default function Page() {
 	return (

@@ -2,7 +2,8 @@
 
 import { Text, Box, Heading, Tabs, Tab } from 'grommet';
 import { Alert } from 'grommet-icons';
-import { ButtonBackToMain, AppMark } from '@/jujiu-ui-components/components';
+import { AppMark } from '@/jujiu-ui-components/components';
+import { ButtonBackToMain } from '@/jujiu-ui-components/core/core-ui';
 
 export default function Page() {
 	return (

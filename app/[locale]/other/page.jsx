@@ -3,7 +3,7 @@
 import { Box, Button, Layer, Spinner, Text } from 'grommet';
 import { StatusGood, Alert, FormClose } from 'grommet-icons';
 import { useState } from 'react';
-import { ButtonBackToMain } from '@/jujiu-ui-components/components';
+import { ButtonBackToMain } from '@/jujiu-ui-components/core/core-ui';
 
 export default function Page() {
 	const [busy, setBusy] = useState(false);

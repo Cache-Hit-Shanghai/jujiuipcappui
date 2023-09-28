@@ -3,7 +3,7 @@
 import { Text, Box, Nav, Button, CardBody, Avatar } from 'grommet';
 import { User, FormNext, Subtract } from 'grommet-icons';
 import { useState } from 'react';
-import { useRouter } from 'next/navigation';
+import { useRouter } from '@/state/translate';
 import {
 	JuJiuLayer,
 	ButtonLink,
@@ -19,6 +19,7 @@ export default function Page() {
 	const buttons = [
 		{
 			label: '二维码分享',
+			href: '/device/settings/sharing/qrcode',
 			onClick: () => router.push('/device/settings/sharing/qrcode'),
 		},
 		{ label: '微信分享', onClick: () => setOpenWechatSharing(true) },

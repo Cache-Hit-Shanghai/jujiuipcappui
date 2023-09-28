@@ -1,5 +1,10 @@
 {
   "Index": {
+    "其它": "Other",
+    "错误": "Error",
+    "扫一扫": "Scan",
+    "主页": "Home",
+    "我的": "Mine",
     "全球领先的Web视觉系统": "The world-leading web vision system",
     "上海光方迅视科技有限公司版权所有": "Shanghai GuangFang technoledge, all rights reserved",
     "请在听到网络摄像机“绑定设备”的提示音后，将该二维码放置在摄像机镜头前约30厘米左右，等待设备“配置成功”的提示音。": "Please put the QR code in front of the camera about 12 inch after hearing the voice tone of \"waiting for WiFi connection\".",
@@ -31,6 +36,7 @@
     "挂断": "Hang up",
     "对讲": "Chat",
     "截图": "Screenshot",
+    "设备": "Device",
     "设备设置": "Device Settings",
     "设备信息": "Device Information",
     "关闭": "Close",

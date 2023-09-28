@@ -3,52 +3,53 @@
 import { Box } from 'grommet';
 import { Home, Radial, Webcam, Scan, Cycle, StatusCritical } from 'grommet-icons';
 import { IconLink } from '@/jujiu-ui-components/core/core-ui';
-import { usePathname } from '@/state/translate';
+import { usePathname, useJuJiuT } from '@/state/translate';
 
 export function AppFooter({ uiDesign }) {
+	const t = useJuJiuT();
 	const pathname = usePathname();
 	const FooterData = uiDesign
 		? [
 				{
 					icon: <Webcam />,
-					label: '设备',
+					label: t('设备'),
 					href: '/',
 				},
 				{
 					icon: <Radial />,
-					label: '我的',
+					label: t('我的'),
 					href: '/my/',
 				},
 				{
 					icon: <Home />,
-					label: '主页',
+					label: t('主页'),
 					href: '/splash/',
 				},
 				{
 					icon: <Scan />,
-					label: '扫一扫',
+					label: t('扫一扫'),
 					href: '/scan/',
 				},
 				{
 					icon: <StatusCritical />,
-					label: '错误页',
+					label: t('错误'),
 					href: '/errorpage/',
 				},
 				{
 					icon: <Cycle />,
-					label: '其它页',
+					label: t('其它'),
 					href: '/other/',
 				},
 		  ]
 		: [
 				{
 					icon: <Webcam />,
-					label: '设备',
+					label: t('设备'),
 					href: '/',
 				},
 				{
 					icon: <Radial />,
-					label: '我的',
+					label: t('我的'),
 					href: '/my/',
 				},
 		  ];

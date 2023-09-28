@@ -27,7 +27,7 @@ export default function Page() {
 							{
 								label: (
 									<Link href='/device/binding' passHref legacyBehavior>
-										<Text>添加设备</Text>
+										<Text>{t('添加设备')}</Text>
 									</Link>
 								),
 								icon: (
@@ -39,7 +39,7 @@ export default function Page() {
 							{
 								label: (
 									<Link href='/device/group' passHref legacyBehavior>
-										<Text>设备分组</Text>
+										<Text>{t('设备分组')}</Text>
 									</Link>
 								),
 								icon: (
@@ -51,7 +51,7 @@ export default function Page() {
 							{
 								label: (
 									<Link href='/device/scan' passHref legacyBehavior>
-										<Text>扫一扫</Text>
+										<Text>{t('扫一扫')}</Text>
 									</Link>
 								),
 								icon: (
@@ -66,7 +66,7 @@ export default function Page() {
 			</Nav>
 			<JuJiuMain pad='none'>
 				<Accordion>
-					<AccordionPanel label={<Text margin='small'>默认分组</Text>}>
+					<AccordionPanel label={<Text margin='small'>{t('默认分组')}</Text>}>
 						<Box gap='medium' margin='small'>
 							<IpcCard
 								key={0}

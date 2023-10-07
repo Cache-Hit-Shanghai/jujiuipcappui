@@ -152,7 +152,7 @@ export default function Page() {
 							<StreamPlayerError />
 						</Tab>
 					</Tabs>
-					<Box flex={{ grow: 1 }} justify='center' align='center'>
+					<Box flex={{ grow: 1, shrink: 1 }} justify='center' align='center'>
 						<PanControl />
 					</Box>
 					<Box direction='row' justify='evenly' background='background-contrast' flex={false}>

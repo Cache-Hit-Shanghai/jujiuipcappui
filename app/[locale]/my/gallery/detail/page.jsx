@@ -14,7 +14,7 @@ export default function Page() {
 			<Nav direction='row' align='center'>
 				<IconBack />
 			</Nav>
-			<JuJiuMain margin='none'>
+			<JuJiuMain pad='none'>
 				<Box flex={{ grow: 1, shrink: 1 }} overflow='auto'>
 					<Stack fill anchor='center'>
 						<Box

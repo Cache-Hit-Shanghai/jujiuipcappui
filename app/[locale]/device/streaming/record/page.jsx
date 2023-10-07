@@ -14,7 +14,7 @@ export default function Page() {
 	return (
 		<Box fill>
 			<JujiuNav label={t('录像查看') + ' - 办3'} />
-			<JuJiuMain margin='none'>
+			<JuJiuMain pad='none'>
 				<Box fill gap='small'>
 					<Box flex={false} background='background-contrast'>
 						<VideoCanvas controls={false} style={{ zIndex: '0' }}>

@@ -142,7 +142,7 @@ export default function Page() {
 	return (
 		<Box fill>
 			<JujiuNav label={t('实时视频') + ' - 办3'} />
-			<JuJiuMain margin='none'>
+			<JuJiuMain pad='none'>
 				<Box fill>
 					<Tabs>
 						<Tab title='拉流成功'>

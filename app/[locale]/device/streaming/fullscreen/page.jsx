@@ -1,6 +1,6 @@
 'use client';
 
-import { Video as VideoCanvas, Box, Stack, Nav, Text, Tag } from 'grommet';
+import { Video as VideoCanvas, Box, Stack, Text, Tag } from 'grommet';
 import { RadialSelected } from 'grommet-icons';
 import {
 	ScreenCopyControl,
@@ -11,7 +11,7 @@ import {
 	ResolutionControl,
 	ZoomControl,
 } from '@/jujiu-ui-components/ipc/video/control';
-import { IconBack } from '@/jujiu-ui-components/core/core-ui';
+import { JujiuNav } from '@/app/components';
 
 export default function Page() {
 	return (
@@ -38,10 +38,7 @@ export default function Page() {
 					/>
 				</Box>
 				<Box fill justify='between'>
-					<Nav direction='row' align='center'>
-						<IconBack />
-						<Text>办3</Text>
-					</Nav>
+					<JujiuNav label='办3' />
 					<Box direction='row' justify='evenly' margin={{ vertical: 'medium' }}>
 						<ScreenCopyControl showTitle={false} />
 						<RecordControl showTitle={false} />

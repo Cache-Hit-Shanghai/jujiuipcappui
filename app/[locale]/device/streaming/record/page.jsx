@@ -1,75 +1,19 @@
 'use client';
 
-import {
-	Text,
-	Box,
-	Video as VideoCanvas,
-	Nav,
-	Tag,
-	DateInput,
-	RadioButtonGroup,
-	Grid,
-	Stack,
-	Spinner,
-} from 'grommet';
-import { Camera, Cloud, Sd, Download, RadialSelected, ShareRounded, StatusCritical } from 'grommet-icons';
-import { Settings3 } from '@styled-icons/remix-fill/Settings3';
-import { PhoneLandscape } from '@styled-icons/bootstrap/PhoneLandscape';
+import { Text, Box, Video as VideoCanvas, DateInput, RadioButtonGroup, Grid } from 'grommet';
+import { Camera, Cloud, Sd, Download } from 'grommet-icons';
 import { useState } from 'react';
-import { IconBack, IconButton, JuJiuMain, ButtonLink } from '@/jujiu-ui-components/core/core-ui';
-
-export function StreamPlayer() {
-	return (
-		<Stack interactiveChild='last'>
-			<Box flex={false} background='background-contrast'>
-				<VideoCanvas controls={false} style={{ zIndex: '0' }}>
-					<source src='http://techslides.com/demos/sample-videos/small.webm' type='video/webm' />
-				</VideoCanvas>
-			</Box>
-			<Box fill justify='between'>
-				<Stack>
-					<Box direction='row' justify='center'>
-						<Tag
-							margin='small'
-							pad='xsmall'
-							size='xsmall'
-							border={false}
-							background='status-critical'
-							value={
-								<Box direction='row' gap='small' align='center'>
-									<RadialSelected size='small' />
-									<Text size='xsmall'>0:41</Text>
-								</Box>
-							}
-						/>
-					</Box>
-					<Box direction='row' justify='end'>
-						<ButtonLink href='/device/sharing' icon={<ShareRounded />} />
-						<ButtonLink href='/device/settings' icon={<Settings3 size='24' />} />
-					</Box>
-				</Stack>
-				<Box align='center'>
-					<Spinner size='large' />
-					<StatusCritical size='large' />
-					<Text>无法加载视频流。</Text>
-				</Box>
-				<Box align='end'>
-					<ButtonLink href='/device/streaming/fullscreen' icon={<PhoneLandscape size='24' />} />
-				</Box>
-			</Box>
-		</Stack>
-	);
-}
+import { IconButton, JuJiuMain } from '@/jujiu-ui-components/core/core-ui';
+import { useJuJiuT } from '@/state/translate';
+import { JujiuNav } from '@/app/components';
 
 export default function Page() {
+	const t = useJuJiuT();
 	const [value, setValue] = useState(Date.now());
 
 	return (
 		<Box fill>
-			<Nav direction='row' align='center'>
-				<IconBack />
-				<Text>录像查看 - 办3</Text>
-			</Nav>
+			<JujiuNav label={t('录像查看') + ' - 办3'} />
 			<JuJiuMain margin='none'>
 				<Box fill gap='small'>
 					<Box flex={false} background='background-contrast'>
@@ -127,8 +71,8 @@ export default function Page() {
 						</Grid>
 					</Box>
 					<Box direction='row' justify='evenly' background='background-contrast' flex={false}>
-						<IconButton icon={<Camera />} label='截图' onClick={() => {}} />
-						<IconButton icon={<Download />} label='下载' onClick={() => {}} />
+						<IconButton icon={<Camera />} label={t('截图')} onClick={() => {}} />
+						<IconButton icon={<Download />} label={t('下载')} onClick={() => {}} />
 					</Box>
 				</Box>
 			</JuJiuMain>

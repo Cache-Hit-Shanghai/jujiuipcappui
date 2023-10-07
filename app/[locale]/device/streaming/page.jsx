@@ -1,18 +1,6 @@
 'use client';
 
-import {
-	Text,
-	Box,
-	Video as VideoCanvas,
-	Tabs,
-	Tab,
-	Nav,
-	Tag,
-	Stack,
-	Spinner,
-	Button,
-	Heading,
-} from 'grommet';
+import { Text, Box, Video as VideoCanvas, Tabs, Tab, Tag, Stack, Spinner, Button, Heading } from 'grommet';
 import { RadialSelected, ShareRounded, StatusCritical } from 'grommet-icons';
 import { Settings3 } from '@styled-icons/remix-fill/Settings3';
 import { PhoneLandscape } from '@styled-icons/bootstrap/PhoneLandscape';
@@ -27,10 +15,33 @@ import {
 	ZoomControl,
 	PanControl,
 } from '@/jujiu-ui-components/ipc/video/control';
-import { ButtonLink, IconBack, JuJiuMain, JuJiuLayer } from '@/jujiu-ui-components/core/core-ui';
-import Link from '@/state/translate';
+import { ButtonLink, JuJiuMain, JuJiuLayer } from '@/jujiu-ui-components/core/core-ui';
+import Link, { useJuJiuT } from '@/state/translate';
+import { JujiuNav } from '@/app/components';
 
-export function StreamPlayerError() {
+function HelpPanel() {
+	const t = useJuJiuT();
+	return (
+		<>
+			<Heading level={3} alignSelf='center' margin='none'>
+				{t('帮助')}
+			</Heading>
+			<Text>1. 请分别检查手机和摄像机是否联网正常，若修改过WiFi名称或密码，请重新连接。</Text>
+			<Text>2. 若手机和摄像机均联网正常，请等待数分钟后再访问。</Text>
+			<Text>3. 请尝试重启路由器。</Text>
+			<Text>
+				4. 如以上均无法解决，请
+				<Link href='/my/feedback' passHref legacyBehavior>
+					反馈问题
+				</Link>
+				。
+			</Text>
+		</>
+	);
+}
+
+function StreamPlayerError() {
+	const t = useJuJiuT();
 	const [openHelp, setOpenHelp] = useState(false);
 
 	return (
@@ -63,26 +74,14 @@ export function StreamPlayerError() {
 						<ButtonLink href='/device/settings' icon={<Settings3 size='24' />} />
 					</Box>
 				</Stack>
-				<Box align='center' gap='small'>
+				<Box align='center' gap='small' pad='small'>
 					<StatusCritical size='large' />
-					<Text>无法加载视频流。</Text>
-					<Text>设备已离线，离线时间：2023年9月14日 14:52:30。</Text>
-					<Button primary label='查看帮助' size='small' onClick={() => setOpenHelp(true)} />
+					<Text>{t('无法加载视频流')}</Text>
+					<Text>{t('设备已离线，离线时间：2023年9月14日 14:52:30。')}</Text>
+					<Button primary label={t('查看帮助')} size='small' onClick={() => setOpenHelp(true)} />
 					{openHelp && (
 						<JuJiuLayer onClickOutside={() => setOpenHelp(false)}>
-							<Heading level={3} alignSelf='center' margin='none'>
-								帮助
-							</Heading>
-							<Text>1. 请分别检查手机和摄像机是否联网正常，若修改过WiFi名称或密码，请重新连接。</Text>
-							<Text>2. 若手机和摄像机均联网正常，请等待数分钟后再访问。</Text>
-							<Text>3. 请尝试重启路由器。</Text>
-							<Text>
-								4. 如以上均无法解决，请
-								<Link href='/my/feedback' passHref legacyBehavior>
-									反馈问题
-								</Link>
-								。
-							</Text>
+							<HelpPanel />
 						</JuJiuLayer>
 					)}
 				</Box>
@@ -94,7 +93,7 @@ export function StreamPlayerError() {
 	);
 }
 
-export function StreamPlayer() {
+function StreamPlayer() {
 	return (
 		<Stack interactiveChild='last'>
 			<Box flex={false} background='background-contrast'>
@@ -137,14 +136,12 @@ export function StreamPlayer() {
 }
 
 export default function Page() {
+	const t = useJuJiuT();
 	const [value, setValue] = useState(Date.now());
 
 	return (
 		<Box fill>
-			<Nav direction='row' align='center'>
-				<IconBack />
-				<Text>实时视频 - 办3</Text>
-			</Nav>
+			<JujiuNav label={t('实时视频') + ' - 办3'} />
 			<JuJiuMain margin='none'>
 				<Box fill>
 					<Tabs>

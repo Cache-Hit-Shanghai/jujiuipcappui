@@ -1,5 +1,6 @@
 {
   "Index": {
+    "设备": "Device",
     "已开机": "Running time",
     "MAC地址": "MAC address",
     "IP地址": "IP address",

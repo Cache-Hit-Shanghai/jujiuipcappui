@@ -1,9 +1,9 @@
 'use client';
 
-import { Text, Box, Nav, Avatar, Button } from 'grommet';
+import { Box, Avatar, Button } from 'grommet';
 import { PhotoAlbum } from '@styled-icons/material-rounded/PhotoAlbum';
 import { FlashLight } from '@/jujiu-ui-components/components';
-import { IconBack, JuJiuMain } from '@/jujiu-ui-components/core/core-ui';
+import { JuJiuMain } from '@/jujiu-ui-components/core/core-ui';
 import { useJuJiuT } from '@/state/translate';
 import { JujiuNav } from '@/app/components';
 

@@ -1,9 +1,18 @@
 'use client';
 
-import { Box } from 'grommet';
+import { Box, Nav, Text } from 'grommet';
 import { Home, Radial, Webcam, Scan, Cycle, StatusCritical } from 'grommet-icons';
-import { IconLink, ButtonLink } from '@/jujiu-ui-components/core/core-ui';
+import { IconLink, IconBack, ButtonLink } from '@/jujiu-ui-components/core/core-ui';
 import { usePathname, useJuJiuT } from '@/state/translate';
+
+export function JujiuNav({ label }) {
+	return (
+		<Nav direction='row' align='center'>
+			<IconBack />
+			<Text>{label}</Text>
+		</Nav>
+	);
+}
 
 export function ButtonBackToMain() {
 	const t = useJuJiuT();

@@ -1,16 +1,16 @@
 'use client';
 
-import { Text, Box, Nav } from 'grommet';
-import { IconBack, JuJiuMain } from '@/jujiu-ui-components/core/core-ui';
+import { Box } from 'grommet';
+import { JuJiuMain } from '@/jujiu-ui-components/core/core-ui';
 import { DeviceInformation } from '@/jujiu-ui-components/ipc/device/information';
+import { useJuJiuT } from '@/state/translate';
+import { JujiuNav } from '@/app/components';
 
 export default function Page() {
+	const t = useJuJiuT();
 	return (
 		<Box fill>
-			<Nav direction='row' align='center'>
-				<IconBack />
-				<Text>设备信息 - 办3</Text>
-			</Nav>
+			<JujiuNav label={t('设备信息') + ' - 办3'} />
 			<JuJiuMain>
 				<DeviceInformation />
 			</JuJiuMain>

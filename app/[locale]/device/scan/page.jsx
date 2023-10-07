@@ -4,14 +4,14 @@ import { Text, Box, Nav, Avatar, Button } from 'grommet';
 import { PhotoAlbum } from '@styled-icons/material-rounded/PhotoAlbum';
 import { FlashLight } from '@/jujiu-ui-components/components';
 import { IconBack, JuJiuMain } from '@/jujiu-ui-components/core/core-ui';
+import { useJuJiuT } from '@/state/translate';
+import { JujiuNav } from '@/app/components';
 
 export default function Page() {
+	const t = useJuJiuT();
 	return (
 		<Box fill>
-			<Nav direction='row' align='center'>
-				<IconBack />
-				<Text>扫一扫</Text>
-			</Nav>
+			<JujiuNav label={t('扫一扫')} />
 			<JuJiuMain>
 				<Box flex={{ grow: 1, shrink: 1 }} style={{ position: 'relative' }}>
 					<Box

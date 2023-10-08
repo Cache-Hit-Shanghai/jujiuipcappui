@@ -71,7 +71,7 @@ function StreamPlayerError() {
 					</Box>
 					<Box direction='row' justify='end'>
 						<ButtonLink href='/device/streaming/record' icon={<VideoRecording size='24' />} />
-						<ButtonLink href='/device/settings/sharing' icon={<ShareRounded />} />
+						<ButtonLink href='/device/sharing' icon={<ShareRounded />} />
 						<ButtonLink href='/device/settings' icon={<Settings3 size='24' />} />
 					</Box>
 				</Stack>

@@ -17,7 +17,7 @@ export default function Page() {
 					<Box direction='row' justify='center'>
 						<Box align='center'>
 							<Box round='full' background='background-contrast' align='center'>
-								<ButtonLink icon={<UserAdd size='large' />} href='/device/settings/contacts/add' />
+								<ButtonLink icon={<UserAdd size='large' />} href='/device/contacts/add' />
 							</Box>
 							<Text>添加家人</Text>
 						</Box>
@@ -25,7 +25,7 @@ export default function Page() {
 					<Box direction='row' justify='center'>
 						<Box align='center'>
 							<Box round='full' background='background-contrast' align='center'>
-								<ButtonLink icon={<User size='large' />} href='/device/settings/contacts/edit' />
+								<ButtonLink icon={<User size='large' />} href='/device/contacts/edit' />
 							</Box>
 							<Text>爸爸</Text>
 						</Box>
@@ -33,7 +33,7 @@ export default function Page() {
 					<Box direction='row' justify='center'>
 						<Box align='center'>
 							<Box round='full' background='background-contrast' align='center'>
-								<ButtonLink icon={<User size='large' />} href='/device/settings/contacts/edit' />
+								<ButtonLink icon={<User size='large' />} href='/device/contacts/edit' />
 							</Box>
 							<Text>妈妈</Text>
 						</Box>
@@ -41,7 +41,7 @@ export default function Page() {
 					<Box direction='row' justify='center'>
 						<Box align='center'>
 							<Box round='full' background='background-contrast' align='center'>
-								<ButtonLink icon={<User size='large' />} href='/device/settings/contacts/edit' />
+								<ButtonLink icon={<User size='large' />} href='/device/contacts/edit' />
 							</Box>
 							<Text>哥哥</Text>
 						</Box>
@@ -49,7 +49,7 @@ export default function Page() {
 					<Box direction='row' justify='center'>
 						<Box align='center'>
 							<Box round='full' background='background-contrast' align='center'>
-								<ButtonLink icon={<User size='large' />} href='/device/settings/contacts/edit' />
+								<ButtonLink icon={<User size='large' />} href='/device/contacts/edit' />
 							</Box>
 							<Text>姐姐</Text>
 						</Box>
@@ -59,7 +59,7 @@ export default function Page() {
 							<Box round='full' background='background-contrast' align='center'>
 								<ButtonLink
 									icon={<User size='large' />}
-									href='/device/settings/contacts/edit?noAccount=true'
+									href='/device/contacts/edit?noAccount=true'
 									badge={<JuJiuTagAccountNotBinding />}
 								/>
 							</Box>
@@ -71,7 +71,7 @@ export default function Page() {
 							<Box round='full' background='background-contrast' align='center'>
 								<ButtonLink
 									icon={<User size='large' />}
-									href='/device/settings/contacts/edit?noAccount=true'
+									href='/device/contacts/edit?noAccount=true'
 									badge={<JuJiuTagAccountNotBinding />}
 								/>
 							</Box>

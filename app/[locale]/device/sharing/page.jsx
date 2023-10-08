@@ -43,7 +43,7 @@ export default function Page() {
 									administrator
 								</Text>
 							</Box>
-							<ButtonLink href='/device/settings/sharing/unshare'>
+							<ButtonLink href='/device/sharing/unshare'>
 								<Box>
 									<Avatar round='small' border>
 										<Subtract />

@@ -29,7 +29,7 @@ export default function Page() {
 				<Markdown>{content}</Markdown>
 			</JuJiuMain>
 			<Box direction='row' margin='small' justify='end' flex={false}>
-				<ButtonLink href='/device/settings/transfer/next' label='下一步' />
+				<ButtonLink href='/device/transfer/next' label='下一步' />
 			</Box>
 		</Box>
 	);

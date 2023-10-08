@@ -7,7 +7,7 @@ import Link from '@/state/translate';
 
 function CalendarTitle({ time, title, repeat }) {
 	return (
-		<Link href='/device/settings/calendar/edit' passHref legacyBehavior>
+		<Link href='/device/calendar/edit' passHref legacyBehavior>
 			<Box>
 				<Text>
 					{time} {title}
@@ -41,7 +41,7 @@ export default function Page() {
 				</JuJiuItem>
 			</JuJiuMain>
 			<Box pad='medium'>
-				<ButtonLink primary label='添加日程' href='/device/settings/calendar/create' />
+				<ButtonLink primary label='添加日程' href='/device/calendar/create' />
 			</Box>
 		</Box>
 	);

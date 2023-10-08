@@ -14,6 +14,7 @@ import {
 	ResolutionControl,
 	ZoomControl,
 	PanControl,
+	MoreControl,
 } from '@/jujiu-ui-components/ipc/video/control';
 import { ButtonLink, JuJiuMain, JuJiuLayer } from '@/jujiu-ui-components/core/core-ui';
 import Link, { useJuJiuT } from '@/state/translate';
@@ -137,7 +138,7 @@ function StreamPlayer() {
 
 export default function Page() {
 	const t = useJuJiuT();
-	const [value, setValue] = useState(Date.now());
+	const [more, setMore] = useState(false);
 
 	return (
 		<Box fill>
@@ -160,8 +161,15 @@ export default function Page() {
 						<RecordControl />
 						<ChatControl />
 						<MuteControl />
-						<ResolutionControl />
-						<ZoomControl />
+						<MoreControl onClick={() => setMore(true)} />
+						{more && (
+							<JuJiuLayer onClickOutside={() => setMore(false)}>
+								<Box direction='row' gap='medium'>
+									<ResolutionControl />
+									<ZoomControl />
+								</Box>
+							</JuJiuLayer>
+						)}
 					</Box>
 				</Box>
 			</JuJiuMain>

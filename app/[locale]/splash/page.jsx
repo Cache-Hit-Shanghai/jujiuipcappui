@@ -3,6 +3,7 @@
 import { Box, Tag } from 'grommet';
 import { AppMark, AppLogo } from '@/jujiu-ui-components/ipc/about/brand';
 import { ButtonLink } from '@/jujiu-ui-components/core/core-ui';
+import { useJuJiuT } from '@/state/translate';
 
 // 中心渐变效果，留着以后用。
 // return (
@@ -36,11 +37,13 @@ import { ButtonLink } from '@/jujiu-ui-components/core/core-ui';
 // );
 
 export default function Page() {
+	const t = useJuJiuT();
+
 	return (
 		<Box fill>
 			<Box margin='large' direction='row' justify='end' flex={false}>
 				<ButtonLink href='/'>
-					<Tag border={false} background='background-contrast' size='small' value='关闭' />
+					<Tag border={false} background='background-contrast' size='small' value={t('关闭')} />
 				</ButtonLink>
 			</Box>
 			<Box

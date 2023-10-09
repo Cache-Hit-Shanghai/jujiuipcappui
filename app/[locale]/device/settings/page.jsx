@@ -9,7 +9,7 @@ export default function Page() {
 	const t = useJuJiuT();
 
 	return (
-		<Box fill>
+		<Box>
 			<Nav direction='row' align='center'>
 				<IconBack />
 				<Text>{t('设备设置')} - 办3</Text>

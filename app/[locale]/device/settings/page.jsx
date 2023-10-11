@@ -15,7 +15,7 @@ export default function Page() {
 				<Text>{t('设备设置')} - 办3</Text>
 			</Nav>
 			<JuJiuMain>
-				<DeviceSettings />
+				<DeviceSettings gap='medium' />
 			</JuJiuMain>
 		</Box>
 	);

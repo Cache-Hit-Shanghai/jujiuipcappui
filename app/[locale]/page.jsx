@@ -4,8 +4,7 @@ import { Text, Box, Nav, Menu, Accordion, AccordionPanel } from 'grommet';
 import { AddCircle, Mail, Add, Scan, CreativeCommons } from 'grommet-icons';
 import { Group } from '@styled-icons/fluentui-system-regular/Group';
 import Link, { useJuJiuT } from '@/state/translate';
-import { AppFooter } from '@/app/components';
-import { IpcCard } from '@/jujiu-ui-components/ipc/device/avatar';
+import { AppFooter, IpcCard } from '@/app/components';
 import { ButtonLink, JuJiuMain } from '@/jujiu-ui-components/core/core-ui';
 import { JuJiuTagFromShared, JuJiuTagSharing } from '@/jujiu-ui-components/core/core-tag';
 
@@ -83,6 +82,8 @@ export default function Page() {
 							<IpcCard
 								key={10}
 								type='robot'
+								online
+								cloudStorage='expired'
 								label={
 									<Box direction='row' align='center' gap='large'>
 										<Text>PixelBot</Text>

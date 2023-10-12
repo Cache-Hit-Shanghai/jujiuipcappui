@@ -1,9 +1,182 @@
 'use client';
 
-import { Box, Nav, Text } from 'grommet';
-import { Home, Radial, Webcam, Scan, Cycle, StatusCritical } from 'grommet-icons';
+import { Box, Nav, Text, Menu } from 'grommet';
+import {
+	Home,
+	Radial,
+	Webcam,
+	Scan,
+	Cycle,
+	StatusCritical,
+	More,
+	CircleInformation,
+	ShareRounded,
+	Transaction,
+	ContactInfo,
+	Calendar,
+} from 'grommet-icons';
+import { SettingsOutline } from '@styled-icons/evaicons-outline/SettingsOutline';
 import { IconLink, IconBack, ButtonLink } from '@/jujiu-ui-components/core/core-ui';
-import { usePathname, useJuJiuT } from '@/state/translate';
+import { IpcCardRaw } from '@/jujiu-ui-components/ipc/device/avatar';
+import Link, { usePathname, useJuJiuT } from '@/state/translate';
+
+function IpcCardMenuFixedCamera() {
+	const t = useJuJiuT();
+
+	return (
+		<Menu
+			dropProps={{ align: { top: 'bottom', right: 'right' } }}
+			icon={<More />}
+			items={[
+				{
+					label: (
+						<Link href='/device/settings' passHref legacyBehavior>
+							<Text>{t('设备设置')}</Text>
+						</Link>
+					),
+					icon: (
+						<Box margin={{ right: 'small' }}>
+							<SettingsOutline size='24' />
+						</Box>
+					),
+				},
+				{
+					label: (
+						<Link href='/device/information' passHref legacyBehavior>
+							<Text>{t('设备信息')}</Text>
+						</Link>
+					),
+					icon: (
+						<Box margin={{ right: 'small' }}>
+							<CircleInformation />
+						</Box>
+					),
+				},
+				{
+					label: (
+						<Link href='/device/sharing' passHref legacyBehavior>
+							<Text>{t('设备分享')}</Text>
+						</Link>
+					),
+					icon: (
+						<Box margin={{ right: 'small' }}>
+							<ShareRounded />
+						</Box>
+					),
+				},
+				{
+					label: (
+						<Link href='/device/transfer' passHref legacyBehavior>
+							<Text>{t('设备转移')}</Text>
+						</Link>
+					),
+					icon: (
+						<Box margin={{ right: 'small' }}>
+							<Transaction />
+						</Box>
+					),
+				},
+			]}
+		/>
+	);
+}
+
+function IpcCardMenuRobot() {
+	const t = useJuJiuT();
+	return (
+		<Menu
+			dropProps={{ align: { top: 'bottom', right: 'right' } }}
+			icon={<More />}
+			items={[
+				{
+					label: (
+						<Link href='/device/settings' passHref legacyBehavior>
+							<Text>{t('设备设置')}</Text>
+						</Link>
+					),
+					icon: (
+						<Box margin={{ right: 'small' }}>
+							<SettingsOutline size='24' />
+						</Box>
+					),
+				},
+				{
+					label: (
+						<Link href='/device/information' passHref legacyBehavior>
+							<Text>{t('设备信息')}</Text>
+						</Link>
+					),
+					icon: (
+						<Box margin={{ right: 'small' }}>
+							<CircleInformation />
+						</Box>
+					),
+				},
+				{
+					label: (
+						<Link href='/device/sharing' passHref legacyBehavior>
+							<Text>{t('设备分享')}</Text>
+						</Link>
+					),
+					icon: (
+						<Box margin={{ right: 'small' }}>
+							<ShareRounded />
+						</Box>
+					),
+				},
+				{
+					label: (
+						<Link href='/device/transfer' passHref legacyBehavior>
+							<Text>{t('设备转移')}</Text>
+						</Link>
+					),
+					icon: (
+						<Box margin={{ right: 'small' }}>
+							<Transaction />
+						</Box>
+					),
+				},
+				{
+					label: (
+						<Link href='/device/contacts' passHref legacyBehavior>
+							<Text>{t('通讯录')}</Text>
+						</Link>
+					),
+					icon: (
+						<Box margin={{ right: 'small' }}>
+							<ContactInfo />
+						</Box>
+					),
+				},
+				{
+					label: (
+						<Link href='/device/calendar' passHref legacyBehavior>
+							<Text>{t('日程提醒')}</Text>
+						</Link>
+					),
+					icon: (
+						<Box margin={{ right: 'small' }}>
+							<Calendar />
+						</Box>
+					),
+				},
+			]}
+		/>
+	);
+}
+
+const IpcCardMenuMap = new Map([
+	['ipc', <IpcCardMenuFixedCamera />],
+	['robot', <IpcCardMenuRobot />],
+]);
+
+export function IpcCard({ type, ...props }) {
+	return (
+		<IpcCardRaw nextPageUrl='/device/streaming' {...props}>
+			{IpcCardMenuMap.get(type)}
+		</IpcCardRaw>
+	);
+}
 
 export function JujiuNav({ label }) {
 	return (

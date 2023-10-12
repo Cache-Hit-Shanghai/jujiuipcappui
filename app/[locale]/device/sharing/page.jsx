@@ -19,7 +19,7 @@ export default function Page() {
 	const buttons = [
 		{
 			label: '二维码分享',
-			href: '/device/settings/sharing/qrcode',
+			href: '/device/sharing/qrcode',
 		},
 		{ label: '微信分享', onClick: () => setOpenWechatSharing(true) },
 	];

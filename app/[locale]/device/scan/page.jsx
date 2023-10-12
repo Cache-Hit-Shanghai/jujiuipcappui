@@ -2,7 +2,7 @@
 
 import { Box, Avatar, Button } from 'grommet';
 import { PhotoAlbum } from '@styled-icons/material-rounded/PhotoAlbum';
-import { FlashLight } from '@/jujiu-ui-components/components';
+import { FlashLight } from '@/jujiu-ui-components/ipc/device/binding';
 import { JuJiuMain } from '@/jujiu-ui-components/core/core-ui';
 import { useJuJiuT } from '@/state/translate';
 import { JujiuNav } from '@/app/components';

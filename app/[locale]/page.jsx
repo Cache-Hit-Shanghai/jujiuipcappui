@@ -1,7 +1,7 @@
 'use client';
 
 import { Text, Box, Nav, Menu, Accordion, AccordionPanel } from 'grommet';
-import { AddCircle, Mail, Add, Scan, CreativeCommons } from 'grommet-icons';
+import { AddCircle, Mail, Add, Scan, CreativeCommons, Robot, Webcam } from 'grommet-icons';
 import { Group } from '@styled-icons/fluentui-system-regular/Group';
 import Link, { useJuJiuT } from '@/state/translate';
 import { AppFooter, IpcCard } from '@/app/components';
@@ -71,10 +71,10 @@ export default function Page() {
 								key={0}
 								type='ipc'
 								label={
-									<Box direction='row' align='center' gap='large'>
+									<Box direction='row' align='center' gap='medium'>
+										<Webcam />
 										<Text>客厅IPC</Text>
 										<JuJiuTagFromShared />
-										<JuJiuTagSharing />
 									</Box>
 								}
 								imgurl='https://ts1.cn.mm.bing.net/th/id/R-C.f54c83f04442cec528a250d251251ce6?rik=JE7BoZk5xK4iEg&riu=http%3a%2f%2fpic4.bbzhi.com%2ffengjingbizhi%2fgaoqingxifengjingzhuomianbizhixiazai%2fgaoqingxifengjingzhuomianbizhixiazai_366146_18.jpg&ehk=YvUnl11nBp%2fGJssQUbYqkXLo7fchkD%2fEQ8BGpW2Urjs%3d&risl=&pid=ImgRaw&r=0'
@@ -85,9 +85,9 @@ export default function Page() {
 								online
 								cloudStorage='expired'
 								label={
-									<Box direction='row' align='center' gap='large'>
+									<Box direction='row' align='center' gap='medium'>
+										<Robot />
 										<Text>PixelBot</Text>
-										<JuJiuTagFromShared />
 										<JuJiuTagSharing />
 									</Box>
 								}

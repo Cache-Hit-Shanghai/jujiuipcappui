@@ -94,11 +94,8 @@ function IpcCardMenuRobot() {
 							<Text>{t('设备设置')}</Text>
 						</Link>
 					),
-					icon: (
-						<Box margin={{ right: 'small' }}>
-							<SettingsOutline size='24' />
-						</Box>
-					),
+					icon: <SettingsOutline size='24' />,
+					gap: 'small',
 				},
 				{
 					label: (
@@ -106,11 +103,8 @@ function IpcCardMenuRobot() {
 							<Text>{t('设备信息')}</Text>
 						</Link>
 					),
-					icon: (
-						<Box margin={{ right: 'small' }}>
-							<CircleInformation />
-						</Box>
-					),
+					icon: <CircleInformation />,
+					gap: 'small',
 				},
 				{
 					label: (
@@ -118,11 +112,8 @@ function IpcCardMenuRobot() {
 							<Text>{t('设备分享')}</Text>
 						</Link>
 					),
-					icon: (
-						<Box margin={{ right: 'small' }}>
-							<ShareRounded />
-						</Box>
-					),
+					icon: <ShareRounded />,
+					gap: 'small',
 				},
 				{
 					label: (
@@ -130,11 +121,8 @@ function IpcCardMenuRobot() {
 							<Text>{t('设备转移')}</Text>
 						</Link>
 					),
-					icon: (
-						<Box margin={{ right: 'small' }}>
-							<Transaction />
-						</Box>
-					),
+					icon: <Transaction />,
+					gap: 'small',
 				},
 				{
 					label: (
@@ -142,11 +130,8 @@ function IpcCardMenuRobot() {
 							<Text>{t('通讯录')}</Text>
 						</Link>
 					),
-					icon: (
-						<Box margin={{ right: 'small' }}>
-							<ContactInfo />
-						</Box>
-					),
+					icon: <ContactInfo />,
+					gap: 'small',
 				},
 				{
 					label: (
@@ -154,11 +139,8 @@ function IpcCardMenuRobot() {
 							<Text>{t('日程提醒')}</Text>
 						</Link>
 					),
-					icon: (
-						<Box margin={{ right: 'small' }}>
-							<Calendar />
-						</Box>
-					),
+					icon: <Calendar />,
+					gap: 'small',
 				},
 			]}
 		/>

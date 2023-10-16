@@ -1,6 +1,6 @@
 'use client';
 
-import { Video as VideoCanvas, Box, Stack, Text, Tag, Layer } from 'grommet';
+import { Video as VideoCanvas, Box, Stack, Text, Tag, Layer, Button } from 'grommet';
 import { RadialSelected } from 'grommet-icons';
 import {
 	ScreenCopyControl,
@@ -11,7 +11,9 @@ import {
 	ResolutionControl,
 	ZoomControl,
 } from '@/jujiu-ui-components/ipc/video/control';
-import { JujiuNav } from '@/app/components';
+import { Magic } from '@styled-icons/bootstrap/Magic';
+import { FastAcceleration } from '@styled-icons/fluentui-system-filled/FastAcceleration';
+import { JujiuNavRobot } from '@/app/components';
 
 export default function Page() {
 	return (
@@ -38,8 +40,12 @@ export default function Page() {
 					/>
 				</Box>
 				<Box fill justify='between'>
-					<JujiuNav label='PixelBot' />
-					<Box direction='row' justify='end' gap='large' pad='small'>
+					<JujiuNavRobot label='PixelBot' />
+					<Box align='end' justify='end'>
+						<Button icon={<FastAcceleration size='48' />} />
+						<Button icon={<Magic size='48' />} />
+					</Box>
+					<Box direction='row' justify='center' gap='large' pad='small'>
 						<ScreenCopyControl showTitle={false} />
 						<RecordControl showTitle={false} />
 						<ChatControl showTitle={false} />

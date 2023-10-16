@@ -51,7 +51,6 @@ export default function Page() {
 						<ChatControl showTitle={false} />
 						<MuteControl showTitle={false} />
 						<ResolutionControl showTitle={false} />
-						<ZoomControl showTitle={false} />
 					</Box>
 				</Box>
 			</Stack>

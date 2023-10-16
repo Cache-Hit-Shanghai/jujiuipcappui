@@ -7,7 +7,6 @@ import {
 	ChatControl,
 	MuteControl,
 	RecordControl,
-	PanLayer,
 	PanControl,
 	ResolutionControl,
 	ZoomControl,
@@ -50,7 +49,7 @@ export default function Page() {
 					</Box>
 				</Box>
 			</Stack>
-			<Layer plain modal={false} animation='fadeIn' position='bottom-left' responsive={false}>
+			<Layer plain modal={false} animation='fadeIn' position='bottom-left' responsive={false} margin='small'>
 				<PanControl />
 			</Layer>
 		</Box>

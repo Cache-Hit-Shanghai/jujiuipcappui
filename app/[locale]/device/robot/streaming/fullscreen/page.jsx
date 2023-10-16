@@ -55,7 +55,7 @@ export default function Page() {
 					</Box>
 				</Box>
 			</Stack>
-			<Layer plain modal={false} animation='fadeIn' position='bottom-left' responsive={false} margin='small'>
+			<Layer plain modal={false} animation='fadeIn' position='left' responsive={false} margin='small'>
 				<PanControl />
 			</Layer>
 		</Box>

@@ -20,7 +20,7 @@ export default function Page() {
 			<Stack fill>
 				<Box fill background='background-contrast'>
 					<VideoCanvas controls={false} fit='contain' style={{ zIndex: '0' }}>
-						<source src='http://techslides.com/demos/sample-videos/small.webm' type='video/webm' />
+						<source src='https://samplelib.com/lib/preview/mp4/sample-5s.mp4' type='video/webm' />
 					</VideoCanvas>
 				</Box>
 				<Box direction='row' justify='center'>

@@ -18,7 +18,7 @@ export default function Page() {
 				<Box fill gap='small'>
 					<Box flex={false} background='background-contrast'>
 						<VideoCanvas controls={false} style={{ zIndex: '0' }}>
-							<source src='http://techslides.com/demos/sample-videos/small.webm' type='video/webm' />
+							<source src='https://samplelib.com/lib/preview/mp4/sample-5s.mp4' type='video/webm' />
 						</VideoCanvas>
 					</Box>
 					<Box direction='row' align='center' justify='between' flex={false}>

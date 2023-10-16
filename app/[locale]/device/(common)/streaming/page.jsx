@@ -49,7 +49,7 @@ function StreamPlayerError() {
 		<Stack interactiveChild='last'>
 			<Box flex={false} background='background-contrast'>
 				<VideoCanvas controls={false} style={{ zIndex: '0' }}>
-					<source src='http://techslides.com/demos/sample-videos/small.webm' type='video/webm' />
+					<source src='https://samplelib.com/lib/preview/mp4/sample-5s.mp4' type='video/webm' />
 				</VideoCanvas>
 			</Box>
 			<Box fill justify='between'>
@@ -99,7 +99,7 @@ function StreamPlayer() {
 		<Stack interactiveChild='last'>
 			<Box flex={false} background='background-contrast'>
 				<VideoCanvas controls={false} style={{ zIndex: '0' }}>
-					<source src='http://techslides.com/demos/sample-videos/small.webm' type='video/webm' />
+					<source src='https://samplelib.com/lib/preview/mp4/sample-5s.mp4' type='video/webm' />
 				</VideoCanvas>
 			</Box>
 			<Box fill justify='between'>

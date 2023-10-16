@@ -152,9 +152,9 @@ const IpcCardMenuMap = new Map([
 	['robot', <IpcCardMenuRobot />],
 ]);
 
-export function IpcCard({ type, ...props }) {
+export function IpcCard({ type, nextPageUrl = '/device/streaming', ...props }) {
 	return (
-		<IpcCardRaw nextPageUrl='/device/streaming' {...props}>
+		<IpcCardRaw nextPageUrl={nextPageUrl} {...props}>
 			{IpcCardMenuMap.get(type)}
 		</IpcCardRaw>
 	);

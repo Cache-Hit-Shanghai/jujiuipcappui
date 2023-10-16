@@ -39,7 +39,7 @@ export default function Page() {
 				</Box>
 				<Box fill justify='between'>
 					<JujiuNav label='办3' />
-					<Box direction='row' justify='evenly' margin={{ vertical: 'medium' }}>
+					<Box direction='row' justify='end' gap='medium' pad='small'>
 						<ScreenCopyControl showTitle={false} />
 						<RecordControl showTitle={false} />
 						<ChatControl showTitle={false} />

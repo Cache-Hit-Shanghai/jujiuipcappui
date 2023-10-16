@@ -84,6 +84,7 @@ export default function Page() {
 								type='robot'
 								online
 								cloudStorage='expired'
+								nextPageUrl='/device/streaming/fullscreen'
 								label={
 									<Box direction='row' align='center' gap='medium'>
 										<Robot />

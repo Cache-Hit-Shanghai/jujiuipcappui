@@ -1,7 +1,8 @@
 'use client';
 
-import { Video as VideoCanvas, Box, Stack, Text, Tag } from 'grommet';
-import { RadialSelected } from 'grommet-icons';
+import { Video as VideoCanvas, Box, Stack, Text, Tag, Button } from 'grommet';
+import { RadialSelected, ShareRounded } from 'grommet-icons';
+import { SettingsOutline } from '@styled-icons/evaicons-outline/SettingsOutline';
 import {
 	ScreenCopyControl,
 	ChatControl,
@@ -38,7 +39,13 @@ export default function Page() {
 					/>
 				</Box>
 				<Box fill justify='between'>
-					<JujiuNav label='办3' />
+					<Box direction='row' justify='between'>
+						<JujiuNav label='办3' />
+						<Box direction='row'>
+							<Button icon={<ShareRounded />} />
+							<Button icon={<SettingsOutline size='24' />} />
+						</Box>
+					</Box>
 					<Box direction='row' justify='end' gap='medium' pad='small'>
 						<ScreenCopyControl showTitle={false} />
 						<RecordControl showTitle={false} />

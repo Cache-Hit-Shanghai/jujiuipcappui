@@ -20,6 +20,7 @@ import { PersonFeedback } from '@styled-icons/fluentui-system-regular/PersonFeed
 import { AppFooter } from '@/app/components';
 import { ButtonLink, IconLink, LinkGroup, JuJiuMain, JuJiuCard } from '@/jujiu-ui-components/core/core-ui';
 import Masonry from '@mui/lab/Masonry';
+import Link, { usePathname, useJuJiuT } from '@/state/translate';
 
 const cardData = [
 	{
@@ -60,14 +61,16 @@ function ImageCard({ src, title }) {
 	return (
 		<Card flex={false}>
 			<CardBody flex={false}>
-				<Image src={src} fill='horizontal' />
+				<Link href='/discovery/item' passHref legacyBehavior>
+					<Image src={src} fill='horizontal' />
+				</Link>
 			</CardBody>
-			<CardHeader>
+			<CardHeader background='background-contrast'>
 				<Box pad='small'>
 					<Text size='small'>{title}</Text>
 				</Box>
 			</CardHeader>
-			<CardFooter>
+			<CardFooter background='background-contrast'>
 				<Box fill pad='small' direction='row' justify='between'>
 					<Box direction='row' gap='small' align='center'>
 						<Avatar border size='small'>
@@ -99,8 +102,8 @@ export default function Page() {
 			</Nav>
 			<JuJiuMain direction='row' wrap overflow='auto'>
 				<Masonry columns={2}>
-					{cardData.map((datum) => (
-						<ImageCard src={datum.src} title={datum.title} />
+					{cardData.map((datum, i) => (
+						<ImageCard key={i} src={datum.src} title={datum.title} />
 					))}
 				</Masonry>
 			</JuJiuMain>

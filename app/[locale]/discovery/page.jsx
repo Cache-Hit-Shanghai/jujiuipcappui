@@ -19,6 +19,7 @@ import { Add, Search, UserFemale, Favorite } from 'grommet-icons';
 import { PersonFeedback } from '@styled-icons/fluentui-system-regular/PersonFeedback';
 import { AppFooter } from '@/app/components';
 import { ButtonLink, IconLink, LinkGroup, JuJiuMain, JuJiuCard } from '@/jujiu-ui-components/core/core-ui';
+import Masonry from '@mui/lab/Masonry';
 
 const cardData = [
 	{
@@ -97,11 +98,11 @@ export default function Page() {
 				<Button icon={<Add />} plain primary margin='small' />
 			</Nav>
 			<JuJiuMain direction='row' wrap overflow='auto'>
-				<Grid columns={['auto', 'auto']} gap='small' style={{ 'grid-auto-flow': 'row dense' }}>
+				<Masonry columns={2}>
 					{cardData.map((datum) => (
 						<ImageCard src={datum.src} title={datum.title} />
 					))}
-				</Grid>
+				</Masonry>
 			</JuJiuMain>
 			<AppFooter uiDesign />
 		</Box>

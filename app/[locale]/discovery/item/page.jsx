@@ -15,7 +15,7 @@ import {
 	Avatar,
 } from 'grommet';
 import { ShareRounded, Favorite, StarOutline, UserFemale } from 'grommet-icons';
-import { Wechat2 } from '@styled-icons/remix-line/Wechat2';
+import { CommentDots } from '@styled-icons/fa-regular/CommentDots';
 import { ExpandAlt } from '@styled-icons/boxicons-regular/ExpandAlt';
 import { CollapseAlt } from '@styled-icons/boxicons-regular/CollapseAlt';
 import { PersonFeedback } from '@styled-icons/fluentui-system-regular/PersonFeedback';
@@ -94,7 +94,7 @@ export default function Page() {
 						<Text size='small'>4064</Text>
 					</Box>
 					<Box direction='row' align='center' gap='small'>
-						<Wechat2 size='24' />
+						<CommentDots size='24' />
 						<Text size='small'>9</Text>
 					</Box>
 				</Box>

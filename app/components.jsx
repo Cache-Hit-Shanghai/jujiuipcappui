@@ -21,6 +21,7 @@ import { IpcCardRaw, IpcCardRawRobot } from '@/jujiu-ui-components/ipc/device/av
 import { BatteryCharging } from '@styled-icons/ionicons-outline/BatteryCharging';
 import { Cameraswitch } from '@styled-icons/material/Cameraswitch';
 import { ChargingStation } from '@styled-icons/fa-solid/ChargingStation';
+import { ImageSearch } from '@styled-icons/material-rounded/ImageSearch';
 import Link, { usePathname, useJuJiuT } from '@/state/translate';
 
 function IpcCardMenuFixedCamera() {
@@ -226,6 +227,11 @@ export function AppFooter({ uiDesign }) {
 			icon: <Webcam />,
 			label: t('设备'),
 			href: '/',
+		},
+		{
+			icon: <ImageSearch size='24' />,
+			label: t('发现'),
+			href: '/discovery/',
 		},
 		{
 			icon: <Radial />,

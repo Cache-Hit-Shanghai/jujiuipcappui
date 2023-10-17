@@ -17,7 +17,7 @@ import {
 } from 'grommet-icons';
 import { SettingsOutline } from '@styled-icons/evaicons-outline/SettingsOutline';
 import { IconLink, IconBack, ButtonLink } from '@/jujiu-ui-components/core/core-ui';
-import { IpcCardRaw } from '@/jujiu-ui-components/ipc/device/avatar';
+import { IpcCardRaw, IpcCardRawRobot } from '@/jujiu-ui-components/ipc/device/avatar';
 import { BatteryCharging } from '@styled-icons/ionicons-outline/BatteryCharging';
 import { Cameraswitch } from '@styled-icons/material/Cameraswitch';
 import { ChargingStation } from '@styled-icons/fa-solid/ChargingStation';
@@ -150,15 +150,18 @@ function IpcCardMenuRobot() {
 	);
 }
 
-const IpcCardMenuMap = new Map([
-	['ipc', <IpcCardMenuFixedCamera />],
-	['robot', <IpcCardMenuRobot />],
-]);
-
-export function IpcCard({ type, nextPageUrl = '/device/streaming', ...props }) {
+export function IpcCardRobot({ ...props }) {
 	return (
-		<IpcCardRaw nextPageUrl={nextPageUrl} {...props}>
-			{IpcCardMenuMap.get(type)}
+		<IpcCardRawRobot nextPageUrl='/device/robot/streaming/fullscreen' {...props}>
+			<IpcCardMenuRobot />
+		</IpcCardRawRobot>
+	);
+}
+
+export function IpcCard({ ...props }) {
+	return (
+		<IpcCardRaw nextPageUrl='/device/streaming' {...props}>
+			<IpcCardMenuFixedCamera />
 		</IpcCardRaw>
 	);
 }

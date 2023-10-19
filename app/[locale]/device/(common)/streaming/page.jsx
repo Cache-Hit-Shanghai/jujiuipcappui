@@ -1,7 +1,7 @@
 'use client';
 
 import { Text, Box, Video as VideoCanvas, Tabs, Tab, Tag, Stack, Spinner, Button, Heading } from 'grommet';
-import { RadialSelected, ShareRounded, StatusCritical } from 'grommet-icons';
+import { RadialSelected, ShareRounded, StatusCritical, Moon } from 'grommet-icons';
 import { Settings3 } from '@styled-icons/remix-fill/Settings3';
 import { PhoneLandscape } from '@styled-icons/bootstrap/PhoneLandscape';
 import { VideoRecording } from '@styled-icons/fluentui-system-filled/VideoRecording';
@@ -38,6 +38,38 @@ function HelpPanel() {
 				。
 			</Text>
 		</>
+	);
+}
+
+function StreamPlayerSleep() {
+	const t = useJuJiuT();
+	const [openHelp, setOpenHelp] = useState(false);
+
+	return (
+		<Stack interactiveChild='last'>
+			<Box flex={false} background='background-contrast'>
+				<VideoCanvas controls={false} style={{ zIndex: '0' }}>
+					<source src='https://samplelib.com/lib/preview/mp4/sample-5s.mp4' type='video/webm' />
+				</VideoCanvas>
+			</Box>
+			<Box fill justify='between'>
+				<Stack>
+					<Box direction='row' justify='end'>
+						<ButtonLink href='/device/streaming/record' icon={<VideoRecording size='24' />} />
+						<ButtonLink href='/device/sharing' icon={<ShareRounded />} />
+						<ButtonLink href='/device/settings' icon={<Settings3 size='24' />} />
+					</Box>
+				</Stack>
+				<Box align='center' gap='small' pad='small'>
+					<Moon size='large' />
+					<Text>{t('设备已休眠')}</Text>
+					<Button size='small' primary label={t('唤醒')} />
+				</Box>
+				<Box align='end'>
+					<ButtonLink href='/device/streaming/fullscreen' icon={<PhoneLandscape size='24' />} />
+				</Box>
+			</Box>
+		</Stack>
 	);
 }
 
@@ -151,6 +183,9 @@ export default function Page() {
 						</Tab>
 						<Tab title='拉流失败'>
 							<StreamPlayerError />
+						</Tab>
+						<Tab title='休眠'>
+							<StreamPlayerSleep />
 						</Tab>
 					</Tabs>
 					<Box flex={{ grow: 1, shrink: 1 }} justify='center' align='center'>

@@ -1,31 +1,13 @@
 'use client';
 
-import {
-	Text,
-	Box,
-	Nav,
-	Carousel,
-	Button,
-	Heading,
-	Footer,
-	Video,
-	Paragraph,
-	CardFooter,
-	Image,
-	Avatar,
-} from 'grommet';
+import { Text, Box, Nav, Carousel, Button, Heading, Footer, Paragraph, Image, Avatar } from 'grommet';
 import { ShareRounded, Favorite, StarOutline, UserFemale } from 'grommet-icons';
 import { CommentDots } from '@styled-icons/fa-regular/CommentDots';
-import { ExpandAlt } from '@styled-icons/boxicons-regular/ExpandAlt';
-import { CollapseAlt } from '@styled-icons/boxicons-regular/CollapseAlt';
-import { PersonFeedback } from '@styled-icons/fluentui-system-regular/PersonFeedback';
-import { useState } from 'react';
-import { AppFooter } from '@/app/components';
-import { IconBack, IconLink, LinkGroup, JuJiuMain, JuJiuCard } from '@/jujiu-ui-components/core/core-ui';
+import { IconBack, JuJiuMain } from '@/jujiu-ui-components/core/core-ui';
 
 function Description() {
 	return (
-		<Box pad='medium' gap='medium' overflow='auto'>
+		<Box pad='medium' gap='medium'>
 			<Heading level={3} margin='none'>
 				超萌狗狗
 			</Heading>
@@ -38,6 +20,12 @@ function Description() {
 			<Paragraph size='small' margin='none'>
 				世界所有种类的犬都起源于约1.6万年前中国长江流域南部驯养的狼。(瑞典皇家理工学院科学家彼得·萨弗莱宁确认了犬类的起源地点和时间)。
 			</Paragraph>
+			<Paragraph size='small' margin='none'>
+				狗的听觉十分敏锐，听觉感应能力可达12万赫兹，是人类的6倍，它能听到的最远距离大约是人的400倍！狗对于声音方向的辨别能力也是人类的2倍，能分辨32个方向。
+			</Paragraph>
+			<Paragraph size='small' margin='none'>
+				正常情况下其寿命约十多年，狗的寿命大约在10~15年之间，最长的也有20年以上，不过很少见。与猫的平均寿命相近，平均寿命以小型犬为长。
+			</Paragraph>
 		</Box>
 	);
 }
@@ -45,38 +33,36 @@ function Description() {
 export default function Page() {
 	return (
 		<Box fill>
-			<JuJiuMain pad='none' gap='none'>
-				<Nav direction='row' margin='small' align='center' justify='between'>
-					<IconBack />
-					<Box direction='row' gap='medium' align='center'>
-						<Avatar border>
-							<UserFemale color='text-strong' />
-						</Avatar>
-						<Text>庞大小姐</Text>
-						<Button label='关注' primary size='small' />
-					</Box>
-					<Button icon={<ShareRounded />} />
-				</Nav>
-				<Box>
-					<Carousel fill>
-						<Image
-							fit='contain'
-							src='https://ts1.cn.mm.bing.net/th/id/R-C.e71020c709637de4bd0b96d3c7aa50b9?rik=w5SFarLizaR2Kg&riu=http%3a%2f%2fwww.quazero.com%2fuploads%2fallimg%2f140529%2f1-140529143K7.jpg&ehk=npIHrLX6sA9tu6squdUi0OwUcG0D4PI9aJZUcvnYhGA%3d&risl=&pid=ImgRaw&r=0'
-						/>
-						<Image
-							fit='contain'
-							src='https://img.zcool.cn/community/01d89d556899f60000012716e4364f.jpg@1280w_1l_2o_100sh.jpg'
-						/>
-						<Image
-							fit='contain'
-							src='https://img1.pconline.com.cn/piclib/200902/05/batch/1/21808/1233825719734fjxnizp4bm.jpg'
-						/>
-						<Image
-							fit='contain'
-							src='https://i4.3conline.com/images/piclib/201004/09/batch/1/57506/12707694838789g8zxh1nlg.jpg'
-						/>
-					</Carousel>
+			<Nav direction='row' margin='small' align='center' justify='between'>
+				<IconBack />
+				<Box direction='row' gap='medium' align='center'>
+					<Avatar border>
+						<UserFemale color='text-strong' />
+					</Avatar>
+					<Text>庞大小姐</Text>
+					<Button label='关注' primary size='small' />
 				</Box>
+				<Button icon={<ShareRounded />} />
+			</Nav>
+			<JuJiuMain pad='none' gap='none' overflow='auto'>
+				<Carousel flex={false}>
+					<Image
+						fit='contain'
+						src='https://ts1.cn.mm.bing.net/th/id/R-C.e71020c709637de4bd0b96d3c7aa50b9?rik=w5SFarLizaR2Kg&riu=http%3a%2f%2fwww.quazero.com%2fuploads%2fallimg%2f140529%2f1-140529143K7.jpg&ehk=npIHrLX6sA9tu6squdUi0OwUcG0D4PI9aJZUcvnYhGA%3d&risl=&pid=ImgRaw&r=0'
+					/>
+					<Image
+						fit='contain'
+						src='https://img.zcool.cn/community/01d89d556899f60000012716e4364f.jpg@1280w_1l_2o_100sh.jpg'
+					/>
+					<Image
+						fit='contain'
+						src='https://img1.pconline.com.cn/piclib/200902/05/batch/1/21808/1233825719734fjxnizp4bm.jpg'
+					/>
+					<Image
+						fit='contain'
+						src='https://i4.3conline.com/images/piclib/201004/09/batch/1/57506/12707694838789g8zxh1nlg.jpg'
+					/>
+				</Carousel>
 				<Description />
 			</JuJiuMain>
 			<Footer justify='between' pad='medium'>

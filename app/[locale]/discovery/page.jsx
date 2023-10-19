@@ -111,15 +111,29 @@ export default function Page() {
 				</Tabs>
 				<Button icon={<Add />} plain primary margin='small' />
 			</Nav>
-			<Box pad='small' direction='row' gap='medium'>
-				<Text size='small'>推荐</Text>
-				<Text size='small'>视频</Text>
-				<Text size='small'>直播</Text>
-				<Text size='small'>猫猫</Text>
-				<Text size='small'>狗狗</Text>
-				<Text size='small'>鸟类</Text>
-				<Text size='small'>爬行类</Text>
-				<Text size='small'>其它</Text>
+			<Box pad='small' direction='row' gap='medium' align='center'>
+				<Text>推荐</Text>
+				<Text size='small' color='text-xweak'>
+					视频
+				</Text>
+				<Text size='small' color='text-xweak'>
+					直播
+				</Text>
+				<Text size='small' color='text-xweak'>
+					猫猫
+				</Text>
+				<Text size='small' color='text-xweak'>
+					狗狗
+				</Text>
+				<Text size='small' color='text-xweak'>
+					鸟类
+				</Text>
+				<Text size='small' color='text-xweak'>
+					爬行类
+				</Text>
+				<Text size='small' color='text-xweak'>
+					其它
+				</Text>
 			</Box>
 			<JuJiuMain direction='row' wrap overflow='auto'>
 				<Masonry columns={2}>

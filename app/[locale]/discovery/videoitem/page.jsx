@@ -1,27 +1,12 @@
 'use client';
 
-import {
-	Text,
-	Box,
-	Nav,
-	Grid,
-	Button,
-	Stack,
-	Footer,
-	Video,
-	Paragraph,
-	CardFooter,
-	Image,
-	Avatar,
-} from 'grommet';
+import { Text, Box, Nav, Button, Stack, Footer, Video, Paragraph, Avatar } from 'grommet';
 import { ShareRounded, Favorite, StarOutline, UserFemale } from 'grommet-icons';
 import { CommentDots } from '@styled-icons/fa-regular/CommentDots';
 import { ExpandAlt } from '@styled-icons/boxicons-regular/ExpandAlt';
 import { CollapseAlt } from '@styled-icons/boxicons-regular/CollapseAlt';
-import { PersonFeedback } from '@styled-icons/fluentui-system-regular/PersonFeedback';
 import { useState } from 'react';
-import { AppFooter } from '@/app/components';
-import { IconBack, IconLink, LinkGroup, JuJiuMain, JuJiuCard } from '@/jujiu-ui-components/core/core-ui';
+import { IconBack, JuJiuMain } from '@/jujiu-ui-components/core/core-ui';
 
 function Description() {
 	const [expand, setExpand] = useState(false);

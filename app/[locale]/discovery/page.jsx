@@ -95,11 +95,21 @@ export default function Page() {
 				<Button icon={<Search />} />
 				<Tabs>
 					<Tab title='关注' />
-					<Tab title='推荐' />
-					<Tab title='直播' />
+					<Tab title='发现' />
+					<Tab title='周边' />
 				</Tabs>
 				<Button icon={<Add />} plain primary margin='small' />
 			</Nav>
+			<Box pad='small' direction='row' gap='medium'>
+				<Text size='small'>推荐</Text>
+				<Text size='small'>视频</Text>
+				<Text size='small'>直播</Text>
+				<Text size='small'>猫猫</Text>
+				<Text size='small'>狗狗</Text>
+				<Text size='small'>鸟类</Text>
+				<Text size='small'>爬行类</Text>
+				<Text size='small'>其它</Text>
+			</Box>
 			<JuJiuMain direction='row' wrap overflow='auto'>
 				<Masonry columns={2}>
 					{cardData.map((datum, i) => (

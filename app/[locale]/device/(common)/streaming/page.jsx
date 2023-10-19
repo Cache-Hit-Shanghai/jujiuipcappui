@@ -48,9 +48,7 @@ function StreamPlayerSleep() {
 	return (
 		<Stack interactiveChild='last'>
 			<Box flex={false} background='background-contrast'>
-				<VideoCanvas controls={false} style={{ zIndex: '0' }}>
-					<source src='https://samplelib.com/lib/preview/mp4/sample-5s.mp4' type='video/webm' />
-				</VideoCanvas>
+				<VideoCanvas controls={false} style={{ zIndex: '0' }}></VideoCanvas>
 			</Box>
 			<Box fill justify='between'>
 				<Stack>
@@ -80,9 +78,7 @@ function StreamPlayerError() {
 	return (
 		<Stack interactiveChild='last'>
 			<Box flex={false} background='background-contrast'>
-				<VideoCanvas controls={false} style={{ zIndex: '0' }}>
-					<source src='https://samplelib.com/lib/preview/mp4/sample-5s.mp4' type='video/webm' />
-				</VideoCanvas>
+				<VideoCanvas controls={false} style={{ zIndex: '0' }}></VideoCanvas>
 			</Box>
 			<Box fill justify='between'>
 				<Stack>
@@ -130,8 +126,8 @@ function StreamPlayer() {
 	return (
 		<Stack interactiveChild='last'>
 			<Box flex={false} background='background-contrast'>
-				<VideoCanvas controls={false} style={{ zIndex: '0' }}>
-					<source src='https://samplelib.com/lib/preview/mp4/sample-5s.mp4' type='video/webm' />
+				<VideoCanvas controls={false} style={{ zIndex: '0' }} muted autoPlay loop>
+					<source src='https://samplelib.com/lib/preview/mp4/sample-5s.mp4' type='video/mp4' />
 				</VideoCanvas>
 			</Box>
 			<Box fill justify='between'>

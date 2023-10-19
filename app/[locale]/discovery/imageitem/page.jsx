@@ -26,7 +26,7 @@ import { IconBack, IconLink, LinkGroup, JuJiuMain, JuJiuCard } from '@/jujiu-ui-
 function Description() {
 	return (
 		<Box pad='medium' gap='medium' overflow='auto'>
-			<Heading level={3} margin={{ vertical: 'small' }}>
+			<Heading level={3} margin='none'>
 				超萌狗狗
 			</Heading>
 			<Paragraph size='small' margin='none'>

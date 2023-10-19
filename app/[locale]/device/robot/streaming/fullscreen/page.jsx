@@ -21,7 +21,7 @@ export default function Page() {
 			<Stack fill>
 				<Box fill background='background-contrast'>
 					<VideoCanvas controls={false} fit='contain' autoPlay mute loop style={{ zIndex: '0' }}>
-						<source src='https://samplelib.com/lib/preview/mp4/sample-5s.mp4' type='video/webm' />
+						<source src='https://samplelib.com/lib/preview/mp4/sample-5s.mp4' type='video/mp4' />
 					</VideoCanvas>
 				</Box>
 				<Box direction='row' justify='center'>

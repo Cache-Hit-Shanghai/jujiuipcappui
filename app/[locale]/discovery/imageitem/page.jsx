@@ -1,6 +1,6 @@
 'use client';
 
-import { Text, Box, Nav, Carousel, Button, Heading, Footer, Paragraph, Image, Avatar } from 'grommet';
+import { Text, Box, Nav, Button, Heading, Footer, Paragraph, Image, Avatar, Carousel } from 'grommet';
 import { ShareRounded, Favorite, StarOutline, UserFemale } from 'grommet-icons';
 import { CommentDots } from '@styled-icons/fa-regular/CommentDots';
 import { IconBack, JuJiuMain } from '@/jujiu-ui-components/core/core-ui';
@@ -45,7 +45,7 @@ export default function Page() {
 				<Button icon={<ShareRounded />} />
 			</Nav>
 			<JuJiuMain pad='none' gap='none' overflow='auto'>
-				<Carousel flex={false}>
+				<Carousel flex={false} controls='selectors'>
 					<Image
 						fit='contain'
 						src='https://ts1.cn.mm.bing.net/th/id/R-C.e71020c709637de4bd0b96d3c7aa50b9?rik=w5SFarLizaR2Kg&riu=http%3a%2f%2fwww.quazero.com%2fuploads%2fallimg%2f140529%2f1-140529143K7.jpg&ehk=npIHrLX6sA9tu6squdUi0OwUcG0D4PI9aJZUcvnYhGA%3d&risl=&pid=ImgRaw&r=0'

@@ -1,9 +1,11 @@
 'use client';
 
-import { Text, Box, Nav, Button, Heading, Footer, Paragraph, Image, Avatar, Carousel } from 'grommet';
+import { Text, Box, Nav, Button, Heading, Footer, Paragraph, Image, Avatar } from 'grommet';
 import { ShareRounded, Favorite, StarOutline, UserFemale } from 'grommet-icons';
 import { CommentDots } from '@styled-icons/fa-regular/CommentDots';
 import { IconBack, JuJiuMain } from '@/jujiu-ui-components/core/core-ui';
+import { Carousel } from 'react-responsive-carousel';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 function Description() {
 	return (
@@ -45,7 +47,7 @@ export default function Page() {
 				<Button icon={<ShareRounded />} />
 			</Nav>
 			<JuJiuMain pad='none' gap='none' overflow='auto'>
-				<Carousel flex={false} controls='selectors'>
+				<Carousel dynamicHeight showArrows={false} showStatus={false}>
 					<Image
 						fit='contain'
 						src='https://ts1.cn.mm.bing.net/th/id/R-C.e71020c709637de4bd0b96d3c7aa50b9?rik=w5SFarLizaR2Kg&riu=http%3a%2f%2fwww.quazero.com%2fuploads%2fallimg%2f140529%2f1-140529143K7.jpg&ehk=npIHrLX6sA9tu6squdUi0OwUcG0D4PI9aJZUcvnYhGA%3d&risl=&pid=ImgRaw&r=0'
@@ -59,7 +61,7 @@ export default function Page() {
 						src='https://img1.pconline.com.cn/piclib/200902/05/batch/1/21808/1233825719734fjxnizp4bm.jpg'
 					/>
 					<Image
-						fit='contain'
+						t='contain'
 						src='https://i4.3conline.com/images/piclib/201004/09/batch/1/57506/12707694838789g8zxh1nlg.jpg'
 					/>
 				</Carousel>

@@ -10,6 +10,7 @@ import { JuJiuTagFromShared, JuJiuTagSharing } from '@/jujiu-ui-components/core/
 
 export default function Page() {
 	const t = useJuJiuT();
+
 	return (
 		<Box fill>
 			<Nav direction='row' justify='between' align='center' background='background-contrast'>

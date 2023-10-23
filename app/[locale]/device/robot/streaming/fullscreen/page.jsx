@@ -1,28 +1,42 @@
 'use client';
 
-import { Video as VideoCanvas, Box, Stack, Text, Tag, Layer, Button } from 'grommet';
-import { RadialSelected } from 'grommet-icons';
-import {
-	ScreenCopyControl,
-	ChatControl,
-	MuteControl,
-	RecordControl,
-	PanControl,
-	ResolutionControl,
-	ZoomControl,
-} from '@/jujiu-ui-components/ipc/video/control';
+import { Video, Box, Stack, Text, Tag, Layer, Button, Menu, Nav } from 'grommet';
+import { More, RadialSelected, Volume, ClosedCaption } from 'grommet-icons';
+import { Call } from '@styled-icons/fluentui-system-regular/Call';
+import { ScreenCopyControl, RecordControl, PanControl } from '@/jujiu-ui-components/ipc/video/control';
 import { Magic } from '@styled-icons/bootstrap/Magic';
 import { FastAcceleration } from '@styled-icons/fluentui-system-filled/FastAcceleration';
-import { JujiuNavRobot } from '@/app/components';
+import { Pets } from '@styled-icons/material-outlined/Pets';
+import { BatteryCharging } from '@styled-icons/ionicons-outline/BatteryCharging';
+import { Cameraswitch } from '@styled-icons/material/Cameraswitch';
+import { ChargingStation } from '@styled-icons/fa-solid/ChargingStation';
+import { IconBack } from '@/jujiu-ui-components/core/core-ui';
+
+export function JujiuNavRobot({ label }) {
+	return (
+		<Nav direction='row' align='center' justify='between'>
+			<Box direction='row' align='center' gap='small'>
+				<IconBack />
+				<Text>{label}</Text>
+				<BatteryCharging size='24' />
+			</Box>
+			<Box direction='row' align='center' gap='small'>
+				<Button icon={<Pets size='24' />} />
+				<Button icon={<ChargingStation size='24' />} />
+				<Button icon={<Cameraswitch size='24' />} />
+			</Box>
+		</Nav>
+	);
+}
 
 export default function Page() {
 	return (
 		<Box fill>
 			<Stack fill>
 				<Box fill background='background-contrast'>
-					<VideoCanvas controls={false} fit='contain' autoPlay mute loop style={{ zIndex: '0' }}>
+					<Video controls={false} fit='contain' autoPlay mute loop style={{ zIndex: '0' }}>
 						<source src='https://samplelib.com/lib/preview/mp4/sample-5s.mp4' type='video/mp4' />
-					</VideoCanvas>
+					</Video>
 				</Box>
 				<Box direction='row' justify='center'>
 					<Tag
@@ -48,9 +62,11 @@ export default function Page() {
 					<Box direction='row' justify='center' gap='large' pad='small'>
 						<ScreenCopyControl showTitle={false} />
 						<RecordControl showTitle={false} />
-						<ChatControl showTitle={false} />
-						<MuteControl showTitle={false} />
-						<ResolutionControl showTitle={false} />
+						<Menu
+							dropProps={{ align: { top: 'bottom' } }}
+							icon={<More />}
+							items={[{ icon: <Call size='24' /> }, { icon: <Volume /> }, { icon: <ClosedCaption /> }]}
+						/>
 					</Box>
 				</Box>
 			</Stack>

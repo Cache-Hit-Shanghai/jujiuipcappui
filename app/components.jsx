@@ -1,6 +1,6 @@
 'use client';
 
-import { Box, Nav, Text, Menu, Button } from 'grommet';
+import { Box, Nav, Text, Menu } from 'grommet';
 import {
 	Home,
 	Radial,
@@ -18,9 +18,6 @@ import {
 import { SettingsOutline } from '@styled-icons/evaicons-outline/SettingsOutline';
 import { IconLink, IconBack, ButtonLink } from '@/jujiu-ui-components/core/core-ui';
 import { IpcCardRaw, IpcCardRawRobot } from '@/jujiu-ui-components/ipc/device/avatar';
-import { BatteryCharging } from '@styled-icons/ionicons-outline/BatteryCharging';
-import { Cameraswitch } from '@styled-icons/material/Cameraswitch';
-import { ChargingStation } from '@styled-icons/fa-solid/ChargingStation';
 import { ImageSearch } from '@styled-icons/material-rounded/ImageSearch';
 import Link, { usePathname, useJuJiuT } from '@/state/translate';
 
@@ -172,22 +169,6 @@ export function JujiuNav({ label }) {
 		<Nav direction='row' align='center'>
 			<IconBack />
 			<Text>{label}</Text>
-		</Nav>
-	);
-}
-
-export function JujiuNavRobot({ label }) {
-	return (
-		<Nav direction='row' align='center' justify='between'>
-			<Box direction='row' align='center' gap='small'>
-				<IconBack />
-				<Text>{label}</Text>
-				<BatteryCharging size='24' />
-			</Box>
-			<Box direction='row' align='center' gap='small'>
-				<Button icon={<ChargingStation size='24' />} />
-				<Button icon={<Cameraswitch size='24' />} />
-			</Box>
 		</Nav>
 	);
 }

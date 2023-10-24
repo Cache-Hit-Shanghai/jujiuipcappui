@@ -1,7 +1,7 @@
 'use client';
 
 import { Text, Box, Nav, Menu, Accordion, AccordionPanel } from 'grommet';
-import { AddCircle, Mail, Add, Scan, CreativeCommons, Robot, Webcam } from 'grommet-icons';
+import { AddCircle, Mail, Add, Scan, Robot, Webcam } from 'grommet-icons';
 import { Group } from '@styled-icons/fluentui-system-regular/Group';
 import { Pets } from '@styled-icons/material-outlined/Pets';
 import Link, { useJuJiuT } from '@/state/translate';

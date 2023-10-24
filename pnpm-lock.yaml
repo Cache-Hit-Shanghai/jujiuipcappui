@@ -56,8 +56,8 @@ dependencies:
 
 devDependencies:
   '@types/node':
-    specifier: ^20.8.7
-    version: registry.npmmirror.com/@types/node@20.8.7
+    specifier: ^20.8.8
+    version: registry.npmmirror.com/@types/node@20.8.8
   '@types/react':
     specifier: ^18.2.31
     version: registry.npmmirror.com/@types/react@18.2.31
@@ -1654,10 +1654,10 @@ packages:
       tslib: registry.npmmirror.com/tslib@2.6.2
     dev: false
 
-  registry.npmmirror.com/@types/node@20.8.7:
-    resolution: {integrity: sha512-21TKHHh3eUHIi2MloeptJWALuCu5H7HQTdTrWIFReA8ad+aggoX+lRes3ex7/FtpC+sVUpFMQ+QTfYr74mruiQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@types/node/-/node-20.8.7.tgz}
+  registry.npmmirror.com/@types/node@20.8.8:
+    resolution: {integrity: sha512-YRsdVxq6OaLfmR9Hy816IMp33xOBjfyOgUd77ehqg96CFywxAPbDbXvAsuN2KVg2HOT8Eh6uAfU+l4WffwPVrQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@types/node/-/node-20.8.8.tgz}
     name: '@types/node'
-    version: 20.8.7
+    version: 20.8.8
     dependencies:
       undici-types: registry.npmmirror.com/undici-types@5.25.3
     dev: true
@@ -1740,7 +1740,7 @@ packages:
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
     hasBin: true
     dependencies:
-      caniuse-lite: registry.npmmirror.com/caniuse-lite@1.0.30001550
+      caniuse-lite: registry.npmmirror.com/caniuse-lite@1.0.30001553
       electron-to-chromium: registry.npmmirror.com/electron-to-chromium@1.4.559
       node-releases: registry.npmmirror.com/node-releases@2.0.13
       update-browserslist-db: registry.npmmirror.com/update-browserslist-db@1.0.13(browserslist@4.22.1)
@@ -1766,12 +1766,6 @@ packages:
     resolution: {integrity: sha512-dU+Tx2fsypxTgtLoE36npi3UqcjSSMNYfkqgmoEhtZrraP5VWq0K7FkWVTYa8eMPtnU/G2txVsfdCJTn9uzpuQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/camelize/-/camelize-1.0.1.tgz}
     name: camelize
     version: 1.0.1
-    dev: false
-
-  registry.npmmirror.com/caniuse-lite@1.0.30001550:
-    resolution: {integrity: sha512-p82WjBYIypO0ukTsd/FG3Xxs+4tFeaY9pfT4amQL8KWtYH7H9nYwReGAbMTJ0hsmRO8IfDtsS6p3ZWj8+1c2RQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/caniuse-lite/-/caniuse-lite-1.0.30001550.tgz}
-    name: caniuse-lite
-    version: 1.0.30001550
     dev: false
 
   registry.npmmirror.com/caniuse-lite@1.0.30001553:

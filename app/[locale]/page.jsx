@@ -3,6 +3,7 @@
 import { Text, Box, Nav, Menu, Accordion, AccordionPanel } from 'grommet';
 import { AddCircle, Mail, Add, Scan, CreativeCommons, Robot, Webcam } from 'grommet-icons';
 import { Group } from '@styled-icons/fluentui-system-regular/Group';
+import { Pets } from '@styled-icons/material-outlined/Pets';
 import Link, { useJuJiuT } from '@/state/translate';
 import { AppFooter, IpcCard, IpcCardRobot } from '@/app/components';
 import { ButtonLink, JuJiuMain } from '@/jujiu-ui-components/core/core-ui';
@@ -15,8 +16,8 @@ export default function Page() {
 		<Box fill>
 			<Nav direction='row' justify='between' align='center' background='background-contrast'>
 				<Box direction='row' align='center' pad='small' gap='small'>
-					<CreativeCommons />
-					<Text size='xlarge'>{t('雎鸠云视觉')}</Text>
+					<Pets size='24' />
+					<Text size='xlarge'>{t('小皮部落')}</Text>
 				</Box>
 				<Box direction='row' gap='small' align='center'>
 					<ButtonLink href='/message' icon={<Mail />} badge={7} />

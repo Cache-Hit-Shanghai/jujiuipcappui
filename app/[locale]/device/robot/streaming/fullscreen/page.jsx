@@ -10,6 +10,8 @@ import { Pets } from '@styled-icons/material-outlined/Pets';
 import { BatteryCharging } from '@styled-icons/ionicons-outline/BatteryCharging';
 import { Cameraswitch } from '@styled-icons/material/Cameraswitch';
 import { ChargingStation } from '@styled-icons/fa-solid/ChargingStation';
+import { EyeTracking } from '@styled-icons/fluentui-system-filled/EyeTracking';
+import { VideoRecording } from '@styled-icons/fluentui-system-filled/VideoRecording';
 import { IconBack } from '@/jujiu-ui-components/core/core-ui';
 
 export function JujiuNavRobot({ label }) {
@@ -21,6 +23,7 @@ export function JujiuNavRobot({ label }) {
 				<BatteryCharging size='24' />
 			</Box>
 			<Box direction='row' align='center' gap='small'>
+				<Button icon={<EyeTracking size='24' />} />
 				<Button icon={<Pets size='24' />} />
 				<Button icon={<ChargingStation size='24' />} />
 				<Button icon={<Cameraswitch size='24' />} />
@@ -65,7 +68,12 @@ export default function Page() {
 						<Menu
 							dropProps={{ align: { top: 'bottom' } }}
 							icon={<More />}
-							items={[{ icon: <Call size='24' /> }, { icon: <Volume /> }, { icon: <ClosedCaption /> }]}
+							items={[
+								{ icon: <Call size='24' /> },
+								{ icon: <Volume /> },
+								{ icon: <ClosedCaption /> },
+								{ icon: <VideoRecording size='24' /> },
+							]}
 						/>
 					</Box>
 				</Box>

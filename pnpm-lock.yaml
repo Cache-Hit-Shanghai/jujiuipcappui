@@ -4,66 +4,73 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
-dependencies:
-  '@ashwinthomas/react-time-picker-dropdown':
-    specifier: ^1.0.5
-    version: registry.npmmirror.com/@ashwinthomas/react-time-picker-dropdown@1.0.5(react-dom@18.2.0)(react@18.2.0)
-  '@emotion/react':
-    specifier: ^11.11.1
-    version: registry.npmmirror.com/@emotion/react@11.11.1(@types/react@18.2.31)(react@18.2.0)
-  '@emotion/styled':
-    specifier: ^11.11.0
-    version: registry.npmmirror.com/@emotion/styled@11.11.0(@emotion/react@11.11.1)(@types/react@18.2.31)(react@18.2.0)
-  '@mui/lab':
-    specifier: ^5.0.0-alpha.149
-    version: registry.npmmirror.com/@mui/lab@5.0.0-alpha.149(@emotion/react@11.11.1)(@emotion/styled@11.11.0)(@mui/material@5.14.14)(@types/react@18.2.31)(react-dom@18.2.0)(react@18.2.0)
-  '@mui/material':
-    specifier: ^5.14.14
-    version: registry.npmmirror.com/@mui/material@5.14.14(@emotion/react@11.11.1)(@emotion/styled@11.11.0)(@types/react@18.2.31)(react-dom@18.2.0)(react@18.2.0)
-  '@mui/x-date-pickers':
-    specifier: ^6.16.3
-    version: registry.npmmirror.com/@mui/x-date-pickers@6.16.3(@emotion/react@11.11.1)(@emotion/styled@11.11.0)(@mui/material@5.14.14)(@mui/system@5.14.14)(@types/react@18.2.31)(date-fns@2.30.0)(react-dom@18.2.0)(react@18.2.0)
-  date-fns:
-    specifier: ^2.30.0
-    version: registry.npmmirror.com/date-fns@2.30.0
-  grommet:
-    specifier: ^2.33.2
-    version: registry.npmmirror.com/grommet@2.33.2(react-dom@18.2.0)(react@18.2.0)(styled-components@5.3.11)
-  grommet-icons:
-    specifier: ^4.11.0
-    version: registry.npmmirror.com/grommet-icons@4.11.0(react-dom@18.2.0)(react@18.2.0)(styled-components@5.3.11)
-  next:
-    specifier: ^13.5.6
-    version: registry.npmmirror.com/next@13.5.6(@babel/core@7.23.2)(react-dom@18.2.0)(react@18.2.0)
-  next-intl:
-    specifier: ^2.21.0
-    version: registry.npmmirror.com/next-intl@2.21.0(next@13.5.6)(react@18.2.0)
-  react:
-    specifier: ^18.2.0
-    version: registry.npmmirror.com/react@18.2.0
-  react-dom:
-    specifier: ^18.2.0
-    version: registry.npmmirror.com/react-dom@18.2.0(react@18.2.0)
-  react-responsive-carousel:
-    specifier: ^3.2.23
-    version: registry.npmmirror.com/react-responsive-carousel@3.2.23
-  styled-icons:
-    specifier: ^10.47.0
-    version: registry.npmmirror.com/styled-icons@10.47.0(react@18.2.0)(styled-components@5.3.11)
-  swiper:
-    specifier: ^10.3.1
-    version: registry.npmmirror.com/swiper@10.3.1
+importers:
 
-devDependencies:
-  '@types/node':
-    specifier: ^20.8.8
-    version: registry.npmmirror.com/@types/node@20.8.8
-  '@types/react':
-    specifier: ^18.2.31
-    version: registry.npmmirror.com/@types/react@18.2.31
-  typescript:
-    specifier: 5.2.2
-    version: registry.npmmirror.com/typescript@5.2.2
+  .:
+    dependencies:
+      '@ashwinthomas/react-time-picker-dropdown':
+        specifier: ^1.0.5
+        version: registry.npmmirror.com/@ashwinthomas/react-time-picker-dropdown@1.0.5(react-dom@18.2.0)(react@18.2.0)
+      '@emotion/react':
+        specifier: ^11.11.1
+        version: registry.npmmirror.com/@emotion/react@11.11.1(@types/react@18.2.31)(react@18.2.0)
+      '@emotion/styled':
+        specifier: ^11.11.0
+        version: registry.npmmirror.com/@emotion/styled@11.11.0(@emotion/react@11.11.1)(@types/react@18.2.31)(react@18.2.0)
+      '@mui/lab':
+        specifier: ^5.0.0-alpha.149
+        version: registry.npmmirror.com/@mui/lab@5.0.0-alpha.149(@emotion/react@11.11.1)(@emotion/styled@11.11.0)(@mui/material@5.14.14)(@types/react@18.2.31)(react-dom@18.2.0)(react@18.2.0)
+      '@mui/material':
+        specifier: ^5.14.14
+        version: registry.npmmirror.com/@mui/material@5.14.14(@emotion/react@11.11.1)(@emotion/styled@11.11.0)(@types/react@18.2.31)(react-dom@18.2.0)(react@18.2.0)
+      '@mui/x-date-pickers':
+        specifier: ^6.16.3
+        version: registry.npmmirror.com/@mui/x-date-pickers@6.16.3(@emotion/react@11.11.1)(@emotion/styled@11.11.0)(@mui/material@5.14.14)(@mui/system@5.14.14)(@types/react@18.2.31)(date-fns@2.30.0)(react-dom@18.2.0)(react@18.2.0)
+      date-fns:
+        specifier: ^2.30.0
+        version: registry.npmmirror.com/date-fns@2.30.0
+      grommet:
+        specifier: ^2.33.2
+        version: registry.npmmirror.com/grommet@2.33.2(react-dom@18.2.0)(react@18.2.0)(styled-components@5.3.11)
+      grommet-icons:
+        specifier: ^4.11.0
+        version: registry.npmmirror.com/grommet-icons@4.11.0(react-dom@18.2.0)(react@18.2.0)(styled-components@5.3.11)
+      jujiu-ui-components:
+        specifier: workspace:^
+        version: link:jujiu-ui-components
+      next:
+        specifier: ^13.5.6
+        version: registry.npmmirror.com/next@13.5.6(@babel/core@7.23.2)(react-dom@18.2.0)(react@18.2.0)
+      next-intl:
+        specifier: ^2.21.0
+        version: registry.npmmirror.com/next-intl@2.21.0(next@13.5.6)(react@18.2.0)
+      react:
+        specifier: ^18.2.0
+        version: registry.npmmirror.com/react@18.2.0
+      react-dom:
+        specifier: ^18.2.0
+        version: registry.npmmirror.com/react-dom@18.2.0(react@18.2.0)
+      react-responsive-carousel:
+        specifier: ^3.2.23
+        version: registry.npmmirror.com/react-responsive-carousel@3.2.23
+      styled-icons:
+        specifier: ^10.47.0
+        version: registry.npmmirror.com/styled-icons@10.47.0(react@18.2.0)(styled-components@5.3.11)
+      swiper:
+        specifier: ^10.3.1
+        version: registry.npmmirror.com/swiper@10.3.1
+    devDependencies:
+      '@types/node':
+        specifier: ^20.8.8
+        version: registry.npmmirror.com/@types/node@20.8.8
+      '@types/react':
+        specifier: ^18.2.31
+        version: registry.npmmirror.com/@types/react@18.2.31
+      typescript:
+        specifier: 5.2.2
+        version: registry.npmmirror.com/typescript@5.2.2
+
+  jujiu-ui-components: {}
 
 packages:
 

@@ -19,8 +19,8 @@
 		"@ashwinthomas/react-time-picker-dropdown": "^1.0.5",
 		"@emotion/react": "^11.11.1",
 		"@emotion/styled": "^11.11.0",
-		"@mui/lab": "^5.0.0-alpha.149",
-		"@mui/material": "^5.14.14",
+		"@mui/lab": "^5.0.0-alpha.150",
+		"@mui/material": "^5.14.15",
 		"@mui/x-date-pickers": "^6.16.3",
 		"date-fns": "^2.30.0",
 		"grommet": "^2.33.2",
@@ -32,11 +32,11 @@
 		"react-dom": "^18.2.0",
 		"react-responsive-carousel": "^3.2.23",
 		"styled-icons": "^10.47.0",
-		"swiper": "^10.3.1"
+		"swiper": "^11.0.2"
 	},
 	"devDependencies": {
-		"@types/node": "^20.8.8",
-		"@types/react": "^18.2.31",
+		"@types/node": "^20.8.9",
+		"@types/react": "^18.2.32",
 		"typescript": "5.2.2"
 	},
 	"browserslist": [

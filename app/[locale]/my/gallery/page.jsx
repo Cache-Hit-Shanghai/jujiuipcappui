@@ -4,6 +4,7 @@ import { Text, Box, Nav, Grid, Card, CardHeader, CardBody, Stack } from 'grommet
 import { CirclePlay } from 'grommet-icons';
 import Link from '@/state/translate';
 import { IconBack, JuJiuMain } from '@/jujiu-ui-components/core/core-ui';
+import { CloudOrSDCard } from '@/app/components';
 
 function LinkBoxImage() {
 	return (
@@ -39,9 +40,12 @@ function LinkBoxVideo() {
 export default function Page() {
 	return (
 		<Box fill>
-			<Nav direction='row' align='center'>
-				<IconBack />
-				<Text>相册（剩余容量100GB）</Text>
+			<Nav direction='row' align='center' justify='between'>
+				<Box direction='row' align='center'>
+					<IconBack />
+					<Text>相册（剩余容量100GB）</Text>
+				</Box>
+				<CloudOrSDCard />
 			</Nav>
 			<JuJiuMain>
 				<Box flex={false} gap='large'>

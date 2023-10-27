@@ -1,7 +1,9 @@
 'use client';
 
-import { Box, Nav, Text, Menu } from 'grommet';
+import { Box, Nav, Text, Menu, RadioButtonGroup } from 'grommet';
 import {
+	Sd,
+	Cloud,
 	Home,
 	Radial,
 	Webcam,
@@ -16,10 +18,30 @@ import {
 	Calendar,
 } from 'grommet-icons';
 import { SettingsOutline } from '@styled-icons/evaicons-outline/SettingsOutline';
+import { VideoRecording } from '@styled-icons/fluentui-system-filled/VideoRecording';
 import { IconLink, IconBack, ButtonLink } from '@/jujiu-ui-components/core/core-ui';
 import { IpcCardRaw, IpcCardRawRobot } from '@/jujiu-ui-components/ipc/device/avatar';
 import { ImageSearch } from '@styled-icons/material-rounded/ImageSearch';
 import Link, { usePathname, useJuJiuT } from '@/state/translate';
+
+export function CloudOrSDCard() {
+	return (
+		<RadioButtonGroup name='storagetype' direction='row' options={['Cloud', 'SDCard']}>
+			{(option, { checked, focus, hover }) => {
+				const Icon = option === 'Cloud' ? Cloud : Sd;
+				let background;
+				if (checked) background = 'brand';
+				else if (hover) background = 'light-4';
+				else if (focus) background = 'light-4';
+				return (
+					<Box background={background} round='full' pad='small'>
+						<Icon />
+					</Box>
+				);
+			}}
+		</RadioButtonGroup>
+	);
+}
 
 function IpcCardMenuFixedCamera() {
 	const t = useJuJiuT();
@@ -29,6 +51,15 @@ function IpcCardMenuFixedCamera() {
 			dropProps={{ align: { top: 'bottom', right: 'right' } }}
 			icon={<More />}
 			items={[
+				{
+					label: (
+						<Link href='/device/streaming/record/' passHref legacyBehavior>
+							<Text>{t('录像查看')}</Text>
+						</Link>
+					),
+					icon: <VideoRecording size='24' />,
+					gap: 'small',
+				},
 				{
 					label: (
 						<Link href='/device/settings' passHref legacyBehavior>
@@ -89,6 +120,15 @@ function IpcCardMenuRobot() {
 			dropProps={{ align: { top: 'bottom', right: 'right' } }}
 			icon={<More />}
 			items={[
+				{
+					label: (
+						<Link href='/device/streaming/record/' passHref legacyBehavior>
+							<Text>{t('录像查看')}</Text>
+						</Link>
+					),
+					icon: <VideoRecording size='24' />,
+					gap: 'small',
+				},
 				{
 					label: (
 						<Link href='/device/settings' passHref legacyBehavior>

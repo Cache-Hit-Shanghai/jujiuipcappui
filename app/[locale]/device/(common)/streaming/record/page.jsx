@@ -5,7 +5,7 @@ import { Camera, Cloud, Sd, Download } from 'grommet-icons';
 import { useState } from 'react';
 import { IconButton, JuJiuMain } from '@/jujiu-ui-components/core/core-ui';
 import { useJuJiuT } from '@/state/translate';
-import { JujiuNav } from '@/app/components';
+import { JujiuNav, CloudOrSDCard } from '@/app/components';
 
 export default function Page() {
 	const t = useJuJiuT();
@@ -32,25 +32,7 @@ export default function Page() {
 							/>
 						</Box>
 						<Box round='xlarge' background='background-contrast'>
-							<RadioButtonGroup
-								name='storagetype'
-								direction='row'
-								options={['Cloud', 'SDCard']}
-								value='Cloud'
-							>
-								{(option, { checked, focus, hover }) => {
-									const Icon = option === 'Cloud' ? Cloud : Sd;
-									let background;
-									if (checked) background = 'brand';
-									else if (hover) background = 'light-4';
-									else if (focus) background = 'light-4';
-									return (
-										<Box background={background} round='full' pad='small'>
-											<Icon />
-										</Box>
-									);
-								}}
-							</RadioButtonGroup>
+							<CloudOrSDCard />
 						</Box>
 					</Box>
 					<Box flex={{ grow: 1, shrink: 1 }} overflow='auto'>

@@ -11,6 +11,7 @@ const links = [
 	{ label: '通知设置', url: '/my/notification' },
 	{ label: '界面设置', url: '/my/uisettings' },
 	{ label: '系统信息', url: '/my/sysinfo' },
+	{ label: '录像截图设置', url: '/my/storagesettings' },
 	{ label: '关于', url: '/my/about' },
 ];
 

@@ -61,7 +61,7 @@ export default function Page() {
 						src='https://img1.pconline.com.cn/piclib/200902/05/batch/1/21808/1233825719734fjxnizp4bm.jpg'
 					/>
 					<Image
-						t='contain'
+						fit='contain'
 						src='https://i4.3conline.com/images/piclib/201004/09/batch/1/57506/12707694838789g8zxh1nlg.jpg'
 					/>
 				</Carousel>

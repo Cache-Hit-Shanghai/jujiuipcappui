@@ -1,6 +1,7 @@
 'use client';
 
 import { Box, Nav, Text, Menu, RadioButtonGroup } from 'grommet';
+import { useEffect } from 'react';
 import {
 	Sd,
 	Cloud,
@@ -25,7 +26,9 @@ import { ImageSearch } from '@styled-icons/material-rounded/ImageSearch';
 import Link, { usePathname, useJuJiuT } from '@/state/translate';
 
 export function FullScreen({ children }) {
-	document.documentElement.requestFullscreen();
+	useEffect(() => {
+		document.documentElement.requestFullscreen();
+	}, []);
 	return children;
 }
 

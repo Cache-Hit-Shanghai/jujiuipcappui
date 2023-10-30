@@ -6,11 +6,13 @@ import { Carousel } from 'react-responsive-carousel';
 import { ShareRounded, Favorite, StarOutline, UserFemale } from 'grommet-icons';
 import { CommentDots } from '@styled-icons/fa-regular/CommentDots';
 import { IconBack, JuJiuMain } from '@/jujiu-ui-components/core/core-ui';
-import Link, { usePathname, useJuJiuT } from '@/state/translate';
+import Link, { useJuJiuT } from '@/state/translate';
 import 'semantic-ui-css/semantic.min.css';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 function Comments() {
+	const t = useJuJiuT();
+
 	return (
 		<Box pad='medium' flex={false} id='comments'>
 			<Comment.Group>
@@ -24,7 +26,7 @@ function Comments() {
 							</Comment.Metadata>
 							<Comment.Text>How artistic!</Comment.Text>
 							<Comment.Actions>
-								<Comment.Action>Reply</Comment.Action>
+								<Comment.Action>{t('回复')}</Comment.Action>
 							</Comment.Actions>
 						</Comment.Content>
 					</Comment>
@@ -47,7 +49,7 @@ function Comments() {
 								<p>This has been very useful for my research. Thanks as well!</p>
 							</Comment.Text>
 							<Comment.Actions>
-								<Comment.Action>Reply</Comment.Action>
+								<Comment.Action>{t('回复')}</Comment.Action>
 							</Comment.Actions>
 						</Comment.Content>
 						<Comment.Group>
@@ -61,7 +63,7 @@ function Comments() {
 										</Comment.Metadata>
 										<Comment.Text>Elliot you are always so right :)</Comment.Text>
 										<Comment.Actions>
-											<Comment.Action>Reply</Comment.Action>
+											<Comment.Action>{t('回复')}</Comment.Action>
 										</Comment.Actions>
 									</Comment.Content>
 								</Comment>
@@ -91,7 +93,7 @@ function Comments() {
 							</Comment.Metadata>
 							<Comment.Text>Dude, this is awesome. Thanks so much</Comment.Text>
 							<Comment.Actions>
-								<Comment.Action>Reply</Comment.Action>
+								<Comment.Action>{t('回复')}</Comment.Action>
 							</Comment.Actions>
 						</Comment.Content>
 					</Comment>

@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import GrommetRoot from '@/jujiu-ui-components/layout/grommet';
 import { CustomLocalizationProvider } from '../../components/localization-provider';
 import { MuiThemeProvider } from '../../components/mui-theme-provider';
+import { FullScreen } from '../components';
 
 export function generateStaticParams() {
 	return [{ locale: 'en' }, { locale: 'cn' }];
@@ -22,7 +23,9 @@ export default async function RootLayout({ children, params: { locale } }) {
 				<NextIntlClientProvider locale={locale} messages={messages}>
 					<CustomLocalizationProvider>
 						<MuiThemeProvider>
-							<GrommetRoot themeMode='light'>{children}</GrommetRoot>
+							<GrommetRoot themeMode='light'>
+								<FullScreen>{children}</FullScreen>
+							</GrommetRoot>
 						</MuiThemeProvider>
 					</CustomLocalizationProvider>
 				</NextIntlClientProvider>

@@ -1,9 +1,9 @@
 'use client';
 
-import { Text, Box, Nav, Button, Heading, Footer, Paragraph, Image, Avatar } from 'grommet';
+import { Text, Box, Nav, Button, Heading, Footer, Paragraph, Image, Avatar, TextInput } from 'grommet';
 import { Comment } from 'semantic-ui-react';
 import { Carousel } from 'react-responsive-carousel';
-import { ShareRounded, Favorite, StarOutline, UserFemale } from 'grommet-icons';
+import { ShareRounded, Favorite, StarOutline, UserFemale, Emoji, Gallery } from 'grommet-icons';
 import { CommentDots } from '@styled-icons/fa-regular/CommentDots';
 import { IconBack, JuJiuMain } from '@/jujiu-ui-components/core/core-ui';
 import Link, { useJuJiuT } from '@/state/translate';
@@ -15,6 +15,17 @@ function Comments() {
 
 	return (
 		<Box pad='medium' flex={false} id='comments'>
+			<Box direction='row' gap='small' align='center'>
+				<Avatar border flex={false}>
+					<UserFemale color='text-strong' />
+				</Avatar>
+				<Box direction='row' align='center' gap='small' border round='small' pad={{ right: 'small' }}>
+					<TextInput plain placeholder='说点什么' focusIndicator={false} />
+					<Button plain label='@' />
+					<Button plain icon={<Emoji />} />
+					<Button plain icon={<Gallery />} />
+				</Box>
+			</Box>
 			<Comment.Group>
 				<Box direction='row' justify='between' align='start'>
 					<Comment>

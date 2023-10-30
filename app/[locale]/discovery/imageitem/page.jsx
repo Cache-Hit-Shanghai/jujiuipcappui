@@ -15,6 +15,9 @@ function Comments() {
 
 	return (
 		<Box pad='medium' flex={false} id='comments'>
+			<Text size='small' color='text-xweak' margin={{ bottom: 'small' }}>
+				共9条评论
+			</Text>
 			<Box direction='row' gap='small' align='center'>
 				<Avatar border flex={false}>
 					<UserFemale color='text-strong' />
@@ -177,11 +180,15 @@ export default function Page() {
 					/>
 				</Carousel>
 				<Description />
-				<Box pad='small' flex={false}>
+				<Box pad='medium' flex={false}>
 					<Text size='xsmall' color='text-xweak'>
-						09 - 01
+						09-01 上海
 					</Text>
 				</Box>
+				<hr
+					width='100%'
+					style={{ borderLeft: 'none', borderRight: 'none', borderBottom: 'none', margin: 0 }}
+				/>
 				<Comments />
 			</JuJiuMain>
 			<Footer justify='between' pad='medium'>

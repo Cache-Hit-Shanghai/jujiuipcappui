@@ -1,16 +1,15 @@
 'use client';
 
-import { Text, Box, Nav, Button, Heading, Footer, Paragraph, Image, Avatar, TextInput } from 'grommet';
-import { Comment } from 'semantic-ui-react';
+import { Text, Box, Nav, Button, Heading, Footer, Paragraph, Image, Avatar } from 'grommet';
 import { Carousel } from 'react-responsive-carousel';
-import { ShareRounded, Favorite, StarOutline, UserFemale, Emoji, Gallery } from 'grommet-icons';
+import { ShareRounded, Favorite, StarOutline, UserFemale } from 'grommet-icons';
 import { CommentDots } from '@styled-icons/fa-regular/CommentDots';
 import { IconBack, JuJiuMain } from '@/jujiu-ui-components/core/core-ui';
 import Link, { useJuJiuT } from '@/state/translate';
-import 'semantic-ui-css/semantic.min.css';
+import { Comments } from '../components';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
-function Comments() {
+function CommentBox() {
 	const t = useJuJiuT();
 
 	return (
@@ -18,107 +17,7 @@ function Comments() {
 			<Text size='small' color='text-xweak' margin={{ bottom: 'small' }}>
 				共9条评论
 			</Text>
-			<Box direction='row' gap='small' align='center'>
-				<Avatar border flex={false}>
-					<UserFemale color='text-strong' />
-				</Avatar>
-				<Box direction='row' align='center' gap='small' border round='small' pad={{ right: 'small' }}>
-					<TextInput plain placeholder='说点什么' focusIndicator={false} />
-					<Button plain label='@' />
-					<Button plain icon={<Emoji />} />
-					<Button plain icon={<Gallery />} />
-				</Box>
-			</Box>
-			<Comment.Group>
-				<Box direction='row' justify='between' align='start'>
-					<Comment>
-						<Comment.Avatar src='https://react.semantic-ui.com/images/avatar/small/matt.jpg' />
-						<Comment.Content>
-							<Comment.Author as='a'>Matt</Comment.Author>
-							<Comment.Metadata>
-								<div>Today at 5:42PM</div>
-							</Comment.Metadata>
-							<Comment.Text>How artistic!</Comment.Text>
-							<Comment.Actions>
-								<Comment.Action>{t('回复')}</Comment.Action>
-							</Comment.Actions>
-						</Comment.Content>
-					</Comment>
-					<Button>
-						<Box align='center'>
-							<Favorite />
-							<Text size='small'>10</Text>
-						</Box>
-					</Button>
-				</Box>
-				<Box direction='row' justify='between' align='start'>
-					<Comment>
-						<Comment.Avatar src='https://react.semantic-ui.com/images/avatar/small/elliot.jpg' />
-						<Comment.Content>
-							<Comment.Author as='a'>Elliot Fu</Comment.Author>
-							<Comment.Metadata>
-								<div>Yesterday at 12:30AM</div>
-							</Comment.Metadata>
-							<Comment.Text>
-								<p>This has been very useful for my research. Thanks as well!</p>
-							</Comment.Text>
-							<Comment.Actions>
-								<Comment.Action>{t('回复')}</Comment.Action>
-							</Comment.Actions>
-						</Comment.Content>
-						<Comment.Group>
-							<Box direction='row' justify='between' align='start'>
-								<Comment>
-									<Comment.Avatar src='https://react.semantic-ui.com/images/avatar/small/jenny.jpg' />
-									<Comment.Content>
-										<Comment.Author as='a'>Jenny Hess</Comment.Author>
-										<Comment.Metadata>
-											<div>Just now</div>
-										</Comment.Metadata>
-										<Comment.Text>Elliot you are always so right :)</Comment.Text>
-										<Comment.Actions>
-											<Comment.Action>{t('回复')}</Comment.Action>
-										</Comment.Actions>
-									</Comment.Content>
-								</Comment>
-								<Button>
-									<Box align='center'>
-										<Favorite />
-										<Text size='small'>10</Text>
-									</Box>
-								</Button>
-							</Box>
-						</Comment.Group>
-					</Comment>
-					<Button>
-						<Box align='center'>
-							<Favorite />
-							<Text size='small'>10</Text>
-						</Box>
-					</Button>
-				</Box>
-				<Box direction='row' justify='between' align='start'>
-					<Comment>
-						<Comment.Avatar src='https://react.semantic-ui.com/images/avatar/small/joe.jpg' />
-						<Comment.Content>
-							<Comment.Author as='a'>Joe Henderson</Comment.Author>
-							<Comment.Metadata>
-								<div>5 days ago</div>
-							</Comment.Metadata>
-							<Comment.Text>Dude, this is awesome. Thanks so much</Comment.Text>
-							<Comment.Actions>
-								<Comment.Action>{t('回复')}</Comment.Action>
-							</Comment.Actions>
-						</Comment.Content>
-					</Comment>
-					<Button>
-						<Box align='center'>
-							<Favorite />
-							<Text size='small'>10</Text>
-						</Box>
-					</Button>
-				</Box>
-			</Comment.Group>
+			<Comments />
 		</Box>
 	);
 }
@@ -189,7 +88,7 @@ export default function Page() {
 					width='100%'
 					style={{ borderLeft: 'none', borderRight: 'none', borderBottom: 'none', margin: 0 }}
 				/>
-				<Comments />
+				<CommentBox />
 			</JuJiuMain>
 			<Footer justify='between' pad='medium'>
 				<Box>

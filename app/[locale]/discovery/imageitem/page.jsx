@@ -1,15 +1,115 @@
 'use client';
 
 import { Text, Box, Nav, Button, Heading, Footer, Paragraph, Image, Avatar } from 'grommet';
+import { Comment } from 'semantic-ui-react';
+import { Carousel } from 'react-responsive-carousel';
 import { ShareRounded, Favorite, StarOutline, UserFemale } from 'grommet-icons';
 import { CommentDots } from '@styled-icons/fa-regular/CommentDots';
 import { IconBack, JuJiuMain } from '@/jujiu-ui-components/core/core-ui';
-import { Carousel } from 'react-responsive-carousel';
+import Link, { usePathname, useJuJiuT } from '@/state/translate';
+import 'semantic-ui-css/semantic.min.css';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
+
+function Comments() {
+	return (
+		<Box pad='medium' flex={false} id='comments'>
+			<Comment.Group>
+				<Box direction='row' justify='between' align='start'>
+					<Comment>
+						<Comment.Avatar src='https://react.semantic-ui.com/images/avatar/small/matt.jpg' />
+						<Comment.Content>
+							<Comment.Author as='a'>Matt</Comment.Author>
+							<Comment.Metadata>
+								<div>Today at 5:42PM</div>
+							</Comment.Metadata>
+							<Comment.Text>How artistic!</Comment.Text>
+							<Comment.Actions>
+								<Comment.Action>Reply</Comment.Action>
+							</Comment.Actions>
+						</Comment.Content>
+					</Comment>
+					<Button>
+						<Box align='center'>
+							<Favorite />
+							<Text size='small'>10</Text>
+						</Box>
+					</Button>
+				</Box>
+				<Box direction='row' justify='between' align='start'>
+					<Comment>
+						<Comment.Avatar src='https://react.semantic-ui.com/images/avatar/small/elliot.jpg' />
+						<Comment.Content>
+							<Comment.Author as='a'>Elliot Fu</Comment.Author>
+							<Comment.Metadata>
+								<div>Yesterday at 12:30AM</div>
+							</Comment.Metadata>
+							<Comment.Text>
+								<p>This has been very useful for my research. Thanks as well!</p>
+							</Comment.Text>
+							<Comment.Actions>
+								<Comment.Action>Reply</Comment.Action>
+							</Comment.Actions>
+						</Comment.Content>
+						<Comment.Group>
+							<Box direction='row' justify='between' align='start'>
+								<Comment>
+									<Comment.Avatar src='https://react.semantic-ui.com/images/avatar/small/jenny.jpg' />
+									<Comment.Content>
+										<Comment.Author as='a'>Jenny Hess</Comment.Author>
+										<Comment.Metadata>
+											<div>Just now</div>
+										</Comment.Metadata>
+										<Comment.Text>Elliot you are always so right :)</Comment.Text>
+										<Comment.Actions>
+											<Comment.Action>Reply</Comment.Action>
+										</Comment.Actions>
+									</Comment.Content>
+								</Comment>
+								<Button>
+									<Box align='center'>
+										<Favorite />
+										<Text size='small'>10</Text>
+									</Box>
+								</Button>
+							</Box>
+						</Comment.Group>
+					</Comment>
+					<Button>
+						<Box align='center'>
+							<Favorite />
+							<Text size='small'>10</Text>
+						</Box>
+					</Button>
+				</Box>
+				<Box direction='row' justify='between' align='start'>
+					<Comment>
+						<Comment.Avatar src='https://react.semantic-ui.com/images/avatar/small/joe.jpg' />
+						<Comment.Content>
+							<Comment.Author as='a'>Joe Henderson</Comment.Author>
+							<Comment.Metadata>
+								<div>5 days ago</div>
+							</Comment.Metadata>
+							<Comment.Text>Dude, this is awesome. Thanks so much</Comment.Text>
+							<Comment.Actions>
+								<Comment.Action>Reply</Comment.Action>
+							</Comment.Actions>
+						</Comment.Content>
+					</Comment>
+					<Button>
+						<Box align='center'>
+							<Favorite />
+							<Text size='small'>10</Text>
+						</Box>
+					</Button>
+				</Box>
+			</Comment.Group>
+		</Box>
+	);
+}
 
 function Description() {
 	return (
-		<Box pad='medium' gap='medium'>
+		<Box pad='medium' gap='medium' flex={false}>
 			<Heading level={3} margin='none'>
 				超萌狗狗
 			</Heading>
@@ -66,6 +166,12 @@ export default function Page() {
 					/>
 				</Carousel>
 				<Description />
+				<Box pad='small' flex={false}>
+					<Text size='xsmall' color='text-xweak'>
+						09 - 01
+					</Text>
+				</Box>
+				<Comments />
 			</JuJiuMain>
 			<Footer justify='between' pad='medium'>
 				<Box>
@@ -80,10 +186,14 @@ export default function Page() {
 						<StarOutline />
 						<Text size='small'>4064</Text>
 					</Box>
-					<Box direction='row' align='center' gap='small'>
-						<CommentDots size='24' />
-						<Text size='small'>9</Text>
-					</Box>
+					<Link href='#comments' passHref legacyBehavior>
+						<Button as='a' focusIndicator={false}>
+							<Box direction='row' align='center' gap='small'>
+								<CommentDots size='24' />
+								<Text size='small'>9</Text>
+							</Box>
+						</Button>
+					</Link>
 				</Box>
 			</Footer>
 		</Box>

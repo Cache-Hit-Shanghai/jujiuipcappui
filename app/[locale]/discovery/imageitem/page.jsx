@@ -150,13 +150,11 @@ export default function Page() {
 		<Box fill>
 			<Nav direction='row' margin='small' align='center' justify='between'>
 				<IconBack />
-				<Box direction='row' gap='medium' align='center'>
-					<Avatar border>
-						<UserFemale color='text-strong' />
-					</Avatar>
-					<Text>庞大小姐</Text>
-					<Button label='关注' primary size='small' />
-				</Box>
+				<Avatar border>
+					<UserFemale color='text-strong' />
+				</Avatar>
+				<Text>庞大小姐</Text>
+				<Button label='关注' primary size='small' />
 				<Button icon={<ShareRounded />} />
 			</Nav>
 			<JuJiuMain pad='none' gap='none' overflow='auto'>

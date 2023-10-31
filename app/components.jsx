@@ -25,13 +25,6 @@ import { IpcCardRaw, IpcCardRawRobot } from '@/jujiu-ui-components/ipc/device/av
 import { ImageSearch } from '@styled-icons/material-rounded/ImageSearch';
 import Link, { usePathname, useJuJiuT } from '@/state/translate';
 
-export function FullScreen({ children }) {
-	useEffect(() => {
-		document.documentElement.requestFullscreen();
-	}, []);
-	return children;
-}
-
 export function CloudOrSDCard() {
 	return (
 		<RadioButtonGroup name='storagetype' direction='row' options={['Cloud', 'SDCard']}>

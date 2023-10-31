@@ -29,8 +29,8 @@ import Link, { usePathname, useJuJiuT } from '@/state/translate';
 
 export function toggleFullScreen() {
 	if (document.fullscreenElement) {
-		document.exitFullscreen();
 		screen.orientation.unlock();
+		document.exitFullscreen();
 	} else {
 		document.documentElement.requestFullscreen();
 		screen.orientation.lock('landscape');

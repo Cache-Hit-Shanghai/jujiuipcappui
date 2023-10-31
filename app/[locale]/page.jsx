@@ -5,7 +5,7 @@ import { AddCircle, Mail, Add, Scan, Robot, Webcam } from 'grommet-icons';
 import { Group } from '@styled-icons/fluentui-system-regular/Group';
 import { Pets } from '@styled-icons/material-outlined/Pets';
 import Link, { useJuJiuT } from '@/state/translate';
-import { AppFooter, IpcCard, IpcCardRobot } from '@/app/components';
+import { AppFooter, IpcCard, IpcCardRobot, toggleFullScreen } from '@/app/components';
 import { ButtonLink, JuJiuMain } from '@/jujiu-ui-components/core/core-ui';
 import { JuJiuTagFromShared, JuJiuTagSharing } from '@/jujiu-ui-components/core/core-tag';
 
@@ -84,6 +84,7 @@ export default function Page() {
 								key={10}
 								online
 								cloudStorage='expired'
+								onClick={() => toggleFullScreen()}
 								label={
 									<Box direction='row' align='center' gap='medium'>
 										<Robot />

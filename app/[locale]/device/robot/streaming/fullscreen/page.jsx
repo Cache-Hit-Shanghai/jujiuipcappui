@@ -3,7 +3,6 @@
 import { Video, Box, Stack, Text, Tag, Layer, Button, Menu, Nav } from 'grommet';
 import { More, RadialSelected, Volume, ClosedCaption } from 'grommet-icons';
 import { Call } from '@styled-icons/fluentui-system-regular/Call';
-import { ScreenCopyControl, RecordControl, PanControl } from '@/jujiu-ui-components/ipc/video/control';
 import { Magic } from '@styled-icons/bootstrap/Magic';
 import { FastAcceleration } from '@styled-icons/fluentui-system-filled/FastAcceleration';
 import { Pets } from '@styled-icons/material-outlined/Pets';
@@ -13,12 +12,14 @@ import { ChargingStation } from '@styled-icons/fa-solid/ChargingStation';
 import { EyeTracking } from '@styled-icons/fluentui-system-filled/EyeTracking';
 import { VideoRecording } from '@styled-icons/fluentui-system-filled/VideoRecording';
 import { IconBack } from '@/jujiu-ui-components/core/core-ui';
+import { ScreenCopyControl, RecordControl, PanControl } from '@/jujiu-ui-components/ipc/video/control';
+import { toggleFullScreen } from '@/app/components';
 
 export function JujiuNavRobot({ label }) {
 	return (
 		<Nav direction='row' align='center' justify='between'>
 			<Box direction='row' align='center' gap='small'>
-				<IconBack />
+				<IconBack onClick={() => toggleFullScreen()} />
 				<Text>{label}</Text>
 				<BatteryCharging size='24' />
 			</Box>

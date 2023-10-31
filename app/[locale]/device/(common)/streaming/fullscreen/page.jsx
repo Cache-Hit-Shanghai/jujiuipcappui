@@ -12,8 +12,7 @@ import {
 	ResolutionControl,
 	ZoomControl,
 } from '@/jujiu-ui-components/ipc/video/control';
-import { JujiuNav } from '@/app/components';
-import { toggleFullScreen } from '../components';
+import { JujiuNav, toggleFullScreen } from '@/app/components';
 
 export default function Page() {
 	return (

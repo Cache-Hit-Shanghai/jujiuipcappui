@@ -18,8 +18,7 @@ import {
 } from '@/jujiu-ui-components/ipc/video/control';
 import { ButtonLink, JuJiuMain, JuJiuLayer } from '@/jujiu-ui-components/core/core-ui';
 import Link, { useJuJiuT } from '@/state/translate';
-import { JujiuNav } from '@/app/components';
-import { toggleFullScreen } from './components';
+import { JujiuNav, toggleFullScreen } from '@/app/components';
 
 function HelpPanel() {
 	const t = useJuJiuT();

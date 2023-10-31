@@ -205,10 +205,10 @@ export function IpcCard({ ...props }) {
 	);
 }
 
-export function JujiuNav({ label }) {
+export function JujiuNav({ label, onClick }) {
 	return (
 		<Nav direction='row' align='center'>
-			<IconBack />
+			<IconBack onClick={onClick} />
 			<Text>{label}</Text>
 		</Nav>
 	);

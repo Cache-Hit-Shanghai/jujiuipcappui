@@ -13,6 +13,7 @@ import {
 	ZoomControl,
 } from '@/jujiu-ui-components/ipc/video/control';
 import { JujiuNav } from '@/app/components';
+import { toggleFullScreen } from '../components';
 
 export default function Page() {
 	return (
@@ -40,7 +41,7 @@ export default function Page() {
 				</Box>
 				<Box fill justify='between'>
 					<Box direction='row' justify='between'>
-						<JujiuNav label='办3' />
+						<JujiuNav label='办3' onClick={() => toggleFullScreen()} />
 						<Box direction='row'>
 							<Button icon={<ShareRounded />} />
 							<Button icon={<SettingsOutline size='24' />} />

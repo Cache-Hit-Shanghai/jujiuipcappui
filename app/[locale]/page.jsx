@@ -16,7 +16,7 @@ export default function Page() {
 			<Nav direction='row' justify='between' align='center' background='background-contrast'>
 				<Box direction='row' align='center' pad='small' gap='small'>
 					<Pets size='24' />
-					<Text size='xlarge'>{t('小皮部落')}</Text>
+					<Text size='large'>{t('小皮部落')}</Text>
 				</Box>
 				<Box direction='row' gap='small' align='center'>
 					<ButtonLink href='/message' icon={<Mail />} badge={7} />

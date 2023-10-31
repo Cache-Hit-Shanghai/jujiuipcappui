@@ -47,10 +47,10 @@ function Description() {
 
 function DefaultContent({ setShowComments }) {
 	return (
-		<>
+		<Box fill background='black'>
 			<JuJiuMain pad='none'>
 				<Stack fill>
-					<Box fill>
+					<Box fill background='black'>
 						<Video controls={false} fit='contain' autoPlay mute loop style={{ zIndex: '0' }}>
 							<source
 								src='https://assets.mixkit.co/videos/preview/mixkit-waves-in-the-water-1164-large.mp4'
@@ -88,7 +88,7 @@ function DefaultContent({ setShowComments }) {
 					</Button>
 				</Box>
 			</Footer>
-		</>
+		</Box>
 	);
 }
 
@@ -103,7 +103,7 @@ function ContentWithComments({ setShowComments }) {
 
 	return (
 		<JuJiuMain pad='none' gap='none'>
-			<Box flex={{ grow: 1, shrink: 1 }}>
+			<Box flex={{ grow: 1, shrink: 1 }} background='black'>
 				<Video controls={false} fit='contain' autoPlay mute loop style={{ zIndex: '0' }}>
 					<source
 						src='https://assets.mixkit.co/videos/preview/mixkit-waves-in-the-water-1164-large.mp4'
@@ -111,7 +111,7 @@ function ContentWithComments({ setShowComments }) {
 					/>
 				</Video>
 			</Box>
-			<AnimatedBox height='62%' flex={false} pad='small' background='background-back' overflow='hidden'>
+			<AnimatedBox flex={false} pad='small'>
 				<Box direction='row' justify='between' align='center'>
 					<Heading margin='none' level={3}>
 						共9条评论
@@ -128,7 +128,7 @@ export default function Page() {
 	const [showComments, setShowComments] = useState(false);
 
 	return (
-		<Box fill background='black'>
+		<Box fill>
 			{showComments ? (
 				<ContentWithComments setShowComments={setShowComments} />
 			) : (

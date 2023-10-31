@@ -46,28 +46,30 @@ function StreamPlayerSleep() {
 	const [openHelp, setOpenHelp] = useState(false);
 
 	return (
-		<Stack interactiveChild='last'>
-			<Box flex={false} background='background-contrast'>
-				<VideoCanvas controls={false} style={{ zIndex: '0' }}></VideoCanvas>
-			</Box>
-			<Box fill justify='between'>
-				<Stack>
-					<Box direction='row' justify='end'>
-						<ButtonLink href='/device/streaming/record' icon={<VideoRecording size='24' />} />
-						<ButtonLink href='/device/sharing' icon={<ShareRounded />} />
-						<ButtonLink href='/device/settings' icon={<Settings3 size='24' />} />
+		<Box background='black'>
+			<Stack interactiveChild='last'>
+				<Box flex={false} background='background-contrast'>
+					<VideoCanvas controls={false} style={{ zIndex: '0' }}></VideoCanvas>
+				</Box>
+				<Box fill justify='between'>
+					<Stack>
+						<Box direction='row' justify='end'>
+							<ButtonLink href='/device/streaming/record' icon={<VideoRecording size='24' />} />
+							<ButtonLink href='/device/sharing' icon={<ShareRounded />} />
+							<ButtonLink href='/device/settings' icon={<Settings3 size='24' />} />
+						</Box>
+					</Stack>
+					<Box align='center' gap='small' pad='small'>
+						<Moon size='large' />
+						<Text>{t('设备已休眠')}</Text>
+						<Button size='small' primary label={t('唤醒')} />
 					</Box>
-				</Stack>
-				<Box align='center' gap='small' pad='small'>
-					<Moon size='large' />
-					<Text>{t('设备已休眠')}</Text>
-					<Button size='small' primary label={t('唤醒')} />
+					<Box align='end'>
+						<ButtonLink href='/device/streaming/fullscreen' icon={<PhoneLandscape size='24' />} />
+					</Box>
 				</Box>
-				<Box align='end'>
-					<ButtonLink href='/device/streaming/fullscreen' icon={<PhoneLandscape size='24' />} />
-				</Box>
-			</Box>
-		</Stack>
+			</Stack>
+		</Box>
 	);
 }
 
@@ -76,95 +78,99 @@ function StreamPlayerError() {
 	const [openHelp, setOpenHelp] = useState(false);
 
 	return (
-		<Stack interactiveChild='last'>
-			<Box flex={false} background='background-contrast'>
-				<VideoCanvas controls={false} style={{ zIndex: '0' }}></VideoCanvas>
-			</Box>
-			<Box fill justify='between'>
-				<Stack>
-					<Box direction='row' justify='center'>
-						<Tag
-							margin='small'
-							pad='xsmall'
-							size='xsmall'
-							border={false}
-							background='status-critical'
-							value={
-								<Box direction='row' gap='small' align='center'>
-									<RadialSelected size='small' />
-									<Text size='xsmall'>0:41</Text>
-								</Box>
-							}
-						/>
-					</Box>
-					<Box direction='row' justify='end'>
-						<ButtonLink href='/device/streaming/record' icon={<VideoRecording size='24' />} />
-						<ButtonLink href='/device/sharing' icon={<ShareRounded />} />
-						<ButtonLink href='/device/settings' icon={<Settings3 size='24' />} />
-					</Box>
-				</Stack>
-				<Box align='center' gap='small' pad='small'>
-					<StatusCritical size='large' />
-					<Text>{t('无法加载视频流')}</Text>
-					<Text>{t('设备已离线，离线时间：2023年9月14日 14:52:30。')}</Text>
-					<Button primary label={t('查看帮助')} size='small' onClick={() => setOpenHelp(true)} />
-					{openHelp && (
-						<JuJiuLayer onClickOutside={() => setOpenHelp(false)}>
-							<HelpPanel />
-						</JuJiuLayer>
-					)}
+		<Box background='black'>
+			<Stack interactiveChild='last'>
+				<Box flex={false}>
+					<VideoCanvas controls={false} style={{ zIndex: '0' }}></VideoCanvas>
 				</Box>
-				<Box align='end'>
-					<ButtonLink href='/device/streaming/fullscreen' icon={<PhoneLandscape size='24' />} />
+				<Box fill justify='between'>
+					<Stack>
+						<Box direction='row' justify='center'>
+							<Tag
+								margin='small'
+								pad='xsmall'
+								size='xsmall'
+								border={false}
+								background='status-critical'
+								value={
+									<Box direction='row' gap='small' align='center'>
+										<RadialSelected size='small' />
+										<Text size='xsmall'>0:41</Text>
+									</Box>
+								}
+							/>
+						</Box>
+						<Box direction='row' justify='end'>
+							<ButtonLink href='/device/streaming/record' icon={<VideoRecording size='24' />} />
+							<ButtonLink href='/device/sharing' icon={<ShareRounded />} />
+							<ButtonLink href='/device/settings' icon={<Settings3 size='24' />} />
+						</Box>
+					</Stack>
+					<Box align='center' gap='small' pad='small'>
+						<StatusCritical size='large' />
+						<Text>{t('无法加载视频流')}</Text>
+						<Text>{t('设备已离线，离线时间：2023年9月14日 14:52:30。')}</Text>
+						<Button primary label={t('查看帮助')} size='small' onClick={() => setOpenHelp(true)} />
+						{openHelp && (
+							<JuJiuLayer onClickOutside={() => setOpenHelp(false)}>
+								<HelpPanel />
+							</JuJiuLayer>
+						)}
+					</Box>
+					<Box align='end'>
+						<ButtonLink href='/device/streaming/fullscreen' icon={<PhoneLandscape size='24' />} />
+					</Box>
 				</Box>
-			</Box>
-		</Stack>
+			</Stack>
+		</Box>
 	);
 }
 
 function StreamPlayer() {
 	return (
-		<Stack interactiveChild='last'>
-			<Box flex={false} background='background-contrast'>
-				<VideoCanvas controls={false} style={{ zIndex: '0' }} muted autoPlay loop>
-					<source src='https://samplelib.com/lib/preview/mp4/sample-5s.mp4' type='video/mp4' />
-				</VideoCanvas>
-			</Box>
-			<Box fill justify='between'>
-				<Stack>
-					<Box direction='row' justify='center'>
-						<Tag
-							margin='small'
-							pad='xsmall'
-							size='xsmall'
-							border={false}
-							background='status-critical'
-							value={
-								<Box direction='row' gap='small' align='center'>
-									<RadialSelected size='small' />
-									<Text size='xsmall'>0:41</Text>
-								</Box>
-							}
+		<Box background='black'>
+			<Stack interactiveChild='last'>
+				<Box flex={false}>
+					<VideoCanvas controls={false} style={{ zIndex: '0' }} muted autoPlay loop>
+						<source src='https://samplelib.com/lib/preview/mp4/sample-5s.mp4' type='video/mp4' />
+					</VideoCanvas>
+				</Box>
+				<Box fill justify='between'>
+					<Stack>
+						<Box direction='row' justify='center'>
+							<Tag
+								margin='small'
+								pad='xsmall'
+								size='xsmall'
+								border={false}
+								background='status-critical'
+								value={
+									<Box direction='row' gap='small' align='center'>
+										<RadialSelected size='small' />
+										<Text size='xsmall'>0:41</Text>
+									</Box>
+								}
+							/>
+						</Box>
+						<Box direction='row' justify='end'>
+							<ButtonLink href='/device/streaming/record' icon={<VideoRecording size='24' />} />
+							<ButtonLink href='/device/settings/sharing' icon={<ShareRounded />} />
+							<ButtonLink href='/device/settings' icon={<Settings3 size='24' />} />
+						</Box>
+					</Stack>
+					<Box align='center'>
+						<Spinner size='large' />
+					</Box>
+					<Box align='end'>
+						<ButtonLink
+							href='/device/streaming/fullscreen'
+							icon={<PhoneLandscape size='24' />}
+							onClick={() => toggleFullScreen()}
 						/>
 					</Box>
-					<Box direction='row' justify='end'>
-						<ButtonLink href='/device/streaming/record' icon={<VideoRecording size='24' />} />
-						<ButtonLink href='/device/settings/sharing' icon={<ShareRounded />} />
-						<ButtonLink href='/device/settings' icon={<Settings3 size='24' />} />
-					</Box>
-				</Stack>
-				<Box align='center'>
-					<Spinner size='large' />
 				</Box>
-				<Box align='end'>
-					<ButtonLink
-						href='/device/streaming/fullscreen'
-						icon={<PhoneLandscape size='24' />}
-						onClick={() => toggleFullScreen()}
-					/>
-				</Box>
-			</Box>
-		</Stack>
+			</Stack>
+		</Box>
 	);
 }
 

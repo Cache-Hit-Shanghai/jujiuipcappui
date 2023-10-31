@@ -103,7 +103,7 @@ export default function Page() {
 						<StarOutline />
 						<Text size='small'>4064</Text>
 					</Box>
-					<Link href='#comments' passHref legacyBehavior>
+					<Link href='#comments' replace passHref legacyBehavior>
 						<Button as='a' focusIndicator={false}>
 							<Box direction='row' align='center' gap='small'>
 								<CommentDots size='24' />

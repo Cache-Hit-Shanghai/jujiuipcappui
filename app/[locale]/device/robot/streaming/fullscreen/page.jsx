@@ -35,7 +35,7 @@ export function JujiuNavRobot({ label }) {
 
 export default function Page() {
 	return (
-		<Box fill>
+		<Box fill background='black'>
 			<Stack fill>
 				<Box fill background='background-contrast'>
 					<Video controls={false} fit='contain' autoPlay mute loop style={{ zIndex: '0' }}>

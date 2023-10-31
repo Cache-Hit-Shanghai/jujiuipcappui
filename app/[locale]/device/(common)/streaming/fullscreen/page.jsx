@@ -16,7 +16,7 @@ import { JujiuNav, toggleFullScreen } from '@/app/components';
 
 export default function Page() {
 	return (
-		<Box fill>
+		<Box fill background='black'>
 			<Stack fill>
 				<Box fill background='background-contrast'>
 					<VideoCanvas controls={false} fit='contain' autoPlay mute loop style={{ zIndex: '0' }}>

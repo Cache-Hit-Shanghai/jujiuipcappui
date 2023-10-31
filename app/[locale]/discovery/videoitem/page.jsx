@@ -111,7 +111,7 @@ function ContentWithComments({ setShowComments }) {
 					/>
 				</Video>
 			</Box>
-			<AnimatedBox flex={false} pad='small'>
+			<AnimatedBox flex={false} pad='small' height='62%'>
 				<Box direction='row' justify='between' align='center'>
 					<Heading margin='none' level={3}>
 						共9条评论

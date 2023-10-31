@@ -37,7 +37,7 @@ export default function Page() {
 	return (
 		<Box fill background='black'>
 			<Stack fill>
-				<Box fill background='background-contrast'>
+				<Box fill>
 					<Video controls={false} fit='contain' autoPlay mute loop style={{ zIndex: '0' }}>
 						<source src='https://samplelib.com/lib/preview/mp4/sample-5s.mp4' type='video/mp4' />
 					</Video>

@@ -128,7 +128,7 @@ export default function Page() {
 	const [showComments, setShowComments] = useState(false);
 
 	return (
-		<Box fill>
+		<Box fill background='black'>
 			{showComments ? (
 				<ContentWithComments setShowComments={setShowComments} />
 			) : (

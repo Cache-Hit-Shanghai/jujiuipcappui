@@ -1,14 +1,13 @@
 'use client';
 
-import { Video, Box, Stack, Text, Tag, Button, Layer } from 'grommet';
+import { Video, Box, Button, Layer } from 'grommet';
 import { useState } from 'react';
-import { RadialSelected, ShareRounded } from 'grommet-icons';
+import { ShareRounded } from 'grommet-icons';
 import { SettingsOutline } from '@styled-icons/evaicons-outline/SettingsOutline';
 import {
 	ScreenCopyControl,
 	ChatControl,
 	MuteControl,
-	RecordControl,
 	PanLayer,
 	ResolutionControl,
 	ZoomControl,

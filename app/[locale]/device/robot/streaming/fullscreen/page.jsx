@@ -1,8 +1,8 @@
 'use client';
 
-import { Video, Box, Stack, Text, Tag, Layer, Button, Menu, Nav } from 'grommet';
+import { Video, Box, Text, Layer, Button, Menu, Nav } from 'grommet';
 import { useState } from 'react';
-import { More, RadialSelected, Volume, ClosedCaption } from 'grommet-icons';
+import { More, Volume, ClosedCaption } from 'grommet-icons';
 import { Call } from '@styled-icons/fluentui-system-regular/Call';
 import { Magic } from '@styled-icons/bootstrap/Magic';
 import { FastAcceleration } from '@styled-icons/fluentui-system-filled/FastAcceleration';
@@ -13,7 +13,7 @@ import { ChargingStation } from '@styled-icons/fa-solid/ChargingStation';
 import { EyeTracking } from '@styled-icons/fluentui-system-filled/EyeTracking';
 import { VideoRecording } from '@styled-icons/fluentui-system-filled/VideoRecording';
 import { IconBack } from '@/jujiu-ui-components/core/core-ui';
-import { ScreenCopyControl, RecordControl, PanControl } from '@/jujiu-ui-components/ipc/video/control';
+import { ScreenCopyControl, PanControl } from '@/jujiu-ui-components/ipc/video/control';
 import { toggleFullScreen } from '@/app/components';
 import { RecordControlDemo } from '../../../components';
 

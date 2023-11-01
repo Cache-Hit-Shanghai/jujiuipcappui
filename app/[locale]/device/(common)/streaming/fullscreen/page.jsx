@@ -1,6 +1,7 @@
 'use client';
 
-import { Video as VideoCanvas, Box, Stack, Text, Tag, Button } from 'grommet';
+import { Video, Box, Stack, Text, Tag, Button, Layer } from 'grommet';
+import { useState } from 'react';
 import { RadialSelected, ShareRounded } from 'grommet-icons';
 import { SettingsOutline } from '@styled-icons/evaicons-outline/SettingsOutline';
 import {
@@ -15,13 +16,15 @@ import {
 import { JujiuNav, toggleFullScreen } from '@/app/components';
 
 export default function Page() {
+	const [show, setShow] = useState(true);
+
 	return (
 		<Box fill background='black'>
-			<Stack fill>
-				<Box fill background='background-contrast'>
-					<VideoCanvas controls={false} fit='contain' autoPlay mute loop style={{ zIndex: '0' }}>
+			<Stack fill onClick={() => setShow(!show)}>
+				<Box fill>
+					<Video controls={false} fit='contain' autoPlay mute loop style={{ zIndex: '0' }}>
 						<source src='https://samplelib.com/lib/preview/mp4/sample-5s.mp4' type='video/mp4' />
-					</VideoCanvas>
+					</Video>
 				</Box>
 				<Box direction='row' justify='center'>
 					<Tag
@@ -38,25 +41,43 @@ export default function Page() {
 						}
 					/>
 				</Box>
-				<Box fill justify='between'>
-					<Box direction='row' justify='between'>
-						<JujiuNav label='办3' onClick={() => toggleFullScreen()} />
-						<Box direction='row'>
-							<Button icon={<ShareRounded />} />
-							<Button icon={<SettingsOutline size='24' />} />
-						</Box>
-					</Box>
-					<Box direction='row' justify='end' gap='medium' pad='small'>
-						<ScreenCopyControl showTitle={false} />
-						<RecordControl showTitle={false} />
-						<ChatControl showTitle={false} />
-						<MuteControl showTitle={false} />
-						<PanLayer />
-						<ResolutionControl showTitle={false} />
-						<ZoomControl showTitle={false} />
+				<Box fill justify='between' style={{ visibility: show ? 'visible' : 'hidden' }}></Box>
+			</Stack>
+			<Layer
+				plain
+				full='horizontal'
+				modal={false}
+				animation='fadeIn'
+				position='top'
+				responsive={false}
+				style={{ visibility: show ? 'visible' : 'hidden' }}
+			>
+				<Box direction='row' justify='between' background={{ color: 'black', opacity: 'medium' }}>
+					<JujiuNav label='办3' onClick={() => toggleFullScreen()} />
+					<Box direction='row'>
+						<Button icon={<ShareRounded />} />
+						<Button icon={<SettingsOutline size='24' />} />
 					</Box>
 				</Box>
-			</Stack>
+			</Layer>
+			<Layer
+				plain
+				modal={false}
+				animation='fadeIn'
+				position='bottom'
+				responsive={false}
+				style={{ minHeight: 0, visibility: show ? 'visible' : 'hidden' }}
+			>
+				<Box direction='row' justify='end' gap='medium' background={{ color: 'black', opacity: 'medium' }}>
+					<ScreenCopyControl showTitle={false} />
+					<RecordControl showTitle={false} />
+					<ChatControl showTitle={false} />
+					<MuteControl showTitle={false} />
+					<PanLayer />
+					<ResolutionControl showTitle={false} />
+					<ZoomControl showTitle={false} />
+				</Box>
+			</Layer>
 		</Box>
 	);
 }

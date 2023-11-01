@@ -1,6 +1,7 @@
 'use client';
 
 import { Video, Box, Stack, Text, Tag, Layer, Button, Menu, Nav } from 'grommet';
+import { useState } from 'react';
 import { More, RadialSelected, Volume, ClosedCaption } from 'grommet-icons';
 import { Call } from '@styled-icons/fluentui-system-regular/Call';
 import { Magic } from '@styled-icons/bootstrap/Magic';
@@ -17,7 +18,7 @@ import { toggleFullScreen } from '@/app/components';
 
 export function JujiuNavRobot({ label }) {
 	return (
-		<Nav direction='row' align='center' justify='between'>
+		<Nav direction='row' align='center' justify='between' background={{ color: 'black', opacity: 'medium' }}>
 			<Box direction='row' align='center' gap='small'>
 				<IconBack onClick={() => toggleFullScreen()} />
 				<Text>{label}</Text>
@@ -34,9 +35,11 @@ export function JujiuNavRobot({ label }) {
 }
 
 export default function Page() {
+	const [show, setShow] = useState(true);
+
 	return (
 		<Box fill background='black'>
-			<Stack fill>
+			<Stack fill onClick={() => setShow(!show)}>
 				<Box fill>
 					<Video controls={false} fit='contain' autoPlay mute loop style={{ zIndex: '0' }}>
 						<source src='https://samplelib.com/lib/preview/mp4/sample-5s.mp4' type='video/mp4' />
@@ -57,30 +60,63 @@ export default function Page() {
 						}
 					/>
 				</Box>
-				<Box fill justify='between'>
-					<JujiuNavRobot label='PixelBot' />
-					<Box align='end' justify='end'>
-						<Button icon={<FastAcceleration size='48' />} />
-						<Button icon={<Magic size='48' />} />
-					</Box>
-					<Box direction='row' justify='center' gap='large' pad='small'>
-						<ScreenCopyControl showTitle={false} />
-						<RecordControl showTitle={false} />
-						<Menu
-							dropProps={{ align: { top: 'bottom' } }}
-							icon={<More />}
-							items={[
-								{ icon: <Call size='24' /> },
-								{ icon: <Volume /> },
-								{ icon: <ClosedCaption /> },
-								{ icon: <VideoRecording size='24' /> },
-							]}
-						/>
-					</Box>
-				</Box>
 			</Stack>
-			<Layer plain modal={false} animation='fadeIn' position='left' responsive={false} margin='small'>
+			<Layer
+				plain
+				modal={false}
+				animation='fadeIn'
+				position='left'
+				responsive={false}
+				style={{ visibility: show ? 'visible' : 'hidden' }}
+			>
 				<PanControl />
+			</Layer>
+			<Layer
+				plain
+				full='horizontal'
+				modal={false}
+				animation='fadeIn'
+				position='top'
+				responsive={false}
+				style={{ visibility: show ? 'visible' : 'hidden' }}
+			>
+				<JujiuNavRobot label='PixelBot' />
+			</Layer>
+			<Layer
+				plain
+				modal={false}
+				animation='fadeIn'
+				position='right'
+				responsive={false}
+				style={{ visibility: show ? 'visible' : 'hidden' }}
+			>
+				<Box gap='large' background={{ color: 'black', opacity: 'medium' }}>
+					<Button plain icon={<FastAcceleration size='48' />} />
+					<Button plain icon={<Magic size='48' />} />
+				</Box>
+			</Layer>
+			<Layer
+				plain
+				modal={false}
+				animation='fadeIn'
+				position='bottom'
+				responsive={false}
+				style={{ minHeight: 0, visibility: show ? 'visible' : 'hidden' }}
+			>
+				<Box direction='row' gap='large' background={{ color: 'black', opacity: 'medium' }}>
+					<ScreenCopyControl showTitle={false} />
+					<RecordControl showTitle={false} />
+					<Menu
+						dropProps={{ align: { top: 'bottom' } }}
+						icon={<More />}
+						items={[
+							{ icon: <Call size='24' /> },
+							{ icon: <Volume /> },
+							{ icon: <ClosedCaption /> },
+							{ icon: <VideoRecording size='24' /> },
+						]}
+					/>
+				</Box>
 			</Layer>
 		</Box>
 	);

@@ -21,7 +21,7 @@ export default function Page() {
 	const [show, setShow] = useState(true);
 
 	return (
-		<Box fill background='black' style={{ position: 'relative' }}>
+		<Box fill background='black' style={{ position: 'relative', transform: 'scale(1)' }}>
 			<Video
 				controls={false}
 				fit='contain'

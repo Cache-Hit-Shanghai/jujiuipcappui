@@ -1,9 +1,11 @@
 'use client';
 
-import { Video, Box, Button } from 'grommet';
+import { Video, Box } from 'grommet';
 import { useState } from 'react';
 import { ShareRounded } from 'grommet-icons';
-import { SettingsOutline } from '@styled-icons/evaicons-outline/SettingsOutline';
+import { Settings3 } from '@styled-icons/remix-fill/Settings3';
+import { VideoRecording } from '@styled-icons/fluentui-system-filled/VideoRecording';
+import { ButtonLink } from '@/jujiu-ui-components/core/core-ui';
 import {
 	ScreenCopyControl,
 	ChatControl,
@@ -37,8 +39,9 @@ export default function Page() {
 				<Box direction='row' justify='between'>
 					<JujiuNav label='办3' onClick={() => toggleFullScreen()} />
 					<Box direction='row'>
-						<Button icon={<ShareRounded />} />
-						<Button icon={<SettingsOutline size='24' />} />
+						<ButtonLink href='/device/streaming/record' icon={<VideoRecording size='24' />} />
+						<ButtonLink href='/device/sharing' icon={<ShareRounded />} />
+						<ButtonLink href='/device/settings' icon={<Settings3 size='24' />} />
 					</Box>
 				</Box>
 			</Box>

@@ -1,6 +1,6 @@
 'use client';
 
-import { Video, Box, Button, Layer } from 'grommet';
+import { Video, Box, Button } from 'grommet';
 import { useState } from 'react';
 import { ShareRounded } from 'grommet-icons';
 import { SettingsOutline } from '@styled-icons/evaicons-outline/SettingsOutline';
@@ -19,47 +19,49 @@ export default function Page() {
 	const [show, setShow] = useState(true);
 
 	return (
-		<Box fill background='black'>
-			<Box fill onClick={() => setShow(!show)}>
-				<Video controls={false} fit='contain' autoPlay mute loop style={{ zIndex: '0' }}>
-					<source src='https://samplelib.com/lib/preview/mp4/sample-5s.mp4' type='video/mp4' />
-				</Video>
-			</Box>
-			<Layer
-				plain
-				full='horizontal'
-				modal={false}
-				animation='fadeIn'
-				position='top'
-				responsive={false}
-				style={{ visibility: show ? 'visible' : 'hidden' }}
+		<Box fill background='black' style={{ position: 'relative' }}>
+			<Video
+				controls={false}
+				fit='contain'
+				autoPlay
+				mute
+				loop
+				style={{ zIndex: '0' }}
+				onClick={() => setShow(!show)}
 			>
-				<Box direction='row' justify='between' background={{ color: 'black', opacity: 'medium' }}>
+				<source src='https://samplelib.com/lib/preview/mp4/sample-5s.mp4' type='video/mp4' />
+			</Video>
+			<Box
+				style={{ position: 'absolute', top: 0, left: 0, right: 0, visibility: show ? 'visible' : 'hidden' }}
+			>
+				<Box direction='row' justify='between'>
 					<JujiuNav label='办3' onClick={() => toggleFullScreen()} />
 					<Box direction='row'>
 						<Button icon={<ShareRounded />} />
 						<Button icon={<SettingsOutline size='24' />} />
 					</Box>
 				</Box>
-			</Layer>
-			<Layer
-				plain
-				modal={false}
-				animation='fadeIn'
-				position='bottom'
-				responsive={false}
-				style={{ minHeight: 0, visibility: show ? 'visible' : 'hidden' }}
+			</Box>
+			<Box
+				direction='row'
+				gap='large'
+				justify='center'
+				style={{
+					position: 'absolute',
+					bottom: 0,
+					left: 0,
+					right: 0,
+					visibility: show ? 'visible' : 'hidden',
+				}}
 			>
-				<Box direction='row' justify='end' gap='medium' background={{ color: 'black', opacity: 'medium' }}>
-					<ScreenCopyControl showTitle={false} />
-					<RecordControlDemo showTitle={false} />
-					<ChatControl showTitle={false} />
-					<MuteControl showTitle={false} />
-					<PanLayer />
-					<ResolutionControl showTitle={false} />
-					<ZoomControl showTitle={false} />
-				</Box>
-			</Layer>
+				<ScreenCopyControl showTitle={false} />
+				<RecordControlDemo showTitle={false} />
+				<ChatControl showTitle={false} />
+				<MuteControl showTitle={false} />
+				<PanLayer />
+				<ResolutionControl showTitle={false} />
+				<ZoomControl showTitle={false} />
+			</Box>
 		</Box>
 	);
 }

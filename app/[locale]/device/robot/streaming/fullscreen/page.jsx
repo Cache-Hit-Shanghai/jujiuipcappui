@@ -1,9 +1,7 @@
 'use client';
 
-import { Video, Box, Text, Button, Menu, Nav } from 'grommet';
+import { Video, Box, Text, Button, Nav } from 'grommet';
 import { useState } from 'react';
-import { More, Volume } from 'grommet-icons';
-import { Call } from '@styled-icons/fluentui-system-regular/Call';
 import { Magic } from '@styled-icons/bootstrap/Magic';
 import { FastAcceleration } from '@styled-icons/fluentui-system-filled/FastAcceleration';
 import { Pets } from '@styled-icons/material-outlined/Pets';
@@ -11,9 +9,14 @@ import { BatteryCharging } from '@styled-icons/ionicons-outline/BatteryCharging'
 import { Cameraswitch } from '@styled-icons/material/Cameraswitch';
 import { ChargingStation } from '@styled-icons/fa-solid/ChargingStation';
 import { EyeTracking } from '@styled-icons/fluentui-system-filled/EyeTracking';
-import { VideoRecording } from '@styled-icons/fluentui-system-filled/VideoRecording';
 import { IconBack } from '@/jujiu-ui-components/core/core-ui';
-import { ScreenCopyControl, PanControl, ResolutionControl } from '@/jujiu-ui-components/ipc/video/control';
+import {
+	ScreenCopyControl,
+	PanControl,
+	ResolutionControl,
+	ChatControl,
+	MuteControl,
+} from '@/jujiu-ui-components/ipc/video/control';
 import { exitFullscreen } from '@/app/components';
 import { RecordControlDemo } from '../../../components';
 
@@ -53,7 +56,15 @@ export default function Page() {
 			</Video>
 			<Box
 				justify='center'
-				style={{ position: 'absolute', left: 0, top: 0, bottom: 0, visibility: show ? 'visible' : 'hidden' }}
+				height='fit-content'
+				style={{
+					position: 'absolute',
+					left: 0,
+					top: 0,
+					bottom: 0,
+					margin: 'auto',
+					visibility: show ? 'visible' : 'hidden',
+				}}
 			>
 				<PanControl />
 			</Box>
@@ -78,11 +89,13 @@ export default function Page() {
 			</Box>
 			<Box
 				justify='center'
+				height='fit-content'
 				style={{
 					position: 'absolute',
 					right: 0,
 					top: 0,
 					bottom: 0,
+					margin: 'auto',
 					visibility: show ? 'visible' : 'hidden',
 				}}
 			>
@@ -93,22 +106,21 @@ export default function Page() {
 				direction='row'
 				gap='large'
 				justify='center'
+				width='fit-content'
 				style={{
 					position: 'absolute',
 					bottom: 0,
 					left: 0,
 					right: 0,
+					margin: 'auto',
 					visibility: show ? 'visible' : 'hidden',
 				}}
 			>
 				<ScreenCopyControl showTitle={false} />
 				<RecordControlDemo showTitle={false} />
+				<ChatControl showTitle={false} />
+				<MuteControl showTitle={false} />
 				<ResolutionControl showTitle={false} />
-				<Menu
-					dropProps={{ align: { top: 'bottom' } }}
-					icon={<More />}
-					items={[{ icon: <Call size='24' /> }, { icon: <Volume /> }, { icon: <VideoRecording size='24' /> }]}
-				/>
 			</Box>
 		</Box>
 	);

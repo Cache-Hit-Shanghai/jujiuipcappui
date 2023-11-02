@@ -4,13 +4,12 @@ import { Video, Box } from 'grommet';
 import { useState } from 'react';
 import { ShareRounded } from 'grommet-icons';
 import { Settings3 } from '@styled-icons/remix-fill/Settings3';
-import { VideoRecording } from '@styled-icons/fluentui-system-filled/VideoRecording';
 import { ButtonLink } from '@/jujiu-ui-components/core/core-ui';
 import {
 	ScreenCopyControl,
 	ChatControl,
 	MuteControl,
-	PanLayer,
+	PanControl,
 	ResolutionControl,
 	ZoomControl,
 } from '@/jujiu-ui-components/ipc/video/control';
@@ -40,14 +39,28 @@ export default function Page() {
 				direction='row'
 				style={{ position: 'absolute', top: 0, right: 0, visibility: show ? 'visible' : 'hidden' }}
 			>
-				<ButtonLink href='/device/streaming/record' icon={<VideoRecording size='24' />} />
 				<ButtonLink href='/device/sharing' icon={<ShareRounded />} />
 				<ButtonLink href='/device/settings' icon={<Settings3 size='24' />} />
+			</Box>
+			<Box
+				justify='center'
+				height='fit-content'
+				style={{
+					position: 'absolute',
+					left: 0,
+					top: 0,
+					bottom: 0,
+					margin: 'auto',
+					visibility: show ? 'visible' : 'hidden',
+				}}
+			>
+				<PanControl />
 			</Box>
 			<Box
 				direction='row'
 				gap='large'
 				justify='center'
+				width='fit-content'
 				style={{
 					position: 'absolute',
 					bottom: 0,
@@ -61,7 +74,6 @@ export default function Page() {
 				<RecordControlDemo showTitle={false} />
 				<ChatControl showTitle={false} />
 				<MuteControl showTitle={false} />
-				<PanLayer />
 				<ResolutionControl showTitle={false} />
 				<ZoomControl showTitle={false} />
 			</Box>

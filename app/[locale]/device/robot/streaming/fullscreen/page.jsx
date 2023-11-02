@@ -14,14 +14,14 @@ import { EyeTracking } from '@styled-icons/fluentui-system-filled/EyeTracking';
 import { VideoRecording } from '@styled-icons/fluentui-system-filled/VideoRecording';
 import { IconBack } from '@/jujiu-ui-components/core/core-ui';
 import { ScreenCopyControl, PanControl, ResolutionControl } from '@/jujiu-ui-components/ipc/video/control';
-import { toggleFullScreen } from '@/app/components';
+import { exitFullscreen } from '@/app/components';
 import { RecordControlDemo } from '../../../components';
 
 export function JujiuNavRobot({ label }) {
 	return (
 		<Nav direction='row' align='center' justify='between'>
 			<Box direction='row' align='center' gap='small'>
-				<IconBack onClick={() => toggleFullScreen()} />
+				<IconBack onClick={() => exitFullscreen()} />
 				<Text>{label}</Text>
 				<BatteryCharging size='24' />
 			</Box>
@@ -58,9 +58,23 @@ export default function Page() {
 				<PanControl />
 			</Box>
 			<Box
-				style={{ position: 'absolute', top: 0, left: 0, right: 0, visibility: show ? 'visible' : 'hidden' }}
+				direction='row'
+				align='center'
+				gap='small'
+				style={{ position: 'absolute', top: 0, left: 0, visibility: show ? 'visible' : 'hidden' }}
 			>
-				<JujiuNavRobot label='PixelBot' />
+				<IconBack onClick={() => exitFullscreen()} />
+				<Text>PixelBot</Text>
+				<BatteryCharging size='24' />
+			</Box>
+			<Box
+				direction='row'
+				style={{ position: 'absolute', top: 0, right: 0, visibility: show ? 'visible' : 'hidden' }}
+			>
+				<Button icon={<EyeTracking size='24' />} />
+				<Button icon={<Pets size='24' />} />
+				<Button icon={<ChargingStation size='24' />} />
+				<Button icon={<Cameraswitch size='24' />} />
 			</Box>
 			<Box
 				justify='center'

@@ -27,14 +27,14 @@ import { ImageSearch } from '@styled-icons/material-rounded/ImageSearch';
 import { JuJiuTagFromShared, JuJiuTagSharing } from '@/jujiu-ui-components/core/core-tag';
 import Link, { usePathname, useJuJiuT } from '@/state/translate';
 
-export function toggleFullScreen() {
-	if (document.fullscreenElement) {
-		screen.orientation.unlock();
-		document.exitFullscreen();
-	} else {
-		document.documentElement.requestFullscreen();
-		screen.orientation.lock('landscape');
-	}
+export function requestFullscreen() {
+	document.documentElement.requestFullscreen();
+	screen.orientation.lock('landscape');
+}
+
+export function exitFullscreen() {
+	screen.orientation.unlock();
+	document.exitFullscreen();
 }
 
 export function DeviceList() {
@@ -60,7 +60,7 @@ export function DeviceList() {
 						key={10}
 						online
 						cloudStorage='expired'
-						onClick={() => toggleFullScreen()}
+						onClick={() => requestFullscreen()}
 						label={
 							<Box direction='row' align='center' gap='medium'>
 								<Robot />

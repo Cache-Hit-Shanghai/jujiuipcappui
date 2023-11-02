@@ -18,7 +18,7 @@ import {
 } from '@/jujiu-ui-components/ipc/video/control';
 import { ButtonLink, JuJiuMain, JuJiuLayer } from '@/jujiu-ui-components/core/core-ui';
 import Link, { useJuJiuT } from '@/state/translate';
-import { JujiuNav, toggleFullScreen } from '@/app/components';
+import { JujiuNav, requestFullscreen } from '@/app/components';
 
 function HelpPanel() {
 	const t = useJuJiuT();
@@ -165,7 +165,7 @@ function StreamPlayer() {
 						<ButtonLink
 							href='/device/streaming/fullscreen'
 							icon={<PhoneLandscape size='24' />}
-							onClick={() => toggleFullScreen()}
+							onClick={() => requestFullscreen()}
 						/>
 					</Box>
 				</Box>

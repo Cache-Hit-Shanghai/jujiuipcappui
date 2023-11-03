@@ -207,7 +207,7 @@ function IpcCardMenuRobot() {
 				},
 				{
 					label: (
-						<Link href='/device/settings' passHref legacyBehavior>
+						<Link href='/device/robot/settings' passHref legacyBehavior>
 							<Text>{t('设备设置')}</Text>
 						</Link>
 					),

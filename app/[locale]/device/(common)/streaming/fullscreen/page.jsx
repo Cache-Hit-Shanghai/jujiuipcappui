@@ -24,7 +24,6 @@ export default function Page() {
 		onIdle: () => setShow(false),
 		onActive: () => setShow(true),
 		timeout: 5000,
-		throttle: 500,
 	});
 
 	return (

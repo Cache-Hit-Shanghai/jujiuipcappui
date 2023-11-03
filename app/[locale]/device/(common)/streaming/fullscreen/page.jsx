@@ -2,6 +2,7 @@
 
 import { Video, Box } from 'grommet';
 import { useState } from 'react';
+import { useIdleTimer } from 'react-idle-timer';
 import { ShareRounded } from 'grommet-icons';
 import { Settings3 } from '@styled-icons/remix-fill/Settings3';
 import { ButtonLink } from '@/jujiu-ui-components/core/core-ui';
@@ -19,18 +20,16 @@ import { RecordControlDemo } from '../../../components';
 export default function Page() {
 	const [show, setShow] = useState(true);
 	const visibility = show ? 'visible' : 'hidden';
+	useIdleTimer({
+		onIdle: () => setShow(false),
+		onActive: () => setShow(true),
+		timeout: 5000,
+		throttle: 500,
+	});
 
 	return (
 		<Box fill background='black' style={{ position: 'relative', transform: 'scale(1)' }}>
-			<Video
-				controls={false}
-				fit='contain'
-				autoPlay
-				mute
-				loop
-				style={{ zIndex: '0' }}
-				onClick={() => setShow(!show)}
-			>
+			<Video controls={false} fit='contain' autoPlay mute loop style={{ zIndex: '0' }}>
 				<source src='https://samplelib.com/lib/preview/mp4/sample-5s.mp4' type='video/mp4' />
 			</Video>
 			<Box style={{ position: 'absolute', top: 0, left: 0, visibility }}>

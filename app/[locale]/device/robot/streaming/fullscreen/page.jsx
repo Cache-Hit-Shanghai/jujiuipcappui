@@ -2,6 +2,7 @@
 
 import { Video, Box, Text, Button, Nav } from 'grommet';
 import { useState } from 'react';
+import { useIdleTimer } from 'react-idle-timer';
 import { Magic } from '@styled-icons/bootstrap/Magic';
 import { FastAcceleration } from '@styled-icons/fluentui-system-filled/FastAcceleration';
 import { Pets } from '@styled-icons/material-outlined/Pets';
@@ -41,19 +42,16 @@ export function JujiuNavRobot({ label }) {
 export default function Page() {
 	const [show, setShow] = useState(true);
 	const visibility = show ? 'visible' : 'hidden';
-	if (show) setTimeout(() => setShow(false), 5000);
+	useIdleTimer({
+		onIdle: () => setShow(false),
+		onActive: () => setShow(true),
+		timeout: 5000,
+		throttle: 500,
+	});
 
 	return (
 		<Box fill background='black' style={{ position: 'relative' }}>
-			<Video
-				controls={false}
-				fit='contain'
-				autoPlay
-				mute
-				loop
-				style={{ zIndex: '0' }}
-				onClick={() => setShow(!show)}
-			>
+			<Video controls={false} fit='contain' autoPlay mute loop style={{ zIndex: '0' }}>
 				<source src='https://samplelib.com/lib/preview/mp4/sample-5s.mp4' type='video/mp4' />
 			</Video>
 			<Box

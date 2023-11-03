@@ -41,7 +41,9 @@ export function JujiuNavRobot({ label }) {
 
 export default function Page() {
 	const [show, setShow] = useState(true);
-	const visibility = show ? 'visible' : 'hidden';
+	const visibility = show
+		? { visibility: 'visible', opacity: 1, transition: 'opacity 0.5s linear' }
+		: { visibility: 'hidden', opacity: 0, transition: 'visibility 0s 0.5s, opacity 0.5s linear' };
 	useIdleTimer({
 		onIdle: () => setShow(false),
 		onActive: () => setShow(true),
@@ -63,7 +65,7 @@ export default function Page() {
 					top: 0,
 					bottom: 0,
 					margin: 'auto',
-					visibility,
+					...visibility,
 				}}
 			>
 				<PanControl />
@@ -72,13 +74,13 @@ export default function Page() {
 				direction='row'
 				align='center'
 				gap='small'
-				style={{ position: 'absolute', top: 0, left: 0, visibility }}
+				style={{ position: 'absolute', top: 0, left: 0, ...visibility }}
 			>
 				<IconBack onClick={() => exitFullscreen()} />
 				<Text>PixelBot</Text>
 				<BatteryCharging size='24' />
 			</Box>
-			<Box direction='row' style={{ position: 'absolute', top: 0, right: 0, visibility }}>
+			<Box direction='row' style={{ position: 'absolute', top: 0, right: 0, ...visibility }}>
 				<Button icon={<EyeTracking size='24' />} />
 				<Button icon={<Pets size='24' />} />
 				<Button icon={<ChargingStation size='24' />} />
@@ -93,7 +95,7 @@ export default function Page() {
 					top: 0,
 					bottom: 0,
 					margin: 'auto',
-					visibility,
+					...visibility,
 				}}
 			>
 				<Button icon={<FastAcceleration size='48' />} />
@@ -110,7 +112,7 @@ export default function Page() {
 					left: 0,
 					right: 0,
 					margin: 'auto',
-					visibility,
+					...visibility,
 				}}
 			>
 				<ScreenCopyControl showTitle={false} />

@@ -19,7 +19,9 @@ import { RecordControlDemo } from '../../../components';
 
 export default function Page() {
 	const [show, setShow] = useState(true);
-	const visibility = show ? 'visible' : 'hidden';
+	const visibility = show
+		? { visibility: 'visible', opacity: 1, transition: 'opacity 0.5s linear' }
+		: { visibility: 'hidden', opacity: 0, transition: 'visibility 0s 0.5s, opacity 0.5s linear' };
 	useIdleTimer({
 		onIdle: () => setShow(false),
 		onActive: () => setShow(true),
@@ -31,10 +33,10 @@ export default function Page() {
 			<Video controls={false} fit='contain' autoPlay mute loop style={{ zIndex: '0' }}>
 				<source src='https://samplelib.com/lib/preview/mp4/sample-5s.mp4' type='video/mp4' />
 			</Video>
-			<Box style={{ position: 'absolute', top: 0, left: 0, visibility }}>
+			<Box style={{ position: 'absolute', top: 0, left: 0, ...visibility }}>
 				<JujiuNav label='办3' onClick={() => exitFullscreen()} />
 			</Box>
-			<Box direction='row' style={{ position: 'absolute', top: 0, right: 0, visibility }}>
+			<Box direction='row' style={{ position: 'absolute', top: 0, right: 0, ...visibility }}>
 				<ButtonLink href='/device/sharing' icon={<ShareRounded />} />
 				<ButtonLink href='/device/settings' icon={<Settings3 size='24' />} />
 			</Box>
@@ -47,7 +49,7 @@ export default function Page() {
 					top: 0,
 					bottom: 0,
 					margin: 'auto',
-					visibility,
+					...visibility,
 				}}
 			>
 				<PanControl />
@@ -63,7 +65,7 @@ export default function Page() {
 					left: 0,
 					right: 0,
 					margin: 'auto',
-					visibility,
+					...visibility,
 				}}
 			>
 				<ScreenCopyControl showTitle={false} />

@@ -19,7 +19,6 @@ import { RecordControlDemo } from '../../../components';
 export default function Page() {
 	const [show, setShow] = useState(true);
 	const visibility = show ? 'visible' : 'hidden';
-	if (show) setTimeout(() => setShow(false), 5000);
 
 	return (
 		<Box fill background='black' style={{ position: 'relative', transform: 'scale(1)' }}>

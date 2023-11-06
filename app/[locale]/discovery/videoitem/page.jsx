@@ -2,11 +2,11 @@
 
 import { Text, Box, Nav, Button, Stack, Footer, Video, Paragraph, Avatar, Heading } from 'grommet';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useState } from 'react';
 import { ShareRounded, Favorite, StarOutline, UserFemale, Close } from 'grommet-icons';
 import { CommentDots } from '@styled-icons/fa-regular/CommentDots';
 import { ExpandAlt } from '@styled-icons/boxicons-regular/ExpandAlt';
 import { CollapseAlt } from '@styled-icons/boxicons-regular/CollapseAlt';
-import { useState } from 'react';
 import { IconBack, JuJiuMain } from '@/jujiu-ui-components/core/core-ui';
 import { Comments } from '../components';
 

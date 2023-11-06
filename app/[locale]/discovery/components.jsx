@@ -1,17 +1,44 @@
 'use client';
 
-import { Text, Box, Button, Avatar, TextInput } from 'grommet';
-import { Comment } from 'semantic-ui-react';
+import { Text, Box, Button, Avatar, TextInput, Anchor } from 'grommet';
 import { Favorite, UserFemale, Emoji, Gallery } from 'grommet-icons';
 import { useJuJiuT } from '@/state/translate';
-import 'semantic-ui-css/semantic.min.css';
+
+function CommectGroup({ children }) {
+	return (
+		<Box flex={false} gap='small' pad={{ left: 'medium', vertical: 'medium' }}>
+			{children}
+		</Box>
+	);
+}
+
+function CommentPanel({ children }) {
+	return (
+		<Box direction='row' gap='medium'>
+			{children}
+		</Box>
+	);
+}
+
+function CommentLike() {
+	return (
+		<Box flex={false} pad={{ right: 'medium' }}>
+			<Button>
+				<Box align='center'>
+					<Favorite />
+					<Text size='small'>10</Text>
+				</Box>
+			</Button>
+		</Box>
+	);
+}
 
 export function Comments() {
 	const t = useJuJiuT();
 
 	return (
-		<Box overflow='auto' pad='small'>
-			<Box flex={false} direction='row' gap='small' align='center'>
+		<Box overflow='auto' gap='small'>
+			<Box flex={false} direction='row' pad='small' gap='small' align='center'>
 				<Avatar border flex={false}>
 					<UserFemale color='text-strong' />
 				</Avatar>
@@ -22,184 +49,192 @@ export function Comments() {
 					<Button plain icon={<Gallery />} />
 				</Box>
 			</Box>
-			<Comment.Group>
-				<Box direction='row' justify='between' align='start'>
-					<Comment>
-						<Comment.Avatar src='https://react.semantic-ui.com/images/avatar/small/matt.jpg' />
-						<Comment.Content>
-							<Comment.Author as='a'>Matt</Comment.Author>
-							<Comment.Metadata>
-								<div>Today at 5:42PM</div>
-							</Comment.Metadata>
-							<Comment.Text>How artistic!</Comment.Text>
-							<Comment.Actions>
-								<Comment.Action>{t('回复')}</Comment.Action>
-							</Comment.Actions>
-						</Comment.Content>
-					</Comment>
-					<Button>
-						<Box align='center'>
-							<Favorite />
-							<Text size='small'>10</Text>
+			<CommectGroup>
+				<CommentPanel>
+					<Avatar flex={false} src='https://react.semantic-ui.com/images/avatar/small/matt.jpg' />
+					<Box flex={{ grow: 1, shrink: 1 }}>
+						<Box direction='row' gap='small'>
+							<Text size='small' weight='bold'>
+								大小姐
+							</Text>
+							<Text size='small' color='text-xweak'>
+								今天 下午4:43
+							</Text>
 						</Box>
-					</Button>
-				</Box>
-				<Box direction='row' justify='between' align='start'>
-					<Comment>
-						<Comment.Avatar src='https://react.semantic-ui.com/images/avatar/small/elliot.jpg' />
-						<Comment.Content>
-							<Comment.Author as='a'>Elliot Fu</Comment.Author>
-							<Comment.Metadata>
-								<div>Yesterday at 12:30AM</div>
-							</Comment.Metadata>
-							<Comment.Text>
-								<p>This has been very useful for my research. Thanks as well!</p>
-							</Comment.Text>
-							<Comment.Actions>
-								<Comment.Action>{t('回复')}</Comment.Action>
-							</Comment.Actions>
-						</Comment.Content>
-						<Comment.Group>
-							<Box direction='row' justify='between' align='start'>
-								<Comment>
-									<Comment.Avatar src='https://react.semantic-ui.com/images/avatar/small/jenny.jpg' />
-									<Comment.Content>
-										<Comment.Author as='a'>Jenny Hess</Comment.Author>
-										<Comment.Metadata>
-											<div>Just now</div>
-										</Comment.Metadata>
-										<Comment.Text>Elliot you are always so right :)</Comment.Text>
-										<Comment.Actions>
-											<Comment.Action>{t('回复')}</Comment.Action>
-										</Comment.Actions>
-									</Comment.Content>
-								</Comment>
-								<Button>
-									<Box align='center'>
-										<Favorite />
-										<Text size='small'>10</Text>
-									</Box>
-								</Button>
+						<Text size='small' color='text-strong'>
+							How artistic!真美！
+						</Text>
+						<Anchor as={Button} weight='normal' size='small' label={t('回复')} />
+					</Box>
+					<CommentLike />
+				</CommentPanel>
+				<CommentPanel>
+					<Avatar flex={false} src='https://react.semantic-ui.com/images/avatar/small/elliot.jpg' />
+					<Box flex={{ grow: 1, shrink: 1 }}>
+						<Box direction='row' gap='small'>
+							<Text size='small' weight='bold'>
+								小二哥
+							</Text>
+							<Text size='small' color='text-xweak'>
+								昨天 下午4:43
+							</Text>
+						</Box>
+						<Text size='small' color='text-strong'>
+							This has been very useful for my research. Thanks as well!
+						</Text>
+						<Anchor as={Button} weight='normal' size='small' label={t('回复')} />
+					</Box>
+					<CommentLike />
+				</CommentPanel>
+				<CommectGroup>
+					<CommentPanel>
+						<Avatar flex={false} src='https://react.semantic-ui.com/images/avatar/small/jenny.jpg' />
+						<Box flex={{ grow: 1, shrink: 1 }}>
+							<Box direction='row' gap='small'>
+								<Text size='small' weight='bold'>
+									Jenny Hess
+								</Text>
+								<Text size='small' color='text-xweak'>
+									刚才
+								</Text>
 							</Box>
-						</Comment.Group>
-					</Comment>
-					<Button>
-						<Box align='center'>
-							<Favorite />
-							<Text size='small'>10</Text>
+							<Text size='small' color='text-strong'>
+								Elliot you are always so right :)
+							</Text>
+							<Anchor as={Button} weight='normal' size='small' label={t('回复')} />
 						</Box>
-					</Button>
-				</Box>
-				<Box direction='row' justify='between' align='start'>
-					<Comment>
-						<Comment.Avatar src='https://react.semantic-ui.com/images/avatar/small/joe.jpg' />
-						<Comment.Content>
-							<Comment.Author as='a'>Joe Henderson</Comment.Author>
-							<Comment.Metadata>
-								<div>5 days ago</div>
-							</Comment.Metadata>
-							<Comment.Text>Dude, this is awesome. Thanks so much</Comment.Text>
-							<Comment.Actions>
-								<Comment.Action>{t('回复')}</Comment.Action>
-							</Comment.Actions>
-						</Comment.Content>
-					</Comment>
-					<Button>
-						<Box align='center'>
-							<Favorite />
-							<Text size='small'>10</Text>
-						</Box>
-					</Button>
-				</Box>
-				<Box direction='row' justify='between' align='start'>
-					<Comment>
-						<Comment.Avatar src='https://react.semantic-ui.com/images/avatar/small/matt.jpg' />
-						<Comment.Content>
-							<Comment.Author as='a'>Matt</Comment.Author>
-							<Comment.Metadata>
-								<div>Today at 5:42PM</div>
-							</Comment.Metadata>
-							<Comment.Text>How artistic!</Comment.Text>
-							<Comment.Actions>
-								<Comment.Action>{t('回复')}</Comment.Action>
-							</Comment.Actions>
-						</Comment.Content>
-					</Comment>
-					<Button>
-						<Box align='center'>
-							<Favorite />
-							<Text size='small'>10</Text>
-						</Box>
-					</Button>
-				</Box>
-				<Box direction='row' justify='between' align='start'>
-					<Comment>
-						<Comment.Avatar src='https://react.semantic-ui.com/images/avatar/small/elliot.jpg' />
-						<Comment.Content>
-							<Comment.Author as='a'>Elliot Fu</Comment.Author>
-							<Comment.Metadata>
-								<div>Yesterday at 12:30AM</div>
-							</Comment.Metadata>
-							<Comment.Text>
-								<p>This has been very useful for my research. Thanks as well!</p>
-							</Comment.Text>
-							<Comment.Actions>
-								<Comment.Action>{t('回复')}</Comment.Action>
-							</Comment.Actions>
-						</Comment.Content>
-						<Comment.Group>
-							<Box direction='row' justify='between' align='start'>
-								<Comment>
-									<Comment.Avatar src='https://react.semantic-ui.com/images/avatar/small/jenny.jpg' />
-									<Comment.Content>
-										<Comment.Author as='a'>Jenny Hess</Comment.Author>
-										<Comment.Metadata>
-											<div>Just now</div>
-										</Comment.Metadata>
-										<Comment.Text>Elliot you are always so right :)</Comment.Text>
-										<Comment.Actions>
-											<Comment.Action>{t('回复')}</Comment.Action>
-										</Comment.Actions>
-									</Comment.Content>
-								</Comment>
-								<Button>
-									<Box align='center'>
-										<Favorite />
-										<Text size='small'>10</Text>
-									</Box>
-								</Button>
+						<CommentLike />
+					</CommentPanel>
+					<CommentPanel>
+						<Avatar flex={false} src='https://react.semantic-ui.com/images/avatar/small/matt.jpg' />
+						<Box flex={{ grow: 1, shrink: 1 }}>
+							<Box direction='row' gap='small'>
+								<Text size='small' weight='bold'>
+									大小姐
+								</Text>
+								<Text size='small' color='text-xweak'>
+									刚才
+								</Text>
 							</Box>
-						</Comment.Group>
-					</Comment>
-					<Button>
-						<Box align='center'>
-							<Favorite />
-							<Text size='small'>10</Text>
+							<Text size='small' color='text-strong'>
+								Elliot you are always so right :)
+							</Text>
+							<Anchor as={Button} weight='normal' size='small' label={t('回复')} />
 						</Box>
-					</Button>
-				</Box>
-				<Box direction='row' justify='between' align='start'>
-					<Comment>
-						<Comment.Avatar src='https://react.semantic-ui.com/images/avatar/small/joe.jpg' />
-						<Comment.Content>
-							<Comment.Author as='a'>Joe Henderson</Comment.Author>
-							<Comment.Metadata>
-								<div>5 days ago</div>
-							</Comment.Metadata>
-							<Comment.Text>Dude, this is awesome. Thanks so much</Comment.Text>
-							<Comment.Actions>
-								<Comment.Action>{t('回复')}</Comment.Action>
-							</Comment.Actions>
-						</Comment.Content>
-					</Comment>
-					<Button>
-						<Box align='center'>
-							<Favorite />
-							<Text size='small'>10</Text>
+						<CommentLike />
+					</CommentPanel>
+				</CommectGroup>
+				<CommentPanel>
+					<Avatar flex={false} src='https://react.semantic-ui.com/images/avatar/small/joe.jpg' />
+					<Box flex={{ grow: 1, shrink: 1 }}>
+						<Box direction='row' gap='small'>
+							<Text size='small' weight='bold'>
+								Joe Henderson
+							</Text>
+							<Text size='small' color='text-xweak'>
+								5天前
+							</Text>
 						</Box>
-					</Button>
-				</Box>
-			</Comment.Group>
+						<Text size='small' color='text-strong'>
+							Dude, this is awesome. Thanks so much
+						</Text>
+						<Anchor as={Button} weight='normal' size='small' label={t('回复')} />
+					</Box>
+					<CommentLike />
+				</CommentPanel>
+				<CommentPanel>
+					<Avatar flex={false} src='https://react.semantic-ui.com/images/avatar/small/matt.jpg' />
+					<Box flex={{ grow: 1, shrink: 1 }}>
+						<Box direction='row' gap='small'>
+							<Text size='small' weight='bold'>
+								大小姐
+							</Text>
+							<Text size='small' color='text-xweak'>
+								今天 下午4:43
+							</Text>
+						</Box>
+						<Text size='small' color='text-strong'>
+							How artistic!真美！
+						</Text>
+						<Anchor as={Button} weight='normal' size='small' label={t('回复')} />
+					</Box>
+					<CommentLike />
+				</CommentPanel>
+				<CommentPanel>
+					<Avatar flex={false} src='https://react.semantic-ui.com/images/avatar/small/elliot.jpg' />
+					<Box flex={{ grow: 1, shrink: 1 }}>
+						<Box direction='row' gap='small'>
+							<Text size='small' weight='bold'>
+								小二哥
+							</Text>
+							<Text size='small' color='text-xweak'>
+								昨天 下午4:43
+							</Text>
+						</Box>
+						<Text size='small' color='text-strong'>
+							This has been very useful for my research. Thanks as well!
+						</Text>
+						<Anchor as={Button} weight='normal' size='small' label={t('回复')} />
+					</Box>
+					<CommentLike />
+				</CommentPanel>
+				<CommectGroup>
+					<CommentPanel>
+						<Avatar flex={false} src='https://react.semantic-ui.com/images/avatar/small/jenny.jpg' />
+						<Box flex={{ grow: 1, shrink: 1 }}>
+							<Box direction='row' gap='small'>
+								<Text size='small' weight='bold'>
+									Jenny Hess
+								</Text>
+								<Text size='small' color='text-xweak'>
+									刚才
+								</Text>
+							</Box>
+							<Text size='small' color='text-strong'>
+								Elliot you are always so right :)
+							</Text>
+							<Anchor as={Button} weight='normal' size='small' label={t('回复')} />
+						</Box>
+						<CommentLike />
+					</CommentPanel>
+					<CommentPanel>
+						<Avatar flex={false} src='https://react.semantic-ui.com/images/avatar/small/matt.jpg' />
+						<Box flex={{ grow: 1, shrink: 1 }}>
+							<Box direction='row' gap='small'>
+								<Text size='small' weight='bold'>
+									大小姐
+								</Text>
+								<Text size='small' color='text-xweak'>
+									刚才
+								</Text>
+							</Box>
+							<Text size='small' color='text-strong'>
+								Elliot you are always so right :)
+							</Text>
+							<Anchor as={Button} weight='normal' size='small' label={t('回复')} />
+						</Box>
+						<CommentLike />
+					</CommentPanel>
+				</CommectGroup>
+				<CommentPanel>
+					<Avatar flex={false} src='https://react.semantic-ui.com/images/avatar/small/joe.jpg' />
+					<Box flex={{ grow: 1, shrink: 1 }}>
+						<Box direction='row' gap='small'>
+							<Text size='small' weight='bold'>
+								Joe Henderson
+							</Text>
+							<Text size='small' color='text-xweak'>
+								5天前
+							</Text>
+						</Box>
+						<Text size='small' color='text-strong'>
+							Dude, this is awesome. Thanks so much
+						</Text>
+						<Anchor as={Button} weight='normal' size='small' label={t('回复')} />
+					</Box>
+					<CommentLike />
+				</CommentPanel>
+			</CommectGroup>
 		</Box>
 	);
 }

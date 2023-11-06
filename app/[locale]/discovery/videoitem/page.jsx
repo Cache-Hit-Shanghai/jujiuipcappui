@@ -112,9 +112,9 @@ function VideoItemMain() {
 						height: 0,
 					}}
 				>
-					<Box pad='small'>
-						<Box flex={false} direction='row' justify='between' align='center' overflow='auto'>
-							<Heading margin='none' level={3}>
+					<Box fill>
+						<Box flex={false} direction='row' justify='between' align='center'>
+							<Heading margin={{ horizontal: 'medium', vertical: 'none' }} level={3}>
 								共9条评论
 							</Heading>
 							<Button icon={<Close />} onClick={() => setShowComments(false)} />

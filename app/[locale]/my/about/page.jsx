@@ -30,7 +30,7 @@ export default function Page() {
 				<Text>关于</Text>
 			</Nav>
 			<JuJiuMain gap='medium'>
-				<JuJiuCard pad='large'>
+				<JuJiuCard pad={{ vertical: 'large' }}>
 					<AppLogo />
 				</JuJiuCard>
 				<LinkGroup data={links} />

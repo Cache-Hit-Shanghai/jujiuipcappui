@@ -12,7 +12,7 @@ const links = [
 	{ label: '界面设置', url: '/my/uisettings' },
 	{ label: '系统信息', url: '/my/sysinfo' },
 	{ label: '录像截图设置', url: '/my/storagesettings' },
-	{ label: '关于', url: '/my/about' },
+	{ label: '关于', url: '/my2/about' },
 ];
 
 export default function Page() {

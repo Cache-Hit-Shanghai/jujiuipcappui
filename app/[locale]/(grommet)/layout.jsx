@@ -1,8 +1,8 @@
 import { NextIntlClientProvider } from 'next-intl';
 import { notFound } from 'next/navigation';
 import GrommetRoot from '@/jujiu-ui-components/layout/grommet';
-import { CustomLocalizationProvider } from '../../components/localization-provider';
-import { MuiThemeProvider } from '../../components/mui-theme-provider';
+import { CustomLocalizationProvider } from '../../../components/localization-provider';
+import { MuiThemeProvider } from '../../../components/mui-theme-provider';
 
 export function generateStaticParams() {
 	return [{ locale: 'en' }, { locale: 'cn' }];
@@ -17,7 +17,7 @@ export default async function RootLayout({ children, params: { locale } }) {
 	}
 
 	return (
-		<html>
+		<html suppressHydrationWarning>
 			<body>
 				<NextIntlClientProvider locale={locale} messages={messages}>
 					<CustomLocalizationProvider>

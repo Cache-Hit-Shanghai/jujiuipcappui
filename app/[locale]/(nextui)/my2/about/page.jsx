@@ -23,7 +23,7 @@ export default function Page() {
 						<ButtonBack />
 					</NavbarItem>
 					<NavbarItem>
-						<p>关于</p>
+						<p>{t('关于')}</p>
 					</NavbarItem>
 				</NavbarContent>
 			</Navbar>

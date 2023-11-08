@@ -17,7 +17,7 @@ export default function Page() {
 	return (
 		<div className='h-screen flex flex-col'>
 			<NavbarBack label={t('关于')} />
-			<div className='flex flex-col flex-1 px-2 gap-4'>
+			<div className='flex flex-col flex-1 px-4 gap-4'>
 				<AppLogo />
 				<LinkGroup data={links} />
 			</div>

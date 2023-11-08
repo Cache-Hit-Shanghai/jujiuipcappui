@@ -35,7 +35,7 @@ export default function Page() {
 					/>
 				</Button>
 			</div>
-			<div className='flex flex-col flex-1 px-2 gap-4'>
+			<div className='flex flex-col flex-1 px-4 gap-4'>
 				<Card>
 					<CardBody>
 						<div className='flex flex-row justify-evenly'>

@@ -25,9 +25,7 @@ export default function Page() {
 	return (
 		<div className='h-screen flex flex-col'>
 			<div className='flex items-center justify-between p-2'>
-				<div className='px-2'>
-					<AppLogo />
-				</div>
+				<AppLogo />
 				<div className='flex items-centerpx-2'>
 					<ThemeButton />
 					<Button isIconOnly variant='light' as={Link} href='/message'>

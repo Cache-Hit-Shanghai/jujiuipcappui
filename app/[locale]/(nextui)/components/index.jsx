@@ -9,10 +9,17 @@ import {
 	Accordion,
 	AccordionItem,
 } from '@nextui-org/react';
-import { ChipOnline } from '@/jujiu-ui-components/nextui/core/core-chips';
+import {
+	ChipOnline,
+	ChipOffline,
+	ChipShared,
+	ChipFromFriends,
+	ChipCloudStorageExpired,
+	ChipCloudStorageExpiring,
+} from '@/jujiu-ui-components/nextui/core/core-chips';
 import Link, { useJuJiuT } from '@/state/translate';
 import { PlusCircleIcon, SquaresPlusIcon, RectangleGroupIcon, QrCodeIcon } from '@heroicons/react/24/solid';
-import { IpcCard } from './ipcCard';
+import { IpcCard, BotCard } from './ipcCard';
 
 export function DeviceMenu() {
 	const t = useJuJiuT();
@@ -66,7 +73,15 @@ export function DeviceList() {
 					label='办公室3'
 					src='https://ts1.cn.mm.bing.net/th/id/R-C.f54c83f04442cec528a250d251251ce6?rik=JE7BoZk5xK4iEg&riu=http%3a%2f%2fpic4.bbzhi.com%2ffengjingbizhi%2fgaoqingxifengjingzhuomianbizhixiazai%2fgaoqingxifengjingzhuomianbizhixiazai_366146_18.jpg&ehk=YvUnl11nBp%2fGJssQUbYqkXLo7fchkD%2fEQ8BGpW2Urjs%3d&risl=&pid=ImgRaw&r=0'
 					href='/device/streaming'
-					bodyChips={[<ChipOnline />]}
+					bodyChips={[<ChipOnline />, <ChipCloudStorageExpiring />]}
+					footerChips={[<ChipFromFriends />]}
+				/>
+				<BotCard
+					label='PixelBot'
+					src='https://ts1.cn.mm.bing.net/th/id/R-C.0c8bf36e099654aadaf5f127ef1a3f1b?rik=uHrB%2blGez03%2fAA&riu=http%3a%2f%2fi3.img.969g.com%2fdown%2fimgx2014%2f10%2f24%2f289_102445_a1cff.jpg&ehk=EeF%2fioqRM6NfQqkCgXw%2bwLvO1%2fxZgeZ2pof7ALNLGsg%3d&risl=&pid=ImgRaw&r=0'
+					href='/device/robot/streaming/fullscreen'
+					bodyChips={[<ChipOffline />, <ChipCloudStorageExpired />]}
+					footerChips={[<ChipShared />]}
 				/>
 			</AccordionItem>
 			<AccordionItem key='2' aria-label='Accordion 2' title='Accordion 2'>

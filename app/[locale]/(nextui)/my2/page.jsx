@@ -19,7 +19,7 @@ export default function Page() {
 		{ label: t('界面设置'), url: '/my/uisettings' },
 		{ label: t('系统信息'), url: '/my/sysinfo' },
 		{ label: t('录像截图设置'), url: '/my/storagesettings' },
-		{ label: t('关于'), url: '/my2/about' },
+		{ label: t('关于'), url: './about' },
 	];
 
 	return (

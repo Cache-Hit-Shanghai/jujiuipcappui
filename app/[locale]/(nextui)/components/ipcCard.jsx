@@ -24,6 +24,7 @@ import {
 } from '@heroicons/react/24/solid';
 import { Webcam } from '@styled-icons/boxicons-regular/Webcam';
 import { Pets } from '@styled-icons/material-outlined/Pets';
+import { BatteryCharge } from '@styled-icons/typicons/BatteryCharge';
 
 function DeviceMenu() {
 	const t = useJuJiuT();
@@ -87,7 +88,7 @@ export function BotCard({ label, src, href, bodyChips, footerChips }) {
 				<div className='flex items-center gap-2'>
 					<Pets size={24} />
 					{label}
-					<Battery50Icon className='h-6 w-6' />
+					<BatteryCharge size={24} />
 					{...footerChips}
 				</div>
 				<DeviceMenu />

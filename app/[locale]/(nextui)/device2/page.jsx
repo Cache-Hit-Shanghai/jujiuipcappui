@@ -36,7 +36,7 @@ export default function Page() {
 					<DeviceMenu />
 				</div>
 			</div>
-			<div className='flex flex-1'>
+			<div className='flex flex-1 overflow-auto'>
 				<DeviceList />
 			</div>
 			<Divider />

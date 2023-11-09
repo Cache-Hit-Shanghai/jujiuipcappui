@@ -63,32 +63,58 @@ export function DeviceMenu() {
 
 export function DeviceList() {
 	const t = useJuJiuT();
-	const defaultContent =
-		'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.';
 
 	return (
 		<Accordion>
-			<AccordionItem key='1' aria-label='Accordion 1' title={t('默认分组')}>
-				<IpcCard
-					label='办公室3'
-					src='https://ts1.cn.mm.bing.net/th/id/R-C.f54c83f04442cec528a250d251251ce6?rik=JE7BoZk5xK4iEg&riu=http%3a%2f%2fpic4.bbzhi.com%2ffengjingbizhi%2fgaoqingxifengjingzhuomianbizhixiazai%2fgaoqingxifengjingzhuomianbizhixiazai_366146_18.jpg&ehk=YvUnl11nBp%2fGJssQUbYqkXLo7fchkD%2fEQ8BGpW2Urjs%3d&risl=&pid=ImgRaw&r=0'
-					href='/device/streaming'
-					bodyChips={[<ChipOnline />, <ChipCloudStorageExpiring />]}
-					footerChips={[<ChipFromFriends />]}
-				/>
-				<BotCard
-					label='PixelBot'
-					src='https://ts1.cn.mm.bing.net/th/id/R-C.0c8bf36e099654aadaf5f127ef1a3f1b?rik=uHrB%2blGez03%2fAA&riu=http%3a%2f%2fi3.img.969g.com%2fdown%2fimgx2014%2f10%2f24%2f289_102445_a1cff.jpg&ehk=EeF%2fioqRM6NfQqkCgXw%2bwLvO1%2fxZgeZ2pof7ALNLGsg%3d&risl=&pid=ImgRaw&r=0'
-					href='/device/robot/streaming/fullscreen'
-					bodyChips={[<ChipOffline />, <ChipCloudStorageExpired />]}
-					footerChips={[<ChipShared />]}
-				/>
+			<AccordionItem key='1' aria-label={t('默认分组')} title={t('默认分组')}>
+				<div className='flex flex-col gap-2'>
+					<IpcCard
+						label='办公室0'
+						src='https://ts1.cn.mm.bing.net/th/id/R-C.f54c83f04442cec528a250d251251ce6?rik=JE7BoZk5xK4iEg&riu=http%3a%2f%2fpic4.bbzhi.com%2ffengjingbizhi%2fgaoqingxifengjingzhuomianbizhixiazai%2fgaoqingxifengjingzhuomianbizhixiazai_366146_18.jpg&ehk=YvUnl11nBp%2fGJssQUbYqkXLo7fchkD%2fEQ8BGpW2Urjs%3d&risl=&pid=ImgRaw&r=0'
+						href='/device/streaming'
+						bodyChips={[<ChipOnline />, <ChipCloudStorageExpiring />]}
+						footerChips={[<ChipFromFriends />]}
+					/>
+					<BotCard
+						label='PixelBot'
+						src='https://ts1.cn.mm.bing.net/th/id/R-C.0c8bf36e099654aadaf5f127ef1a3f1b?rik=uHrB%2blGez03%2fAA&riu=http%3a%2f%2fi3.img.969g.com%2fdown%2fimgx2014%2f10%2f24%2f289_102445_a1cff.jpg&ehk=EeF%2fioqRM6NfQqkCgXw%2bwLvO1%2fxZgeZ2pof7ALNLGsg%3d&risl=&pid=ImgRaw&r=0'
+						href='/device/robot/streaming/fullscreen'
+						bodyChips={[<ChipOffline />, <ChipCloudStorageExpired />]}
+						footerChips={[<ChipShared />]}
+					/>
+				</div>
 			</AccordionItem>
-			<AccordionItem key='2' aria-label='Accordion 2' title='Accordion 2'>
-				{defaultContent}
-			</AccordionItem>
-			<AccordionItem key='3' aria-label='Accordion 3' title='Accordion 3'>
-				{defaultContent}
+			<AccordionItem key='2' aria-label='办公室' title='办公室'>
+				<div className='flex flex-col gap-2'>
+					<IpcCard
+						label='办公室1'
+						src='https://ts1.cn.mm.bing.net/th/id/R-C.4894a961ab87e3459babae4ef8a2f4fa?rik=1P7ZI7Evnz4Pqg&riu=http%3a%2f%2fpic.zsucai.com%2ffiles%2f2013%2f0830%2fxiaguang2.jpg&ehk=Ok%2fjrv35R0L218oT%2flliRL8DJc52pARVnWU%2bXOpUwq4%3d&risl=&pid=ImgRaw&r=0'
+						href='/device/streaming'
+						bodyChips={[<ChipOnline />, <ChipCloudStorageExpiring />]}
+						footerChips={[<ChipFromFriends />]}
+					/>
+					<IpcCard
+						label='办公室2'
+						src='https://ts1.cn.mm.bing.net/th/id/R-C.f54c83f04442cec528a250d251251ce6?rik=JE7BoZk5xK4iEg&riu=http%3a%2f%2fpic4.bbzhi.com%2ffengjingbizhi%2fgaoqingxifengjingzhuomianbizhixiazai%2fgaoqingxifengjingzhuomianbizhixiazai_366146_18.jpg&ehk=YvUnl11nBp%2fGJssQUbYqkXLo7fchkD%2fEQ8BGpW2Urjs%3d&risl=&pid=ImgRaw&r=0'
+						href='/device/streaming'
+						bodyChips={[<ChipOnline />, <ChipCloudStorageExpiring />]}
+						footerChips={[<ChipFromFriends />]}
+					/>
+					<IpcCard
+						label='办公室3'
+						src='https://ts1.cn.mm.bing.net/th/id/R-C.3edbd350d03c25ed988236c50d0733e6?rik=txi3%2f%2b%2fVYUJofg&riu=http%3a%2f%2fpic.zsucai.com%2ffiles%2f2013%2f0802%2fwmdqfj4.jpg&ehk=TY9%2f90VQn6m3NYCoiPX2UyRYQIT7dkGJtTJli1W7pfo%3d&risl=&pid=ImgRaw&r=0'
+						href='/device/streaming'
+						bodyChips={[<ChipOnline />, <ChipCloudStorageExpiring />]}
+						footerChips={[<ChipFromFriends />]}
+					/>
+					<IpcCard
+						label='办公室4'
+						src='https://ts1.cn.mm.bing.net/th/id/R-C.0c8bf36e099654aadaf5f127ef1a3f1b?rik=uHrB%2blGez03%2fAA&riu=http%3a%2f%2fi3.img.969g.com%2fdown%2fimgx2014%2f10%2f24%2f289_102445_a1cff.jpg&ehk=EeF%2fioqRM6NfQqkCgXw%2bwLvO1%2fxZgeZ2pof7ALNLGsg%3d&risl=&pid=ImgRaw&r=0'
+						href='/device/streaming'
+						bodyChips={[<ChipOnline />, <ChipCloudStorageExpiring />]}
+						footerChips={[<ChipFromFriends />]}
+					/>
+				</div>
 			</AccordionItem>
 		</Accordion>
 	);

@@ -1,7 +1,7 @@
 'use client';
 
 import { NavbarBack, LinkGroup } from '@/jujiu-ui-components/nextui/core/core-ui';
-import { AppLogo, AppMark } from '@/jujiu-ui-components/nextui/ipc/about/brand';
+import { AppAbout, AppMark } from '@/jujiu-ui-components/nextui/ipc/about/brand';
 import { useJuJiuT } from '@/state/translate';
 
 export default function Page() {
@@ -18,7 +18,7 @@ export default function Page() {
 		<div className='h-screen flex flex-col'>
 			<NavbarBack label={t('关于')} />
 			<div className='flex flex-col flex-1 px-4 gap-4'>
-				<AppLogo />
+				<AppAbout />
 				<LinkGroup data={links} />
 			</div>
 			<AppMark />

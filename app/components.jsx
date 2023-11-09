@@ -333,7 +333,7 @@ export function AppFooter({ uiDesign }) {
 		{
 			icon: <Radial />,
 			label: t('我的'),
-			href: '/my/',
+			href: '/my2/',
 		},
 	];
 

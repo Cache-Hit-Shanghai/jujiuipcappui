@@ -57,7 +57,7 @@ export function DeviceList() {
 	const t = useJuJiuT();
 
 	return (
-		<Accordion>
+		<Accordion variant='shadow' className='h-fit'>
 			<AccordionItem key='1' aria-label={t('默认分组')} title={t('默认分组')}>
 				<div className='flex flex-col gap-2'>
 					<IpcCard

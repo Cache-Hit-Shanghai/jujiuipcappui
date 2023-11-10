@@ -11,7 +11,7 @@ import { DeviceList, DeviceMenu } from '../components';
 export default function Page() {
 	return (
 		<div className='h-screen flex flex-col'>
-			<div className='flex items-center justify-between'>
+			<div className='p-2 flex items-center justify-between'>
 				<AppLogo />
 				<div className='flex items-center'>
 					<ThemeButton />
@@ -26,7 +26,7 @@ export default function Page() {
 					<DeviceMenu />
 				</div>
 			</div>
-			<div className='flex flex-1 overflow-auto'>
+			<div className='px-4 flex flex-1 overflow-auto'>
 				<DeviceList />
 			</div>
 			<Divider />

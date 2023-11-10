@@ -29,7 +29,6 @@ export default function Page() {
 			<div className='px-4 flex flex-1 overflow-auto'>
 				<DeviceList />
 			</div>
-			<Divider />
 			<NavTabs />
 		</div>
 	);

@@ -51,7 +51,7 @@ function DeviceMenu() {
 
 export function IpcCard({ label, src, href, bodyChips, footerChips }) {
 	return (
-		<Card className='bg-background'>
+		<Card shadow='none' className='bg-default-200'>
 			<CardBody className='relative p-0' as={Link} href={href}>
 				<Image src={src} className='z-0' />
 				<div className='absolute left-1 top-1 flex flex-row gap-4'>{...bodyChips}</div>
@@ -70,7 +70,7 @@ export function IpcCard({ label, src, href, bodyChips, footerChips }) {
 
 export function BotCard({ label, src, href, bodyChips, footerChips }) {
 	return (
-		<Card className='bg-background'>
+		<Card shadow='none' className='bg-default-200'>
 			<CardBody className='relative p-0' as={Link} href={href}>
 				<Image src={src} className='z-0' />
 				<div className='absolute left-1 top-1 flex flex-row gap-4'>{...bodyChips}</div>

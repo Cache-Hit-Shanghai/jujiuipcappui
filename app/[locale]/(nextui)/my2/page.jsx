@@ -74,7 +74,6 @@ export default function Page() {
 				</Card>
 				<LinkGroup data={links} />
 			</div>
-			<Divider />
 			<NavTabs />
 		</div>
 	);

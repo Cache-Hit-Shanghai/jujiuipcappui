@@ -6,22 +6,13 @@ import {
 	DropdownTrigger,
 	DropdownMenu,
 	DropdownItem,
-	Accordion,
-	AccordionItem,
 	Card,
-	CardHeader,
 	CardBody,
 	CardFooter,
 	Image,
 } from '@nextui-org/react';
 import Link, { useJuJiuT } from '@/state/translate';
-import {
-	EllipsisHorizontalIcon,
-	Cog6ToothIcon,
-	Battery50Icon,
-	QrCodeIcon,
-	VideoCameraIcon,
-} from '@heroicons/react/24/solid';
+import { EllipsisHorizontalIcon, Cog6ToothIcon, VideoCameraIcon } from '@heroicons/react/24/solid';
 import { Webcam } from '@styled-icons/boxicons-regular/Webcam';
 import { Pets } from '@styled-icons/material-outlined/Pets';
 import { BatteryCharge } from '@styled-icons/typicons/BatteryCharge';

@@ -63,7 +63,7 @@ export function DeviceList() {
 					<IpcCard
 						label='办公室0'
 						src='https://ts1.cn.mm.bing.net/th/id/R-C.f54c83f04442cec528a250d251251ce6?rik=JE7BoZk5xK4iEg&riu=http%3a%2f%2fpic4.bbzhi.com%2ffengjingbizhi%2fgaoqingxifengjingzhuomianbizhixiazai%2fgaoqingxifengjingzhuomianbizhixiazai_366146_18.jpg&ehk=YvUnl11nBp%2fGJssQUbYqkXLo7fchkD%2fEQ8BGpW2Urjs%3d&risl=&pid=ImgRaw&r=0'
-						href='/device/streaming'
+						href='./streaming'
 						bodyChips={[<ChipOnline key={0} />, <ChipCloudStorageExpiring key={1} />]}
 						footerChips={[<ChipFromFriends />]}
 					/>

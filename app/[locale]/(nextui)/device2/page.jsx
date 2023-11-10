@@ -5,7 +5,7 @@ import { NavTabs, ThemeButton } from '@/jujiu-ui-components/nextui/core/core-ui'
 import { AppLogo } from '@/jujiu-ui-components/nextui/ipc/about/brand';
 import Link from '@/state/translate';
 import { EnvelopeIcon } from '@heroicons/react/24/solid';
-import { QrCodeScanner } from '@styled-icons/material-rounded/QrCodeScanner';
+import { ScanDash } from '@styled-icons/fluentui-system-filled/ScanDash';
 import { DeviceList, DeviceMenu } from '../components';
 
 export default function Page() {
@@ -21,7 +21,7 @@ export default function Page() {
 						</Badge>
 					</Button>
 					<Button isIconOnly variant='light' as={Link} href='/device/scan'>
-						<QrCodeScanner size={24} />
+						<ScanDash size={24} />
 					</Button>
 					<DeviceMenu />
 				</div>

@@ -12,7 +12,7 @@ import {
 	Image,
 } from '@nextui-org/react';
 import Link, { useJuJiuT } from '@/state/translate';
-import { EllipsisHorizontalIcon, Cog6ToothIcon, VideoCameraIcon } from '@heroicons/react/24/solid';
+import { EllipsisHorizontalIcon, Cog6ToothIcon, VideoCameraIcon } from '@heroicons/react/24/outline';
 import { Webcam } from '@styled-icons/boxicons-regular/Webcam';
 import { Pets } from '@styled-icons/material-outlined/Pets';
 import { BatteryCharge } from '@styled-icons/typicons/BatteryCharge';

@@ -9,7 +9,7 @@ import {
 	ArrowUpCircleIcon,
 	ArrowTopRightOnSquareIcon,
 	QuestionMarkCircleIcon,
-} from '@heroicons/react/24/solid';
+} from '@heroicons/react/24/outline';
 
 export default function Page() {
 	const t = useJuJiuT();

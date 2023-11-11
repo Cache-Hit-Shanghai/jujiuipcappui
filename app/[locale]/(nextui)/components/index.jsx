@@ -18,7 +18,7 @@ import {
 	ChipCloudStorageExpiring,
 } from '@/jujiu-ui-components/nextui/core/core-chips';
 import Link, { useJuJiuT } from '@/state/translate';
-import { PlusCircleIcon, SquaresPlusIcon, RectangleGroupIcon } from '@heroicons/react/24/solid';
+import { PlusCircleIcon, SquaresPlusIcon, RectangleGroupIcon } from '@heroicons/react/24/outline';
 import { IpcCard, BotCard } from './ipcCard';
 
 export function DeviceMenu() {

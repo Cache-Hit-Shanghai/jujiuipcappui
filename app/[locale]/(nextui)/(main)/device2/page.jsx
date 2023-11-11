@@ -1,16 +1,16 @@
 'use client';
 
-import { Button, Badge, Divider } from '@nextui-org/react';
-import { NavTabs, ThemeButton } from '@/jujiu-ui-components/nextui/core/core-ui';
+import { Button, Badge } from '@nextui-org/react';
+import { ThemeButton } from '@/jujiu-ui-components/nextui/core/core-ui';
 import { AppLogo } from '@/jujiu-ui-components/nextui/ipc/about/brand';
 import Link from '@/state/translate';
 import { EnvelopeIcon } from '@heroicons/react/24/outline';
 import { ScanDash } from '@styled-icons/fluentui-system-filled/ScanDash';
-import { DeviceList, DeviceMenu } from '../components';
+import { DeviceList, DeviceMenu } from '../../components';
 
 export default function Page() {
 	return (
-		<div className='h-screen flex flex-col'>
+		<>
 			<div className='p-2 flex items-center justify-between'>
 				<AppLogo />
 				<div className='flex items-center'>
@@ -29,7 +29,6 @@ export default function Page() {
 			<div className='px-4 flex flex-1 overflow-auto'>
 				<DeviceList />
 			</div>
-			<NavTabs />
-		</div>
+		</>
 	);
 }

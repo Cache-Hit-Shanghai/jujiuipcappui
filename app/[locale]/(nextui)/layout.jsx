@@ -9,7 +9,7 @@ export function generateStaticParams() {
 	return [{ locale: 'en' }, { locale: 'cn' }];
 }
 
-export default async function RootLayout({ children, params: { locale } }) {
+export default async function LocalizedRootLayout({ children, params: { locale } }) {
 	let messages;
 	try {
 		messages = (await import(`@/jujiu-ui-components/messages/${locale}.json`)).default;

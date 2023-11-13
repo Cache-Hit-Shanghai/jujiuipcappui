@@ -34,7 +34,7 @@ export default function Page() {
 					</Button>
 				</div>
 			</div>
-			<div className='px-4 flex flex-col flex-1 overflow-auto'>
+			<div className='px-4 flex flex-col flex-1 gap-4 overflow-auto'>
 				<RobotCard />
 				<Carousel dynamicHeight showArrows={false} showStatus={false} showThumbs={false}>
 					<Image src='https://pixelbot.oss-accelerate.aliyuncs.com/Weixin%20Image_20231113134342.png' />

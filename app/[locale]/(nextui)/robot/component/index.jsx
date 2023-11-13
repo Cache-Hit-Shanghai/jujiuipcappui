@@ -24,6 +24,7 @@ export function RobotCard() {
 						// 设置地图容器id
 						viewMode: '2D', // 是否为3D地图模式
 						zoom: 11, // 初始化地图级别
+						dragEnable: false,
 					});
 				})
 				.catch((e) => {

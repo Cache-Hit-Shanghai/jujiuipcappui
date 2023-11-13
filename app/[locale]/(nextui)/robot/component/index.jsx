@@ -37,20 +37,22 @@ export function RobotCard() {
 	}, []);
 
 	return (
-		<Card className='w-full'>
-			<CardBody>
-				<div id='container' className='w-full aspect-video' />
-			</CardBody>
-			<CardFooter>
-				<div className=' w-full grid grid-cols-3 gap-y-4'>
-					<LinkButton icon={<PhotoIcon className='h-6 w-6' />} label={t('相册')} href='/my/gallery' />
-					<LinkButton icon={<MagnifyingGlassIcon className='h-6 w-6' />} label={t('寻宠')} href='' />
-					<LinkButton icon={<Magic size={24} />} label={t('逗宠')} href='' />
-					<LinkButton icon={<Walk size={24} />} label={t('跟随')} href='' />
-					<LinkButton icon={<ShareIcon className='h-6 w-6' />} label={t('分享')} href='/my/share' />
-					<LinkButton icon={<Battery2Charge size={24} />} label={t('回充')} href='' />
-				</div>
-			</CardFooter>
-		</Card>
+		<div>
+			<Card>
+				<CardBody>
+					<div id='container' className='w-full aspect-video' />
+				</CardBody>
+				<CardFooter>
+					<div className=' w-full grid grid-cols-3 gap-y-4'>
+						<LinkButton icon={<PhotoIcon className='h-6 w-6' />} label={t('相册')} href='/my/gallery' />
+						<LinkButton icon={<MagnifyingGlassIcon className='h-6 w-6' />} label={t('寻宠')} href='' />
+						<LinkButton icon={<Magic size={24} />} label={t('逗宠')} href='' />
+						<LinkButton icon={<Walk size={24} />} label={t('跟随')} href='' />
+						<LinkButton icon={<ShareIcon className='h-6 w-6' />} label={t('分享')} href='/my/share' />
+						<LinkButton icon={<Battery2Charge size={24} />} label={t('回充')} href='' />
+					</div>
+				</CardFooter>
+			</Card>
+		</div>
 	);
 }

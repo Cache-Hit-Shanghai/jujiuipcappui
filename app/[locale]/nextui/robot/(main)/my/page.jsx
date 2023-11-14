@@ -3,29 +3,45 @@
 import { Button, User, Badge, Card, CardBody } from '@nextui-org/react';
 import { ThemeButton } from '@/jujiu-ui-components/nextui/core/core-ui';
 import Link, { useJuJiuT } from '@/state/translate';
-import { EnvelopeIcon } from '@heroicons/react/24/outline';
+import { EnvelopeIcon, Cog6ToothIcon } from '@heroicons/react/24/outline';
+import {
+	CalendarCheck,
+	VipCrown,
+	Medal,
+	Store,
+	Coupon,
+	FileText,
+	Profile,
+	ShoppingCart2,
+	CustomerService,
+	Mail,
+	Question,
+	ArrowUpCircle,
+	Stethoscope,
+	At,
+} from '@styled-icons/remix-line';
 
 export default function Page() {
 	const t = useJuJiuT();
 
 	const linkData0 = [
-		{ label: '签到', url: '' },
-		{ label: '会员', url: '' },
-		{ label: '勋章', url: '' },
-		{ label: '宠物信息', url: '' },
-		{ label: '皮豆商城', url: '' },
-		{ label: '皮豆订单', url: '' },
-		{ label: '优惠券', url: '' },
-		{ label: '规则', url: '' },
+		{ label: '签到', icon: <CalendarCheck size={24} />, url: '' },
+		{ label: '会员', icon: <VipCrown size={24} />, url: '' },
+		{ label: '勋章', icon: <Medal size={24} />, url: '' },
+		{ label: '宠物信息', icon: <Profile size={24} />, url: '' },
+		{ label: '商城', icon: <Store size={24} />, url: '' },
+		{ label: '订单', icon: <ShoppingCart2 size={24} />, url: '' },
+		{ label: '优惠券', icon: <Coupon size={24} />, url: '' },
+		{ label: '会员权益', icon: <FileText size={24} />, url: '' },
 	];
 
 	const linkData1 = [
-		{ label: '宠物医疗', url: '' },
-		{ label: '联系客服', url: '' },
-		{ label: '投诉与建议', url: '' },
-		{ label: '固件升级', url: '' },
-		{ label: '帮助中心', url: '' },
-		{ label: '关于小皮部落', url: '' },
+		{ label: '宠物医生', icon: <Stethoscope size={24} />, url: '' },
+		{ label: '客服', icon: <CustomerService size={24} />, url: '' },
+		{ label: '投诉与建议', icon: <Mail size={24} />, url: '' },
+		{ label: '固件升级', icon: <ArrowUpCircle size={24} />, url: '' },
+		{ label: '帮助中心', icon: <Question size={24} />, url: '' },
+		{ label: '关于小皮部落', icon: <At size={24} />, url: '' },
 	];
 
 	return (
@@ -47,6 +63,9 @@ export default function Page() {
 							<EnvelopeIcon className='h-6 w-6' />
 						</Badge>
 					</Button>
+					<Button isIconOnly variant='light' as={Link} href='./generalsettings'>
+						<Cog6ToothIcon className='h-6 w-6' />
+					</Button>
 				</div>
 			</div>
 			<div className='flex flex-col flex-1 px-4 gap-4'>
@@ -54,7 +73,8 @@ export default function Page() {
 					<CardBody>
 						<div className='grid grid-cols-4 gap-4'>
 							{linkData0.map((datum) => (
-								<div key={datum.label} className='py-2 border text-sm text-center'>
+								<div key={datum.label} className='py-2 text-sm text-center'>
+									<div>{datum.icon}</div>
 									{datum.label}
 								</div>
 							))}
@@ -65,7 +85,8 @@ export default function Page() {
 					<CardBody>
 						<div className='grid grid-cols-3 gap-4'>
 							{linkData1.map((datum) => (
-								<div key={datum.label} className='py-2 border text-sm text-center'>
+								<div key={datum.label} className='py-2 text-sm text-center'>
+									<div>{datum.icon}</div>
 									{datum.label}
 								</div>
 							))}

@@ -15,15 +15,15 @@ export function RobotCard() {
 	useEffect(() => {
 		import('@amap/amap-jsapi-loader').then((AMapLoader) =>
 			AMapLoader.load({
-				key: 'b1573511d4a7de65388ef2e9ee3f804e', // 申请好的Web端开发者Key，首次调用 load 时必填
-				version: '2.0', // 指定要加载的 JSAPI 的版本，缺省时默认为 1.4.15
-				plugins: [], // 需要使用的的插件列表，如比例尺'AMap.Scale'等
+				key: 'b1573511d4a7de65388ef2e9ee3f804e',
+				version: '2.0',
+				plugins: [],
 			})
 				.then((AMap) => {
 					map = new AMap.Map('container', {
-						// 设置地图容器id
-						viewMode: '2D', // 是否为3D地图模式
-						zoom: 11, // 初始化地图级别
+						viewMode: '2D',
+						zoom: 11,
+						dragEnable: false,
 					});
 				})
 				.catch((e) => {
@@ -39,7 +39,7 @@ export function RobotCard() {
 	return (
 		<div>
 			<Card>
-				<CardBody>
+				<CardBody className='p-0'>
 					<div id='container' className='w-full aspect-video' />
 				</CardBody>
 				<CardFooter>
@@ -48,7 +48,7 @@ export function RobotCard() {
 						<LinkButton icon={<MagnifyingGlassIcon className='h-6 w-6' />} label={t('寻宠')} href='' />
 						<LinkButton icon={<Magic size={24} />} label={t('逗宠')} href='' />
 						<LinkButton icon={<Walk size={24} />} label={t('跟随')} href='' />
-						<LinkButton icon={<ShareIcon className='h-6 w-6' />} label={t('分享')} href='/my/share' />
+						<LinkButton icon={<ShareIcon className='h-6 w-6' />} label={t('分享')} href='/my/sharing' />
 						<LinkButton icon={<Battery2Charge size={24} />} label={t('回充')} href='' />
 					</div>
 				</CardFooter>

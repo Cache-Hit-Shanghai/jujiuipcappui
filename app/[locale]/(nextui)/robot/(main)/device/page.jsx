@@ -36,7 +36,7 @@ export default function Page() {
 					</Button>
 				</div>
 			</div>
-			<div className='px-4 flex flex-col flex-1 gap-4 overflow-auto'>
+			<div className='px-4 py-1 flex flex-col flex-1 gap-4 overflow-auto'>
 				<RobotCard />
 				<Carousel
 					autoPlay

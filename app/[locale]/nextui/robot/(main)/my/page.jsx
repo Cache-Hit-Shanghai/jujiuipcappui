@@ -21,8 +21,28 @@ import {
 	At,
 } from '@styled-icons/remix-line';
 
+function StatisticCard({ data }) {
+	return (
+		<div className='flex flex-row gap-4'>
+			{data.map((datum) => (
+				<div key={datum.label} className='flex flex-row items-baseline'>
+					<p className='px-1 font-bold'>{datum.number}</p>
+					<p className='text-sm text-default-400'>{datum.label}</p>
+				</div>
+			))}
+		</div>
+	);
+}
+
 export default function Page() {
 	const t = useJuJiuT();
+
+	const statistics = [
+		{ label: '关注', number: 0 },
+		{ label: '粉丝', number: 0 },
+		{ label: '好友', number: 0 },
+		{ label: '皮豆', number: 0 },
+	];
 
 	const linkData0 = [
 		{ label: '签到', icon: <CalendarCheck size={24} />, url: '' },
@@ -69,6 +89,11 @@ export default function Page() {
 				</div>
 			</div>
 			<div className='flex flex-col flex-1 px-4 gap-4'>
+				<Card>
+					<CardBody>
+						<StatisticCard data={statistics} />
+					</CardBody>
+				</Card>
 				<Card>
 					<CardBody>
 						<div className='grid grid-cols-4 gap-4'>

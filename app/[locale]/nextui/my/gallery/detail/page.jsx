@@ -10,7 +10,7 @@ const Page = () => {
 	return (
 		<div className='flex flex-col w-screen h-screen'>
 			<NavbarBack></NavbarBack>
-			<div className='flex flex-col flex-1 gap-y-10 '>
+			<div className='flex flex-col flex-1 px-4 gap-4 '>
 				<div className='flex justify-center items-center relative w-full h-full bg-contain bg-center  bg-no-repeat bg-[url(https://tse2-mm.cn.bing.net/th/id/OIP-C.ke-oC-HNGvr6A7xWstYjsgHaFS?pid=ImgDet&rs=1)] '>
 					{type && <PlayCircleIcon width={'48px'} height={'48px'}></PlayCircleIcon>}
 				</div>

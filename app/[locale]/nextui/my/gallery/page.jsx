@@ -31,12 +31,12 @@ const LinkBoxVideo = () => {
 
 const Page = () => {
 	return (
-		<div className='flex flex-1 flex-col'>
+		<div className='flex flex-1 flex-col '>
 			<NavbarBack label={'相册（剩余容量100GB）'}>
 				<CloudOrSDCard></CloudOrSDCard>
 			</NavbarBack>
 
-			<div className='flex flex-col shrink-0 gap-y-10 overflow-auto'>
+			<div className='flex flex-col shrink-0 px-4 gap-4 overflow-auto'>
 				{[
 					{ date: '2023/7/4', Component: LinkBoxVideo, length: 20 },
 					{ date: '2023/7/5', Component: LinkBoxImage, length: 20 },

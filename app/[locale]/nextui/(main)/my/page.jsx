@@ -42,7 +42,7 @@ export default function Page() {
 				<Card>
 					<CardBody>
 						<div className='flex flex-row justify-evenly'>
-							<LinkButton label={t('相册')} icon={<PhotoIcon className='h-6 w-6' />} href='/my/gallery' />
+							<LinkButton label={t('相册')} icon={<PhotoIcon className='h-6 w-6' />} href='./gallery' />
 							<LinkButton
 								label={t('云存储')}
 								icon={<CloudArrowUpIcon className='h-6 w-6' />}

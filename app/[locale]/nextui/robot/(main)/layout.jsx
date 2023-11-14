@@ -1,4 +1,3 @@
-import { UserCircleIcon, HomeModernIcon, MagnifyingGlassIcon } from '@heroicons/react/24/outline';
 import { NavTabs } from '@/jujiu-ui-components/nextui/core/core-ui';
 
 const navTabsData = [

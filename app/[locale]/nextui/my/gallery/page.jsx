@@ -7,7 +7,7 @@ import { CloudOrSDCard } from '../../components/gallery';
 
 const LinkBoxImage = () => {
 	return (
-		<Link href='/my/gallery/detail' passHref legacyBehavior>
+		<Link href='./detail' passHref legacyBehavior>
 			<div
 				as='a'
 				className=' w-full h-full   bg-[url(https://tse2-mm.cn.bing.net/th/id/OIP-C.ke-oC-HNGvr6A7xWstYjsgHaFS?pid=ImgDet&rs=1)] rounded cursor-pointer'
@@ -18,7 +18,7 @@ const LinkBoxImage = () => {
 
 const LinkBoxVideo = () => {
 	return (
-		<Link href='/my/gallery/detail?type=video' passHref legacyBehavior>
+		<Link href='./detail?type=video' passHref legacyBehavior>
 			<div
 				as='a'
 				className='relative w-full h-full flex flex-col justify-center items-center bg-[url(https://tse1-mm.cn.bing.net/th/id/OIP-C.gKVRei8owN-eGgw20kPjwwHaE7?pid=ImgDet&rs=1)] rounded cursor-pointer'
@@ -36,7 +36,7 @@ const Page = () => {
 				<CloudOrSDCard></CloudOrSDCard>
 			</NavbarBack>
 
-			<div className='flex flex-col shrink-0 gap-y-10'>
+			<div className='flex flex-col shrink-0 gap-y-10 overflow-auto'>
 				{[
 					{ date: '2023/7/4', Component: LinkBoxVideo, length: 20 },
 					{ date: '2023/7/5', Component: LinkBoxImage, length: 20 },

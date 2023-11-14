@@ -15,7 +15,7 @@ const navTabsData = [
 	{
 		label: '我的',
 		icon: <UserCircleIcon className='h-6 w-6' />,
-		href: '/my2/',
+		href: '/robot/my/',
 	},
 ];
 

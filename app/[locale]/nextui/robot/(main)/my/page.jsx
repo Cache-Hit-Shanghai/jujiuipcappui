@@ -38,10 +38,10 @@ export default function Page() {
 	const linkData1 = [
 		{ label: '宠物医生', icon: <Stethoscope size={24} />, url: '' },
 		{ label: '客服', icon: <CustomerService size={24} />, url: '' },
-		{ label: '投诉与建议', icon: <Mail size={24} />, url: '' },
+		{ label: '投诉与反馈', icon: <Mail size={24} />, url: '' },
 		{ label: '固件升级', icon: <ArrowUpCircle size={24} />, url: '' },
-		{ label: '帮助中心', icon: <Question size={24} />, url: '' },
-		{ label: '关于小皮部落', icon: <At size={24} />, url: '' },
+		{ label: '帮助', icon: <Question size={24} />, url: '' },
+		{ label: '关于小皮', icon: <At size={24} />, url: '' },
 	];
 
 	return (

@@ -9,7 +9,7 @@ const Page = () => {
 	return (
 		<div className='flex flex-col h-screen'>
 			<NavbarBack></NavbarBack>
-			<div className='flex flex-col shrink-0 gap-y-3 overflow-auto p-1'>
+			<div className='flex flex-col shrink-0  overflow-auto px-4 gap-4'>
 				<div>
 					<h2 className='text-2xl font-semibold'>云存储</h2>
 					<p className='text-xs'>不会丢失的录像文件存储。</p>

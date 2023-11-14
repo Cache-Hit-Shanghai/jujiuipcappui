@@ -36,7 +36,7 @@ const Page = () => {
 	return (
 		<div className='flex flex-col h-screen'>
 			<NavbarBack label={'套餐选择'}></NavbarBack>
-			<div className='flex flex-col shrink-0 gap-y-3 overflow-auto p-2 gap-5'>
+			<div className='flex flex-col shrink-0  overflow-auto px-4 gap-4'>
 				{list.map(({ day, name, price, discount = 0 }, i) => (
 					<Badge
 						key={i}

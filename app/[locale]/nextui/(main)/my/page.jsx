@@ -46,7 +46,7 @@ export default function Page() {
 							<LinkButton
 								label={t('云存储')}
 								icon={<CloudArrowUpIcon className='h-6 w-6' />}
-								href='/my/cloudstorage'
+								href='./cloudstorage'
 							/>
 						</div>
 					</CardBody>

@@ -1,27 +1,12 @@
 'use client';
 
 import { Button, User, Badge, Card, CardBody } from '@nextui-org/react';
-import { LinkButton, LinkGroup, ThemeButton } from '@/jujiu-ui-components/nextui/core/core-ui';
+import { ThemeButton } from '@/jujiu-ui-components/nextui/core/core-ui';
 import Link, { useJuJiuT } from '@/state/translate';
-import {
-	PhotoIcon,
-	CloudArrowUpIcon,
-	ArrowUpCircleIcon,
-	ArrowTopRightOnSquareIcon,
-	QuestionMarkCircleIcon,
-} from '@heroicons/react/24/outline';
 import { EnvelopeIcon } from '@heroicons/react/24/outline';
 
 export default function Page() {
 	const t = useJuJiuT();
-	const links = [
-		{ label: t('账号设置'), url: '/my/account' },
-		{ label: t('通知设置'), url: '/my/notification' },
-		{ label: t('界面设置'), url: '/my/uisettings' },
-		{ label: t('系统信息'), url: '/my/sysinfo' },
-		{ label: t('录像截图设置'), url: '/my/storagesettings' },
-		{ label: t('关于'), url: './about' },
-	];
 
 	const linkData0 = [
 		{ label: '签到', url: '' },
@@ -30,6 +15,17 @@ export default function Page() {
 		{ label: '宠物信息', url: '' },
 		{ label: '皮豆商城', url: '' },
 		{ label: '皮豆订单', url: '' },
+		{ label: '优惠券', url: '' },
+		{ label: '规则', url: '' },
+	];
+
+	const linkData1 = [
+		{ label: '宠物医疗', url: '' },
+		{ label: '联系客服', url: '' },
+		{ label: '投诉与建议', url: '' },
+		{ label: '固件升级', url: '' },
+		{ label: '帮助中心', url: '' },
+		{ label: '关于小皮部落', url: '' },
 	];
 
 	return (
@@ -56,38 +52,26 @@ export default function Page() {
 			<div className='flex flex-col flex-1 px-4 gap-4'>
 				<Card>
 					<CardBody>
-						<div className='flex flex-row justify-evenly'>
-							<LinkButton label={t('相册')} icon={<PhotoIcon className='h-6 w-6' />} href='/my/gallery' />
-							<LinkButton
-								label={t('云存储')}
-								icon={<CloudArrowUpIcon className='h-6 w-6' />}
-								href='/my/cloudstorage'
-							/>
+						<div className='grid grid-cols-4 gap-4'>
+							{linkData0.map((datum) => (
+								<div key={datum.label} className='py-2 border text-sm text-center'>
+									{datum.label}
+								</div>
+							))}
 						</div>
 					</CardBody>
 				</Card>
 				<Card>
 					<CardBody>
-						<div className='flex flex-row justify-evenly'>
-							<LinkButton
-								label={t('固件升级')}
-								icon={<ArrowUpCircleIcon className='h-6 w-6' />}
-								href='/my/ota'
-							/>
-							<LinkButton
-								label={t('我的分享')}
-								icon={<ArrowTopRightOnSquareIcon className='h-6 w-6' />}
-								href='/my/sharing'
-							/>
-							<LinkButton
-								label={t('帮助与反馈')}
-								icon={<QuestionMarkCircleIcon className='h-6 w-6' />}
-								href='/my/feedback'
-							/>
+						<div className='grid grid-cols-3 gap-4'>
+							{linkData1.map((datum) => (
+								<div key={datum.label} className='py-2 border text-sm text-center'>
+									{datum.label}
+								</div>
+							))}
 						</div>
 					</CardBody>
 				</Card>
-				<LinkGroup data={links} />
 			</div>
 		</>
 	);

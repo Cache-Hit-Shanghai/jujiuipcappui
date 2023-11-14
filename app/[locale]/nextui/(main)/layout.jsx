@@ -5,7 +5,7 @@ const navTabsData = [
 	{
 		label: '设备',
 		icon: <HomeModernIcon className='h-6 w-6' />,
-		href: '/device2/',
+		href: '/nextui/device/',
 	},
 	{
 		label: '发现',
@@ -15,7 +15,7 @@ const navTabsData = [
 	{
 		label: '我的',
 		icon: <UserCircleIcon className='h-6 w-6' />,
-		href: '/my2/',
+		href: '/nextui/my/',
 	},
 ];
 

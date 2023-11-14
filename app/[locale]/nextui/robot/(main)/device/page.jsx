@@ -6,7 +6,7 @@ import { Carousel } from 'react-responsive-carousel';
 import Link from '@/state/translate';
 import { PlusCircleIcon } from '@heroicons/react/24/outline';
 import { ScanDash } from '@styled-icons/fluentui-system-filled/ScanDash';
-import { RobotCard } from '../../component';
+import { RobotCard } from '../../components';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 export default function Page() {

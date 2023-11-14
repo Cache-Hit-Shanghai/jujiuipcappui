@@ -45,23 +45,23 @@ export default function Page() {
 	];
 
 	const linkData0 = [
-		{ label: '签到', icon: <CalendarCheck size={24} />, url: '' },
-		{ label: '会员', icon: <VipCrown size={24} />, url: '' },
-		{ label: '勋章', icon: <Medal size={24} />, url: '' },
-		{ label: '宠物信息', icon: <Profile size={24} />, url: '' },
-		{ label: '商城', icon: <Store size={24} />, url: '' },
-		{ label: '订单', icon: <ShoppingCart2 size={24} />, url: '' },
-		{ label: '优惠券', icon: <Coupon size={24} />, url: '' },
-		{ label: '会员权益', icon: <FileText size={24} />, url: '' },
+		{ label: '签到', icon: <CalendarCheck size={24} />, href: '' },
+		{ label: '会员', icon: <VipCrown size={24} />, href: '' },
+		{ label: '勋章', icon: <Medal size={24} />, href: '' },
+		{ label: '宠物信息', icon: <Profile size={24} />, href: '' },
+		{ label: '商城', icon: <Store size={24} />, href: '' },
+		{ label: '订单', icon: <ShoppingCart2 size={24} />, href: '' },
+		{ label: '优惠券', icon: <Coupon size={24} />, href: '' },
+		{ label: '会员权益', icon: <FileText size={24} />, href: '' },
 	];
 
 	const linkData1 = [
-		{ label: '宠物医生', icon: <Stethoscope size={24} />, url: '' },
-		{ label: '客服', icon: <CustomerService size={24} />, url: '' },
-		{ label: '投诉与反馈', icon: <Mail size={24} />, url: '' },
-		{ label: '固件升级', icon: <ArrowUpCircle size={24} />, url: '' },
-		{ label: '帮助', icon: <Question size={24} />, url: '' },
-		{ label: '关于小皮', icon: <At size={24} />, url: '' },
+		{ label: '宠物医生', icon: <Stethoscope size={24} />, href: '' },
+		{ label: '客服', icon: <CustomerService size={24} />, href: '' },
+		{ label: '投诉与反馈', icon: <Mail size={24} />, href: '' },
+		{ label: '固件升级', icon: <ArrowUpCircle size={24} />, href: '' },
+		{ label: '帮助', icon: <Question size={24} />, href: '' },
+		{ label: '关于小皮', icon: <At size={24} />, href: '' },
 	];
 
 	return (
@@ -83,7 +83,7 @@ export default function Page() {
 							<EnvelopeIcon className='h-6 w-6' />
 						</Badge>
 					</Button>
-					<Button isIconOnly variant='light' as={Link} href='./generalsettings'>
+					<Button isIconOnly variant='light' as={Link} href='./settings'>
 						<Cog6ToothIcon className='h-6 w-6' />
 					</Button>
 				</div>

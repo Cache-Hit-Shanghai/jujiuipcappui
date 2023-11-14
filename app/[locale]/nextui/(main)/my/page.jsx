@@ -14,12 +14,12 @@ import {
 export default function Page() {
 	const t = useJuJiuT();
 	const links = [
-		{ label: t('账号设置'), url: '/my/account' },
-		{ label: t('通知设置'), url: '/my/notification' },
-		{ label: t('界面设置'), url: '/my/uisettings' },
-		{ label: t('系统信息'), url: '/my/sysinfo' },
-		{ label: t('录像截图设置'), url: '/my/storagesettings' },
-		{ label: t('关于'), url: './about', last: true },
+		{ label: t('账号设置'), href: '/my/account' },
+		{ label: t('通知设置'), href: '/my/notification' },
+		{ label: t('界面设置'), href: '/my/uisettings' },
+		{ label: t('系统信息'), href: '/my/sysinfo' },
+		{ label: t('录像截图设置'), href: '/my/storagesettings' },
+		{ label: t('关于'), href: './about', last: true },
 	];
 
 	return (

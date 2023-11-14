@@ -1,5 +1,5 @@
 import { NavbarBack, LinkButton } from '@/jujiu-ui-components/nextui/core/core-ui';
-import { Card, CardHeader, CardBody, CardFooter } from '@nextui-org/react';
+import { Card, CardHeader, CardBody, CardFooter, Avatar } from '@nextui-org/react';
 import { CameraIcon } from '@heroicons/react/24/outline';
 
 const tagClass = 'h-[26px] rounded-[26px] leading-[26px] bg-orange-800 text-xs px-2';
@@ -23,9 +23,7 @@ const Page = () => {
 				<Card>
 					<CardBody className='flex flex-row justify-between'>
 						<div className='flex flex-col justify-center items-center'>
-							<div className='flex justify-center items-center w-[48px] h-[48px] rounded-full bg-slate-800'>
-								<CameraIcon width={'24px'} height={'24px'}></CameraIcon>
-							</div>
+							<Avatar icon={<CameraIcon width={'24px'} height={'24px'}></CameraIcon>}></Avatar>
 							<span>办3</span>
 						</div>
 						<div className='flex flex-col gap-3'>

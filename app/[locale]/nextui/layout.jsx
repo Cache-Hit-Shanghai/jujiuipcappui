@@ -20,7 +20,7 @@ export default async function LocalizedRootLayout({ children, params: { locale }
 	return (
 		<html suppressHydrationWarning>
 			<body>
-				<NextIntlClientProvider locale={locale} messages={messages}>
+				<NextIntlClientProvider locale={locale} messages={messages} now={new Date()} timeZone='Asia/Shanghai'>
 					<CustomLocalizationProvider>
 						<MuiThemeProvider>
 							<Providers>{children}</Providers>

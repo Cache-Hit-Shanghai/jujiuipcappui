@@ -1,8 +1,9 @@
-'use client';
-
 import { useTranslations } from 'next-intl';
-import Link from 'next-intl/link';
-import { useRouter, usePathname } from 'next-intl/client';
+import { createSharedPathnamesNavigation } from 'next-intl/navigation';
+
+export const locales = ['en', 'cn'];
+
+const { Link, redirect, usePathname, useRouter } = createSharedPathnamesNavigation({ locales });
 
 export default Link;
 export { useRouter, usePathname };

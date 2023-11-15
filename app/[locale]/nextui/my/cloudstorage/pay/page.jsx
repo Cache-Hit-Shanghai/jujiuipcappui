@@ -36,15 +36,16 @@ const Page = () => {
 	return (
 		<div className='flex flex-col h-screen'>
 			<NavbarBack label={'套餐选择'}></NavbarBack>
-			<div className='flex flex-col shrink-0  overflow-auto px-4 gap-4'>
+			<div className='flex flex-col shrink-0 grow  overflow-auto px-4 gap-4'>
+				<div className='h-px'></div>
 				{list.map(({ day, name, price, discount = 0 }, i) => (
 					<Badge
 						key={i}
-						content={<span className='p-x-1'>惠</span>}
+						content={<span className='px-0'>惠</span>}
 						color='danger'
 						isInvisible={discount <= 0}
 					>
-						<Card className='w-full'>
+						<Card className='w-full '>
 							<CardBody className='flex flex-row justify-between items-center '>
 								<div className='flex gap-1'>
 									<Checkbox></Checkbox>
@@ -52,15 +53,11 @@ const Page = () => {
 								</div>
 								<p>{name}套餐</p>
 								<div className='flex flex-col items-end'>
-									{discount ? (
-										<>
-											<p>￥{price - discount}</p>
-											<p>
-												<strike className='text-stone-400'>￥{price}</strike>
-											</p>
-										</>
-									) : (
-										<p>￥{price}</p>
+									<p>￥{price - discount}</p>
+									{discount && (
+										<p>
+											<strike className='text-stone-400'>￥{price}</strike>
+										</p>
 									)}
 								</div>
 							</CardBody>
@@ -68,7 +65,7 @@ const Page = () => {
 					</Badge>
 				))}
 			</div>
-			<div className='flex flex-col shrink-0 gap-1 p-2 fixed bottom-0 left-0 right-0 bg-neutral-800'>
+			<div className='flex flex-col shrink-0 gap-1 p-2 sticky z-20 bottom-0 left-0 right-0 bg-neutral-800'>
 				<div className='flex justify-between items-end'>
 					<p className='text-xs'>已优惠:￥101</p>
 					<p className='text-xs'>

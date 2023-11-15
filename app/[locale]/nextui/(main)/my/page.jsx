@@ -57,7 +57,7 @@ export default function Page() {
 							<LinkButton
 								label={t('固件升级')}
 								icon={<ArrowUpCircleIcon className='h-6 w-6' />}
-								href='/my/ota'
+								href='./ota'
 							/>
 							<LinkButton
 								label={t('我的分享')}

@@ -28,7 +28,7 @@ const Page = () => {
 						</div>
 						<div>
 							<LinkButton
-								href='/my/ota/otainfo'
+								href='./otainfo'
 								label='现在升级'
 								className={'rounded-full bg-success h-[36px]'}
 							></LinkButton>

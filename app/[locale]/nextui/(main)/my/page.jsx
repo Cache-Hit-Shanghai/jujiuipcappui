@@ -62,7 +62,7 @@ export default function Page() {
 							<LinkButton
 								label={t('我的分享')}
 								icon={<ArrowTopRightOnSquareIcon className='h-6 w-6' />}
-								href='/my/sharing'
+								href='./sharing'
 							/>
 							<LinkButton
 								label={t('帮助与反馈')}

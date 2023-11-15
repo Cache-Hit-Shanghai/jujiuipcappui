@@ -67,7 +67,7 @@ export default function Page() {
 							<LinkButton
 								label={t('帮助与反馈')}
 								icon={<QuestionMarkCircleIcon className='h-6 w-6' />}
-								href='/my/feedback'
+								href='./feedback'
 							/>
 						</div>
 					</CardBody>

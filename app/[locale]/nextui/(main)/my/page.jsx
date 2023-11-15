@@ -14,7 +14,7 @@ import {
 export default function Page() {
 	const t = useJuJiuT();
 	const links = [
-		{ label: t('账号设置'), href: '/my/account' },
+		{ label: t('账号设置'), href: './account' },
 		{ label: t('通知设置'), href: '/my/notification' },
 		{ label: t('界面设置'), href: '/my/uisettings' },
 		{ label: t('系统信息'), href: '/my/sysinfo' },

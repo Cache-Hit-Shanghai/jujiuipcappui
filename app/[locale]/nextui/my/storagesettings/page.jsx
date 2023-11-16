@@ -6,8 +6,8 @@ const Page = () => {
 	return (
 		<div className='flex flex-col h-screen'>
 			<NavbarBack label={'录像截图设置'}></NavbarBack>
-			<div className='flex flex-col shrink-0  overflow-auto px-4 gap-4'>
-				<div className='flex  justify-between  shadow-md shadow-white p-2'>
+			<div className='flex flex-col shrink-0 grow  overflow-auto p-4 gap-4'>
+				<div className='flex bg-content1 rounded-large shadow-medium   justify-between  p-2'>
 					<p>录像截图存放到</p>
 					<CloudOrSDCard></CloudOrSDCard>
 				</div>

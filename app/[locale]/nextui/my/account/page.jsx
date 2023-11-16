@@ -1,5 +1,11 @@
 'use client';
-import { NavbarBack, Information, LinkButton } from '@/jujiu-ui-components/nextui/core/core-ui';
+import {
+	NavbarBack,
+	Information,
+	LinkButton,
+	LabelButton,
+	LabelLink,
+} from '@/jujiu-ui-components/nextui/core/core-ui';
 
 import {
 	Button,
@@ -14,30 +20,6 @@ import {
 } from '@nextui-org/react';
 import { ChevronRightIcon, UserIcon } from '@heroicons/react/24/outline';
 import { useState } from 'react';
-
-const LabelButton = ({ label, children, onClick, ...props }) => {
-	return (
-		<div className='flex grow justify-between border-b py-1' onClick={onClick}>
-			<span>{label}</span>
-			<Button
-				{...props}
-				onClick={onClick}
-				variant='light'
-				endContent={<ChevronRightIcon width={'24px'} height={'24px'}></ChevronRightIcon>}
-			>
-				{children || <p className='w-10'></p>}
-			</Button>
-		</div>
-	);
-};
-
-const LabelLink = ({ href, ...props }) => {
-	return (
-		<Link href={href} color='foreground'>
-			<LabelButton {...props}></LabelButton>
-		</Link>
-	);
-};
 
 function JuJiuModal({ onOpenChange, onClose, isOpen, title, position, children, ...props }) {
 	return (

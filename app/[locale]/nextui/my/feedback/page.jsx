@@ -93,7 +93,7 @@ const Page = () => {
 					</DropdownMenu>
 				</Dropdown>
 			</NavbarBack>
-			<div className='flex z-20 px-4 bg-white dark:bg-black sticky top-[70px] items-center shrink-0 gap-1'>
+			<div className='flex z-20 px-4 bg-background sticky top-[70px] items-center shrink-0 gap-1'>
 				<Input
 					labelPlacement='outside'
 					placeholder='搜索问题……'
@@ -123,7 +123,7 @@ const Page = () => {
 					</div>
 				))}
 			</div>
-			<div className='flex items-center bg-white dark:bg-black justify-center sticky shrink-0  bottom-0 h-[70px]'>
+			<div className='flex items-center bg-background justify-center sticky shrink-0  bottom-0 h-[70px]'>
 				<Pagination total={10} initialPage={1}></Pagination>
 			</div>
 		</div>

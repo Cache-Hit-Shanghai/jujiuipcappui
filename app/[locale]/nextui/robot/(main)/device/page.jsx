@@ -1,13 +1,13 @@
 'use client';
 
 import { Button, Image, Select, SelectItem } from '@nextui-org/react';
-import { ThemeButton } from '@/jujiu-ui-components/nextui/core/core-ui';
 import { Carousel } from 'react-responsive-carousel';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import { ThemeButton } from '@/jujiu-ui-components/nextui/core/core-ui';
 import Link from '@/state/translate';
-import { PlusCircleIcon } from '@heroicons/react/24/outline';
+import { PlusCircle } from '@styled-icons/heroicons-outline';
 import { ScanDash } from '@styled-icons/fluentui-system-filled/ScanDash';
 import { RobotCard } from '../../components';
-import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 export default function Page() {
 	return (
@@ -32,7 +32,7 @@ export default function Page() {
 						<ScanDash size={24} />
 					</Button>
 					<Button isIconOnly variant='light' as={Link} href='/device/binding'>
-						<PlusCircleIcon className='h-6 w-6' />
+						<PlusCircle size={24} />
 					</Button>
 				</div>
 			</div>

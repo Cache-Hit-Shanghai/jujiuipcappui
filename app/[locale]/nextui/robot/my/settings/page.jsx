@@ -14,13 +14,13 @@ export default function Page() {
 	];
 
 	return (
-		<>
+		<div className='h-screen flex flex-col'>
 			<div className='flex items-center justify-between p-2'>
 				<NavbarBack label={t('设置')} />
 			</div>
 			<div className='flex flex-col flex-1 px-4 gap-4'>
 				<LinkGroup data={linkData} />
 			</div>
-		</>
+		</div>
 	);
 }

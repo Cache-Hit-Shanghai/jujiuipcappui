@@ -4,9 +4,12 @@ import { Card, CardBody, CardFooter, Image } from '@nextui-org/react';
 import { LinkButton } from '@/jujiu-ui-components/nextui/core/core-ui';
 import { ChipOnline } from '@/jujiu-ui-components/nextui/core/core-chips';
 import { useJuJiuT } from '@/state/translate';
-import { Battery2Charge, Walk } from '@styled-icons/remix-fill';
-import { Magic } from '@styled-icons/bootstrap/Magic';
-import { PhotoIcon, ShareIcon, MagnifyingGlassIcon } from '@heroicons/react/24/outline';
+import { Battery2Charge } from '@styled-icons/remix-line/Battery2Charge';
+import { Walk } from '@styled-icons/remix-line/Walk';
+import { Magic } from '@styled-icons/remix-line/Magic';
+import { Gallery } from '@styled-icons/remix-line/Gallery';
+import { Share } from '@styled-icons/remix-line/Share';
+import { Search } from '@styled-icons/remix-line/Search';
 
 export function RobotCard() {
 	const t = useJuJiuT();
@@ -25,11 +28,11 @@ export function RobotCard() {
 				</CardBody>
 				<CardFooter>
 					<div className=' w-full grid grid-cols-3 gap-y-4'>
-						<LinkButton icon={<PhotoIcon className='h-6 w-6' />} label={t('相册')} href='/my/gallery' />
-						<LinkButton icon={<MagnifyingGlassIcon className='h-6 w-6' />} label={t('寻宠')} href='' />
+						<LinkButton icon={<Gallery size={24} />} label={t('相册')} href='/my/gallery' />
+						<LinkButton icon={<Search size={24} />} label={t('寻宠')} href='' />
 						<LinkButton icon={<Magic size={24} />} label={t('逗宠')} href='' />
 						<LinkButton icon={<Walk size={24} />} label={t('跟随')} href='' />
-						<LinkButton icon={<ShareIcon className='h-6 w-6' />} label={t('分享')} href='/my/sharing' />
+						<LinkButton icon={<Share size={24} />} label={t('分享')} href='/my/sharing' />
 						<LinkButton icon={<Battery2Charge size={24} />} label={t('回充')} href='' />
 					</div>
 				</CardFooter>

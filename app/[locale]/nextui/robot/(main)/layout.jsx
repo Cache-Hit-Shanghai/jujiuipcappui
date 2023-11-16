@@ -6,8 +6,8 @@ const navTabsData = [
 		href: '/nextui/robot/device/',
 	},
 	{
-		label: '发现',
-		href: '/discovery/',
+		label: '部落',
+		href: '/nextui/robot/tribe/',
 	},
 	{
 		label: '我的',

@@ -65,7 +65,7 @@ const Page = () => {
 					</Badge>
 				))}
 			</div>
-			<div className='flex flex-col shrink-0 gap-1 p-2 sticky z-20 bottom-0 left-0 right-0 bg-neutral-800'>
+			<div className='flex flex-col shrink-0 gap-1 p-2 sticky z-20 bottom-0 left-0 right-0 bg-white dark:bg-neutral-800'>
 				<div className='flex justify-between items-end'>
 					<p className='text-xs'>已优惠:￥101</p>
 					<p className='text-xs'>

@@ -10,8 +10,8 @@ const CloudOrSDCard = () => {
 	return (
 		<div className='flex shrink-0 items-center gap-2 h-full w-fit'>
 			{[
-				{ value: 'Cloud', Icon: CloudIcon, props: { width: '24px', height: '36px' } },
-				{ value: 'SDCard', Icon: DevicePhoneMobileIcon, props: { width: '24px', height: '34px' } },
+				{ value: 'Cloud', Icon: CloudIcon, props: { width: '24px', height: '24px' } },
+				{ value: 'SDCard', Icon: DevicePhoneMobileIcon, props: { width: '24px', height: '24px' } },
 			].map(({ Icon, value, props = {} }) => (
 				<Icon
 					{...props}

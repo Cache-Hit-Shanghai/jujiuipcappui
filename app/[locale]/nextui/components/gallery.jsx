@@ -8,16 +8,15 @@ const CloudOrSDCard = () => {
 	const [select, setSelect] = useState('');
 
 	return (
-		<div className='flex shrink-0 h-full w-fit'>
+		<div className='flex shrink-0 items-center gap-2 h-full w-fit'>
 			{[
-				{ value: 'Cloud', Icon: CloudIcon },
-				{ value: 'SDCard', Icon: DevicePhoneMobileIcon },
-			].map(({ Icon, value }) => (
+				{ value: 'Cloud', Icon: CloudIcon, props: { width: '24px', height: '36px' } },
+				{ value: 'SDCard', Icon: DevicePhoneMobileIcon, props: { width: '24px', height: '34px' } },
+			].map(({ Icon, value, props = {} }) => (
 				<Icon
-					width={'24px'}
-					height={'24px'}
+					{...props}
 					key={value}
-					color={`${select === value ? 'cyan' : 'white'}`}
+					className={`${select === value ? 'stroke-cyan-500' : 'stroke-black dark:stroke-white'}`}
 					onClick={() => setSelect(value)}
 				></Icon>
 			))}

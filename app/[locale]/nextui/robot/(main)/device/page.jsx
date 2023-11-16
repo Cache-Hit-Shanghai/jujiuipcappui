@@ -46,9 +46,9 @@ export default function Page() {
 					showStatus={false}
 					showThumbs={false}
 				>
-					<Image src='https://pixelbot.oss-accelerate.aliyuncs.com/Weixin%20Image_20231113134342.png' />
-					<Image src='https://pixelbot.oss-accelerate.aliyuncs.com/Weixin%20Image_20231113134351.png' />
-					<Image src='https://pixelbot.oss-accelerate.aliyuncs.com/Weixin%20Image_20231113134355.png' />
+					<Image src='https://pixelbot.oss-accelerate.aliyuncs.com/Weixin%20Image_20231116164719.png' />
+					<Image src='https://pixelbot.oss-accelerate.aliyuncs.com/Weixin%20Image_20231116164752.png' />
+					<Image src='https://pixelbot.oss-accelerate.aliyuncs.com/Weixin%20Image_20231116164801.png' />
 				</Carousel>
 			</div>
 		</>

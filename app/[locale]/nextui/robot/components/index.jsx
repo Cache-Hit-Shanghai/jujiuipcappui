@@ -32,7 +32,7 @@ export function RobotCard() {
 						<LinkButton icon={<Search size={24} />} label={t('寻宠')} href='' />
 						<LinkButton icon={<Magic size={24} />} label={t('逗宠')} href='' />
 						<LinkButton icon={<Walk size={24} />} label={t('跟随')} href='' />
-						<LinkButton icon={<Share size={24} />} label={t('分享')} href='/my/sharing' />
+						<LinkButton icon={<Share size={24} />} label={t('分享')} href='/device/sharing' />
 						<LinkButton icon={<Battery2Charge size={24} />} label={t('回充')} href='' />
 					</div>
 				</CardFooter>

@@ -42,7 +42,7 @@ const Page = () => {
 					{ date: '2023/7/5', Component: LinkBoxImage, length: 20 },
 				].map(({ date, length, Component }) => (
 					<Card key={date} fullWidth={true}>
-						<CardHeader className='bg-zinc-700'>
+						<CardHeader>
 							<span>{date}</span>
 						</CardHeader>
 						<CardBody>

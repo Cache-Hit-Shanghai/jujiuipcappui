@@ -12,7 +12,7 @@ const Page = () => {
 	return (
 		<div className='flex flex-col h-screen'>
 			<NavbarBack label={'云存储设置'}></NavbarBack>
-			<div className='flex flex-col shrink-0  overflow-auto px-4 gap-4'>
+			<div className='flex flex-col grow shrink-0  overflow-auto px-4 gap-4'>
 				<div className='flex'>
 					<div>
 						<p>云存储服务</p>

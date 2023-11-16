@@ -16,7 +16,7 @@ export default function Page() {
 	const links = [
 		{ label: t('账号设置'), href: './account' },
 		{ label: t('通知设置'), href: './notification' },
-		{ label: t('界面设置'), href: '/my/uisettings' },
+		{ label: t('界面设置'), href: './uisettings' },
 		{ label: t('系统信息'), href: '/my/sysinfo' },
 		{ label: t('录像截图设置'), href: '/my/storagesettings' },
 		{ label: t('关于'), href: './about', last: true },

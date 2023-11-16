@@ -62,7 +62,7 @@ function ImageCard({ src, title, href }) {
 			</CardBody>
 			<CardFooter className='flex-col p-2 gap-2 items-start'>
 				<p className='text-sm'>{title}</p>
-				<div className='flex flex-row items-center justify-between'>
+				<div className='w-full flex flex-row items-center justify-between'>
 					<User
 						name='庞大小姐'
 						avatarProps={{

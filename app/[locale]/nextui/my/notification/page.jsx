@@ -10,12 +10,12 @@ const Page = () => {
 			<NavbarBack label={'消息通知设置'}></NavbarBack>
 			<div className='flex flex-col shrink-0 overflow-auto px-4 gap-4'>
 				<Card>
-					<CardBody>
+					<CardBody className='py-0'>
 						<ChangeNotification />
 					</CardBody>
 				</Card>
 				<Card>
-					<CardBody>
+					<CardBody className='py-0'>
 						<LabelLink label='AI报警事件类型' href='./type' />
 					</CardBody>
 				</Card>

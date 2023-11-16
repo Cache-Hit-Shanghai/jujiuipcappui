@@ -1,8 +1,8 @@
 'use client';
 
-import { Card, CardBody, CardFooter } from '@nextui-org/react';
+import { Card, CardBody, CardFooter, Image } from '@nextui-org/react';
 import { LinkButton } from '@/jujiu-ui-components/nextui/core/core-ui';
-import { useEffect } from 'react';
+import { ChipOnline } from '@/jujiu-ui-components/nextui/core/core-chips';
 import { useJuJiuT } from '@/state/translate';
 import { Battery2Charge, Walk } from '@styled-icons/remix-fill';
 import { Magic } from '@styled-icons/bootstrap/Magic';
@@ -10,37 +10,18 @@ import { PhotoIcon, ShareIcon, MagnifyingGlassIcon } from '@heroicons/react/24/o
 
 export function RobotCard() {
 	const t = useJuJiuT();
-	let map = null;
-
-	useEffect(() => {
-		import('@amap/amap-jsapi-loader').then((AMapLoader) =>
-			AMapLoader.load({
-				key: 'b1573511d4a7de65388ef2e9ee3f804e',
-				version: '2.0',
-				plugins: [],
-			})
-				.then((AMap) => {
-					map = new AMap.Map('container', {
-						viewMode: '2D',
-						zoom: 11,
-						dragEnable: false,
-					});
-				})
-				.catch((e) => {
-					console.log(e);
-				})
-		);
-
-		return () => {
-			map?.destroy();
-		};
-	}, []);
 
 	return (
 		<div>
 			<Card>
 				<CardBody className='p-0'>
-					<div id='container' className='w-full aspect-video' />
+					<Image
+						src='https://ts1.cn.mm.bing.net/th/id/R-C.0c8bf36e099654aadaf5f127ef1a3f1b?rik=uHrB%2blGez03%2fAA&riu=http%3a%2f%2fi3.img.969g.com%2fdown%2fimgx2014%2f10%2f24%2f289_102445_a1cff.jpg&ehk=EeF%2fioqRM6NfQqkCgXw%2bwLvO1%2fxZgeZ2pof7ALNLGsg%3d&risl=&pid=ImgRaw&r=0'
+						className='z-0'
+					/>
+					<div className='absolute left-1 top-1 flex flex-row gap-4'>
+						<ChipOnline />
+					</div>
 				</CardBody>
 				<CardFooter>
 					<div className=' w-full grid grid-cols-3 gap-y-4'>

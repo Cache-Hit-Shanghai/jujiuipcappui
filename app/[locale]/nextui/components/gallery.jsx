@@ -16,7 +16,7 @@ const CloudOrSDCard = () => {
 				<Icon
 					{...props}
 					key={value}
-					className={`${select === value ? 'stroke-cyan-500' : 'stroke-black dark:stroke-white'}`}
+					className={`${select === value ? 'stroke-primary' : 'stroke-foreground'}`}
 					onClick={() => setSelect(value)}
 				></Icon>
 			))}

@@ -2,26 +2,9 @@
 
 import { Tabs, Tab, User, Button, Image, Card, CardBody, CardFooter } from '@nextui-org/react';
 import Masonry from '@mui/lab/Masonry';
-import { ThemeButton } from '@/jujiu-ui-components/nextui/core/core-ui';
 import Link, { useJuJiuT } from '@/state/translate';
-import { EnvelopeIcon, Cog6ToothIcon } from '@heroicons/react/24/outline';
-import {
-	Heart,
-	MagnifyingGlass,
-	VipCrown,
-	Medal,
-	Store,
-	Coupon,
-	FileText,
-	Profile,
-	ShoppingCart2,
-	CustomerService,
-	Mail,
-	Question,
-	ArrowUpCircle,
-	Stethoscope,
-	At,
-} from '@styled-icons/heroicons-outline';
+import { Heart } from '@styled-icons/heroicons-outline/Heart';
+import { MagnifyingGlass } from '@styled-icons/heroicons-outline/MagnifyingGlass';
 
 const cardData = [
 	{
@@ -79,7 +62,7 @@ function ImageCard({ src, title, href }) {
 			</CardBody>
 			<CardFooter className='flex-col p-2 gap-2 items-start'>
 				<p className='text-sm'>{title}</p>
-				<div className='flex flex-row items-center'>
+				<div className='flex flex-row items-center justify-between'>
 					<User
 						name='庞大小姐'
 						avatarProps={{

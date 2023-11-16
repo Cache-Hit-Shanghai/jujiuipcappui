@@ -3,23 +3,22 @@
 import { Button, User, Badge, Card, CardBody } from '@nextui-org/react';
 import { ThemeButton } from '@/jujiu-ui-components/nextui/core/core-ui';
 import Link, { useJuJiuT } from '@/state/translate';
-import { EnvelopeIcon, Cog6ToothIcon } from '@heroicons/react/24/outline';
-import {
-	CalendarCheck,
-	VipCrown,
-	Medal,
-	Store,
-	Coupon,
-	FileText,
-	Profile,
-	ShoppingCart2,
-	CustomerService,
-	Mail,
-	Question,
-	ArrowUpCircle,
-	Stethoscope,
-	At,
-} from '@styled-icons/remix-line';
+import { Envelope } from '@styled-icons/heroicons-outline/Envelope';
+import { Cog6Tooth } from '@styled-icons/heroicons-outline/Cog6Tooth';
+import { CalendarCheck } from '@styled-icons/remix-line/CalendarCheck';
+import { VipCrown } from '@styled-icons/remix-line/VipCrown';
+import { Medal } from '@styled-icons/remix-line/Medal';
+import { Store } from '@styled-icons/remix-line/Store';
+import { Coupon } from '@styled-icons/remix-line/Coupon';
+import { FileText } from '@styled-icons/remix-line/FileText';
+import { Stethoscope } from '@styled-icons/remix-line/Stethoscope';
+import { Profile } from '@styled-icons/remix-line/Profile';
+import { ShoppingCart2 } from '@styled-icons/remix-line/ShoppingCart2';
+import { CustomerService } from '@styled-icons/remix-line/CustomerService';
+import { Mail } from '@styled-icons/remix-line/Mail';
+import { Question } from '@styled-icons/remix-line/Question';
+import { ArrowUpCircle } from '@styled-icons/remix-line/ArrowUpCircle';
+import { At } from '@styled-icons/remix-line/At';
 
 function StatisticCard({ data }) {
 	return (
@@ -80,11 +79,11 @@ export default function Page() {
 					<ThemeButton />
 					<Button isIconOnly variant='light' as={Link} href='/message'>
 						<Badge content='5' color='primary'>
-							<EnvelopeIcon className='h-6 w-6' />
+							<Envelope size={24} />
 						</Badge>
 					</Button>
 					<Button isIconOnly variant='light' as={Link} href='./settings'>
-						<Cog6ToothIcon className='h-6 w-6' />
+						<Cog6Tooth size={24} />
 					</Button>
 				</div>
 			</div>
@@ -98,8 +97,8 @@ export default function Page() {
 					<CardBody>
 						<div className='grid grid-cols-4 gap-4'>
 							{linkData0.map((datum) => (
-								<div key={datum.label} className='py-2 text-sm text-center'>
-									<div>{datum.icon}</div>
+								<div key={datum.label} className='py-2 text-sm flex flex-col items-center'>
+									{datum.icon}
 									{datum.label}
 								</div>
 							))}
@@ -110,7 +109,7 @@ export default function Page() {
 					<CardBody>
 						<div className='grid grid-cols-3 gap-4'>
 							{linkData1.map((datum) => (
-								<div key={datum.label} className='py-2 text-sm text-center'>
+								<div key={datum.label} className='py-2 text-sm flex flex-col items-center'>
 									<div>{datum.icon}</div>
 									{datum.label}
 								</div>

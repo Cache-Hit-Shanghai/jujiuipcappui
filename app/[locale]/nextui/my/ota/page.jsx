@@ -15,7 +15,7 @@ const Page = () => {
 			<NavbarBack label={'固件升级'}></NavbarBack>
 			<div className='flex flex-col shrink-0  overflow-auto px-4 gap-4'>
 				{data.map(({ device, size, from, to }, i) => (
-					<div key={i} className='flex border-white border-b justify-between items-center gap-2'>
+					<div key={i} className='flex  border-b justify-between items-center gap-2'>
 						<div className='flex  items-center gap-2'>
 							<CameraIcon width={'48px'} height={'48px'}></CameraIcon>
 							<div>

@@ -25,7 +25,7 @@ export default function Page() {
 	return (
 		<>
 			<div className='flex items-center justify-between p-2'>
-				<Button variant='light' as={Link} href='/my/login'>
+				<Button variant='light' as={Link} href='./login'>
 					<User
 						name='Jane Doe'
 						description='VIP level 1'

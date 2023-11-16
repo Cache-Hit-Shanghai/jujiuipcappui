@@ -18,7 +18,9 @@ import {
 	ChipCloudStorageExpiring,
 } from '@/jujiu-ui-components/nextui/core/core-chips';
 import Link, { useJuJiuT } from '@/state/translate';
-import { PlusCircleIcon, SquaresPlusIcon, RectangleGroupIcon } from '@heroicons/react/24/outline';
+import { PlusCircle } from '@styled-icons/heroicons-outline/PlusCircle';
+import { SquaresPlus } from '@styled-icons/heroicons-outline/SquaresPlus';
+import { RectangleGroup } from '@styled-icons/heroicons-outline/RectangleGroup';
 import { IpcCard, BotCard } from './ipc-card';
 
 export function DeviceMenu() {
@@ -28,7 +30,7 @@ export function DeviceMenu() {
 		<Dropdown backdrop='blur'>
 			<DropdownTrigger>
 				<Button isIconOnly variant='light'>
-					<PlusCircleIcon className='h-6 w-6' />
+					<PlusCircle size={24} />
 				</Button>
 			</DropdownTrigger>
 			<DropdownMenu aria-label='Static Actions'>
@@ -36,7 +38,7 @@ export function DeviceMenu() {
 					key='addDevice'
 					as={Link}
 					href='/device/binding'
-					startContent={<SquaresPlusIcon className='h-6 w-6' />}
+					startContent={<SquaresPlus size={24} />}
 				>
 					{t('添加设备')}
 				</DropdownItem>
@@ -44,7 +46,7 @@ export function DeviceMenu() {
 					key='deviceGroup'
 					as={Link}
 					href='/device/group'
-					startContent={<RectangleGroupIcon className='h-6 w-6' />}
+					startContent={<RectangleGroup size={24} />}
 				>
 					{t('设备分组')}
 				</DropdownItem>

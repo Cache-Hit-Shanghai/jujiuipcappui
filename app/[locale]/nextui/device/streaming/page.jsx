@@ -1,12 +1,10 @@
 'use client';
 
 import { Button, Card, Tabs, Tab, Spinner } from '@nextui-org/react';
-import {
-	MoonIcon,
-	ArrowTopRightOnSquareIcon,
-	Cog6ToothIcon,
-	ExclamationTriangleIcon,
-} from '@heroicons/react/24/outline';
+import { Moon } from '@styled-icons/heroicons-outline/Moon';
+import { ArrowTopRightOnSquare } from '@styled-icons/heroicons-outline/ArrowTopRightOnSquare';
+import { Cog6Tooth } from '@styled-icons/heroicons-outline/Cog6Tooth';
+import { ExclamationTriangle } from '@styled-icons/heroicons-outline/ExclamationTriangle';
 import { NavbarBack, LinkButton } from '@/jujiu-ui-components/nextui/core/core-ui';
 import { ChipRecording } from '@/jujiu-ui-components/nextui/core/core-chips';
 import { PanControl } from '@/jujiu-ui-components/nextui/ipc/video/panControl';
@@ -36,18 +34,18 @@ export default function Page() {
 									<LinkButton
 										className='text-white'
 										href='/device/settings/sharing'
-										icon={<ArrowTopRightOnSquareIcon className='h-6 w-6' />}
+										icon={<ArrowTopRightOnSquare size={24} className='text-white' />}
 									/>
 									<LinkButton
 										className='text-white'
 										href='/device/settings'
-										icon={<Cog6ToothIcon className='h-6 w-6' />}
+										icon={<Cog6Tooth size={24} className='text-white' />}
 									/>
 								</div>
 								<LinkButton
 									className='absolute bottom-1 right-1 text-white'
 									href='/device/streaming/fullscreen'
-									icon={<Orientation size={24} />}
+									icon={<Orientation size={24} className='text-white' />}
 								/>
 							</div>
 						</Tab>
@@ -55,7 +53,7 @@ export default function Page() {
 							<div className='relative bg-black aspect-video'>
 								<video />
 								<div className='absolute inset-0 m-auto px-4 gap-y-2 flex flex-col items-center justify-center'>
-									<ExclamationTriangleIcon className='h-12 w-12 text-white' />
+									<ExclamationTriangle size={48} className='text-white' />
 									<p className='text-white'>{t('无法加载视频流')}</p>
 									<p className='text-xs text-default-400'>
 										{t('设备已离线，离线时间：2023年9月14日 14:52:30。')}
@@ -67,7 +65,7 @@ export default function Page() {
 							<div className='relative bg-black aspect-video'>
 								<video />
 								<div className='absolute inset-0 m-auto px-4 gap-y-2 flex flex-col items-center justify-center'>
-									<MoonIcon className='h-12 w-12 text-white' />
+									<Moon size={48} className='text-white' />
 									<p className='text-white'>{t('设备已休眠')}</p>
 									<Button color='primary'>{t('唤醒')}</Button>
 								</div>

@@ -3,13 +3,11 @@
 import { Button, User, Card, CardBody } from '@nextui-org/react';
 import { LinkButton, LinkGroup, ThemeButton } from '@/jujiu-ui-components/nextui/core/core-ui';
 import Link, { useJuJiuT } from '@/state/translate';
-import {
-	PhotoIcon,
-	CloudArrowUpIcon,
-	ArrowUpCircleIcon,
-	ArrowTopRightOnSquareIcon,
-	QuestionMarkCircleIcon,
-} from '@heroicons/react/24/outline';
+import { Photo } from '@styled-icons/heroicons-outline/Photo';
+import { CloudArrowUp } from '@styled-icons/heroicons-outline/CloudArrowUp';
+import { ArrowUpCircle } from '@styled-icons/heroicons-outline/ArrowUpCircle';
+import { ArrowTopRightOnSquare } from '@styled-icons/heroicons-outline/ArrowTopRightOnSquare';
+import { QuestionMarkCircle } from '@styled-icons/heroicons-outline/QuestionMarkCircle';
 
 export default function Page() {
 	const t = useJuJiuT();
@@ -42,33 +40,17 @@ export default function Page() {
 				<Card>
 					<CardBody>
 						<div className='flex flex-row justify-evenly'>
-							<LinkButton label={t('相册')} icon={<PhotoIcon className='h-6 w-6' />} href='./gallery' />
-							<LinkButton
-								label={t('云存储')}
-								icon={<CloudArrowUpIcon className='h-6 w-6' />}
-								href='./cloudstorage'
-							/>
+							<LinkButton label={t('相册')} icon={<Photo size={24} />} href='./gallery' />
+							<LinkButton label={t('云存储')} icon={<CloudArrowUp size={24} />} href='./cloudstorage' />
 						</div>
 					</CardBody>
 				</Card>
 				<Card>
 					<CardBody>
 						<div className='flex flex-row justify-evenly'>
-							<LinkButton
-								label={t('固件升级')}
-								icon={<ArrowUpCircleIcon className='h-6 w-6' />}
-								href='./ota'
-							/>
-							<LinkButton
-								label={t('我的分享')}
-								icon={<ArrowTopRightOnSquareIcon className='h-6 w-6' />}
-								href='./sharing'
-							/>
-							<LinkButton
-								label={t('帮助与反馈')}
-								icon={<QuestionMarkCircleIcon className='h-6 w-6' />}
-								href='./feedback'
-							/>
+							<LinkButton label={t('固件升级')} icon={<ArrowUpCircle size={24} />} href='./ota' />
+							<LinkButton label={t('我的分享')} icon={<ArrowTopRightOnSquare size={24} />} href='./sharing' />
+							<LinkButton label={t('帮助与反馈')} icon={<QuestionMarkCircle size={24} />} href='./feedback' />
 						</div>
 					</CardBody>
 				</Card>

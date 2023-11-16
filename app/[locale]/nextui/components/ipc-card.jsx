@@ -12,7 +12,9 @@ import {
 	Image,
 } from '@nextui-org/react';
 import Link, { useJuJiuT } from '@/state/translate';
-import { EllipsisHorizontalIcon, Cog6ToothIcon, VideoCameraIcon } from '@heroicons/react/24/outline';
+import { Cog6Tooth } from '@styled-icons/heroicons-outline/Cog6Tooth';
+import { EllipsisHorizontal } from '@styled-icons/heroicons-outline/EllipsisHorizontal';
+import { VideoCamera } from '@styled-icons/heroicons-outline/VideoCamera';
 import { Webcam } from '@styled-icons/boxicons-regular/Webcam';
 import { Pets } from '@styled-icons/material-outlined/Pets';
 import { BatteryCharge } from '@styled-icons/typicons/BatteryCharge';
@@ -24,7 +26,7 @@ function DeviceMenu() {
 		<Dropdown backdrop='blur'>
 			<DropdownTrigger>
 				<Button isIconOnly variant='light'>
-					<EllipsisHorizontalIcon className='h-6 w-6' />
+					<EllipsisHorizontal size={24} />
 				</Button>
 			</DropdownTrigger>
 			<DropdownMenu aria-label='Static Actions'>
@@ -32,7 +34,7 @@ function DeviceMenu() {
 					key='records'
 					as={Link}
 					href='/device/streaming/record/'
-					startContent={<VideoCameraIcon className='h-6 w-6' />}
+					startContent={<VideoCamera size={24} />}
 				>
 					{t('录像查看')}
 				</DropdownItem>
@@ -40,7 +42,7 @@ function DeviceMenu() {
 					key='deviceSettings'
 					as={Link}
 					href='/device/settings'
-					startContent={<Cog6ToothIcon className='h-6 w-6' />}
+					startContent={<Cog6Tooth size={24} />}
 				>
 					{t('设备设置')}
 				</DropdownItem>

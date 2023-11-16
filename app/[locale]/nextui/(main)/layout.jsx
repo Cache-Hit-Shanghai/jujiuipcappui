@@ -1,20 +1,24 @@
-import { UserCircleIcon, HomeModernIcon, MagnifyingGlassIcon } from '@heroicons/react/24/outline';
+'use client';
+
+import { UserCircle } from '@styled-icons/heroicons-outline/UserCircle';
+import { HomeModern } from '@styled-icons/heroicons-outline/HomeModern';
+import { MagnifyingGlass } from '@styled-icons/heroicons-outline/MagnifyingGlass';
 import { NavTabs } from '@/jujiu-ui-components/nextui/core/core-ui';
 
 const navTabsData = [
 	{
 		label: '设备',
-		icon: <HomeModernIcon className='h-6 w-6' />,
+		icon: <HomeModern size={24} />,
 		href: '/nextui/device/',
 	},
 	{
 		label: '发现',
-		icon: <MagnifyingGlassIcon className='h-6 w-6' />,
+		icon: <MagnifyingGlass size={24} />,
 		href: '/discovery/',
 	},
 	{
 		label: '我的',
-		icon: <UserCircleIcon className='h-6 w-6' />,
+		icon: <UserCircle size={24} />,
 		href: '/nextui/my/',
 	},
 ];

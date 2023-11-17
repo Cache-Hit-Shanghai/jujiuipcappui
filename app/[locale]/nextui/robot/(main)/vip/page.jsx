@@ -6,8 +6,6 @@ import { CalendarCheck } from '@styled-icons/remix-line/CalendarCheck';
 import { Store } from '@styled-icons/remix-line/Store';
 import { Coupon } from '@styled-icons/remix-line/Coupon';
 import { VipDiamond } from '@styled-icons/remix-line/VipDiamond';
-import { Carousel } from 'react-responsive-carousel';
-import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 export default function Page() {
 	const t = useJuJiuT();
@@ -17,8 +15,8 @@ export default function Page() {
 			<div className='flex items-center justify-center p-2'>
 				<h4 className='py-2 text-2xl font-bold'>会员中心</h4>
 			</div>
-			<div className='flex flex-col flex-1 px-4 gap-4'>
-				<Card className='relative aspect-video'>
+			<div className='flex flex-col flex-1 px-4 gap-4 overflow-auto'>
+				<Card className='relative aspect-video flex-none'>
 					<div className='absolute left-0 inset-y-0 m-auto h-fit p-8 flex flex-col gap-2'>
 						<p>
 							<span className='text-4xl text-yellow-600'>青铜</span>
@@ -28,7 +26,8 @@ export default function Page() {
 					</div>
 					<Chip color='warning'>当前等级</Chip>
 				</Card>
-				<Card>
+				<Image src='https://pixelbot.oss-accelerate.aliyuncs.com/vip0.png' />
+				<Card className='flex-none'>
 					<CardHeader>增值服务</CardHeader>
 					<CardBody className='grid grid-cols-4 gap-2'>
 						<Button variant='bordered'>云存储</Button>
@@ -37,7 +36,7 @@ export default function Page() {
 						<Button variant='bordered'>异常巡检</Button>
 					</CardBody>
 				</Card>
-				<Card className='grid grid-cols-2 gap-0.5'>
+				<Card className='grid grid-cols-2 gap-0.5 flex-none'>
 					<div className='flex flex-col h-16'>
 						<Button radius='none' variant='flat' className='h-full'>
 							<div className='flex flex-row items-center w-full'>
@@ -95,21 +94,11 @@ export default function Page() {
 						</Button>
 					</div>
 				</Card>
-				<Card>
+				<Card className='flex-none'>
 					<CardHeader>会员专属福利</CardHeader>
-					<CardBody className='p-0'>
-						<Carousel
-							autoPlay
-							infiniteLoop
-							dynamicHeight
-							showArrows={false}
-							showStatus={false}
-							showThumbs={false}
-						>
-							<Image src='https://pixelbot.oss-accelerate.aliyuncs.com/vip0.png' />
-							<Image src='https://pixelbot.oss-accelerate.aliyuncs.com/vip1.png' />
-							<Image src='https://pixelbot.oss-accelerate.aliyuncs.com/vip2.png' />
-						</Carousel>
+					<CardBody className='p-8'>
+						<p>做任务领皮豆</p>
+						<p>十多项会员任务，365积分分享不停。</p>
 					</CardBody>
 				</Card>
 			</div>

@@ -36,23 +36,19 @@ export default function Page() {
 
 	return (
 		<>
-			<div className='p-2'>
-				<div className='flex items-center justify-end py-1'>
-					<div className='px-2'>
-						<ThemeButton />
-						<Button isIconOnly variant='light' as={Link} href=''>
-							<Identification size={24} />
-						</Button>
-						<Button isIconOnly variant='light' as={Link} href='/message'>
-							<Badge content='5' color='primary'>
-								<Envelope size={24} />
-							</Badge>
-						</Button>
-						<Button isIconOnly variant='light' as={Link} href='./settings'>
-							<Cog6Tooth size={24} />
-						</Button>
-					</div>
-				</div>
+			<div className='flex items-center justify-end p-2'>
+				<ThemeButton />
+				<Button isIconOnly variant='light' as={Link} href=''>
+					<Identification size={24} />
+				</Button>
+				<Button isIconOnly variant='light' as={Link} href='/message'>
+					<Badge content='5' color='primary'>
+						<Envelope size={24} />
+					</Badge>
+				</Button>
+				<Button isIconOnly variant='light' as={Link} href='./settings'>
+					<Cog6Tooth size={24} />
+				</Button>
 			</div>
 			<div className='flex flex-col items-center pb-4 gap-2'>
 				<Avatar src='https://i.pravatar.cc/150?u=a04258114e29026708c' className='w-20 h-20 text-large' />

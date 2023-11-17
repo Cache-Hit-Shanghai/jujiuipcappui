@@ -14,7 +14,12 @@ export default function Page() {
 		<>
 			<div className='p-2 flex items-center justify-between'>
 				<div className='px-2 flex w-1/2'>
-					<Select size='sm' aria-label='select device' defaultSelectedKeys={['robot0']}>
+					<Select
+						size='sm'
+						aria-label='select device'
+						defaultSelectedKeys={['robot0']}
+						labelPlacement='outside'
+					>
 						<SelectItem key='robot0' value='robot0'>
 							小皮0
 						</SelectItem>

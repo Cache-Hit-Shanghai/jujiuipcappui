@@ -8,6 +8,20 @@ import { Store } from '@styled-icons/remix-line/Store';
 import { Coupon } from '@styled-icons/remix-line/Coupon';
 import { VipDiamond } from '@styled-icons/remix-line/VipDiamond';
 
+function CardButton({ label, description, icon, ...props }) {
+	return (
+		<Button radius='none' variant='flat' className='h-full' {...props}>
+			<div className='flex flex-row items-center w-full'>
+				<div>{icon}</div>
+				<Spacer x={4} />
+				<div className='flex flex-col items-start'>
+					<div className='text-lg'>{label}</div>
+					<div className='text-xs text-default-400'>{description}</div>
+				</div>
+			</div>
+		</Button>
+	);
+}
 export default function Page() {
 	const t = useJuJiuT();
 
@@ -42,60 +56,16 @@ export default function Page() {
 				</Card>
 				<Card className='grid grid-cols-2 gap-0.5 flex-none'>
 					<div className='flex flex-col h-16'>
-						<Button radius='none' variant='flat' className='h-full'>
-							<div className='flex flex-row items-center w-full'>
-								<div>
-									<CalendarCheck size={36} />
-								</div>
-								<Spacer x={4} />
-								<div className='flex flex-col items-start'>
-									<div className='text-lg'>签到</div>
-									<div className='text-sm text-default-400'>连续签到得积分</div>
-								</div>
-							</div>
-						</Button>
+						<CardButton icon={<CalendarCheck size={36} />} label='签到' description='连续签到得积分' />
 					</div>
 					<div className='flex flex-col h-16'>
-						<Button radius='none' variant='flat' className='h-full'>
-							<div className='flex flex-row items-center w-full'>
-								<div>
-									<Coupon size={36} />
-								</div>
-								<Spacer x={4} />
-								<div className='flex flex-col items-start'>
-									<div className='text-lg'>优惠券</div>
-									<div className='text-sm text-default-400'>0张</div>
-								</div>
-							</div>
-						</Button>
+						<CardButton icon={<Coupon size={36} />} label='优惠券' description='0张' />
 					</div>
 					<div className='flex flex-col h-16'>
-						<Button radius='none' variant='flat' className='h-full'>
-							<div className='flex flex-row items-center w-full'>
-								<div>
-									<VipDiamond size={36} />
-								</div>
-								<Spacer x={4} />
-								<div className='flex flex-col items-start'>
-									<div className='text-lg'>我的皮豆</div>
-									<div className='text-sm text-default-400'>0</div>
-								</div>
-							</div>
-						</Button>
+						<CardButton icon={<VipDiamond size={36} />} label='我的皮豆' description='0' />
 					</div>
 					<div className='flex flex-col h-16'>
-						<Button radius='none' variant='flat' className='h-full'>
-							<div className='flex flex-row items-center w-full'>
-								<div className='text-lg'>
-									<Store size={36} />
-								</div>
-								<Spacer x={4} />
-								<div className='flex flex-col items-start'>
-									<div className='text-lg'>皮豆商城</div>
-									<div className='text-sm text-default-400'>实用好物</div>
-								</div>
-							</div>
-						</Button>
+						<CardButton icon={<Store size={36} />} label='皮豆商城' description='实用好物' />
 					</div>
 				</Card>
 				<Card className='flex-none'>

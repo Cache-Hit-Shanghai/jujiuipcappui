@@ -62,7 +62,7 @@ const Page = () => {
 								setOpenAvata(true);
 							}}
 						>
-							<Avatar src='https://i.pravatar.cc/150?u=a04258114e29026702d' />
+							<Avatar size='sm' src='https://i.pravatar.cc/150?u=a04258114e29026702d' />
 						</LabelButton>
 						<Divider />
 						<LabelButton label={'昵称'} onClick={() => setOpenName(true)}>

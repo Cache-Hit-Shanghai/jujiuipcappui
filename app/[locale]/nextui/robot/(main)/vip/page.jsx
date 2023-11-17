@@ -1,7 +1,8 @@
 'use client';
 
 import { Button, Spacer, Image, Card, CardHeader, CardBody, Chip } from '@nextui-org/react';
-import { useJuJiuT } from '@/state/translate';
+import Link, { useJuJiuT } from '@/state/translate';
+import { ExclamationCircle } from '@styled-icons/heroicons-outline/ExclamationCircle';
 import { CalendarCheck } from '@styled-icons/remix-line/CalendarCheck';
 import { Store } from '@styled-icons/remix-line/Store';
 import { Coupon } from '@styled-icons/remix-line/Coupon';
@@ -12,8 +13,11 @@ export default function Page() {
 
 	return (
 		<>
-			<div className='flex items-center justify-center p-2'>
+			<div className='relative flex items-center justify-center p-2'>
 				<h4 className='py-2 text-2xl font-bold'>会员中心</h4>
+				<Button isIconOnly variant='light' as={Link} href='' className='absolute right-0'>
+					<ExclamationCircle size={24} />
+				</Button>
 			</div>
 			<div className='flex flex-col flex-1 px-4 gap-4 overflow-auto'>
 				<Card className='relative aspect-video flex-none'>

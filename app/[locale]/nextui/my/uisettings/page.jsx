@@ -6,6 +6,7 @@ import { useJuJiuT } from '@/state/translate';
 
 const Page = () => {
 	const t = useJuJiuT();
+
 	return (
 		<div className='flex flex-col h-screen'>
 			<NavbarBack label={t('界面设置')} />

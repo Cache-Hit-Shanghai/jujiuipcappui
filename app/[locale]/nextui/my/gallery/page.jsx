@@ -4,7 +4,7 @@ import { Card, CardHeader, CardBody } from '@nextui-org/react';
 import Link from '@/state/translate';
 import { NavbarBack } from '@/jujiu-ui-components/nextui/core/core-ui';
 import { PlayCircleIcon } from '@heroicons/react/24/outline';
-import { CloudOrSDCard } from '../../components/gallery';
+import { useJuJiuT } from '@/state/translate';
 
 const LinkBoxImage = () => {
 	return (
@@ -31,9 +31,11 @@ const LinkBoxVideo = () => {
 };
 
 const Page = () => {
+	const t = useJuJiuT();
+
 	return (
 		<div className='flex flex-1 flex-col '>
-			<NavbarBack label={'相册（剩余容量100GB）'} />
+			<NavbarBack label={t('相册') + ' ' + t('剩余容量', { space: 100 })} />
 
 			<div className='flex flex-col  shrink-0 px-4 gap-4 overflow-auto '>
 				{[

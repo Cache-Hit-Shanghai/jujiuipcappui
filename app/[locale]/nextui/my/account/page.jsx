@@ -14,6 +14,7 @@ import {
 } from '@nextui-org/react';
 import { useState } from 'react';
 import { NavbarBack, Information, LabelButton, LabelLink } from '@/jujiu-ui-components/nextui/core/core-ui';
+import { useJuJiuT } from '@/state/translate';
 
 function JuJiuModal({ onOpenChange, onClose, isOpen, title, position, children, ...props }) {
 	return (
@@ -47,17 +48,18 @@ function JuJiuModal({ onOpenChange, onClose, isOpen, title, position, children, 
 }
 
 const Page = () => {
+	const t = useJuJiuT();
 	const [openAvata, setOpenAvata] = useState(false);
 	const [openName, setOpenName] = useState(false);
 
 	return (
 		<div className='flex flex-col h-screen'>
-			<NavbarBack label={'账号设置'}></NavbarBack>
+			<NavbarBack label={t('账号设置')}></NavbarBack>
 			<div className='flex flex-col px-4 gap-4'>
 				<Card>
 					<CardBody className='py-0'>
 						<LabelButton
-							label={'头像'}
+							label={t('更换头像')}
 							onClick={() => {
 								setOpenAvata(true);
 							}}
@@ -65,18 +67,18 @@ const Page = () => {
 							<Avatar size='sm' src='https://i.pravatar.cc/150?u=a04258114e29026702d' />
 						</LabelButton>
 						<Divider />
-						<LabelButton label={'昵称'} onClick={() => setOpenName(true)}>
+						<LabelButton label={t('修改昵称')} onClick={() => setOpenName(true)}>
 							用户12345
 						</LabelButton>
 						<Divider />
-						<LabelLink label={'修改密码'} href='./changePassword'></LabelLink>
+						<LabelLink label={t('修改密码')} href='./changePassword'></LabelLink>
 					</CardBody>
 				</Card>
 				<Button color='warning' variant='bordered'>
-					退出登录
+					{t('退出登录')}
 				</Button>
 				<Button color='danger' variant='bordered'>
-					注销账号
+					{t('注销账号')}
 				</Button>
 			</div>
 			<JuJiuModal isOpen={openAvata} onOpenChange={setOpenAvata} title={'更换头像'}>

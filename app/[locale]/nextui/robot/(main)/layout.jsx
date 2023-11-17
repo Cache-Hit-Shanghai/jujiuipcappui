@@ -10,6 +10,10 @@ const navTabsData = [
 		href: '/nextui/robot/tribe/',
 	},
 	{
+		label: '会员',
+		href: '/nextui/robot/vip/',
+	},
+	{
 		label: '我的',
 		href: '/nextui/robot/my/',
 	},

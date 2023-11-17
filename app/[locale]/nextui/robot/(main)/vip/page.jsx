@@ -1,6 +1,6 @@
 'use client';
 
-import { Button, User, Badge, Card, CardBody } from '@nextui-org/react';
+import { Button, User, Badge, Card, CardHeader, CardBody, Chip } from '@nextui-org/react';
 import { ThemeButton } from '@/jujiu-ui-components/nextui/core/core-ui';
 import Link, { useJuJiuT } from '@/state/translate';
 import { Envelope } from '@styled-icons/heroicons-outline/Envelope';
@@ -65,58 +65,27 @@ export default function Page() {
 
 	return (
 		<>
-			<div className='p-2'>
-				<div className='flex items-center justify-between py-1'>
-					<Button variant='light' as={Link} href='/my/login'>
-						<User
-							name='Jane Doe'
-							description='VIP 2'
-							avatarProps={{
-								src: 'https://i.pravatar.cc/150?u=a04258114e29026702d',
-							}}
-						/>
-					</Button>
-					<div className='px-2'>
-						<ThemeButton />
-						<Button isIconOnly variant='light' as={Link} href='/message'>
-							<Badge content='5' color='primary'>
-								<Envelope size={24} />
-							</Badge>
-						</Button>
-						<Button isIconOnly variant='light' as={Link} href='./settings'>
-							<Cog6Tooth size={24} />
-						</Button>
-					</div>
-				</div>
+			<div className='flex items-center justify-center p-2'>
+				<h4 className='py-2 text-2xl font-bold'>会员中心</h4>
 			</div>
 			<div className='flex flex-col flex-1 px-4 gap-4'>
-				<Card>
-					<CardBody>
-						<StatisticCard data={statistics} />
-					</CardBody>
+				<Card className='relative aspect-video'>
+					<div className='absolute left-0 inset-y-0 m-auto h-fit p-8 flex flex-col gap-2'>
+						<p>
+							<span className='text-4xl text-yellow-600'>青铜</span>
+							<span className='text-xl text-yellow-400'>皮宠主</span>
+						</p>
+						<p className='text-yellow-800'>还差2201分升级</p>
+					</div>
+					<Chip color='warning'>当前等级</Chip>
 				</Card>
 				<Card>
-					<CardBody>
-						<div className='grid grid-cols-4 gap-4'>
-							{linkData0.map((datum) => (
-								<div key={datum.label} className='py-2 text-sm flex flex-col items-center'>
-									{datum.icon}
-									{datum.label}
-								</div>
-							))}
-						</div>
-					</CardBody>
-				</Card>
-				<Card>
-					<CardBody>
-						<div className='grid grid-cols-3 gap-4'>
-							{linkData1.map((datum) => (
-								<div key={datum.label} className='py-2 text-sm flex flex-col items-center'>
-									<div>{datum.icon}</div>
-									{datum.label}
-								</div>
-							))}
-						</div>
+					<CardHeader>增值服务</CardHeader>
+					<CardBody className='grid grid-cols-4 gap-2'>
+						<Button variant='bordered'>云存储</Button>
+						<Button variant='bordered'>智能识别</Button>
+						<Button variant='bordered'>电话提醒</Button>
+						<Button variant='bordered'>异常巡检</Button>
 					</CardBody>
 				</Card>
 			</div>

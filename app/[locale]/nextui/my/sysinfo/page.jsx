@@ -20,9 +20,9 @@ const Page = () => {
 
 	return (
 		<div className='flex flex-col h-screen'>
-			<NavbarBack label={t('系统信息')}></NavbarBack>
+			<NavbarBack label={t('系统信息')} />
 			<div className='flex flex-col grow shrink-0  overflow-auto px-4 gap-4'>
-				<InfoGroup data={infos}></InfoGroup>
+				<InfoGroup data={infos} />
 			</div>
 		</div>
 	);

@@ -1,26 +1,28 @@
 'use client';
-import { CloudIcon, DevicePhoneMobileIcon, DeviceTabletIcon } from '@heroicons/react/24/outline';
-import { RadioGroup, Radio } from '@nextui-org/react';
-import { useState } from 'react';
+
+import { Switch, Card, CardBody, Listbox, ListboxItem, Tabs, Tab } from '@nextui-org/react';
+import { Cloud } from '@styled-icons/heroicons-outline/Cloud';
+import { DevicePhoneMobile } from '@styled-icons/heroicons-outline/DevicePhoneMobile';
+import { useJuJiuT } from '@/state/translate';
 
 const CloudOrSDCard = () => {
-	//'Cloud', 'SDCard'
-	const [select, setSelect] = useState('');
+	const t = useJuJiuT();
 
 	return (
-		<div className='flex shrink-0 items-center gap-2 h-full w-fit'>
-			{[
-				{ value: 'Cloud', Icon: CloudIcon, props: { width: '24px', height: '24px' } },
-				{ value: 'SDCard', Icon: DevicePhoneMobileIcon, props: { width: '24px', height: '24px' } },
-			].map(({ Icon, value, props = {} }) => (
-				<Icon
-					{...props}
-					key={value}
-					className={`${select === value ? 'stroke-primary' : 'stroke-foreground'}`}
-					onClick={() => setSelect(value)}
-				></Icon>
-			))}
-		</div>
+		<Switch
+			size='lg'
+			defaultSelected={false}
+			classNames={{ base: 'w-full max-w-md flex-row-reverse justify-between' }}
+			thumbIcon={({ isSelected, className }) =>
+				isSelected ? (
+					<Cloud size={16} className={className} />
+				) : (
+					<DevicePhoneMobile size={16} className={className} />
+				)
+			}
+		>
+			{t('录像截图存放到')}
+		</Switch>
 	);
 };
 

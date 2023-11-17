@@ -35,7 +35,7 @@ const list = [
 const Page = () => {
 	return (
 		<div className='flex flex-col h-screen'>
-			<NavbarBack label={'套餐选择'}></NavbarBack>
+			<NavbarBack label={'套餐选择'} />
 			<div className='flex flex-col shrink-0 grow  overflow-auto px-4 gap-4'>
 				<div className='h-px'></div>
 				{list.map(({ day, name, price, discount = 0 }, i) => (

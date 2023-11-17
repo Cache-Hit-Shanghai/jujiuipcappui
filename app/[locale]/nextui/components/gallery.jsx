@@ -1,18 +1,15 @@
-'use client';
-
-import { Switch, Card, CardBody, Listbox, ListboxItem, Tabs, Tab } from '@nextui-org/react';
+import { Switch } from '@nextui-org/react';
 import { Cloud } from '@styled-icons/heroicons-outline/Cloud';
 import { DevicePhoneMobile } from '@styled-icons/heroicons-outline/DevicePhoneMobile';
-import { useJuJiuT } from '@/state/translate';
 
-const CloudOrSDCard = () => {
-	const t = useJuJiuT();
-
+const CloudOrSDCard = ({ label }) => {
 	return (
 		<Switch
 			size='lg'
 			defaultSelected={false}
-			classNames={{ base: 'w-full max-w-md flex-row-reverse justify-between' }}
+			classNames={{
+				base: label ? 'w-full max-w-md flex-row-reverse justify-between' : 'flex-row-reverse justify-between',
+			}}
 			thumbIcon={({ isSelected, className }) =>
 				isSelected ? (
 					<Cloud size={16} className={className} />
@@ -21,7 +18,7 @@ const CloudOrSDCard = () => {
 				)
 			}
 		>
-			{t('录像截图存放到')}
+			{label}
 		</Switch>
 	);
 };

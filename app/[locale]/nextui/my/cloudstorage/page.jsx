@@ -8,7 +8,7 @@ const btnClass = 'bg-green-300 rounded-full h-[36px]';
 const Page = () => {
 	return (
 		<div className='flex flex-col h-screen'>
-			<NavbarBack label='云存储'></NavbarBack>
+			<NavbarBack label='云存储' />
 			<div className='flex flex-col grow shrink-0  overflow-auto px-4 gap-4'>
 				<div>
 					<p className='text-xs'>不会丢失的录像文件存储。</p>

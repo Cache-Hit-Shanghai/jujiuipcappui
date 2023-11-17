@@ -12,7 +12,7 @@ const data = [
 const Page = () => {
 	return (
 		<div className='flex flex-col h-screen'>
-			<NavbarBack label={'固件升级'}></NavbarBack>
+			<NavbarBack label={'固件升级'} />
 			<div className='flex flex-col shrink-0  overflow-auto px-4 gap-4'>
 				{data.map(({ device, size, from, to }, i) => (
 					<div key={i} className='flex  border-b justify-between items-center gap-2'>

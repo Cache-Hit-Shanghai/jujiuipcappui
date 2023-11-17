@@ -1,4 +1,5 @@
 'use client';
+
 import { Card, CardHeader, CardBody } from '@nextui-org/react';
 import Link from '@/state/translate';
 import { NavbarBack } from '@/jujiu-ui-components/nextui/core/core-ui';
@@ -32,9 +33,7 @@ const LinkBoxVideo = () => {
 const Page = () => {
 	return (
 		<div className='flex flex-1 flex-col '>
-			<NavbarBack label={'相册（剩余容量100GB）'}>
-				<CloudOrSDCard></CloudOrSDCard>
-			</NavbarBack>
+			<NavbarBack label={'相册（剩余容量100GB）'} />
 
 			<div className='flex flex-col  shrink-0 px-4 gap-4 overflow-auto '>
 				{[

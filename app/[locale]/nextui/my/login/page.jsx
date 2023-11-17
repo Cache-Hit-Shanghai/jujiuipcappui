@@ -8,7 +8,7 @@ import { Alipay } from '@styled-icons/remix-fill/Alipay';
 const Page = () => {
 	return (
 		<div className='flex flex-col h-screen'>
-			<NavbarBack></NavbarBack>
+			<NavbarBack />
 			<div className='flex flex-col shrink-0 grow justify-center items-center  overflow-auto px-4 gap-4'>
 				{[
 					{ Icon: LoginCircle, label: '密码登录' },

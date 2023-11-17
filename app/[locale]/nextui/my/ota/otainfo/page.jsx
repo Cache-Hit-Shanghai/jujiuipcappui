@@ -5,7 +5,7 @@ import { Update } from 'styled-icons/material';
 const Page = () => {
 	return (
 		<div className='flex flex-col h-screen'>
-			<NavbarBack label={'固件升级信息 - 办3'}></NavbarBack>
+			<NavbarBack label={'固件升级信息 - 办3'} />
 			<div className='flex flex-col shrink-0  overflow-auto px-4 gap-4'>
 				<div className='flex justify-center'>
 					<Update width={'64px'} height={'64px'}></Update>

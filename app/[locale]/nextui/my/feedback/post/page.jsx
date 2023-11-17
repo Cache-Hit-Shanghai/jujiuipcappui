@@ -1,4 +1,5 @@
 'use client';
+
 import { NavbarBack } from '@/jujiu-ui-components/nextui/core/core-ui';
 import { Button, Chip, Card, CardHeader, CardBody, Textarea } from '@nextui-org/react';
 
@@ -13,7 +14,7 @@ const content = `
 const Page = () => {
 	return (
 		<div className='flex flex-col h-screen'>
-			<NavbarBack label={'帮助与反馈'}></NavbarBack>
+			<NavbarBack label={'帮助与反馈'} />
 			<div className='flex flex-col grow shrink-0  overflow-auto px-4 gap-4'>
 				<div className='flex gap-2 shrink-0 items-center'>
 					<h2>一个非常非常长的标题一个非常非常长的标题一个非常非常长的标题</h2>

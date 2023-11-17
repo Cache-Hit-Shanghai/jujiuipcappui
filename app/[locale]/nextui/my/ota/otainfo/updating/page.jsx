@@ -6,7 +6,7 @@ import { CameraIcon } from '@heroicons/react/24/outline';
 const Page = () => {
 	return (
 		<div className='flex flex-col h-screen'>
-			<NavbarBack label={'固件升级'}></NavbarBack>
+			<NavbarBack label={'固件升级'} />
 			<div className='flex flex-col shrink-0  overflow-auto px-4 gap-4'>
 				<h2 className='font-semibold text-2xl'>固件升级中……</h2>
 				<div className='flex flex-col items-center'>

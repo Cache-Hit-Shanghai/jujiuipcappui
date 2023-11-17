@@ -54,7 +54,7 @@ const Page = () => {
 
 	return (
 		<div className='flex flex-col h-screen'>
-			<NavbarBack label={t('账号设置')}></NavbarBack>
+			<NavbarBack label={t('账号设置')} />
 			<div className='flex flex-col px-4 gap-4'>
 				<Card>
 					<CardBody className='py-0'>

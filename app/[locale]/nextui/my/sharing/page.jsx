@@ -33,7 +33,7 @@ const Cell = ({ device, label }) => {
 const Page = () => {
 	return (
 		<div className='flex flex-col h-screen'>
-			<NavbarBack label={'我的分享'}></NavbarBack>
+			<NavbarBack label={'我的分享'} />
 			<div className='flex flex-col shrink-0  overflow-auto px-4 gap-4'>
 				<Tabs variant='underlined' fullWidth={true}>
 					<Tab key='sharing' title='我的分享'>

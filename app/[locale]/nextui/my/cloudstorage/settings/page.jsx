@@ -11,7 +11,7 @@ const packages = [
 const Page = () => {
 	return (
 		<div className='flex flex-col h-screen'>
-			<NavbarBack label={'云存储设置'}></NavbarBack>
+			<NavbarBack label={'云存储设置'} />
 			<div className='flex flex-col grow shrink-0  overflow-auto px-4 gap-4'>
 				<div className='flex'>
 					<div>

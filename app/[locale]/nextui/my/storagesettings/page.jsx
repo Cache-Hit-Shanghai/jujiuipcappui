@@ -1,6 +1,6 @@
 'use client';
 
-import { Switch, Card, CardBody, Listbox, ListboxItem, Tabs, Tab } from '@nextui-org/react';
+import { Card, CardBody } from '@nextui-org/react';
 import { NavbarBack } from '@/jujiu-ui-components/nextui/core/core-ui';
 import { CloudOrSDCard } from '../../components/gallery';
 import { useJuJiuT } from '@/state/translate';
@@ -14,7 +14,7 @@ const Page = () => {
 			<div className='flex flex-col shrink-0 grow  overflow-auto p-4 gap-4'>
 				<Card>
 					<CardBody>
-						<CloudOrSDCard />
+						<CloudOrSDCard label={t('录像截图存放到')} />
 					</CardBody>
 				</Card>
 			</div>

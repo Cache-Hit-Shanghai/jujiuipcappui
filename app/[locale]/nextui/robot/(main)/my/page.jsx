@@ -54,12 +54,12 @@ export default function Page() {
 					</div>
 				</div>
 			</div>
-			<div className='flex flex-col items-center pb-4 gap-2 overflow-auto'>
+			<div className='flex flex-col items-center pb-4 gap-2'>
 				<Avatar src='https://i.pravatar.cc/150?u=a04258114e29026708c' className='w-20 h-20 text-large' />
 				<p>暴走的鸡腿</p>
 				<p>关注: 1 粉丝: 0 好友: 4</p>
 			</div>
-			<div className='flex flex-col flex-1 px-4 gap-4'>
+			<div className='flex flex-col flex-1 px-4 gap-4 overflow-auto'>
 				<LinkGroup data={linkData0} />
 				<Carousel
 					autoPlay

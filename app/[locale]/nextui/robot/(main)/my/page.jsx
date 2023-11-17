@@ -1,6 +1,6 @@
 'use client';
 
-import { Button, User, Badge, Card, CardBody } from '@nextui-org/react';
+import { Button, User, Badge, Card, CardBody, Avatar } from '@nextui-org/react';
 import { ThemeButton } from '@/jujiu-ui-components/nextui/core/core-ui';
 import Link, { useJuJiuT } from '@/state/translate';
 import { Envelope } from '@styled-icons/heroicons-outline/Envelope';
@@ -66,16 +66,7 @@ export default function Page() {
 	return (
 		<>
 			<div className='p-2'>
-				<div className='flex items-center justify-between py-1'>
-					<Button variant='light' as={Link} href='/my/login'>
-						<User
-							name='Jane Doe'
-							description='VIP 2'
-							avatarProps={{
-								src: 'https://i.pravatar.cc/150?u=a04258114e29026702d',
-							}}
-						/>
-					</Button>
+				<div className='flex items-center justify-end py-1'>
 					<div className='px-2'>
 						<ThemeButton />
 						<Button isIconOnly variant='light' as={Link} href='/message'>
@@ -89,37 +80,12 @@ export default function Page() {
 					</div>
 				</div>
 			</div>
-			<div className='flex flex-col flex-1 px-4 gap-4'>
-				<Card>
-					<CardBody>
-						<StatisticCard data={statistics} />
-					</CardBody>
-				</Card>
-				<Card>
-					<CardBody>
-						<div className='grid grid-cols-4 gap-4'>
-							{linkData0.map((datum) => (
-								<div key={datum.label} className='py-2 text-sm flex flex-col items-center'>
-									{datum.icon}
-									{datum.label}
-								</div>
-							))}
-						</div>
-					</CardBody>
-				</Card>
-				<Card>
-					<CardBody>
-						<div className='grid grid-cols-3 gap-4'>
-							{linkData1.map((datum) => (
-								<div key={datum.label} className='py-2 text-sm flex flex-col items-center'>
-									<div>{datum.icon}</div>
-									{datum.label}
-								</div>
-							))}
-						</div>
-					</CardBody>
-				</Card>
+			<div className='flex flex-col items-center gap-2'>
+				<Avatar src='https://i.pravatar.cc/150?u=a04258114e29026708c' className='w-20 h-20 text-large' />
+				<p>暴走的鸡腿</p>
+				<p>关注: 1 粉丝: 0 好友: 4</p>
 			</div>
+			<div className='flex flex-col flex-1 px-4 gap-4'></div>
 		</>
 	);
 }

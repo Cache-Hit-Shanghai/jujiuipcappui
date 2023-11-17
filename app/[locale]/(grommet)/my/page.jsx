@@ -7,12 +7,12 @@ import { AppFooter } from '@/app/components';
 import { ButtonLink, IconLink, LinkGroup, JuJiuMain, JuJiuCard } from '@/jujiu-ui-components/core/core-ui';
 
 const links = [
-	{ label: '账号设置', url: '/my/account' },
-	{ label: '通知设置', url: '/my/notification' },
-	{ label: '界面设置', url: '/my/uisettings' },
-	{ label: '系统信息', url: '/my/sysinfo' },
-	{ label: '录像截图设置', url: '/my/storagesettings' },
-	{ label: '关于', url: '/my2/about' },
+	{ label: '账号设置', href: '/my/account' },
+	{ label: '通知设置', href: '/my/notification' },
+	{ label: '界面设置', href: '/my/uisettings' },
+	{ label: '系统信息', href: '/my/sysinfo' },
+	{ label: '录像截图设置', href: '/my/storagesettings' },
+	{ label: '关于', href: '/my2/about' },
 ];
 
 export default function Page() {

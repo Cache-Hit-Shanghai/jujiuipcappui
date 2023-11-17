@@ -8,11 +8,11 @@ import { useJuJiuT } from '@/state/translate';
 export default function Page() {
 	const t = useJuJiuT();
 	const links = [
-		{ label: t('检查更新'), url: '#' },
-		{ label: t('服务条款'), url: '#' },
-		{ label: t('隐私政策'), url: '#' },
-		{ label: t('官网'), url: '#' },
-		{ label: t('使用帮助'), url: '#' },
+		{ label: t('检查更新'), href: '#' },
+		{ label: t('服务条款'), href: '#' },
+		{ label: t('隐私政策'), href: '#' },
+		{ label: t('官网'), href: '#' },
+		{ label: t('使用帮助'), href: '#' },
 	];
 
 	return (

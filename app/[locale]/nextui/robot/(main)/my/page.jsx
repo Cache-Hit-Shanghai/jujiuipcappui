@@ -1,10 +1,11 @@
 'use client';
 
-import { Button, Image, Badge, Card, CardBody, Avatar } from '@nextui-org/react';
+import { Button, Image, Badge, Avatar } from '@nextui-org/react';
 import { ThemeButton, LinkGroup } from '@/jujiu-ui-components/nextui/core/core-ui';
 import Link, { useJuJiuT } from '@/state/translate';
 import { Envelope } from '@styled-icons/heroicons-outline/Envelope';
 import { Cog6Tooth } from '@styled-icons/heroicons-outline/Cog6Tooth';
+import { Identification } from '@styled-icons/heroicons-outline/Identification';
 import { Suitcase } from '@styled-icons/remix-line/Suitcase';
 import { MapPin } from '@styled-icons/remix-line/MapPin';
 import { Medal } from '@styled-icons/remix-line/Medal';
@@ -39,6 +40,9 @@ export default function Page() {
 				<div className='flex items-center justify-end py-1'>
 					<div className='px-2'>
 						<ThemeButton />
+						<Button isIconOnly variant='light' as={Link} href=''>
+							<Identification size={24} />
+						</Button>
 						<Button isIconOnly variant='light' as={Link} href='/message'>
 							<Badge content='5' color='primary'>
 								<Envelope size={24} />

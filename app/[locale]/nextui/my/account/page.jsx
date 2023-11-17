@@ -81,13 +81,13 @@ const Page = () => {
 					{t('注销账号')}
 				</Button>
 			</div>
-			<JuJiuModal isOpen={openAvata} onOpenChange={setOpenAvata} title={'更换头像'}>
-				<Button color='success'>本地相册</Button>
+			<JuJiuModal isOpen={openAvata} onOpenChange={setOpenAvata} title={t('更换头像')}>
+				<Button color='success'>{t('本地相册')}</Button>
 			</JuJiuModal>
-			<JuJiuModal isOpen={openName} onOpenChange={setOpenName} title={'修改昵称'}>
-				<Input placeholder={'请填写昵称……'} maxLength={20} minLength={2} />
-				<Information label={'修改昵称提示'} />
-				<Button color='success'>保存</Button>
+			<JuJiuModal isOpen={openName} onOpenChange={setOpenName} title={t('修改昵称')}>
+				<Input placeholder={t('请填写昵称……')} maxLength={20} minLength={2} />
+				<Information label={t('修改昵称提示')} />
+				<Button color='success'>{t('保存')}</Button>
 			</JuJiuModal>
 		</div>
 	);

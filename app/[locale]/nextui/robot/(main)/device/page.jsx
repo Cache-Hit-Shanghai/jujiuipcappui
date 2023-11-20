@@ -35,7 +35,7 @@ export default function Page() {
 					<Button isIconOnly variant='light' as={Link} href='/nextui/device'>
 						<ArrowPath size={24} />
 					</Button>
-					<Button isIconOnly variant='light' as={Link} href='/device/scan'>
+					<Button isIconOnly variant='light' as={Link} href='/nextui/device/scan'>
 						<ScanDash size={24} />
 					</Button>
 					<Button isIconOnly variant='light' as={Link} href='/device/binding'>

@@ -90,7 +90,6 @@ export default function Page() {
 								transform: 'translateY(-100%)',
 								animation: 'radar-beam 2s infinite',
 								animationTimingFunction: 'cubic-bezier(0.53, 0, 0.43, 0.99)',
-								animationDelay: '1.4s',
 							}}
 						/>
 						<style>

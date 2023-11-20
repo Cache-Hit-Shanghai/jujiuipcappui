@@ -46,7 +46,11 @@ export default function Page() {
 								</div>
 								<LinkButton
 									className='absolute bottom-1 right-1 text-white'
-									href='/device/streaming/fullscreen'
+									href='./fullscreen'
+									onPress={() => {
+										document.documentElement.requestFullscreen();
+										screen.orientation.lock('landscape');
+									}}
 									icon={<Orientation size={24} className='text-white' />}
 								/>
 							</div>

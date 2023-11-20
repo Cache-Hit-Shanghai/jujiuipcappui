@@ -3,8 +3,8 @@
 import { Button, Image, Select, SelectItem } from '@nextui-org/react';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import { ThemeButton } from '@/jujiu-ui-components/nextui/core/core-ui';
 import Link from '@/state/translate';
+import { ArrowPath } from '@styled-icons/heroicons-outline/ArrowPath';
 import { PlusCircle } from '@styled-icons/heroicons-outline';
 import { ScanDash } from '@styled-icons/fluentui-system-filled/ScanDash';
 import { RobotCard } from '../../components';
@@ -32,7 +32,9 @@ export default function Page() {
 					</Select>
 				</div>
 				<div className='flex items-center'>
-					<ThemeButton />
+					<Button isIconOnly variant='light' as={Link} href='/nextui/device'>
+						<ArrowPath size={24} />
+					</Button>
 					<Button isIconOnly variant='light' as={Link} href='/device/scan'>
 						<ScanDash size={24} />
 					</Button>

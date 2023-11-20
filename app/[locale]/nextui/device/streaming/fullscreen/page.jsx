@@ -4,13 +4,13 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
 import { useIdleTimer } from 'react-idle-timer';
 import { NavbarBack } from '@/jujiu-ui-components/nextui/core/core-ui';
+import { ChipRecording } from '@/jujiu-ui-components/nextui/core/core-chips';
 import { PanControl } from '@/jujiu-ui-components/nextui/ipc/video/panControl';
-import { ScreenCopyControl, ChatControl } from '@/jujiu-ui-components/nextui/ipc/video/toolControl';
+import { StreamingControlBar } from '@/jujiu-ui-components/nextui/ipc/video/toolControl';
 import { useJuJiuT } from '@/state/translate';
 
 export default function Page() {
 	const t = useJuJiuT();
-	const [speaking, setSpeaking] = useState(false);
 	const [show, setShow] = useState(true);
 	useIdleTimer({
 		onIdle: () => setShow(false),
@@ -28,6 +28,7 @@ export default function Page() {
 					/>
 				</video>
 			</div>
+			<ChipRecording label='00:02:34' className='absolute top-1 inset-x-0 mx-auto' />
 			<AnimatePresence>
 				{show && (
 					<motion.div
@@ -48,8 +49,7 @@ export default function Page() {
 							<PanControl />
 						</div>
 						<div className='absolute bottom-0 inset-x-0 m-auto p-2 w-fit flex flex-row gap-4'>
-							<ScreenCopyControl />
-							<ChatControl speaking={speaking} onPress={() => setSpeaking(!speaking)} />
+							<StreamingControlBar />
 						</div>
 					</motion.div>
 				)}

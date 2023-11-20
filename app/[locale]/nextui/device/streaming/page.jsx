@@ -91,8 +91,8 @@ export default function Page() {
 				</div>
 			</div>
 			<div className='py-2 flex flex-row justify-evenly'>
-				<ScreenCopyControl />
-				<ChatControl speaking={speaking} onPress={() => setSpeaking(!speaking)} />
+				<ScreenCopyControl showLabel />
+				<ChatControl showLabel speaking={speaking} onPress={() => setSpeaking(!speaking)} />
 			</div>
 		</div>
 	);

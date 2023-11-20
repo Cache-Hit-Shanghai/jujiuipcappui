@@ -1,6 +1,7 @@
 'use client';
 
 import { Button, Card, Tabs, Tab, Spinner } from '@nextui-org/react';
+import { motion } from 'framer-motion';
 import { useState } from 'react';
 import { useIdleTimer } from 'react-idle-timer';
 import { Moon } from '@styled-icons/heroicons-outline/Moon';
@@ -34,7 +35,12 @@ export default function Page() {
 					/>
 				</video>
 			</div>
-			<div className={show ? 'visible' : 'invisible'}>
+			<motion.div
+				className={show ? 'visible' : 'collapse'}
+				initial={{ opacity: 0 }}
+				animate={show ? { opacity: 1 } : { opacity: 0 }}
+				transition={{ ease: 'linear', duration: 0.5 }}
+			>
 				<NavbarBack
 					className='absolute'
 					label={t('实时视频') + ' - 办3'}
@@ -50,7 +56,7 @@ export default function Page() {
 					<ScreenCopyControl />
 					<ChatControl speaking={speaking} onPress={() => setSpeaking(!speaking)} />
 				</div>
-			</div>
+			</motion.div>
 		</div>
 	);
 }

@@ -36,7 +36,7 @@ export function RobotCard() {
 						<LinkButton icon={<Search size={24} />} label={t('寻宠')} href='' />
 						<LinkButton icon={<Magic size={24} />} label={t('逗宠')} href='' />
 						<LinkButton icon={<Walk size={24} />} label={t('跟随')} href='' />
-						<ChatControl speaking={speaking} onPress={() => setSpeaking(!speaking)} />
+						<ChatControl showLabel speaking={speaking} onPress={() => setSpeaking(!speaking)} />
 						<LinkButton icon={<Battery2Charge size={24} />} label={t('回充')} href='' />
 						<LinkButton icon={<Settings3 size={24} />} label={t('设置')} href='/device/settings' />
 					</div>

@@ -1,6 +1,7 @@
 'use client';
 
 import { Button, Card, Tabs, Tab, Spinner } from '@nextui-org/react';
+import { useState } from 'react';
 import { Moon } from '@styled-icons/heroicons-outline/Moon';
 import { ArrowTopRightOnSquare } from '@styled-icons/heroicons-outline/ArrowTopRightOnSquare';
 import { Cog6Tooth } from '@styled-icons/heroicons-outline/Cog6Tooth';
@@ -8,12 +9,13 @@ import { ExclamationTriangle } from '@styled-icons/heroicons-outline/Exclamation
 import { NavbarBack, LinkButton } from '@/jujiu-ui-components/nextui/core/core-ui';
 import { ChipRecording } from '@/jujiu-ui-components/nextui/core/core-chips';
 import { PanControl } from '@/jujiu-ui-components/nextui/ipc/video/panControl';
-import { ScreenCopyControl } from '@/jujiu-ui-components/nextui/ipc/video/toolControl';
+import { ScreenCopyControl, ChatControl } from '@/jujiu-ui-components/nextui/ipc/video/toolControl';
 import { Orientation } from '@styled-icons/fluentui-system-filled/Orientation';
 import { useJuJiuT } from '@/state/translate';
 
 export default function Page() {
 	const t = useJuJiuT();
+	const [speaking, setSpeaking] = useState(false);
 
 	return (
 		<div className='h-screen flex flex-col'>
@@ -86,6 +88,7 @@ export default function Page() {
 			</div>
 			<div className='py-2 flex flex-row justify-evenly'>
 				<ScreenCopyControl />
+				<ChatControl speaking={speaking} onPress={() => setSpeaking(!speaking)} />
 			</div>
 		</div>
 	);

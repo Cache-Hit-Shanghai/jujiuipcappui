@@ -5,7 +5,7 @@ import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import Link from '@/state/translate';
 import { ArrowPath } from '@styled-icons/heroicons-outline/ArrowPath';
-import { PlusCircle } from '@styled-icons/heroicons-outline';
+import { PlusCircle } from '@styled-icons/heroicons-outline/PlusCircle';
 import { ScanDash } from '@styled-icons/fluentui-system-filled/ScanDash';
 import { RobotCard } from '../../components';
 

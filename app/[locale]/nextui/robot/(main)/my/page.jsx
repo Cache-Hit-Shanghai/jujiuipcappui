@@ -65,8 +65,8 @@ export default function Page() {
 					showStatus={false}
 					showThumbs={false}
 				>
-					<Image src='https://pixelbot.oss-accelerate.aliyuncs.com/my0.png' />
-					<Image src='https://pixelbot.oss-accelerate.aliyuncs.com/my1.png' />
+					<Image src='https://pixelbot.oss-accelerate.aliyuncs.com/my2.png' />
+					<Image src='https://pixelbot.oss-accelerate.aliyuncs.com/my3.png' />
 				</Carousel>
 				<LinkGroup data={linkData1} />
 			</div>

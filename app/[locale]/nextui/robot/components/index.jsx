@@ -3,13 +3,13 @@
 import { Card, CardBody, CardFooter, Image } from '@nextui-org/react';
 import { useState } from 'react';
 import { LinkButton } from '@/jujiu-ui-components/nextui/core/core-ui';
-import { ChipOnline } from '@/jujiu-ui-components/nextui/core/core-chips';
+import { ChipOnline, ChipFromFriends } from '@/jujiu-ui-components/nextui/core/core-chips';
 import { ChatControl } from '@/jujiu-ui-components/nextui/ipc/video/toolControl';
 import { useJuJiuT } from '@/state/translate';
 import { Battery2Charge } from '@styled-icons/remix-line/Battery2Charge';
 import { Walk } from '@styled-icons/remix-line/Walk';
 import { Magic } from '@styled-icons/remix-line/Magic';
-import { Share } from '@styled-icons/remix-line/Share';
+import { Settings3 } from '@styled-icons/remix-line/Settings3';
 import { Search } from '@styled-icons/remix-line/Search';
 
 export function RobotCard() {
@@ -27,6 +27,9 @@ export function RobotCard() {
 					<div className='absolute left-1 top-1 flex flex-row gap-4'>
 						<ChipOnline />
 					</div>
+					<div className='absolute right-1 top-1 flex flex-row gap-4'>
+						<ChipFromFriends />
+					</div>
 				</CardBody>
 				<CardFooter>
 					<div className=' w-full grid grid-cols-3 gap-y-4 justify-items-center'>
@@ -34,8 +37,8 @@ export function RobotCard() {
 						<LinkButton icon={<Magic size={24} />} label={t('逗宠')} href='' />
 						<LinkButton icon={<Walk size={24} />} label={t('跟随')} href='' />
 						<ChatControl speaking={speaking} onPress={() => setSpeaking(!speaking)} />
-						<LinkButton icon={<Share size={24} />} label={t('分享')} href='/device/sharing' />
 						<LinkButton icon={<Battery2Charge size={24} />} label={t('回充')} href='' />
+						<LinkButton icon={<Settings3 size={24} />} label={t('设置')} href='/device/settings' />
 					</div>
 				</CardFooter>
 			</Card>

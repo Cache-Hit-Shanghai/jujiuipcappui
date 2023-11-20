@@ -30,7 +30,7 @@ export default function Page() {
 	const linkData1 = [
 		{ label: '设备分享', icon: <Share size={24} />, href: '' },
 		{ label: '固件升级', icon: <ArrowUpCircle size={24} />, href: '' },
-		{ label: '我的客服', icon: <CustomerService size={24} />, href: '' },
+		{ label: '联系客服', icon: <CustomerService size={24} />, href: '' },
 		{ label: '帮助与反馈', icon: <Question size={24} />, href: '', last: true },
 	];
 

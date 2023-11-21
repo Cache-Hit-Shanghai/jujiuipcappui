@@ -22,7 +22,7 @@ export default function Page() {
 							<Envelope size={24} />
 						</Badge>
 					</Button>
-					<Button isIconOnly variant='light' as={Link} href='/device/scan'>
+					<Button isIconOnly variant='light' as={Link} href='./scan'>
 						<ScanDash size={24} />
 					</Button>
 					<DeviceMenu />

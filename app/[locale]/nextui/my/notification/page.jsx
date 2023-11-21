@@ -10,7 +10,7 @@ const Page = () => {
 	return (
 		<div className='flex flex-col h-screen'>
 			<NavbarBack label={t('通知设置')} />
-			<div className='flex flex-col shrink-0 overflow-auto px-4 gap-4'>
+			<div className='flex flex-col shrink-0 px-4 gap-4'>
 				<Card>
 					<CardBody className='py-0'>
 						<ChangeNotification />

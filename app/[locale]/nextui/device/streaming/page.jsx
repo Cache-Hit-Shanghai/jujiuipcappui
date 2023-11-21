@@ -8,7 +8,7 @@ import { ExclamationTriangle } from '@styled-icons/heroicons-outline/Exclamation
 import { NavbarBack, LinkButton } from '@/jujiu-ui-components/nextui/core/core-ui';
 import { ChipRecording } from '@/jujiu-ui-components/nextui/core/core-chips';
 import { PanControl } from '@/jujiu-ui-components/nextui/ipc/video/panControl';
-import { ScreenCopyControl } from '@/jujiu-ui-components/nextui/ipc/video/toolControl';
+import { StreamingControlBar } from '@/jujiu-ui-components/nextui/ipc/video/toolControl';
 import { Orientation } from '@styled-icons/fluentui-system-filled/Orientation';
 import { useJuJiuT } from '@/state/translate';
 
@@ -44,7 +44,11 @@ export default function Page() {
 								</div>
 								<LinkButton
 									className='absolute bottom-1 right-1 text-white'
-									href='/device/streaming/fullscreen'
+									href='./fullscreen'
+									onPress={() => {
+										document.documentElement.requestFullscreen();
+										screen.orientation.lock('landscape');
+									}}
 									icon={<Orientation size={24} className='text-white' />}
 								/>
 							</div>
@@ -85,7 +89,7 @@ export default function Page() {
 				</div>
 			</div>
 			<div className='py-2 flex flex-row justify-evenly'>
-				<ScreenCopyControl />
+				<StreamingControlBar showLabel />
 			</div>
 		</div>
 	);

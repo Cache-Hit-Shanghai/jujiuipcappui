@@ -11,7 +11,7 @@ const LinkBoxImage = () => {
 		<Link href='./detail' passHref legacyBehavior>
 			<div
 				as='a'
-				className=' w-full h-full   bg-[url(https://tse2-mm.cn.bing.net/th/id/OIP-C.ke-oC-HNGvr6A7xWstYjsgHaFS?pid=ImgDet&rs=1)] rounded cursor-pointer'
+				className='w-full h-full bg-[url(https://tse2-mm.cn.bing.net/th/id/OIP-C.ke-oC-HNGvr6A7xWstYjsgHaFS?pid=ImgDet&rs=1)] rounded cursor-pointer'
 			/>
 		</Link>
 	);
@@ -47,7 +47,7 @@ const Page = () => {
 							<span>{date}</span>
 						</CardHeader>
 						<CardBody>
-							<div className='grid gap-5 grid-cols-[repeat(auto-fill,minmax(min(96px,100%),_1fr))] grid-flow-dense auto-rows-[70px] justify-center items-center'>
+							<div className='grid gap-2 grid-cols-[repeat(auto-fill,minmax(min(96px,100%),_1fr))] grid-flow-dense auto-rows-[70px] justify-center items-center'>
 								{Array.from({ length }, (_, index) => index).map((item) => (
 									<Component key={item} />
 								))}

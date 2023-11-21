@@ -1,7 +1,8 @@
 'use client';
+
 import { NavbarBack } from '@/jujiu-ui-components/nextui/core/core-ui';
 import { Tabs, Tab } from '@nextui-org/react';
-import { CameraIcon } from '@heroicons/react/24/outline';
+import { NestCamWiredStand } from '@styled-icons/material/NestCamWiredStand';
 
 const data0 = [
 	{ device: '客厅', to: '137319346' },
@@ -19,7 +20,7 @@ const Cell = ({ device, label }) => {
 	return (
 		<div className='flex justify-between items-center gap-2 border-b py-1'>
 			<div className='flex items-center gap-2'>
-				<CameraIcon width={'48px'} height={'48px'}></CameraIcon>
+				<NestCamWiredStand size={48} />
 				<div>
 					<p>{device}</p>
 					<p>{label}</p>

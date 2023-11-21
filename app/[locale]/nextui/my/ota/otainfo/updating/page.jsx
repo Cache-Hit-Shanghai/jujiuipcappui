@@ -1,7 +1,7 @@
 'use client';
 import { NavbarBack, Information, LinkButton } from '@/jujiu-ui-components/nextui/core/core-ui';
 import { Avatar, Progress } from '@nextui-org/react';
-import { CameraIcon } from '@heroicons/react/24/outline';
+import { NestCamWiredStand } from '@styled-icons/material/NestCamWiredStand';
 
 const Page = () => {
 	return (
@@ -10,7 +10,7 @@ const Page = () => {
 			<div className='flex flex-col shrink-0  overflow-auto px-4 gap-4'>
 				<h2 className='font-semibold text-2xl'>固件升级中……</h2>
 				<div className='flex flex-col items-center'>
-					<Avatar icon={<CameraIcon width={'24px'} height={'24px'}></CameraIcon>}></Avatar>
+					<Avatar icon={<NestCamWiredStand size={24} />} />
 					<p>办3</p>
 				</div>
 				<Information label='摄像机正在固件升级中。请保持摄像机的电源开启。摄像机突然断电有可能导致设备无法启动。'></Information>

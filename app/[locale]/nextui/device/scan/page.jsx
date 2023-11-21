@@ -3,9 +3,9 @@
 import { Button } from '@nextui-org/react';
 import { motion } from 'framer-motion';
 import { NavbarBack } from '@/jujiu-ui-components/nextui/core/core-ui';
-import { Gallery } from '@styled-icons/remix-line/Gallery';
-import { Flashlight } from '@styled-icons/remix-line/Flashlight';
+import { PhotoAlbum } from '@styled-icons/material/PhotoAlbum';
 import { useJuJiuT } from '@/state/translate';
+import { Flashlight } from '../../components';
 
 export default function Page() {
 	const t = useJuJiuT();
@@ -36,11 +36,9 @@ export default function Page() {
 				</div>
 			</div>
 			<div className='absolute bottom-0 inset-x-0 py-10 flex flex-row justify-evenly'>
-				<Button isIconOnly>
-					<Flashlight size={24} />
-				</Button>
-				<Button isIconOnly>
-					<Gallery size={24} />
+				<Flashlight />
+				<Button isIconOnly radius='full'>
+					<PhotoAlbum size={24} />
 				</Button>
 			</div>
 		</div>

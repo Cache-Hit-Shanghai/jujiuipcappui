@@ -1,16 +1,16 @@
 'use client';
 
 import { Button, Card, Tabs, Tab, Spinner } from '@nextui-org/react';
-import { Moon } from '@styled-icons/heroicons-outline/Moon';
-import { ArrowTopRightOnSquare } from '@styled-icons/heroicons-outline/ArrowTopRightOnSquare';
-import { Cog6Tooth } from '@styled-icons/heroicons-outline/Cog6Tooth';
-import { ExclamationTriangle } from '@styled-icons/heroicons-outline/ExclamationTriangle';
 import { NavbarBack, LinkButton } from '@/jujiu-ui-components/nextui/core/core-ui';
 import { ChipRecording } from '@/jujiu-ui-components/nextui/core/core-chips';
 import { PanControl } from '@/jujiu-ui-components/nextui/ipc/video/panControl';
 import { StreamingControlBar } from '@/jujiu-ui-components/nextui/ipc/video/toolControl';
-import { Orientation } from '@styled-icons/fluentui-system-filled/Orientation';
 import { useJuJiuT } from '@/state/translate';
+import { ScreenRotation } from '@styled-icons/material/ScreenRotation';
+import { Nightlight } from '@styled-icons/material/Nightlight';
+import { Settings } from '@styled-icons/material/Settings';
+import { WarningAmber } from '@styled-icons/material/WarningAmber';
+import { IosShare } from '@styled-icons/material/IosShare';
 
 export default function Page() {
 	const t = useJuJiuT();
@@ -34,12 +34,12 @@ export default function Page() {
 									<LinkButton
 										className='text-white'
 										href='/device/settings/sharing'
-										icon={<ArrowTopRightOnSquare size={24} className='text-white' />}
+										icon={<IosShare size={24} className='text-white' />}
 									/>
 									<LinkButton
 										className='text-white'
 										href='/device/settings'
-										icon={<Cog6Tooth size={24} className='text-white' />}
+										icon={<Settings size={24} className='text-white' />}
 									/>
 								</div>
 								<LinkButton
@@ -49,7 +49,7 @@ export default function Page() {
 										document.documentElement.requestFullscreen();
 										screen.orientation.lock('landscape');
 									}}
-									icon={<Orientation size={24} className='text-white' />}
+									icon={<ScreenRotation size={24} className='text-white' />}
 								/>
 							</div>
 						</Tab>
@@ -57,7 +57,7 @@ export default function Page() {
 							<div className='relative bg-black aspect-video'>
 								<video />
 								<div className='absolute inset-0 m-auto px-4 gap-y-2 flex flex-col items-center justify-center'>
-									<ExclamationTriangle size={48} className='text-white' />
+									<WarningAmber size={48} className='text-white' />
 									<p className='text-white'>{t('无法加载视频流')}</p>
 									<p className='text-xs text-default-400'>
 										{t('设备已离线，离线时间：2023年9月14日 14:52:30。')}
@@ -69,7 +69,7 @@ export default function Page() {
 							<div className='relative bg-black aspect-video'>
 								<video />
 								<div className='absolute inset-0 m-auto px-4 gap-y-2 flex flex-col items-center justify-center'>
-									<Moon size={48} className='text-white' />
+									<Nightlight size={48} className='text-white' />
 									<p className='text-white'>{t('设备已休眠')}</p>
 									<Button color='primary'>{t('唤醒')}</Button>
 								</div>

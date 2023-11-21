@@ -1,7 +1,7 @@
 'use client';
 
-import { NavbarBack } from '@/jujiu-ui-components/nextui/core/core-ui';
 import { Button, Chip, Card, CardHeader, CardBody, Textarea } from '@nextui-org/react';
+import { NavbarBack } from '@/jujiu-ui-components/nextui/core/core-ui';
 
 const content = `
 ## 主要步骤如下

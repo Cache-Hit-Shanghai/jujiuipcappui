@@ -1,6 +1,8 @@
+'use client';
+
 import { NavbarBack, LinkButton } from '@/jujiu-ui-components/nextui/core/core-ui';
 import { Card, CardHeader, CardBody, CardFooter, Avatar } from '@nextui-org/react';
-import { CameraIcon } from '@heroicons/react/24/outline';
+import { NestCamWiredStand } from '@styled-icons/material/NestCamWiredStand';
 
 const tagClass = 'h-[26px] rounded-[26px] leading-[26px] bg-orange-800 text-xs px-2';
 const btnClass = 'bg-green-300 rounded-full h-[36px]';
@@ -22,7 +24,7 @@ const Page = () => {
 				<Card>
 					<CardBody className='flex flex-row justify-between'>
 						<div className='flex flex-col justify-center items-center'>
-							<Avatar icon={<CameraIcon width={'24px'} height={'24px'}></CameraIcon>}></Avatar>
+							<Avatar icon={<NestCamWiredStand size={24} />} />
 							<span>办3</span>
 						</div>
 						<div className='flex flex-col gap-3'>

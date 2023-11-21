@@ -1,5 +1,5 @@
 'use client';
-import { NavbarBack } from '@/jujiu-ui-components/nextui/core/core-ui';
+
 import {
 	Button,
 	DropdownItem,
@@ -11,9 +11,12 @@ import {
 	Chip,
 	Pagination,
 } from '@nextui-org/react';
-
-import { MoreCircle, Add, Chat, Search } from 'styled-icons/fluentui-system-filled';
-import { Article } from 'styled-icons/material';
+import { NavbarBack } from '@/jujiu-ui-components/nextui/core/core-ui';
+import { Article } from '@styled-icons/material/Article';
+import { MoreHoriz } from '@styled-icons/material/MoreHoriz';
+import { PostAdd } from '@styled-icons/material/PostAdd';
+import { Reply } from '@styled-icons/material/Reply';
+import { Search } from '@styled-icons/material/Search';
 
 const data = [
 	{ title: '如何使用“设备转移”？', createdBy: 'Jim', date: '2023/7/1' },
@@ -51,13 +54,8 @@ const Page = () => {
 				<div className='flex flex-1'></div>
 				<Dropdown>
 					<DropdownTrigger>
-						<Button
-							disableRipple
-							className='p-0 bg-transparent data-[hover=true]:bg-transparent'
-							radius='sm'
-							variant='light'
-						>
-							<MoreCircle></MoreCircle>
+						<Button isIconOnly radius='sm' variant='light'>
+							<MoreHoriz size={24} />
 						</Button>
 					</DropdownTrigger>
 
@@ -71,7 +69,7 @@ const Page = () => {
 							{
 								label: '新建问题',
 								href: './new',
-								Icon: Add,
+								Icon: PostAdd,
 							},
 							{
 								label: '我的问题',
@@ -81,7 +79,7 @@ const Page = () => {
 							{
 								label: '我的回复',
 								href: '#',
-								Icon: Chat,
+								Icon: Reply,
 							},
 						].map(({ Icon, label, href }, i) => (
 							<DropdownItem key={i} startContent={<Icon width={'24px'} height={'24px'}></Icon>}>

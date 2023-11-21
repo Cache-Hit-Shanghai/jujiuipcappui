@@ -1,7 +1,7 @@
 'use client';
+
 import { NavbarBack, LinkButton } from '@/jujiu-ui-components/nextui/core/core-ui';
-import { CameraIcon } from '@heroicons/react/24/outline';
-import { Button } from '@nextui-org/react';
+import { NestCamWiredStand } from '@styled-icons/material/NestCamWiredStand';
 
 const data = [
 	{ device: '客厅', size: '150MB', from: '1.0.0', to: '1.1.0' },
@@ -17,7 +17,7 @@ const Page = () => {
 				{data.map(({ device, size, from, to }, i) => (
 					<div key={i} className='flex  border-b justify-between items-center gap-2'>
 						<div className='flex  items-center gap-2'>
-							<CameraIcon width={'48px'} height={'48px'}></CameraIcon>
+							<NestCamWiredStand size={48} />
 							<div>
 								<p>{device}</p>
 								<p>{size}</p>

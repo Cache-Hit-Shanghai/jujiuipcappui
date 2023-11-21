@@ -8,6 +8,8 @@ import {
 	DropdownItem,
 	Accordion,
 	AccordionItem,
+	VisuallyHidden,
+	useSwitch,
 } from '@nextui-org/react';
 import {
 	ChipOnline,
@@ -18,9 +20,11 @@ import {
 	ChipCloudStorageExpiring,
 } from '@/jujiu-ui-components/nextui/core/core-chips';
 import Link, { useJuJiuT } from '@/state/translate';
-import { PlusCircle } from '@styled-icons/heroicons-outline/PlusCircle';
-import { SquaresPlus } from '@styled-icons/heroicons-outline/SquaresPlus';
-import { RectangleGroup } from '@styled-icons/heroicons-outline/RectangleGroup';
+import { AddCircleOutline } from '@styled-icons/material/AddCircleOutline';
+import { Add } from '@styled-icons/material/Add';
+import { GridView } from '@styled-icons/material/GridView';
+import { FlashlightOn } from '@styled-icons/material/FlashlightOn';
+import { FlashlightOff } from '@styled-icons/material/FlashlightOff';
 import { IpcCard, BotCard } from './ipc-card';
 
 export function DeviceMenu() {
@@ -30,24 +34,14 @@ export function DeviceMenu() {
 		<Dropdown backdrop='blur'>
 			<DropdownTrigger>
 				<Button isIconOnly variant='light'>
-					<PlusCircle size={24} />
+					<AddCircleOutline size={24} />
 				</Button>
 			</DropdownTrigger>
 			<DropdownMenu aria-label='Static Actions'>
-				<DropdownItem
-					key='addDevice'
-					as={Link}
-					href='/device/binding'
-					startContent={<SquaresPlus size={24} />}
-				>
+				<DropdownItem key='addDevice' as={Link} href='/device/binding' startContent={<Add size={24} />}>
 					{t('添加设备')}
 				</DropdownItem>
-				<DropdownItem
-					key='deviceGroup'
-					as={Link}
-					href='/device/group'
-					startContent={<RectangleGroup size={24} />}
-				>
+				<DropdownItem key='deviceGroup' as={Link} href='/device/group' startContent={<GridView size={24} />}>
 					{t('设备分组')}
 				</DropdownItem>
 			</DropdownMenu>
@@ -111,5 +105,27 @@ export function DeviceList() {
 				</div>
 			</AccordionItem>
 		</Accordion>
+	);
+}
+
+export function Flashlight(props) {
+	const { Component, slots, isSelected, getBaseProps, getInputProps, getWrapperProps } = useSwitch(props);
+
+	return (
+		<div className='flex'>
+			<Component {...getBaseProps()}>
+				<VisuallyHidden>
+					<input {...getInputProps()} />
+				</VisuallyHidden>
+				<div
+					{...getWrapperProps()}
+					className={slots.wrapper({
+						class: ['w-10 h-10', 'flex items-center justify-center', 'rounded-full bg-default-200'],
+					})}
+				>
+					{isSelected ? <FlashlightOn size={24} /> : <FlashlightOff size={24} />}
+				</div>
+			</Component>
+		</div>
 	);
 }

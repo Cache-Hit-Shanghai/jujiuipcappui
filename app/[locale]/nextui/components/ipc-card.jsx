@@ -12,12 +12,12 @@ import {
 	Image,
 } from '@nextui-org/react';
 import Link, { useJuJiuT } from '@/state/translate';
-import { Cog6Tooth } from '@styled-icons/heroicons-outline/Cog6Tooth';
-import { EllipsisHorizontal } from '@styled-icons/heroicons-outline/EllipsisHorizontal';
-import { VideoCamera } from '@styled-icons/heroicons-outline/VideoCamera';
-import { Webcam } from '@styled-icons/boxicons-regular/Webcam';
-import { Pets } from '@styled-icons/material-outlined/Pets';
-import { BatteryCharge } from '@styled-icons/typicons/BatteryCharge';
+import { Settings } from '@styled-icons/material/Settings';
+import { VideoLibrary } from '@styled-icons/material/VideoLibrary';
+import { MoreHoriz } from '@styled-icons/material/MoreHoriz';
+import { NestCamWiredStand } from '@styled-icons/material/NestCamWiredStand';
+import { Pets } from '@styled-icons/material/Pets';
+import { BatteryChargingFull } from '@styled-icons/material/BatteryChargingFull';
 
 function DeviceMenu() {
 	const t = useJuJiuT();
@@ -26,7 +26,7 @@ function DeviceMenu() {
 		<Dropdown backdrop='blur'>
 			<DropdownTrigger>
 				<Button isIconOnly variant='light'>
-					<EllipsisHorizontal size={24} />
+					<MoreHoriz size={24} />
 				</Button>
 			</DropdownTrigger>
 			<DropdownMenu aria-label='Static Actions'>
@@ -34,7 +34,7 @@ function DeviceMenu() {
 					key='records'
 					as={Link}
 					href='/device/streaming/record/'
-					startContent={<VideoCamera size={24} />}
+					startContent={<VideoLibrary size={24} />}
 				>
 					{t('录像查看')}
 				</DropdownItem>
@@ -42,7 +42,7 @@ function DeviceMenu() {
 					key='deviceSettings'
 					as={Link}
 					href='/device/settings'
-					startContent={<Cog6Tooth size={24} />}
+					startContent={<Settings size={24} />}
 				>
 					{t('设备设置')}
 				</DropdownItem>
@@ -60,7 +60,7 @@ export function IpcCard({ label, src, href, bodyChips, footerChips }) {
 			</CardBody>
 			<CardFooter className='flex justify-between items-center'>
 				<div className='flex items-center gap-2'>
-					<Webcam size={24} />
+					<NestCamWiredStand size={24} />
 					{label}
 					{...footerChips}
 				</div>
@@ -81,7 +81,7 @@ export function BotCard({ label, src, href, bodyChips, footerChips }) {
 				<div className='flex items-center gap-2'>
 					<Pets size={24} />
 					{label}
-					<BatteryCharge size={24} />
+					<BatteryChargingFull size={24} />
 					{...footerChips}
 				</div>
 				<DeviceMenu />

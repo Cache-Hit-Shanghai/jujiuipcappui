@@ -1,6 +1,7 @@
 'use client';
+
 import { NavbarBack, LinkButton } from '@/jujiu-ui-components/nextui/core/core-ui';
-import { Update } from 'styled-icons/material';
+import { Update } from '@styled-icons/material/Update';
 
 const Page = () => {
 	return (

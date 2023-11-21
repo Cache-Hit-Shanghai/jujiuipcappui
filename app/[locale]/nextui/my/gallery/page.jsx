@@ -3,7 +3,7 @@
 import { Card, CardHeader, CardBody } from '@nextui-org/react';
 import Link from '@/state/translate';
 import { NavbarBack } from '@/jujiu-ui-components/nextui/core/core-ui';
-import { PlayCircleIcon } from '@heroicons/react/24/outline';
+import { PlayCircleOutline } from '@styled-icons/material/PlayCircleOutline';
 import { useJuJiuT } from '@/state/translate';
 
 const LinkBoxImage = () => {
@@ -24,7 +24,7 @@ const LinkBoxVideo = () => {
 				as='a'
 				className='relative w-full h-full flex flex-col justify-center items-center bg-[url(https://tse1-mm.cn.bing.net/th/id/OIP-C.gKVRei8owN-eGgw20kPjwwHaE7?pid=ImgDet&rs=1)] rounded cursor-pointer'
 			>
-				<PlayCircleIcon className='absolute' width={'24px'} height={'24px'} />
+				<PlayCircleOutline className='absolute' size={24} />
 			</div>
 		</Link>
 	);

@@ -1,7 +1,7 @@
 'use client';
 
-import { NavbarBack } from '@/jujiu-ui-components/nextui/core/core-ui';
 import { Input, Textarea, Button } from '@nextui-org/react';
+import { NavbarBack } from '@/jujiu-ui-components/nextui/core/core-ui';
 
 const Page = () => {
 	return (

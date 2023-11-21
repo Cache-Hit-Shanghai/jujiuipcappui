@@ -6,7 +6,10 @@ import { useIdleTimer } from 'react-idle-timer';
 import { NavbarBack } from '@/jujiu-ui-components/nextui/core/core-ui';
 import { ChipRecording } from '@/jujiu-ui-components/nextui/core/core-chips';
 import { PanControl } from '@/jujiu-ui-components/nextui/ipc/video/panControl';
-import { StreamingControlBar } from '@/jujiu-ui-components/nextui/ipc/video/toolControl';
+import {
+	StreamingControlBar,
+	StreamingControlBar2,
+} from '@/jujiu-ui-components/nextui/ipc/video/toolControl';
 import { useJuJiuT } from '@/state/translate';
 
 export default function Page() {
@@ -47,6 +50,9 @@ export default function Page() {
 						/>
 						<div className='absolute left-0 inset-y-0 m-auto p-2 h-fit'>
 							<PanControl />
+						</div>
+						<div className='absolute right-0 top-0 p-2 h-fit'>
+							<StreamingControlBar2 />
 						</div>
 						<div className='absolute bottom-0 inset-x-0 m-auto p-2 w-fit flex flex-row gap-4'>
 							<StreamingControlBar />

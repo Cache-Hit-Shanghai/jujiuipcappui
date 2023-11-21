@@ -4,14 +4,14 @@ import { Button, Card, Tabs, Tab, Spinner } from '@nextui-org/react';
 import { NavbarBack, LinkButton } from '@/jujiu-ui-components/nextui/core/core-ui';
 import { ChipRecording } from '@/jujiu-ui-components/nextui/core/core-chips';
 import { PanControl } from '@/jujiu-ui-components/nextui/ipc/video/panControl';
-import { StreamingControlBar } from '@/jujiu-ui-components/nextui/ipc/video/toolControl';
+import {
+	StreamingControlBar,
+	StreamingControlBar2,
+} from '@/jujiu-ui-components/nextui/ipc/video/toolControl';
 import { useJuJiuT } from '@/state/translate';
 import { ScreenRotation } from '@styled-icons/material/ScreenRotation';
 import { Nightlight } from '@styled-icons/material/Nightlight';
-import { Settings } from '@styled-icons/material/Settings';
 import { WarningAmber } from '@styled-icons/material/WarningAmber';
-import { Cameraswitch } from '@styled-icons/material/Cameraswitch';
-import { IosShare } from '@styled-icons/material/IosShare';
 
 export default function Page() {
 	const t = useJuJiuT();
@@ -32,19 +32,7 @@ export default function Page() {
 								<ChipRecording label='00:02:34' className='absolute top-1 inset-x-0 mx-auto' />
 								<Spinner size='lg' className='absolute inset-0 m-auto' />
 								<div className='absolute top-1 right-1'>
-									<Button isIconOnly variant='light'>
-										<Cameraswitch size={24} />
-									</Button>
-									<LinkButton
-										className='text-white'
-										href='/device/settings/sharing'
-										icon={<IosShare size={24} className='text-white' />}
-									/>
-									<LinkButton
-										className='text-white'
-										href='/device/settings'
-										icon={<Settings size={24} className='text-white' />}
-									/>
+									<StreamingControlBar2 />
 								</div>
 								<LinkButton
 									className='absolute bottom-1 right-1 text-white'

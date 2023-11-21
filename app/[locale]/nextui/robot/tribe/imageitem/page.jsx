@@ -1,20 +1,21 @@
 'use client';
-import { NavbarBack } from '@/jujiu-ui-components/nextui/core/core-ui';
 
-import { Carousel } from 'react-responsive-carousel';
-import { CommentDots } from '@styled-icons/fa-regular/CommentDots';
-import { Favorite, StarOutline } from 'styled-icons/material-outlined';
-import { User, ShareFromSquare } from 'styled-icons/fa-solid';
-import Link, { useJuJiuT } from '@/state/translate';
-// import { Comments } from '../components';
-import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { Avatar, Button, Image } from '@nextui-org/react';
+import { Carousel } from 'react-responsive-carousel';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import { NavbarBack } from '@/jujiu-ui-components/nextui/core/core-ui';
+import { ChatBubbleOutline } from '@styled-icons/material/ChatBubbleOutline';
+import { FavoriteBorder } from '@styled-icons/material/FavoriteBorder';
+import { StarBorder } from '@styled-icons/material/StarBorder';
+import { Share } from '@styled-icons/material/Share';
+import { PersonOutline } from '@styled-icons/material/PersonOutline';
+import Link, { useJuJiuT } from '@/state/translate';
 
 function CommentBox() {
 	const t = useJuJiuT();
 
 	return (
-		<div pad='medium' flex={false} id='comments'>
+		<div pad='medium' id='comments' className='flex-none'>
 			<p className='text-xs'>共9条评论</p>
 			{/* <Comments /> */}
 		</div>
@@ -50,17 +51,14 @@ const Page = () => {
 	return (
 		<div className='flex flex-col h-screen'>
 			<NavbarBack>
-				<Avatar className='shrink-0' icon={<User width={'24px'} height={'24px'} />}></Avatar>
+				<Avatar className='shrink-0' icon={<PersonOutline size={24} />}></Avatar>
 				<p className='shrink-0'>庞大小姐</p>
-				<Button className='h-[32px] min-w-[72px]  p-0 flex-0' radius='full' color='success'>
+				<Button size='sm' radius='full' color='success'>
 					关注
 				</Button>
-
-				<Button
-					className='h-[48px] min-w-[48px]  p-0 flex-0'
-					variant='light'
-					endContent={<ShareFromSquare width={'24px'} height={'24px'} />}
-				/>
+				<Button isIconOnly variant='light'>
+					<Share size={24} />
+				</Button>
 			</NavbarBack>
 			<div className='flex flex-col shrink-0  overflow-auto px-4 gap-4'>
 				<Carousel dynamicHeight showArrows={false} showStatus={false} showThumbs={false}>
@@ -95,17 +93,16 @@ const Page = () => {
 				<Button className='h-[32px] min-w-[86px]' variant='bordered'>
 					发弹幕
 				</Button>
-				<div className='flex gap-2 items-center'>
-					<Favorite width={'24px'} height={'24px'} />
-					<span className='text-xs'>2166</span>
-					<StarOutline width={'24px'} height={'24px'} />
-					<span className='text-xs'>4064</span>
-					<Link href='#comments' replace passHref legacyBehavior>
-						<Button className='h-[32px] min-w-[86px]' variant='light' as='a' focusIndicator={false}>
-							<CommentDots width={'24px'} height={'24px'} />
-							<span className='text-xs'>9</span>
-						</Button>
-					</Link>
+				<div className='flex items-center'>
+					<Button variant='light' startContent={<FavoriteBorder size={24} />} as={Link} href='#star'>
+						<p className='text-xs'>2166</p>
+					</Button>
+					<Button variant='light' startContent={<StarBorder size={24} />} as={Link} href='#star'>
+						<p className='text-xs'>4064</p>
+					</Button>
+					<Button variant='light' startContent={<ChatBubbleOutline size={24} />} as={Link} href='#comments'>
+						<p className='text-xs'>9</p>
+					</Button>
 				</div>
 			</footer>
 		</div>

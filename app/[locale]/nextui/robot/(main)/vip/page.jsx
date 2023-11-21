@@ -2,11 +2,11 @@
 
 import { Button, Spacer, Image, Card, CardHeader, CardBody, Chip } from '@nextui-org/react';
 import Link, { useJuJiuT } from '@/state/translate';
-import { ExclamationCircle } from '@styled-icons/heroicons-outline/ExclamationCircle';
-import { CalendarCheck } from '@styled-icons/remix-line/CalendarCheck';
-import { Store } from '@styled-icons/remix-line/Store';
-import { Coupon } from '@styled-icons/remix-line/Coupon';
-import { VipDiamond } from '@styled-icons/remix-line/VipDiamond';
+import { ErrorOutline } from '@styled-icons/material/ErrorOutline';
+import { EventAvailable } from '@styled-icons/material/EventAvailable';
+import { Store } from '@styled-icons/material/Store';
+import { ConfirmationNumber } from '@styled-icons/material/ConfirmationNumber';
+import { Diamond } from '@styled-icons/material/Diamond';
 
 function CardButton({ label, description, icon, ...props }) {
 	return (
@@ -28,9 +28,9 @@ export default function Page() {
 	return (
 		<>
 			<div className='relative flex items-center justify-center p-2'>
-				<h4 className='py-2 text-2xl font-bold'>会员中心</h4>
+				<h4 className='py-2 text-2xl'>会员中心</h4>
 				<Button isIconOnly variant='light' as={Link} href='' className='absolute right-0'>
-					<ExclamationCircle size={24} />
+					<ErrorOutline size={24} />
 				</Button>
 			</div>
 			<div className='flex flex-col flex-1 px-4 gap-4 overflow-auto'>
@@ -56,13 +56,13 @@ export default function Page() {
 				</Card>
 				<Card className='grid grid-cols-2 gap-0.5 flex-none'>
 					<div className='flex flex-col h-16'>
-						<CardButton icon={<CalendarCheck size={36} />} label='签到' description='连续签到得积分' />
+						<CardButton icon={<EventAvailable size={36} />} label='签到' description='连续签到得积分' />
 					</div>
 					<div className='flex flex-col h-16'>
-						<CardButton icon={<Coupon size={36} />} label='优惠券' description='0张' />
+						<CardButton icon={<ConfirmationNumber size={36} />} label='优惠券' description='0张' />
 					</div>
 					<div className='flex flex-col h-16'>
-						<CardButton icon={<VipDiamond size={36} />} label='我的皮豆' description='0' />
+						<CardButton icon={<Diamond size={36} />} label='我的皮豆' description='0' />
 					</div>
 					<div className='flex flex-col h-16'>
 						<CardButton icon={<Store size={36} />} label='皮豆商城' description='实用好物' />

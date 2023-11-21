@@ -6,11 +6,11 @@ import { LinkButton } from '@/jujiu-ui-components/nextui/core/core-ui';
 import { ChipOnline, ChipFromFriends } from '@/jujiu-ui-components/nextui/core/core-chips';
 import { ChatControl } from '@/jujiu-ui-components/nextui/ipc/video/toolControl';
 import { useJuJiuT } from '@/state/translate';
-import { Battery2Charge } from '@styled-icons/remix-line/Battery2Charge';
-import { Walk } from '@styled-icons/remix-line/Walk';
-import { Magic } from '@styled-icons/remix-line/Magic';
-import { Settings3 } from '@styled-icons/remix-line/Settings3';
-import { Search } from '@styled-icons/remix-line/Search';
+import { BatteryChargingFull } from '@styled-icons/material/BatteryChargingFull';
+import { DirectionsWalk } from '@styled-icons/material/DirectionsWalk';
+import { AutoFixHigh } from '@styled-icons/material/AutoFixHigh';
+import { Settings } from '@styled-icons/material/Settings';
+import { Search } from '@styled-icons/material/Search';
 
 export function RobotCard() {
 	const t = useJuJiuT();
@@ -34,11 +34,11 @@ export function RobotCard() {
 				<CardFooter>
 					<div className=' w-full grid grid-cols-3 gap-y-4 justify-items-center'>
 						<LinkButton icon={<Search size={24} />} label={t('寻宠')} href='' />
-						<LinkButton icon={<Magic size={24} />} label={t('逗宠')} href='' />
-						<LinkButton icon={<Walk size={24} />} label={t('跟随')} href='' />
+						<LinkButton icon={<AutoFixHigh size={24} />} label={t('逗宠')} href='' />
+						<LinkButton icon={<DirectionsWalk size={24} />} label={t('跟随')} href='' />
 						<ChatControl showLabel speaking={speaking} onPress={() => setSpeaking(!speaking)} />
-						<LinkButton icon={<Battery2Charge size={24} />} label={t('回充')} href='' />
-						<LinkButton icon={<Settings3 size={24} />} label={t('设置')} href='/device/settings' />
+						<LinkButton icon={<BatteryChargingFull size={24} />} label={t('回充')} href='' />
+						<LinkButton icon={<Settings size={24} />} label={t('设置')} href='/device/settings' />
 					</div>
 				</CardFooter>
 			</Card>

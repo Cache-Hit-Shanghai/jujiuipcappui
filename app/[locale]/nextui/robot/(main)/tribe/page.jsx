@@ -3,8 +3,8 @@
 import { Tabs, Tab, User, Button, Image, Card, CardBody, CardFooter } from '@nextui-org/react';
 import Masonry from '@mui/lab/Masonry';
 import Link, { useJuJiuT } from '@/state/translate';
-import { Heart } from '@styled-icons/heroicons-outline/Heart';
-import { MagnifyingGlass } from '@styled-icons/heroicons-outline/MagnifyingGlass';
+import { FavoriteBorder } from '@styled-icons/material/FavoriteBorder';
+import { Search } from '@styled-icons/material/Search';
 
 const cardData = [
 	{
@@ -71,7 +71,7 @@ function ImageCard({ src, title, href }) {
 						}}
 						className='text-tiny'
 					/>
-					<Button size='sm' variant='light' startContent={<Heart size={18} />} className='p-0'>
+					<Button size='sm' variant='light' startContent={<FavoriteBorder size={18} />} className='p-0'>
 						<p className='text-tiny'>324</p>
 					</Button>
 				</div>
@@ -131,7 +131,7 @@ export default function Page() {
 					/>
 				</Tabs>
 				<Button isIconOnly variant='light'>
-					<MagnifyingGlass size={24} />
+					<Search size={24} />
 				</Button>
 			</div>
 			<div className='flex flex-col flex-1 px-2 overflow-auto'>

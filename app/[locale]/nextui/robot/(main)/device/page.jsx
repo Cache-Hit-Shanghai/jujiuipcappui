@@ -4,9 +4,9 @@ import { Button, Image, Select, SelectItem } from '@nextui-org/react';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import Link from '@/state/translate';
-import { ArrowPath } from '@styled-icons/heroicons-outline/ArrowPath';
-import { PlusCircle } from '@styled-icons/heroicons-outline/PlusCircle';
-import { ScanDash } from '@styled-icons/fluentui-system-filled/ScanDash';
+import { Cached } from '@styled-icons/material/Cached';
+import { AddCircleOutline } from '@styled-icons/material/AddCircleOutline';
+import { QrCodeScanner } from '@styled-icons/material/QrCodeScanner';
 import { RobotCard } from '../../components';
 
 export default function Page() {
@@ -33,13 +33,13 @@ export default function Page() {
 				</div>
 				<div className='flex items-center'>
 					<Button isIconOnly variant='light' as={Link} href='/nextui/device'>
-						<ArrowPath size={24} />
+						<Cached size={24} />
 					</Button>
 					<Button isIconOnly variant='light' as={Link} href='/nextui/device/scan'>
-						<ScanDash size={24} />
+						<QrCodeScanner size={24} />
 					</Button>
 					<Button isIconOnly variant='light' as={Link} href='/device/binding'>
-						<PlusCircle size={24} />
+						<AddCircleOutline size={24} />
 					</Button>
 				</div>
 			</div>

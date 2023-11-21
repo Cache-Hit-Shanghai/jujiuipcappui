@@ -1,4 +1,5 @@
 'use client';
+
 import { Card, CardBody } from '@nextui-org/react';
 import { NavbarBack } from '@/jujiu-ui-components/nextui/core/core-ui';
 import { ChangeAIAlarm } from '@/jujiu-ui-components/nextui/ipc/settings/notification';

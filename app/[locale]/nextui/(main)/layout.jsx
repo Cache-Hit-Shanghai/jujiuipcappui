@@ -17,7 +17,7 @@ const navTabsData = [
 	},
 ];
 
-export default async function MainLayout({ children }) {
+export default function MainLayout({ children }) {
 	return (
 		<div className='h-screen flex flex-col'>
 			{children}

@@ -11,7 +11,7 @@ const Page = () => {
 			<NavbarBack label={t('AI报警事件类型设置')} />
 			<div className='flex flex-col shrink-0  overflow-auto px-4 gap-4'>
 				<Card>
-					<CardBody className='py-0'>
+					<CardBody className='py-0 divide-y divide-divider'>
 						<ChangeAIAlarm />
 					</CardBody>
 				</Card>

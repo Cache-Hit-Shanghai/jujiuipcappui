@@ -12,7 +12,7 @@ const Page = () => {
 			<NavbarBack label={t('通知设置')} />
 			<div className='flex flex-col shrink-0 px-4 gap-4'>
 				<Card>
-					<CardBody className='py-0'>
+					<CardBody className='py-0 divide-y divide-divider'>
 						<ChangeNotification />
 					</CardBody>
 				</Card>

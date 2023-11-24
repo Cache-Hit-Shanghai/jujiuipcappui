@@ -1,7 +1,7 @@
 'use client';
 
 import { Avatar, Button } from '@nextui-org/react';
-import { NavbarBack } from '@/jujiu-ui-components/nextui/core/core-ui';
+import { NavbarBack, MobileHeader, MobileMain } from '@/jujiu-ui-components/nextui/core/core-ui';
 import { Login } from '@styled-icons/material/Login';
 import { Wechat } from '@styled-icons/remix-fill/Wechat';
 import { Alipay } from '@styled-icons/remix-fill/Alipay';
@@ -9,8 +9,10 @@ import { Alipay } from '@styled-icons/remix-fill/Alipay';
 const Page = () => {
 	return (
 		<div className='flex flex-col h-screen'>
-			<NavbarBack />
-			<div className='flex flex-col shrink-0 grow justify-center items-center px-4 gap-4'>
+			<MobileHeader>
+				<NavbarBack />
+			</MobileHeader>
+			<MobileMain className='justify-center gap-8'>
 				{[
 					{ Icon: Login, label: '密码登录' },
 					{ Icon: Wechat, label: '微信登录' },
@@ -21,7 +23,7 @@ const Page = () => {
 						<p>{label}</p>
 					</Button>
 				))}
-			</div>
+			</MobileMain>
 		</div>
 	);
 };

@@ -1,5 +1,6 @@
 'use client';
-import { NavbarBack } from '@/jujiu-ui-components/nextui/core/core-ui';
+
+import { NavbarBack, MobileHeader, MobileMain } from '@/jujiu-ui-components/nextui/core/core-ui';
 import { Switch, Card, CardBody } from '@nextui-org/react';
 
 const packages = [
@@ -11,8 +12,10 @@ const packages = [
 const Page = () => {
 	return (
 		<div className='flex flex-col h-screen'>
-			<NavbarBack label={'云存储设置'} />
-			<div className='flex flex-col grow shrink-0  overflow-auto px-4 gap-4'>
+			<MobileHeader>
+				<NavbarBack label='云存储设置' />
+			</MobileHeader>
+			<MobileMain>
 				<div className='flex'>
 					<div>
 						<p>云存储服务</p>
@@ -21,9 +24,9 @@ const Page = () => {
 					<Switch></Switch>
 				</div>
 				<Card>
-					<CardBody>
+					<CardBody className='py-0 divide-y divide-divider'>
 						{packages.map(({ title, start, end, current }) => (
-							<div className='flex justify-between items-center gap-1 p-2 border-b border-solid border-gray-400'>
+							<div className='flex justify-between items-center gap-1 p-2 border-solid border-gray-400'>
 								<div className='flex items-center gap-1'>
 									<p className='text-sm'>{title}</p>
 									{current && (
@@ -40,7 +43,7 @@ const Page = () => {
 						))}
 					</CardBody>
 				</Card>
-			</div>
+			</MobileMain>
 		</div>
 	);
 };

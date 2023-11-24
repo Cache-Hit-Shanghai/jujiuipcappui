@@ -2,7 +2,7 @@
 
 import { Card, CardHeader, CardBody } from '@nextui-org/react';
 import Link from '@/state/translate';
-import { NavbarBack } from '@/jujiu-ui-components/nextui/core/core-ui';
+import { NavbarBack, MobileHeader, MobileMain } from '@/jujiu-ui-components/nextui/core/core-ui';
 import { PlayCircleOutline } from '@styled-icons/material/PlayCircleOutline';
 import { useJuJiuT } from '@/state/translate';
 
@@ -35,9 +35,10 @@ const Page = () => {
 
 	return (
 		<div className='flex flex-1 flex-col '>
-			<NavbarBack label={t('相册') + ' ' + t('剩余容量', { space: 100 })} />
-
-			<div className='flex flex-col  shrink-0 px-4 gap-4 overflow-auto '>
+			<MobileHeader>
+				<NavbarBack label={t('相册') + ' ' + t('剩余容量', { space: 100 })} />
+			</MobileHeader>
+			<MobileMain>
 				{[
 					{ date: '2023/7/4', Component: LinkBoxVideo, length: 20 },
 					{ date: '2023/7/5', Component: LinkBoxImage, length: 20 },
@@ -55,7 +56,7 @@ const Page = () => {
 						</CardBody>
 					</Card>
 				))}
-			</div>
+			</MobileMain>
 		</div>
 	);
 };

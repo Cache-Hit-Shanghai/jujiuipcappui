@@ -1,6 +1,7 @@
 'use client';
-import { NavbarBack, LinkButton } from '@/jujiu-ui-components/nextui/core/core-ui';
-import { Card, CardBody, CardHeader, Checkbox, Badge, Button } from '@nextui-org/react';
+
+import { NavbarBack, MobileHeader, MobileMain } from '@/jujiu-ui-components/nextui/core/core-ui';
+import { Card, CardBody, Checkbox, Badge, Button } from '@nextui-org/react';
 import { Alipay } from '@styled-icons/remix-fill/Alipay';
 import { WechatPay } from '@styled-icons/remix-line/WechatPay';
 import Link from 'next/link';
@@ -35,9 +36,10 @@ const list = [
 const Page = () => {
 	return (
 		<div className='flex flex-col h-screen'>
-			<NavbarBack label={'套餐选择'} />
-			<div className='flex flex-col shrink-0 grow  overflow-auto px-4 gap-4'>
-				<div className='h-px'></div>
+			<MobileHeader>
+				<NavbarBack label={'套餐选择'} />
+			</MobileHeader>
+			<MobileMain>
 				{list.map(({ day, name, price, discount = 0 }, i) => (
 					<Badge
 						key={i}
@@ -64,8 +66,8 @@ const Page = () => {
 						</Card>
 					</Badge>
 				))}
-			</div>
-			<div className='flex flex-col shrink-0 gap-1 p-2 sticky z-20 bottom-0 left-0 right-0 bg-content1  shadow-medium '>
+			</MobileMain>
+			<div className='flex flex-col shrink-0 gap-1 p-2 sticky z-20 bottom-0 left-0 right-0'>
 				<div className='flex justify-between items-end'>
 					<p className='text-xs'>已优惠:￥101</p>
 					<p className='text-xs'>

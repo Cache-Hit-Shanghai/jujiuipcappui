@@ -1,6 +1,6 @@
 'use client';
 
-import { NavbarBack, LinkButton } from '@/jujiu-ui-components/nextui/core/core-ui';
+import { NavbarBack, LinkButton, MobileHeader, MobileMain } from '@/jujiu-ui-components/nextui/core/core-ui';
 import { Card, CardHeader, CardBody, CardFooter, Avatar } from '@nextui-org/react';
 import { NestCamWiredStand } from '@styled-icons/material/NestCamWiredStand';
 
@@ -10,11 +10,10 @@ const btnClass = 'bg-green-300 rounded-full h-[36px]';
 const Page = () => {
 	return (
 		<div className='flex flex-col h-screen'>
-			<NavbarBack label='云存储' />
-			<div className='flex flex-col grow shrink-0  overflow-auto px-4 gap-4'>
-				<div>
-					<p className='text-xs'>不会丢失的录像文件存储。</p>
-				</div>
+			<MobileHeader>
+				<NavbarBack label='云存储' />
+			</MobileHeader>
+			<MobileMain>
 				<Card>
 					<CardHeader className='text-2xl font-semibold'>安全、可靠的云存储</CardHeader>
 					<CardBody className='text-sm'>
@@ -43,7 +42,7 @@ const Page = () => {
 						<LinkButton className={btnClass} href='./pay' label='续订'></LinkButton>
 					</CardFooter>
 				</Card>
-			</div>
+			</MobileMain>
 		</div>
 	);
 };

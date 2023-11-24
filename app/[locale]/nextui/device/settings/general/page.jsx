@@ -24,7 +24,7 @@ export default function Page() {
 				<Card className='flex-none'>
 					<CardBody className='py-0 divide-y divide-divider'>
 						<LabeledControl label={t('设备名称')}>
-							<div>
+							<div className='w-1/2'>
 								<Input size='sm' labelPlacement='outside' value='办3' />
 							</div>
 						</LabeledControl>

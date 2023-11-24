@@ -8,6 +8,8 @@ import {
 	UsnDisplay,
 	WiFiDisplay,
 	FeaturesDisplay,
+	MobileHeader,
+	MobileMain,
 } from '@/jujiu-ui-components/nextui/core/core-ui';
 import { useJuJiuT } from '@/state/translate';
 
@@ -16,10 +18,10 @@ export default function Page() {
 
 	return (
 		<div className='h-screen flex flex-col'>
-			<div className='flex items-center justify-between'>
+			<MobileHeader>
 				<NavbarBack label={t('设备信息') + ' - 办3'} />
-			</div>
-			<div className='flex flex-1 flex-col px-4 gap-4'>
+			</MobileHeader>
+			<MobileMain>
 				<Card className='flex-none'>
 					<CardBody className='py-0 divide-y divide-divider'>
 						<TextDisplay label={t('设备型号')} text='GC50' />
@@ -44,7 +46,7 @@ export default function Page() {
 						<TextDisplay label={t('已开机')} text='1574:41:05' />
 					</CardBody>
 				</Card>
-			</div>
+			</MobileMain>
 		</div>
 	);
 }

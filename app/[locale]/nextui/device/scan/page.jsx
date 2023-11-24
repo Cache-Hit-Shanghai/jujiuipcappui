@@ -2,7 +2,7 @@
 
 import { Button } from '@nextui-org/react';
 import { motion } from 'framer-motion';
-import { NavbarBack } from '@/jujiu-ui-components/nextui/core/core-ui';
+import { NavbarBack, MobileHeader, MobileMain } from '@/jujiu-ui-components/nextui/core/core-ui';
 import { PhotoAlbum } from '@styled-icons/material/PhotoAlbum';
 import { useJuJiuT } from '@/state/translate';
 import { Flashlight } from '../../components';
@@ -12,11 +12,11 @@ export default function Page() {
 
 	return (
 		<div className='relative h-screen flex flex-col'>
-			<div className='absolute flex items-center justify-between'>
+			<MobileHeader className='absolute'>
 				<NavbarBack label={t('扫一扫')} />
-			</div>
-			<div
-				className='flex flex-1 flex-col bg-[length:20px_20px] bg-repeat'
+			</MobileHeader>
+			<MobileMain
+				className='p-0 bg-[length:20px_20px] bg-repeat'
 				style={{
 					backgroundImage:
 						'linear-gradient(to bottom, transparent 19px, rgba(255, 255, 255, 0.1) 20px), linear-gradient(to right, transparent 19px, rgba(255, 255, 255, 0.1) 20px)',
@@ -34,7 +34,7 @@ export default function Page() {
 						transition={{ ease: 'linear', repeat: Infinity, duration: 1.5 }}
 					/>
 				</div>
-			</div>
+			</MobileMain>
 			<div className='absolute bottom-0 inset-x-0 py-10 flex flex-row justify-evenly'>
 				<Flashlight />
 				<Button isIconOnly radius='full'>

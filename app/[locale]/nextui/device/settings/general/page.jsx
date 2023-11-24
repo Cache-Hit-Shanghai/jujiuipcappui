@@ -1,7 +1,12 @@
 'use client';
 
 import { Card, CardBody, Input, RadioGroup, Radio, Switch, Slider, Button } from '@nextui-org/react';
-import { NavbarBack, LabeledControl } from '@/jujiu-ui-components/nextui/core/core-ui';
+import {
+	NavbarBack,
+	LabeledControl,
+	MobileHeader,
+	MobileMain,
+} from '@/jujiu-ui-components/nextui/core/core-ui';
 import { Sleep } from '@/jujiu-ui-components/nextui/ipc/settings/sleep';
 import { useJuJiuT } from '@/state/translate';
 
@@ -10,10 +15,10 @@ export default function Page() {
 
 	return (
 		<div className='h-screen flex flex-col'>
-			<div className='flex items-center justify-between'>
+			<MobileHeader>
 				<NavbarBack label={t('通用设置') + ' - 办3'} />
-			</div>
-			<div className='flex flex-1 flex-col px-4 gap-4 overflow-auto'>
+			</MobileHeader>
+			<MobileMain>
 				<Card className='flex-none'>
 					<CardBody className='py-0 divide-y divide-divider'>
 						<LabeledControl label={t('设备名称')}>
@@ -62,7 +67,7 @@ export default function Page() {
 						</Button>
 					</CardBody>
 				</Card>
-			</div>
+			</MobileMain>
 		</div>
 	);
 }

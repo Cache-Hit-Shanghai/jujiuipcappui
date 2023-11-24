@@ -1,7 +1,7 @@
 'use client';
 
 import { Button, Card, Tabs, Tab, Spinner } from '@nextui-org/react';
-import { NavbarBack, LinkButton } from '@/jujiu-ui-components/nextui/core/core-ui';
+import { NavbarBack, LinkButton, MobileHeader, MobileMain } from '@/jujiu-ui-components/nextui/core/core-ui';
 import { ChipRecording } from '@/jujiu-ui-components/nextui/core/core-chips';
 import { PanControl } from '@/jujiu-ui-components/nextui/ipc/video/panControl';
 import {
@@ -18,10 +18,10 @@ export default function Page() {
 
 	return (
 		<div className='h-screen flex flex-col'>
-			<div className='flex items-center justify-between'>
+			<MobileHeader>
 				<NavbarBack label={t('实时视频') + ' - 办3'} />
-			</div>
-			<div className='flex flex-1 flex-col px-4 gap-4'>
+			</MobileHeader>
+			<MobileMain>
 				<Card className='pt-3'>
 					<Tabs className='self-center'>
 						<Tab key='拉流成功' title='拉流成功'>
@@ -79,7 +79,7 @@ export default function Page() {
 						/>
 					</Card>
 				</div>
-			</div>
+			</MobileMain>
 			<div className='py-2 flex flex-row justify-evenly'>
 				<StreamingControlBar showLabel />
 			</div>

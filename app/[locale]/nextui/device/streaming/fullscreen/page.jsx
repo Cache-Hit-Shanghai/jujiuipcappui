@@ -3,7 +3,7 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
 import { useIdleTimer } from 'react-idle-timer';
-import { NavbarBack } from '@/jujiu-ui-components/nextui/core/core-ui';
+import { NavbarBack, MobileMain } from '@/jujiu-ui-components/nextui/core/core-ui';
 import { ChipRecording } from '@/jujiu-ui-components/nextui/core/core-chips';
 import { PanControl } from '@/jujiu-ui-components/nextui/ipc/video/panControl';
 import {
@@ -23,14 +23,14 @@ export default function Page() {
 
 	return (
 		<div className='h-screen flex flex-col'>
-			<div className='flex flex-1 flex-col'>
-				<video muted autoPlay loop className='object-contain'>
+			<MobileMain className='p-0'>
+				<video muted autoPlay loop className='h-full w-full object-contain'>
 					<source
 						src='https://test-videos.co.uk/vids/bigbuckbunny/mp4/h265/1080/Big_Buck_Bunny_1080_10s_1MB.mp4'
 						type='video/mp4'
 					/>
 				</video>
-			</div>
+			</MobileMain>
 			<ChipRecording label='00:02:34' className='absolute top-1 inset-x-0 mx-auto' />
 			<AnimatePresence>
 				{show && (

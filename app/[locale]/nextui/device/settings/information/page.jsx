@@ -1,6 +1,6 @@
 'use client';
 
-import { Button, Card, CardBody, Listbox, ListboxItem, Tabs, Tab } from '@nextui-org/react';
+import { Card, CardBody } from '@nextui-org/react';
 import {
 	NavbarBack,
 	TextDisplay,

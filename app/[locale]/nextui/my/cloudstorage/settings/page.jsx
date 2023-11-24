@@ -1,7 +1,7 @@
 'use client';
 
+import { Switch, Card, CardBody, Chip } from '@nextui-org/react';
 import { NavbarBack, MobileHeader, MobileMain } from '@/jujiu-ui-components/nextui/core/core-ui';
-import { Switch, Card, CardBody } from '@nextui-org/react';
 
 const packages = [
 	{ title: '7天月套餐', start: '2023/08/10', end: '2023/09/10', current: true },
@@ -16,28 +16,35 @@ const Page = () => {
 				<NavbarBack label='云存储设置' />
 			</MobileHeader>
 			<MobileMain>
-				<div className='flex'>
-					<div>
-						<p>云存储服务</p>
-						<p className='text-xs text-stone-400'>云存储服务暂停后，录像将停止上传，服务有效期不会延长。</p>
-					</div>
-					<Switch></Switch>
-				</div>
+				<Card>
+					<CardBody className='flex flex-row items-center justify-between gap-4'>
+						<div>
+							<p>云存储服务</p>
+							<p className='text-xs text-default-500'>
+								云存储服务暂停后，录像将停止上传，服务有效期不会延长。
+							</p>
+						</div>
+						<Switch />
+					</CardBody>
+				</Card>
 				<Card>
 					<CardBody className='py-0 divide-y divide-divider'>
 						{packages.map(({ title, start, end, current }) => (
-							<div className='flex justify-between items-center gap-1 p-2 border-solid border-gray-400'>
-								<div className='flex items-center gap-1'>
+							<div
+								key={title}
+								className='flex justify-between items-center gap-1 p-2 border-solid border-gray-400'
+							>
+								<div className='flex items-center gap-2'>
 									<p className='text-sm'>{title}</p>
 									{current && (
-										<p className='h-[22px] rounded-[22px] leading-[22px] bg-emerald-400 text-xs px-2'>
+										<Chip size='sm' color='primary'>
 											当前套餐
-										</p>
+										</Chip>
 									)}
 								</div>
 								<div>
-									<p className='text-xs text-stone-400'>{start}</p>
-									<p className='text-xs text-stone-400'>{end}</p>
+									<p className='text-xs text-default-500'>{start}</p>
+									<p className='text-xs text-default-500'>{end}</p>
 								</div>
 							</div>
 						))}

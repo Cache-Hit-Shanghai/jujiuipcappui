@@ -1,10 +1,10 @@
 'use client';
 
+import { Card, CardBody, Checkbox, Badge, Button, Link } from '@nextui-org/react';
 import { NavbarBack, MobileHeader, MobileMain } from '@/jujiu-ui-components/nextui/core/core-ui';
-import { Card, CardBody, Checkbox, Badge, Button } from '@nextui-org/react';
 import { Alipay } from '@styled-icons/remix-fill/Alipay';
 import { WechatPay } from '@styled-icons/remix-line/WechatPay';
-import Link from 'next/link';
+import LocalizedLink from '@/state/translate';
 
 const list = [
 	{
@@ -74,7 +74,7 @@ const Page = () => {
 						需支付:<span className='text-sm text-blue-400'>￥199</span>
 					</p>
 				</div>
-				<div className='flex justify-evenly gap-1'>
+				<div className='flex justify-between gap-1'>
 					{[
 						{ Icon: WechatPay, className: 'bg-[#1aad19]' },
 						{ Icon: Alipay, className: 'bg-[#1678ff]' },
@@ -89,9 +89,9 @@ const Page = () => {
 					))}
 				</div>
 				<div className='flex justify-center'>
-					<p className='text-xs'>
-						请阅读{' '}
-						<Link href='/doc/cloud-storage-service' className='text-green-300'>
+					<p className='text-sm'>
+						请阅读
+						<Link size='sm' as={LocalizedLink} href='/doc/cloud-storage-service'>
 							《云存储服务条款》
 						</Link>
 					</p>

@@ -1,11 +1,10 @@
 'use client';
 
+import { Card, CardHeader, CardBody, CardFooter, Avatar, Chip } from '@nextui-org/react';
 import { NavbarBack, LinkButton, MobileHeader, MobileMain } from '@/jujiu-ui-components/nextui/core/core-ui';
-import { Card, CardHeader, CardBody, CardFooter, Avatar } from '@nextui-org/react';
 import { NestCamWiredStand } from '@styled-icons/material/NestCamWiredStand';
 
 const tagClass = 'h-[26px] rounded-[26px] leading-[26px] bg-orange-800 text-xs px-2';
-const btnClass = 'bg-green-300 rounded-full h-[36px]';
 
 const Page = () => {
 	return (
@@ -27,19 +26,23 @@ const Page = () => {
 							<span>办3</span>
 						</div>
 						<div className='flex flex-col gap-3'>
-							<div className='flex  gap-1'>
-								<p className={tagClass}>7天循环存储</p>
-								<p className={tagClass}>24小时录像</p>
+							<div className='flex  gap-2'>
+								<Chip size='sm' color='success'>
+									7天循环存储
+								</Chip>
+								<Chip size='sm' color='success'>
+									24小时录像
+								</Chip>
 							</div>
 							<div className='flex flex-col items-end'>
-								<p className='text-sm text-emerald-400'>正常使用中</p>
-								<p className='text-xs text-stone-400'>将于2023.8.24日到期</p>
+								<p className='text-sm text-success'>正常使用中</p>
+								<p className='text-xs text-default-500'>将于2023.8.24日到期</p>
 							</div>
 						</div>
 					</CardBody>
 					<CardFooter className='flex justify-evenly'>
-						<LinkButton className={btnClass} href='./settings' label='设置'></LinkButton>
-						<LinkButton className={btnClass} href='./pay' label='续订'></LinkButton>
+						<LinkButton variant='solid' color='primary' href='./settings' label='设置' />
+						<LinkButton variant='solid' color='secondary' href='./pay' label='续订' />
 					</CardFooter>
 				</Card>
 			</MobileMain>

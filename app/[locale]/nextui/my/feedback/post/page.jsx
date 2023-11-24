@@ -1,7 +1,7 @@
 'use client';
 
 import { Button, Chip, Card, CardHeader, CardBody, Textarea } from '@nextui-org/react';
-import { NavbarBack } from '@/jujiu-ui-components/nextui/core/core-ui';
+import { NavbarBack, MobileHeader, MobileMain } from '@/jujiu-ui-components/nextui/core/core-ui';
 
 const content = `
 ## 主要步骤如下
@@ -14,20 +14,30 @@ const content = `
 const Page = () => {
 	return (
 		<div className='flex flex-col h-screen'>
-			<NavbarBack label={'帮助与反馈'} />
-			<div className='flex flex-col grow shrink-0  overflow-auto px-4 gap-4'>
+			<MobileHeader>
+				<NavbarBack label={'帮助与反馈'} />
+			</MobileHeader>
+			<MobileMain>
 				<div className='flex gap-2 shrink-0 items-center'>
 					<h2>一个非常非常长的标题一个非常非常长的标题一个非常非常长的标题</h2>
-					<Button color='primary' variant='bordered'>
-						编辑
-					</Button>
+					<Button color='primary'>编辑</Button>
 				</div>
 				<div className='flex gap-1'>
-					<Chip color='danger'>bug</Chip>
-					<Chip color='primary'>建议</Chip>
-					<Chip color='secondary'>功能</Chip>
-					<Chip color='success'>文档</Chip>
-					<Chip color='warning'>帮助</Chip>
+					<Chip size='sm' color='danger'>
+						bug
+					</Chip>
+					<Chip size='sm' color='primary'>
+						建议
+					</Chip>
+					<Chip size='sm' color='secondary'>
+						功能
+					</Chip>
+					<Chip size='sm' color='success'>
+						文档
+					</Chip>
+					<Chip size='sm' color='warning'>
+						帮助
+					</Chip>
 				</div>
 				<Card>
 					<CardHeader>
@@ -38,14 +48,14 @@ const Page = () => {
 					</CardBody>
 				</Card>
 				<Card className='sticky  bottom-0'>
-					<CardBody className='gap-2'>
+					<CardBody className='gap-4'>
 						<Textarea></Textarea>
 						<div className='flex justify-end'>
-							<Button color='success'>发布</Button>
+							<Button color='secondary'>发布</Button>
 						</div>
 					</CardBody>
 				</Card>
-			</div>
+			</MobileMain>
 		</div>
 	);
 };

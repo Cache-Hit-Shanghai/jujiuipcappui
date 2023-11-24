@@ -1,6 +1,7 @@
 'use client';
 
-import { NavbarBack, LinkButton } from '@/jujiu-ui-components/nextui/core/core-ui';
+import { Card, CardBody } from '@nextui-org/react';
+import { NavbarBack, LinkButton, MobileHeader, MobileMain } from '@/jujiu-ui-components/nextui/core/core-ui';
 import { NestCamWiredStand } from '@styled-icons/material/NestCamWiredStand';
 
 const data = [
@@ -12,30 +13,32 @@ const data = [
 const Page = () => {
 	return (
 		<div className='flex flex-col h-screen'>
-			<NavbarBack label={'固件升级'} />
-			<div className='flex flex-col shrink-0  overflow-auto px-4 gap-4'>
+			<MobileHeader>
+				<NavbarBack label={'固件升级'} />
+			</MobileHeader>
+			<MobileMain>
 				{data.map(({ device, size, from, to }, i) => (
-					<div key={i} className='flex  border-b justify-between items-center gap-2'>
-						<div className='flex  items-center gap-2'>
-							<NestCamWiredStand size={48} />
-							<div>
-								<p>{device}</p>
-								<p>{size}</p>
-								<p>
-									{from} ~ {to}
-								</p>
+					<Card key={i}>
+						<CardBody>
+							<div className='flex justify-between items-center gap-2'>
+								<div className='flex  items-center gap-2'>
+									<NestCamWiredStand size={48} />
+									<div>
+										<p>{device}</p>
+										<p className='text-xs text-default-500'>{size}</p>
+										<p className='text-xs text-default-500'>
+											{from} ~ {to}
+										</p>
+									</div>
+								</div>
+								<div>
+									<LinkButton variant='solid' color='primary' href='./otainfo' label='现在升级'></LinkButton>
+								</div>
 							</div>
-						</div>
-						<div>
-							<LinkButton
-								href='./otainfo'
-								label='现在升级'
-								className={'rounded-full bg-success h-[36px]'}
-							></LinkButton>
-						</div>
-					</div>
+						</CardBody>
+					</Card>
 				))}
-			</div>
+			</MobileMain>
 		</div>
 	);
 };

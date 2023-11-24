@@ -38,12 +38,7 @@ function DeviceMenu() {
 				>
 					{t('录像查看')}
 				</DropdownItem>
-				<DropdownItem
-					key='deviceSettings'
-					as={Link}
-					href='/device/settings'
-					startContent={<Settings size={24} />}
-				>
+				<DropdownItem key='deviceSettings' as={Link} href='./settings' startContent={<Settings size={24} />}>
 					{t('设备设置')}
 				</DropdownItem>
 			</DropdownMenu>

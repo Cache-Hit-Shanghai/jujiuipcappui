@@ -1,7 +1,7 @@
 'use client';
 
 import { Button, Image, Badge, Avatar } from '@nextui-org/react';
-import { ThemeButton, LinkGroup } from '@/jujiu-ui-components/nextui/core/core-ui';
+import { ThemeButton, LinkGroup, MobileHeader, MobileMain } from '@/jujiu-ui-components/nextui/core/core-ui';
 import Link, { useJuJiuT } from '@/state/translate';
 import { MailOutline } from '@styled-icons/material/MailOutline';
 import { Settings } from '@styled-icons/material/Settings';
@@ -36,7 +36,7 @@ export default function Page() {
 
 	return (
 		<>
-			<div className='flex items-center justify-end p-2'>
+			<MobileHeader className='justify-end'>
 				<ThemeButton />
 				<Button isIconOnly variant='light' as={Link} href=''>
 					<PermIdentity size={24} />
@@ -49,13 +49,13 @@ export default function Page() {
 				<Button isIconOnly variant='light' as={Link} href='./settings'>
 					<Settings size={24} />
 				</Button>
-			</div>
+			</MobileHeader>
 			<div className='flex flex-col items-center pb-4 gap-2'>
 				<Avatar src='https://i.pravatar.cc/150?u=a04258114e29026708c' className='w-20 h-20 text-large' />
 				<p>暴走的鸡腿</p>
 				<p>关注: 1 粉丝: 0 好友: 4</p>
 			</div>
-			<div className='flex flex-col flex-1 px-4 gap-4 overflow-auto'>
+			<MobileMain>
 				<LinkGroup data={linkData0} />
 				<Carousel
 					autoPlay
@@ -69,7 +69,7 @@ export default function Page() {
 					<Image src='https://pixelbot.oss-accelerate.aliyuncs.com/my3.jpg' />
 				</Carousel>
 				<LinkGroup data={linkData1} />
-			</div>
+			</MobileMain>
 		</>
 	);
 }

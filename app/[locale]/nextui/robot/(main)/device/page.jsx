@@ -7,12 +7,13 @@ import Link from '@/state/translate';
 import { Cached } from '@styled-icons/material/Cached';
 import { AddCircleOutline } from '@styled-icons/material/AddCircleOutline';
 import { QrCodeScanner } from '@styled-icons/material/QrCodeScanner';
+import { MobileHeader, MobileMain } from '@/jujiu-ui-components/nextui/core/core-ui';
 import { RobotCard } from '../../components';
 
 export default function Page() {
 	return (
 		<>
-			<div className='p-2 flex items-center justify-between'>
+			<MobileHeader>
 				<div className='px-2 flex w-1/2'>
 					<Select
 						size='sm'
@@ -42,8 +43,8 @@ export default function Page() {
 						<AddCircleOutline size={24} />
 					</Button>
 				</div>
-			</div>
-			<div className='px-4 py-1 flex flex-col flex-1 gap-4 overflow-auto'>
+			</MobileHeader>
+			<MobileMain>
 				<RobotCard />
 				<Carousel
 					autoPlay
@@ -57,7 +58,7 @@ export default function Page() {
 					<Image src='https://pixelbot.oss-accelerate.aliyuncs.com/Weixin%20Image_20231116164752.png' />
 					<Image src='https://pixelbot.oss-accelerate.aliyuncs.com/Weixin%20Image_20231116164801.png' />
 				</Carousel>
-			</div>
+			</MobileMain>
 		</>
 	);
 }

@@ -1,7 +1,13 @@
 'use client';
 
 import { Button, User, Card, CardBody } from '@nextui-org/react';
-import { LinkButton, LinkGroup, ThemeButton } from '@/jujiu-ui-components/nextui/core/core-ui';
+import {
+	LinkButton,
+	LinkGroup,
+	ThemeButton,
+	MobileHeader,
+	MobileMain,
+} from '@/jujiu-ui-components/nextui/core/core-ui';
 import Link, { useJuJiuT } from '@/state/translate';
 import { PhotoAlbum } from '@styled-icons/material/PhotoAlbum';
 import { CloudUpload } from '@styled-icons/material/CloudUpload';
@@ -21,7 +27,7 @@ export default function Page() {
 
 	return (
 		<>
-			<div className='flex items-center justify-between p-2'>
+			<MobileHeader>
 				<Button variant='light' as={Link} href='./login'>
 					<User
 						name='Jane Doe'
@@ -34,8 +40,8 @@ export default function Page() {
 				<div className='px-2'>
 					<ThemeButton />
 				</div>
-			</div>
-			<div className='flex flex-col flex-1 px-4 gap-4'>
+			</MobileHeader>
+			<MobileMain>
 				<Card>
 					<CardBody>
 						<div className='flex flex-row justify-evenly'>
@@ -54,7 +60,7 @@ export default function Page() {
 					</CardBody>
 				</Card>
 				<LinkGroup data={links} />
-			</div>
+			</MobileMain>
 		</>
 	);
 }

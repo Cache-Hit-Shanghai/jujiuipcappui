@@ -2,6 +2,7 @@
 
 import { Tabs, Tab, User, Button, Image, Card, CardBody, CardFooter } from '@nextui-org/react';
 import Masonry from '@mui/lab/Masonry';
+import { MobileHeader, MobileMain } from '@/jujiu-ui-components/nextui/core/core-ui';
 import Link, { useJuJiuT } from '@/state/translate';
 import { FavoriteBorder } from '@styled-icons/material/FavoriteBorder';
 import { Search } from '@styled-icons/material/Search';
@@ -85,15 +86,16 @@ export default function Page() {
 
 	return (
 		<>
-			<div className='flex items-center justify-between p-2'>
+			<MobileHeader>
 				<Tabs
 					aria-label='Options'
+					size='sm'
 					color='primary'
 					variant='underlined'
 					classNames={{
 						tabList: 'gap-6 w-full relative rounded-none p-0 border-b border-divider',
 						cursor: 'w-full bg-primary',
-						tab: 'max-w-fit px-0 h-12',
+						tab: 'max-w-fit p-0',
 						tabContent: 'group-data-[selected=true]:text-primary',
 					}}
 				>
@@ -133,14 +135,14 @@ export default function Page() {
 				<Button isIconOnly variant='light'>
 					<Search size={24} />
 				</Button>
-			</div>
-			<div className='flex flex-col flex-1 px-2 overflow-auto'>
+			</MobileHeader>
+			<MobileMain>
 				<Masonry columns={2} style={{ margin: 0 }}>
 					{cardData.map((datum, i) => (
 						<ImageCard key={i} src={datum.src} title={datum.title} href={datum.href} />
 					))}
 				</Masonry>
-			</div>
+			</MobileMain>
 		</>
 	);
 }

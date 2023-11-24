@@ -2,6 +2,7 @@
 
 import { Button, Badge } from '@nextui-org/react';
 import { AppLogo } from '@/jujiu-ui-components/nextui/ipc/about/brand';
+import { MobileHeader, MobileMain } from '@/jujiu-ui-components/nextui/core/core-ui';
 import Link from '@/state/translate';
 import { MailOutline } from '@styled-icons/material/MailOutline';
 import { QrCodeScanner } from '@styled-icons/material/QrCodeScanner';
@@ -11,7 +12,7 @@ import { DeviceList, DeviceMenu } from '../../components';
 export default function Page() {
 	return (
 		<>
-			<div className='flex items-center justify-between p-2 bg-transparent'>
+			<MobileHeader>
 				<AppLogo />
 				<div className='flex items-center'>
 					<Button isIconOnly variant='light' as={Link} href='/nextui/robot/device'>
@@ -27,10 +28,10 @@ export default function Page() {
 					</Button>
 					<DeviceMenu />
 				</div>
-			</div>
-			<div className='px-4 py-1 flex flex-1 overflow-auto'>
+			</MobileHeader>
+			<MobileMain>
 				<DeviceList />
-			</div>
+			</MobileMain>
 		</>
 	);
 }

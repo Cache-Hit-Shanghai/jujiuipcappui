@@ -2,6 +2,7 @@
 
 import { Button, Spacer, Image, Card, CardHeader, CardBody, Chip } from '@nextui-org/react';
 import Link, { useJuJiuT } from '@/state/translate';
+import { MobileHeader, MobileMain } from '@/jujiu-ui-components/nextui/core/core-ui';
 import { ErrorOutline } from '@styled-icons/material/ErrorOutline';
 import { EventAvailable } from '@styled-icons/material/EventAvailable';
 import { Store } from '@styled-icons/material/Store';
@@ -27,13 +28,13 @@ export default function Page() {
 
 	return (
 		<>
-			<div className='relative flex items-center justify-center p-2'>
-				<h4 className='py-2 text-2xl'>会员中心</h4>
+			<MobileHeader className='justify-center'>
+				<h4 className='py-1.5 text-lg'>会员中心</h4>
 				<Button isIconOnly variant='light' as={Link} href='' className='absolute right-0'>
 					<ErrorOutline size={24} />
 				</Button>
-			</div>
-			<div className='flex flex-col flex-1 px-4 gap-4 overflow-auto'>
+			</MobileHeader>
+			<MobileMain>
 				<Card className='relative aspect-video flex-none'>
 					<div className='absolute left-0 inset-y-0 m-auto h-fit p-8 flex flex-col gap-2'>
 						<p>
@@ -75,7 +76,7 @@ export default function Page() {
 						<p>十多项会员任务，365积分分享不停。</p>
 					</CardBody>
 				</Card>
-			</div>
+			</MobileMain>
 		</>
 	);
 }

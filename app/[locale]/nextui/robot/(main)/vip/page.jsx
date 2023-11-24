@@ -16,7 +16,7 @@ function CardButton({ label, description, icon, ...props }) {
 				<Spacer x={4} />
 				<div className='flex flex-col items-start'>
 					<div className='text-lg'>{label}</div>
-					<div className='text-xs text-default-400'>{description}</div>
+					<div className='text-xs text-default-500'>{description}</div>
 				</div>
 			</div>
 		</Button>

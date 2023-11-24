@@ -20,7 +20,7 @@ export default function Page() {
 			<div className='flex items-center justify-between'>
 				<NavbarBack label={t('通用设置') + ' - 办3'} />
 			</div>
-			<div className='flex flex-1 flex-col px-4 gap-4'>
+			<div className='flex flex-1 flex-col px-4 gap-4 overflow-auto'>
 				<Card className='flex-none'>
 					<CardBody className='py-0 divide-y divide-divider'>
 						<LabeledControl label={t('设备名称')}>
@@ -50,19 +50,19 @@ export default function Page() {
 							<Switch />
 						</LabeledControl>
 						<LabeledControl label={t('云台位置校准')}>
-							<Button size='sm' color='secondary'>
+							<Button size='sm' color='primary'>
 								{t('校准')}
 							</Button>
 						</LabeledControl>
 						<LabeledControl label={t('重启设备')}>
-							<Button size='sm' color='secondary'>
+							<Button size='sm' color='primary'>
 								{t('重启')}
 							</Button>
 						</LabeledControl>
 						<Sleep />
 					</CardBody>
 				</Card>
-				<Card>
+				<Card className='flex-none'>
 					<CardBody>
 						<Button size='sm' color='danger'>
 							{t('删除设备')}

@@ -51,7 +51,7 @@ export default function Page() {
 								<div className='absolute inset-0 m-auto px-4 gap-y-2 flex flex-col items-center justify-center'>
 									<WarningAmber size={48} className='text-white' />
 									<p className='text-white'>{t('无法加载视频流')}</p>
-									<p className='text-xs text-default-400'>
+									<p className='text-xs text-default-500'>
 										{t('设备已离线，离线时间：2023年9月14日 14:52:30。')}
 									</p>
 								</div>

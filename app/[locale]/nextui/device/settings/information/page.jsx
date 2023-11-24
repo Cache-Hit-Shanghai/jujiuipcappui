@@ -1,7 +1,14 @@
 'use client';
 
 import { Button, Card, CardBody, Listbox, ListboxItem, Tabs, Tab } from '@nextui-org/react';
-import { NavbarBack, TextDisplay, IpDisplay, UsnDisplay } from '@/jujiu-ui-components/nextui/core/core-ui';
+import {
+	NavbarBack,
+	TextDisplay,
+	IpDisplay,
+	UsnDisplay,
+	WiFiDisplay,
+	FeaturesDisplay,
+} from '@/jujiu-ui-components/nextui/core/core-ui';
 import { useJuJiuT } from '@/state/translate';
 
 export default function Page() {
@@ -35,8 +42,9 @@ export default function Page() {
 							label={t('设备统一SN')}
 							usn='daxiaocloud.af9d40a5-7a36-5c07-b23a-851cd99fbfa5.1658472806.V1StGXR8_Z5jdHi6B-myT'
 						/>
+						<FeaturesDisplay label={t('设备特性')} />
 						<TextDisplay label={t('设备固件版本')} text='1.3.4.6' />
-						<TextDisplay label={t('设备当前WiFi')} text='A90_5G' />
+						<WiFiDisplay label={t('设备当前WiFi')} text='A90_5G' signal={4} />
 						<IpDisplay
 							label={t('IP地址')}
 							ips={[

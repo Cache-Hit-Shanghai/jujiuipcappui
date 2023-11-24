@@ -13,7 +13,14 @@ import {
 	Input,
 } from '@nextui-org/react';
 import { useState } from 'react';
-import { NavbarBack, Information, LabelButton, LabelLink } from '@/jujiu-ui-components/nextui/core/core-ui';
+import {
+	NavbarBack,
+	Information,
+	LabelButton,
+	LabelLink,
+	MobileHeader,
+	MobileMain,
+} from '@/jujiu-ui-components/nextui/core/core-ui';
 import { useJuJiuT } from '@/state/translate';
 
 function JuJiuModal({ onOpenChange, onClose, isOpen, title, position, children, ...props }) {
@@ -54,8 +61,10 @@ const Page = () => {
 
 	return (
 		<div className='flex flex-col h-screen'>
-			<NavbarBack label={t('账号设置')} />
-			<div className='flex flex-col px-4 gap-4'>
+			<MobileHeader>
+				<NavbarBack label={t('账号设置')} />
+			</MobileHeader>
+			<MobileMain>
 				<Card>
 					<CardBody className='py-0'>
 						<LabelButton
@@ -74,13 +83,14 @@ const Page = () => {
 						<LabelLink label={t('修改密码')} href='./changePassword'></LabelLink>
 					</CardBody>
 				</Card>
-				<Button color='warning' variant='bordered'>
-					{t('退出登录')}
-				</Button>
-				<Button color='danger' variant='bordered'>
-					{t('注销账号')}
-				</Button>
-			</div>
+				<Card>
+					<CardBody className='flex flex-col gap-3'>
+						<Button color='secondary'>{t('退出登录')}</Button>
+						<Divider />
+						<Button color='danger'>{t('注销账号')}</Button>
+					</CardBody>
+				</Card>
+			</MobileMain>
 			<JuJiuModal isOpen={openAvata} onOpenChange={setOpenAvata} title={t('更换头像')}>
 				<Button color='success'>{t('本地相册')}</Button>
 			</JuJiuModal>

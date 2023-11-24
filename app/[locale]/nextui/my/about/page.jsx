@@ -1,6 +1,6 @@
 'use client';
 
-import { NavbarBack, LinkGroup } from '@/jujiu-ui-components/nextui/core/core-ui';
+import { NavbarBack, LinkGroup, MobileHeader, MobileMain } from '@/jujiu-ui-components/nextui/core/core-ui';
 import { AppAbout, AppMark } from '@/jujiu-ui-components/nextui/ipc/about/brand';
 import { useJuJiuT } from '@/state/translate';
 
@@ -16,11 +16,13 @@ export default function Page() {
 
 	return (
 		<div className='h-screen flex flex-col'>
-			<NavbarBack label={t('关于')} />
-			<div className='flex flex-col flex-1 px-4 gap-4'>
+			<MobileHeader>
+				<NavbarBack label={t('关于')} />
+			</MobileHeader>
+			<MobileMain>
 				<AppAbout />
 				<LinkGroup data={links} />
-			</div>
+			</MobileMain>
 			<AppMark />
 		</div>
 	);

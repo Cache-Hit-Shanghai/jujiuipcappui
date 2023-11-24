@@ -1,6 +1,6 @@
 'use client';
 
-import { NavbarBack } from '@/jujiu-ui-components/nextui/core/core-ui';
+import { NavbarBack, MobileHeader, MobileMain } from '@/jujiu-ui-components/nextui/core/core-ui';
 import { ChangePassword } from '@/jujiu-ui-components/nextui/ipc/settings/account';
 import { useJuJiuT } from '@/state/translate';
 
@@ -8,10 +8,12 @@ const Page = () => {
 	const t = useJuJiuT();
 	return (
 		<div className='flex flex-col h-screen'>
-			<NavbarBack label={t('修改密码')} />
-			<div className='flex flex-col shrink-0  overflow-auto px-4 gap-4'>
+			<MobileHeader>
+				<NavbarBack label={t('修改密码')} />
+			</MobileHeader>
+			<MobileMain>
 				<ChangePassword />
-			</div>
+			</MobileMain>
 		</div>
 	);
 };

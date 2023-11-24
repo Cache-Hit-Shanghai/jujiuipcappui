@@ -1,6 +1,6 @@
 'use client';
 
-import { NavbarBack, InfoGroup } from '@/jujiu-ui-components/nextui/core/core-ui';
+import { NavbarBack, InfoGroup, MobileHeader, MobileMain } from '@/jujiu-ui-components/nextui/core/core-ui';
 import { useJuJiuT } from '@/state/translate';
 
 const Page = () => {
@@ -20,10 +20,12 @@ const Page = () => {
 
 	return (
 		<div className='flex flex-col h-screen'>
-			<NavbarBack label={t('系统信息')} />
-			<div className='flex flex-col grow shrink-0 px-4 gap-4'>
+			<MobileHeader>
+				<NavbarBack label={t('系统信息')} />
+			</MobileHeader>
+			<MobileMain>
 				<InfoGroup data={infos} />
-			</div>
+			</MobileMain>
 		</div>
 	);
 };

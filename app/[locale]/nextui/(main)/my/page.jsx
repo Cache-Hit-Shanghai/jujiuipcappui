@@ -60,6 +60,11 @@ export default function Page() {
 					</CardBody>
 				</Card>
 				<LinkGroup data={links} />
+				<Card>
+					<CardBody>
+						<LinkButton variant='solid' label='其它(生产环境无此按钮)' href='./other' />
+					</CardBody>
+				</Card>
 			</MobileMain>
 		</>
 	);

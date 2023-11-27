@@ -1,8 +1,6 @@
 'use client';
 
-import { Card, CardBody } from '@nextui-org/react';
-import { NavbarBack, LinkButton, MobileHeader, MobileMain } from '@/jujiu-ui-components/nextui/core/core-ui';
-import { NestCamWiredStand } from '@styled-icons/material/NestCamWiredStand';
+import { NavbarBack, MobileHeader, MobileMain } from '@/jujiu-ui-components/nextui/core/core-ui';
 import { OtaDeviceCard } from '@/jujiu-ui-components/nextui/ipc/ota/card';
 
 const data = [

@@ -3,6 +3,7 @@
 import { Tabs, Tab, Card, CardBody } from '@nextui-org/react';
 import { NavbarBack, MobileHeader, MobileMain } from '@/jujiu-ui-components/nextui/core/core-ui';
 import { NestCamWiredStand } from '@styled-icons/material/NestCamWiredStand';
+import { useJuJiuT } from '@/state/translate';
 
 const data0 = [
 	{ device: '客厅', to: '137319346' },
@@ -33,21 +34,23 @@ const Cell = ({ device, label }) => {
 };
 
 const Page = () => {
+	const t = useJuJiuT();
+
 	return (
 		<div className='flex flex-col h-screen'>
 			<MobileHeader>
-				<NavbarBack label={'我的分享'} />
+				<NavbarBack label={t('我的分享')} />
 			</MobileHeader>
 			<MobileMain>
 				<Tabs fullWidth={true}>
-					<Tab key='sharing' title='我的分享' className='flex flex-col gap-4'>
+					<Tab key='sharing' title={t('我的分享')} className='flex flex-col gap-4'>
 						{data0.map(({ device, to }, i) => (
-							<Cell key={i} device={device} label={`分享给${to}`}></Cell>
+							<Cell key={i} device={device} label={t('分享给 {name}', { name: to })} />
 						))}
 					</Tab>
-					<Tab key='shared' title='来自好友' className='flex flex-col gap-4'>
+					<Tab key='shared' title={t('来自分享')} className='flex flex-col gap-4'>
 						{data1.map(({ device, from }, i) => (
-							<Cell key={i} device={device} label={`来自${from}`}></Cell>
+							<Cell key={i} device={device} label={t('来自 {name}', { name: from })} />
 						))}
 					</Tab>
 				</Tabs>

@@ -23,7 +23,7 @@ const Page = () => {
 					onClose={() => setIsOpen(false)}
 					message='This operation completes successfully. This toast will close in 5 seconds.'
 					startContent={
-						<div className='rounded-full bg-success p-1'>
+						<div className='rounded-full bg-success p-1 flex'>
 							<Check size={20} />
 						</div>
 					}

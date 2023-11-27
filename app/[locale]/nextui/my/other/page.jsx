@@ -27,7 +27,6 @@ const Page = () => {
 					}
 				/>
 			</MobileMain>
-			<Button>bottom</Button>
 		</div>
 	);
 };

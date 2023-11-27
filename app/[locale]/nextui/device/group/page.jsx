@@ -14,12 +14,14 @@ import {
 } from '@nextui-org/react';
 import { ChevronRight } from '@styled-icons/material/ChevronRight';
 import { DeleteOutline } from '@styled-icons/material/DeleteOutline';
+import { Save } from '@styled-icons/material/Save';
 import { NavbarBack, MobileHeader, MobileMain } from '@/jujiu-ui-components/nextui/core/core-ui';
 import { useJuJiuT } from '@/state/translate';
 
 export default function Page() {
 	const t = useJuJiuT();
-	const { isOpen, onOpen, onOpenChange } = useDisclosure();
+	const edit = useDisclosure();
+	const add = useDisclosure();
 	const groups = [
 		{ label: t('默认分组'), disabled: true },
 		{ label: '办公室' },
@@ -42,14 +44,21 @@ export default function Page() {
 								radius='none'
 								endContent={<ChevronRight size={24} />}
 								className='justify-between px-0'
-								onPress={onOpen}
+								onPress={edit.onOpen}
 							>
 								{group.label}
 							</Button>
 						))}
 					</CardBody>
 				</Card>
-				<Modal isOpen={isOpen} onOpenChange={onOpenChange}>
+				<Card>
+					<CardBody>
+						<Button color='primary' onPress={add.onOpen}>
+							{t('添加分组')}
+						</Button>
+					</CardBody>
+				</Card>
+				<Modal isOpen={edit.isOpen} onOpenChange={edit.onOpenChange}>
 					<ModalContent>
 						{(onClose) => (
 							<>
@@ -60,6 +69,23 @@ export default function Page() {
 								<ModalFooter className='flex flex-col'>
 									<Button color='danger' startContent={<DeleteOutline size={24} />}>
 										{t('删除分组')}
+									</Button>
+								</ModalFooter>
+							</>
+						)}
+					</ModalContent>
+				</Modal>
+				<Modal isOpen={add.isOpen} onOpenChange={add.onOpenChange}>
+					<ModalContent>
+						{(onClose) => (
+							<>
+								<ModalHeader>{t('添加分组')}</ModalHeader>
+								<ModalBody>
+									<Input placeholder={t('请输入分组名……')} />
+								</ModalBody>
+								<ModalFooter className='flex flex-col'>
+									<Button color='danger' startContent={<Save size={24} />}>
+										{t('保存')}
 									</Button>
 								</ModalFooter>
 							</>

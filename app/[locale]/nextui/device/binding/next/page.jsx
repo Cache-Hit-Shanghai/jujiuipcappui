@@ -1,5 +1,6 @@
 'use client';
 
+import { Card } from '@nextui-org/react';
 import { QrCode2 } from '@styled-icons/material/QrCode2';
 import { Info } from '@styled-icons/material/Info';
 import { useJuJiuT } from '@/state/translate';
@@ -9,9 +10,9 @@ export default function Page() {
 
 	return (
 		<>
-			<div className='aspect-square flex items-center justify-center bg-default rounded-medium'>
+			<Card className='aspect-square flex items-center justify-center'>
 				<QrCode2 size={96} />
-			</div>
+			</Card>
 			<div className='flex flex-row gap-2 items-center text-warning'>
 				<Info size={24} className='flex-none' />
 				{t(

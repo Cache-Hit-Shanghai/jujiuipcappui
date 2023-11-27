@@ -2,7 +2,9 @@
 
 import { Card, CardBody } from '@nextui-org/react';
 import { NavbarBack, LinkButton, MobileHeader, MobileMain } from '@/jujiu-ui-components/nextui/core/core-ui';
+import { Update } from '@styled-icons/material/Update';
 import { NestCamWiredStand } from '@styled-icons/material/NestCamWiredStand';
+import { useJuJiuT } from '@/state/translate';
 
 const data = [
 	{ device: '客厅', size: '150MB', from: '1.0.0', to: '1.1.0' },
@@ -11,10 +13,12 @@ const data = [
 ];
 
 const Page = () => {
+	const t = useJuJiuT();
+
 	return (
 		<div className='flex flex-col h-screen'>
 			<MobileHeader>
-				<NavbarBack label={'固件升级'} />
+				<NavbarBack label={t('固件升级')} />
 			</MobileHeader>
 			<MobileMain>
 				{data.map(({ device, size, from, to }, i) => (
@@ -37,8 +41,9 @@ const Page = () => {
 										variant='solid'
 										color='primary'
 										href='./otainfo'
-										label='现在升级'
-									></LinkButton>
+										label={t('现在升级')}
+										startContent={<Update size={24} />}
+									/>
 								</div>
 							</div>
 						</CardBody>

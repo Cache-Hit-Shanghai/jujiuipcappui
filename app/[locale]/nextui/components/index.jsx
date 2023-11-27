@@ -38,7 +38,7 @@ export function DeviceMenu() {
 				</Button>
 			</DropdownTrigger>
 			<DropdownMenu aria-label='Static Actions'>
-				<DropdownItem key='addDevice' as={Link} href='/device/binding' startContent={<Add size={24} />}>
+				<DropdownItem key='addDevice' as={Link} href='./binding' startContent={<Add size={24} />}>
 					{t('添加设备')}
 				</DropdownItem>
 				<DropdownItem key='deviceGroup' as={Link} href='/device/group' startContent={<GridView size={24} />}>

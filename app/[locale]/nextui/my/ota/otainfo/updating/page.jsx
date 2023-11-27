@@ -29,7 +29,7 @@ const Page = () => {
 						<div className='flex flex-col gap-2'>
 							<p>固件升级成功！设备正在重启中，请耐心等待。设备重启后即可正常使用。</p>
 							<div className='flex justify-center'>
-								<LinkButton variant='solid' color='primary' href={'/'} label={'回到主页'} />
+								<LinkButton size='sm' variant='solid' color='primary' href={'/'} label={'回到主页'} />
 							</div>
 						</div>
 					</CardBody>

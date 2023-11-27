@@ -32,7 +32,13 @@ const Page = () => {
 									</div>
 								</div>
 								<div>
-									<LinkButton variant='solid' color='primary' href='./otainfo' label='现在升级'></LinkButton>
+									<LinkButton
+										size='sm'
+										variant='solid'
+										color='primary'
+										href='./otainfo'
+										label='现在升级'
+									></LinkButton>
 								</div>
 							</div>
 						</CardBody>

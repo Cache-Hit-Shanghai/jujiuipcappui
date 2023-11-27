@@ -13,12 +13,12 @@ const Page = () => {
 			<MobileMain>
 				<Card>
 					<CardBody className='flex flex-col gap-2'>
-						<div className='flex justify-center'>
+						<div className='flex items-center justify-center gap-2'>
 							<Update size={48} />
-						</div>
-						<div className='flex flex-col items-center'>
-							<p>最新版本：15.2.3.4</p>
-							<p>当前版本：15.2.3.0</p>
+							<div className='flex flex-col items-center'>
+								<p>最新版本：15.2.3.4</p>
+								<p>当前版本：15.2.3.0</p>
+							</div>
 						</div>
 						<div>
 							<h2 className='font-semibold text-2xl'>更新日志：</h2>
@@ -26,7 +26,7 @@ const Page = () => {
 							<p>2. 新增拉流时断线重连的功能。</p>
 						</div>
 						<div className='flex justify-center'>
-							<LinkButton variant='solid' color='primary' href='./updating' label='现在升级' />
+							<LinkButton size='sm' variant='solid' color='primary' href='./updating' label='现在升级' />
 						</div>
 					</CardBody>
 				</Card>

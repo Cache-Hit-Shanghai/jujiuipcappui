@@ -10,9 +10,9 @@ export default function Page() {
 
 	return (
 		<>
-			<Input label={t('WiFi名称(SSID)')} />
-			<Input label={t('密码')} type='password' />
-			<div className='flex flex-row gap-2 items-center text-warning'>
+			<Input size='sm' label={t('WiFi名称(SSID)')} />
+			<Input size='sm' label={t('密码')} type='password' />
+			<div className='flex flex-row gap-2 items-center text-warning text-sm'>
 				<Info size={24} className='flex-none' />
 				{t('请输入需要网络摄像机连接的WiFi名称和密码，随后点击“下一步”。')}
 			</div>

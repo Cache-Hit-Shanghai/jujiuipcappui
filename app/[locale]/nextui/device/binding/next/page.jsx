@@ -13,7 +13,7 @@ export default function Page() {
 			<Card className='aspect-square flex items-center justify-center'>
 				<QrCode2 size={96} />
 			</Card>
-			<div className='flex flex-row gap-2 items-center text-warning'>
+			<div className='flex flex-row gap-2 items-center text-warning text-sm'>
 				<Info size={24} className='flex-none' />
 				{t(
 					'请在听到网络摄像机“绑定设备”的提示音后，将该二维码放置在摄像机镜头前约30厘米左右，等待设备“配置成功”的提示音。'

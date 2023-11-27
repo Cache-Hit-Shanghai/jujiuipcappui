@@ -15,6 +15,7 @@ import {
 import { ChevronRight } from '@styled-icons/material/ChevronRight';
 import { DeleteOutline } from '@styled-icons/material/DeleteOutline';
 import { Save } from '@styled-icons/material/Save';
+import { Add } from '@styled-icons/material/Add';
 import { NavbarBack, MobileHeader, MobileMain } from '@/jujiu-ui-components/nextui/core/core-ui';
 import { useJuJiuT } from '@/state/translate';
 
@@ -53,7 +54,7 @@ export default function Page() {
 				</Card>
 				<Card>
 					<CardBody>
-						<Button color='primary' onPress={add.onOpen}>
+						<Button size='sm' color='primary' startContent={<Add size={24} />} onPress={add.onOpen}>
 							{t('添加分组')}
 						</Button>
 					</CardBody>
@@ -64,10 +65,10 @@ export default function Page() {
 							<>
 								<ModalHeader>{t('编辑分组')}</ModalHeader>
 								<ModalBody>
-									<Input placeholder={t('请输入分组名……')} />
+									<Input size='sm' placeholder={t('请输入分组名……')} />
 								</ModalBody>
 								<ModalFooter className='flex flex-col'>
-									<Button color='danger' startContent={<DeleteOutline size={24} />}>
+									<Button size='sm' color='danger' startContent={<DeleteOutline size={24} />}>
 										{t('删除分组')}
 									</Button>
 								</ModalFooter>
@@ -81,10 +82,10 @@ export default function Page() {
 							<>
 								<ModalHeader>{t('添加分组')}</ModalHeader>
 								<ModalBody>
-									<Input placeholder={t('请输入分组名……')} />
+									<Input size='sm' placeholder={t('请输入分组名……')} />
 								</ModalBody>
 								<ModalFooter className='flex flex-col'>
-									<Button color='danger' startContent={<Save size={24} />}>
+									<Button size='sm' color='danger' startContent={<Save size={24} />}>
 										{t('保存')}
 									</Button>
 								</ModalFooter>

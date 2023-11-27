@@ -41,8 +41,8 @@ const Page = () => {
 						</div>
 					</CardBody>
 					<CardFooter className='flex justify-evenly'>
-						<LinkButton variant='solid' color='primary' href='./settings' label='设置' />
-						<LinkButton variant='solid' color='secondary' href='./pay' label='续订' />
+						<LinkButton size='sm' variant='solid' color='primary' href='./settings' label='设置' />
+						<LinkButton size='sm' variant='solid' color='secondary' href='./pay' label='续订' />
 					</CardFooter>
 				</Card>
 			</MobileMain>

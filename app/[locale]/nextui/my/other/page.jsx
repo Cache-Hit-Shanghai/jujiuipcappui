@@ -15,7 +15,9 @@ const Page = () => {
 				<NavbarBack label='其它(生产环境无此页)' />
 			</MobileHeader>
 			<MobileMain>
-				<Button onPress={() => setIsOpen(true)}>Toast</Button>
+				<Button size='sm' onPress={() => setIsOpen(true)}>
+					Toast
+				</Button>
 				<Toast
 					isOpen={isOpen}
 					onClose={() => setIsOpen(false)}

@@ -21,6 +21,10 @@ import {
 	MobileHeader,
 	MobileMain,
 } from '@/jujiu-ui-components/nextui/core/core-ui';
+import { Logout } from '@styled-icons/material/Logout';
+import { Save } from '@styled-icons/material/Save';
+import { PhotoLibrary } from '@styled-icons/material/PhotoLibrary';
+import { DeleteOutline } from '@styled-icons/material/DeleteOutline';
 import { useJuJiuT } from '@/state/translate';
 
 function JuJiuModal({ onOpenChange, onClose, isOpen, title, position, children, ...props }) {
@@ -85,19 +89,27 @@ const Page = () => {
 				</Card>
 				<Card>
 					<CardBody className='flex flex-col gap-3'>
-						<Button color='secondary'>{t('退出登录')}</Button>
+						<Button size='sm' color='secondary' startContent={<Logout size={24} />}>
+							{t('退出登录')}
+						</Button>
 						<Divider />
-						<Button color='danger'>{t('注销账号')}</Button>
+						<Button size='sm' color='danger' startContent={<DeleteOutline size={24} />}>
+							{t('注销账号')}
+						</Button>
 					</CardBody>
 				</Card>
 			</MobileMain>
 			<JuJiuModal isOpen={openAvata} onOpenChange={setOpenAvata} title={t('更换头像')}>
-				<Button color='primary'>{t('本地相册')}</Button>
+				<Button size='sm' color='primary' startContent={<PhotoLibrary size={24} />}>
+					{t('本地相册')}
+				</Button>
 			</JuJiuModal>
 			<JuJiuModal isOpen={openName} onOpenChange={setOpenName} title={t('修改昵称')}>
-				<Input placeholder={t('请填写昵称……')} maxLength={20} minLength={2} />
+				<Input size='sm' placeholder={t('请填写昵称……')} maxLength={20} minLength={2} />
 				<Information label={t('修改昵称提示')} />
-				<Button color='primary'>{t('保存')}</Button>
+				<Button size='sm' color='primary' startContent={<Save size={24} />}>
+					{t('保存')}
+				</Button>
 			</JuJiuModal>
 		</div>
 	);

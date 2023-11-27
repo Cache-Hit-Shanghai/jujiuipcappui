@@ -17,7 +17,7 @@ export default function Page() {
 				{t('请输入需要网络摄像机连接的WiFi名称和密码，随后点击“下一步”。')}
 			</div>
 			<div className='flex flex-row justify-end'>
-				<LinkButton variant='solid' color='primary' label={t('下一步')} href='./next' />
+				<LinkButton size='sm' variant='solid' color='primary' label={t('下一步')} href='./next' />
 			</div>
 		</>
 	);

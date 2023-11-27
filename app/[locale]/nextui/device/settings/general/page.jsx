@@ -7,6 +7,7 @@ import {
 	MobileHeader,
 	MobileMain,
 } from '@/jujiu-ui-components/nextui/core/core-ui';
+import { DeleteOutline } from '@styled-icons/material/DeleteOutline';
 import { Sleep } from '@/jujiu-ui-components/nextui/ipc/settings/sleep';
 import { useJuJiuT } from '@/state/translate';
 
@@ -62,7 +63,7 @@ export default function Page() {
 				</Card>
 				<Card className='flex-none'>
 					<CardBody>
-						<Button size='sm' color='danger'>
+						<Button size='sm' color='danger' startContent={<DeleteOutline size={24} />}>
 							{t('删除设备')}
 						</Button>
 					</CardBody>

@@ -41,7 +41,7 @@ const Page = () => {
 				</div>
 				<Card>
 					<CardHeader>
-						<p className='text-gray-400'>由Jim于2023/07/08创建</p>
+						<p className='text-default-500'>由Jim于2023/07/08创建</p>
 					</CardHeader>
 					<CardBody>
 						<p>如何使用“设备转移”功能？</p>

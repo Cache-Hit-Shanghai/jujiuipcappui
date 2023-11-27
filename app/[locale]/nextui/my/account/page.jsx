@@ -92,12 +92,12 @@ const Page = () => {
 				</Card>
 			</MobileMain>
 			<JuJiuModal isOpen={openAvata} onOpenChange={setOpenAvata} title={t('更换头像')}>
-				<Button color='success'>{t('本地相册')}</Button>
+				<Button color='primary'>{t('本地相册')}</Button>
 			</JuJiuModal>
 			<JuJiuModal isOpen={openName} onOpenChange={setOpenName} title={t('修改昵称')}>
 				<Input placeholder={t('请填写昵称……')} maxLength={20} minLength={2} />
 				<Information label={t('修改昵称提示')} />
-				<Button color='success'>{t('保存')}</Button>
+				<Button color='primary'>{t('保存')}</Button>
 			</JuJiuModal>
 		</div>
 	);

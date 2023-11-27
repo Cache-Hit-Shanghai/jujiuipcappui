@@ -38,7 +38,7 @@ export function DeviceMenu() {
 				</Button>
 			</DropdownTrigger>
 			<DropdownMenu aria-label='Static Actions'>
-				<DropdownItem key='addDevice' as={Link} href='/device/binding' startContent={<Add size={24} />}>
+				<DropdownItem key='addDevice' as={Link} href='./binding' startContent={<Add size={24} />}>
 					{t('添加设备')}
 				</DropdownItem>
 				<DropdownItem key='deviceGroup' as={Link} href='/device/group' startContent={<GridView size={24} />}>
@@ -65,7 +65,7 @@ export function DeviceList() {
 	const t = useJuJiuT();
 
 	return (
-		<Accordion variant='shadow' className='h-fit'>
+		<Accordion isCompact variant='shadow' className='h-fit'>
 			<AccordionItem key='1' aria-label={t('默认分组')} title={t('默认分组')}>
 				<div className='flex flex-col gap-2'>
 					{Array.from({ length: 10 }, (_, i) => (
@@ -112,6 +112,8 @@ export function DeviceList() {
 					/>
 				</div>
 			</AccordionItem>
+			<AccordionItem key='3' aria-label='家' title='家' />
+			<AccordionItem key='4' aria-label='废弃' title='废弃' />
 		</Accordion>
 	);
 }

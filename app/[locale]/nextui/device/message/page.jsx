@@ -85,7 +85,7 @@ const Page = () => {
 							</div>
 						</CardHeader>
 						<Divider />
-						<CardBody className='flex-none'>{message.content}</CardBody>
+						<CardBody className='flex-none text-sm'>{message.content}</CardBody>
 					</Card>
 				))}
 			</MobileMain>

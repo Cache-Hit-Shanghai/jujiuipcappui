@@ -18,7 +18,7 @@ const Page = () => {
 				<Card>
 					<CardHeader className='flex items-center justify-center gap-2'>
 						<NestCamWiredStand size={48} />
-						<div className='flex flex-col items-center'>
+						<div className='flex flex-col'>
 							<p>{t('最新版本')}: 15.2.3.4</p>
 							<p>{t('当前版本')}: 15.2.3.0</p>
 						</div>

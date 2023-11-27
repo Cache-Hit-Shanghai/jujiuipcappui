@@ -112,6 +112,8 @@ export function DeviceList() {
 					/>
 				</div>
 			</AccordionItem>
+			<AccordionItem key='3' aria-label='家' title='家' />
+			<AccordionItem key='4' aria-label='废弃' title='废弃' />
 		</Accordion>
 	);
 }

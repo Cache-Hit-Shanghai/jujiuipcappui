@@ -41,7 +41,7 @@ export default function Page() {
 				<Button isIconOnly variant='light' as={Link} href=''>
 					<PermIdentity size={24} />
 				</Button>
-				<Button isIconOnly variant='light' as={Link} href='/message'>
+				<Button isIconOnly variant='light' as={Link} href='../../device/message'>
 					<Badge content='5' color='primary'>
 						<MailOutline size={24} />
 					</Badge>

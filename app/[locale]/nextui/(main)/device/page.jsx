@@ -18,7 +18,7 @@ export default function Page() {
 					<Button isIconOnly variant='light' as={Link} href='/nextui/robot/device'>
 						<Cached size={24} />
 					</Button>
-					<Button isIconOnly variant='light' as={Link} href='/message'>
+					<Button isIconOnly variant='light' as={Link} href='./message'>
 						<Badge content='5' color='primary'>
 							<MailOutline size={24} />
 						</Badge>

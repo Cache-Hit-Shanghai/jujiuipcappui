@@ -116,6 +116,11 @@ export function DeviceList() {
 			</Tab>
 			<Tab key='家' title='家' />
 			<Tab key='废弃' title='废弃' />
+			<Tab key='废弃1' title='废弃1' />
+			<Tab key='废弃2' title='废弃2' />
+			<Tab key='废弃3' title='废弃3' />
+			<Tab key='废弃4' title='废弃4' />
+			<Tab key='废弃5' title='废弃5' />
 		</Tabs>
 	);
 }

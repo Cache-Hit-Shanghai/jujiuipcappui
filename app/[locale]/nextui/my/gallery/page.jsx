@@ -43,7 +43,7 @@ const Page = () => {
 					{ date: '2023/7/4', Component: LinkBoxVideo, length: 20 },
 					{ date: '2023/7/5', Component: LinkBoxImage, length: 20 },
 				].map(({ date, length, Component }) => (
-					<Card key={date} fullWidth={true}>
+					<Card key={date} fullWidth={true} className='flex-none'>
 						<CardHeader>
 							<span>{date}</span>
 						</CardHeader>

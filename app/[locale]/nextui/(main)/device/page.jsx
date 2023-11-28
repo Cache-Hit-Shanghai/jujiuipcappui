@@ -1,7 +1,6 @@
 'use client';
 
 import { Button, Badge } from '@nextui-org/react';
-import { AppLogo } from '@/jujiu-ui-components/nextui/ipc/about/brand';
 import { MobileHeader, MobileMain } from '@/jujiu-ui-components/nextui/core/core-ui';
 import Link from '@/state/translate';
 import { MailOutline } from '@styled-icons/material/MailOutline';

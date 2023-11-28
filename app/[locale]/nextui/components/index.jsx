@@ -8,8 +8,6 @@ import {
 	DropdownTrigger,
 	DropdownMenu,
 	DropdownItem,
-	Accordion,
-	AccordionItem,
 	VisuallyHidden,
 	useSwitch,
 } from '@nextui-org/react';

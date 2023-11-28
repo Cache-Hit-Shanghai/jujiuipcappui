@@ -12,8 +12,7 @@ import { DeviceList, DeviceMenu } from '../../components';
 export default function Page() {
 	return (
 		<>
-			<MobileHeader>
-				<AppLogo />
+			<MobileHeader className='justify-end'>
 				<div className='flex items-center'>
 					<Button isIconOnly variant='light' as={Link} href='/nextui/robot/device'>
 						<Cached size={24} />
@@ -29,7 +28,7 @@ export default function Page() {
 					<DeviceMenu />
 				</div>
 			</MobileHeader>
-			<MobileMain>
+			<MobileMain className='gap-0'>
 				<DeviceList />
 			</MobileMain>
 		</>

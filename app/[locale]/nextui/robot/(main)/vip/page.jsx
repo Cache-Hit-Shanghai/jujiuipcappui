@@ -48,11 +48,19 @@ export default function Page() {
 				<Image src='https://pixelbot.oss-accelerate.aliyuncs.com/vip0.png' />
 				<Card className='flex-none'>
 					<CardHeader>增值服务</CardHeader>
-					<CardBody className='grid grid-cols-4 gap-2'>
-						<Button variant='bordered'>云存储</Button>
-						<Button variant='bordered'>智能识别</Button>
-						<Button variant='bordered'>电话提醒</Button>
-						<Button variant='bordered'>异常巡检</Button>
+					<CardBody className='flex flex-row flex-wrap gap-2'>
+						<Button size='sm' variant='bordered'>
+							云存储
+						</Button>
+						<Button size='sm' variant='bordered'>
+							智能识别
+						</Button>
+						<Button size='sm' variant='bordered'>
+							电话提醒
+						</Button>
+						<Button size='sm' variant='bordered'>
+							异常巡检
+						</Button>
 					</CardBody>
 				</Card>
 				<Card className='grid grid-cols-2 gap-0.5 flex-none'>

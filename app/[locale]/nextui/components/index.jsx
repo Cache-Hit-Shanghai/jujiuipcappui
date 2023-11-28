@@ -1,6 +1,8 @@
 'use client';
 
 import {
+	Tabs,
+	Tab,
 	Button,
 	Dropdown,
 	DropdownTrigger,
@@ -65,8 +67,8 @@ export function DeviceList() {
 	const t = useJuJiuT();
 
 	return (
-		<Accordion isCompact variant='shadow' className='h-fit'>
-			<AccordionItem key='1' aria-label={t('默认分组')} title={t('默认分组')}>
+		<Tabs variant='underlined'>
+			<Tab key={t('默认分组')} title={t('默认分组')}>
 				<div className='flex flex-col gap-2'>
 					{Array.from({ length: 10 }, (_, i) => (
 						<IpcCardOffice0 key={i} />
@@ -79,8 +81,8 @@ export function DeviceList() {
 						footerChips={[<ChipShared />]}
 					/>
 				</div>
-			</AccordionItem>
-			<AccordionItem key='2' aria-label='办公室' title='办公室'>
+			</Tab>
+			<Tab key='办公室' title='办公室'>
 				<div className='flex flex-col gap-2'>
 					<IpcCard
 						label='办公室1'
@@ -111,10 +113,10 @@ export function DeviceList() {
 						footerChips={[<ChipFromFriends />]}
 					/>
 				</div>
-			</AccordionItem>
-			<AccordionItem key='3' aria-label='家' title='家' />
-			<AccordionItem key='4' aria-label='废弃' title='废弃' />
-		</Accordion>
+			</Tab>
+			<Tab key='家' title='家' />
+			<Tab key='废弃' title='废弃' />
+		</Tabs>
 	);
 }
 

@@ -17,14 +17,16 @@ export default function Page() {
 				<NavbarBack label={t('录像查看') + ' - 办3'} />
 			</MobileHeader>
 			<MobileMain>
-				<video muted autoPlay loop>
-					<source src='https://samplelib.com/lib/preview/mp4/sample-5s.mp4' type='video/mp4' />
-				</video>
+				<div className='bg-black aspect-video'>
+					<video muted autoPlay loop className='object-contain'>
+						<source src='https://samplelib.com/lib/preview/mp4/sample-5s.mp4' type='video/mp4' />
+					</video>
+				</div>
 				<Card className='flex flex-1'>
-					<CardBody>
+					<CardBody className='flex flex-col gap-2'>
 						<div className='flex flex-row justify-between'>
 							<div>
-								<Input size='sm' type='date' />
+								<Input size='sm' type='date' label={t('请选择日期')} />
 							</div>
 							<Switch
 								size='lg'
@@ -36,6 +38,15 @@ export default function Page() {
 									)
 								}
 							/>
+						</div>
+						<div className='grid grid-cols-3 overflow-auto gap-2'>
+							{Array.from({ length: 40 }).map((e, i) => (
+								<div key={i} className='bg-black aspect-video'>
+									<video className='object-contain'>
+										<source src='https://samplelib.com/lib/preview/mp4/sample-5s.mp4' type='video/mp4' />
+									</video>
+								</div>
+							))}
 						</div>
 					</CardBody>
 				</Card>

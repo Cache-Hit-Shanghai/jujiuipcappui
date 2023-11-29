@@ -1,7 +1,7 @@
 'use client';
 
-import { Input, Card, CardBody, Switch, Spinner } from '@nextui-org/react';
-import { NavbarBack, LinkGroup, MobileHeader, MobileMain } from '@/jujiu-ui-components/nextui/core/core-ui';
+import { Input, Card, CardBody, Switch } from '@nextui-org/react';
+import { NavbarBack, MobileHeader, MobileMain } from '@/jujiu-ui-components/nextui/core/core-ui';
 import { ScreenCopyControl } from '@/jujiu-ui-components/nextui/ipc/video/toolControl';
 import { DownloadControl } from '@/jujiu-ui-components/nextui/ipc/video/toolControl';
 import { useJuJiuT } from '@/state/translate';

@@ -1,6 +1,6 @@
 'use client';
 
-import { Button, User, Card, CardHeader, CardBody, Divider } from '@nextui-org/react';
+import { Button, User, Card, CardHeader, CardBody, Divider, useDisclosure } from '@nextui-org/react';
 import {
 	NavbarBack,
 	LabelLink,
@@ -15,6 +15,7 @@ import { ShareOff } from '@/jujiu-ui-components/icons/shareoff';
 
 export default function Page() {
 	const t = useJuJiuT();
+	const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
 	return (
 		<div className='h-screen flex flex-col'>
@@ -65,7 +66,16 @@ export default function Page() {
 					<CardBody className='py-0'>
 						<LabelLink href='./qrcode' label={t('二维码分享')} />
 						<Divider />
-						<LabelButton label={t('微信分享')} />
+						<LabelButton label={t('微信分享')} onPress={onOpen} />
+						<ActionSheet
+							isOpen={isOpen}
+							onOpenChange={onOpenChange}
+							title={t('微信分享')}
+							buttons={[
+								{ label: t('发送给朋友'), key: 'wechat_friends' },
+								{ label: t('分享到朋友圈'), key: 'wechat_moments' },
+							]}
+						/>
 					</CardBody>
 				</Card>
 				<Card>

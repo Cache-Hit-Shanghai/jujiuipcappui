@@ -24,10 +24,10 @@ export default function Page() {
 	const edit = useDisclosure();
 	const add = useDisclosure();
 	const groups = [
-		{ label: t('默认分组'), disabled: true },
-		{ label: '办公室' },
-		{ label: '家' },
-		{ label: '废弃' },
+		{ id: 0, label: t('默认分组'), disabled: true },
+		{ id: 1, label: '办公室' },
+		{ id: 2, label: '家' },
+		{ id: 3, label: '废弃' },
 	];
 
 	return (
@@ -40,6 +40,7 @@ export default function Page() {
 					<CardBody className='flex flex-col py-0 divide-y divide-divider'>
 						{groups.map((group) => (
 							<Button
+								key={group.id}
 								isDisabled={group.disabled}
 								variant='light'
 								radius='none'

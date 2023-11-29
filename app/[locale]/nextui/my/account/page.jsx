@@ -84,7 +84,7 @@ const Page = () => {
 							用户12345
 						</LabelButton>
 						<Divider />
-						<LabelLink label={t('修改密码')} href='./changePassword'></LabelLink>
+						<LabelLink label={t('修改密码')} href='./changePassword' />
 					</CardBody>
 				</Card>
 				<Card>

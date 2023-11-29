@@ -3,6 +3,7 @@
 import { Button, User, Card, CardBody } from '@nextui-org/react';
 import {
 	LinkButton,
+	LabelLink,
 	LinkGroup,
 	ThemeButton,
 	MobileHeader,
@@ -61,8 +62,8 @@ export default function Page() {
 				</Card>
 				<LinkGroup data={links} />
 				<Card>
-					<CardBody>
-						<LinkButton size='sm' variant='solid' label='其它(生产环境无此按钮)' href='./other' />
+					<CardBody className='py-0'>
+						<LabelLink label='其它(生产环境无此按钮)' href='./other' />
 					</CardBody>
 				</Card>
 			</MobileMain>

@@ -19,7 +19,7 @@ const Page = () => {
 					</CardBody>
 				</Card>
 				<Card>
-					<CardBody className='p-0'>
+					<CardBody className='py-0'>
 						<LabelLink label={t('AI报警事件类型设置')} href='./type' />
 					</CardBody>
 				</Card>

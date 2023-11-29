@@ -8,7 +8,7 @@ export default function Page() {
 	const links = [
 		{ label: t('设备信息'), href: './information' },
 		{ label: t('通用设置'), href: './general' },
-		{ label: t('设备分享'), href: '/device/sharing' },
+		{ label: t('设备分享'), href: './sharing' },
 		{ label: t('设备转移'), href: '/device/transfer', last: true },
 	];
 

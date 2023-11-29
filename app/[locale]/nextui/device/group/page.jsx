@@ -85,7 +85,7 @@ export default function Page() {
 									<Input size='sm' placeholder={t('请输入分组名……')} />
 								</ModalBody>
 								<ModalFooter className='flex flex-col'>
-									<Button size='sm' color='danger' startContent={<Save size={24} />}>
+									<Button size='sm' color='primary' startContent={<Save size={24} />}>
 										{t('保存')}
 									</Button>
 								</ModalFooter>

@@ -4,7 +4,6 @@ import { Button, Card, CardBody, Divider, useDisclosure } from '@nextui-org/reac
 import { useState } from 'react';
 import { Check } from '@styled-icons/material/Check';
 import { Close } from '@styled-icons/material/Close';
-import { Warning } from '@styled-icons/material/Warning';
 import { Exclamation } from '@/jujiu-ui-components/icons/exclamation';
 import { NavbarBack, MobileHeader, MobileMain } from '@/jujiu-ui-components/nextui/core/core-ui';
 import { Toast } from '@/jujiu-ui-components/nextui/extension/toast';

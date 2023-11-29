@@ -1,8 +1,15 @@
 'use client';
 
 import { Button, User, Card, CardHeader, CardBody, Divider } from '@nextui-org/react';
-import { NavbarBack, LabelLink, MobileHeader, MobileMain } from '@/jujiu-ui-components/nextui/core/core-ui';
+import {
+	NavbarBack,
+	LabelLink,
+	LabelButton,
+	MobileHeader,
+	MobileMain,
+} from '@/jujiu-ui-components/nextui/core/core-ui';
 import { useJuJiuT } from '@/state/translate';
+import { ActionSheet } from '@/jujiu-ui-components/nextui/extension/actionsheet';
 import { Remove } from '@styled-icons/material/Remove';
 import { ShareOff } from '@/jujiu-ui-components/icons/shareoff';
 
@@ -58,7 +65,7 @@ export default function Page() {
 					<CardBody className='py-0'>
 						<LabelLink href='./qrcode' label={t('二维码分享')} />
 						<Divider />
-						<LabelLink href='./qrcode' label={t('微信分享')} />
+						<LabelButton label={t('微信分享')} />
 					</CardBody>
 				</Card>
 				<Card>

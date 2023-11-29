@@ -30,12 +30,7 @@ function DeviceMenu() {
 				</Button>
 			</DropdownTrigger>
 			<DropdownMenu aria-label='Static Actions'>
-				<DropdownItem
-					key='records'
-					as={Link}
-					href='/device/streaming/record/'
-					startContent={<VideoLibrary size={24} />}
-				>
+				<DropdownItem key='records' as={Link} href='./record' startContent={<VideoLibrary size={24} />}>
 					{t('录像查看')}
 				</DropdownItem>
 				<DropdownItem key='deviceSettings' as={Link} href='./settings' startContent={<Settings size={24} />}>

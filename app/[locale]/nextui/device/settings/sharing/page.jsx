@@ -10,12 +10,14 @@ import {
 } from '@/jujiu-ui-components/nextui/core/core-ui';
 import { useJuJiuT } from '@/state/translate';
 import { ActionSheet } from '@/jujiu-ui-components/nextui/extension/actionsheet';
+import { Confirm } from '@/jujiu-ui-components/nextui/extension/confirm';
 import { Remove } from '@styled-icons/material/Remove';
 import { ShareOff } from '@/jujiu-ui-components/icons/shareoff';
 
 export default function Page() {
 	const t = useJuJiuT();
 	const { isOpen, onOpen, onOpenChange } = useDisclosure();
+	const confirm = useDisclosure();
 
 	return (
 		<div className='h-screen flex flex-col'>
@@ -80,9 +82,15 @@ export default function Page() {
 				</Card>
 				<Card>
 					<CardBody>
-						<Button size='sm' color='danger' startContent={<ShareOff size={24} />}>
+						<Button size='sm' color='danger' startContent={<ShareOff size={24} />} onPress={confirm.onOpen}>
 							{t('取消所有分享')}
 						</Button>
+						<Confirm
+							title={t('设备分享')}
+							message={t('是否取消该设备的所有分享？')}
+							isOpen={confirm.isOpen}
+							onClose={confirm.onClose}
+						/>
 					</CardBody>
 				</Card>
 			</MobileMain>

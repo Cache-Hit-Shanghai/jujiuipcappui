@@ -10,7 +10,7 @@ export default function Page() {
 		{ label: t('账号设置'), href: '../../../my/account' },
 		{ label: t('通用设置'), href: '../../../my/uisettings' },
 		{ label: t('消息设置'), href: '../../../my/notification' },
-		{ label: t('关于'), href: '../../../my/about', last: true },
+		{ label: t('关于'), href: '../../../my/about' },
 	];
 
 	return (

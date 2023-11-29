@@ -9,7 +9,7 @@ export default function Page() {
 		{ label: t('设备信息'), href: './information' },
 		{ label: t('通用设置'), href: './general' },
 		{ label: t('设备分享'), href: './sharing' },
-		{ label: t('设备转移'), href: '/device/transfer', last: true },
+		{ label: t('设备转移'), href: './transfer' },
 	];
 
 	return (

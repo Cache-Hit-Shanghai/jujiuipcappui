@@ -11,7 +11,7 @@ export default function Page() {
 		{ label: t('服务条款'), href: '#' },
 		{ label: t('隐私政策'), href: '#' },
 		{ label: t('官网'), href: '#' },
-		{ label: t('使用帮助'), href: '#', last: true },
+		{ label: t('使用帮助'), href: '#' },
 	];
 
 	return (

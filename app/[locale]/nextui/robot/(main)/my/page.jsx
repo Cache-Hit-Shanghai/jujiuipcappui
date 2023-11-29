@@ -24,14 +24,14 @@ export default function Page() {
 		{ label: '我的收藏', icon: <Collections size={24} />, href: '' },
 		{ label: '我的订单', icon: <ReceiptLong size={24} />, href: '' },
 		{ label: '退换售后', icon: <GppGood size={24} />, href: '' },
-		{ label: '收货地址', icon: <LocationOn size={24} />, href: '', last: true },
+		{ label: '收货地址', icon: <LocationOn size={24} />, href: '' },
 	];
 
 	const linkData1 = [
 		{ label: '设备分享', icon: <Share size={24} />, href: '' },
 		{ label: '固件升级', icon: <Update size={24} />, href: '' },
 		{ label: '联系客服', icon: <SupportAgent size={24} />, href: '' },
-		{ label: '帮助与反馈', icon: <HelpOutline size={24} />, href: '', last: true },
+		{ label: '帮助与反馈', icon: <HelpOutline size={24} />, href: '' },
 	];
 
 	return (

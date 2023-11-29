@@ -14,6 +14,25 @@ import { Confirm } from '@/jujiu-ui-components/nextui/extension/confirm';
 import { Remove } from '@styled-icons/material/Remove';
 import { ShareOff } from '@/jujiu-ui-components/icons/shareoff';
 
+function RevokeSharing({ name }) {
+	const t = useJuJiuT();
+	const { isOpen, onOpen, onClose } = useDisclosure();
+
+	return (
+		<>
+			<Button size='sm' isIconOnly color='danger' onPress={onOpen}>
+				<Remove size={24} />
+			</Button>
+			<Confirm
+				title={t('设备分享')}
+				message={t('是否取消分享给{name}？', { name })}
+				isOpen={isOpen}
+				onClose={onClose}
+			/>
+		</>
+	);
+}
+
 export default function Page() {
 	const t = useJuJiuT();
 	const { isOpen, onOpen, onOpenChange } = useDisclosure();
@@ -36,9 +55,7 @@ export default function Page() {
 									src: 'https://i.pravatar.cc/150?u=a042581f4e29026024d',
 								}}
 							/>
-							<Button size='sm' isIconOnly color='danger'>
-								<Remove size={24} />
-							</Button>
+							<RevokeSharing name='Peter' />
 						</div>
 						<div className='flex flex-row items-center justify-between'>
 							<User
@@ -47,9 +64,7 @@ export default function Page() {
 									src: 'https://i.pravatar.cc/150?u=a042581f4e29026704d',
 								}}
 							/>
-							<Button size='sm' isIconOnly color='danger'>
-								<Remove size={24} />
-							</Button>
+							<RevokeSharing name='Jane' />
 						</div>
 						<div className='flex flex-row items-center justify-between'>
 							<User
@@ -58,9 +73,7 @@ export default function Page() {
 									src: 'https://avatars.githubusercontent.com/u/30373425?v=4',
 								}}
 							/>
-							<Button size='sm' isIconOnly color='danger'>
-								<Remove size={24} />
-							</Button>
+							<RevokeSharing name='Junior Garcia' />
 						</div>
 					</CardBody>
 				</Card>

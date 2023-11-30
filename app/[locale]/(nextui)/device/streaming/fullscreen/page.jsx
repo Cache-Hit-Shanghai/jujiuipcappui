@@ -31,7 +31,7 @@ export default function Page() {
 					/>
 				</video>
 			</MobileMain>
-			<ChipRecording label='00:02:34' className='absolute top-1 inset-x-0 mx-auto' />
+			<ChipRecording label='00:02:34' className='fixed top-1 inset-x-0 mx-auto' />
 			<AnimatePresence>
 				{show && (
 					<motion.div
@@ -41,20 +41,20 @@ export default function Page() {
 						transition={{ ease: 'linear', duration: 0.5 }}
 					>
 						<NavbarBack
-							className='absolute'
+							className='fixed'
 							label={t('实时视频') + ' - 办3'}
 							onPress={() => {
 								screen.orientation.unlock();
 								document.exitFullscreen();
 							}}
 						/>
-						<div className='absolute left-0 inset-y-0 m-auto p-2 h-fit'>
+						<div className='fixed left-0 inset-y-0 m-auto p-2 h-fit'>
 							<PanControl />
 						</div>
-						<div className='absolute right-0 top-0 p-2 h-fit'>
+						<div className='fixed right-0 top-0 p-2 h-fit'>
 							<StreamingControlBar2 />
 						</div>
-						<div className='absolute bottom-0 inset-x-0 m-auto p-2 w-fit flex flex-row gap-4'>
+						<div className='fixed bottom-0 inset-x-0 m-auto p-2 w-fit flex flex-row gap-4'>
 							<StreamingControlBar />
 						</div>
 					</motion.div>

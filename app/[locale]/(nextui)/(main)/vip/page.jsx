@@ -37,7 +37,7 @@ export default function Page() {
 							radius='none'
 							label={t('云存储')}
 							icon={<CloudUpload size={24} />}
-							href='./cloudstorage'
+							href='../my/cloudstorage'
 						/>
 						<LinkButton
 							className='p-2 min-w-0'

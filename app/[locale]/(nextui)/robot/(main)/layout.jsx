@@ -3,19 +3,19 @@ import { NavTabs } from '@/jujiu-ui-components/nextui/core/core-ui';
 const navTabsData = [
 	{
 		label: '设备',
-		href: '/nextui/robot/device/',
+		href: '/robot/device/',
 	},
 	{
 		label: '部落',
-		href: '/nextui/robot/tribe/',
+		href: '/robot/tribe/',
 	},
 	{
 		label: '会员',
-		href: '/nextui/robot/vip/',
+		href: '/robot/vip/',
 	},
 	{
 		label: '我的',
-		href: '/nextui/robot/my/',
+		href: '/robot/my/',
 	},
 ];
 

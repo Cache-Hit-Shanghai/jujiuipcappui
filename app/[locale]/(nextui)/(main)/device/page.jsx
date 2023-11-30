@@ -13,7 +13,7 @@ export default function Page() {
 		<>
 			<MobileHeader className='justify-end'>
 				<div className='flex items-center'>
-					<Button isIconOnly variant='light' as={Link} href='/nextui/robot/device'>
+					<Button isIconOnly variant='light' as={Link} href='/robot/device'>
 						<Cached size={24} />
 					</Button>
 					<Button isIconOnly variant='light' as={Link} href='./message'>

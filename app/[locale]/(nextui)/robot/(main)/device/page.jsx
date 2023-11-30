@@ -33,10 +33,10 @@ export default function Page() {
 					</Select>
 				</div>
 				<div className='flex items-center'>
-					<Button isIconOnly variant='light' as={Link} href='/nextui/device'>
+					<Button isIconOnly variant='light' as={Link} href='/'>
 						<Cached size={24} />
 					</Button>
-					<Button isIconOnly variant='light' as={Link} href='/nextui/device/scan'>
+					<Button isIconOnly variant='light' as={Link} href='/device/scan'>
 						<QrCodeScanner size={24} />
 					</Button>
 					<Button isIconOnly variant='light' as={Link} href='/device/binding'>

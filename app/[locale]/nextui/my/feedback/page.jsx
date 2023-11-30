@@ -55,47 +55,43 @@ const Page = () => {
 	return (
 		<div className='flex flex-col h-screen'>
 			<MobileHeader>
-				<NavbarBack label={'帮助与反馈'}>
-					<div className='flex flex-1'></div>
-					<Dropdown>
-						<DropdownTrigger>
-							<Button isIconOnly radius='sm' variant='light'>
-								<MoreHoriz size={24} />
-							</Button>
-						</DropdownTrigger>
-
-						<DropdownMenu
-							className='w-[160px]'
-							itemClasses={{
-								base: 'gap-4',
-							}}
-						>
-							{[
-								{
-									label: '新建问题',
-									href: './new',
-									Icon: PostAdd,
-								},
-								{
-									label: '我的问题',
-									href: '#',
-									Icon: Article,
-								},
-								{
-									label: '我的回复',
-									href: '#',
-									Icon: Reply,
-								},
-							].map(({ Icon, label, href }, i) => (
-								<DropdownItem key={i} startContent={<Icon size={24} />}>
-									<Link as={LocalizedLink} href={href}>
-										{label}
-									</Link>
-								</DropdownItem>
-							))}
-						</DropdownMenu>
-					</Dropdown>
-				</NavbarBack>
+				<NavbarBack label={'帮助与反馈'} />
+				<Dropdown>
+					<DropdownTrigger>
+						<Button isIconOnly radius='sm' variant='light'>
+							<MoreHoriz size={24} />
+						</Button>
+					</DropdownTrigger>
+					<DropdownMenu
+						itemClasses={{
+							base: 'gap-4',
+						}}
+					>
+						{[
+							{
+								label: '新建问题',
+								href: './new',
+								Icon: PostAdd,
+							},
+							{
+								label: '我的问题',
+								href: '#',
+								Icon: Article,
+							},
+							{
+								label: '我的回复',
+								href: '#',
+								Icon: Reply,
+							},
+						].map(({ Icon, label, href }, i) => (
+							<DropdownItem key={i} startContent={<Icon size={24} />}>
+								<Link as={LocalizedLink} href={href}>
+									{label}
+								</Link>
+							</DropdownItem>
+						))}
+					</DropdownMenu>
+				</Dropdown>
 			</MobileHeader>
 			<div className='flex flex-row px-4 gap-4'>
 				<Input

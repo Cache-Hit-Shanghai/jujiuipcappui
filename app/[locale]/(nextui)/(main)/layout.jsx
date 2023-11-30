@@ -8,12 +8,12 @@ const navTabsData = [
 	{
 		label: '设备',
 		icon: <House size={24} />,
-		href: '/nextui/device/',
+		href: '/device/',
 	},
 	{
 		label: '我的',
 		icon: <AccountCircle size={24} />,
-		href: '/nextui/my/',
+		href: '/my/',
 	},
 ];
 

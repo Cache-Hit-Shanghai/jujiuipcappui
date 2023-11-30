@@ -1,7 +1,8 @@
 'use client';
 
-import { Card, CardBody, CardHeader, Divider } from '@nextui-org/react';
-import { Notifications } from '@styled-icons/material/Notifications';
+import { Card, CardBody, CardHeader, Divider, Badge } from '@nextui-org/react';
+import { Notifications } from '@/jujiu-ui-components/icons/notifications';
+import { NotificationsUnread } from '@/jujiu-ui-components/icons/notificationsunread';
 import { NavbarBack, MobileHeader, MobileMain } from '@/jujiu-ui-components/nextui/core/core-ui';
 import { useJuJiuT } from '@/state/translate';
 
@@ -16,6 +17,7 @@ const Page = () => {
 			time: '10:24',
 			content: '办3（GF12345678）的云存储服务已过期。录像已无法访问。',
 			href: '/my/cloudstorage',
+			read: false,
 		},
 		{
 			id: 1,
@@ -24,6 +26,7 @@ const Page = () => {
 			time: '04:24',
 			content: '办3（GF12345678）的云存储服务将于1天后到期。到期后已保存的录像将无法访问。请及时续费。',
 			href: '/my/cloudstorage',
+			read: false,
 		},
 		{
 			id: 2,
@@ -32,51 +35,65 @@ const Page = () => {
 			time: '21:24',
 			content: '办3（GF12345678）的云存储服务将于7天后到期。到期后已保存的录像将无法访问。请及时续费。',
 			href: '/my/cloudstorage',
+			read: false,
 		},
 		{
 			id: 3,
 			title: t('设备访问提醒'),
-			date: '2023/7/24',
+			date: '2023/7/21',
 			time: '10:24',
 			content: '用户“AB1234”正在查看办3（GF12345678）的视频流。',
 			href: '#',
+			read: false,
 		},
 		{
 			id: 4,
 			title: t('设备异常提醒'),
-			date: '2023/7/23',
+			date: '2023/7/20',
 			time: '04:24',
 			content: '办3（GF12345678）绑定用户失败。',
 			href: '#',
+			read: false,
 		},
 		{
 			id: 5,
 			title: t('设备状态提醒'),
-			date: '2023/7/22',
+			date: '2023/7/19',
 			time: '21:24',
 			content: '办3（GF12345678）已上线',
 			href: '#',
+			read: true,
 		},
 		{
 			id: 6,
 			title: t('设备状态提醒'),
-			date: '2023/7/21',
+			date: '2023/7/18',
 			time: '00:24',
 			content: '办3（GF12345678）已离线。',
 			href: '#',
+			read: true,
 		},
 	];
 
 	return (
 		<div className='flex flex-col h-screen'>
 			<MobileHeader>
-				<NavbarBack label={t('消息通知')} />
+				<NavbarBack
+					label={
+						<Badge
+							color='primary'
+							content={messages.reduce((counter, message) => (message.read ? counter : counter + 1), 0)}
+						>
+							<p className='pr-2'>{t('消息通知')}</p>
+						</Badge>
+					}
+				/>
 			</MobileHeader>
 			<MobileMain>
 				{messages.map((message) => (
-					<Card key={message.id} className='flex-none'>
+					<Card key={message.id} className={'flex-none' + (message.read ? '' : ' bg-primary')}>
 						<CardHeader className='flex flex-row gap-2 items-center'>
-							<Notifications size={24} />
+							{message.read ? <Notifications size={24} /> : <NotificationsUnread size={24} />}
 							<div>
 								<p>{message.title}</p>
 								<p className='text-xs text-default-500'>

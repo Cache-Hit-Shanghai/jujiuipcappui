@@ -12,6 +12,7 @@ import {
 	Pagination,
 	Card,
 	CardBody,
+	Spacer,
 } from '@nextui-org/react';
 import { NavbarBack, MobileHeader, MobileMain } from '@/jujiu-ui-components/nextui/core/core-ui';
 import { Article } from '@styled-icons/material/Article';
@@ -52,7 +53,7 @@ const data = [
 
 const Page = () => {
 	return (
-		<div className='flex flex-col h-screen gap-2'>
+		<div className='flex flex-col h-screen'>
 			<MobileHeader>
 				<NavbarBack label={'帮助与反馈'}>
 					<div className='flex flex-1'></div>
@@ -97,9 +98,17 @@ const Page = () => {
 				</NavbarBack>
 			</MobileHeader>
 			<div className='flex flex-row px-4 gap-4'>
-				<Input labelPlacement='outside' placeholder='搜索问题……' startContent={<Search size={24} />} />
-				<Button color='primary'>搜索</Button>
+				<Input
+					size='sm'
+					labelPlacement='outside'
+					placeholder='搜索问题……'
+					startContent={<Search size={24} />}
+				/>
+				<Button size='sm' color='primary'>
+					搜索
+				</Button>
 			</div>
+			<Spacer y={2} />
 			<MobileMain>
 				<Card>
 					<CardBody className='flex flex-col divide-y divide-divider'>
@@ -136,8 +145,8 @@ const Page = () => {
 					</CardBody>
 				</Card>
 			</MobileMain>
-			<div className='flex items-center justify-center p-2'>
-				<Pagination total={10} initialPage={1}></Pagination>
+			<div className='flex flex-row justify-center'>
+				<Pagination total={10} initialPage={1} className='m-0 p-2' />
 			</div>
 		</div>
 	);

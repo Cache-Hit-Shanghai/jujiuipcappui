@@ -13,7 +13,7 @@ import { GraphicEq } from '@styled-icons/material/GraphicEq';
 import { Elderly } from '@styled-icons/material/Elderly';
 import { Storefront } from '@styled-icons/material/Storefront';
 import { ChairAlt } from '@styled-icons/material/ChairAlt';
-import { ComputerVision } from '@/jujiu-ui-components/icons/computervision';
+import { FramePersion } from '@/jujiu-ui-components/icons/framepersion';
 import { FrameInspect } from '@/jujiu-ui-components/icons/frameinspect';
 
 export default function Page() {
@@ -48,7 +48,7 @@ export default function Page() {
 								className='p-2 min-w-0'
 								radius='none'
 								label={t('智能识别')}
-								icon={<ComputerVision size={24} />}
+								icon={<FramePersion size={24} />}
 								href=''
 							/>
 							<LinkButton

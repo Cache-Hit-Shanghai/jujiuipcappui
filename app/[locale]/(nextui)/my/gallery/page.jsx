@@ -1,6 +1,6 @@
 'use client';
 
-import { Card, CardHeader, CardBody, Image } from '@nextui-org/react';
+import { Card, CardHeader, CardBody, Image, Divider } from '@nextui-org/react';
 import { NavbarBack, MobileHeader, MobileMain } from '@/jujiu-ui-components/nextui/core/core-ui';
 import { PlayCircleOutline } from '@styled-icons/material/PlayCircleOutline';
 import Link, { useJuJiuT } from '@/state/translate';
@@ -39,6 +39,7 @@ const Page = () => {
 						<CardHeader>
 							<span>{date}</span>
 						</CardHeader>
+						<Divider />
 						<CardBody>
 							<div className='grid grid-cols-3 gap-2'>
 								{Array.from({ length }, (_, index) => index).map((item) => (

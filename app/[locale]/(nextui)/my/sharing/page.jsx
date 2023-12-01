@@ -3,12 +3,13 @@
 import { Tabs, Tab, Card, CardBody } from '@nextui-org/react';
 import { NavbarBack, MobileHeader, MobileMain } from '@/jujiu-ui-components/nextui/core/core-ui';
 import { NestCamWiredStand } from '@styled-icons/material/NestCamWiredStand';
-import { useJuJiuT } from '@/state/translate';
+import { ChevronRight } from '@styled-icons/material/ChevronRight';
+import Link, { useJuJiuT } from '@/state/translate';
 
 const data0 = [
-	{ device: '客厅', to: '137319346' },
-	{ device: '办3', to: '137319346' },
-	{ device: '办5', to: '137319346' },
+	{ device: '客厅', count: 1 },
+	{ device: '办3', count: 2 },
+	{ device: '办5', count: 3 },
 ];
 
 const data1 = [
@@ -17,16 +18,19 @@ const data1 = [
 	{ device: '办5', from: '137319346' },
 ];
 
-const Cell = ({ device, label }) => {
+const Cell = ({ device, label, href }) => {
 	return (
-		<Card>
+		<Card as={Link} href={href}>
 			<CardBody>
-				<div className='flex items-center gap-2'>
-					<NestCamWiredStand size={48} />
-					<div>
-						<p>{device}</p>
-						<p className='text-xs text-default-500'>{label}</p>
+				<div className='flex flex-row items-center justify-between'>
+					<div className='flex items-center gap-2'>
+						<NestCamWiredStand size={48} />
+						<div>
+							<p>{device}</p>
+							<p className='text-xs text-default-500'>{label}</p>
+						</div>
 					</div>
+					<ChevronRight size={24} />
 				</div>
 			</CardBody>
 		</Card>
@@ -44,13 +48,23 @@ const Page = () => {
 			<MobileMain>
 				<Tabs fullWidth={true}>
 					<Tab key='sharing' title={t('我的分享')} className='flex flex-col gap-4'>
-						{data0.map(({ device, to }, i) => (
-							<Cell key={i} device={device} label={t('分享给 {name}', { name: to })} />
+						{data0.map(({ device, count }, i) => (
+							<Cell
+								key={i}
+								device={device}
+								label={t('已分享{count}人', { count: count })}
+								href='/device/settings/sharing'
+							/>
 						))}
 					</Tab>
 					<Tab key='shared' title={t('来自分享')} className='flex flex-col gap-4'>
 						{data1.map(({ device, from }, i) => (
-							<Cell key={i} device={device} label={t('来自 {name}', { name: from })} />
+							<Cell
+								key={i}
+								device={device}
+								label={t('来自 {name}', { name: from })}
+								href='/device/streaming/'
+							/>
 						))}
 					</Tab>
 				</Tabs>

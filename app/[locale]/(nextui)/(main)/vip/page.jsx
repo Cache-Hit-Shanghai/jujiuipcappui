@@ -98,6 +98,7 @@ export default function Page() {
 				</Card>
 				<Card>
 					<CardHeader>{t('生活服务')}</CardHeader>
+					<Divider />
 					<CardBody>
 						<div className='grid grid-cols-3 gap-y-2'>
 							<LinkButton
@@ -112,6 +113,7 @@ export default function Page() {
 				</Card>
 				<Card>
 					<CardHeader>{t('店铺工具')}</CardHeader>
+					<Divider />
 					<CardBody>
 						<div className='grid grid-cols-3 gap-y-2'>
 							<LinkButton

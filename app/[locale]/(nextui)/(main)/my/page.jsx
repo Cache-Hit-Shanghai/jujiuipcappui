@@ -18,6 +18,8 @@ import { SupportAgent } from '@styled-icons/material/SupportAgent';
 import { FavoriteBorder } from '@styled-icons/material/FavoriteBorder';
 import { Face } from '@styled-icons/material/Face';
 import { Security } from '@styled-icons/material/Security';
+import { BusinessCenter } from '@styled-icons/material/BusinessCenter';
+import { ChevronRight } from '@styled-icons/material/ChevronRight';
 import { Try } from '@/jujiu-ui-components/icons/try';
 
 export default function Page() {
@@ -62,6 +64,26 @@ export default function Page() {
 							<LinkButton label={t('帮助与反馈')} icon={<HelpOutline size={24} />} href='./feedback' />
 							<LinkButton label={t('安全中心')} icon={<Security size={24} />} href='' />
 						</div>
+					</CardBody>
+				</Card>
+				<Card>
+					<CardBody className='grid grid-cols-2 gap-1'>
+						<Button
+							radius='none'
+							variant='bordered'
+							startContent={<BusinessCenter size={24} />}
+							endContent={<ChevronRight size={24} />}
+						>
+							光豆390
+						</Button>
+						<Button
+							radius='none'
+							variant='bordered'
+							startContent={<BusinessCenter size={24} />}
+							endContent={<ChevronRight size={24} />}
+						>
+							开宝箱
+						</Button>
 					</CardBody>
 				</Card>
 				<Card>

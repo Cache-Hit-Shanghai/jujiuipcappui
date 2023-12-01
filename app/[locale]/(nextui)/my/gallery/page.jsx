@@ -1,32 +1,24 @@
 'use client';
 
-import { Card, CardHeader, CardBody } from '@nextui-org/react';
-import Link from '@/state/translate';
+import { Card, CardHeader, CardBody, Image } from '@nextui-org/react';
 import { NavbarBack, MobileHeader, MobileMain } from '@/jujiu-ui-components/nextui/core/core-ui';
 import { PlayCircleOutline } from '@styled-icons/material/PlayCircleOutline';
-import { useJuJiuT } from '@/state/translate';
+import Link, { useJuJiuT } from '@/state/translate';
 
 const LinkBoxImage = () => {
 	return (
-		<Link href='./detail' passHref legacyBehavior>
-			<div
-				as='a'
-				className='w-full h-full bg-[url(https://tse2-mm.cn.bing.net/th/id/OIP-C.ke-oC-HNGvr6A7xWstYjsgHaFS?pid=ImgDet&rs=1)] rounded cursor-pointer'
-			/>
-		</Link>
+		<Card as={Link} href='./detail'>
+			<Image src='https://tse2-mm.cn.bing.net/th/id/OIP-C.ke-oC-HNGvr6A7xWstYjsgHaFS?pid=ImgDet&rs=1' />
+		</Card>
 	);
 };
 
 const LinkBoxVideo = () => {
 	return (
-		<Link href='./detail?type=video' passHref legacyBehavior>
-			<div
-				as='a'
-				className='relative w-full h-full flex flex-col justify-center items-center bg-[url(https://tse1-mm.cn.bing.net/th/id/OIP-C.gKVRei8owN-eGgw20kPjwwHaE7?pid=ImgDet&rs=1)] rounded cursor-pointer'
-			>
-				<PlayCircleOutline className='absolute' size={24} />
-			</div>
-		</Link>
+		<Card as={Link} href='./detail?type=video' className='relative'>
+			<Image src='https://tse1-mm.cn.bing.net/th/id/OIP-C.gKVRei8owN-eGgw20kPjwwHaE7?pid=ImgDet&rs=1' />
+			<PlayCircleOutline className='absolute z-20 inset-0 m-auto' size={24} />
+		</Card>
 	);
 };
 
@@ -48,7 +40,7 @@ const Page = () => {
 							<span>{date}</span>
 						</CardHeader>
 						<CardBody>
-							<div className='grid gap-2 grid-cols-[repeat(auto-fill,minmax(min(96px,100%),_1fr))] grid-flow-dense auto-rows-[70px] justify-center items-center'>
+							<div className='grid grid-cols-3 gap-2'>
 								{Array.from({ length }, (_, index) => index).map((item) => (
 									<Component key={item} />
 								))}

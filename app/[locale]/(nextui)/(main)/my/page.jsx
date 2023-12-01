@@ -56,7 +56,7 @@ export default function Page() {
 					<CardHeader>{t('常用工具')}</CardHeader>
 					<Divider />
 					<CardBody>
-						<div className='grid grid-cols-3 gap-y-2'>
+						<div className='grid grid-cols-3 gap-y-4'>
 							<LinkButton label={t('我的收藏')} icon={<FavoriteBorder size={24} />} href='' />
 							<LinkButton label={t('人脸管理')} icon={<Face size={24} />} href='' />
 							<LinkButton label={t('我的分享')} icon={<Share size={24} />} href='./sharing' />
@@ -67,10 +67,10 @@ export default function Page() {
 					</CardBody>
 				</Card>
 				<Card>
-					<CardBody className='grid grid-cols-2 gap-1'>
+					<CardBody className='grid grid-cols-2 divide-x divide-divider'>
 						<Button
 							radius='none'
-							variant='bordered'
+							variant='light'
 							startContent={<BusinessCenter size={24} />}
 							endContent={<ChevronRight size={24} />}
 						>
@@ -78,7 +78,7 @@ export default function Page() {
 						</Button>
 						<Button
 							radius='none'
-							variant='bordered'
+							variant='light'
 							startContent={<BusinessCenter size={24} />}
 							endContent={<ChevronRight size={24} />}
 						>

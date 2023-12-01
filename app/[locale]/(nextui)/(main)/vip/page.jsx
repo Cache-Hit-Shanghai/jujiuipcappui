@@ -29,7 +29,7 @@ export default function Page() {
 					<CardHeader>{t('通用服务')}</CardHeader>
 					<Divider />
 					<CardBody>
-						<div className='grid grid-cols-3 gap-y-2'>
+						<div className='grid grid-cols-3 gap-y-4'>
 							<LinkButton
 								className='p-2 min-w-0'
 								radius='none'

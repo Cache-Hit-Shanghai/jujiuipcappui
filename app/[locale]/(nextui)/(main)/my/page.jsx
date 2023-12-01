@@ -1,30 +1,27 @@
 'use client';
 
-import { Button, User, Card, CardBody } from '@nextui-org/react';
+import { Button, User, Card, CardHeader, CardBody, Divider } from '@nextui-org/react';
 import {
 	LinkButton,
 	LabelLink,
-	LinkGroup,
 	ThemeButton,
 	MobileHeader,
 	MobileMain,
 } from '@/jujiu-ui-components/nextui/core/core-ui';
 import Link, { useJuJiuT } from '@/state/translate';
 import { PhotoAlbum } from '@styled-icons/material/PhotoAlbum';
-import { CloudUpload } from '@styled-icons/material/CloudUpload';
+import { Settings } from '@styled-icons/material/Settings';
 import { Update } from '@styled-icons/material/Update';
-import { IosShare } from '@styled-icons/material/IosShare';
+import { Share } from '@styled-icons/material/Share';
 import { HelpOutline } from '@styled-icons/material/HelpOutline';
+import { SupportAgent } from '@styled-icons/material/SupportAgent';
+import { FavoriteBorder } from '@styled-icons/material/FavoriteBorder';
+import { Face } from '@styled-icons/material/Face';
+import { Security } from '@styled-icons/material/Security';
+import { Try } from '@/jujiu-ui-components/icons/try';
 
 export default function Page() {
 	const t = useJuJiuT();
-	const links = [
-		{ label: t('账号设置'), href: './account' },
-		{ label: t('通知设置'), href: './notification' },
-		{ label: t('界面设置'), href: './uisettings' },
-		{ label: t('系统信息'), href: './sysinfo' },
-		{ label: t('关于'), href: './about' },
-	];
 
 	return (
 		<>
@@ -40,27 +37,33 @@ export default function Page() {
 				</Button>
 				<div className='px-2'>
 					<ThemeButton />
+					<LinkButton href='./settings' icon={<Settings size={24} />} />
 				</div>
 			</MobileHeader>
 			<MobileMain>
 				<Card>
 					<CardBody>
-						<div className='flex flex-row justify-evenly'>
+						<div className='grid grid-cols-3'>
+							<LinkButton label={t('服务中心')} icon={<SupportAgent size={24} />} href='' />
 							<LinkButton label={t('相册')} icon={<PhotoAlbum size={24} />} href='./gallery' />
-							<LinkButton label={t('云存储')} icon={<CloudUpload size={24} />} href='./cloudstorage' />
+							<LinkButton label={t('固件升级')} icon={<Update size={24} />} href='./ota' />
 						</div>
 					</CardBody>
 				</Card>
 				<Card>
+					<CardHeader>{t('常用工具')}</CardHeader>
+					<Divider />
 					<CardBody>
-						<div className='flex flex-row justify-evenly'>
-							<LinkButton label={t('固件升级')} icon={<Update size={24} />} href='./ota' />
-							<LinkButton label={t('我的分享')} icon={<IosShare size={24} />} href='./sharing' />
+						<div className='grid grid-cols-3 gap-y-2'>
+							<LinkButton label={t('我的收藏')} icon={<FavoriteBorder size={24} />} href='' />
+							<LinkButton label={t('人脸管理')} icon={<Face size={24} />} href='' />
+							<LinkButton label={t('我的分享')} icon={<Share size={24} />} href='./sharing' />
+							<LinkButton label={t('产品试用')} icon={<Try size={24} />} href='' />
 							<LinkButton label={t('帮助与反馈')} icon={<HelpOutline size={24} />} href='./feedback' />
+							<LinkButton label={t('安全中心')} icon={<Security size={24} />} href='' />
 						</div>
 					</CardBody>
 				</Card>
-				<LinkGroup data={links} />
 				<Card>
 					<CardBody className='py-0'>
 						<LabelLink label='其它(生产环境无此按钮)' href='./other' />

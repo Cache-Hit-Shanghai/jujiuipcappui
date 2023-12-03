@@ -25,7 +25,7 @@ export default function Page() {
 				<Card className='flex flex-1'>
 					<CardBody className='flex flex-col gap-2'>
 						<div className='flex flex-row justify-between'>
-							<div className='w-2/5'>
+							<div className='w-32'>
 								<Input size='sm' type='date' label={t('请选择日期')} />
 							</div>
 							<Switch

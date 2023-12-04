@@ -26,6 +26,12 @@ importers:
       '@nextui-org/react':
         specifier: ^2.2.9
         version: 2.2.9(@types/react@18.2.41)(framer-motion@10.16.12)(react-dom@18.2.0)(react@18.2.0)(tailwind-variants@0.1.18)(tailwindcss@3.3.5)
+      '@react-aria/toast':
+        specifier: ^3.0.0-beta.7
+        version: 3.0.0-beta.7(react@18.2.0)
+      '@react-stately/toast':
+        specifier: ^3.0.0-beta.1
+        version: 3.0.0-beta.1(react@18.2.0)
       date-fns:
         specifier: ^2.30.0
         version: 2.30.0
@@ -2317,6 +2323,18 @@ packages:
       react: 18.2.0
     dev: false
 
+  /@react-aria/landmark@3.0.0-beta.7(react@18.2.0):
+    resolution: {integrity: sha512-zLFoC3o7x5jiY/JEExl4qra2kFW8dvwek9m17YBUTNpYBxIm7VqV4QDj38Px8I3Ko3wWBnlM/fF7tDX03QD/Pg==}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0
+    dependencies:
+      '@react-aria/utils': 3.22.0(react@18.2.0)
+      '@react-types/shared': 3.22.0(react@18.2.0)
+      '@swc/helpers': 0.5.2
+      react: 18.2.0
+      use-sync-external-store: 1.2.0(react@18.2.0)
+    dev: false
+
   /@react-aria/link@3.6.2(react@18.2.0):
     resolution: {integrity: sha512-v9gXgQ3Gev0JOlg2MAXcubDMgX+0BlJ+hTyFYFMuN/4jVBlAe426WKbjg+6MMzxwukWg9C3Q08JzqdFTi4cBng==}
     peerDependencies:
@@ -2545,6 +2563,22 @@ packages:
       '@react-stately/utils': 3.9.0(react@18.2.0)
       '@react-types/shared': 3.22.0(react@18.2.0)
       '@react-types/textfield': 3.9.0(react@18.2.0)
+      '@swc/helpers': 0.5.2
+      react: 18.2.0
+    dev: false
+
+  /@react-aria/toast@3.0.0-beta.7(react@18.2.0):
+    resolution: {integrity: sha512-6baX0VuAlf/sXArTrnkKGjAQjv65uvXuT0ekeLuxlFCW8kJKUk0750+dPXcThngRZJZ6KfqKmwn43JOHnUSptA==}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0
+    dependencies:
+      '@react-aria/i18n': 3.9.0(react@18.2.0)
+      '@react-aria/interactions': 3.20.0(react@18.2.0)
+      '@react-aria/landmark': 3.0.0-beta.7(react@18.2.0)
+      '@react-aria/utils': 3.22.0(react@18.2.0)
+      '@react-stately/toast': 3.0.0-beta.1(react@18.2.0)
+      '@react-types/button': 3.9.1(react@18.2.0)
+      '@react-types/shared': 3.22.0(react@18.2.0)
       '@swc/helpers': 0.5.2
       react: 18.2.0
     dev: false
@@ -2786,6 +2820,16 @@ packages:
       '@react-types/tabs': 3.3.4(react@18.2.0)
       '@swc/helpers': 0.5.2
       react: 18.2.0
+    dev: false
+
+  /@react-stately/toast@3.0.0-beta.1(react@18.2.0):
+    resolution: {integrity: sha512-NeWdLXpHfXu8UXjmn+6iZv39Xvan/D0uNWzIyCxkDOeNNOHt1N4kSwdvQ56ScQ3f7KBVPqKz32t7K466Zpa8Jg==}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0
+    dependencies:
+      '@swc/helpers': 0.5.2
+      react: 18.2.0
+      use-sync-external-store: 1.2.0(react@18.2.0)
     dev: false
 
   /@react-stately/toggle@3.7.0(react@18.2.0):
@@ -4843,6 +4887,14 @@ packages:
       detect-node-es: 1.1.0
       react: 18.2.0
       tslib: 2.6.2
+    dev: false
+
+  /use-sync-external-store@1.2.0(react@18.2.0):
+    resolution: {integrity: sha512-eEgnFxGQ1Ife9bzYs6VLi8/4X6CObHMw9Qr9tPY43iKwsPw8xE8+EFsf/2cFZ5S3esXgpWgtSCtLNS41F+sKPA==}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+    dependencies:
+      react: 18.2.0
     dev: false
 
   /util-deprecate@1.0.2:

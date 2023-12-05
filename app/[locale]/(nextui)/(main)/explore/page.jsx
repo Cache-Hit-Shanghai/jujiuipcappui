@@ -10,7 +10,7 @@ import { Search } from '@styled-icons/material/Search';
 const cardData = [
 	{
 		src: 'https://android-screenimgs.25pp.com/fs08/2021/03/11/8/2_b0280952776ee9daa0c08d0be2b67abe.png',
-		href: '/discovery/videoitem',
+		href: './videoitem',
 		title: '明星生活的另一面',
 	},
 	{
@@ -20,37 +20,37 @@ const cardData = [
 	},
 	{
 		src: 'https://android-screenimgs.25pp.com/fs08/2019/12/16/10/2_4637a632dbe422afae824fb726603955.jpeg',
-		href: '/discovery/videoitem',
+		href: './videoitem',
 		title: '真实评测的好物榜单：八月榜',
 	},
 	{
 		src: 'https://ts1.cn.mm.bing.net/th/id/R-C.5f3b71f1fd7b3912c3f100edcbc91f98?rik=KM80mFjeLgnAnQ&riu=http%3a%2f%2fdownza1.zz314.njxzwh.com%2fsoftbaike%2fandroid%2f2016-10-27%2fd9dfdcfe2783e99e262491fa2af78655.jpg&ehk=KRA9auLJyHb4zyhJuBFmVBfD8wpCk%2blbewjpysbNiZU%3d&risl=&pid=ImgRaw&r=0',
-		href: '/discovery/videoitem',
+		href: './videoitem',
 		title: '手机客户端下载',
 	},
 	{
 		src: 'https://tse3-mm.cn.bing.net/th/id/OIP-C.jUAuLd6NkWaO25J-nikm9wHaJ5?pid=ImgDet&rs=1',
-		href: '/discovery/videoitem',
+		href: './videoitem',
 		title: '小白避坑指南',
 	},
 	{
 		src: 'https://android-screenimgs.25pp.com/fs08/2021/03/11/8/2_b0280952776ee9daa0c08d0be2b67abe.png',
-		href: '/discovery/videoitem',
+		href: './videoitem',
 		title: '明星生活的另一面',
 	},
 	{
 		src: 'https://android-screenimgs.25pp.com/fs08/2019/12/16/10/2_4637a632dbe422afae824fb726603955.jpeg',
-		href: '/discovery/videoitem',
+		href: './videoitem',
 		title: '真实评测的好物榜单：八月榜',
 	},
 	{
 		src: 'https://ts1.cn.mm.bing.net/th/id/R-C.5f3b71f1fd7b3912c3f100edcbc91f98?rik=KM80mFjeLgnAnQ&riu=http%3a%2f%2fdownza1.zz314.njxzwh.com%2fsoftbaike%2fandroid%2f2016-10-27%2fd9dfdcfe2783e99e262491fa2af78655.jpg&ehk=KRA9auLJyHb4zyhJuBFmVBfD8wpCk%2blbewjpysbNiZU%3d&risl=&pid=ImgRaw&r=0',
-		href: '/discovery/videoitem',
+		href: './videoitem',
 		title: '手机客户端下载',
 	},
 	{
 		src: 'https://tse3-mm.cn.bing.net/th/id/OIP-C.jUAuLd6NkWaO25J-nikm9wHaJ5?pid=ImgDet&rs=1',
-		href: '/discovery/videoitem',
+		href: './videoitem',
 		title: '小白避坑指南',
 	},
 ];

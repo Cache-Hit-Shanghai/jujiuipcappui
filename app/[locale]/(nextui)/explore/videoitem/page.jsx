@@ -8,6 +8,7 @@ import { FavoriteBorder } from '@styled-icons/material/FavoriteBorder';
 import { StarBorder } from '@styled-icons/material/StarBorder';
 import { Share } from '@styled-icons/material/Share';
 import { CollapseContent } from '@/jujiu-ui-components/icons/collapsecontent';
+import { ExpandContent } from '@/jujiu-ui-components/icons/expandcontent';
 import Link, { useJuJiuT } from '@/state/translate';
 
 function VideoDescription() {
@@ -43,7 +44,7 @@ function VideoDescription() {
 				</p>
 				{!expand && (
 					<Button isIconOnly variant='light' onPress={() => setHide(!hide)}>
-						{hide ? <CollapseContent size={24} /> : <CollapseContent size={24} />}
+						{hide ? <CollapseContent size={24} /> : <ExpandContent size={24} />}
 					</Button>
 				)}
 			</div>

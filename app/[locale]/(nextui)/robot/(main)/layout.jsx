@@ -7,7 +7,7 @@ const navTabsData = [
 	},
 	{
 		label: '部落',
-		href: '/explore/',
+		href: '/robot/explore/',
 	},
 	{
 		label: '会员',

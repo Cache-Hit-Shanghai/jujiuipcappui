@@ -36,7 +36,14 @@ function VideoDescription() {
 					}
 				>
 					{!expand && (
-						<Anchor size='sm' onPress={() => setExpand(true)} className='float-right'>
+						<Anchor
+							size='sm'
+							onPress={() => setExpand(true)}
+							className='float-right mt-5 ml-2'
+							style={{
+								shapeOutside: 'polygon(100% 70%, 100% 100%, 0% 100%, 100% 70%)',
+							}}
+						>
 							{t('更多')}
 						</Anchor>
 					)}

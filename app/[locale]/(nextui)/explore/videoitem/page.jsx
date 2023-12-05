@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { motion } from 'framer-motion';
 import { User, Button, Link as Anchor, Spacer } from '@nextui-org/react';
 import { NavbarBack, MobileHeader, MobileMain } from '@/jujiu-ui-components/nextui/core/core-ui';
 import { ChatBubbleOutline } from '@styled-icons/material/ChatBubbleOutline';
@@ -18,7 +19,7 @@ function VideoDescription() {
 
 	return (
 		<div className='z-10 flex flex-col gap-2'>
-			<div className={'flex flex-row items-center gap-2 ' + (hide && 'invisible')}>
+			<motion.div layout className={'flex flex-row items-center gap-2 ' + (hide && 'invisible')}>
 				<User
 					name='庞大小姐'
 					avatarProps={{
@@ -28,9 +29,10 @@ function VideoDescription() {
 				<Button size='sm' radius='full' color='primary'>
 					关注
 				</Button>
-			</div>
-			<div className='flex flex-row items-end gap-2'>
-				<p
+			</motion.div>
+			<motion.div className='flex flex-row items-end gap-2'>
+				<motion.p
+					layout
 					className={
 						'text-sm text-justify ' + (!expand && 'text-ellipsis line-clamp-2 ') + (hide && 'invisible')
 					}
@@ -48,13 +50,13 @@ function VideoDescription() {
 						</Anchor>
 					)}
 					国营常陆海滨公园面临鹿岛滩、座落在从久慈川留出的细沙和北东风形成的沙丘上面。在此附近的海域、来自太平洋冲的暖流和寒流结合、所以在公园里同时可以看到北方系和南方系的动植物。在公园里面、除了一年四季都可以欣赏到各种花卉之外、还有欢快游乐园区、800平方米的“大草原”、“林间体育活动广场”“烧烤广场”等等、距离东京很近、是很有人气的观光地。
-				</p>
+				</motion.p>
 				{!expand && (
 					<Button isIconOnly variant='light' onPress={() => setHide(!hide)}>
 						{hide ? <CollapseContent size={24} /> : <ExpandContent size={24} />}
 					</Button>
 				)}
-			</div>
+			</motion.div>
 			{expand && (
 				<div className='flex flex-row items-center justify-between '>
 					<p className='text-xs text-default-500'>12/05 上海</p>

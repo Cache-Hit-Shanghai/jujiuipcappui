@@ -2,14 +2,11 @@
 
 import { useState } from 'react';
 import { User, Button, Link as Anchor, Spacer } from '@nextui-org/react';
-import { Carousel } from 'react-responsive-carousel';
-import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { NavbarBack, MobileHeader, MobileMain } from '@/jujiu-ui-components/nextui/core/core-ui';
 import { ChatBubbleOutline } from '@styled-icons/material/ChatBubbleOutline';
 import { FavoriteBorder } from '@styled-icons/material/FavoriteBorder';
 import { StarBorder } from '@styled-icons/material/StarBorder';
 import { Share } from '@styled-icons/material/Share';
-import { ExpendContent } from '@/jujiu-ui-components/icons/expandcontent';
 import { CollapseContent } from '@/jujiu-ui-components/icons/collapsecontent';
 import Link, { useJuJiuT } from '@/state/translate';
 

@@ -82,7 +82,9 @@ export default function Page() {
 			</MobileMain>
 			<Spacer y={2} />
 			<footer className='p-2 flex flex-row items-center justify-between bg-background opacity-80'>
-				<Button variant='bordered'>发弹幕</Button>
+				<Button size='sm' variant='bordered'>
+					发弹幕
+				</Button>
 				<div className='flex items-center'>
 					<Button
 						size='sm'

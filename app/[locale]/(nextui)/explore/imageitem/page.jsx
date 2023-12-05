@@ -94,7 +94,9 @@ const Page = () => {
 				<CommentBox />
 			</MobileMain>
 			<footer className='p-2 flex flex-row items-center justify-between'>
-				<Button variant='bordered'>发弹幕</Button>
+				<Button size='sm' variant='bordered'>
+					发弹幕
+				</Button>
 				<div className='flex items-center'>
 					<Button
 						size='sm'

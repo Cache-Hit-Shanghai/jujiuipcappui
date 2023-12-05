@@ -1,9 +1,9 @@
 'use client';
 
-import { Avatar, Button, Image } from '@nextui-org/react';
+import { User, Button, Image, Divider } from '@nextui-org/react';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import { NavbarBack } from '@/jujiu-ui-components/nextui/core/core-ui';
+import { NavbarBack, MobileHeader, MobileMain } from '@/jujiu-ui-components/nextui/core/core-ui';
 import { ChatBubbleOutline } from '@styled-icons/material/ChatBubbleOutline';
 import { FavoriteBorder } from '@styled-icons/material/FavoriteBorder';
 import { StarBorder } from '@styled-icons/material/StarBorder';
@@ -50,17 +50,24 @@ function Description() {
 const Page = () => {
 	return (
 		<div className='flex flex-col h-screen'>
-			<NavbarBack>
-				<Avatar className='shrink-0' icon={<PersonOutline size={24} />}></Avatar>
-				<p className='shrink-0'>庞大小姐</p>
-				<Button size='sm' radius='full' color='success'>
-					关注
-				</Button>
+			<MobileHeader>
+				<div className='flex flex-row gap-2 items-center'>
+					<NavbarBack />
+					<User
+						name='庞大小姐'
+						avatarProps={{
+							src: 'https://i.pravatar.cc/150?u=a04258114e29026702d',
+						}}
+					/>
+					<Button size='sm' radius='full' color='primary'>
+						关注
+					</Button>
+				</div>
 				<Button isIconOnly variant='light'>
 					<Share size={24} />
 				</Button>
-			</NavbarBack>
-			<div className='flex flex-col shrink-0  overflow-auto px-4 gap-4'>
+			</MobileHeader>
+			<MobileMain>
 				<Carousel dynamicHeight showArrows={false} showStatus={false} showThumbs={false}>
 					<Image
 						className='object-contain'
@@ -83,25 +90,32 @@ const Page = () => {
 				<div className='flex shrink-0'>
 					<span className='text-xs text-zinc-200'>09-01 上海</span>
 				</div>
-				<hr
-					width='100%'
-					style={{ borderLeft: 'none', borderRight: 'none', borderBottom: 'none', margin: 0 }}
-				/>
+				<Divider />
 				<CommentBox />
-			</div>
-			<footer className='flex shrink0 h-[56px] p-[12px] justify-between sticky bottom-0 bg-background  items-center'>
-				<Button className='h-[32px] min-w-[86px]' variant='bordered'>
-					发弹幕
-				</Button>
+			</MobileMain>
+			<footer className='p-2 flex flex-row items-center justify-between'>
+				<Button variant='bordered'>发弹幕</Button>
 				<div className='flex items-center'>
-					<Button variant='light' startContent={<FavoriteBorder size={24} />} as={Link} href='#star'>
-						<p className='text-xs'>2166</p>
+					<Button
+						size='sm'
+						variant='light'
+						startContent={<FavoriteBorder size={24} />}
+						as={Link}
+						href='#star'
+					>
+						2166
 					</Button>
-					<Button variant='light' startContent={<StarBorder size={24} />} as={Link} href='#star'>
-						<p className='text-xs'>4064</p>
+					<Button size='sm' variant='light' startContent={<StarBorder size={24} />} as={Link} href='#star'>
+						4064
 					</Button>
-					<Button variant='light' startContent={<ChatBubbleOutline size={24} />} as={Link} href='#comments'>
-						<p className='text-xs'>9</p>
+					<Button
+						size='sm'
+						variant='light'
+						startContent={<ChatBubbleOutline size={24} />}
+						as={Link}
+						href='#comments'
+					>
+						9
 					</Button>
 				</div>
 			</footer>

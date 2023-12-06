@@ -136,7 +136,7 @@ export default function Page() {
 					<Search size={24} />
 				</Button>
 			</MobileHeader>
-			<MobileMain>
+			<MobileMain className='px-0'>
 				<Masonry columns={2} style={{ margin: 0 }}>
 					{cardData.map((datum, i) => (
 						<ImageCard key={i} src={datum.src} title={datum.title} href={datum.href} />

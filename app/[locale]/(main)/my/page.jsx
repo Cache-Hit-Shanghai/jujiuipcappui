@@ -20,6 +20,7 @@ import { Face } from '@styled-icons/material/Face';
 import { Security } from '@styled-icons/material/Security';
 import { BusinessCenter } from '@styled-icons/material/BusinessCenter';
 import { ChevronRight } from '@styled-icons/material/ChevronRight';
+import { Paid } from '@styled-icons/material/Paid';
 import { Try } from '@/jujiu-ui-components/icons/try';
 
 export default function Page() {
@@ -71,7 +72,7 @@ export default function Page() {
 						<Button
 							radius='none'
 							variant='light'
-							startContent={<BusinessCenter size={24} />}
+							startContent={<Paid size={24} />}
 							endContent={<ChevronRight size={24} />}
 						>
 							{t('光豆')} 390

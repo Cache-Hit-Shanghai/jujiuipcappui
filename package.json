@@ -19,8 +19,6 @@
 		"@emotion/react": "^11.11.1",
 		"@emotion/styled": "^11.11.0",
 		"@mui/lab": "^5.0.0-alpha.155",
-		"@mui/material": "^5.14.20",
-		"@mui/x-date-pickers": "^6.18.3",
 		"@nextui-org/react": "^2.2.9",
 		"@react-aria/toast": "^3.0.0-beta.7",
 		"@react-stately/toast": "^3.0.0-beta.1",

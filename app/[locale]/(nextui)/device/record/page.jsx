@@ -23,9 +23,9 @@ export default function Page() {
 					</video>
 				</div>
 				<Card className='flex flex-1'>
-					<CardBody className='flex flex-col gap-2'>
+					<CardBody className='flex flex-col gap-4'>
 						<div className='flex flex-row justify-between'>
-							<div className='w-32'>
+							<div className='w-44'>
 								<Input size='sm' type='date' label={t('请选择日期')} />
 							</div>
 							<Switch

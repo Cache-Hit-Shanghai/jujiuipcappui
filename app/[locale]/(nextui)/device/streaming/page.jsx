@@ -37,8 +37,8 @@ export default function Page() {
 								<LinkButton
 									className='absolute bottom-1 right-1 text-white'
 									href='./fullscreen'
-									onPress={() => {
-										document.documentElement.requestFullscreen();
+									onPress={async () => {
+										await document.documentElement.requestFullscreen();
 										screen.orientation.lock('landscape');
 									}}
 									icon={<ScreenRotation size={24} className='text-white' />}
@@ -47,7 +47,7 @@ export default function Page() {
 						</Tab>
 						<Tab key='拉流失败' title='拉流失败'>
 							<div className='relative bg-black aspect-video'>
-								<video />
+								<video className='w-full h-full' />
 								<div className='absolute inset-0 m-auto px-4 gap-y-2 flex flex-col items-center justify-center'>
 									<WarningAmber size={48} className='text-white' />
 									<p className='text-white'>{t('无法加载视频流')}</p>
@@ -59,7 +59,7 @@ export default function Page() {
 						</Tab>
 						<Tab key='拉流休眠' title='拉流休眠'>
 							<div className='relative bg-black aspect-video'>
-								<video />
+								<video className='w-full h-full' />
 								<div className='absolute inset-0 m-auto px-4 gap-y-2 flex flex-col items-center justify-center'>
 									<Nightlight size={48} className='text-white' />
 									<p className='text-white'>{t('设备已休眠')}</p>

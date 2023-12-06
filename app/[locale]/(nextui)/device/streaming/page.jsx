@@ -26,7 +26,7 @@ export default function Page() {
 					<Tabs className='self-center'>
 						<Tab key='拉流成功' title='拉流成功'>
 							<div className='relative bg-black aspect-video'>
-								<video muted autoPlay loop>
+								<video muted autoPlay loop className='object-contain'>
 									<source src='https://samplelib.com/lib/preview/mp4/sample-5s.mp4' type='video/mp4' />
 								</video>
 								<ChipRecording label='00:02:34' className='absolute top-1 inset-x-0 mx-auto' />

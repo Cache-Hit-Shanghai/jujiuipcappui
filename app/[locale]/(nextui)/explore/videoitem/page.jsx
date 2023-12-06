@@ -73,7 +73,7 @@ export default function Page() {
 	return (
 		<div className='flex flex-col h-screen'>
 			<div className='fixed inset-0'>
-				<video autoPlay mute loop className='w-full h-full object-contain'>
+				<video autoPlay muted loop className='w-full h-full object-contain'>
 					<source
 						src='https://assets.mixkit.co/videos/preview/mixkit-avenue-with-trees-buildings-and-fast-cars-at-dusk-34563-large.mp4'
 						type='video/mp4'

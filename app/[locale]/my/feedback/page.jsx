@@ -20,7 +20,7 @@ import { MoreHoriz } from '@styled-icons/material/MoreHoriz';
 import { PostAdd } from '@styled-icons/material/PostAdd';
 import { Reply } from '@styled-icons/material/Reply';
 import { Search } from '@styled-icons/material/Search';
-import LocalizedLink from '@/state/translate';
+import LocalizedLink, { useJuJiuT } from '@/state/translate';
 
 const data = [
 	{ title: '如何使用“设备转移”？', createdBy: 'Jim', date: '2023/7/1' },
@@ -52,10 +52,12 @@ const data = [
 ];
 
 const Page = () => {
+	const t = useJuJiuT();
+
 	return (
 		<div className='flex flex-col h-screen'>
 			<MobileHeader>
-				<NavbarBack label={'帮助与反馈'} />
+				<NavbarBack label={t('帮助与反馈')} />
 				<Dropdown>
 					<DropdownTrigger>
 						<Button isIconOnly radius='sm' variant='light'>
@@ -107,7 +109,7 @@ const Page = () => {
 			<Spacer y={2} />
 			<MobileMain>
 				<Card>
-					<CardBody className='flex flex-col divide-y divide-divider'>
+					<CardBody className='flex flex-col divide-y divide-divider py-0'>
 						{data.map(({ title, createdBy, date }) => (
 							<div key={title} className='flex gap-2 py-2'>
 								<Article className='shrink-0' size={24} />

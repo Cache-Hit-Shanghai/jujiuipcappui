@@ -24,6 +24,7 @@
 		"@nextui-org/react": "^2.2.9",
 		"@react-aria/toast": "^3.0.0-beta.7",
 		"@react-stately/toast": "^3.0.0-beta.1",
+		"date-fns": "^2.30.0",
 		"framer-motion": "^10.16.14",
 		"grommet": "^2.35.0-alpha.1",
 		"grommet-icons": "^4.11.0",

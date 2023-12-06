@@ -30,7 +30,7 @@ function VideoDescription() {
 					关注
 				</Button>
 			</motion.div>
-			<motion.div className='flex flex-row items-end gap-2'>
+			<motion.div layout className='flex flex-row items-end gap-2'>
 				<motion.p
 					layout
 					className={

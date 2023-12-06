@@ -88,7 +88,7 @@ const Page = () => {
 				</Carousel>
 				<Description />
 				<div className='flex shrink-0'>
-					<span className='text-xs text-zinc-200'>09-01 上海</span>
+					<span className='text-xs text-default-500'>09/01 上海</span>
 				</div>
 				<Divider />
 				<CommentBox />

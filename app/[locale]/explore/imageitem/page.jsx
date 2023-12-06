@@ -8,7 +8,7 @@ import { ChatBubbleOutline } from '@styled-icons/material/ChatBubbleOutline';
 import { FavoriteBorder } from '@styled-icons/material/FavoriteBorder';
 import { StarBorder } from '@styled-icons/material/StarBorder';
 import { Share } from '@styled-icons/material/Share';
-import Link, { useJuJiuT } from '@/state/translate';
+import { useJuJiuT } from '@/state/translate';
 
 function CommentBox() {
 	const t = useJuJiuT();
@@ -47,6 +47,8 @@ function Description() {
 }
 
 const Page = () => {
+	const t = useJuJiuT();
+
 	return (
 		<div className='flex flex-col h-screen'>
 			<MobileHeader>
@@ -59,7 +61,7 @@ const Page = () => {
 						}}
 					/>
 					<Button size='sm' radius='full' color='primary'>
-						关注
+						{t('关注')}
 					</Button>
 				</div>
 				<Button isIconOnly variant='light'>

@@ -53,7 +53,9 @@ export default function Page() {
 			<div className='flex flex-col items-center pb-4 gap-2'>
 				<Avatar src='https://i.pravatar.cc/150?u=a04258114e29026708c' className='w-20 h-20 text-large' />
 				<p>暴走的鸡腿</p>
-				<p>关注: 1 粉丝: 0 好友: 4</p>
+				<p>
+					{t('Following')}: 1 {t('粉丝')}: 0 {t('好友')}: 4
+				</p>
 			</div>
 			<MobileMain>
 				<LinkGroup data={linkData0} />

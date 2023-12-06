@@ -27,7 +27,7 @@ function VideoDescription() {
 					}}
 				/>
 				<Button size='sm' radius='full' color='primary'>
-					关注
+					{t('关注')}
 				</Button>
 			</motion.div>
 			<motion.div layout className='flex flex-row items-end gap-2'>

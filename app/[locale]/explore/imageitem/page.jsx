@@ -3,12 +3,11 @@
 import { User, Button, Image, Divider } from '@nextui-org/react';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import { NavbarBack, MobileHeader, MobileMain } from '@/jujiu-ui-components/nextui/core/core-ui';
+import { NavbarBack, MobileHeader, MobileMain, LinkButton } from '@/jujiu-ui-components/nextui/core/core-ui';
 import { ChatBubbleOutline } from '@styled-icons/material/ChatBubbleOutline';
 import { FavoriteBorder } from '@styled-icons/material/FavoriteBorder';
 import { StarBorder } from '@styled-icons/material/StarBorder';
 import { Share } from '@styled-icons/material/Share';
-import { PersonOutline } from '@styled-icons/material/PersonOutline';
 import Link, { useJuJiuT } from '@/state/translate';
 
 function CommentBox() {
@@ -98,27 +97,9 @@ const Page = () => {
 					发弹幕
 				</Button>
 				<div className='flex items-center'>
-					<Button
-						size='sm'
-						variant='light'
-						startContent={<FavoriteBorder size={24} />}
-						as={Link}
-						href='#star'
-					>
-						2166
-					</Button>
-					<Button size='sm' variant='light' startContent={<StarBorder size={24} />} as={Link} href='#star'>
-						4064
-					</Button>
-					<Button
-						size='sm'
-						variant='light'
-						startContent={<ChatBubbleOutline size={24} />}
-						as={Link}
-						href='#comments'
-					>
-						9
-					</Button>
+					<LinkButton href='#favorite' label={2166} startContent={<FavoriteBorder size={24} />} />
+					<LinkButton href='#star' label={4064} startContent={<StarBorder size={24} />} />
+					<LinkButton href='#comments' label={9} startContent={<ChatBubbleOutline size={24} />} />
 				</div>
 			</footer>
 		</div>

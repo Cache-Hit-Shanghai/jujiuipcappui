@@ -74,7 +74,7 @@ export default function Page() {
 							startContent={<BusinessCenter size={24} />}
 							endContent={<ChevronRight size={24} />}
 						>
-							光豆390
+							{t('光豆')} 390
 						</Button>
 						<Button
 							radius='none'
@@ -82,7 +82,7 @@ export default function Page() {
 							startContent={<BusinessCenter size={24} />}
 							endContent={<ChevronRight size={24} />}
 						>
-							开宝箱
+							{t('开宝箱')}
 						</Button>
 					</CardBody>
 				</Card>

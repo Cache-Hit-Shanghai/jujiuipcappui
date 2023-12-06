@@ -97,9 +97,9 @@ const Page = () => {
 					发弹幕
 				</Button>
 				<div className='flex items-center'>
-					<LinkButton href='#favorite' label={2166} startContent={<FavoriteBorder size={24} />} />
-					<LinkButton href='#star' label={4064} startContent={<StarBorder size={24} />} />
-					<LinkButton href='#comments' label={9} startContent={<ChatBubbleOutline size={24} />} />
+					<LinkButton size='sm' href='#favorite' label={2166} startContent={<FavoriteBorder size={24} />} />
+					<LinkButton size='sm' href='#star' label={4064} startContent={<StarBorder size={24} />} />
+					<LinkButton size='sm' href='#comments' label={9} startContent={<ChatBubbleOutline size={24} />} />
 				</div>
 			</footer>
 		</div>

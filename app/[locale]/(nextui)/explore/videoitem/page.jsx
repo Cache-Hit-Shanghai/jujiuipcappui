@@ -71,7 +71,7 @@ function VideoDescription() {
 
 export default function Page() {
 	return (
-		<div className='flex flex-col h-screen bg-black'>
+		<div className='flex flex-col h-screen'>
 			<div className='fixed inset-0'>
 				<video autoPlay mute loop className='w-full h-full object-contain'>
 					<source

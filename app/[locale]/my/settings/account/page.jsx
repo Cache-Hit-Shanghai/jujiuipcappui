@@ -11,6 +11,7 @@ import {
 	ModalBody,
 	ModalHeader,
 	Input,
+	useDisclosure,
 } from '@nextui-org/react';
 import { useState } from 'react';
 import {
@@ -25,6 +26,7 @@ import { Logout } from '@styled-icons/material/Logout';
 import { Save } from '@styled-icons/material/Save';
 import { PhotoLibrary } from '@styled-icons/material/PhotoLibrary';
 import { DeleteOutline } from '@styled-icons/material/DeleteOutline';
+import { Confirm } from '@/jujiu-ui-components/nextui/extension/confirm';
 import { useJuJiuT } from '@/state/translate';
 
 function JuJiuModal({ onOpenChange, onClose, isOpen, title, position, children, ...props }) {
@@ -35,24 +37,15 @@ function JuJiuModal({ onOpenChange, onClose, isOpen, title, position, children, 
 			onClose={onClose}
 			onOpenChange={onOpenChange}
 			className='m-0'
+			{...props}
 		>
 			<ModalContent>
-				{(onClose) => {
-					return (
-						<>
-							<ModalHeader>{title}</ModalHeader>
-							<ModalBody className='py-4'>{children}</ModalBody>
-							{/* <ModalFooter>
-								<Button color='danger' variant='light' onPress={onClose}>
-									取消
-								</Button>
-								<Button color='primary' onPress={onClose}>
-									确定
-								</Button>
-							</ModalFooter> */}
-						</>
-					);
-				}}
+				{(onClose) => (
+					<>
+						<ModalHeader>{title}</ModalHeader>
+						<ModalBody className='py-4'>{children}</ModalBody>
+					</>
+				)}
 			</ModalContent>
 		</Modal>
 	);
@@ -62,6 +55,7 @@ const Page = () => {
 	const t = useJuJiuT();
 	const [openAvata, setOpenAvata] = useState(false);
 	const [openName, setOpenName] = useState(false);
+	const logout = useDisclosure();
 
 	return (
 		<div className='flex flex-col h-screen'>
@@ -89,9 +83,15 @@ const Page = () => {
 				</Card>
 				<Card>
 					<CardBody className='flex flex-col gap-3'>
-						<Button size='sm' color='secondary' startContent={<Logout size={24} />}>
+						<Button size='sm' color='secondary' startContent={<Logout size={24} />} onPress={logout.onOpen}>
 							{t('退出登录')}
 						</Button>
+						<Confirm
+							title={t('退出登录')}
+							message={t('您是否确定退出登录？')}
+							isOpen={logout.isOpen}
+							onClose={logout.onClose}
+						/>
 						<Divider />
 						<Button size='sm' color='danger' startContent={<DeleteOutline size={24} />}>
 							{t('注销账号')}

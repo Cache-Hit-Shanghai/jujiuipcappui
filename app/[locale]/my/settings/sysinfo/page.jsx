@@ -9,7 +9,7 @@ const Page = () => {
 		{ key: t('应用版本'), value: '2023/7/16' },
 		{ key: t('App/小程序版本'), value: '1.0.0.2' },
 		{ key: t('操作系统'), value: 'Android 10' },
-		{ key: 'WebView', value: 'Chrome 114.0.5735.61' },
+		{ key: 'WebView', value: 'Chrome/114.0.5735.61' },
 		{ key: t('注册ID'), value: 'abcdefghijklmn' },
 		{
 			key: t('用户代理'),

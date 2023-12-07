@@ -71,17 +71,17 @@ const Page = () => {
 					>
 						{[
 							{
-								label: '新建问题',
+								label: t('新建问题'),
 								href: './new',
 								Icon: PostAdd,
 							},
 							{
-								label: '我的问题',
+								label: t('我的问题'),
 								href: '#',
 								Icon: Article,
 							},
 							{
-								label: '我的回复',
+								label: t('我的回复'),
 								href: '#',
 								Icon: Reply,
 							},
@@ -99,11 +99,11 @@ const Page = () => {
 				<Input
 					size='sm'
 					labelPlacement='outside'
-					placeholder='搜索问题……'
+					placeholder={t('搜索问题')}
 					startContent={<Search size={24} />}
 				/>
 				<Button size='sm' color='primary'>
-					搜索
+					{t('搜索')}
 				</Button>
 			</div>
 			<Spacer y={2} />
@@ -117,25 +117,25 @@ const Page = () => {
 									<Link as={LocalizedLink} href='./post'>
 										{title}
 									</Link>
-									<div className='flex gap-1'>
+									<div className='flex gap-1 flex-wrap'>
 										<Chip size='sm' color='danger'>
-											bug
+											{t('缺陷')}
 										</Chip>
 										<Chip size='sm' color='primary'>
-											建议
+											{t('文档')}
 										</Chip>
 										<Chip size='sm' color='secondary'>
-											功能
+											{t('功能')}
 										</Chip>
 										<Chip size='sm' color='success'>
-											文档
+											{t('问题')}
 										</Chip>
 										<Chip size='sm' color='warning'>
-											帮助
+											{t('建议')}
 										</Chip>
 									</div>
 									<p className='text-xs text-default-500'>
-										由{createdBy}于{date}创建
+										{t('由 {username} 于 {createdAt} 创建', { username: createdBy, createdAt: date })}
 									</p>
 								</div>
 							</div>

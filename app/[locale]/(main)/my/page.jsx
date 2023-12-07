@@ -18,9 +18,9 @@ import { SupportAgent } from '@styled-icons/material/SupportAgent';
 import { FavoriteBorder } from '@styled-icons/material/FavoriteBorder';
 import { Face } from '@styled-icons/material/Face';
 import { Security } from '@styled-icons/material/Security';
-import { BusinessCenter } from '@styled-icons/material/BusinessCenter';
+import { Redeem } from '@styled-icons/material/Redeem';
 import { ChevronRight } from '@styled-icons/material/ChevronRight';
-import { Paid } from '@styled-icons/material/Paid';
+import { Savings } from '@styled-icons/material/Savings';
 import { Try } from '@/jujiu-ui-components/icons/try';
 
 export default function Page() {
@@ -72,7 +72,7 @@ export default function Page() {
 						<Button
 							radius='none'
 							variant='light'
-							startContent={<Paid size={24} />}
+							startContent={<Savings size={24} />}
 							endContent={<ChevronRight size={24} />}
 						>
 							{t('光豆')} 390
@@ -80,7 +80,7 @@ export default function Page() {
 						<Button
 							radius='none'
 							variant='light'
-							startContent={<BusinessCenter size={24} />}
+							startContent={<Redeem size={24} />}
 							endContent={<ChevronRight size={24} />}
 						>
 							{t('开宝箱')}

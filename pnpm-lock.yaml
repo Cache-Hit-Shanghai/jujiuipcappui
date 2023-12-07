@@ -79,7 +79,11 @@ importers:
         specifier: 5.3.3
         version: 5.3.3
 
-  jujiu-ui-components: {}
+  jujiu-ui-components:
+    dependencies:
+      tailwind-merge:
+        specifier: ^2.1.0
+        version: 2.1.0
 
 packages:
 

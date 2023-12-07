@@ -14,14 +14,6 @@ import {
 import { NavbarBack, MobileHeader, MobileMain } from '@/jujiu-ui-components/nextui/core/core-ui';
 import { useJuJiuT } from '@/state/translate';
 
-const content = `
-## 主要步骤如下
-1. 单击“云探”app。
-1. 单击摄像机设置小图标。
-1. 选择“设置”。
-1. 滚动到最下方，选择“转移设备”。
-`;
-
 const Page = () => {
 	const t = useJuJiuT();
 
@@ -34,25 +26,27 @@ const Page = () => {
 				<div className='flex gap-2 shrink-0 items-begin'>
 					<div>
 						<h2>一个非常非常长的标题一个非常非常长的标题一个非常非常长的标题</h2>
-						<p className='text-sm text-default-500'>由Jim于2023/07/08创建</p>
+						<p className='text-sm text-default-500'>
+							{t('由 {username} 于 {createdAt} 创建', { username: 'Jim', createdAt: '2023/07/08' })}
+						</p>
 					</div>
-					<Button size='sm'>编辑</Button>
+					<Button size='sm'>{t('编辑')}</Button>
 				</div>
-				<div className='flex gap-1'>
+				<div className='flex flex-wrap gap-1'>
 					<Chip size='sm' color='danger'>
-						bug
+						{t('缺陷')}
 					</Chip>
 					<Chip size='sm' color='primary'>
-						建议
+						{t('文档')}
 					</Chip>
 					<Chip size='sm' color='secondary'>
-						功能
+						{t('功能')}
 					</Chip>
 					<Chip size='sm' color='success'>
-						文档
+						{t('问题')}
 					</Chip>
 					<Chip size='sm' color='warning'>
-						帮助
+						{t('建议')}
 					</Chip>
 				</div>
 				<Card className='flex-none'>
@@ -64,11 +58,11 @@ const Page = () => {
 								src: 'https://i.pravatar.cc/150?u=a04258114e29026702d',
 							}}
 						/>
-						<p className='text-default-500'>2023/12/6 23:13</p>
+						<p className='text-sm text-default-500'>2023/12/6 23:13</p>
 					</CardHeader>
 					<Divider />
 					<CardBody>
-						<p>如何使用“设备转移”功能？</p>
+						<p className='text-sm'>如何使用“设备转移”功能？</p>
 					</CardBody>
 				</Card>
 				<Card className='flex-none'>
@@ -80,11 +74,11 @@ const Page = () => {
 								src: 'https://i.pravatar.cc/150?u=a04258114e29026702d',
 							}}
 						/>
-						<p className='text-default-500'>2023/12/7 23:13</p>
+						<p className='text-sm text-default-500'>2023/12/7 23:13</p>
 					</CardHeader>
 					<Divider />
 					<CardBody>
-						<p>单击“设置”，选择“设备转移”。</p>
+						<p className='text-sm'>单击“设置”，选择“设备转移”。</p>
 					</CardBody>
 				</Card>
 				<Divider />
@@ -97,15 +91,15 @@ const Page = () => {
 								src: 'https://avatars.githubusercontent.com/u/30373425?v=4',
 							}}
 						/>
-						添加评论
+						<p className='text-sm'>{t('添加评论')}</p>
 					</CardHeader>
 					<Divider />
 					<CardBody className='gap-2'>
-						<Textarea />
+						<Textarea size='sm' />
 					</CardBody>
 					<CardFooter className='flex justify-end'>
 						<Button size='sm' color='primary'>
-							评论
+							{t('评论')}
 						</Button>
 					</CardFooter>
 				</Card>

@@ -68,8 +68,9 @@ export default function Page() {
 					</CardBody>
 				</Card>
 				<Card>
-					<CardBody className='grid grid-cols-2 divide-x divide-divider'>
+					<CardBody className='px-0 grid grid-cols-2 divide-x divide-divider'>
 						<Button
+							className='p-0'
 							radius='none'
 							variant='light'
 							startContent={<Savings size={24} />}
@@ -78,6 +79,7 @@ export default function Page() {
 							{t('光豆')} 390
 						</Button>
 						<Button
+							className='p-0'
 							radius='none'
 							variant='light'
 							startContent={<Redeem size={24} />}

@@ -8,7 +8,7 @@ import {
 	MobileHeader,
 	MobileMain,
 } from '@/jujiu-ui-components/nextui/core/core-ui';
-import Link, { useJuJiuT } from '@/state/translate';
+import { useJuJiuT } from '@/state/translate';
 import { PhotoAlbum } from '@styled-icons/material/PhotoAlbum';
 import { Settings } from '@styled-icons/material/Settings';
 import { Update } from '@styled-icons/material/Update';
@@ -29,15 +29,19 @@ export default function Page() {
 	return (
 		<>
 			<MobileHeader>
-				<Button variant='light' as={Link} href='./login'>
-					<User
-						name='Jane Doe'
-						description='VIP level 1'
-						avatarProps={{
-							src: 'https://i.pravatar.cc/150?u=a04258114e29026702d',
-						}}
-					/>
-				</Button>
+				<LinkButton
+					variant='light'
+					href='./login'
+					label={
+						<User
+							name='Jane Doe'
+							description='VIP level 1'
+							avatarProps={{
+								src: 'https://i.pravatar.cc/150?u=a04258114e29026702d',
+							}}
+						/>
+					}
+				></LinkButton>
 				<div className='px-2'>
 					<ThemeButton />
 					<LinkButton href='./settings' icon={<Settings size={24} />} />

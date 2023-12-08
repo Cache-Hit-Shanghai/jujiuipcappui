@@ -52,10 +52,12 @@ export default function Page() {
 			</MobileHeader>
 			<div className='flex flex-col items-center pb-4 gap-2'>
 				<Avatar src='https://i.pravatar.cc/150?u=a04258114e29026708c' className='w-20 h-20 text-large' />
-				<p>暴走的鸡腿</p>
-				<p>
-					{t('Following')}: 1 {t('粉丝')}: 0 {t('好友')}: 4
-				</p>
+				<div className='flex flex-col items-center'>
+					<p>暴走的鸡腿</p>
+					<p className='text-sm text-default-500'>
+						{t('Following')}: 1 {t('粉丝')}: 0 {t('好友')}: 4
+					</p>
+				</div>
 			</div>
 			<MobileMain>
 				<LinkGroup data={linkData0} />

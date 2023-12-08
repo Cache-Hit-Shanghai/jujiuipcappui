@@ -25,7 +25,7 @@ export default function Page() {
 				<Card className='pt-3'>
 					<Tabs className='self-center'>
 						<Tab key='拉流成功' title='拉流成功'>
-							<div className='relative bg-black aspect-video'>
+							<div className='relative aspect-video dark text-foreground bg-background'>
 								<video muted autoPlay loop className='object-contain'>
 									<source src='https://samplelib.com/lib/preview/mp4/sample-5s.mp4' type='video/mp4' />
 								</video>
@@ -35,22 +35,22 @@ export default function Page() {
 									<StreamingControlBar2 />
 								</div>
 								<LinkButton
-									className='absolute bottom-1 right-1 text-white'
+									className='absolute bottom-1 right-1'
 									href='./fullscreen'
 									onPress={async () => {
 										await document.documentElement.requestFullscreen();
 										screen.orientation.lock('landscape');
 									}}
-									icon={<ScreenRotation size={24} className='text-white' />}
+									icon={<ScreenRotation size={24} />}
 								/>
 							</div>
 						</Tab>
 						<Tab key='拉流失败' title='拉流失败'>
-							<div className='relative bg-black aspect-video'>
+							<div className='relative aspect-video dark text-foreground bg-background'>
 								<video className='w-full h-full' />
 								<div className='absolute inset-0 m-auto px-4 gap-y-2 flex flex-col items-center justify-center'>
-									<WarningAmber size={48} className='text-white' />
-									<p className='text-white'>{t('无法加载视频流')}</p>
+									<WarningAmber size={48} />
+									<p>{t('无法加载视频流')}</p>
 									<p className='text-xs text-default-500'>
 										{t('设备已离线，离线时间：2023年9月14日 14:52:30。')}
 									</p>
@@ -58,11 +58,11 @@ export default function Page() {
 							</div>
 						</Tab>
 						<Tab key='拉流休眠' title='拉流休眠'>
-							<div className='relative bg-black aspect-video'>
+							<div className='relative aspect-video dark text-foreground bg-background'>
 								<video className='w-full h-full' />
 								<div className='absolute inset-0 m-auto px-4 gap-y-2 flex flex-col items-center justify-center'>
-									<Nightlight size={48} className='text-white' />
-									<p className='text-white'>{t('设备已休眠')}</p>
+									<Nightlight size={48} />
+									<p>{t('设备已休眠')}</p>
 									<Button color='primary'>{t('唤醒')}</Button>
 								</div>
 							</div>

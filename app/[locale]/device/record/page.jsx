@@ -17,7 +17,7 @@ export default function Page() {
 				<NavbarBack label={t('录像查看') + ' - 办3'} />
 			</MobileHeader>
 			<MobileMain>
-				<div className='bg-black aspect-video'>
+				<div className='aspect-video dark text-foreground bg-background'>
 					<video muted autoPlay loop className='object-contain'>
 						<source src='https://samplelib.com/lib/preview/mp4/sample-5s.mp4' type='video/mp4' />
 					</video>
@@ -41,7 +41,7 @@ export default function Page() {
 						</div>
 						<div className='grid grid-cols-3 overflow-auto gap-2'>
 							{Array.from({ length: 40 }).map((e, i) => (
-								<div key={i} className='bg-black aspect-video'>
+								<div key={i} className='aspect-video dark text-foreground bg-background'>
 									<video className='object-contain'>
 										<source src='https://samplelib.com/lib/preview/mp4/sample-5s.mp4' type='video/mp4' />
 									</video>

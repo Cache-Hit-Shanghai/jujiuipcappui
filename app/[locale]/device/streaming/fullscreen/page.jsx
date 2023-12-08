@@ -22,7 +22,7 @@ export default function Page() {
 	});
 
 	return (
-		<div className='h-screen flex flex-col'>
+		<div className='h-screen flex flex-col dark text-foreground bg-background'>
 			<MobileMain className='p-0'>
 				<video muted autoPlay loop className='h-full w-full object-contain'>
 					<source

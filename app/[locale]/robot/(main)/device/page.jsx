@@ -46,7 +46,7 @@ export default function Page() {
 			</MobileHeader>
 			<MobileMain>
 				<RobotCard />
-				<Carousel
+				{/* <Carousel
 					autoPlay
 					infiniteLoop
 					dynamicHeight
@@ -57,7 +57,7 @@ export default function Page() {
 					<Image src='https://pixelbot.oss-accelerate.aliyuncs.com/Weixin%20Image_20231116164719.png' />
 					<Image src='https://pixelbot.oss-accelerate.aliyuncs.com/Weixin%20Image_20231116164752.png' />
 					<Image src='https://pixelbot.oss-accelerate.aliyuncs.com/Weixin%20Image_20231116164801.png' />
-				</Carousel>
+				</Carousel> */}
 			</MobileMain>
 		</>
 	);

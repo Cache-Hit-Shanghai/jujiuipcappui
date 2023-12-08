@@ -59,7 +59,7 @@ export default function Page() {
 			</div>
 			<MobileMain>
 				<LinkGroup data={linkData0} />
-				<Carousel
+				{/* <Carousel
 					autoPlay
 					infiniteLoop
 					dynamicHeight
@@ -69,7 +69,7 @@ export default function Page() {
 				>
 					<Image src='https://pixelbot.oss-accelerate.aliyuncs.com/my2.jpg' />
 					<Image src='https://pixelbot.oss-accelerate.aliyuncs.com/my3.jpg' />
-				</Carousel>
+				</Carousel> */}
 				<LinkGroup data={linkData1} />
 			</MobileMain>
 		</>

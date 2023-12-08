@@ -6,6 +6,7 @@ import { MobileHeader, MobileMain } from '@/jujiu-ui-components/nextui/core/core
 import Link, { useJuJiuT } from '@/state/translate';
 import { FavoriteBorder } from '@styled-icons/material/FavoriteBorder';
 import { Search } from '@styled-icons/material/Search';
+import { MotionPhotosOn } from '@styled-icons/material/MotionPhotosOn';
 
 const cardData = [
 	{
@@ -87,6 +88,9 @@ export default function Page() {
 	return (
 		<>
 			<MobileHeader>
+				<Button isIconOnly variant='light'>
+					<MotionPhotosOn size={24} />
+				</Button>
 				<Tabs
 					aria-label='Options'
 					size='sm'

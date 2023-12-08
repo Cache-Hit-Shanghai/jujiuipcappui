@@ -22,22 +22,22 @@ const Page = () => {
 			<footer className='flex flex-col gap-2 p-4'>
 				<Card>
 					<CardBody className='gap-2'>
-						<p className='self-center text-lg'>138****1297</p>
-						<Button size='sm' startContent={<Smartphone size={24} />}>
+						<p className='self-center text-lg'>+86 138****1297</p>
+						<Button size='sm' color='primary' startContent={<Smartphone size={24} />}>
 							{t('使用当前手机号')}
 						</Button>
 					</CardBody>
 				</Card>
 				<Card>
 					<CardBody className='gap-2'>
-						<Button size='sm' startContent={<Wechat size={24} />}>
+						<Button size='sm' startContent={<Wechat size={24} />} className='bg-[#1AAD19]'>
 							{t('微信')}
 						</Button>
 					</CardBody>
 				</Card>
 				<Card>
 					<CardBody className='gap-2'>
-						<Button size='sm' startContent={<Lock size={24} />}>
+						<Button size='sm' color='secondary' startContent={<Lock size={24} />}>
 							{t('密码登录')}
 						</Button>
 					</CardBody>

@@ -92,8 +92,8 @@ const Page = () => {
 							isOpen={logout.isOpen}
 							onClose={logout.onClose}
 						/>
-						<Divider />
-						{/* <Button size='sm' color='danger' startContent={<DeleteOutline size={24} />}>
+						{/* <Divider />
+						<Button size='sm' color='danger' startContent={<DeleteOutline size={24} />}>
 							{t('注销账号')}
 						</Button> */}
 					</CardBody>

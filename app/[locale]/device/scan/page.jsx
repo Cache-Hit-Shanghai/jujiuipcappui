@@ -11,7 +11,7 @@ export default function Page() {
 	const t = useJuJiuT();
 
 	return (
-		<div className='relative h-screen flex flex-col'>
+		<div className='relative h-screen flex flex-col dark text-foreground bg-background'>
 			<MobileHeader className='absolute'>
 				<NavbarBack label={t('扫一扫')} />
 			</MobileHeader>

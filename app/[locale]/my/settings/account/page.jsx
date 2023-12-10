@@ -83,7 +83,7 @@ const Page = () => {
 				</Card>
 				<Card>
 					<CardBody className='flex flex-col gap-3'>
-						<Button size='sm' color='secondary' startContent={<Logout size={24} />} onPress={logout.onOpen}>
+						<Button size='sm' color='primary' startContent={<Logout size={24} />} onPress={logout.onOpen}>
 							{t('退出登录')}
 						</Button>
 						<Confirm

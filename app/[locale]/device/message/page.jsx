@@ -1,9 +1,21 @@
 'use client';
 
-import { Card, CardBody, CardHeader, Divider, Badge } from '@nextui-org/react';
+import {
+	Card,
+	CardBody,
+	CardHeader,
+	Divider,
+	Badge,
+	Select,
+	SelectItem,
+} from '@nextui-org/react';
 import { Notifications } from '@/jujiu-ui-components/icons/notifications';
 import { NotificationsUnread } from '@/jujiu-ui-components/icons/notificationsunread';
-import { NavbarBack, MobileHeader, MobileMain } from '@/jujiu-ui-components/nextui/core/core-ui';
+import {
+	NavbarBack,
+	MobileHeader,
+	MobileMain,
+} from '@/jujiu-ui-components/nextui/core/core-ui';
 import { useJuJiuT } from '@/state/translate';
 
 const Page = () => {
@@ -24,7 +36,8 @@ const Page = () => {
 			title: t('服务即将到期提醒'),
 			date: '2023/7/23',
 			time: '04:24',
-			content: '办3（GF12345678）的云存储服务将于1天后到期。到期后已保存的录像将无法访问。请及时续费。',
+			content:
+				'办3（GF12345678）的云存储服务将于1天后到期。到期后已保存的录像将无法访问。请及时续费。',
 			href: '/my/cloudstorage',
 			read: false,
 		},
@@ -33,7 +46,8 @@ const Page = () => {
 			title: t('服务即将到期提醒'),
 			date: '2023/7/22',
 			time: '21:24',
-			content: '办3（GF12345678）的云存储服务将于7天后到期。到期后已保存的录像将无法访问。请及时续费。',
+			content:
+				'办3（GF12345678）的云存储服务将于7天后到期。到期后已保存的录像将无法访问。请及时续费。',
 			href: '/my/cloudstorage',
 			read: false,
 		},
@@ -82,18 +96,39 @@ const Page = () => {
 					label={
 						<Badge
 							color='primary'
-							content={messages.reduce((counter, message) => (message.read ? counter : counter + 1), 0)}
+							content={messages.reduce(
+								(counter, message) => (message.read ? counter : counter + 1),
+								0
+							)}
 						>
 							<p className='pr-2'>{t('消息通知')}</p>
 						</Badge>
 					}
 				/>
+				<Select size='sm' className='w-32' defaultSelectedKeys={['all']}>
+					<SelectItem key='all' value='all'>
+						{t('全部')}
+					</SelectItem>
+					<SelectItem key='unread' value='unread'>
+						{t('未读')}
+					</SelectItem>
+					<SelectItem key='read' value='read'>
+						{t('已读')}
+					</SelectItem>
+				</Select>
 			</MobileHeader>
 			<MobileMain>
 				{messages.map((message) => (
-					<Card key={message.id} className={'flex-none' + (message.read ? '' : ' bg-primary')}>
+					<Card
+						key={message.id}
+						className={'flex-none' + (message.read ? '' : ' bg-primary')}
+					>
 						<CardHeader className='flex flex-row gap-2 items-center'>
-							{message.read ? <Notifications size={24} /> : <NotificationsUnread size={24} />}
+							{message.read ? (
+								<Notifications size={24} />
+							) : (
+								<NotificationsUnread size={24} />
+							)}
 							<div>
 								<p>{message.title}</p>
 								<p className='text-xs text-default-500'>

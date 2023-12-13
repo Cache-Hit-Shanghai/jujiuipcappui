@@ -1,7 +1,11 @@
 'use client';
 
 import { Divider, Card, CardHeader, CardBody } from '@nextui-org/react';
-import { LinkButton, MobileHeader, MobileMain } from '@/jujiu-ui-components/nextui/core/core-ui';
+import {
+	LinkButton,
+	MobileHeader,
+	MobileMain,
+} from '@/jujiu-ui-components/nextui/core/core-ui';
 import { useJuJiuT } from '@/state/translate';
 import { CloudUpload } from '@styled-icons/material/CloudUpload';
 import { Call } from '@styled-icons/material/Call';
@@ -22,7 +26,9 @@ export default function Page() {
 	return (
 		<>
 			<MobileHeader className='justify-center'>
-				<h4 className='h-10 flex items-center justify-center text-lg'>{t('会员服务')}</h4>
+				<h4 className='h-10 flex items-center justify-center text-lg'>
+					{t('会员服务')}
+				</h4>
 			</MobileHeader>
 			<MobileMain>
 				<Card>
@@ -91,7 +97,7 @@ export default function Page() {
 								radius='none'
 								label={t('语音备忘')}
 								icon={<GraphicEq size={24} />}
-								href=''
+								href='./memo'
 							/>
 						</div>
 					</CardBody>

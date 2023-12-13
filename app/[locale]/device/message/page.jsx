@@ -18,7 +18,7 @@ import {
 } from '@/jujiu-ui-components/nextui/core/core-ui';
 import { useJuJiuT } from '@/state/translate';
 
-const Page = () => {
+export default function Page() {
 	const t = useJuJiuT();
 
 	const messages = [
@@ -143,5 +143,4 @@ const Page = () => {
 			</MobileMain>
 		</div>
 	);
-};
-export default Page;
+}

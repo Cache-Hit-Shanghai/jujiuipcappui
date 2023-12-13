@@ -17,7 +17,7 @@
 	"license": "ISC",
 	"dependencies": {
 		"@emotion/styled": "^11.11.0",
-		"@mui/lab": "^5.0.0-alpha.155",
+		"@mui/lab": "^5.0.0-alpha.156",
 		"@nextui-org/react": "^2.2.9",
 		"@react-aria/toast": "^3.0.0-beta.7",
 		"@react-stately/toast": "^3.0.0-beta.1",
@@ -36,7 +36,7 @@
 	},
 	"devDependencies": {
 		"@types/node": "^20.10.4",
-		"@types/react": "^18.2.43",
+		"@types/react": "^18.2.44",
 		"autoprefixer": "^10.4.16",
 		"postcss": "^8.4.32",
 		"tailwindcss": "^3.3.6",

@@ -9,6 +9,47 @@ import {
 import { PayPanel } from '@/jujiu-ui-components/nextui/ipc/pay/payPanel';
 import { useJuJiuT } from '@/state/translate';
 
+const packages = [
+	{
+		label: '云端语音备忘月套餐',
+		price: 3,
+		discount: 3,
+	},
+	{
+		label: '云端语音备忘季套餐',
+		price: 7,
+		discount: 8,
+	},
+	{
+		label: '云端语音备忘年套餐',
+		price: 30,
+		discount: 30,
+	},
+];
+
+function PackagePanel({ label, price, discount }) {
+	return (
+		<Card>
+			<CardBody>
+				<Checkbox
+					defaultSelected
+					classNames={{ base: 'max-w-full', label: 'w-full' }}
+				>
+					<div className='flex flex-row items-center justify-between'>
+						<p>{label}</p>
+						<div>
+							<p className='text-warning'>￥{price}</p>
+							<p className='text-xs line-through text-default-500'>
+								￥{price + discount}
+							</p>
+						</div>
+					</div>
+				</Checkbox>
+			</CardBody>
+		</Card>
+	);
+}
+
 export default function Page() {
 	const t = useJuJiuT();
 
@@ -21,49 +62,9 @@ export default function Page() {
 				<p className='text-xs text-default-500'>
 					备注：为向您提供本服务，云平台需要在服务期间持续访问设备视频画面并进行技术分析，详情请阅读本服务的服务协议。
 				</p>
-				<Card>
-					<CardBody>
-						<Checkbox
-							defaultSelected
-							classNames={{ base: 'max-w-full', label: 'w-full' }}
-						>
-							<div className='flex flex-row items-center justify-between'>
-								<p>云端语音备忘月套餐</p>
-								<p className='text-warning'>￥6</p>
-							</div>
-						</Checkbox>
-					</CardBody>
-				</Card>
-				<Card>
-					<CardBody>
-						<Checkbox classNames={{ base: 'max-w-full', label: 'w-full' }}>
-							<div className='flex flex-row items-center justify-between'>
-								<p>云端语音备忘季套餐</p>
-								<p className='text-warning'>￥15</p>
-							</div>
-						</Checkbox>
-					</CardBody>
-				</Card>
-				<Card>
-					<CardBody>
-						<Checkbox classNames={{ base: 'max-w-full', label: 'w-full' }}>
-							<div className='flex flex-row items-center justify-between'>
-								<p>云端语音备忘年套餐</p>
-								<p className='text-warning'>￥60</p>
-							</div>
-						</Checkbox>
-					</CardBody>
-				</Card>
-				<Card>
-					<CardBody>
-						<Checkbox classNames={{ base: 'max-w-full', label: 'w-full' }}>
-							<div className='flex flex-row items-center justify-between'>
-								<p>云端语音备忘月订阅套餐</p>
-								<p className='text-warning'>￥5.4</p>
-							</div>
-						</Checkbox>
-					</CardBody>
-				</Card>
+				{packages.map((bundle) => (
+					<PackagePanel {...bundle} />
+				))}
 			</MobileMain>
 			<div className='flex flex-col gap-2 p-2'>
 				<PayPanel discount={3} price={3} />

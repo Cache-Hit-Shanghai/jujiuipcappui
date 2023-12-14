@@ -8,6 +8,7 @@ import {
 	Button,
 	Checkbox,
 	Slider,
+	Image,
 } from '@nextui-org/react';
 import {
 	LinkButton,
@@ -16,7 +17,7 @@ import {
 	NavbarBack,
 } from '@/jujiu-ui-components/nextui/core/core-ui';
 import { useJuJiuT } from '@/state/translate';
-import { CloudUpload } from '@styled-icons/material/CloudUpload';
+import { TextFields } from '@styled-icons/material/TextFields';
 import { Call } from '@styled-icons/material/Call';
 import { Mic } from '@styled-icons/material/Mic';
 import { SdStorage } from '@styled-icons/material/SdStorage';
@@ -53,7 +54,7 @@ export default function Page() {
 							<NestCamWiredStand size={24} />
 							<div>
 								<p>办3</p>
-								<p className='text-xs text-default-500'>使用中</p>
+								<p className='text-xs text-default-500'>未开通</p>
 							</div>
 						</div>
 						<Button size='sm' color='primary'>
@@ -127,7 +128,7 @@ export default function Page() {
 							<Slider
 								label={
 									<div>
-										<p className='text-lg font-semibold'>时间间隔</p>
+										<p className='font-semibold'>时间间隔</p>
 										<p className='text-xs text-default-500'>间隔内仅播报一次</p>
 									</div>
 								}
@@ -138,13 +139,64 @@ export default function Page() {
 								className='max-w-md bg-primary-200 p-4 rounded-medium'
 							/>
 							<Slider
-								label={<p className='text-lg font-semibold'>循环次数</p>}
+								label={<p className='font-semibold'>循环次数</p>}
 								step={1}
 								maxValue={5}
 								minValue={0}
 								defaultValue={2}
 								className='max-w-md bg-primary-200 p-4 rounded-medium'
 							/>
+						</div>
+						<Divider />
+						<p className='text-lg font-semibold'>支持自己声音录制播放视频</p>
+						<p className='text-sm text-default-500'>
+							语音转化形式太过突兀，支持用自己的声音录制播放视频，我的设备声音我做主
+						</p>
+						<div className='bg-primary-100 rounded-medium flex flex-row p-2 gap-2'>
+							<Button
+								size='sm'
+								startContent={<TextFields size={24} />}
+								color='secondary'
+								className='flex-1'
+							>
+								文字输入
+							</Button>
+							<Button
+								size='sm'
+								startContent={<Mic size={24} />}
+								color='primary'
+								className='flex-1'
+							>
+								按住语音
+							</Button>
+						</div>
+						<Divider />
+						<p className='text-lg font-semibold'>家用场景</p>
+						<p className='text-sm text-default-500'>
+							语音备忘，提醒自己，家人不要忘记重要行程安排
+						</p>
+						<Image src='https://pic.52112.com/180128/Businesswoman/Fn1vcy3sKr.jpg' />
+						<Divider />
+						<p className='text-lg font-semibold'>商用场景</p>
+						<p className='text-sm text-default-500'>
+							收银台、后厨等位置，识别到人形播报，进行交接班、进货、安全检查提醒等
+						</p>
+						<Image src='http://www.canyin168.com/UploadFiles/glyy/2018/2/201802111057136936.jpg' />
+						<Divider />
+						<Image src='https://pic.52112.com/180128/Businesswoman/Fn1vcy3sKr.jpg' />
+						<Divider />
+						<p className='text-lg font-semibold'>语音留言</p>
+						<p className='text-sm text-default-500'>
+							节日纪念日，通过语音播放一段有意义的留言
+						</p>
+						<div className='bg-primary-100 rounded-medium flex flex-row items-center p-2 gap-2'>
+							<NestCamWiredStand size={24} />
+							<div>
+								<p className='font-semibold'>语音播报</p>
+								<p className='text-xs text-default-500'>
+									今天是您的生日。生日快乐！
+								</p>
+							</div>
 						</div>
 					</CardBody>
 				</Card>

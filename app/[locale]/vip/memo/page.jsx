@@ -174,7 +174,7 @@ export default function Page() {
 						<p className='text-sm text-default-500'>
 							收银台、后厨等位置，识别到人形播报，进行交接班、进货、安全检查提醒等
 						</p>
-						<Image src='http://www.canyin168.com/UploadFiles/glyy/2018/2/201802111057136936.jpg' />
+						<Image src='https://oysterlink.com/wp-content/uploads/2023/04/waiter-waitress-salary.jpg.webp' />
 						<Divider />
 						<p className='text-lg font-semibold'>语音留言</p>
 						<p className='text-sm text-default-500'>

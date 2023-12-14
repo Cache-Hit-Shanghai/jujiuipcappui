@@ -1,15 +1,16 @@
 'use client';
 
-import { Card, CardBody, Checkbox, Link } from '@nextui-org/react';
+import { Link } from '@nextui-org/react';
 import {
 	MobileHeader,
 	MobileMain,
 	NavbarBack,
 } from '@/jujiu-ui-components/nextui/core/core-ui';
+import { BundlePanel } from '@/jujiu-ui-components/nextui/ipc/pay/bundlePanel';
 import { PayPanel } from '@/jujiu-ui-components/nextui/ipc/pay/payPanel';
 import { useJuJiuT } from '@/state/translate';
 
-const packages = [
+const bundles = [
 	{
 		label: '云端语音备忘月套餐',
 		price: 3,
@@ -27,29 +28,6 @@ const packages = [
 	},
 ];
 
-function PackagePanel({ label, price, discount }) {
-	return (
-		<Card>
-			<CardBody>
-				<Checkbox
-					defaultSelected
-					classNames={{ base: 'max-w-full', label: 'w-full' }}
-				>
-					<div className='flex flex-row items-center justify-between'>
-						<p>{label}</p>
-						<div>
-							<p className='text-warning'>￥{price}</p>
-							<p className='text-xs line-through text-default-500'>
-								￥{price + discount}
-							</p>
-						</div>
-					</div>
-				</Checkbox>
-			</CardBody>
-		</Card>
-	);
-}
-
 export default function Page() {
 	const t = useJuJiuT();
 
@@ -62,9 +40,7 @@ export default function Page() {
 				<p className='text-xs text-default-500'>
 					备注：为向您提供本服务，云平台需要在服务期间持续访问设备视频画面并进行技术分析，详情请阅读本服务的服务协议。
 				</p>
-				{packages.map((bundle) => (
-					<PackagePanel {...bundle} />
-				))}
+				<BundlePanel bundles={bundles} />
 			</MobileMain>
 			<div className='flex flex-col gap-2 p-2'>
 				<PayPanel discount={3} price={3} />

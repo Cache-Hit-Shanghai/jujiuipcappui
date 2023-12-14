@@ -1,37 +1,57 @@
 'use client';
 
-import { Card, CardBody, Checkbox, Badge, Link } from '@nextui-org/react';
+import { Link, Tabs, Tab } from '@nextui-org/react';
 import {
 	NavbarBack,
 	MobileHeader,
 	MobileMain,
 } from '@/jujiu-ui-components/nextui/core/core-ui';
 import { PayPanel } from '@/jujiu-ui-components/nextui/ipc/pay/payPanel';
+import { BundlePanel } from '@/jujiu-ui-components/nextui/ipc/pay/bundlePanel';
 
-const list = [
+const bundlesActive = [
 	{
-		day: '7',
-		name: '年',
-		price: 139,
-		discount: 70,
+		label: '7天年套餐',
+		price: 70,
+		discount: 69,
 	},
 	{
-		day: '7',
-		name: '半年',
-		price: 78,
+		label: '7天半年套餐',
+		price: 39,
 		discount: 39,
 	},
 	{
-		day: '30',
-		name: '年',
-		price: 300,
-		discount: 151,
+		label: '30天年套餐',
+		price: 150,
+		discount: 150,
 	},
 	{
-		day: '30',
-		name: '半年',
-		price: 160,
+		label: '30天半年套餐',
+		price: 80,
 		discount: 80,
+	},
+];
+
+const bundlesContinuous = [
+	{
+		label: '7天年套餐',
+		price: 399,
+		discount: 400,
+	},
+	{
+		label: '7天月套餐',
+		price: 34,
+		discount: 35,
+	},
+	{
+		label: '30天年套餐',
+		price: 499,
+		discount: 500,
+	},
+	{
+		label: '30天月套餐',
+		price: 44,
+		discount: 45,
 	},
 ];
 
@@ -42,32 +62,14 @@ export default function Page() {
 				<NavbarBack label={'套餐选择'} />
 			</MobileHeader>
 			<MobileMain>
-				{list.map(({ day, name, price, discount = 0 }, i) => (
-					<Badge
-						key={i}
-						content={<span className='px-0'>惠</span>}
-						color='danger'
-						isInvisible={discount <= 0}
-					>
-						<Card className='w-full '>
-							<CardBody className='flex flex-row justify-between items-center '>
-								<div className='flex gap-1'>
-									<Checkbox></Checkbox>
-									<p>{day}天</p>
-								</div>
-								<p>{name}套餐</p>
-								<div className='flex flex-col items-end'>
-									<p>￥{price - discount}</p>
-									{discount && (
-										<p>
-											<strike className='text-stone-400'>￥{price}</strike>
-										</p>
-									)}
-								</div>
-							</CardBody>
-						</Card>
-					</Badge>
-				))}
+				<Tabs className='self-center'>
+					<Tab key='active' title='活动录像'>
+						<BundlePanel bundles={bundlesActive} />
+					</Tab>
+					<Tab key='continuous' title='连续录像'>
+						<BundlePanel bundles={bundlesContinuous} />
+					</Tab>
+				</Tabs>
 			</MobileMain>
 			<div className='flex flex-col gap-2 p-2'>
 				<PayPanel discount={101} price={199} />

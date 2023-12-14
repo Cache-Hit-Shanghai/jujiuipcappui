@@ -9,8 +9,17 @@ module.exports = {
 		'./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}',
 	],
 	theme: {
-		extend: {},
+		extend: {
+			colors: {
+				wechat: '#1AAD19',
+				alipay: '#1678FF',
+			},
+		},
 	},
 	darkMode: 'class',
-	plugins: [nextui()],
+	plugins: [
+		nextui({
+			addCommonColors: true,
+		}),
+	],
 };

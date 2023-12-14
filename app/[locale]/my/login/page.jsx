@@ -1,7 +1,17 @@
 'use client';
 
-import { Card, CardBody, Button, Checkbox, Link as Anchor } from '@nextui-org/react';
-import { NavbarBack, MobileHeader, MobileMain } from '@/jujiu-ui-components/nextui/core/core-ui';
+import {
+	Card,
+	CardBody,
+	Button,
+	Checkbox,
+	Link as Anchor,
+} from '@nextui-org/react';
+import {
+	NavbarBack,
+	MobileHeader,
+	MobileMain,
+} from '@/jujiu-ui-components/nextui/core/core-ui';
 import { AppAbout } from '@/jujiu-ui-components/nextui/ipc/about/brand';
 import { Smartphone } from '@styled-icons/material/Smartphone';
 import { Lock } from '@styled-icons/material/Lock';
@@ -23,21 +33,33 @@ const Page = () => {
 				<Card>
 					<CardBody className='gap-2'>
 						<p className='self-center text-lg'>+86 138****1297</p>
-						<Button size='sm' color='primary' startContent={<Smartphone size={24} />}>
+						<Button
+							size='sm'
+							color='primary'
+							startContent={<Smartphone size={24} />}
+						>
 							{t('使用当前手机号')}
 						</Button>
 					</CardBody>
 				</Card>
 				<Card>
 					<CardBody className='gap-2'>
-						<Button size='sm' startContent={<Wechat size={24} />} className='bg-[#1AAD19]'>
+						<Button
+							size='sm'
+							startContent={<Wechat size={24} />}
+							className='bg-wechat'
+						>
 							{t('微信')}
 						</Button>
 					</CardBody>
 				</Card>
 				<Card>
 					<CardBody className='gap-2'>
-						<Button size='sm' color='secondary' startContent={<Lock size={24} />}>
+						<Button
+							size='sm'
+							color='secondary'
+							startContent={<Lock size={24} />}
+						>
 							{t('密码登录')}
 						</Button>
 					</CardBody>

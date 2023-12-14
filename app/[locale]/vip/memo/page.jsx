@@ -7,6 +7,7 @@ import {
 	CardBody,
 	Button,
 	Checkbox,
+	Slider,
 } from '@nextui-org/react';
 import {
 	LinkButton,
@@ -116,6 +117,34 @@ export default function Page() {
 									适用于迎宾语、防盗震慑等
 								</p>
 							</div>
+						</div>
+						<Divider />
+						<p className='text-lg font-semibold'>时间设置更灵活</p>
+						<p className='text-sm text-default-500'>
+							支持时间间隔及循环次数设置，避免漏掉提醒
+						</p>
+						<div className='bg-primary-100 rounded-medium flex flex-col p-2 gap-2'>
+							<Slider
+								label={
+									<div>
+										<p className='text-lg font-semibold'>时间间隔</p>
+										<p className='text-xs text-default-500'>间隔内仅播报一次</p>
+									</div>
+								}
+								step={1}
+								maxValue={10}
+								minValue={0}
+								defaultValue={4}
+								className='max-w-md bg-primary-200 p-4 rounded-medium'
+							/>
+							<Slider
+								label={<p className='text-lg font-semibold'>循环次数</p>}
+								step={1}
+								maxValue={5}
+								minValue={0}
+								defaultValue={2}
+								className='max-w-md bg-primary-200 p-4 rounded-medium'
+							/>
 						</div>
 					</CardBody>
 				</Card>

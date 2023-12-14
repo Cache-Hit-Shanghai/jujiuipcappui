@@ -8,6 +8,7 @@ import {
 	Badge,
 	Select,
 	SelectItem,
+	Image,
 } from '@nextui-org/react';
 import { Notifications } from '@/jujiu-ui-components/icons/notifications';
 import { NotificationsUnread } from '@/jujiu-ui-components/icons/notificationsunread';
@@ -22,6 +23,17 @@ export default function Page() {
 	const t = useJuJiuT();
 
 	const messages = [
+		{
+			id: -1,
+			title: t('智能识别提醒'),
+			date: '2023/12/14',
+			time: '10:24',
+			content: '办3（GF12345678）识别到人脸。',
+			href: '/my/cloudstorage',
+			read: false,
+			image:
+				'https://cw-image-resizer.cwg.tw/resize/uri/https%3A%2F%2Fstorage.googleapis.com%2Fcrossing-cms-cwg-tw%2Farticle%2F201808%2Farticle-5b62c5a4d374e.jpg/?w=1170&format=webp',
+		},
 		{
 			id: 0,
 			title: t('服务过期提醒'),
@@ -137,7 +149,10 @@ export default function Page() {
 							</div>
 						</CardHeader>
 						<Divider />
-						<CardBody className='flex-none text-sm'>{message.content}</CardBody>
+						<CardBody className='flex-none text-sm flex flex-col gap-2'>
+							<p>{message.content}</p>
+							<Image src={message.image} />
+						</CardBody>
 					</Card>
 				))}
 			</MobileMain>

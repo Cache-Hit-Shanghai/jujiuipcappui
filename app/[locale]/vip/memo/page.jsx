@@ -183,8 +183,6 @@ export default function Page() {
 						</p>
 						<Image src='http://www.canyin168.com/UploadFiles/glyy/2018/2/201802111057136936.jpg' />
 						<Divider />
-						<Image src='https://pic.52112.com/180128/Businesswoman/Fn1vcy3sKr.jpg' />
-						<Divider />
 						<p className='text-lg font-semibold'>语音留言</p>
 						<p className='text-sm text-default-500'>
 							节日纪念日，通过语音播放一段有意义的留言

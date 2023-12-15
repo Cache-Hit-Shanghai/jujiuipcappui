@@ -152,12 +152,16 @@ export default function Page() {
 								)}
 								<div>
 									<p>{message.title}</p>
-									<p className='text-xs text-default-500'>{message.device}</p>
+									<p className='text-xs text-default dark:text-default-500'>
+										{message.device}
+									</p>
 								</div>
 							</div>
 							<div className='flex flex-col items-end'>
 								<p className='text-sm'>{message.time}</p>
-								<p className='text-xs text-default-500'>{message.date}</p>
+								<p className='text-xs text-default dark:text-default-500'>
+									{message.date}
+								</p>
 							</div>
 						</CardHeader>
 						<Divider />

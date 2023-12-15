@@ -28,7 +28,8 @@ export default function Page() {
 			title: t('智能识别提醒'),
 			date: '2023/12/14',
 			time: '10:24',
-			content: '办3（GF12345678）识别到人脸。',
+			device: '办3 (GF12345678)',
+			content: '识别到人脸。',
 			href: '/my/cloudstorage',
 			read: false,
 			image:
@@ -39,7 +40,8 @@ export default function Page() {
 			title: t('服务过期提醒'),
 			date: '2023/7/24',
 			time: '10:24',
-			content: '办3（GF12345678）的云存储服务已过期。录像已无法访问。',
+			device: '办3 (GF12345678)',
+			content: '云存储服务已过期。录像已无法访问。',
 			href: '/my/cloudstorage',
 			read: false,
 		},
@@ -48,8 +50,9 @@ export default function Page() {
 			title: t('服务即将到期提醒'),
 			date: '2023/7/23',
 			time: '04:24',
+			device: '办3 (GF12345678)',
 			content:
-				'办3（GF12345678）的云存储服务将于1天后到期。到期后已保存的录像将无法访问。请及时续费。',
+				'云存储服务将于1天后到期。到期后已保存的录像将无法访问。请及时续费。',
 			href: '/my/cloudstorage',
 			read: false,
 		},
@@ -58,8 +61,9 @@ export default function Page() {
 			title: t('服务即将到期提醒'),
 			date: '2023/7/22',
 			time: '21:24',
+			device: '办3 (GF12345678)',
 			content:
-				'办3（GF12345678）的云存储服务将于7天后到期。到期后已保存的录像将无法访问。请及时续费。',
+				'云存储服务将于7天后到期。到期后已保存的录像将无法访问。请及时续费。',
 			href: '/my/cloudstorage',
 			read: false,
 		},
@@ -68,7 +72,8 @@ export default function Page() {
 			title: t('设备访问提醒'),
 			date: '2023/7/21',
 			time: '10:24',
-			content: '用户“AB1234”正在查看办3（GF12345678）的视频流。',
+			device: '办3 (GF12345678)',
+			content: '用户“AB1234”正在查看视频流。',
 			href: '#',
 			read: false,
 		},
@@ -77,7 +82,8 @@ export default function Page() {
 			title: t('设备异常提醒'),
 			date: '2023/7/20',
 			time: '04:24',
-			content: '办3（GF12345678）绑定用户失败。',
+			device: '办3 (GF12345678)',
+			content: '绑定用户失败。',
 			href: '#',
 			read: false,
 		},
@@ -86,7 +92,8 @@ export default function Page() {
 			title: t('设备状态提醒'),
 			date: '2023/7/19',
 			time: '21:24',
-			content: '办3（GF12345678）已上线',
+			device: '办3 (GF12345678)',
+			content: '已上线',
 			href: '#',
 			read: true,
 		},
@@ -95,7 +102,8 @@ export default function Page() {
 			title: t('设备状态提醒'),
 			date: '2023/7/18',
 			time: '00:24',
-			content: '办3（GF12345678）已离线。',
+			device: '办3 (GF12345678)',
+			content: '已离线。',
 			href: '#',
 			read: true,
 		},
@@ -135,17 +143,21 @@ export default function Page() {
 						key={message.id}
 						className={'flex-none' + (message.read ? '' : ' bg-primary')}
 					>
-						<CardHeader className='flex flex-row gap-2 items-center'>
-							{message.read ? (
-								<Notifications size={24} />
-							) : (
-								<NotificationsUnread size={24} />
-							)}
-							<div>
-								<p>{message.title}</p>
-								<p className='text-xs text-default-500'>
-									{message.date} {message.time}
-								</p>
+						<CardHeader className='flex flex-row items-center justify-between'>
+							<div className='flex flex-row items-center gap-2'>
+								{message.read ? (
+									<Notifications size={24} />
+								) : (
+									<NotificationsUnread size={24} />
+								)}
+								<div>
+									<p>{message.title}</p>
+									<p className='text-xs text-default-500'>{message.device}</p>
+								</div>
+							</div>
+							<div className='flex flex-col items-end'>
+								<p className='text-sm'>{message.time}</p>
+								<p className='text-xs text-default-500'>{message.date}</p>
 							</div>
 						</CardHeader>
 						<Divider />

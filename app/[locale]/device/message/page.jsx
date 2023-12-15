@@ -173,7 +173,7 @@ export default function Page() {
 							{message.image && (
 								<div className='relative'>
 									<Image src={message.image} />
-									<div className='absolute top-0 right-0 p-1 z-20 invert flex flex-row gap-2'>
+									<div className='absolute top-0 right-0 p-1 z-20 flex flex-row gap-2'>
 										<Button size='sm' isIconOnly variant='flat'>
 											<Download size={24} />
 										</Button>

@@ -1,7 +1,12 @@
 'use client';
 
 import { Button, Card, Tabs, Tab, Spinner } from '@nextui-org/react';
-import { NavbarBack, LinkButton, MobileHeader, MobileMain } from '@/jujiu-ui-components/nextui/core/core-ui';
+import {
+	NavbarBack,
+	LinkButton,
+	MobileHeader,
+	MobileMain,
+} from '@/jujiu-ui-components/nextui/core/core-ui';
 import { ChipRecording } from '@/jujiu-ui-components/nextui/core/core-chips';
 import { PanControl } from '@/jujiu-ui-components/nextui/ipc/video/panControl';
 import {
@@ -27,9 +32,15 @@ export default function Page() {
 						<Tab key='拉流成功' title='拉流成功'>
 							<div className='relative aspect-video dark text-foreground bg-background'>
 								<video muted autoPlay loop className='object-contain'>
-									<source src='https://samplelib.com/lib/preview/mp4/sample-5s.mp4' type='video/mp4' />
+									<source
+										src='https://samplelib.com/lib/preview/mp4/sample-5s.mp4'
+										type='video/mp4'
+									/>
 								</video>
-								<ChipRecording label='00:02:34' className='absolute top-1 inset-x-0 mx-auto' />
+								<ChipRecording
+									label='00:02:34'
+									className='absolute top-1 inset-x-0 mx-auto'
+								/>
 								<Spinner size='lg' className='absolute inset-0 m-auto' />
 								<div className='absolute top-1 right-1'>
 									<StreamingControlBar2 />
@@ -63,7 +74,9 @@ export default function Page() {
 								<div className='absolute inset-0 m-auto px-4 gap-y-2 flex flex-col items-center justify-center'>
 									<Nightlight size={48} />
 									<p>{t('设备已休眠')}</p>
-									<Button color='primary'>{t('唤醒')}</Button>
+									<Button size='sm' color='primary'>
+										{t('唤醒')}
+									</Button>
 								</div>
 							</div>
 						</Tab>

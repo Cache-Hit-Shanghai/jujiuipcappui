@@ -174,10 +174,10 @@ export default function Page() {
 								<div className='relative'>
 									<Image src={message.image} />
 									<div className='absolute top-0 right-0 p-1 z-20 invert flex flex-row gap-2'>
-										<Button isIconOnly variant='flat'>
+										<Button size='sm' isIconOnly variant='flat'>
 											<Download size={24} />
 										</Button>
-										<Button isIconOnly variant='flat'>
+										<Button size='sm' isIconOnly variant='flat'>
 											<Share size={24} />
 										</Button>
 									</div>

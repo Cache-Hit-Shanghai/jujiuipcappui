@@ -28,7 +28,7 @@ export default function Page() {
 	return (
 		<div className='flex flex-col h-screen'>
 			<MobileHeader>
-				<NavbarBack label='语音备忘' />
+				<NavbarBack label={t('语音备忘')} />
 			</MobileHeader>
 			<MobileMain>
 				<div>

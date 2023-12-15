@@ -55,7 +55,7 @@ export default function Page() {
 								radius='none'
 								label={t('智能识别')}
 								icon={<FramePersion size={24} />}
-								href=''
+								href='./ai'
 							/>
 							<LinkButton
 								className='p-2 min-w-0'

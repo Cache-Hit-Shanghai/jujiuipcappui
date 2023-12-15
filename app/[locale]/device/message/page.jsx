@@ -9,9 +9,12 @@ import {
 	Select,
 	SelectItem,
 	Image,
+	Button,
 } from '@nextui-org/react';
 import { Notifications } from '@/jujiu-ui-components/icons/notifications';
 import { NotificationsUnread } from '@/jujiu-ui-components/icons/notificationsunread';
+import { Download } from '@styled-icons/material/Download';
+import { Share } from '@styled-icons/material/Share';
 import {
 	NavbarBack,
 	MobileHeader,
@@ -167,7 +170,17 @@ export default function Page() {
 						<Divider />
 						<CardBody className='flex-none text-sm flex flex-col gap-2'>
 							<p>{message.content}</p>
-							<Image src={message.image} />
+							<div className='relative'>
+								<Image src={message.image} />
+								<div className='absolute top-0 right-0 p-1 z-20 invert flex flex-row gap-2'>
+									<Button isIconOnly variant='flat'>
+										<Download size={24} />
+									</Button>
+									<Button isIconOnly variant='flat'>
+										<Share size={24} />
+									</Button>
+								</div>
+							</div>
 						</CardBody>
 					</Card>
 				))}

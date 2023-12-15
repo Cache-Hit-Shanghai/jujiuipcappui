@@ -170,17 +170,19 @@ export default function Page() {
 						<Divider />
 						<CardBody className='flex-none text-sm flex flex-col gap-2'>
 							<p>{message.content}</p>
-							<div className='relative'>
-								<Image src={message.image} />
-								<div className='absolute top-0 right-0 p-1 z-20 invert flex flex-row gap-2'>
-									<Button isIconOnly variant='flat'>
-										<Download size={24} />
-									</Button>
-									<Button isIconOnly variant='flat'>
-										<Share size={24} />
-									</Button>
+							{message.image && (
+								<div className='relative'>
+									<Image src={message.image} />
+									<div className='absolute top-0 right-0 p-1 z-20 invert flex flex-row gap-2'>
+										<Button isIconOnly variant='flat'>
+											<Download size={24} />
+										</Button>
+										<Button isIconOnly variant='flat'>
+											<Share size={24} />
+										</Button>
+									</div>
 								</div>
-							</div>
+							)}
 						</CardBody>
 					</Card>
 				))}

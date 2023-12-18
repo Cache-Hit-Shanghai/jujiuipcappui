@@ -17,9 +17,8 @@ import {
 	NavbarBack,
 } from '@/jujiu-ui-components/nextui/core/core-ui';
 import Link, { useJuJiuT } from '@/state/translate';
-import { FavoriteBorder } from '@styled-icons/material/FavoriteBorder';
+import { Favorite } from '@styled-icons/material/Favorite';
 import { Search } from '@styled-icons/material/Search';
-import { MotionPhotosOn } from '@styled-icons/material/MotionPhotosOn';
 
 const cardData = [
 	{
@@ -89,7 +88,7 @@ function ImageCard({ src, title, href }) {
 					<Button
 						size='sm'
 						variant='light'
-						startContent={<FavoriteBorder size={18} />}
+						startContent={<Favorite size={18} className='text-red-500' />}
 						className='p-0'
 					>
 						<p className='text-tiny'>324</p>

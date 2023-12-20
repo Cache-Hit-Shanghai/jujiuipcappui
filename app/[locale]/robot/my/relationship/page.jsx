@@ -11,6 +11,12 @@ import {
 	Card,
 	CardBody,
 	CardFooter,
+	Input,
+	Dropdown,
+	DropdownTrigger,
+	DropdownMenu,
+	DropdownItem,
+	Switch,
 } from '@nextui-org/react';
 import {
 	MobileHeader,
@@ -21,7 +27,9 @@ import Link, { useJuJiuT } from '@/state/translate';
 import { FavoriteBorder } from '@styled-icons/material/FavoriteBorder';
 import { MoreHoriz } from '@styled-icons/material/MoreHoriz';
 import { Search } from '@styled-icons/material/Search';
-import { MotionPhotosOn } from '@styled-icons/material/MotionPhotosOn';
+import { Edit } from '@styled-icons/material/Edit';
+import { DoNotDisturbOn } from '@styled-icons/material/DoNotDisturbOn';
+import { PersonRemove } from '@styled-icons/material/PersonRemove';
 
 function ImageCard({ src, title, href }) {
 	return (
@@ -60,9 +68,39 @@ function FriendItem({ children }) {
 			{children}
 			<div className='flex flex-row items-center gap-2'>
 				<Button size='sm'>发私信</Button>
-				<Button isIconOnly variant='light'>
-					<MoreHoriz size={24} />
-				</Button>
+				<Dropdown backdrop='blur'>
+					<DropdownTrigger>
+						<Button isIconOnly variant='light'>
+							<MoreHoriz size={24} />
+						</Button>
+					</DropdownTrigger>
+					<DropdownMenu variant='faded' aria-label='Static Actions'>
+						<DropdownItem
+							showDivider
+							key='nickname'
+							endContent={<Edit size={24} />}
+						>
+							设置备注
+						</DropdownItem>
+						<DropdownItem key='noaccess' endContent={<Switch />}>
+							不让他看作品
+						</DropdownItem>
+						<DropdownItem showDivider key='filterout' endContent={<Switch />}>
+							不看他的作品
+						</DropdownItem>
+						<DropdownItem key='breakup' endContent={<PersonRemove size={24} />}>
+							移除朋友
+						</DropdownItem>
+						<DropdownItem
+							key='delete'
+							className='text-danger'
+							color='danger'
+							endContent={<DoNotDisturbOn size={24} />}
+						>
+							取消关注
+						</DropdownItem>
+					</DropdownMenu>
+				</Dropdown>
 			</div>
 		</div>
 	);
@@ -84,6 +122,11 @@ export default function Page() {
 				>
 					<Tab key='friends' title={t('朋友')}>
 						<div className='flex flex-col gap-3'>
+							<Input
+								size='sm'
+								startContent={<Search size={24} />}
+								placeholder={t('{number}位朋友', { number: 5 })}
+							/>
 							<FriendItem>
 								<div className='flex flex-row items-center gap-2'>
 									<Badge
@@ -96,7 +139,7 @@ export default function Page() {
 									</Badge>
 									<div>
 										<p className='text-sm'>Junior Garcia</p>
-										<p className='text-xs text-default-500'>在线</p>
+										<p className='text-xs text-default-500'>{t('在线')}</p>
 									</div>
 								</div>
 							</FriendItem>
@@ -112,7 +155,7 @@ export default function Page() {
 									</Badge>
 									<div>
 										<p className='text-sm'>Jane Doe</p>
-										<p className='text-xs text-default-500'>在线</p>
+										<p className='text-xs text-default-500'>{t('在线')}</p>
 									</div>
 								</div>
 							</FriendItem>
@@ -128,7 +171,7 @@ export default function Page() {
 									</Badge>
 									<div>
 										<p className='text-sm'>Junior Lee</p>
-										<p className='text-xs text-default-500'>在线</p>
+										<p className='text-xs text-default-500'>{t('在线')}</p>
 									</div>
 								</div>
 							</FriendItem>
@@ -137,7 +180,7 @@ export default function Page() {
 									<Avatar src='https://i.pravatar.cc/150?u=a04258a2462d826712d' />
 									<div>
 										<p className='text-sm'>Tom Chen</p>
-										<p className='text-xs text-default-500'>今天在线</p>
+										<p className='text-xs text-default-500'>{t('离线')}</p>
 									</div>
 								</div>
 							</FriendItem>
@@ -146,7 +189,7 @@ export default function Page() {
 									<Avatar src='https://i.pravatar.cc/150?u=a042581f4e29026704d' />
 									<div>
 										<p className='text-sm'>Lisa Wang</p>
-										<p className='text-xs text-default-500'>离线</p>
+										<p className='text-xs text-default-500'>{t('离线')}</p>
 									</div>
 								</div>
 							</FriendItem>

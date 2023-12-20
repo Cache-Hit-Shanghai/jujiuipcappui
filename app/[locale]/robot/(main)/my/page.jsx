@@ -1,6 +1,6 @@
 'use client';
 
-import { Button, Badge, Avatar } from '@nextui-org/react';
+import { Button, Badge, Avatar, Link as Anchor } from '@nextui-org/react';
 import {
 	LinkGroup,
 	MobileHeader,
@@ -16,8 +16,6 @@ import { HelpOutline } from '@styled-icons/material/HelpOutline';
 import { Update } from '@styled-icons/material/Update';
 import { Favorite } from '@styled-icons/material/Favorite';
 import { Star } from '@styled-icons/material/Star';
-// import { Carousel } from 'react-responsive-carousel';
-// import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 export default function Page() {
 	const t = useJuJiuT();
@@ -62,24 +60,13 @@ export default function Page() {
 				/>
 				<div className='flex flex-col items-center'>
 					<p>暴走的鸡腿</p>
-					<p className='text-xs text-default-500'>
+					<Anchor size='sm' as={Link} href='./relationship'>
 						{t('Following')}: 1 {t('粉丝')}: 0 {t('好友')}: 4
-					</p>
+					</Anchor>
 				</div>
 			</div>
 			<MobileMain>
 				<LinkGroup data={linkData0} />
-				{/* <Carousel
-					autoPlay
-					infiniteLoop
-					dynamicHeight
-					showArrows={false}
-					showStatus={false}
-					showThumbs={false}
-				>
-					<Image src='https://pixelbot.oss-accelerate.aliyuncs.com/my2.jpg' />
-					<Image src='https://pixelbot.oss-accelerate.aliyuncs.com/my3.jpg' />
-				</Carousel> */}
 			</MobileMain>
 		</>
 	);

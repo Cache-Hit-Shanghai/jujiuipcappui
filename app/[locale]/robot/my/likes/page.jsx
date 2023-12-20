@@ -103,7 +103,7 @@ export default function Page() {
 	const t = useJuJiuT();
 
 	return (
-		<>
+		<div className='h-screen flex flex-col'>
 			<MobileHeader>
 				<NavbarBack label={t('我的点赞')} />
 				<Button isIconOnly variant='light'>
@@ -122,6 +122,6 @@ export default function Page() {
 					))}
 				</Masonry>
 			</MobileMain>
-		</>
+		</div>
 	);
 }

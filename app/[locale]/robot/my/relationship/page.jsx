@@ -31,37 +31,6 @@ import { Edit } from '@styled-icons/material/Edit';
 import { DoNotDisturbOn } from '@styled-icons/material/DoNotDisturbOn';
 import { PersonRemove } from '@styled-icons/material/PersonRemove';
 
-function ImageCard({ src, title, href }) {
-	return (
-		<Card>
-			<CardBody as={Link} href={href} className='p-0'>
-				<Image src={src} />
-			</CardBody>
-			<CardFooter className='flex-col p-2 gap-2 items-start'>
-				<p className='text-sm'>{title}</p>
-				<div className='w-full flex flex-row items-center justify-between'>
-					<User
-						name='庞大小姐'
-						avatarProps={{
-							src: 'https://i.pravatar.cc/150?u=a04258114e29026702d',
-							className: 'w-6 h-6 text-tiny',
-						}}
-						className='text-tiny'
-					/>
-					<Button
-						size='sm'
-						variant='light'
-						startContent={<FavoriteBorder size={18} />}
-						className='p-0'
-					>
-						<p className='text-tiny'>324</p>
-					</Button>
-				</div>
-			</CardFooter>
-		</Card>
-	);
-}
-
 function FriendItem({ children }) {
 	return (
 		<div className='flex flex-row items-center justify-between'>

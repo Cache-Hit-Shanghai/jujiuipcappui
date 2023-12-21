@@ -1,11 +1,11 @@
 'use client';
 
+import { useState } from 'react';
+import { useSearchParams } from 'next/navigation';
 import {
-	Avatar,
 	User,
 	Tabs,
 	Tab,
-	Badge,
 	Button,
 	Divider,
 	Card,
@@ -237,6 +237,9 @@ function FriendItem({ children }) {
 
 export default function Page() {
 	const t = useJuJiuT();
+	const searchParams = useSearchParams();
+	const tab = searchParams.get('tab');
+	const [selected, setSelected] = useState(tab || 'friends');
 
 	return (
 		<div className='h-screen flex flex-col'>
@@ -248,6 +251,8 @@ export default function Page() {
 					className='self-center'
 					classNames={{ tabList: 'p-2' }}
 					variant='underlined'
+					selectedKey={selected}
+					onSelectionChange={setSelected}
 				>
 					<Tab key='friends' title={t('朋友')}>
 						<div className='flex flex-col gap-3'>

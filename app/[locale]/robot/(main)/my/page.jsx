@@ -60,9 +60,17 @@ export default function Page() {
 				/>
 				<div className='flex flex-col items-center'>
 					<p>暴走的鸡腿</p>
-					<Anchor size='sm' as={Link} href='./relationship'>
-						{t('Following')}: 1 {t('粉丝')}: 0 {t('好友')}: 4
-					</Anchor>
+					<div className='flex flex-row gap-2'>
+						<Anchor size='sm' as={Link} href='./relationship?tab=friends'>
+							{t('Following')}: 1
+						</Anchor>
+						<Anchor size='sm' as={Link} href='./relationship?tab=following'>
+							{t('粉丝')}: 0
+						</Anchor>
+						<Anchor size='sm' as={Link} href='./relationship?tab=follower'>
+							{t('好友')}: 4
+						</Anchor>
+					</div>
 				</div>
 			</div>
 			<MobileMain>

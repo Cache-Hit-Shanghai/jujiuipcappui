@@ -1,7 +1,11 @@
 'use client';
 
 import { Card, CardHeader, CardBody, Image, Divider } from '@nextui-org/react';
-import { NavbarBack, MobileHeader, MobileMain } from '@/jujiu-ui-components/nextui/core/core-ui';
+import {
+	NavbarBack,
+	MobileHeader,
+	MobileMain,
+} from '@/jujiu-ui-components/nextui/core/core-ui';
 import { PlayCircleOutline } from '@styled-icons/material/PlayCircleOutline';
 import Link, { useJuJiuT } from '@/state/translate';
 
@@ -35,7 +39,7 @@ const Page = () => {
 					{ date: '2023/7/4', Component: LinkBoxVideo, length: 20 },
 					{ date: '2023/7/5', Component: LinkBoxImage, length: 20 },
 				].map(({ date, length, Component }) => (
-					<Card key={date} fullWidth={true} className='flex-none'>
+					<Card key={date} fullWidth className='flex-none'>
 						<CardHeader>
 							<span>{date}</span>
 						</CardHeader>

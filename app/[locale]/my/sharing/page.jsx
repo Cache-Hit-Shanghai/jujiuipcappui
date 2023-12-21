@@ -1,7 +1,11 @@
 'use client';
 
 import { Tabs, Tab, Card, CardBody } from '@nextui-org/react';
-import { NavbarBack, MobileHeader, MobileMain } from '@/jujiu-ui-components/nextui/core/core-ui';
+import {
+	NavbarBack,
+	MobileHeader,
+	MobileMain,
+} from '@/jujiu-ui-components/nextui/core/core-ui';
 import { NestCamWiredStand } from '@styled-icons/material/NestCamWiredStand';
 import { ChevronRight } from '@styled-icons/material/ChevronRight';
 import Link, { useJuJiuT } from '@/state/translate';
@@ -46,8 +50,12 @@ const Page = () => {
 				<NavbarBack label={t('我的分享')} />
 			</MobileHeader>
 			<MobileMain>
-				<Tabs fullWidth={true}>
-					<Tab key='sharing' title={t('我的分享')} className='flex flex-col gap-4'>
+				<Tabs fullWidth>
+					<Tab
+						key='sharing'
+						title={t('我的分享')}
+						className='flex flex-col gap-4'
+					>
 						{data0.map(({ device, count }, i) => (
 							<Cell
 								key={i}
@@ -57,7 +65,11 @@ const Page = () => {
 							/>
 						))}
 					</Tab>
-					<Tab key='shared' title={t('来自分享')} className='flex flex-col gap-4'>
+					<Tab
+						key='shared'
+						title={t('来自分享')}
+						className='flex flex-col gap-4'
+					>
 						{data1.map(({ device, from }, i) => (
 							<Cell
 								key={i}

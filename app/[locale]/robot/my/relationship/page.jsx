@@ -40,6 +40,7 @@ import { PersonRemove } from '@styled-icons/material/PersonRemove';
 function FollowingItem({ children }) {
 	const { isOpen, onOpen, onOpenChange } = useDisclosure();
 	const unfollowConfirm = useDisclosure();
+	const editRemark = useDisclosure();
 
 	const t = useJuJiuT();
 
@@ -58,10 +59,11 @@ function FollowingItem({ children }) {
 					isOpen={unfollowConfirm.isOpen}
 					onClose={unfollowConfirm.onClose}
 				/>
+				<Modal></Modal>
 				<Modal
 					backdrop='blur'
 					placement='bottom'
-					hideCloseButton={true}
+					hideCloseButton
 					isOpen={isOpen}
 					onOpenChange={onOpenChange}
 					className='bg-transparent'

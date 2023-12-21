@@ -19,6 +19,9 @@ import {
 	Switch,
 	Modal,
 	ModalContent,
+	ModalHeader,
+	ModalBody,
+	ModalFooter,
 	useDisclosure,
 } from '@nextui-org/react';
 import {
@@ -59,7 +62,47 @@ function FollowingItem({ children }) {
 					isOpen={unfollowConfirm.isOpen}
 					onClose={unfollowConfirm.onClose}
 				/>
-				<Modal></Modal>
+				<Modal
+					hideCloseButton
+					backdrop='blur'
+					placement='center'
+					isOpen={editRemark.isOpen}
+					onOpenChange={editRemark.onOpenChange}
+				>
+					<ModalContent className='gap-2'>
+						{(onClose) => (
+							<>
+								<ModalHeader className='flex flex-col gap-1'>
+									<p>{t('修改备注')}</p>
+									<p className='text-xs font-normal text-default-500'>
+										{t('最多不超过12个字')}
+									</p>
+								</ModalHeader>
+								<ModalBody>
+									<Input
+										isClearable
+										size='sm'
+										placeholder='Junior Garcia'
+										defaultValue='Junior Garcia'
+									/>
+								</ModalBody>
+								<ModalFooter>
+									<Button
+										size='sm'
+										color='danger'
+										variant='light'
+										onPress={onClose}
+									>
+										{t('取消')}
+									</Button>
+									<Button size='sm' color='primary' onPress={onClose}>
+										{t('确定')}
+									</Button>
+								</ModalFooter>
+							</>
+						)}
+					</ModalContent>
+				</Modal>
 				<Modal
 					backdrop='blur'
 					placement='bottom'
@@ -81,7 +124,10 @@ function FollowingItem({ children }) {
 											<p className='text-sm'>{t('在关注列表中置顶')}</p>
 										</Switch>
 										<Divider />
-										<LabelButton label={t('设置备注名')} />
+										<LabelButton
+											label={t('设置备注名')}
+											onPress={editRemark.onOpen}
+										/>
 									</CardBody>
 								</Card>
 								<Card>

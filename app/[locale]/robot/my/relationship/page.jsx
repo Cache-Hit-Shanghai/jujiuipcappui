@@ -78,7 +78,7 @@ function AddRemark({ isOpen, onOpenChange }) {
 	);
 }
 
-function FollowingItem({ children }) {
+function FollowingItem({ isFriend, children }) {
 	const { isOpen, onOpen, onOpenChange } = useDisclosure();
 	const unfollowConfirm = useDisclosure();
 	const editRemark = useDisclosure();
@@ -90,7 +90,7 @@ function FollowingItem({ children }) {
 			{children}
 			<div className='flex flex-row items-center gap-2'>
 				<Button size='sm' onPress={unfollowConfirm.onOpen}>
-					{t('取消关注')}
+					{isFriend ? t('朋友') : t('关注(名词)')}
 				</Button>
 				<Button isIconOnly variant='light' onPress={onOpen}>
 					<MoreHoriz size={24} />
@@ -146,6 +146,28 @@ function FollowingItem({ children }) {
 						)}
 					</ModalContent>
 				</Modal>
+			</div>
+		</div>
+	);
+}
+
+function FollowerItem({ isFriend, children }) {
+	const unfollowConfirm = useDisclosure();
+
+	const t = useJuJiuT();
+
+	return (
+		<div className='flex flex-row items-center justify-between'>
+			{children}
+			<div className='flex flex-row items-center gap-2'>
+				<Button size='sm' onPress={unfollowConfirm.onOpen}>
+					{isFriend ? t('朋友') : t('关注(名词)')}
+				</Button>
+				<Confirm
+					message={t('确认不再关注？')}
+					isOpen={unfollowConfirm.isOpen}
+					onClose={unfollowConfirm.onClose}
+				/>
 			</div>
 		</div>
 	);
@@ -276,7 +298,7 @@ export default function Page() {
 							</FriendItem>
 						</div>
 					</Tab>
-					<Tab key='following' title={t('关注')}>
+					<Tab key='following' title={t('关注(名词)')}>
 						<div className='flex flex-col gap-3'>
 							<Input
 								size='sm'
@@ -286,7 +308,7 @@ export default function Page() {
 							<p className='text-sm'>
 								{t('我的关注({number})', { number: 3 })}
 							</p>
-							<FollowingItem>
+							<FollowingItem isFriend>
 								<User
 									name='Junior Garcia'
 									description={t('{number}篇笔记未看', { number: 2 })}
@@ -315,7 +337,29 @@ export default function Page() {
 							</FollowingItem>
 						</div>
 					</Tab>
-					<Tab key='follower' title={t('粉丝')}></Tab>
+					<Tab key='follower' title={t('粉丝')}>
+						<div className='flex flex-col gap-3'>
+							<p className='text-sm'>
+								{t('我的粉丝({number})', { number: 2 })}
+							</p>
+							<FollowerItem isFriend>
+								<User
+									name='Junior Garcia'
+									avatarProps={{
+										src: 'https://avatars.githubusercontent.com/u/30373425?v=4',
+									}}
+								/>
+							</FollowerItem>
+							<FollowerItem>
+								<User
+									name='Alan Stephen'
+									avatarProps={{
+										src: 'https://i.pravatar.cc/300?u=a042581f4e29026712d',
+									}}
+								/>
+							</FollowerItem>
+						</div>
+					</Tab>
 				</Tabs>
 			</MobileMain>
 		</div>

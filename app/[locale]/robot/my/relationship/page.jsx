@@ -89,7 +89,12 @@ function FollowingItem({ isFriend, children }) {
 		<div className='flex flex-row items-center justify-between'>
 			{children}
 			<div className='flex flex-row items-center gap-2'>
-				<Button size='sm' onPress={unfollowConfirm.onOpen}>
+				<Button
+					size='sm'
+					radius='full'
+					variant='bordered'
+					onPress={unfollowConfirm.onOpen}
+				>
 					{isFriend ? t('好友') : t('Following')}
 				</Button>
 				<Button isIconOnly variant='light' onPress={onOpen}>
@@ -160,7 +165,12 @@ function FollowerItem({ isFriend, children }) {
 		<div className='flex flex-row items-center justify-between'>
 			{children}
 			<div className='flex flex-row items-center gap-2'>
-				<Button size='sm' onPress={unfollowConfirm.onOpen}>
+				<Button
+					size='sm'
+					radius='full'
+					variant='bordered'
+					onPress={unfollowConfirm.onOpen}
+				>
 					{isFriend ? t('好友') : t('Following')}
 				</Button>
 				<Confirm

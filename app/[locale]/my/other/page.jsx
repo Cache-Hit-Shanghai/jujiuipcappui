@@ -1,11 +1,21 @@
 'use client';
 
-import { Button, Card, CardBody, Divider, useDisclosure } from '@nextui-org/react';
+import {
+	Button,
+	Card,
+	CardBody,
+	Divider,
+	useDisclosure,
+} from '@nextui-org/react';
 import { Check } from '@styled-icons/material/Check';
 import { Close } from '@styled-icons/material/Close';
 import { Warning } from '@styled-icons/material/Warning';
 import { InfoI } from '@/jujiu-ui-components/icons/infoi';
-import { NavbarBack, MobileHeader, MobileMain } from '@/jujiu-ui-components/nextui/core/core-ui';
+import {
+	NavbarBack,
+	MobileHeader,
+	MobileMain,
+} from '@/jujiu-ui-components/nextui/core/core-ui';
 import { ToastProvider } from '@/jujiu-ui-components/nextui/extension/toast2';
 import { Confirm } from '@/jujiu-ui-components/nextui/extension/confirm';
 
@@ -29,7 +39,10 @@ const Page = () => {
 												<div className='rounded-full bg-success p-1 flex'>
 													<Check size={20} />
 												</div>
-												<p>This operation completed successfully. This toast will close in 5 seconds.</p>
+												<p>
+													This operation completed successfully. This toast will
+													close in 5 seconds.
+												</p>
 											</div>,
 											{
 												timeout: 5000,
@@ -47,7 +60,10 @@ const Page = () => {
 												<div className='rounded-full bg-danger p-1 flex'>
 													<Close size={20} />
 												</div>
-												<p>This operation failed. This toast will close in 5 seconds.</p>
+												<p>
+													This operation failed. This toast will close in 5
+													seconds.
+												</p>
 											</div>,
 											{
 												timeout: 5000,
@@ -66,8 +82,8 @@ const Page = () => {
 													<Warning size={20} />
 												</div>
 												<p>
-													This operation completes successfully, but there are some warnings. This toast will
-													close in 5 seconds.
+													This operation completes successfully, but there are
+													some warnings. This toast will close in 5 seconds.
 												</p>
 											</div>,
 											{
@@ -86,7 +102,10 @@ const Page = () => {
 												<div className='rounded-full bg-primary p-1 flex'>
 													<InfoI size={20} />
 												</div>
-												<p>This is a new toast component. This toast will close in 5 seconds.</p>
+												<p>
+													This is a new toast component. This toast will close
+													in 5 seconds.
+												</p>
 											</div>,
 											{
 												timeout: 5000,
@@ -107,7 +126,11 @@ const Page = () => {
 						</Button>
 					</CardBody>
 				</Card>
-				<Confirm title='Confirmation' message='Do you want to exit?' isOpen={isOpen} onClose={onClose} />
+				<Confirm
+					message='Do you want to exit?'
+					isOpen={isOpen}
+					onClose={onClose}
+				/>
 			</MobileMain>
 		</div>
 	);

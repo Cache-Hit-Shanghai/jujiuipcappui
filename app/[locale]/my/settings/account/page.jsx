@@ -29,7 +29,15 @@ import { DeleteOutline } from '@styled-icons/material/DeleteOutline';
 import { Confirm } from '@/jujiu-ui-components/nextui/extension/confirm';
 import { useJuJiuT } from '@/state/translate';
 
-function JuJiuModal({ onOpenChange, onClose, isOpen, title, position, children, ...props }) {
+function JuJiuModal({
+	onOpenChange,
+	onClose,
+	isOpen,
+	title,
+	position,
+	children,
+	...props
+}) {
 	return (
 		<Modal
 			isOpen={isOpen}
@@ -71,10 +79,16 @@ const Page = () => {
 								setOpenAvata(true);
 							}}
 						>
-							<Avatar size='sm' src='https://i.pravatar.cc/150?u=a04258114e29026702d' />
+							<Avatar
+								size='sm'
+								src='https://i.pravatar.cc/150?u=a04258114e29026702d'
+							/>
 						</LabelButton>
 						<Divider />
-						<LabelButton label={t('修改昵称')} onClick={() => setOpenName(true)}>
+						<LabelButton
+							label={t('修改昵称')}
+							onClick={() => setOpenName(true)}
+						>
 							用户12345
 						</LabelButton>
 						<Divider />
@@ -83,11 +97,15 @@ const Page = () => {
 				</Card>
 				<Card>
 					<CardBody className='flex flex-col gap-3'>
-						<Button size='sm' color='primary' startContent={<Logout size={24} />} onPress={logout.onOpen}>
+						<Button
+							size='sm'
+							color='primary'
+							startContent={<Logout size={24} />}
+							onPress={logout.onOpen}
+						>
 							{t('退出登录')}
 						</Button>
 						<Confirm
-							title={t('退出登录')}
 							message={t('您是否确定退出登录？')}
 							isOpen={logout.isOpen}
 							onClose={logout.onClose}
@@ -99,13 +117,30 @@ const Page = () => {
 					</CardBody>
 				</Card>
 			</MobileMain>
-			<JuJiuModal isOpen={openAvata} onOpenChange={setOpenAvata} title={t('更换头像')}>
-				<Button size='sm' color='primary' startContent={<PhotoLibrary size={24} />}>
+			<JuJiuModal
+				isOpen={openAvata}
+				onOpenChange={setOpenAvata}
+				title={t('更换头像')}
+			>
+				<Button
+					size='sm'
+					color='primary'
+					startContent={<PhotoLibrary size={24} />}
+				>
 					{t('本地相册')}
 				</Button>
 			</JuJiuModal>
-			<JuJiuModal isOpen={openName} onOpenChange={setOpenName} title={t('修改昵称')}>
-				<Input size='sm' placeholder={t('请填写昵称……')} maxLength={20} minLength={2} />
+			<JuJiuModal
+				isOpen={openName}
+				onOpenChange={setOpenName}
+				title={t('修改昵称')}
+			>
+				<Input
+					size='sm'
+					placeholder={t('请填写昵称……')}
+					maxLength={20}
+					minLength={2}
+				/>
 				<Information label={t('修改昵称提示')} />
 				<Button size='sm' color='primary' startContent={<Save size={24} />}>
 					{t('保存')}

@@ -1,6 +1,14 @@
 'use client';
 
-import { Button, User, Card, CardHeader, CardBody, Divider, useDisclosure } from '@nextui-org/react';
+import {
+	Button,
+	User,
+	Card,
+	CardHeader,
+	CardBody,
+	Divider,
+	useDisclosure,
+} from '@nextui-org/react';
 import {
 	NavbarBack,
 	LabelLink,
@@ -24,7 +32,6 @@ function RevokeSharing({ name }) {
 				<Remove size={24} />
 			</Button>
 			<Confirm
-				title={t('设备分享')}
 				message={t('是否取消分享给{name}？', { name })}
 				isOpen={isOpen}
 				onClose={onClose}
@@ -95,11 +102,15 @@ export default function Page() {
 				</Card>
 				<Card>
 					<CardBody>
-						<Button size='sm' color='danger' startContent={<ShareOff size={24} />} onPress={confirm.onOpen}>
+						<Button
+							size='sm'
+							color='danger'
+							startContent={<ShareOff size={24} />}
+							onPress={confirm.onOpen}
+						>
 							{t('取消所有分享')}
 						</Button>
 						<Confirm
-							title={t('设备分享')}
 							message={t('是否取消该设备的所有分享？')}
 							isOpen={confirm.isOpen}
 							onClose={confirm.onClose}

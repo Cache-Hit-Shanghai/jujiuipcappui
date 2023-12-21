@@ -90,7 +90,7 @@ function FollowingItem({ isFriend, children }) {
 			{children}
 			<div className='flex flex-row items-center gap-2'>
 				<Button size='sm' onPress={unfollowConfirm.onOpen}>
-					{isFriend ? t('朋友') : t('关注(名词)')}
+					{isFriend ? t('好友') : t('Following')}
 				</Button>
 				<Button isIconOnly variant='light' onPress={onOpen}>
 					<MoreHoriz size={24} />
@@ -161,7 +161,7 @@ function FollowerItem({ isFriend, children }) {
 			{children}
 			<div className='flex flex-row items-center gap-2'>
 				<Button size='sm' onPress={unfollowConfirm.onOpen}>
-					{isFriend ? t('朋友') : t('关注(名词)')}
+					{isFriend ? t('好友') : t('Following')}
 				</Button>
 				<Confirm
 					message={t('确认不再关注？')}
@@ -254,7 +254,7 @@ export default function Page() {
 					selectedKey={selected}
 					onSelectionChange={setSelected}
 				>
-					<Tab key='friends' title={t('朋友')}>
+					<Tab key='friends' title={t('好友')}>
 						<div className='flex flex-col gap-3'>
 							<FriendItem>
 								<User
@@ -303,7 +303,7 @@ export default function Page() {
 							</FriendItem>
 						</div>
 					</Tab>
-					<Tab key='following' title={t('关注(名词)')}>
+					<Tab key='following' title={t('Following')}>
 						<div className='flex flex-col gap-3'>
 							<Input
 								size='sm'

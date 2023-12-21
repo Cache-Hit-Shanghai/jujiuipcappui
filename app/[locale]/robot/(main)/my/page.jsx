@@ -62,13 +62,13 @@ export default function Page() {
 					<p>暴走的鸡腿</p>
 					<div className='flex flex-row gap-2'>
 						<Anchor size='sm' as={Link} href='./relationship?tab=friends'>
-							{t('Following')}: 1
+							{t('好友')}: 5
 						</Anchor>
 						<Anchor size='sm' as={Link} href='./relationship?tab=following'>
-							{t('粉丝')}: 0
+							{t('Following')}: 3
 						</Anchor>
 						<Anchor size='sm' as={Link} href='./relationship?tab=follower'>
-							{t('好友')}: 4
+							{t('粉丝')}: 2
 						</Anchor>
 					</div>
 				</div>

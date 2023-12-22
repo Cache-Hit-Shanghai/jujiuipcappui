@@ -25,7 +25,7 @@ export default function Page() {
 		{ label: '我的收藏', icon: <Star size={24} />, href: './collections' },
 		{ label: '我的分享', icon: <Share size={24} />, href: '/my/sharing' },
 		{ label: '固件升级', icon: <Update size={24} />, href: '/my/ota' },
-		{ label: '我的客服', icon: <SupportAgent size={24} />, href: '' },
+		// { label: '我的客服', icon: <SupportAgent size={24} />, href: '' },
 		{
 			label: '帮助与反馈',
 			icon: <HelpOutline size={24} />,

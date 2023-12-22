@@ -317,6 +317,8 @@ export default function Page() {
 						<div className='flex flex-col gap-3'>
 							<Input
 								size='sm'
+								type='search'
+								labelPlacement='outside'
 								startContent={<Search size={24} />}
 								placeholder={t('搜索已关注的人')}
 							/>

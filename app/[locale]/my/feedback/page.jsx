@@ -14,7 +14,11 @@ import {
 	CardBody,
 	Spacer,
 } from '@nextui-org/react';
-import { NavbarBack, MobileHeader, MobileMain } from '@/jujiu-ui-components/nextui/core/core-ui';
+import {
+	NavbarBack,
+	MobileHeader,
+	MobileMain,
+} from '@/jujiu-ui-components/nextui/core/core-ui';
 import { Article } from '@styled-icons/material/Article';
 import { MoreHoriz } from '@styled-icons/material/MoreHoriz';
 import { PostAdd } from '@styled-icons/material/PostAdd';
@@ -98,6 +102,7 @@ const Page = () => {
 			<div className='flex flex-row px-4 gap-4'>
 				<Input
 					size='sm'
+					type='search'
 					labelPlacement='outside'
 					placeholder={t('搜索问题')}
 					startContent={<Search size={24} />}
@@ -135,7 +140,10 @@ const Page = () => {
 										</Chip>
 									</div>
 									<p className='text-xs text-default-500'>
-										{t('由 {username} 于 {createdAt} 创建', { username: createdBy, createdAt: date })}
+										{t('由 {username} 于 {createdAt} 创建', {
+											username: createdBy,
+											createdAt: date,
+										})}
 									</p>
 								</div>
 							</div>

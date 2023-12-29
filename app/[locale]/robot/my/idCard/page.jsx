@@ -55,9 +55,10 @@ function PetIdCard({ src, name, gender, birthday, breed }) {
 			<CardBody className='flex flex-row gap-4'>
 				<input
 					type='file'
+					accept='image/*'
 					id='file'
 					ref={inputFile}
-					style={{ display: 'none' }}
+					className='hidden'
 				/>
 				<div
 					className='relative flex-1 flex flex-col justify-begin'

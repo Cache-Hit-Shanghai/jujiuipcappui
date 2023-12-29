@@ -1,5 +1,6 @@
 'use client';
 
+import { useRef } from 'react';
 import {
 	Button,
 	Image,
@@ -47,19 +48,26 @@ const dogs = [
 
 function PetIdCard({ src, name, gender, birthday, breed }) {
 	const { isOpen, onOpen, onClose } = useDisclosure();
+	const inputFile = useRef();
 
 	return (
 		<Card className='flex-none w-full'>
 			<CardBody className='flex flex-row gap-4'>
-				<div className='relative h-fit flex-1 flex flex-col justify-begin'>
+				<input
+					type='file'
+					id='file'
+					ref={inputFile}
+					style={{ display: 'none' }}
+				/>
+				<div
+					className='relative flex-1 flex flex-col justify-begin'
+					onClick={() => inputFile.current.click()}
+				>
 					<Image src={src} />
-					<Button
-						isIconOnly
-						variant='light'
-						className='h-fit w-fit absolute z-20 opacity-60 inset-0 m-auto'
-					>
-						<AddCircleOutline size={96} />
-					</Button>
+					<AddCircleOutline
+						size={96}
+						className='absolute opacity-40 inset-0 m-auto'
+					/>
 				</div>
 				<div className='flex-1 flex flex-col gap-2'>
 					<Input size='sm' label='姓名' value={name} />

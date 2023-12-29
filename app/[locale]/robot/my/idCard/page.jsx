@@ -51,7 +51,7 @@ function PetIdCard({ id, src, name, gender, birthday, breed }) {
 	return (
 		<Card className='flex-none w-full'>
 			<CardBody className='flex flex-row gap-4'>
-				<div className='relative flex-1 flex flex-col justify-center'>
+				<div className='relative flex-1 flex flex-col justify-begin'>
 					<Image src={src} />
 					<Button
 						isIconOnly

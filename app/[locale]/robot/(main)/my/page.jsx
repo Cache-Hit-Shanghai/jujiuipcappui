@@ -36,7 +36,7 @@ export default function Page() {
 	return (
 		<>
 			<MobileHeader className='justify-end'>
-				<Button isIconOnly variant='light' as={Link} href=''>
+				<Button isIconOnly variant='light' as={Link} href='./idCard'>
 					<PermIdentity size={24} />
 				</Button>
 				<Button

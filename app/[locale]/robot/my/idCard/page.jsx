@@ -55,7 +55,7 @@ function PetIdCard({ src, name, gender, birthday, breed }) {
 			<CardBody className='flex flex-row gap-4'>
 				<input
 					type='file'
-					accept='image/*'
+					accept='image/jpeg,image/jpg,image/png,image/svg'
 					id='file'
 					ref={inputFile}
 					className='hidden'

@@ -45,13 +45,13 @@ const dogs = [
 	},
 ];
 
-function PetIdCard({ id, src, name, gender, birthday, breed }) {
+function PetIdCard({ src, name, gender, birthday, breed }) {
 	const { isOpen, onOpen, onClose } = useDisclosure();
 
 	return (
 		<Card className='flex-none w-full'>
 			<CardBody className='flex flex-row gap-4'>
-				<div className='relative flex-1 flex flex-col justify-begin'>
+				<div className='relative h-fit flex-1 flex flex-col justify-begin'>
 					<Image src={src} />
 					<Button
 						isIconOnly

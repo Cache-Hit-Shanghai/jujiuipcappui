@@ -45,7 +45,7 @@ const dogs = [
 	},
 ];
 
-function PetIdCard({ src, name, gender, birthday, breed }) {
+function PetIdCard({ id, src, name, gender, birthday, breed }) {
 	const { isOpen, onOpen, onClose } = useDisclosure();
 
 	return (
@@ -63,22 +63,28 @@ function PetIdCard({ src, name, gender, birthday, breed }) {
 				</div>
 				<div className='flex-1 flex flex-col gap-2'>
 					<Input size='sm' label='姓名' value={name} />
-					<Select size='sm' label='性别' defaultSelectedKeys={[gender]}>
+					<Select
+						size='sm'
+						label='性别'
+						defaultSelectedKeys={gender ? [gender] : []}
+					>
 						<SelectItem key='male'>弟弟</SelectItem>
 						<SelectItem key='female'>妹妹</SelectItem>
 					</Select>
 					<Input size='sm' type='date' label='生日' value={birthday} />
 					<Input size='sm' label='品种' value={breed} />
-					<div className='flex flex-row justify-end'>
-						<Button isIconOnly color='danger' onPress={onOpen}>
-							<Remove size={24} />
-						</Button>
-						<Confirm
-							message={`您确定要删除${name}的身份证吗？`}
-							isOpen={isOpen}
-							onClose={onClose}
-						/>
-					</div>
+					{src && (
+						<div className='flex flex-row justify-end'>
+							<Button isIconOnly color='danger' onPress={onOpen}>
+								<Remove size={24} />
+							</Button>
+							<Confirm
+								message={`您确定要删除${name}的身份证吗？`}
+								isOpen={isOpen}
+								onClose={onClose}
+							/>
+						</div>
+					)}
 				</div>
 			</CardBody>
 		</Card>
@@ -106,28 +112,7 @@ export default function Page() {
 									增加新宠物
 								</ModalHeader>
 								<ModalBody className='flex flex-row gap-4'>
-									<div className='flex-1 flex flex-col'>
-										<Card className='w-full h-full'>
-											<CardBody className='flex flex-col items-center justify-center'>
-												<Button
-													isIconOnly
-													variant='light'
-													className='h-fit w-fit absolute z-20 opacity-60 inset-0 m-auto'
-												>
-													<AddCircleOutline size={96} />
-												</Button>
-											</CardBody>
-										</Card>
-									</div>
-									<div className='flex-1 flex flex-col gap-2'>
-										<Input size='sm' label='姓名' />
-										<Select size='sm' label='性别'>
-											<SelectItem key='male'>弟弟</SelectItem>
-											<SelectItem key='female'>妹妹</SelectItem>
-										</Select>
-										<Input size='sm' type='date' />
-										<Input size='sm' label='品种' />
-									</div>
+									<PetIdCard noDelete />
 								</ModalBody>
 								<ModalFooter>
 									<Button color='danger' variant='light' onPress={onClose}>
@@ -147,7 +132,7 @@ export default function Page() {
 			</MobileHeader>
 			<MobileMain>
 				{dogs.map((dog) => (
-					<PetIdCard {...dog} />
+					<PetIdCard key={dog.id} {...dog} />
 				))}
 			</MobileMain>
 		</div>

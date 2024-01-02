@@ -54,12 +54,14 @@ export default function Page() {
 				</Button>
 			</MobileHeader>
 			<div className='flex flex-col items-center pb-4 gap-2'>
-				<Avatar
-					src='https://i.pravatar.cc/150?u=a04258114e29026708c'
-					className='w-20 h-20 text-large'
-				/>
-				<div className='flex flex-col items-center'>
+				<Link href='../../my/login'>
+					<Avatar
+						src='https://i.pravatar.cc/150?u=a04258114e29026708c'
+						className='w-20 h-20 text-large'
+					/>
 					<p>暴走的鸡腿</p>
+				</Link>
+				<div className='flex flex-col items-center'>
 					<div className='flex flex-row gap-2'>
 						<Anchor size='sm' as={Link} href='./relationship?tab=friends'>
 							{t('好友')}: 5

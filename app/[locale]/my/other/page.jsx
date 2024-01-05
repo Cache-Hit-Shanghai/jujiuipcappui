@@ -16,7 +16,7 @@ import {
 	MobileHeader,
 	MobileMain,
 } from '@/jujiu-ui-components/nextui/core/core-ui';
-import { ToastProvider } from '@/jujiu-ui-components/nextui/extension/toast2';
+import { ToastProvider } from '@/jujiu-ui-components/nextui/extension/toast';
 import { Confirm } from '@/jujiu-ui-components/nextui/extension/confirm';
 
 const Page = () => {

@@ -27,7 +27,9 @@ const nextConfig = {
 	images: {
 		unoptimized: true,
 	},
-
+  experimental: {
+    missingSuspenseWithCSRBailout: false,
+  },
 	trailingSlash: true,
 	reactStrictMode: false,
 };

@@ -30,10 +30,20 @@ function DeviceMenu() {
 				</Button>
 			</DropdownTrigger>
 			<DropdownMenu aria-label='Static Actions'>
-				<DropdownItem key='records' as={Link} href='./record' startContent={<VideoLibrary size={24} />}>
+				<DropdownItem
+					key='records'
+					as={Link}
+					href='./record'
+					startContent={<VideoLibrary size={24} />}
+				>
 					{t('录像查看')}
 				</DropdownItem>
-				<DropdownItem key='deviceSettings' as={Link} href='./settings' startContent={<Settings size={24} />}>
+				<DropdownItem
+					key='deviceSettings'
+					as={Link}
+					href='./settings'
+					startContent={<Settings size={24} />}
+				>
 					{t('设备设置')}
 				</DropdownItem>
 			</DropdownMenu>
@@ -41,12 +51,18 @@ function DeviceMenu() {
 	);
 }
 
-export function IpcCard({ label, src, href, bodyChips, footerChips }) {
+export function IpcCard({ label, sources, href, bodyChips, footerChips }) {
 	return (
 		<Card>
 			<CardBody className='relative p-0' as={Link} href={href}>
-				<Image src={src} className='z-0' />
-				<div className='absolute left-1 top-1 flex flex-row gap-4'>{...bodyChips}</div>
+				<div className='flex flex-col gap-2'>
+					{sources.map((src) => (
+						<Image key={src} src={src} className='z-0' />
+					))}
+				</div>
+				<div className='absolute left-1 top-1 flex flex-row gap-4'>
+					{...bodyChips}
+				</div>
 			</CardBody>
 			<CardFooter className='flex justify-between items-center'>
 				<div className='flex items-center gap-2'>
@@ -65,7 +81,9 @@ export function BotCard({ label, src, href, bodyChips, footerChips }) {
 		<Card>
 			<CardBody className='relative p-0' as={Link} href={href}>
 				<Image src={src} className='z-0' />
-				<div className='absolute left-1 top-1 flex flex-row gap-4'>{...bodyChips}</div>
+				<div className='absolute left-1 top-1 flex flex-row gap-4'>
+					{...bodyChips}
+				</div>
 			</CardBody>
 			<CardFooter className='flex justify-between items-center'>
 				<div className='flex items-center gap-2'>

@@ -33,38 +33,53 @@ export default function Page() {
 				<Card className='pt-3'>
 					<Tabs className='self-center'>
 						<Tab key='拉流成功' title='拉流成功'>
-							<div className='relative aspect-video dark text-foreground bg-background flex flex-col gap-2'>
-								<video muted autoPlay loop className='object-contain'>
-									<source
-										src='https://samplelib.com/lib/preview/mp4/sample-5s.mp4'
-										type='video/mp4'
-									/>
-								</video>
-								{lens > 1 && (
+							<div className='flex flex-col gap-2'>
+								<div className='relative aspect-video dark text-foreground bg-background flex flex-col gap-2'>
 									<video muted autoPlay loop className='object-contain'>
 										<source
 											src='https://samplelib.com/lib/preview/mp4/sample-5s.mp4'
 											type='video/mp4'
 										/>
 									</video>
-								)}
-								<ChipRecording
-									label='00:02:34'
-									className='absolute top-1 inset-x-0 mx-auto'
-								/>
-								<Spinner size='lg' className='absolute inset-0 m-auto' />
-								<div className='absolute top-1 right-1'>
-									<StreamingControlBar2 />
+									<ChipRecording
+										label='00:02:34'
+										className='absolute top-1 inset-x-0 mx-auto'
+									/>
+									<Spinner size='lg' className='absolute inset-0 m-auto' />
+									<div className='absolute top-1 right-1'>
+										<StreamingControlBar2 />
+									</div>
+									<LinkButton
+										className='absolute bottom-1 right-1'
+										href='./fullscreen'
+										onPress={async () => {
+											await document.documentElement.requestFullscreen();
+											screen.orientation.lock('landscape');
+										}}
+										icon={<ScreenRotation size={24} />}
+									/>
 								</div>
-								<LinkButton
-									className='absolute bottom-1 right-1'
-									href='./fullscreen'
-									onPress={async () => {
-										await document.documentElement.requestFullscreen();
-										screen.orientation.lock('landscape');
-									}}
-									icon={<ScreenRotation size={24} />}
-								/>
+								<div className='relative aspect-video dark text-foreground bg-background flex flex-col gap-2'>
+									{lens > 1 && (
+										<>
+											<video muted autoPlay loop className='object-contain'>
+												<source
+													src='https://samplelib.com/lib/preview/mp4/sample-5s.mp4'
+													type='video/mp4'
+												/>
+											</video>
+											<LinkButton
+												className='absolute bottom-1 right-1'
+												href='./fullscreen'
+												onPress={async () => {
+													await document.documentElement.requestFullscreen();
+													screen.orientation.lock('landscape');
+												}}
+												icon={<ScreenRotation size={24} />}
+											/>
+										</>
+									)}
+								</div>
 							</div>
 						</Tab>
 						<Tab key='拉流失败' title='拉流失败'>

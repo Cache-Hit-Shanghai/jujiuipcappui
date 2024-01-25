@@ -19,13 +19,16 @@ import {
 	ChipCloudStorageExpired,
 	ChipCloudStorageExpiring,
 } from '@/jujiu-ui-components/nextui/core/core-chips';
+import {
+	IpcCard,
+	BotCard,
+} from '@/jujiu-ui-components/nextui/ipc/ipccard/ipccard';
 import Link, { useJuJiuT } from '@/state/translate';
 import { AddCircleOutline } from '@styled-icons/material/AddCircleOutline';
 import { Add } from '@styled-icons/material/Add';
 import { GridView } from '@styled-icons/material/GridView';
 import { FlashlightOn } from '@styled-icons/material/FlashlightOn';
 import { FlashlightOff } from '@styled-icons/material/FlashlightOff';
-import { IpcCard, BotCard } from './ipc-card';
 
 export function DeviceMenu() {
 	const t = useJuJiuT();

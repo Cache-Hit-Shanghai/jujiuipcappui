@@ -9,7 +9,7 @@ import {
 	MobileHeader,
 	MobileMain,
 } from '@/jujiu-ui-components/nextui/core/core-ui';
-import { RobotCard } from '../../components';
+import { DeviceList } from '../../components';
 
 export default function Page() {
 	return (
@@ -23,13 +23,13 @@ export default function Page() {
 						labelPlacement='outside'
 					>
 						<SelectItem key='robot0' value='robot0'>
-							小皮0
+							小皮看宠助手
 						</SelectItem>
 						<SelectItem key='robot1' value='robot1'>
-							小皮1
+							小皮机器人
 						</SelectItem>
 						<SelectItem key='robot2' value='robot2'>
-							小皮2
+							小皮三合一
 						</SelectItem>
 					</Select>
 				</div>
@@ -46,7 +46,7 @@ export default function Page() {
 				</div>
 			</MobileHeader>
 			<MobileMain>
-				<RobotCard />
+				<DeviceList />
 			</MobileMain>
 		</>
 	);

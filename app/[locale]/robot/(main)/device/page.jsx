@@ -19,16 +19,19 @@ export default function Page() {
 					<Select
 						size='sm'
 						aria-label='select device'
-						defaultSelectedKeys={['robot0']}
+						defaultSelectedKeys={['all']}
 						labelPlacement='outside'
 					>
-						<SelectItem key='robot0' value='robot0'>
+						<SelectItem key='all' value='all'>
+							全部
+						</SelectItem>
+						<SelectItem key='ipc' value='ipc'>
 							小皮看宠助手
 						</SelectItem>
-						<SelectItem key='robot1' value='robot1'>
+						<SelectItem key='robot' value='robot'>
 							小皮机器人
 						</SelectItem>
-						<SelectItem key='robot2' value='robot2'>
+						<SelectItem key='3in1' value='3in1'>
 							小皮三合一
 						</SelectItem>
 					</Select>

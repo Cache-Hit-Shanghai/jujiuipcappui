@@ -59,27 +59,25 @@ export default function Page() {
 										icon={<ScreenRotation size={24} />}
 									/>
 								</div>
-								<div className='relative aspect-video dark text-foreground bg-background flex flex-col gap-2'>
-									{lens > 1 && (
-										<>
-											<video muted autoPlay loop className='object-contain'>
-												<source
-													src='https://samplelib.com/lib/preview/mp4/sample-5s.mp4'
-													type='video/mp4'
-												/>
-											</video>
-											<LinkButton
-												className='absolute bottom-1 right-1'
-												href='./fullscreen'
-												onPress={async () => {
-													await document.documentElement.requestFullscreen();
-													screen.orientation.lock('landscape');
-												}}
-												icon={<ScreenRotation size={24} />}
+								{lens > 1 && (
+									<div className='relative aspect-video dark text-foreground bg-background flex flex-col gap-2'>
+										<video muted autoPlay loop className='object-contain'>
+											<source
+												src='https://samplelib.com/lib/preview/mp4/sample-5s.mp4'
+												type='video/mp4'
 											/>
-										</>
-									)}
-								</div>
+										</video>
+										<LinkButton
+											className='absolute bottom-1 right-1'
+											href='./fullscreen'
+											onPress={async () => {
+												await document.documentElement.requestFullscreen();
+												screen.orientation.lock('landscape');
+											}}
+											icon={<ScreenRotation size={24} />}
+										/>
+									</div>
+								)}
 							</div>
 						</Tab>
 						<Tab key='拉流失败' title='拉流失败'>

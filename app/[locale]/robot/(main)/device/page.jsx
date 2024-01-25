@@ -26,13 +26,13 @@ export default function Page() {
 							全部
 						</SelectItem>
 						<SelectItem key='ipc' value='ipc'>
-							小皮看宠助手
+							看宠助手
 						</SelectItem>
 						<SelectItem key='robot' value='robot'>
-							小皮机器人
+							宠物机器人
 						</SelectItem>
 						<SelectItem key='3in1' value='3in1'>
-							小皮三合一
+							饮水喂食器
 						</SelectItem>
 					</Select>
 				</div>

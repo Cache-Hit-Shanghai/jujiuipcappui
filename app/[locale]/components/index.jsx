@@ -29,6 +29,7 @@ import { Add } from '@styled-icons/material/Add';
 import { GridView } from '@styled-icons/material/GridView';
 import { FlashlightOn } from '@styled-icons/material/FlashlightOn';
 import { FlashlightOff } from '@styled-icons/material/FlashlightOff';
+import { QrCodeScanner } from '@styled-icons/material/QrCodeScanner';
 
 export function DeviceMenu() {
 	const t = useJuJiuT();
@@ -48,6 +49,14 @@ export function DeviceMenu() {
 					startContent={<Add size={24} />}
 				>
 					{t('添加设备')}
+				</DropdownItem>
+				<DropdownItem
+					key='scan'
+					as={Link}
+					href='./scan'
+					startContent={<QrCodeScanner size={24} />}
+				>
+					{t('扫一扫')}
 				</DropdownItem>
 				<DropdownItem
 					key='deviceGroup'
@@ -80,7 +89,7 @@ export function DeviceList() {
 	const t = useJuJiuT();
 
 	return (
-		<Tabs variant='underlined'>
+		<Tabs variant='underlined' classNames={{ panel: 'flex-1 overflow-auto' }}>
 			<Tab key={t('默认分组')} title={t('默认分组')}>
 				<div className='flex flex-col gap-2'>
 					<IpcCard

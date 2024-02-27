@@ -122,7 +122,11 @@ export function DeviceList() {
 						]}
 						footerChips={[<ChipShared />]}
 					/>
-					<CloudDriveCard occupied={500} totle={1024} />
+					<CloudDriveCard
+						occupied={500}
+						totle={1024}
+						src='https://ts1.cn.mm.bing.net/th/id/R-C.f54c83f04442cec528a250d251251ce6?rik=JE7BoZk5xK4iEg&riu=http%3a%2f%2fpic4.bbzhi.com%2ffengjingbizhi%2fgaoqingxifengjingzhuomianbizhixiazai%2fgaoqingxifengjingzhuomianbizhixiazai_366146_18.jpg&ehk=YvUnl11nBp%2fGJssQUbYqkXLo7fchkD%2fEQ8BGpW2Urjs%3d&risl=&pid=ImgRaw&r=0'
+					/>
 				</div>
 			</Tab>
 			<Tab key='办公室' title='办公室'>

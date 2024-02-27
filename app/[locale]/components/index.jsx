@@ -89,7 +89,10 @@ export function DeviceList() {
 	const t = useJuJiuT();
 
 	return (
-		<Tabs variant='underlined' classNames={{ panel: 'flex-1 overflow-auto' }}>
+		<Tabs
+			variant='underlined'
+			classNames={{ panel: 'px-4 flex-1 overflow-auto' }}
+		>
 			<Tab key={t('默认分组')} title={t('默认分组')}>
 				<div className='flex flex-col gap-2'>
 					<IpcCard

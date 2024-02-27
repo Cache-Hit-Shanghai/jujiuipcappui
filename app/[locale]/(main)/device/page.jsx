@@ -47,7 +47,7 @@ export default function Page() {
 					<DeviceMenu />
 				</div>
 			</MobileHeader>
-			<MobileMain className='gap-0'>
+			<MobileMain className='gap-0 p-0'>
 				<DeviceList />
 			</MobileMain>
 		</>

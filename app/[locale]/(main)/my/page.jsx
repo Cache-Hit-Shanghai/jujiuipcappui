@@ -15,7 +15,7 @@ import {
 	MobileHeader,
 	MobileMain,
 } from '@/jujiu-ui-components/nextui/core/core-ui';
-import { useJuJiuT } from '@/state/translate';
+import Link, { useJuJiuT } from '@/state/translate';
 import { PhotoAlbum } from '@styled-icons/material/PhotoAlbum';
 import { Settings } from '@styled-icons/material/Settings';
 import { Update } from '@styled-icons/material/Update';
@@ -29,6 +29,9 @@ import { Redeem } from '@styled-icons/material/Redeem';
 import { ChevronRight } from '@styled-icons/material/ChevronRight';
 import { Savings } from '@styled-icons/material/Savings';
 import { Try } from '@/jujiu-ui-components/icons/try';
+import { CloudUpload } from '@styled-icons/material/CloudUpload';
+import { PhotoLibrary } from '@styled-icons/material/PhotoLibrary';
+import { FramePersion } from '@/jujiu-ui-components/icons/framepersion';
 
 export default function Page() {
 	const t = useJuJiuT();
@@ -134,6 +137,40 @@ export default function Page() {
 						>
 							{t('开宝箱')}
 						</Button>
+					</CardBody>
+				</Card>
+				<Card>
+					<CardHeader className='flex flex-row justify-between'>
+						<div>{t('增值服务')}</div>
+						<Button as={Link} href='/my/vip' size='sm'>
+							{t('全部服务')}
+						</Button>
+					</CardHeader>
+					<Divider />
+					<CardBody>
+						<div className='grid grid-cols-3 gap-y-4'>
+							<LinkButton
+								className='p-2 min-w-0'
+								radius='none'
+								label={t('云存储')}
+								icon={<CloudUpload size={24} />}
+								href='../my/cloudstorage'
+							/>
+							<LinkButton
+								className='p-2 min-w-0'
+								radius='none'
+								label={t('智能识别')}
+								icon={<FramePersion size={24} />}
+								href='./ai'
+							/>
+							<LinkButton
+								className='p-2 min-w-0'
+								radius='none'
+								label={t('时光相册')}
+								icon={<PhotoLibrary size={24} />}
+								href=''
+							/>
+						</div>
 					</CardBody>
 				</Card>
 				<Card>

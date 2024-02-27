@@ -18,11 +18,6 @@ const navTabsData = [
 		href: '/explore/',
 	},
 	{
-		label: '会员',
-		icon: <Diamond size={24} />,
-		href: '/vip/',
-	},
-	{
 		label: '我的',
 		icon: <AccountCircle size={24} />,
 		href: '/my/',

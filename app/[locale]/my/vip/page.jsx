@@ -2,6 +2,7 @@
 
 import { Divider, Card, CardHeader, CardBody } from '@nextui-org/react';
 import {
+	NavbarBack,
 	LinkButton,
 	MobileHeader,
 	MobileMain,
@@ -25,10 +26,8 @@ export default function Page() {
 
 	return (
 		<>
-			<MobileHeader className='justify-center'>
-				<h4 className='h-10 flex items-center justify-center text-lg'>
-					{t('会员服务')}
-				</h4>
+			<MobileHeader>
+				<NavbarBack label='全部服务' />
 			</MobileHeader>
 			<MobileMain>
 				<Card>

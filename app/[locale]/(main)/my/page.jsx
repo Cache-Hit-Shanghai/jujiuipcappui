@@ -1,6 +1,13 @@
 'use client';
 
-import { Button, User, Card, CardHeader, CardBody, Divider } from '@nextui-org/react';
+import {
+	Button,
+	User,
+	Card,
+	CardHeader,
+	CardBody,
+	Divider,
+} from '@nextui-org/react';
 import {
 	LinkButton,
 	LabelLink,
@@ -51,9 +58,21 @@ export default function Page() {
 				<Card>
 					<CardBody>
 						<div className='grid grid-cols-3'>
-							<LinkButton label={t('服务中心')} icon={<SupportAgent size={24} />} href='' />
-							<LinkButton label={t('相册')} icon={<PhotoAlbum size={24} />} href='./gallery' />
-							<LinkButton label={t('固件升级')} icon={<Update size={24} />} href='./ota' />
+							<LinkButton
+								label={t('服务中心')}
+								icon={<SupportAgent size={24} />}
+								href=''
+							/>
+							<LinkButton
+								label={t('云盘')}
+								icon={<PhotoAlbum size={24} />}
+								href='./gallery'
+							/>
+							<LinkButton
+								label={t('固件升级')}
+								icon={<Update size={24} />}
+								href='./ota'
+							/>
 						</div>
 					</CardBody>
 				</Card>
@@ -62,12 +81,36 @@ export default function Page() {
 					<Divider />
 					<CardBody>
 						<div className='grid grid-cols-3 gap-y-4'>
-							<LinkButton label={t('我的收藏')} icon={<FavoriteBorder size={24} />} href='' />
-							<LinkButton label={t('人脸管理')} icon={<Face size={24} />} href='' />
-							<LinkButton label={t('我的分享')} icon={<Share size={24} />} href='./sharing' />
-							<LinkButton label={t('产品试用')} icon={<Try size={24} />} href='' />
-							<LinkButton label={t('帮助与反馈')} icon={<HelpOutline size={24} />} href='./feedback' />
-							<LinkButton label={t('安全中心')} icon={<Security size={24} />} href='' />
+							<LinkButton
+								label={t('我的收藏')}
+								icon={<FavoriteBorder size={24} />}
+								href=''
+							/>
+							<LinkButton
+								label={t('人脸管理')}
+								icon={<Face size={24} />}
+								href=''
+							/>
+							<LinkButton
+								label={t('我的分享')}
+								icon={<Share size={24} />}
+								href='./sharing'
+							/>
+							<LinkButton
+								label={t('产品试用')}
+								icon={<Try size={24} />}
+								href=''
+							/>
+							<LinkButton
+								label={t('帮助与反馈')}
+								icon={<HelpOutline size={24} />}
+								href='./feedback'
+							/>
+							<LinkButton
+								label={t('安全中心')}
+								icon={<Security size={24} />}
+								href=''
+							/>
 						</div>
 					</CardBody>
 				</Card>

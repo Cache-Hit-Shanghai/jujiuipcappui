@@ -23,6 +23,7 @@ import {
 	IpcCard,
 	BotCard,
 } from '@/jujiu-ui-components/nextui/ipc/ipccard/ipccard';
+import { CloudDriveCard } from '@/jujiu-ui-components/nextui/ipc/ipccard/clouddrivecard';
 import Link, { useJuJiuT } from '@/state/translate';
 import { AddCircleOutline } from '@styled-icons/material/AddCircleOutline';
 import { Add } from '@styled-icons/material/Add';
@@ -121,6 +122,7 @@ export function DeviceList() {
 						]}
 						footerChips={[<ChipShared />]}
 					/>
+					<CloudDriveCard occupied={500} totle={1024} />
 				</div>
 			</Tab>
 			<Tab key='办公室' title='办公室'>

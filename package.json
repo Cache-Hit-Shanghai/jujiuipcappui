@@ -21,7 +21,7 @@
 		"@nextui-org/react": "^2.2.10",
 		"@react-aria/toast": "^3.0.0-beta.10",
 		"@react-stately/toast": "^3.0.0-beta.2",
-		"framer-motion": "^11.0.18",
+		"framer-motion": "^11.0.20",
 		"jujiu-ui-components": "workspace:^",
 		"next": "^14.1.4",
 		"next-intl": "^3.9.5",
@@ -36,7 +36,7 @@
 	},
 	"devDependencies": {
 		"@types/node": "^20.11.30",
-		"@types/react": "^18.2.67",
+		"@types/react": "^18.2.69",
 		"autoprefixer": "^10.4.19",
 		"postcss": "^8.4.38",
 		"tailwindcss": "^3.4.1",
